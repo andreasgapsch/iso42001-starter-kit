@@ -39,7 +39,7 @@
     "pruefen:release": "tsx scripts/pruefen/version.mts --release && tsx scripts/pruefen/rechtsstand.mts --release"
   },
   "dependencies": {
-    "@preact/signals": "2.11.3",
+    "@preact/signals": "2.11.4",
     "docx": "9.12.0",
     "exceljs": "4.4.0",
     "fflate": "0.8.3",

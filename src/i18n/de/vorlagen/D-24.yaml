@@ -1,0 +1,80 @@
+# D-24 Rolle zuerst
+stand: "Stand der Rechtslage: {rechtsstand}. Vor Entscheiden prüfen wir, ob seither Änderungen gelten (E-09)."
+stand_titel: Rechtsstand
+hinweis_umfang: "Dieser Leitfaden hilft, je KI-System die Rolle nach dem EU AI Act zu bestimmen, bevor Sie Pflichten ableiten. Er ist eine Orientierung, keine Rechtsberatung. Lassen Sie Grenzfälle und alle Hochrisiko-Fälle juristisch prüfen."
+einleitung: "Die Pflichten aus dem EU AI Act hängen davon ab, welche Rolle ein Unternehmen für ein bestimmtes KI-System hat und wie riskant das System ist. Deshalb gilt: zuerst die Rolle, dann die Risikoklasse, dann die Pflichten. Die Rolle kann je System verschieden sein; ein KMU ist oft für die meisten Systeme Betreiber und für einzelne Anbieter."
+abschnitte:
+  baum: Entscheidungsbaum in Fragen
+  schweiz: Schweizer Blick
+  begriffe: Rollen nach ISO/IEC 22989 und nach AI Act
+  nachweis: Was ISO/IEC 42001 nachweist und was nicht
+  systeme: Rollen unserer KI-Systeme
+  weiter: Nächste Schritte
+baum_hinweis: "Beantworten Sie die Fragen je KI-System aus dem Inventar (D-10). Halten Sie Antwort und Begründung fest; mit Modul AI Act in E-01."
+baum:
+  - "**Ist es ein KI-System im Sinne des AI Act (Art. 3 Nr. 1)?** Nein: Der AI Act gilt für dieses System nicht; es bleibt im Inventar, wenn es KI-Funktionen hat. Ja: weiter mit Frage 2."
+  - "**Gibt es einen Bezug zur EU?** Sitz oder Niederlassung in der EU, Inverkehrbringen oder Inbetriebnahme des Systems in der EU oder Verwendung seines Outputs in der EU. Nein: Der AI Act erfasst das System nicht (siehe Schweizer Blick). Ja: weiter mit Frage 3."
+  - "**Haben wir das System entwickelt oder entwickeln lassen und bieten es unter eigenem Namen oder eigener Marke an oder nehmen es so in Betrieb, auch nur für den eigenen Gebrauch?** Ja: Wir sind **Anbieter** (Art. 3 Nr. 3). Weiter mit Frage 5. Nein: weiter mit Frage 4."
+  - "**Nutzen wir ein System eines anderen Anbieters in eigener Verantwortung und beruflich?** Ja: Wir sind **Betreiber** (Art. 3 Nr. 4). Weiter mit Frage 5. Nein: Zu prüfen sind die übrigen Rollen: Einführer (Art. 23) oder Händler (Art. 24), Produkthersteller, der das System in sein Produkt einbaut (Art. 25(3)), oder Bevollmächtigter (Art. 22)."
+  - "**Rollenwechsel nach Art. 25(1): Ändert sich unsere Rolle bei einem Hochrisiko-System?** Wir werden Anbieter, wenn wir (a) unseren Namen oder unsere Marke auf ein bereits angebotenes Hochrisiko-System setzen, (b) ein Hochrisiko-System wesentlich ändern und es hochriskant bleibt oder (c) den Zweck eines Systems so ändern, dass es hochriskant wird. Ja: Wir übernehmen die Anbieterpflichten für dieses System. Nein: Die Rolle aus Frage 3 oder 4 bleibt."
+  - "**Rolle festhalten.** Die Rolle steht je System mit Begründung und Datum im Inventar (D-10). Sie wird bei jeder Änderung von Zweck, Name, Modell oder Vertrieb überprüft."
+schweiz_text: "Der AI Act gilt auch für Unternehmen ausserhalb der EU, aber nur bei EU-Bezug. Massgebend sind vor allem zwei Fälle:"
+schweiz_liste:
+  - "**Art. 2(1) Bst. a:** Ein Unternehmen bringt ein KI-System in der EU in Verkehr oder nimmt es dort in Betrieb, unabhängig vom Sitz. Beispiel: ein Chatbot unter eigenem Namen auf der Website für Kunden in Deutschland."
+  - "**Art. 2(1) Bst. c:** Anbieter oder Betreiber mit Sitz in der Schweiz, deren Output in der EU verwendet wird. Beispiel: KI-gestützte Auswertungen für Kunden in der EU."
+  - "**Nicht erfasst** ist eine rein schweizerische Nutzung ohne EU-Bezug, etwa ein internes Werkzeug, dessen Ergebnisse nur in der Schweiz verwendet werden."
+  - "**Art. 22:** Anbieter von Hochrisiko-KI-Systemen mit Sitz ausserhalb der EU müssen vor dem Angebot in der EU schriftlich einen Bevollmächtigten mit Sitz in der EU beauftragen."
+schweiz_recht: "In der Schweiz gibt es derzeit kein eigenes KI-Gesetz. Das Datenschutzgesetz und das übrige Recht gelten auch für KI. Den Stand der Schweizer Regulierung führt E-09."
+begriffe_text: "ISO/IEC 42001 verweist für die Rollen auf ISO/IEC 22989. Die Begriffe klingen ähnlich wie im AI Act, bedeuten aber nicht dasselbe:"
+begriffe_kopf: [Thema, ISO/IEC 22989 und 42001, EU AI Act]
+begriffe_zeilen:
+  - ["Zweck der Rollen", "Beschreiben, wer im KI-Ökosystem welche Aufgabe hat; Grundlage für Kontext (4.1) und Geltungsbereich", "Bestimmen, wer welche gesetzlichen Pflichten trägt"]
+  - ["Wer entwickelt", "KI-Produzent (entwickelt) und KI-Anbieter (stellt Produkte oder Dienste bereit) sind getrennte Rollen", "Anbieter ist, wer entwickelt oder entwickeln lässt und unter eigenem Namen anbietet oder in Betrieb nimmt"]
+  - ["Wer nutzt", "KI-Kunde oder Nutzer", "Betreiber, wenn die Nutzung beruflich und in eigener Verantwortung erfolgt"]
+  - ["Weitere Rollen", "KI-Partner (z. B. Integratoren, Datenlieferanten), Betroffene, Behörden", "Einführer, Händler, Produkthersteller, Bevollmächtigter"]
+  - ["Folge", "Mehrere Rollen gleichzeitig sind üblich; keine gesetzlichen Pflichten", "Eine Rolle je System und Vorgang; daraus folgen Pflichten mit Bussen bei Verstössen"]
+begriffe_hinweis: "Die Rollen nach ISO/IEC 22989 stehen in D-01, die Rolle nach AI Act je System in D-10 oder E-01. Ein KMU kann nach ISO «KI-Kunde» und nach AI Act trotzdem «Anbieter» sein, etwa wenn es ein eingekauftes Modell unter eigenem Namen anbietet."
+nachweis_text: "Ein Zertifikat nach ISO/IEC 42001 zeigt, dass ein wirksames Managementsystem für KI besteht. Es ersetzt die Pflichten aus dem AI Act nicht, erleichtert aber viele davon."
+nachweis_kopf: [Thema, "Nachweis durch ISO/IEC 42001", Bemerkung]
+nachweis_zeilen:
+  - ["Managementsystem mit Leitlinie, Rollen, Zielen und Verbesserung", "ja", "Abschnitte 4 bis 10"]
+  - ["Risikobeurteilung und Risikobehandlung", "ja", "6.1, 8.2, 8.3; für Anbieter von Hochrisiko-KI als Grundlage für Art. 9"]
+  - ["Folgenabschätzung für Betroffene", "ja", "6.1.4, A.5; die Grundrechte-Folgenabschätzung nach Art. 27 nur teilweise (E-06)"]
+  - ["Steuerung von Lieferanten und Verantwortungsteilung", "ja", "A.10"]
+  - ["Daten, Protokollierung, technische Dokumentation", "teilweise", "A.6.2.7, A.6.2.8, A.7; die Inhalte nach Art. 10 bis 12 und Anhang IV gehen weiter"]
+  - ["Transparenz und Information für Nutzende", "teilweise", "A.8.2; die konkreten Pflichten nach Art. 50 prüfen (E-07)"]
+  - ["KI-Kompetenz der Mitarbeitenden", "teilweise", "7.2, 7.3; Massnahmen nach Art. 4 festhalten (E-04)"]
+  - ["Qualitätsmanagementsystem für Anbieter nach Art. 17", "teilweise", "Gelistet ist EN 18286:2026 (Durchführungsbeschluss (EU) 2026/2274, ABl. L 2026/2274 vom 14.10.2026, ohne Einschränkung). Offene Auslegung: Art. 40(1) nennt Art. 17 nicht ausdrücklich; Reichweite nach Anhang ZA der Norm juristisch prüfen (E-09)"]
+  - ["Konformitätsbewertung (Art. 43)", "nein", "eigenes Verfahren für Hochrisiko-KI"]
+  - ["CE-Kennzeichnung (Art. 48)", "nein", ""]
+  - ["EU-Konformitätserklärung (Art. 47)", "nein", ""]
+  - ["Registrierung in der EU-Datenbank (Art. 49)", "nein", ""]
+  - ["Konformitätsvermutung (Art. 40)", "nein", "ISO/IEC 42001 ist keine harmonisierte Norm. Eine im Amtsblatt veröffentlichte harmonisierte Norm begründet die Vermutung nur, soweit sie die Anforderungen abdeckt (Art. 40 Abs. 1); welche das sind, zeigt in der Regel ihr Anhang ZA"]
+  - ["Gemeinsame Spezifikationen (Art. 41)", "nein", "zweiter Weg zur Vermutung, wenn die Kommission mangels geeigneter Normen gemeinsame Spezifikationen erlässt; gilt ebenfalls nur, soweit sie die Anforderungen abdecken"]
+  - ["Rechtliche Einstufung eines KI-Systems", "nein", "bleibt eine juristische Beurteilung"]
+systeme_kopf: [ID, KI-System, Rolle nach AI Act, Begründung]
+rollen:
+  anbieter: Anbieter
+  betreiber: Betreiber
+  einfuehrer: Einführer
+  haendler: Händler
+  produkthersteller: Produkthersteller
+  bevollmaechtigter: Bevollmächtigter
+  offen: offen
+weiter_liste:
+  - "Mit Modul AI Act: Rollen in E-01 festhalten, Risikoklasse in E-02 bestimmen, Pflichten in E-03 ableiten. Fristen und Stand stehen in E-09."
+  - "Ohne Modul: Rolle je System im Inventar (D-10) festhalten und jährlich überprüfen, ob ein EU-Bezug entstanden ist."
+  - "Einstufungen mit Hochrisiko-Bezug, Rollenwechsel nach Art. 25 und Grenzfälle lassen wir juristisch prüfen."
+# Firmendokument: Texte je nach Modul (mit Modul: E-01 bis E-09; ohne Modul: Inventar und Kontext)
+firma:
+  stand_ohne_modul: "Stand der Rechtslage: {rechtsstand}. Vor Entscheiden prüfen wir, ob seither Änderungen gelten."
+  schweiz_recht_ohne_modul: "In der Schweiz gibt es derzeit kein eigenes KI-Gesetz. Das Datenschutzgesetz und das übrige Recht gelten auch für KI. Den Stand der Schweizer Regulierung prüfen wir jährlich mit der Kontextanalyse (D-01)."
+  einleitung: "Die Pflichten aus dem EU AI Act hängen davon ab, welche Rolle {firma} für ein bestimmtes KI-System hat und wie riskant das System ist. Deshalb gilt: zuerst die Rolle, dann die Risikoklasse, dann die Pflichten. Die Rolle kann je System verschieden sein; sie steht mit Begründung in Abschnitt 5."
+  begriffe_hinweis_modul: "Unsere Rollen nach ISO/IEC 22989 stehen in D-01, die Rolle nach AI Act je System in E-01 und im Inventar (D-10). Wer nach ISO «KI-Kunde» ist, kann nach AI Act trotzdem «Anbieter» sein, etwa wenn ein eingekauftes Modell unter eigenem Namen angeboten wird."
+  begriffe_hinweis_ohne_modul: "Unsere Rollen nach ISO/IEC 22989 stehen in D-01, die Rolle nach AI Act je System im Inventar (D-10)."
+  weiter_modul: "Rollen in E-01 festhalten, Risikoklasse in E-02 bestimmen, Pflichten in E-03 ableiten. Fristen und Stand stehen in E-09."
+  weiter_ohne_modul: "Rolle je System im Inventar (D-10) festhalten und jährlich überprüfen, ob ein EU-Bezug entstanden ist."
+# Modul NIST AI RMF
+nist_praefix_leer: "Nur mit Modul NIST AI RMF:"
+nist_praefix: "NIST AI RMF:"
+nist_verhaeltnis: "Das US-Rahmenwerk ist kein Recht und ändert weder die Rolle noch die Pflichten nach dem AI Act. Profil und Abdeckungsmatrix (N-01, N-02) sind ein freiwilliger Nachweis, vor allem gegenüber Kunden mit US-Bezug."

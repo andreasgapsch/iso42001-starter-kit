@@ -1,0 +1,170 @@
+# D-04 Roles, responsibilities and reporting channels
+einleitung: "This document sets out who at [[Company name]] is responsible for which tasks in the AI management system and how employees report concerns about AI systems."
+einleitung_firma: "This document sets out who at {firma} is responsible for which tasks in the AI management system and how employees report concerns about AI systems."
+eb_einleitung_firma: "These sections extend the ISMS roles and organization document of {firma} with the tasks of the AI management system. Existing roles and committees remain in use; new roles are added only where the ISMS has no suitable one."
+eb_einleitung: "Add these sections to your existing document. They extend your ISMS roles or organization document with the tasks of the AI management system. Use existing roles and committees instead of creating new ones."
+eb_felder:
+  dokument: Added to document
+  version: Version and date
+eb_platzhalter:
+  dokument: Title of the existing document
+  version: Version, DD/MM/YYYY
+abschnitte:
+  grundsaetze: Principles
+  pflichtrollen: Required roles
+  raci: Responsibilities by area
+  bahnrollen: Roles in the process flows
+  gremien: Committees
+  meldeweg: Reporting of concerns
+  entscheidungsrechte: Decision rights by risk level
+  aufsicht: Effective human oversight
+  freigabe: Approval
+grundsaetze:
+  - "Top management has overall responsibility for the AI management system and assigns the roles."
+  - "A few people hold several roles. This is acceptable as long as nobody reviews their own work, especially in internal audits."
+  - "Every role has a deputy. The people concerned know the roles and deputies."
+  - "Changes to roles are updated in this document and communicated to employees."
+hinweis_pflichtrollen: "Two tasks must be assigned explicitly: making sure the management system meets the standard, and reporting on its performance to top management. In an SME the same person often does both."
+pflichtrollen_fehlen: "At least one of the two required roles has not yet been assigned; the assignment is made before approval."
+pflichtrollen:
+  aims: Responsible for the AI management system
+  konformitaet: "Ensures that the management system meets ISO/IEC 42001 (5.3 a)"
+  berichterstattung: "Reports on the performance of the management system to top management (5.3 b)"
+  stellvertretung: Deputy
+hinweis_raci: |
+  Enter people or roles for each area:
+  • R (responsible): does the task,
+  • A (accountable): decides and answers for it, exactly one person,
+  • C (consulted): is asked beforehand,
+  • I (informed): is informed afterwards.
+  The ‘Deputy’ column names who stands in for R.
+  With an ISMS: use the existing responsibilities for information security and data protection.
+raci_kopf: [Area, Tasks, R, A, Deputy, C, I]
+prozessrollen: "Further roles in the process flows (lanes) and who performs them:"
+prozessrollen_ki_eigner: "the system owner named for the AI system concerned in the AI inventory (D-10)"
+prozessrollen_alle: "all employees in scope"
+prozessrollen_offen: "not yet assigned"
+bereiche:
+  - id: risikomanagement
+    name: Risk management
+    aufgaben: "Assess AI risks and opportunities, plan treatment, keep the register (D-06, D-07)"
+  - id: folgenabschaetzung
+    name: Impact assessment
+    aufgaben: "Assess and approve impacts on people and society (D-08, D-09)"
+  - id: inventar
+    name: AI inventory
+    aufgaben: "Record all AI systems and keep the list up to date, clarify shadow AI (D-10)"
+  - id: daten
+    name: Data
+    aufgaben: "Control provenance, quality and preparation of data (D-13)"
+  - id: informationssicherheit
+    name: Information security
+    aufgaben: "Protect AI systems and their data, handle security incidents"
+  - id: datenschutz
+    name: Data protection
+    aufgaben: "Data protection officer: review personal data in AI systems, support data protection impact assessments, report data security breaches (D-14)"
+  - id: menschliche-aufsicht
+    name: Human oversight
+    aufgaben: "Set the rules for reviewing AI outputs, intervene and stop systems when needed; who reviews each system is recorded in the AI inventory (D-10)"
+  - id: lieferanten
+    name: Suppliers
+    aufgaben: "Review AI providers, settle contracts and division of responsibility (D-16)"
+  - id: recht
+    name: Legal and EU AI Act
+    aufgaben: "Track legal requirements, clarify role and obligations for each AI system"
+  - id: schulung
+    name: Training
+    aufgaben: "Determine competence needs, plan training and keep records (D-17)"
+  - id: internes-audit
+    name: Internal audit
+    aufgaben: "Audit the management system, independently of the area audited (D-20)"
+  - id: dokumentenlenkung
+    name: Document control
+    aufgaben: "Identify, approve and file documents and records (D-26)"
+isms_zustaendigkeit: "(adopt the existing ISMS responsibility)"
+isms_zustaendigkeit_firma: "(responsibility as defined in the ISMS)"
+# Internal audit without an entry in the matrix: auditor of the latest internal audit (D-20)
+audit_aus_programm: "{auditor} (under the audit programme D-20)"
+# Blank template: additional areas of the matrix (incidents and reports, AI development), A3-13
+aufgaben_zusatz_leer:
+  vorfall: "Record, grade and contain AI incidents, near misses and reports and follow them up until closure (D-14, D-22)"
+  entwicklung: "Develop, test and have own AI systems approved according to the life cycle (D-12, D-13); without own development: requirements, acceptance and introduction of purchased systems (D-12)"
+# Blank template: roles of the lanes in the process flows (D-27) without a row in the matrix, in this order
+hinweis_bahnrollen: "The process flows (D-27) name further roles as lanes. Enter who performs them and who stands in for them; one person can hold several roles."
+bahnrollen_kopf: [Role in the flows, Tasks, Processes (D-27), Person or role, Deputy]
+bahnrollen_aufgaben:
+  fachbereich: "Requests AI tools, uses AI systems according to the rules, reports anything unusual"
+  it: "Operates, changes and protects AI systems technically, provides logs"
+  hr: "Supports roles, training and competence, and impact assessments on personnel matters"
+  kommunikation: "Informs internally and externally about AI topics, incidents and reports"
+  ki-eigner: "Is accountable for an AI system across its life cycle, contributes to risk and impact assessment"
+aufgaben_zusatz:
+  vorfall: "Record and assess AI incidents and reports and follow them up until closure (D-14, D-22)"
+  entwicklung: "Develop, test and have own AI systems approved according to the life cycle (D-12, D-13)"
+# Area ‘development’ without own development: procurement, acceptance and introduction of purchased systems
+ohne_entwicklung:
+  name: Introduction of purchased AI systems
+  aufgaben: "Record requirements, check acceptance with our own cases and have the introduction approved (D-12); no own development"
+meldeweg_frist:
+  beide: "Acknowledgement of receipt within {tage} working days, feedback on the outcome within {ergebnis} days"
+  bestaetigung: "Acknowledgement of receipt within {tage} working days"
+  ergebnis: "Feedback on the outcome within {ergebnis} days"
+meldeweg_nicht_vertraulich: "Reports cannot be made anonymously. The identity of the person reporting is only passed on to the people handling the report."
+raci_fehlen: "No responsibilities have been assigned for some areas yet; the highlighted fields are still open."
+hinweis_gremien: "Extend existing committees to cover AI topics instead of creating new ones. Record what is newly put on the agenda and how often."
+gremien_kopf: [Committee, New AI topics, Frequency, Chair]
+gremien_vorschlag:
+  - [Executive board meeting, "Approvals (policy, scope, treatment plan, residual risks, statement of applicability), management review", "[[e.g. annually and when needed]]", "[[Name, role]]"]
+  - [Security or ISMS meeting, "AI risks, incidents, suppliers, status of actions", "[[e.g. quarterly]]", "[[Name, role]]"]
+  - [IT or digitalization meeting, "Approval of new AI tools, AI inventory, changes to AI systems", "[[e.g. monthly]]", "[[Name, role]]"]
+ausbau_gremien: "If you develop AI yourself or use many AI systems that affect people, you can set up a dedicated AI committee, e.g. to approve impact assessments. In that case, record its members, decision-making powers and how minutes are kept."
+hinweis_meldeweg: "Employees and people working for you should be able to report concerns about AI systems without negative consequences. Use an existing channel, e.g. a whistleblowing office or the line manager with an alternative contact. The reporting channel for external parties is covered in D-14."
+meldeweg_felder:
+  meldestelle: Reporting point
+  kanal: Reporting channel
+  ausweich: Alternative contact
+  vertraulichkeit: Confidentiality
+  schutz: Protection from reprisal
+  frist: Deadlines
+  eskalation: Escalation
+  erfassung: Recording and evaluation
+  bekanntmachung: Communication
+meldeweg_werte:
+  meldestelle: "[[e.g. AIMS lead, ai-concerns@company.example]]; receives reports of AI incidents and concerns"
+  kanal: "[[e.g. email to ai-concerns@company.example or a form on the intranet; anonymous reports via the whistleblowing office]]"
+  ausweich: "[[Name, role, in case the report concerns the responsible person]]"
+  vertraulichkeit: "The identity of the person reporting is only passed on with their consent. Only the people handling a report can see it."
+  schutz: "Anyone who reports in good faith need not fear any disadvantage. Retaliation is treated as a breach of internal rules."
+  frist: "[[Acknowledgement of receipt within 7 days, feedback on the outcome within 30 days]]"
+  eskalation: "[[To top management if a report is not handled on time or there is a significant risk to people]]"
+  erfassung: "Every report is recorded with date, content, actions and closure (D-22). The evaluation feeds into the management review (D-21)."
+  bekanntmachung: "[[e.g. training, intranet, AI use policy D-15]]"
+freigabe_text: "Top management approved this assignment of roles on {datum}."
+entscheidungsrechte_text: "Who decides depends on the risk level: low up to the acceptance threshold, high from the ‘unacceptable’ threshold of the risk criteria (D-06), medium in between. The highest risk of the AI system concerned in the risk register (D-07) applies. For accepting a residual risk, the value after treatment counts: a residual risk at or above the ‘unacceptable’ threshold cannot be accepted, only carried for a limited time as an exception (row ‘Grant an exception’, D-06). Regardless of the risk level, the reservations of the risk appetite in the AI policy (D-03) apply: what is reserved there for top management is decided by top management even at low or medium risk."
+hinweis_entscheidungsrechte: "Adapt the suggestions to your organization and name roles rather than people, so that the table stays valid when staff change. Stopping must be quick: whoever oversees a system may suspend it without asking first. The limits of what is allowed at all are set by the risk appetite in the AI policy (D-03)."
+entscheidungsrechte_kopf: [Decision, Low risk, Medium risk, High risk]
+entscheide:
+  einfuehren: Introduce an AI system
+  restrisiko: Accept a residual risk
+  ausnahme: Grant an exception
+  stoppen: Stop or suspend a system
+  ausserbetrieb: Retire a system
+entscheidungsrechte_vorschlag:
+  einfuehren: ["{{fakt:freigabe.einfuehren|gross}}", "{{fakt:freigabe.einfuehren|gross}} with the system owner", "{{fakt:freigabe.einfuehren-hoch|gross}}"]
+  restrisiko: ["Risk owner", "{{fakt:freigabe.restrisiko|gross}}", "{{fakt:freigabe.restrisiko|gross}}"]
+  ausnahme: ["AIMS lead", "AIMS lead with a member of top management", "Top management"]
+  stoppen: ["Person overseeing the system, or system owner", "Person overseeing the system, or system owner", "Person overseeing the system, system owner or AIMS lead; top management informed"]
+  ausserbetrieb: ["System owner", "AIMS lead", "Top management"]
+keine_selbstfreigabe: "**No self-approval at high risk.** Whoever requests, operates or owns an AI system does not approve it at high risk and does not accept its residual risk. If one person holds both roles, the next higher level decides."
+# Company document with organisation.naechsthoehereStelle
+keine_selbstfreigabe_stelle: "**No self-approval at high risk.** Whoever requests, operates or owns an AI system does not approve it at high risk and does not accept its residual risk. If one person holds both roles, their superior decides; for a member of top management, top management without this person; for top management as a whole or its only member, the next higher body ({stelle})."
+aufsicht_text: "Human oversight only works if the reviewer can actually intervene. Five checkpoints apply to every AI system with oversight (AI inventory, D-10):"
+aufsicht_pruefpunkte:
+  - "**Understands the consequences:** The person knows what a wrong output means for those affected and for us."
+  - "**Sees source and proposal:** They see what the output is based on and can compare it with the input data."
+  - "**Has time:** Volume and pace allow a genuine review."
+  - "**May reject:** They can discard an output or stop the system without fear of disadvantage."
+  - "**Remains accountable:** The decision stays with them, not with the system."
+aufsicht_abnicken: "Anyone who confirms large numbers of outputs in a short time is no longer reviewing but rubber-stamping. Samples of the correction rate (D-05) show this: a rate close to zero across many cases is a warning sign."
+anlage_verweis: "Decision rights by risk level and the requirements for effective human oversight are set out in Appendix A."
+anlage_titel: Decision rights and human oversight

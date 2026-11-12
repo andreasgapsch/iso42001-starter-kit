@@ -1,0 +1,110 @@
+# Jahreskalender: wiederkehrende Kurzetappen nach der Zertifizierung. Format: src/gefuehrt/FORMAT.md
+seiten:
+  - { id: J-einfuehrung, typ: info, norm: "8.2, 8.4, 9.2, 9.3", leitfaden: 10 }
+  - id: J-termine
+    typ: formular
+    norm: "9.2, 9.3"
+    vorlage: D-20
+    leitfaden: 10
+    beispiel: meta.gefuehrt.antworten.jahr
+    felder:
+      - { pfad: meta.gefuehrt.antworten.jahr.monatAudit, typ: auswahl, optionen: monat, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.jahr.monatMb, typ: auswahl, optionen: monat, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.jahr.monatUeberwachung, typ: auswahl, optionen: monat }
+  - id: J-kalender
+    typ: kalender
+    norm: "8.2, 8.4, 9.1 bis 9.3"
+    leitfaden: 10
+    aufgaben:
+      - { id: inventar, rhythmus: quartalsweise, seite: J-inventar, norm: "A.4.2", faelligAus: "kiSysteme[].naechsteUeberpruefung" }
+      - { id: schatten-ki, rhythmus: quartalsweise, seite: E4-schatten, norm: "A.9.2" }
+      - { id: ziele, rhythmus: quartalsweise, seite: J-ziele, norm: "9.1" }
+      - { id: risiken, rhythmus: halbjaehrlich, seite: J-risiken, norm: "8.2, 8.3" }
+      - { id: aiact-stand, rhythmus: halbjaehrlich, seite: E5-risikoklasse, norm: "4.1", wenn: { modul: true } }
+      - { id: nist-stand, rhythmus: halbjaehrlich, seite: J-rmf, norm: "4.1, 9.3", wenn: { modulNistRmf: true } }
+      - { id: folgen, rhythmus: jaehrlich, seite: J-folgen, norm: "8.4", faelligAus: "folgenabschaetzungen[].naechsteUeberpruefung" }
+      - { id: lieferanten, rhythmus: jaehrlich, seite: J-lieferanten, norm: "A.10.3", faelligAus: "lieferanten[].naechstePruefung" }
+      - { id: schulung, rhythmus: jaehrlich, seite: E10-kompetenzen, norm: "7.2, 7.3" }
+      - { id: kommunikation, rhythmus: jaehrlich, seite: E10-kommunikation, norm: "7.4" }
+      - { id: leitlinie, rhythmus: jaehrlich, seite: E3-ausnahmen, norm: "A.2.4", faelligAus: "organisation.leitlinie.naechsteUeberpruefung" }
+      - { id: dokumente, rhythmus: jaehrlich, seite: E11-dokumente, norm: "7.5", faelligAus: "dokumente[].naechsteUeberpruefung" }
+      - { id: internes-audit, rhythmus: jaehrlich, seite: E12-audit, norm: "9.2", monatAus: meta.gefuehrt.antworten.jahr.monatAudit }
+      - { id: managementbewertung, rhythmus: jaehrlich, seite: E12-mb, norm: "9.3", monatAus: meta.gefuehrt.antworten.jahr.monatMb }
+      - { id: ueberwachungsaudit, rhythmus: jaehrlich, seite: J-ueberwachungsaudit, norm: "9, 10", monatAus: meta.gefuehrt.antworten.jahr.monatUeberwachung }
+  - id: J-inventar
+    typ: auswahl-systeme
+    norm: "A.4.2, 8.2"
+    vorlage: D-10
+    leitfaden: 10
+    beispiel: kiSysteme[0]
+    felder:
+      - { pfad: status, typ: auswahl, optionen: kiStatus, pflicht: true }
+      - { pfad: lebenszyklus, typ: auswahl, optionen: lebenszyklus }
+      - { pfad: geaendertAm, typ: datum }
+      - { pfad: naechsteUeberpruefung, typ: datum, pflicht: true }
+  - id: J-risiken
+    typ: liste
+    liste: risiken
+    norm: "8.2, 8.3"
+    vorlage: D-07
+    leitfaden: 10
+    anlegen: false
+    filter: { status: [offen, in-behandlung, behandelt, akzeptiert] }
+    beispiel: risiken[0]
+    felder:
+      - { pfad: w, typ: zahl, skala: wahrscheinlichkeit, pflicht: true }
+      - { pfad: a, typ: zahl, skala: auswirkung, pflicht: true }
+      - { pfad: wNach, typ: zahl, skala: wahrscheinlichkeit }
+      - { pfad: aNach, typ: zahl, skala: auswirkung }
+      - { pfad: status, typ: auswahl, optionen: risikoStatus }
+  - id: J-folgen
+    typ: folgenabschaetzung
+    norm: "8.4"
+    vorlage: D-09
+    leitfaden: 10
+    beispiel: folgenabschaetzungen[7]
+    felder:
+      - { pfad: ergebnis, typ: textarea }
+      - { pfad: naechsteUeberpruefung, typ: datum, pflicht: true }
+  - id: J-lieferanten
+    typ: liste
+    liste: lieferanten
+    norm: "A.10.3"
+    vorlage: D-16
+    leitfaden: 10
+    anlegen: false
+    beispiel: lieferanten[0]
+    felder:
+      - { pfad: pruefstatus, typ: auswahl, optionen: pruefstatus, pflicht: true }
+      - { pfad: bemerkung, typ: textarea }
+      - { pfad: naechstePruefung, typ: datum, pflicht: true }
+  - id: J-ziele
+    typ: liste
+    liste: ziele
+    norm: "9.1"
+    vorlage: D-05
+    leitfaden: 10
+    anlegen: false
+    beispiel: ziele[0]
+    felder:
+      - pfad: messungen
+        typ: tabelle
+        spalten:
+          - { pfad: datum, typ: datum, pflicht: true }
+          - { pfad: wert, typ: text, pflicht: true }
+          - { pfad: bemerkung, typ: text }
+  - { id: J-rmf, typ: nist-profil, nistStand: true, norm: "4.1, 9.3", vorlage: N-01, leitfaden: 10, nist: [kern], wenn: { modulNistRmf: true } }
+  - id: J-ueberwachungsaudit
+    typ: liste
+    liste: audits
+    norm: "9, 10"
+    vorlage: D-25
+    leitfaden: 10
+    filter: { art: [ueberwachung] }
+    vorgabe: { art: ueberwachung }
+    beispiel: audits[4]
+    felder:
+      - { pfad: geplant, typ: datum, pflicht: true }
+      - { pfad: auditor, typ: text }
+      - { pfad: durchgefuehrt, typ: datum }
+      - { pfad: ergebnis, typ: textarea }

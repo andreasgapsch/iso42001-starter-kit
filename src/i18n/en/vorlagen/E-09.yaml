@@ -1,0 +1,27 @@
+# E-09 EU AI Act deadlines and status
+hinweis_umfang: "This document records which status of the AI Act your classifications are based on and which obligations apply from when. Review it at least every six months and before every management review (D-21)."
+hinweis_normung: "Standardization and presumption of conformity (Art. 40, 41): the presumption of conformity of a harmonised standard extends as far as the standard covers the requirements; its Annex ZA shows the mapping. EN 18286:2026 on quality management is listed (Implementing Decision (EU) 2026/2274, OJ L 2026/2274 of 14/10/2026, CELEX 32026D2274). Whether the presumption covers Art. 17 is open: Art. 40(1) does not expressly name it, while the last subparagraph of Art. 40(2) also names Section 3 of Chapter III for standardization requests; have this legally reviewed. No common specifications under Art. 41 are known as of 07/11/2026 (Commission AI Act Service Desk; EUR-Lex search found no implementing act under Art. 41). Record in the section ‘Further notes on the status’ whether you use the standard. For Art. 50 there are Commission guidelines (adopted on 20/07/2026) and a voluntary code of practice on transparency of AI-generated content under Art. 50(7), final since 10/06/2026; the Commission (opinion of 08/07/2026) and the AI Board (09/07/2026) consider it adequate for Art. 50(2), (4) and (5) (digital-strategy.ec.europa.eu, retrieved on 07/11/2026); check the status on the Commission page, also for questions to suppliers."
+pruefen_titel: Check the status
+pruefen: "**Before every update of this document, check on EUR-Lex** whether a newer consolidated version, a corrigendum or an amending regulation exists (document 02024R1689). Last check: {geprueft}."
+massgebend: "Status on which our classifications are based: {rechtsstand}."
+abschnitte:
+  stand: Status of the legal basis
+  fristen: Deadlines
+  systeme: What this means for our AI systems
+  formell: Formal and practical date of application
+  weitere: Further notes on the status
+  schweiz: Swiss status
+fristen_text: "The deadlines come from Art. 113 and Art. 111 as amended and from mandates given to the Commission. Art. 113 has unnumbered paragraphs; they are numbered here as in Art. 111 (‘Art. 113(3)(c)’ is paragraph 3, point (c))."
+fristen_kopf: [Date, Type and reference, What applies]
+arten: [Application, Transition, Commission]
+systeme_text: "When the main obligations of each risk class apply. Art. 4 (AI literacy) and Art. 5 (prohibitions) already apply to all systems; details per obligation in E-03."
+systeme_kopf: [Risk class, Main obligations from, AI systems]
+einstufung_offen: "Classification open (E-02)"
+auslegung_titel: Interpretation by the kit
+auslegung_kennzeichnung: "The following section is an interpretation by the kit, not legal text. Have it reviewed by a lawyer if a specific system is affected."
+status:
+  rechtstext: checked against the legal text
+  auslegung: interpretation, not legal text
+  zu_pruefen: check at the source before use
+weitere_verweis: "The notes on legacy high-risk systems, AI in machinery, corrigendum C2, ISO/IEC 42001, EN 18286, Art. 111(4) and the Commission guidelines are in Appendix A at the end of this document."
+schweiz_text: "Status of the Swiss information: {stand}. Switzerland does not adopt the AI Act; it covers Swiss companies only where there is a link to the EU (E-01). Before communicating it internally, we check the status with the Federal Office of Justice."

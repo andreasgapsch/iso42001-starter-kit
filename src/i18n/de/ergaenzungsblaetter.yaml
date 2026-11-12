@@ -1,0 +1,276 @@
+hinweis: |
+  Dieses Ergänzungsblatt ist für Organisationen mit bestehendem ISMS gedacht. Übernehmen Sie die Abschnitte in Ihr vorhandenes Dokument, statt ein neues zu erstellen, und passen Sie Begriffe und Nummerierung an Ihr Dokument an. Anforderungstext siehe ISO/IEC 42001, Abschnitte gemäss Normbezug. Die Norm ist bei SNV, DIN oder ISO zu beziehen.
+ismsDokumente:
+  isms-leitlinie: "Informationssicherheitsleitlinie"
+  isms-rollen: "Rollen, Zuständigkeiten und Organigramm"
+  isms-risikoverfahren: "Verfahren für Informationssicherheitsrisiken"
+  isms-risikoregister: "Risikoregister und Behandlungsplan"
+  isms-asset-inventar: "Inventar der Informationswerte"
+  isms-vorfallmanagement: "Verfahren für Sicherheitsvorfälle"
+  isms-akzeptable-nutzung: "Richtlinie zur akzeptablen Nutzung"
+  isms-lieferanten: "Lieferantenmanagement"
+  isms-awareness: "Schulung, Bewusstsein und Kommunikation"
+  isms-auditprogramm: "Internes Auditprogramm"
+  isms-managementbewertung: "Managementbewertung"
+  isms-nichtkonformitaeten: "Nichtkonformitäten und Korrekturmassnahmen"
+  isms-dokumentenlenkung: "Lenkung dokumentierter Information"
+blaetter:
+  D-03-EB:
+    titel: "Ergänzung zur Informationssicherheitsleitlinie"
+    abschnitte:
+      geltung-ki:
+        titel: "Geltung für KI"
+        inhalt: |
+          Diese Leitlinie gilt auch für KI-Systeme, die wir entwickeln, betreiben oder als Dienst nutzen, einschliesslich KI-Funktionen in bestehender Software. Daten, die in KI-Werkzeuge eingegeben oder von ihnen erzeugt werden, sind Informationen im Sinne dieser Leitlinie. Sie unterliegen denselben Regeln zu Klassifizierung, Zugriff und Aufbewahrung.
+      verhaeltnis-ki-leitlinie:
+        titel: "Verhältnis zur KI-Leitlinie"
+        inhalt: |
+          Die KI-Leitlinie regelt, wie wir KI verantwortungsvoll entwickeln und nutzen. Diese Leitlinie regelt die Sicherheit der Informationen. Beide Leitlinien verweisen aufeinander und dürfen sich nicht widersprechen. Tritt dennoch ein Widerspruch auf, gilt bis zum Entscheid der Geschäftsleitung die strengere Regel.
+      sicherheitsgrundsaetze-ki:
+        titel: "Sicherheitsgrundsätze für KI"
+        inhalt: |
+          Vertrauliche Informationen geben wir nur in freigegebene KI-Werkzeuge ein. Trainingsdaten, Modelle und Systemanweisungen schützen wir vor unbefugter Änderung, weil Manipulationen das Verhalten eines KI-Systems verändern können. Ergebnisse von KI-Systemen prüfen wir vor der Weiterverwendung, wenn sie Entscheide über Personen oder Kunden beeinflussen.
+      gemeinsame-ueberpruefung:
+        titel: "Gemeinsame Überprüfung"
+        inhalt: |
+          Die Informationssicherheitsleitlinie und die KI-Leitlinie werden gemeinsam überprüft, mindestens jährlich und bei wesentlichen Änderungen. Wesentlich sind etwa neue KI-Systeme, neue gesetzliche Vorgaben wie der AI Act oder schwere Vorfälle. Das Ergebnis wird in der Managementbewertung festgehalten.
+  D-04-EB:
+    titel: "Ergänzung zu Rollen und Organigramm"
+    abschnitte:
+      aims-verantwortung:
+        titel: "AIMS-Verantwortung"
+        inhalt: |
+          Die Geschäftsleitung benennt eine Person, die das KI-Managementsystem führt und der Geschäftsleitung darüber berichtet. In kleinen Organisationen kann dies die für Informationssicherheit verantwortliche Person sein. Dann werden Zeitbudget, Stellvertretung und der Umgang mit Interessenkonflikten schriftlich festgehalten, etwa wenn diese Person eigene KI-Projekte beurteilen müsste.
+      systemverantwortung:
+        titel: "Eigner/in je KI-System"
+        inhalt: |
+          Jedes KI-System im Inventar hat eine Eignerin oder einen Eigner, so wie jeder Informationswert eine Eignerin oder einen Eigner hat. Sie kennt Zweck und Grenzen des Systems, veranlasst Folgenabschätzung und Risikobeurteilung und entscheidet über Änderungen. Bei eingekauften Diensten ist sie zugleich Ansprechperson gegenüber dem Anbieter.
+      raci-ki:
+        titel: "Ergänzte Zuständigkeiten (RACI)"
+        inhalt: |
+          Die bestehende Zuständigkeitsmatrix wird um die Bereiche des KI-Managementsystems ergänzt, etwa KI-Risiken, Folgenabschätzungen, KI-Inventar, Daten, menschliche Aufsicht, KI-Lieferanten, Recht und AI Act, Schulung, internes Audit und Dokumentenlenkung. Für Informationssicherheit und Datenschutz gelten die bestehenden Zuständigkeiten des ISMS. Für jeden Bereich ist festgelegt, wer ausführt, wer entscheidet, wer beigezogen und wer informiert wird. Bestehende Gremien nehmen KI-Themen wie die Freigabe neuer KI-Werkzeuge auf, statt dass neue Gremien entstehen.
+      meldeweg-bedenken:
+        titel: "Meldeweg für Bedenken zu KI"
+        inhalt: |
+          Mitarbeitende und Personen, die für uns arbeiten, können Bedenken zu KI-Systemen über einen bestehenden Kanal melden, etwa die Meldestelle für Hinweise oder die vorgesetzte Person. Gemeldet werden dürfen auch Themen ohne Sicherheitsbezug, etwa unfaire Ergebnisse oder eine Nutzung ausserhalb des Zwecks. Die Identität der meldenden Person wird nur mit ihrem Einverständnis weitergegeben, und wer in gutem Glauben meldet, hat keine Nachteile zu befürchten. Betrifft eine Meldung die zuständige Person selbst, geht sie an eine Ausweichstelle. Eingangsbestätigung, Rückmeldung und Eskalation folgen festgelegten Fristen; jede Meldung wird erfasst und in der Managementbewertung ausgewertet. Meldungen von Externen regelt das Vorfallverfahren.
+  D-06-EB:
+    titel: "Ergänzung zum Risikoverfahren"
+    abschnitte:
+      eine-methode:
+        titel: "Eine Methode für beide Systeme"
+        inhalt: |
+          KI-Risiken werden mit derselben Methode und denselben Skalen für Wahrscheinlichkeit und Auswirkung beurteilt wie Informationssicherheitsrisiken. So bleiben die Ergebnisse vergleichbar, und die Geschäftsleitung entscheidet nach einheitlichen Kriterien. Die Kriterien für die Annahme von Risiken gelten für beide Systeme.
+      auswirkungen-ki:
+        titel: "Zusätzliche Auswirkungskategorien"
+        inhalt: |
+          Die Auswirkungsskala wird um zwei Ebenen erweitert: Folgen für Einzelpersonen und Gruppen, etwa Benachteiligung, Eingriffe in die Privatsphäre oder falsche Entscheide, und Folgen für die Gesellschaft, etwa eine Wirkung auf viele Menschen oder auf die Umwelt. Für jede Stufe beschreibt ein Beispiel, was sie bedeutet. Als Auswirkung zählt die schwerste realistische Folge über alle drei Ebenen.
+      risikoquellen-ki:
+        titel: "KI-typische Risikoquellen"
+        inhalt: |
+          Bei der Risikoidentifikation werden zusätzlich KI-typische Quellen betrachtet: mangelhafte oder verzerrte Daten, nachlassende Modellleistung im Betrieb (Drift), fehlende Nachvollziehbarkeit, hoher Automatisierungsgrad ohne menschliche Kontrolle, Abhängigkeit von einem Modellanbieter und Angriffe über Eingaben wie Prompt-Injection, auch über E-Mails, Webseiten und Dokumente, die ein Assistent liest. Hinzu kommen KI-typische Bedrohungen wie vergiftete Daten, Rückschluss auf Trainingsdaten, Abfluss über Ausgaben, zu weit gehende Rechte von Agenten und Kostenmissbrauch. Die Liste dient als Gedankenstütze und wird jährlich überprüft.
+      verbindung-folgenabschaetzung:
+        titel: "Verbindung zur Folgenabschätzung"
+        inhalt: |
+          Die Folgenabschätzung für KI-Systeme (D-08) ist ein eigenes Verfahren, ihre Ergebnisse fliessen aber in die Risikobeurteilung ein. Umgekehrt löst ein neues oder geändertes KI-System mit möglichen Folgen für Personen eine Folgenabschätzung aus. Risikobeurteilung und Folgenabschätzung verweisen aufeinander.
+      risikoeigner-ki:
+        titel: "Risikoeigner und Annahme"
+        inhalt: |
+          Risikoeigner/in eines KI-Risikos ist in der Regel die Eignerin oder der Eigner des betroffenen KI-Systems. Sie schlägt die Behandlung vor. Tiefe Risiken bestätigt sie selbst im Register; die Annahme mittlerer Risiken und eine befristete Ausnahme bei hohen Risiken gibt die Geschäftsleitung frei. Die Annahme wird mit Datum und Namen festgehalten.
+  D-07-EB:
+    titel: "Ergänzung zum Risikoregister"
+    abschnitte:
+      zusatzspalten:
+        titel: "Zusätzliche Spalten"
+        inhalt: |
+          Das ISMS-Risikoregister erhält für Risiken mit KI-Bezug zusätzliche Spalten: betroffenes KI-System (ID aus dem KI-Inventar) und Verweis auf das KI-Risikoregister (D-07). Bestehende Spalten wie Eigner, Bewertung und Massnahmen bleiben unverändert. Betroffene Personengruppen, Bezug zur Folgenabschätzung und zugeordnete Controls aus Anhang A der ISO/IEC 42001 führt das KI-Risikoregister.
+      trennung-verknuepfung:
+        titel: "Getrennt führen, verknüpfen"
+        inhalt: |
+          Informationssicherheitsrisiken, auch solche eines KI-Systems, bleiben im ISMS-Risikoregister. KI-spezifische Risiken wie Verzerrungen, fehlerhafte Ergebnisse oder fehlende menschliche Prüfung führt das KI-Risikoregister (D-07). Hat ein KI-Risiko auch einen Sicherheitsaspekt, etwa Datenabfluss über ein KI-Werkzeug, wird es nicht doppelt erfasst, sondern über die Risiko-ID verknüpft (Spalte «ISMS-Verweis» in D-07). So steht jedes Risiko an einer Stelle und hat genau einen Eigner.
+      chancen:
+        titel: "Chancen erfassen"
+        inhalt: |
+          Neben Risiken werden Chancen erfasst, etwa Zeitgewinn, bessere Qualität oder neue Angebote durch KI. Für jede Chance wird festgehalten, wer sie verfolgt und bis wann. Chancen und Risiken desselben KI-Systems werden gemeinsam betrachtet.
+      restrisiko:
+        titel: "Annahme des Restrisikos"
+        inhalt: |
+          Für jedes behandelte KI-Risiko wird festgehalten, wer das Restrisiko angenommen hat und wann. Restrisiken über der Annahmeschwelle nimmt die Geschäftsleitung an. Die Annahme wird spätestens bei der nächsten Risikobeurteilung oder bei wesentlichen Änderungen am KI-System überprüft.
+  D-10-EB:
+    titel: "Ergänzung zum Asset-Inventar"
+    abschnitte:
+      ki-kennzeichen:
+        titel: "Kennzeichen für KI"
+        inhalt: |
+          Jeder Eintrag im Inventar erhält ein Feld «KI» mit den Werten «KI-System», «enthält KI-Funktion» oder «keine KI». Auch Standardsoftware und Cloud-Dienste mit eingebauten KI-Funktionen werden so gekennzeichnet, etwa Bürosoftware mit Assistenzfunktion. Für jedes KI-System wird die ID aus dem KI-Inventar eingetragen.
+      ressourcen-zuordnen:
+        titel: "Ressourcen dem KI-System zuordnen"
+        inhalt: |
+          Je KI-System werden die genutzten Ressourcen verknüpft: Datenbestände, Werkzeuge und Modelle, Rechen- und Systemressourcen sowie Personen mit den nötigen Kompetenzen. Bereits inventarisierte Werte werden nur verknüpft, nicht neu erfasst. Fehlende Ressourcen wie Modelle oder Trainingsdaten werden neu aufgenommen.
+      schatten-ki:
+        titel: "Nicht erfasste KI finden"
+        inhalt: |
+          Einmal jährlich und vor jedem Audit wird geprüft, ob KI ohne Freigabe genutzt wird. Hilfsmittel sind ein kurzer Fragebogen an die Teams, Auswertungen von Webfilter oder Proxy und die Durchsicht von Kreditkarten- und Spesenabrechnungen nach KI-Abonnementen. Gefundene Werkzeuge werden ins KI-Inventar aufgenommen. Danach wird entschieden, ob sie freigegeben, durch ein freigegebenes Werkzeug ersetzt oder untersagt werden; untersagte Werkzeuge bleiben mit Begründung auf der Freigabeliste.
+      pflege:
+        titel: "Pflege des Inventars"
+        inhalt: |
+          Die Eignerin oder der Eigner eines KI-Systems meldet Änderungen wie neue Modellversionen, neue Datenquellen, neue Zugriffsrechte, Erweiterungen oder Agenten und die Ausserbetriebnahme. Für handelnde KI hält das Inventar zusätzlich Handlungsbefugnis, Zugriffe und Stoppmöglichkeit fest. Das Inventar wird mindestens jährlich gemeinsam mit dem Asset-Inventar überprüft.
+  D-14-EB:
+    titel: "Ergänzung zum Vorfallmanagement"
+    abschnitte:
+      ki-vorfaelle:
+        titel: "Was als KI-Vorfall gilt"
+        inhalt: |
+          Als KI-Vorfall gilt neben Sicherheitsvorfällen jedes Ereignis, bei dem ein KI-System Personen schadet oder schaden könnte, etwa durch diskriminierende Ausgaben, falsche Entscheide oder gefährliche Empfehlungen. Dazu gehören auch Datenabflüsse über Eingaben in KI-Werkzeuge. KI-Vorfälle werden im bestehenden Vorfallprozess erfasst und mit dem betroffenen KI-System verknüpft.
+      meldekanal-extern:
+        titel: "Meldekanal für Externe"
+        inhalt: |
+          Kunden, Nutzende und Betroffene können Probleme mit unseren KI-Systemen über einen öffentlich bekannten Kanal melden, etwa ein Formular auf der Website oder eine eigene E-Mail-Adresse. Eingehende Meldungen werden wie interne Meldungen triagiert und innert einer festgelegten Frist beantwortet. Die meldende Person erhält eine Eingangsbestätigung.
+      kommunikation:
+        titel: "Kommunikation bei KI-Vorfällen"
+        inhalt: |
+          Der Kommunikationsplan legt fest, wer bei einem KI-Vorfall Nutzende, Kunden, Betroffene und Partner informiert, über welchen Kanal und in welcher Frist. Eine benannte Person koordiniert und entscheidet mit der Geschäftsleitung über die Information nach aussen. Bei Bedarf wird die KI-Funktion vorübergehend abgeschaltet oder auf manuelle Bearbeitung umgestellt, und die Betroffenen werden darüber informiert. Der Ablauf wird einmal im Jahr an einem Beispiel geübt.
+      meldepflichten:
+        titel: "Meldepflichten gegenüber Dritten"
+        inhalt: |
+          Eine Liste hält fest, welche Meldepflichten bei KI-Vorfällen gelten, an wen und in welcher Frist. Dazu gehören je nach Rolle Pflichten aus dem AI Act, etwa die Meldung schwerwiegender Vorfälle bei Hochrisiko-KI-Systemen durch Anbieter (Art. 73) und die Information des Anbieters durch Betreiber (Art. 26). Hinzu kommen Meldungen nach Datenschutzrecht und vertragliche Pflichten gegenüber Kunden. Die Liste wird mit dem Verzeichnis der rechtlichen Anforderungen abgeglichen.
+      lehren:
+        titel: "Lehren aus KI-Vorfällen"
+        inhalt: |
+          Nach jedem KI-Vorfall und Beinahe-Vorfall werden Ursache, Wirkung, Schweregrad und Massnahmen im Register der Nichtkonformitäten und Verbesserungen festgehalten. Geprüft wird, ob Risikobeurteilung, Folgenabschätzung oder die Information für Nutzende angepasst werden müssen; akzeptierte Restrisiken, die Nutzende oder Kunden betreffen, fliessen in deren Information ein. Die Festlegungen werden jährlich und nach erheblichen Vorfällen überprüft.
+      information-nutzende:
+        titel: "Information für Nutzende und Kunden"
+        inhalt: |
+          Diese Festlegungen betreffen nicht nur Vorfälle. Sie gehören zum Ergänzungsblatt, damit die Information für Nutzende und Kunden abgedeckt ist. Wer ein KI-System nutzt oder von seinen Ergebnissen betroffen ist, erfährt, dass KI beteiligt ist, wofür sie dient, wo ihre Grenzen liegen, wer Ergebnisse prüft und an wen man sich wendet. Kunden, deren Leistungen KI enthalten oder die KI von uns erhalten, werden zusätzlich über bekannte Fehlerquellen und die Verwendung ihrer Daten informiert. Je KI-System sind Zielgruppe, Information und Ort festgehalten.
+  D-15-EB:
+    titel: "Ergänzung zur akzeptablen Nutzung"
+    abschnitte:
+      freigegebene-werkzeuge:
+        titel: "Freigegebene KI-Werkzeuge"
+        inhalt: |
+          Für die Arbeit dürfen nur KI-Werkzeuge genutzt werden, die auf der Liste der freigegebenen Werkzeuge stehen, und nur mit dem Firmenkonto. Die Liste nennt je Werkzeug den erlaubten Zweck und die höchste zulässige Klassifizierungsstufe der Daten. Private Konten für berufliche Zwecke sind nicht erlaubt.
+      dateneingabe:
+        titel: "Welche Daten eingegeben werden dürfen"
+        inhalt: |
+          Öffentliche und interne Informationen dürfen in freigegebene Werkzeuge eingegeben werden. Vertrauliche Informationen und Personendaten nur in Werkzeuge, die das KI-Inventar dafür ausdrücklich freigibt und die unsere Daten nicht zum Training verwenden. Nie in ein KI-Werkzeug gehören Passwörter und andere Zugangsdaten, besonders schützenswerte Personendaten, Unterlagen unter vertraglicher Geheimhaltung und exportkontrollierte Daten.
+      ergebnisse-pruefen:
+        titel: "Ergebnisse prüfen"
+        inhalt: |
+          Wer KI nutzt, bleibt für das Ergebnis verantwortlich. Fakten, Zahlen, Zitate, Quellen, Übersetzungen und Code werden vor der Weiterverwendung geprüft. Betrifft ein Ergebnis Kunden, Verträge, Sicherheit oder Personen, prüft immer ein Mensch mit dem nötigen Fachwissen. Inhalte, die weitgehend von KI stammen, werden gekennzeichnet, wenn andere sonst einen menschlichen Urheber annehmen würden, etwa bei veröffentlichten Texten und Bildern. KI-Assistenten, Agenten und Erweiterungen handeln nur nach Bestätigung durch eine Person und nur, wenn sie freigegeben sind; fremde Inhalte können versteckte Anweisungen enthalten.
+      neue-werkzeuge:
+        titel: "Neue KI-Werkzeuge beantragen"
+        inhalt: |
+          Wer ein neues KI-Werkzeug oder eine neue Nutzung möchte, stellt einen kurzen Antrag mit Werkzeug, Zweck, Nutzenden, Daten und der geprüften Lösung ohne KI. Bis zum Entscheid ist die Nutzung nicht erlaubt. Die zuständige Stelle prüft Lieferant, Daten, Risiken und, falls nötig, die Folgen und entscheidet innert einer festgelegten Frist: erlaubt, erlaubt mit Auflagen oder verboten. Der Entscheid wird im KI-Inventar eingetragen, und die Nutzenden werden informiert und geschult.
+      verbotene-nutzung:
+        titel: "Verbotene Nutzungen"
+        inhalt: |
+          Verboten ist die Nutzung von KI für Zwecke, die gegen Gesetze oder unsere KI-Leitlinie verstossen, darunter die im AI Act verbotenen Praktiken wie die Erkennung von Emotionen am Arbeitsplatz. Wir verwenden KI zudem nicht für Entscheide über Menschen ohne menschliche Prüfung, für die Überwachung oder Bewertung von Mitarbeitenden ohne Freigabe der Geschäftsleitung, zur Täuschung oder zur Umgehung von Sicherheitsvorgaben. Im Zweifel fragen Mitarbeitende vor der Nutzung nach.
+  D-16-EB:
+    titel: "Ergänzung zum Lieferantenmanagement"
+    abschnitte:
+      ki-lieferanten:
+        titel: "KI-Lieferanten kennzeichnen"
+        inhalt: |
+          In der Lieferantenliste wird gekennzeichnet, welche Lieferanten KI-Systeme, Modelle oder KI-Funktionen liefern. Für diese Lieferanten gelten zusätzlich die folgenden Prüfpunkte. Die Kennzeichnung wird bei jeder Vertragserneuerung überprüft, weil viele Anbieter KI-Funktionen nachträglich einführen.
+      pruefpunkte:
+        titel: "Zusätzliche Prüfpunkte"
+        inhalt: |
+          Vor der Auswahl wird mit dem Anbieter geklärt, ob unsere Daten zum Training verwendet werden, woher das Modell stammt und wo die Daten bearbeitet werden. Weiter ist zu klären, welche Dokumentation zu Zweck, Grenzen und Tests vorliegt und welche Rolle der Anbieter nach dem AI Act hat. Bei generativer KI kommen Schutz vor manipulierten Eingaben, Berechtigungen bei der Suche, Steuerung von Erweiterungen und Aktionen, Kostendach, Darstellung von Antworten sowie Modell und Version dazu. Die Antworten werden mit dem Lieferantenfragebogen abgelegt.
+      vertragsklauseln:
+        titel: "Vertragsklauseln"
+        inhalt: |
+          Verträge mit KI-Lieferanten regeln zusätzlich: kein Training mit unseren Daten ohne Zustimmung, Ankündigung wesentlicher Modelländerungen, Meldung von KI-Vorfällen, Unterstützung bei unseren gesetzlichen Pflichten und einen geordneten Ausstieg mit Rückgabe oder Löschung der Daten. Fehlt eine Klausel, etwa in Standardverträgen, folgt eine Auflage, ein Eintrag im KI-Risikoregister mit bewusst angenommenem Restrisiko oder die Ablehnung.
+      verantwortungsteilung:
+        titel: "Verantwortung aufteilen"
+        inhalt: |
+          Für jedes eingekaufte KI-System hält eine kurze Tabelle fest, wer wofür verantwortlich ist: Modell und Training, Konfiguration, eingegebene Daten, Prüfung der Ausgaben, Überwachung und Meldung von Vorfällen. Die Tabelle wird mit dem Anbieter abgestimmt, soweit er dazu bereit ist.
+      ueberwachung:
+        titel: "Überwachung im Betrieb"
+        inhalt: |
+          KI-Lieferanten werden vor dem Einkauf geprüft, danach mindestens jährlich und zusätzlich nach einem Vorfall, einem Modellwechsel, neuen Unterauftragnehmern oder geänderten Vertragsbedingungen. Neben den üblichen Punkten wird geprüft, ob sich Modell, Nutzungsbedingungen oder Datenstandort geändert haben. Wesentliche Änderungen lösen eine erneute Risikobeurteilung aus.
+  D-17-EB:
+    titel: "Ergänzung zu Kompetenz, Bewusstsein und Kommunikation"
+    abschnitte:
+      ki-kompetenzen:
+        titel: "KI-Kompetenzen je Rolle"
+        inhalt: |
+          Das Kompetenzprofil wird je Rolle um KI-Kompetenzen ergänzt: sicherer Umgang mit KI-Werkzeugen für alle, Bewertung von Ausgaben für Fachverantwortliche, Kenntnisse zu Daten und Modellen für Entwickelnde. Wer KI-Systeme mit Bezug zur EU betreibt oder anbietet, ergreift nach Art. 4 AI Act Massnahmen, die die KI-Kompetenz der beteiligten Personen unterstützen; ein bestimmtes Niveau verlangt der Artikel nicht. Lücken werden mit Schulungen oder externer Unterstützung geschlossen.
+      awareness-ki:
+        titel: "Lerneinheit zu KI im Bewusstseinsprogramm"
+        inhalt: |
+          Das bestehende Bewusstseinsprogramm erhält eine kurze Lerneinheit zu KI. Sie behandelt die KI-Leitlinie, die Nutzungsregeln, typische Fehler von KI-Ausgaben und den Meldeweg für Bedenken. Neue Mitarbeitende absolvieren das Modul beim Eintritt, alle anderen mindestens jährlich.
+      kommunikation-ki:
+        titel: "Kommunikation zu KI"
+        inhalt: |
+          Der Kommunikationsplan wird um KI-Themen ergänzt: Bekanntmachung der KI-Leitlinie, Information an Nutzende und Betroffene über KI-Systeme, Austausch mit Anbietern und, falls nötig, mit Behörden. Je Thema sind Inhalt, Zielgruppe, Kanal, Zeitpunkt und Verantwortliche festgelegt.
+      nachweise:
+        titel: "Nachweise"
+        inhalt: |
+          Teilnahmen an KI-Schulungen, Kursbestätigungen und Protokolle von Einweisungen werden wie andere Schulungsnachweise abgelegt. Ob eine Massnahme gewirkt hat, wird später geprüft, etwa durch ein Gespräch, einen kurzen Test oder eine Stichprobe der Arbeit. Die Nachweise belegen zugleich die KI-Kompetenz nach Art. 4 AI Act.
+  D-20-EB:
+    titel: "Ergänzung zum Auditprogramm"
+    abschnitte:
+      umfang:
+        titel: "Umfang des Programms"
+        inhalt: |
+          Das Auditprogramm deckt ISMS und AIMS gemeinsam ab. Die Abschnitte 4 bis 10 werden für beide Normen in denselben Gesprächen geprüft, die Controls aus Anhang A der ISO/IEC 42001 mit eigenen Prüffragen. Im Auditplan ist je Termin ersichtlich, welche Norm und welche Abschnitte geprüft werden.
+      planung:
+        titel: "Planung über den Zyklus"
+        inhalt: |
+          Innerhalb des dreijährigen Zertifizierungszyklus werden alle Abschnitte und alle anwendbaren Controls beider Normen mindestens einmal geprüft. Vor der ersten Zertifizierung wird das AIMS einmal vollständig auditiert. KI-Systeme mit hohem Risiko oder grossen Änderungen werden häufiger geprüft.
+      auditoren:
+        titel: "Kompetenz und Unabhängigkeit"
+        inhalt: |
+          Wer das AIMS auditiert, braucht Grundkenntnisse zu KI und zur ISO/IEC 42001, etwa aus einer Schulung. Niemand prüft die eigene Arbeit. In kleinen Organisationen kann dafür eine externe Person beigezogen werden.
+      berichte:
+        titel: "Befunde und Bericht"
+        inhalt: |
+          Befunde werden mit Normbezug erfasst, damit erkennbar ist, ob ISMS, AIMS oder beide betroffen sind. Ein gemeinsamer Bericht genügt. Die Befunde gehen in das gemeinsame Register der Nichtkonformitäten.
+  D-21-EB:
+    titel: "Ergänzung zur Managementbewertung"
+    abschnitte:
+      eingaben-ki:
+        titel: "Zusätzliche Eingaben"
+        inhalt: |
+          Die Agenda wird um KI-Themen ergänzt: Stand der KI-Risiken und Folgenabschätzungen, Meldungen über Bedenken und KI-Vorfälle, Kennzahlen zur Leistung der KI-Systeme, Änderungen bei interessierten Parteien und im KI-Recht sowie Ergebnisse der Lieferantenüberprüfung. Jeder Punkt wird kurz aufbereitet, damit die Bewertung in einer Sitzung möglich bleibt.
+      entscheide-ki:
+        titel: "Entscheide zu KI"
+        inhalt: |
+          Die Geschäftsleitung entscheidet ausdrücklich über die Angemessenheit der KI-Leitlinie, die Ressourcen für das AIMS, die Annahme wesentlicher KI-Restrisiken und Verbesserungen. Die Entscheide werden mit Verantwortlichen und Terminen festgehalten.
+      protokoll:
+        titel: "Protokoll"
+        inhalt: |
+          Ein gemeinsames Protokoll für beide Systeme genügt. Jeder Punkt erhält einen Vermerk, ob er ISMS, AIMS oder beide betrifft, damit sich die Nachweise je Norm leicht finden lassen.
+  D-22-EB:
+    titel: "Ergänzung zu Nichtkonformitäten und Verbesserungen"
+    abschnitte:
+      bereich:
+        titel: "Feld für den Bereich"
+        inhalt: |
+          Jeder Eintrag erhält ein Feld «Bereich» mit den Werten ISMS, AIMS oder beide. Bei KI-Themen wird zusätzlich die ID des betroffenen KI-Systems eingetragen. Auswertungen je Bereich zeigen, wo Schwerpunkte liegen.
+      ursachen-ki:
+        titel: "Ursachen bei KI-Abweichungen"
+        inhalt: |
+          Bei Abweichungen mit KI-Bezug wird geprüft, ob die Ursache in den Daten, im Modell, in einer Nutzung ausserhalb des Zwecks oder in fehlender Kompetenz liegt. Je nach Ursache werden Risikobeurteilung, Folgenabschätzung oder Nutzungsregeln angepasst. Die Wirksamkeit der Korrekturmassnahme wird nach einer festgelegten Frist überprüft.
+      verbesserungen:
+        titel: "Verbesserungen erfassen"
+        inhalt: |
+          Verbesserungsvorschläge zu KI, etwa aus Meldungen, Audits oder der Überwachung, werden im selben Register geführt wie andere Verbesserungen. Die Managementbewertung priorisiert diese Liste. KI-Vorfälle und Beinahe-Vorfälle erhalten zusätzlich einen Schweregrad in vier Stufen, damit Fehler, Vorfälle und Beinahe-Vorfälle an einem Ort gezählt werden.
+  D-26-EB:
+    titel: "Ergänzung zur Lenkung dokumentierter Information"
+    abschnitte:
+      geltung-feld:
+        titel: "Feld «gilt für»"
+        inhalt: |
+          Das Dokumentenregister erhält ein Feld «gilt für» mit den Werten ISMS, AIMS oder beide. Gemeinsame Dokumente werden nur einmal geführt und bei Änderungen für beide Systeme freigegeben.
+      dokumentarten-ki:
+        titel: "Neue Dokumentarten"
+        inhalt: |
+          Für das AIMS kommen Dokumentarten hinzu: Folgenabschätzungen, technische Dokumentationen von KI-Systemen, Beschreibungen von Datenbeständen und Nachweise zu Modellversionen. Für jede Art werden Eigner, Ablageort und Aufbewahrungsdauer festgelegt. Der AI Act verlangt teils lange Fristen, etwa zehn Jahre für die technische Dokumentation von Hochrisiko-KI-Systemen bei Anbietern und mindestens sechs Monate für Protokolle bei Betreibern.
+      aenderungen-aims:
+        titel: "Änderungen am Managementsystem"
+        inhalt: |
+          Änderungen am AIMS, etwa neue Prozesse oder ein erweiterter Geltungsbereich, laufen über denselben Änderungsablauf wie Änderungen am ISMS. Vor der Umsetzung wird geprüft, welche Dokumente, Rollen und Risiken betroffen sind. Geplante Änderungen am AIMS und die Massnahmen dazu stehen im {{fakt:register.massnahmen}}.
+      ki-erstellte-dokumente:
+        titel: "Mit KI erstellte Dokumente"
+        inhalt: |
+          Dokumente des Managementsystems dürfen mit KI-Unterstützung entworfen werden. Vor der Freigabe prüft die verantwortliche Person den Inhalt vollständig, denn sie trägt die Verantwortung für die Richtigkeit. Vertrauliche Inhalte werden dabei nur in freigegebene Werkzeuge eingegeben.

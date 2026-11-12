@@ -1,0 +1,17 @@
+# Rahmen für alle Ergänzungsblätter D-xx-EB (Inhalte: ergaenzungsblaetter.yaml)
+einleitung: "Dieses Blatt ergänzt das bestehende ISMS-Dokument «{isms}» um die Inhalte, die das KI-Managementsystem nach ISO/IEC 42001 verlangt. Nehmen Sie die Abschnitte in das ISMS-Dokument auf und passen Sie Begriffe und Nummerierung an. Die zugehörige Kit-Vorlage ist {vorlage} {titel}."
+einleitung_firma: "Dieses Blatt ergänzt bei {firma} das ISMS-Dokument «{isms}» um die Inhalte für das KI-Managementsystem nach ISO/IEC 42001. Die Abschnitte sind in das ISMS-Dokument übernommen und gelten als Teil davon."
+felder:
+  isms_dokument: Ergänztes ISMS-Dokument
+  isms_version: "Aufgenommen in (Dokument, Version)"
+  normbezug: Normbezug ISO/IEC 42001
+  iso27001: Verwandte Controls ISO/IEC 27001
+  keine: keine
+abschnitte_titel: Aufzunehmende Abschnitte
+hinweis_abschnitt: "Prüfen Sie je Abschnitt, ob Ihr ISMS-Dokument den Inhalt schon abdeckt. Dann genügt ein Verweis; sonst übernehmen Sie den Text und passen ihn an."
+uebernahme_titel: Übernahme in das ISMS-Dokument
+uebernahme_text: "Die Abschnitte wurden in das ISMS-Dokument übernommen und mit diesem freigegeben."
+uebernahme_felder:
+  version: "Übernommen in (Dokument, Version)"
+  datum: "Freigegeben am"
+  durch: "Freigegeben durch"

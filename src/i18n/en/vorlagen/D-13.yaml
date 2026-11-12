@@ -1,0 +1,97 @@
+# D-13 Data for AI systems
+hinweis_umfang: "Sections 1 to 4 apply to everyone who uses AI systems. You need section 5 only if you train, fine-tune or test models yourself; otherwise exclude A.7.2, A.7.3, A.7.5 and A.7.6 in D-11 with a justification. A.7.4 remains applicable to deployers."
+einleitung: "This document sets out which data [[Company name]] puts into AI systems, what quality the data must have and how it is protected."
+einleitung_firma: "This document sets out which data {firma} puts into AI systems, what quality the data must have and how it is protected."
+abschnitte:
+  geltung: Scope and responsibility
+  qualitaet: Input data and data quality
+  vertraulichkeit: Confidentiality and personal data
+  verboten: What must not go into AI systems
+  entwicklung: Data for development
+  herkunft: Provenance and rights of data
+unterabschnitte:
+  management: Data management
+  beschaffung: Acquisition, rights and provenance
+  aufbereitung: Preparation
+  datenblatt: Data sheet for each data set
+geltung_text: "These rules apply to all data that we enter into, upload to or connect to AI systems, for example texts, documents, images, spreadsheets and connected file stores. The system owner (D-12) puts them into practice. The person responsible for the rules as a whole is {verantwortlich}."
+qualitaet_text: "Good results depend on good inputs. For each system, we record which data goes in and which criteria it must meet."
+systeme_fehlen: "No AI system has been recorded in the AI inventory yet. Complete D-10 first."
+systeme_kopf: [AI system, Input data, Personal data, Quality requirement]
+qualitaet_standard: "general criteria for input data"
+qualitaet_untersagt: "no input permitted (system prohibited)"
+qualitaet_system: "{anforderung}; in addition the general criteria for input data"
+# Data responsibility without a person in the responsibility matrix (area ‘data’, D-04)
+rolle_daten: "the person responsible for data under D-04"
+platzhalter_datenschutz: data protection officer
+personendaten:
+  ja: "yes"
+  nein: "no"
+  besondere: "yes, special categories"
+kriterien_text: "These general criteria apply to all input data:"
+kriterien_kopf: [Criterion, Requirement, Check]
+kriterien_tabelle:
+  - [Accurate, "content matches the source", "spot check during testing before use (D-12)"]
+  - [Current, "valid version, outdated material removed", "maintained by the owner, [[every six months]]"]
+  - [Complete, "all information needed for the task", "test cases with missing information"]
+  - [Fit for purpose, "covers our typical cases, languages and products", "test cases from our own daily work"]
+  - [Permitted, "use is allowed (sections 3 and 4)", "approval of the system (D-12)"]
+wissensbasis_text: "If we connect our own file stores or documents as a knowledge source, we define which folders are connected, who maintains them and how access rights carry over. Only approved, current versions go in. Access rights are checked at retrieval, not only when results are displayed. Only those who maintain the knowledge base have write access; changes are traceable. A search index (e.g. vectors) and its backups are as confidential as the source data and are deleted with it."
+vertraulichkeit_text: "Which data may go into which system depends on the data class. Approved tools and the data class they may handle are listed in the AI inventory (D-10) and in the AI use policy (D-15)."
+hinweis_klassen: "With an ISMS: use the classes from your existing classification policy and add only the column on AI systems."
+klassen_kopf: [Data class, Permitted in AI systems]
+klassen_tabelle:
+  - [Public, "in all approved tools"]
+  - [Internal, "in approved tools with a company account"]
+  - [Confidential, "only in tools approved for confidential data; the contract excludes training on our data (D-16)"]
+  - [Personal data, "only for a defined purpose and with a data processing agreement; as little as possible, anonymized where possible"]
+  - [Special categories of personal data, "for example health, religion, criminal proceedings: only with prior approval by [[data protection officer]] and an impact assessment (D-09)"]
+ableitungen_text: "**Derived data follow the source:** summaries, meeting transcripts, search indexes and embeddings, caches, assistant memory, agent logs, backups and training or test data created from them receive the data class, access rights, retention and deletion of the source data. A deletion request covers all derived data. Logs or debug recordings with conversation content are only switched on for a limited time and with approval."
+datenschutz_text: "Personal data is subject to the Swiss Federal Act on Data Protection (DSG) and, where applicable, the GDPR. If a data protection impact assessment is required, we link it with the impact assessment for the AI system (D-09)."
+verboten_text: "Whatever the tool, the following must not go into AI systems:"
+verboten_liste:
+  - "passwords, credentials, keys and certificates, including in instructions and settings of assistants"
+  - "data of customers or partners where a non-disclosure agreement rules out sharing"
+  - "data subject to export controls, and other data we classify as strictly confidential"
+  - "special categories of personal data without the approval described in section 3"
+  - "third-party content that we may not share or process"
+verboten_versehen: "Anyone who enters such data by mistake reports it immediately via the reporting channel under D-04 to the reporting point: [[reporting point]]. We then work with the supplier to have it deleted."
+entwicklung_geltung: "This section applies to data that we use to train, fine-tune, adapt, test or validate models, including for purchased systems."
+ausbau_entwicklung: "**Development:** for data that we use to train, fine-tune, test or validate models."
+entwicklung_entfaellt: "We do not train our own models and keep no training data. The controls on data for development ({controls}) are excluded with justification in the statement of applicability (D-11). Test cases for checking purchased systems before use (D-12, section 4) are input data; sections 2 to 4 apply to them. If this changes, we complete this section before the project starts."
+herkunft_eingabedaten: "Before we use third-party data as input data (e.g. customer drawings, purchased data), we clarify their origin and rights and record what happens to them."
+entwicklung_teilweise: "Not applicable and therefore not covered here: {controls}; the justification is in the statement of applicability (D-11)."
+management_text: "The person responsible for data in development is {verantwortlich}; within each project it is the project lead. The following applies:"
+management_regeln:
+  - "data sets are kept in a defined location, accessible only to the project"
+  - "training, test and validation data is kept separate and versioned"
+  - "every data set has a data sheet (see below)"
+  - "data sets are deleted when their purpose ends; the deletion is recorded"
+beschaffung_text: "Before a data set is used, we clarify its provenance and rights and record what happens to it."
+beschaffung_regeln:
+  - "source and how it was obtained: our own data, purchased, public, from customers or generated"
+  - "rights: licence, contract, consent or another legal basis"
+  - "provenance record: version, changes, transfers and the model versions that use it can be traced"
+aufbereitung_text: "Every preparation step is recorded with its rationale in the data sheet, for example:"
+aufbereitung_schritte:
+  - "cleansing: removing duplicates, errors and outliers"
+  - "anonymization or pseudonymization of personal data"
+  - "labelling according to written instructions, with spot checks"
+  - "balancing under-represented groups and splitting into training, test and validation data"
+hinweis_datenblatt: "Copy the table for each data set or keep the details as a list in the AI inventory (D-10)."
+datenblatt_kopf: [Item, Entry]
+datenblatt_firma: "For every data set of our own or fine-tuned systems we keep a data sheet with the details of this section. Storage: {ablage}. The data per system:"
+datenblatt_systeme_kopf: [AI system, "Training, test and knowledge data", Data quality requirement]
+datenblatt_entfaellt: "We do not keep our own training data. Test cases for accepting purchased systems (D-12, section 4) are input data under sections 2 to 4. We create data sheets as soon as we develop or retrain our own systems."
+datenblatt_tabelle:
+  - ["Name and version", "[[Add text]]"]
+  - ["Purpose: training, test, validation, knowledge source", "[[Add text]]"]
+  - ["Source and acquisition (A.7.3)", "[[Add text]]"]
+  - ["Rights and legal basis", "[[Add text]]"]
+  - ["Personal data and safeguards", "[[Add text]]"]
+  - ["Volume, period, coverage", "[[Add text]]"]
+  - ["Known gaps and biases", "[[Add text]]"]
+  - ["Preparation (A.7.6)", "[[Add text]]"]
+  - ["Quality check and result (A.7.4)", "[[Add text]]"]
+  - ["Provenance and changes (A.7.5)", "[[Add text]]"]
+  - ["Owner, storage, deletion", "[[Add text]]"]

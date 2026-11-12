@@ -1,0 +1,349 @@
+# Glossar: begriff, erklaerung (eigene Worte), en (englischer Fachbegriff). Schlüssel: src/kataloge/glossar.yaml
+aims:
+  begriff: KI-Managementsystem (AIMS)
+  erklaerung: Die Gesamtheit der Regeln, Rollen und Abläufe, mit denen ein Unternehmen KI geplant, kontrolliert und nachweisbar einsetzt. ISO/IEC 42001 beschreibt, was ein solches System enthalten muss.
+  en: AI management system
+  kurz: "Ein Managementsystem für den Umgang mit KI: Regeln, Rollen und Abläufe, die ein Unternehmen festlegt und einhält."
+  formen: "AIMS"
+ki-system:
+  begriff: KI-System
+  erklaerung: Ein technisches System, das aus Eingaben selbständig Ergebnisse wie Vorhersagen, Empfehlungen, Texte oder Entscheide ableitet. ISO/IEC 22989 und der AI Act (Art. 3) beschreiben das ähnlich, der AI Act betont zusätzlich die Lernfähigkeit und den Grad an Eigenständigkeit.
+  en: AI system
+ki-inventar:
+  begriff: KI-Inventar
+  erklaerung: Die vollständige Liste aller KI-Systeme im Unternehmen, auch KI in eingekaufter Software und Schatten-KI, mit Zweck, Verantwortlichen und Ressourcen.
+  en: AI inventory
+kontext:
+  begriff: Kontext der Organisation
+  erklaerung: Alles, was von aussen und innen auf Ihren Umgang mit KI wirkt, etwa Gesetze, Kundenerwartungen, Markt, Unternehmenskultur und Ihre Rolle in der Lieferkette.
+  en: context of the organization
+interessierte-partei:
+  begriff: Interessierte Partei
+  erklaerung: Eine Person oder Gruppe, die vom KI-Einsatz betroffen ist, ihn beeinflusst oder Erwartungen daran hat, zum Beispiel Kunden, Mitarbeitende oder Behörden.
+  en: interested party
+geltungsbereich:
+  begriff: Geltungsbereich
+  erklaerung: Die festgelegten Grenzen des Managementsystems, also welche Bereiche, Standorte, Prozesse und KI-Systeme dazugehören und welche nicht.
+  en: scope
+isms:
+  begriff: ISMS
+  erklaerung: Informationssicherheits-Managementsystem nach ISO/IEC 27001. Wer eines hat, kann Methoden, Rollen und Abläufe für das KI-Managementsystem wiederverwenden.
+  en: information security management system
+  kurz: "Das Managementsystem für Informationssicherheit nach ISO/IEC 27001; wer eines hat, nutzt Teile davon fürs AIMS."
+  formen: "ISMS"
+ergaenzungsblatt:
+  begriff: Ergänzungsblatt
+  erklaerung: Ein kurzes Zusatzdokument des Kits, das ein bestehendes ISMS-Dokument um die KI-Themen erweitert, statt ein neues Dokument zu schaffen.
+  en: supplementary sheet
+oberste-leitung:
+  begriff: Oberste Leitung
+  erklaerung: Die Person oder Gruppe, die das Unternehmen auf höchster Ebene führt, im KMU meist die Geschäftsleitung. Sie trägt das Managementsystem und gibt die wichtigen Dokumente frei.
+  en: top management
+ki-leitlinie:
+  begriff: KI-Leitlinie
+  erklaerung: Ein kurzes, von der Geschäftsleitung freigegebenes Dokument mit den Grundsätzen, nach denen das Unternehmen KI entwickelt, einkauft und nutzt.
+  en: AI policy
+raci:
+  begriff: RACI-Matrix
+  erklaerung: Eine Tabelle, die je Aufgabe festhält, wer sie ausführt (R), wer dafür geradesteht (A), wer gefragt (C) und wer informiert wird (I).
+  en: RACI matrix
+eigner:
+  begriff: Eigner/in
+  erklaerung: Die Person, die für ein KI-System, ein Risiko oder ein Dokument verantwortlich ist und darüber entscheidet. Für ein KI-System heisst die Rolle «Eigner/in des Systems», im Text «Eignerin oder Eigner des Systems».
+  en: owner
+meldeweg:
+  begriff: Meldeweg für Bedenken
+  erklaerung: Ein bekannter, vertraulicher Weg, auf dem Mitarbeitende Probleme mit KI-Systemen melden können, ohne Nachteile befürchten zu müssen.
+  en: reporting of concerns
+risikokriterien:
+  begriff: Risikokriterien
+  erklaerung: Die festgelegten Skalen für Wahrscheinlichkeit und Auswirkung sowie die Schwelle, ab der ein Risiko behandelt werden muss.
+  en: risk criteria
+risikobeurteilung:
+  begriff: KI-Risikobeurteilung
+  erklaerung: Das Erkennen, Einschätzen und Priorisieren von Risiken eines KI-Systems nach einer festen Methode, damit die Ergebnisse vergleichbar bleiben.
+  en: AI risk assessment
+risikoquelle:
+  begriff: Risikoquelle
+  erklaerung: Der Ursprung, aus dem ein Risiko entstehen kann, etwa Datenqualität, Lieferant, fehlende Kompetenz oder ein hoher Automatisierungsgrad.
+  en: risk source
+chance:
+  begriff: Chance
+  erklaerung: Eine mögliche positive Wirkung, die Sie gezielt nutzen wollen, etwa bessere Qualität oder Entlastung von Routinearbeit. Die Norm verlangt, Chancen ebenso zu planen wie Risiken.
+  en: opportunity
+risikobehandlung:
+  begriff: Risikobehandlung
+  erklaerung: Der Entscheid, wie Sie mit einem Risiko umgehen, also vermeiden, vermindern, teilen oder bewusst tragen, und die Massnahmen dazu.
+  en: risk treatment
+restrisiko:
+  begriff: Restrisiko
+  erklaerung: Das Risiko, das nach allen Massnahmen übrig bleibt. Eine zuständige Person nimmt es mit Datum ausdrücklich an.
+  en: residual risk
+control:
+  begriff: Control
+  erklaerung: Eine Massnahme aus dem Katalog in Anhang A der Norm (oder eine eigene), mit der Sie ein Risiko beherrschen. Die Norm nennt 38 Controls in 9 Gruppen.
+  en: control
+  kurz: "Eine einzelne Massnahme oder Regel aus dem Katalog im Anhang A der Norm, etwa zur menschlichen Aufsicht."
+  formen: "Control"
+soa:
+  begriff: Erklärung zur Anwendbarkeit (SoA)
+  erklaerung: Die Liste aller Controls mit Ihrem Entscheid, ob sie gelten, der Begründung dafür und dem Stand der Umsetzung.
+  en: statement of applicability
+  kurz: "Die Liste aller Controls mit Ihrem begründeten Entscheid, ob sie für Sie gelten, und dem Stand der Umsetzung."
+  formen: "Erklärung zur Anwendbarkeit|SoA"
+folgenabschaetzung:
+  begriff: Folgenabschätzung für KI-Systeme
+  erklaerung: Die Prüfung, wie ein KI-System auf Menschen, Gruppen und die Gesellschaft wirken kann, auch wenn es falsch genutzt wird. ISO/IEC 42005 gibt dafür eine Anleitung.
+  en: AI system impact assessment
+triage:
+  begriff: Kurzprüfung (Triage)
+  erklaerung: Wenige Ja-Nein-Fragen je KI-System, mit denen Sie entscheiden, ob eine kurze Einschätzung genügt oder eine vollständige Folgenabschätzung nötig ist.
+  en: screening (triage)
+sensible-nutzung:
+  begriff: Sensible Nutzung
+  erklaerung: Ein Einsatz, der Rechte, Chancen, Gesundheit oder Sicherheit von Menschen spürbar berühren kann. Er verlangt eine vollständige Folgenabschätzung.
+  en: sensitive use
+eingeschraenkte-nutzung:
+  begriff: Eingeschränkte Nutzung
+  erklaerung: Ein Einsatz, den Sie nur unter Auflagen erlauben oder ganz ausschliessen, weil die möglichen Folgen zu schwer wiegen.
+  en: restricted use
+dsfa:
+  begriff: Datenschutz-Folgenabschätzung (DSFA)
+  erklaerung: Die Prüfung nach Datenschutzrecht (DSG, DSGVO), ob eine Bearbeitung von Personendaten ein hohes Risiko für die Betroffenen bringt. Sie lässt sich mit der KI-Folgenabschätzung verknüpfen.
+  en: data protection impact assessment
+datenschutzverantwortliche:
+  begriff: Datenschutzverantwortliche
+  erklaerung: Die Person, die im Unternehmen für den Datenschutz zuständig ist und in der Zuständigkeitsmatrix (D-04) den Bereich Datenschutz führt. Das DSG nennt eine solche Stelle Datenschutzberaterin oder Datenschutzberater, die DSGVO Datenschutzbeauftragte. Die Kit-Dokumente verwenden einheitlich «Datenschutzverantwortliche».
+  en: data protection officer
+fria:
+  begriff: Grundrechte-Folgenabschätzung (FRIA)
+  erklaerung: Eine Prüfung nach AI Act Art. 27, die nur bestimmte Betreiber von Hochrisiko-KI machen müssen, etwa öffentliche Stellen oder Betreiber von Systemen zur Kreditwürdigkeit oder zur Lebens- und Krankenversicherung.
+  en: fundamental rights impact assessment
+ki-ziel:
+  begriff: KI-Ziel
+  erklaerung: Ein messbares Ziel, das aus der KI-Leitlinie folgt, mit Kennzahl, Verantwortlichen und Termin.
+  en: AI objective
+kennzahl:
+  begriff: Kennzahl
+  erklaerung: Ein Wert, den Sie regelmässig messen, um zu sehen, ob ein Ziel erreicht wird oder ein Ablauf wirkt.
+  en: metric
+ki-kompetenz:
+  begriff: KI-Kompetenz
+  erklaerung: Das Wissen und Können, das Mitarbeitende brauchen, um KI sachkundig zu nutzen und ihre Grenzen zu erkennen. Der AI Act (Art. 4) verlangt Massnahmen dafür.
+  en: AI literacy
+dokumentierte-information:
+  begriff: Dokumentierte Information
+  erklaerung: Dokumente und Aufzeichnungen, die das Managementsystem verlangt, gelenkt nach Version, Freigabe, Ablage und Aufbewahrung.
+  en: documented information
+lebenszyklus:
+  begriff: Lebenszyklus
+  erklaerung: Alle Phasen eines KI-Systems von der Idee über Entwicklung oder Einkauf, Test, Einführung und Betrieb bis zur Ausserbetriebnahme.
+  en: life cycle
+beabsichtigte-verwendung:
+  begriff: Beabsichtigte Verwendung
+  erklaerung: Der Zweck, für den ein KI-System bei Ihnen vorgesehen und geprüft ist. Nutzungen ausserhalb davon brauchen eine neue Bewertung.
+  en: intended use
+zweckbestimmung:
+  begriff: Zweckbestimmung
+  erklaerung: Im AI Act der Verwendungszweck, den der Anbieter für ein KI-System festlegt, etwa in Gebrauchsanweisung und Werbung.
+  en: intended purpose
+fehlanwendung:
+  begriff: Vorhersehbare Fehlanwendung
+  erklaerung: Eine Nutzung, die nicht vorgesehen ist, mit der man aber realistischerweise rechnen muss, etwa weil sie bequem ist oder naheliegt.
+  en: reasonably foreseeable misuse
+menschliche-aufsicht:
+  begriff: Menschliche Aufsicht
+  erklaerung: Befähigte Personen überwachen ein KI-System, verstehen seine Ergebnisse und können eingreifen oder es stoppen.
+  en: human oversight
+datenqualitaet:
+  begriff: Datenqualität
+  erklaerung: Wie vollständig, richtig, aktuell und passend Daten für ihren Zweck sind. Schlechte Daten führen zu schlechten Ergebnissen.
+  en: data quality
+datenherkunft:
+  begriff: Datenherkunft
+  erklaerung: Die Nachvollziehbarkeit, woher Daten stammen, wer sie verändert hat und wohin sie weitergegeben wurden.
+  en: data provenance
+datendrift:
+  begriff: Datendrift
+  erklaerung: Die Daten im Betrieb verändern sich gegenüber den Daten, mit denen ein System trainiert oder geprüft wurde. Die Ergebnisse können dadurch unbemerkt schlechter werden.
+  en: data drift
+ereignisprotokoll:
+  begriff: Ereignisprotokoll
+  erklaerung: Automatische Aufzeichnungen, was ein KI-System wann verarbeitet und ausgegeben hat. Sie helfen bei Fehlersuche, Nachweis und Meldungen.
+  en: event log
+schatten-ki:
+  begriff: Schatten-KI
+  erklaerung: KI-Werkzeuge, die Mitarbeitende ohne Wissen oder Freigabe des Unternehmens nutzen, oft mit privaten Konten.
+  en: shadow AI
+  kurz: "KI-Werkzeuge, die Mitarbeitende ohne Wissen und Freigabe des Unternehmens nutzen, oft mit privaten Konten."
+  formen: "Schatten-KI"
+internes-audit:
+  begriff: Internes Audit
+  erklaerung: Eine geplante, unabhängige Prüfung durch eigene oder beauftragte Personen, ob das Managementsystem die Anforderungen erfüllt und wirkt.
+  en: internal audit
+managementbewertung:
+  begriff: Managementbewertung
+  erklaerung: Die regelmässige Sitzung, in der die Geschäftsleitung anhand festgelegter Eingaben das Managementsystem beurteilt und über Verbesserungen entscheidet.
+  en: management review
+nichtkonformitaet:
+  begriff: Nichtkonformität
+  erklaerung: Eine Abweichung von einer Anforderung der Norm, des Gesetzes oder Ihrer eigenen Regeln.
+  en: nonconformity
+korrekturmassnahme:
+  begriff: Korrekturmassnahme
+  erklaerung: Eine Massnahme, die die Ursache einer Abweichung beseitigt, damit sie nicht wieder auftritt. Sie geht weiter als die sofortige Behebung.
+  en: corrective action
+fortlaufende-verbesserung:
+  begriff: Fortlaufende Verbesserung
+  erklaerung: Das Managementsystem wird laufend besser, gestützt auf Audits, Kennzahlen, Meldungen und Entscheide der Geschäftsleitung.
+  en: continual improvement
+zertifizierungsstelle:
+  begriff: Zertifizierungsstelle
+  erklaerung: Eine unabhängige Stelle, die Ihr Managementsystem auditiert und das Zertifikat ausstellt. Für ISO/IEC 42001 sollte sie nach ISO/IEC 17021-1 mit den Zusatzanforderungen von ISO/IEC 42006 akkreditiert sein, in der Schweiz durch die SAS.
+  en: certification body
+  kurz: "Eine unabhängige, dafür anerkannte Firma, die Ihr Managementsystem prüft und das Zertifikat ausstellt."
+  formen: "Zertifizierungsstelle"
+stage-1:
+  begriff: Stage-1-Audit
+  erklaerung: Der erste Teil des Zertifizierungsaudits. Die Stelle prüft Dokumentation, Geltungsbereich und Bereitschaft für das Hauptaudit.
+  en: stage 1 audit
+  kurz: "Die erste Stufe der Zertifizierung: Die Stelle prüft Ihre Unterlagen, den Geltungsbereich und Ihre Bereitschaft."
+  formen: "Stage-1-Audit|Stage 1|Stage-1"
+stage-2:
+  begriff: Stage-2-Audit
+  erklaerung: Das Hauptaudit vor Ort oder online. Die Stelle prüft, ob das Managementsystem im Alltag gelebt wird und wirkt.
+  en: stage 2 audit
+  kurz: "Die zweite Stufe der Zertifizierung: Die Stelle prüft, ob Sie im Alltag wirklich so arbeiten, wie Sie es festgelegt haben."
+  formen: "Stage-2-Audit|Stage 2|Stage-2"
+ueberwachungsaudit:
+  begriff: Überwachungsaudit
+  erklaerung: Das jährliche, kürzere Audit der Zertifizierungsstelle zwischen Erstzertifizierung und Rezertifizierung.
+  en: surveillance audit
+anbieter:
+  begriff: Anbieter
+  erklaerung: Wer ein KI-System entwickelt oder entwickeln lässt und es unter eigenem Namen auf den Markt bringt oder in Betrieb nimmt. Anbieter tragen im AI Act die meisten Pflichten.
+  en: provider
+  kurz: "Wer ein KI-System entwickelt oder entwickeln lässt und es unter eigenem Namen in Verkehr bringt oder in Betrieb nimmt."
+  formen: "Anbieter"
+betreiber:
+  begriff: Betreiber
+  erklaerung: Wer ein KI-System in eigener Verantwortung beruflich nutzt, zum Beispiel ein Unternehmen, das ein eingekauftes Werkzeug einsetzt.
+  en: deployer
+  kurz: "Wer ein KI-System im Beruf selbst einsetzt, zum Beispiel ein Unternehmen mit eingekaufter KI-Software."
+  formen: "Betreiber"
+einfuehrer:
+  begriff: Einführer
+  erklaerung: Wer in der EU ansässig ist und ein KI-System eines Anbieters aus einem Drittstaat erstmals in der EU anbietet.
+  en: importer
+haendler:
+  begriff: Händler
+  erklaerung: Wer ein KI-System in der Lieferkette weiterverkauft, ohne Anbieter oder Einführer zu sein.
+  en: distributor
+bevollmaechtigter:
+  begriff: Bevollmächtigter
+  erklaerung: Eine Person oder Firma in der EU, die ein Anbieter aus einem Drittstaat (auch der Schweiz) schriftlich beauftragt, bestimmte Pflichten nach dem AI Act für ihn wahrzunehmen.
+  en: authorised representative
+produkthersteller:
+  begriff: Produkthersteller
+  erklaerung: Wer ein Produkt, etwa eine Maschine, mit eingebauter KI unter eigenem Namen in Verkehr bringt.
+  en: product manufacturer
+rollenwechsel:
+  begriff: Rollenwechsel
+  erklaerung: Ein Betreiber wird nach AI Act Art. 25 selbst zum Anbieter, wenn er ein Hochrisiko-System unter eigenem Namen anbietet, wesentlich ändert oder für einen neuen Zweck einsetzt.
+  en: change of role
+verbotene-praxis:
+  begriff: Verbotene Praxis
+  erklaerung: KI-Anwendungen, die der AI Act in Art. 5 ganz untersagt, etwa manipulative Techniken oder Emotionserkennung am Arbeitsplatz.
+  en: prohibited practice
+hochrisiko:
+  begriff: Hochrisiko-KI-System
+  erklaerung: Ein KI-System, das der AI Act wegen seines Einsatzbereichs (Anhang III, etwa Personalauswahl) oder als Sicherheitsbauteil eines Produkts (Anhang I) streng regelt.
+  en: high-risk AI system
+sicherheitsbauteil:
+  begriff: Sicherheitsbauteil
+  erklaerung: Ein Teil eines Produkts, der eine Sicherheitsfunktion erfüllt oder dessen Ausfall Menschen gefährdet. KI nur zur Leistungsoptimierung oder Qualitätskontrolle gilt nach Art. 6 nicht als solches.
+  en: safety component
+wesentliche-aenderung:
+  begriff: Wesentliche Änderung
+  erklaerung: Eine Änderung an einem KI-System nach dem Inverkehrbringen, die nicht vorgesehen war und die Erfüllung der Anforderungen oder den Zweck berührt.
+  en: substantial modification
+gpai:
+  begriff: KI-Modell mit allgemeinem Verwendungszweck
+  erklaerung: Ein grosses Modell, das für viele Aufgaben taugt, etwa das Sprachmodell hinter einem Chatbot. Pflichten treffen vor allem dessen Anbieter, selten ein KMU.
+  en: general-purpose AI model
+transparenzpflicht:
+  begriff: Transparenzpflicht
+  erklaerung: Die Pflicht nach AI Act Art. 50, Menschen darauf hinzuweisen, dass sie mit KI sprechen oder dass Inhalte künstlich erzeugt sind.
+  en: transparency obligation
+deepfake:
+  begriff: Deepfake
+  erklaerung: Ein mit KI erzeugtes oder verändertes Bild, Video oder Tonstück, das echt wirkt und Personen, Orte oder Ereignisse falsch darstellt.
+  en: deep fake
+gebrauchsanweisung:
+  begriff: Gebrauchsanweisung
+  erklaerung: Die Unterlagen, die der Anbieter einem Betreiber mitgibt, damit dieser ein KI-System richtig nutzt und beaufsichtigt.
+  en: instructions for use
+schwerwiegender-vorfall:
+  begriff: Schwerwiegender Vorfall
+  erklaerung: Ein Fehler oder Ausfall eines KI-Systems mit schweren Folgen, etwa für Gesundheit, Grundrechte oder kritische Infrastruktur. Anbieter von Hochrisiko-KI müssen ihn melden.
+  en: serious incident
+konformitaetsbewertung:
+  begriff: Konformitätsbewertung
+  erklaerung: Das Verfahren, mit dem ein Anbieter vor dem Inverkehrbringen nachweist, dass ein Hochrisiko-System die Anforderungen des AI Act erfüllt. Ein ISO/IEC-42001-Zertifikat ersetzt es nicht.
+  en: conformity assessment
+kmu:
+  begriff: KMU
+  erklaerung: Kleine und mittlere Unternehmen. Der AI Act gewährt ihnen Erleichterungen, etwa vereinfachte Dokumentation und tiefere Bussen.
+  en: SME
+small-midcap:
+  begriff: Kleine Midcap
+  erklaerung: Ein Unternehmen, das knapp über der KMU-Grenze liegt. Der geänderte AI Act gewährt auch ihm einzelne Erleichterungen.
+  en: small mid-cap enterprise
+vertrauensmerkmal:
+  begriff: Vertrauensmerkmal
+  erklaerung: Eine Eigenschaft, an der sich vertrauenswürdige KI erkennen lässt. Das NIST AI RMF nennt sieben, etwa gültig und zuverlässig, sicher, geschützt, erklärbar, datenschutzfördernd und fair. Im Modul NIST AI RMF legen Sie je KI-System fest, welche am meisten zählen, und prüfen sie im Messkonzept (N-03).
+  en: trustworthiness characteristic
+ist-ziel-profil:
+  begriff: Ist- und Ziel-Profil
+  erklaerung: Eine Tabelle über alle 72 Subkategorien des NIST AI RMF, die zeigt, wie weit jede heute umgesetzt ist (Ist) und welchen Stand Sie anstreben (Ziel). Aus der Differenz entstehen Lücken und Massnahmen (Vorlage N-01).
+  en: current and target profile
+tevv:
+  begriff: TEVV (Test, Evaluierung, Verifikation, Validierung)
+  erklaerung: Sammelbegriff des NIST AI RMF für alle Prüfungen eines KI-Systems, vor dem Einsatz und im Betrieb. Verifikation fragt, ob das System richtig gebaut ist, Validierung, ob es für den Zweck taugt.
+  en: test, evaluation, verification and validation (TEVV)
+konfabulation:
+  begriff: Konfabulation
+  erklaerung: Ein generatives Modell erfindet Angaben, etwa Zahlen, Quellen oder Zitate, und stellt sie überzeugend dar. Deshalb prüft eine fachkundige Person Ergebnisse, bevor sie nach aussen gehen oder Entscheide stützen.
+  en: confabulation
+handelnde-ki:
+  begriff: Handelnde KI (Agent)
+  erklaerung: KI, die nicht nur antwortet, sondern mit Werkzeugen und Zugriffen selbst Schritte ausführt, etwa E-Mails sendet, Termine bucht oder Daten ändert. Im Inventar halten Sie Handlungsbefugnis, Zugriffe, Gedächtnis und Stoppmöglichkeit fest.
+  en: agentic AI (agent)
+prompt-injection:
+  begriff: Prompt-Injection
+  erklaerung: Ein Angriff, bei dem Anweisungen in Eingaben, E-Mails, Webseiten oder Dokumenten versteckt sind, die ein Sprachmodell als Befehl befolgt. Knappe Rechte und Bestätigung vor Aktionen begrenzen den Schaden.
+  en: prompt injection
+red-teaming:
+  begriff: Red-Teaming
+  erklaerung: Gezielte Angriffsversuche auf ein KI-System durch Personen, die wie Angreifende denken, um Schwächen vor dem Einsatz zu finden. Für KMU genügt meist ein Katalog von Missbrauchsfällen, der vor dem Einsatz und nach einem Modellwechsel durchgespielt wird.
+  en: red teaming
+harmonisierte-norm:
+  begriff: Harmonisierte Norm
+  erklaerung: Eine europäische Norm, deren Fundstelle im Amtsblatt der EU veröffentlicht ist. Wer sie einhält, darf vermuten, die abgedeckten Anforderungen des AI Act zu erfüllen; wie weit, zeigt Anhang ZA der Norm. ISO/IEC 42001 ist keine harmonisierte Norm.
+  en: harmonised standard
+gemeinsame-spezifikation:
+  begriff: Gemeinsame Spezifikation
+  erklaerung: Technische Vorgaben, die die Kommission selbst erlassen kann, wenn passende harmonisierte Normen fehlen. Auch sie begründen eine Vermutung der Konformität. Bis Oktober 2026 hat die Kommission keine erlassen.
+  en: common specification
+aims-manager:
+  begriff: AIMS-Manager
+  erklaerung: "Das Programm dieses Kits, das im Browser läuft. Es führt Sie Schritt für Schritt vom Startinterview bis zur Bereitschaft für das Stage-1-Audit und erzeugt Ihre Dokumente."
+  en: AIMS Manager
+  kurz: "Das Programm dieses Kits: Es läuft im Browser und führt Sie Schritt für Schritt durch den Aufbau Ihres AIMS."
+  formen: "AIMS-Manager"
+anhang-a:
+  begriff: Anhang A der ISO/IEC 42001
+  erklaerung: "Der Katalog der Controls in der Norm. Er ist eine Auswahlliste: Sie entscheiden begründet, welche Controls für Ihre KI-Systeme gelten."
+  en: Annex A
+  kurz: "Die Liste der Massnahmen am Ende der ISO/IEC 42001, aus der Sie begründet auswählen, was für Sie gilt."
+  formen: "Anhang A"

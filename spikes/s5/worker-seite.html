@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Spike S5 Worker unter CSP</title>
+<style>body{font-family:system-ui,sans-serif;margin:2rem}#ergebnis{font-weight:bold}</style>
+</head>
+<body>
+<h1>Spike S5 Worker unter CSP</h1>
+<p id="ergebnis">wartet</p>
+<p id="cssom">CSSOM</p>
+<p id="attr">Attribut</p>
+<img id="bild" alt="Testbild" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<script type="text/plain" id="worker-code">
+// Worker: rechnet und prüft, ob die CSP des Dokuments auch hier gilt.
+self.onmessage = async (e) => {
+  const n = e.data.n;
+  let summe = 0;
+  for (let i = 2; i <= n; i++) {
+    let prim = true;
+    for (let t = 2; t * t <= i; t++) if (i % t === 0) { prim = false; break; }
+    if (prim) summe += i;
+  }
+  let evalBlockiert;
+  try { (0, eval)('1'); evalBlockiert = false; } catch (x) { evalBlockiert = true; }
+  let fetchBlockiert;
+  try { await fetch('https://example.invalid/s5'); fetchBlockiert = false; } catch (x) { fetchBlockiert = true; }
+  self.postMessage({ summe, evalBlockiert, fetchBlockiert, ort: String(self.location.href).slice(0, 5) });
+};
+</script>
+<script>
+(function () {
+  var s5 = { verletzungen: [], worker: null, fehler: null };
+  window.s5 = s5;
+  document.addEventListener('securitypolicyviolation', function (e) {
+    s5.verletzungen.push(e.violatedDirective + ' ' + String(e.blockedURI).slice(0, 40));
+  });
+  // Preact setzt Stile über CSSOM; das ist ohne 'unsafe-inline' erlaubt.
+  document.getElementById('cssom').style.color = 'rgb(0, 128, 0)';
+  document.getElementById('attr').setAttribute('style', 'color: rgb(255, 0, 0)');
+  s5.cssom = getComputedStyle(document.getElementById('cssom')).color;
+  s5.attr = getComputedStyle(document.getElementById('attr')).color;
+  var mainEval;
+  try { (0, eval)('1'); mainEval = false; } catch (x) { mainEval = true; }
+  s5.evalBlockiertSeite = mainEval;
+  var code = document.getElementById('worker-code').textContent;
+  var url = URL.createObjectURL(new Blob([code], { type: 'text/javascript' }));
+  // Mit Trusted Types (nur Chromium) muss die URL durch eine Policy.
+  if (window.trustedTypes && window.trustedTypes.createPolicy) {
+    try {
+      var tt = window.trustedTypes.createPolicy('aims-worker', {
+        createScriptURL: function (u) { if (u.indexOf('blob:') === 0) return u; throw new Error('nur blob:'); }
+      });
+      url = tt.createScriptURL(url);
+      s5.trustedTypes = true;
+    } catch (x) { s5.trustedTypes = 'Fehler: ' + x.message; }
+  }
+  try {
+    var w = new Worker(url);
+    w.onmessage = function (e) {
+      s5.worker = e.data;
+      document.getElementById('ergebnis').textContent = 'Summe ' + e.data.summe;
+    };
+    w.onerror = function (e) { s5.fehler = 'onerror: ' + (e.message || 'ohne Meldung'); };
+    w.postMessage({ n: 20000 });
+  } catch (x) {
+    s5.fehler = 'Konstruktor: ' + x.name + ': ' + x.message;
+  }
+})();
+</script>
+</body>
+</html>

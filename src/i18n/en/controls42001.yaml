@@ -1,0 +1,244 @@
+# Controls from ISO/IEC 42001 Annex A: our own short titles and explanations.
+# No text from the standard. Read the requirement text in your own copy of the standard.
+gruppen:
+  A.2: AI policies
+  A.3: Internal organization
+  A.4: Resources of AI systems
+  A.5: Assessing the impacts of AI systems
+  A.6: Life cycle of AI systems
+  A.6.1: Steering development
+  A.6.2: Life cycle phases
+  A.7: Data for AI systems
+  A.8: Informing interested parties
+  A.9: Using AI systems
+  A.10: Third parties and customers
+
+controls:
+  A.2.2:
+    titel: Setting the AI policy
+    zweck: Top management lays down in binding terms how the company develops, buys and uses AI.
+    umsetzung: A short policy with principles, scope, responsibilities and a route for exceptions is enough. Top management approves it and it is made known to all employees.
+    nachweis: Approved AI policy (D-03) with date, version and record of distribution.
+    auditor: Approval by top management, link to the AI objectives, communication within the company.
+  A.2.3:
+    titel: Consistency with other policies
+    zweck: AI touches information security, data protection, quality and HR. Contradictions between policies should not arise in the first place.
+    umsetzung: Check once which existing policies concern AI, and record whether you will adapt them or refer to them in the AI policy.
+    nachweis: Section ‘Relation to other policies’ in D-03, adapted policies with a new version.
+    auditor: A traceable list of the policies concerned and what was done with each of them.
+  A.2.4:
+    titel: Reviewing the AI policy regularly
+    zweck: Technology, law and business change fast. The policy has to keep up.
+    umsetzung: Decide who reviews the policy at least once a year and after major changes. The results of the management review feed into it.
+    nachweis: Review note with date, change history of the policy, agenda item in the management review (D-21).
+    auditor: A named role, a review cycle and a documented last review.
+  A.3.2:
+    titel: AI roles and responsibilities
+    zweck: For every AI-related task it is clear who acts and who decides.
+    umsetzung: Assign the key areas (risk, impact assessment, data, suppliers, human oversight, legal) to people. In an SME a few people hold several roles; this is acceptable as long as it is recorded.
+    nachweis: Role matrix (D-04), job descriptions or appointments.
+    auditor: The people interviewed know their role and act accordingly.
+  A.3.3:
+    titel: Reporting of concerns
+    zweck: Anyone inside the company who sees a problem with an AI system should be able to report it without negative consequences.
+    umsetzung: Use an existing channel (e.g. the whistleblowing office, or line managers plus an alternative contact) and extend it to AI topics, with confidentiality, a handling deadline and escalation to top management.
+    nachweis: Description of the reporting channel in D-04, announcement, log of reports.
+    auditor: The channel is known and can be used confidentially, and reports are dealt with.
+  A.4.2:
+    titel: Recording resources per AI system
+    zweck: To assess risks, you need to know what an AI system consists of and what it depends on.
+    umsetzung: In the AI inventory, record for each system its components, data, tools, computing resources and the people involved. For purchased AI, the information you receive from the supplier is enough.
+    nachweis: AI inventory (D-10) with resource sheet, where relevant an architecture or data flow sketch.
+    auditor: A complete inventory, including AI embedded in purchased software.
+  A.4.3:
+    titel: Describing data resources
+    zweck: Data largely determines the quality and the risks of an AI system.
+    umsetzung: Record for each system which data is used, where it comes from, how current it is and whether personal or confidential data is involved.
+    nachweis: Data details in the AI inventory (D-10) and in D-13.
+    auditor: Data categories, provenance and retention can be traced for each system.
+  A.4.4:
+    titel: Describing tools and models
+    zweck: Models, libraries and platforms bring their own risks and dependencies.
+    umsetzung: Note the model or service used, its version, the vendor and the main tools for development or operation.
+    nachweis: Tool details in the AI inventory (D-10).
+    auditor: Known models and versions, especially for in-house development.
+  A.4.5:
+    titel: Describing computing and system resources
+    zweck: Where and on which infrastructure a system runs affects security, availability, cost and environmental impact.
+    umsetzung: Record the place of operation (own data centre, cloud with region, end device) and any special requirements.
+    nachweis: Infrastructure details in the AI inventory (D-10), with a reference to an existing asset inventory.
+    auditor: The place of operation and dependencies are known, cloud regions are clarified.
+  A.4.6:
+    titel: Describing people and competences
+    zweck: Development, operation, oversight and retirement all need people with the right knowledge.
+    umsetzung: Name the roles involved for each system and link them to the competence needs in D-17.
+    nachweis: Role details in the inventory (D-10), competence matrix (D-17).
+    auditor: A competent person is named for every critical task.
+  A.5.2:
+    titel: Procedure for impact assessments
+    zweck: Before an AI system affects people, its possible consequences for individuals, groups and society should be clear.
+    umsetzung: Define when an impact assessment is needed (screening with thresholds), who carries it out, who approves it and when it is repeated.
+    nachweis: Procedure (D-08) with triggers, thresholds and responsibilities.
+    auditor: Clear triggers and thresholds, applied in a traceable way to all systems in the inventory.
+  A.5.3:
+    titel: Keeping the results of impact assessments
+    zweck: The results support later decisions, informing affected persons and providing evidence to third parties.
+    umsetzung: Keep every impact assessment with its version, approval and retention period.
+    nachweis: Impact assessments (D-09) in the document register (D-26).
+    auditor: For each system a current assessment or a screening with reasons.
+  A.5.4:
+    titel: Assessing impacts on individuals and groups
+    zweck: AI can affect the opportunities, rights, safety or dignity of individual people.
+    umsetzung: For each system, assess benefits and harms for the groups of people affected, especially for vulnerable groups and employees.
+    nachweis: Sections ‘Affected persons’ and ‘Benefits and harms’ in D-09.
+    auditor: Affected groups are named, impacts rated and actions derived.
+  A.5.5:
+    titel: Assessing impacts on society
+    zweck: Some effects only show up in aggregate, for example on the environment, the labour market or access to information.
+    umsetzung: Add societal aspects to the impact assessment. For small internal systems, a short assessment with reasons is enough.
+    nachweis: Section ‘Society and environment’ in D-09.
+    auditor: The question was asked and answered with reasons.
+  A.6.1.2:
+    titel: Objectives for responsible development
+    zweck: If you develop AI yourself, you need guard rails that take effect at the design stage, for example on fairness or explainability.
+    umsetzung: Set objectives and translate them into requirements, tests and release criteria for development.
+    nachweis: Objectives in D-05, embedding in the development process (D-12).
+    auditor: The objectives can be traced in requirements and test results.
+  A.6.1.3:
+    titel: Defining the development process
+    zweck: In-house AI should be built following a fixed, traceable process.
+    umsetzung: Describe phases, tests, approvals, change control and the point at which the impact assessment takes place.
+    nachweis: Process description in D-12 (development section).
+    auditor: Projects actually follow the process as described.
+  A.6.2.2:
+    titel: Recording requirements for the AI system
+    zweck: What a system is supposed to do and why must be settled before development or a major change.
+    umsetzung: Record purpose, rationale, performance requirements, data needs and constraints.
+    nachweis: Requirements document per project (D-12).
+    auditor: Documented requirements for new systems and significant extensions.
+  A.6.2.3:
+    titel: Documenting design and development
+    zweck: Design decisions must be traceable later, for example when errors occur or during audits.
+    umsetzung: Document learning methods, choice of model, data, security considerations and interfaces, as well as the final architecture.
+    nachweis: Design documentation (D-12).
+    auditor: A current architecture description and design decisions with reasons.
+  A.6.2.4:
+    titel: Verification and validation
+    zweck: A system only goes live once there is evidence that it does its job well enough.
+    umsetzung: Define test methods, test data, metrics and release criteria. For purchased AI, test it with your own typical cases before use.
+    nachweis: Test plan and test report, acceptance record (D-12).
+    auditor: Defined criteria and a test that took place before release.
+  A.6.2.5:
+    titel: Planning and approving deployment
+    zweck: Putting a system into operation happens in a controlled way and with a clear approval.
+    umsetzung: Plan the rollout, training, communication and fallback, and have the rollout approved.
+    nachweis: Rollout or approval record (D-12).
+    auditor: Approval before operation starts, not afterwards.
+  A.6.2.6:
+    titel: Operation and monitoring
+    zweck: The performance and behaviour of an AI system can change during operation.
+    umsetzung: Define who monitors the system, which metrics apply, how errors are reported and how updates are installed.
+    nachweis: Operations section in D-12, monitoring records, fault reports.
+    auditor: Evidence of monitoring in operation and of responses to deviations.
+  A.6.2.7:
+    titel: Technical documentation per audience
+    zweck: Users, partners and authorities need different information about a system.
+    umsetzung: Determine for each audience which documents are needed, and keep them available and up to date.
+    nachweis: Documentation overview in D-12, documents per audience.
+    auditor: Suitable, current documentation for the audiences named.
+  A.6.2.8:
+    titel: Keeping event logs
+    zweck: Logs make it possible to trace what a system did and when.
+    umsetzung: Define in which phases logging takes place (at least in operation), what is recorded and how long logs are kept.
+    nachweis: Logging rules in D-12, sample log.
+    auditor: Logging is switched on, logs are kept and analysed when needed.
+  A.7.2:
+    titel: Data management for development
+    zweck: Data for training and testing must be obtained, protected and used in an orderly way.
+    umsetzung: Describe how data for development is selected, protected, documented and deleted.
+    nachweis: Data procedure (D-13).
+    auditor: A process that is followed in practice and includes data protection and confidentiality.
+  A.7.3:
+    titel: Recording how data is obtained
+    zweck: The origin of data and the rights to it must be clear before it goes into a system.
+    umsetzung: For each data set, record the source, volume, rights and known biases.
+    nachweis: Data sheet per data set (D-13).
+    auditor: Legal basis and origin for each data set.
+  A.7.4:
+    titel: Data quality requirements
+    zweck: Poor data leads to poor results.
+    umsetzung: Define the quality the data must have and check it. As a deployer, this mainly concerns the input data you feed into the system yourself.
+    nachweis: Quality criteria and check results (D-13).
+    auditor: Measurable criteria and a documented check.
+  A.7.5:
+    titel: Tracing data provenance
+    zweck: When errors or enquiries arise, you must be able to trace where data came from and what happened to it.
+    umsetzung: Define how the creation, modification and transfer of data is recorded in a traceable way.
+    nachweis: Provenance log or version control of the data sets (D-13).
+    auditor: Traceability shown with an example.
+  A.7.6:
+    titel: Defining data preparation
+    zweck: Cleaning and transforming data influences the result and must be justified.
+    umsetzung: Document the preparation steps used and why you chose them.
+    nachweis: Preparation log (D-13).
+    auditor: Traceable steps and criteria.
+  A.8.2:
+    titel: Information for users
+    zweck: Anyone using an AI system must know that it is AI, what it can do and where its limits are.
+    umsetzung: For each system, define which information users receive (purpose, limits, oversight, contact) and where they can find it.
+    nachweis: Information texts and criteria in D-14, notices in the system.
+    auditor: Users are informed appropriately; the criteria for this are defined.
+  A.8.3:
+    titel: Reporting channel for external parties
+    zweck: Customers, affected persons and partners should be able to report adverse impacts of an AI system.
+    umsetzung: Set up an accessible channel (e.g. an address or a form) and decide who handles the reports.
+    nachweis: Description of the channel in D-14, handling log.
+    auditor: The channel is publicly visible and reports are dealt with.
+  A.8.4:
+    titel: Communication in case of incidents
+    zweck: When an incident involves an AI system, affected persons must be informed quickly and correctly.
+    umsetzung: "Extend your existing incident management to AI incidents: what counts as an incident, who informs whom and within what time."
+    nachweis: Incident communication plan in D-14, or an addition to an existing incident procedure.
+    auditor: A plan with deadlines and responsibilities, ideally rehearsed once.
+  A.8.5:
+    titel: Information obligations towards third parties
+    zweck: Authorities, customers or partners may be entitled to information about an AI system.
+    umsetzung: Record towards whom which information obligations exist (law, contract) and who meets them.
+    nachweis: List of information obligations in D-14.
+    auditor: A complete list and evidence that the obligations were met.
+  A.9.2:
+    titel: Rules for responsible use
+    zweck: Before an AI tool is put to use, it is clear whether and how it may be used.
+    umsetzung: An AI use policy for employees and a lean approval process for new AI tools are enough.
+    nachweis: Policy (D-15), approval list in the AI inventory (D-10).
+    auditor: New tools go through the approval; employees know the rules.
+  A.9.3:
+    titel: Objectives for responsible use
+    zweck: Companies that only use AI also need objectives, for example on confidentiality, accuracy or human control.
+    umsetzung: Derive a few verifiable objectives for use from the policy, and decide where people must check outputs.
+    nachweis: Objectives in D-05, oversight rules in D-15.
+    auditor: Objectives that match actual use, and human control that happens in practice.
+  A.9.4:
+    titel: Use in line with the intended use
+    zweck: An AI system should only be used for the purpose for which it is intended and tested.
+    umsetzung: Record the intended use for each system, train the users and spot-check actual use.
+    nachweis: Purpose in the AI inventory (D-10), use rules (D-15), logs or spot checks.
+    auditor: No use outside the intended use without a new assessment.
+  A.10.2:
+    titel: Sharing responsibility with third parties
+    zweck: When suppliers, partners or customers are involved, it must be clear who is responsible for what.
+    umsetzung: Record for each system which tasks lie with the supplier, with you and with the customer, and settle this in the contract.
+    nachweis: Responsibility matrix in D-16, contract clauses.
+    auditor: Clear boundaries, especially for data and personal data.
+  A.10.3:
+    titel: Managing suppliers
+    zweck: Purchased AI must fit your own principles.
+    umsetzung: Check AI suppliers against a few questions before you buy and at a fixed interval afterwards. Ask for documentation and, where needed, corrections.
+    nachweis: Supplier review (D-16), contracts, review records.
+    auditor: Every purchased AI has a review status and the review cycle is kept.
+  A.10.4:
+    titel: Taking customer expectations into account
+    zweck: If you supply AI to customers or use it on their behalf, you must know and communicate their expectations and the limits of use.
+    umsetzung: Record customer requirements for AI (e.g. from contracts or supplier audits) and tell customers the limits of your AI services.
+    nachweis: Requirements in D-01 and D-16, customer information in D-14.
+    auditor: Customer requirements are known and taken into account.

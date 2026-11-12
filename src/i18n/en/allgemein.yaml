@@ -1,0 +1,140 @@
+# General building blocks for all templates and documents
+namensnennung_vorlage: "Template from the ISO/IEC 42001 Starter Kit by Andreas Gapsch, KMU-CIO, kmu-cio.ch, version {version}. Delete this block before approval."
+beispiel_kennzeichnung: "Example from the ISO/IEC 42001 Starter Kit by Andreas Gapsch, KMU-CIO, kmu-cio.ch. Fictitious company; the content is for illustration only."
+normverweis: "For the requirement text, see ISO/IEC 42001, {abschnitte}. The standard is available from SNV, DIN or ISO."
+# Firmendokumente: Bezug ohne Bezugsquelle der Norm (Kit-Hinweis)
+normverweis_firma: "Reference: ISO/IEC 42001, {abschnitte}."
+ergaenzungsblatt: Supplementary sheet
+# Legal status of the EU AI Act (kontext.ts rechtsstand, data from src/ai-act/stand.yaml)
+rechtsstand:
+  fassung: "consolidated version of {fassung}"
+  mit_berichtigung: "consolidated version of {fassung}, including the corrigendum of {berichtigung}"
+ai_act_kurz: EU AI Act
+# Appendix at the end of the document for AI system tables from 8 systems (kontext.ts systemAnlage)
+anlage:
+  titel: "Appendix {nr}: {titel}"
+  verweis: "The details of the {anzahl} AI systems are in Appendix {nr} at the end of this document."
+  verweis_eins: "The details of the AI system are in Appendix {nr} at the end of this document."
+  ki_systeme: AI systems
+ausbau:
+  titel: Extension level (optional)
+# Indicator KZ-01 without a recorded value: status from the statement of applicability
+kz01_wert: "{umgesetzt} of {anwendbar} applicable controls implemented, of which {wirksam} effective; {teilweise} partly implemented (status of the statement of applicability, D-11)"
+# Body with name in sentences on decision rights (D-12, D-15; N7)
+entscheidungsstelle:
+  aims: "AIMS lead ({name})"
+  gl: "top management ({name})"
+lenkung:
+  dokument_id: Document ID
+  titel: Title
+  version: Version
+  eigner: Owner
+  freigabe: Approved by
+  datum: Date
+  klassifikation: Classification
+  normbezug: Reference to the standard
+  isms_bezug: Relation to the ISMS
+  pfad: Applies in path
+  nicht_freigegeben: "not yet approved (status: {status})"
+  # Document control header: review before approval and latest entry of the change history (DokumentEintrag.geprueft, aenderungen)
+  geprueft: "{person}, {datum}"
+  aenderung: "{version} of {datum}: {was}"
+  bestaetigt: "{person}, {datum}"
+  gilt_fuer_isms: "Applies to ISMS and AIMS: [[yes/no]]"
+  seite: Page
+  von: of
+  blatt_dokument: Document
+isms:
+  neu: "new (no counterpart in the ISMS)"
+  erweitert: "extends an existing ISMS document"
+  wiederverwendet: "reuses an existing ISMS document"
+  leitfaden: "Guide"
+isms_dokument:
+  erweitert: "extends {dokument}"
+  wiederverwendet: "reuses {dokument}"
+pfad:
+  beide: "with and without an ISMS"
+  ohne_isms_dokument: "without an ISMS as a separate document; with an ISMS as a supplementary sheet"
+  ergaenzungsblatt: "with an ISMS: add the sections to the existing ISMS document"
+platzhalter:
+  firmenname: Company name
+  version: "1.0"
+  eigner: Name, role
+  freigabe: Name, role
+  datum: DD/MM/YYYY
+  klassifikation: internal
+  person: Name, role
+  text: Add text
+  liste: Add list
+  zahl: Number
+  ort: Storage location
+  ki_system: AI system
+  meldestelle: reporting point
+  ja_nein: yes/no
+  pruefvermerk: Name, role, DD/MM/YYYY (second person before approval)
+  aenderung: Version, DD/MM/YYYY, what changed
+  reife: not started / defined / implemented / effective / reviewed
+# Type and status of AI systems (KiSystem.typ, KiSystem.status); templates may override single values
+ki_typ:
+  eingekauft: purchased
+  saas: cloud service (SaaS)
+  eigenbau: in-house development
+  schatten: shadow AI
+ki_status:
+  erfasst: recorded
+  in-pruefung: under review
+  freigegeben: approved
+  eingeschraenkt: restricted
+  ausgesetzt: suspended
+  abgeloest: replaced
+  untersagt: prohibited
+ja: "yes"
+nein: "no"
+offen: open
+# Marking of prohibited and suspended AI systems in lists per system (D-01, D-13, D-14, D-16)
+ki_status_vermerk: "status: {status}"
+# Reference to a document that was not yet approved on the date of the referring document
+verweis_geplant: in preparation
+unterschrift:
+  ort_datum: Place, date
+  name_funktion: Name, role
+  unterschrift: Signature
+fusszeile: "Classification: {klassifikation}"
+disclaimer: "This template replaces neither the standard nor legal advice and does not guarantee certification."
+# Rating scales from organisation.risikokriterien (D-06 to D-09): range and high levels
+skala:
+  bereich: "{von} {von_name} to {bis} {bis_name}"
+  von_bis: "{von} to {bis}"
+  oder: or
+# Texts of the standard from the company's own edition (standards package, only after confirming the licence; src/normtexte)
+normtext:
+  auszug_titel: Requirements of the standard (extract)
+  auszug_einleitung: "Wording of the clauses referred to in this document, taken from our licensed edition of the standard."
+  vermerk: "Extract from {bezeichnung}{ausgabe}, reproduced under licence from {lizenzgeber}{nummer}."
+  vermerk_ohne_geber: "Extract from {bezeichnung}{ausgabe}, reproduced with permission of the licensor{nummer}."
+  ausgabe: " (ISO/IEC {norm}:{jahr})"
+  nummer: ", licence no. {nummer}"
+  spalte_control_text: Control text (standard)
+  spalte_anforderung: Requirement text (standard)
+
+# Table of contents of the document set (first file in the tool's ZIP)
+inhaltsverzeichnis:
+  datei: 00_Contents
+  titel: Table of contents of the document set
+  blatt: Contents
+  blatt_titel: "Document set {firma}, as of {datum}"
+  hinweis: "Column ‘For stage 1’: documents we submit to the certification body before the stage 1 audit. Version, status and approval come from the document register."
+  hinweis_ohne_auswahl: "The documents for stage 1 have not been defined yet. Version, status and approval come from the document register."
+  ja: "yes"
+  nein: "no"
+  nicht_im_register: not in the register
+  spalten:
+    id: ID
+    titel: Title
+    normbezug: Reference to the standard
+    datei: File
+    version: Version
+    status: Status
+    freigabe: Approval (date, person)
+    stage1: For stage 1
+    isms: Supplemented ISMS document

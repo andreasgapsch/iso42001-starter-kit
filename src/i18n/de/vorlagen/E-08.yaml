@@ -1,0 +1,64 @@
+# E-08 Anbieterpflichten im Überblick
+hinweis_umfang: "Dieser Überblick zeigt, was Anbieter von Hochrisiko-KI-Systemen erfüllen müssen und wo das AIMS dabei hilft. Er ersetzt weder die Lektüre der Artikel noch die juristische Prüfung. Die einzelnen Pflichten mit Status führen Sie in E-03."
+aussage_titel: Klare Aussage
+aussage: "**ISO/IEC 42001 ersetzt keine Konformitätsbewertung nach Art. 43 und begründet keine Konformitätsvermutung.** Eine Vermutung entsteht nur mit harmonisierten Normen, deren Fundstellen im Amtsblatt veröffentlicht sind (Art. 40(1)); ISO/IEC 42001 gehört nicht dazu. Ein zertifiziertes AIMS erleichtert viele Nachweise, mehr nicht."
+juristisch: "Wer Anbieter eines Hochrisiko-KI-Systems ist oder durch einen Rollenwechsel nach Art. 25(1) wird, sollte die Einstufung, das Konformitätsbewertungsverfahren und die Benennung eines Bevollmächtigten juristisch prüfen lassen. Diese Übersicht ist keine Rechtsberatung."
+juristisch_firma: "Sind wir Anbieter eines Hochrisiko-KI-Systems oder werden es durch einen Rollenwechsel nach Art. 25(1), lassen wir die Einstufung, das Konformitätsbewertungsverfahren und die Benennung eines Bevollmächtigten juristisch prüfen. Diese Übersicht ist keine Rechtsberatung."
+abschnitte:
+  wann: Wann diese Pflichten gelten
+  ueberblick: Pflichten im Überblick
+  kmu: Erleichterungen für KMU
+  bevollmaechtigter: Bevollmächtigter für Schweizer Anbieter
+  aims: Wo das AIMS hilft und wo nicht
+wann_text: "Die Pflichten treffen uns als **Anbieter** eines Hochrisiko-KI-Systems (Rolle aus E-01, Klasse aus E-02), auch wenn wir ein fremdes System unter eigenem Namen anbieten, wesentlich verändern oder für einen Hochrisiko-Zweck umwidmen ({fs:25(1)}). Sie gelten für Systeme nach Anhang III ab {frist:FRIST-13} und für Systeme nach Anhang I ab {frist:FRIST-15}. Für Produkte nach Anhang I Abschnitt B, etwa Maschinen, gelten aus dem AI Act nur Art. 6(1), 60a und 102 bis 112 (Art. 2(2))."
+systeme_ja: "Wir sind Anbieter dieser Hochrisiko-Systeme: {systeme}."
+systeme_nein: "Wir sind für kein Hochrisiko-KI-System Anbieter. Die Übersicht bleibt für den Fall eines Rollenwechsels; Rolle und Einstufung prüfen wir jährlich (E-01, E-02)."
+formell: "Art. 43, 47 bis 49, 72 und 73 gelten formell seit {frist:FRIST-07}, greifen aber erst mit den Anforderungen an Hochrisiko-Systeme. Das ist eine gekennzeichnete Auslegung, kein Gesetzestext (E-09)."
+ueberblick_kopf: [Artikel, Was zu tun ist, Gilt ab]
+ueberblick:
+  - ["{fs:8}", "Das System erfüllt alle Anforderungen der Art. 9 bis 15 unter Berücksichtigung von Zweck und Stand der Technik; bei Produkten nach Anhang I A mit dem Produktrecht abgestimmt.", "{frist:FRIST-13} (III), {frist:FRIST-15} (I)"]
+  - ["{fs:9}", "Risikomanagementsystem über den ganzen Lebenszyklus, mit Tests vor dem Inverkehrbringen.", "wie Art. 8"]
+  - ["{fs:10}, {fs:4a}", "Trainings-, Validierungs- und Testdaten nach festgelegten Verfahren auswählen und prüfen; besondere Personendaten nur zur Erkennung und Korrektur von Verzerrungen unter strengen Bedingungen.", "wie Art. 8"]
+  - ["{fs:11}", "Technische Dokumentation mit mindestens den Angaben nach Anhang IV vor dem Inverkehrbringen.", "wie Art. 8"]
+  - ["{fs:12}", "Automatische Protokollierung von Ereignissen für die Rückverfolgbarkeit.", "wie Art. 8"]
+  - ["{fs:13}", "Transparente Auslegung und Betriebsanleitung für Betreiber.", "wie Art. 8"]
+  - ["{fs:14}", "Wirksame menschliche Aufsicht im Design, inklusive Eingriff und Stopp.", "wie Art. 8"]
+  - ["{fs:15}", "Angemessene Genauigkeit, Robustheit und Cybersicherheit über den Lebenszyklus.", "wie Art. 8"]
+  - ["{fs:16}", "Sammelpflichten des Anbieters, u. a. Kennzeichnung mit Name und Anschrift, Konformitätsbewertung, Erklärung, CE-Kennzeichnung, Registrierung, Korrekturen, Barrierefreiheit (Bst. a bis l).", "wie Art. 8"]
+  - ["{fs:17}", "Qualitätsmanagementsystem mit schriftlichen Regeln, Verfahren und Anweisungen.", "wie Art. 8"]
+  - ["{fs:18}", "Dokumentation zehn Jahre für die Behörden bereithalten.", "wie Art. 8"]
+  - ["{fs:19}", "Automatisch erzeugte Protokolle mindestens sechs Monate aufbewahren, soweit unter eigener Kontrolle.", "wie Art. 8"]
+  - ["{fs:20}", "Bei Nichtkonformität sofort korrigieren, zurücknehmen oder zurückrufen und die Beteiligten informieren.", "wie Art. 8"]
+  - ["{fs:21}", "Mit den Behörden zusammenarbeiten und Unterlagen sowie Protokolle herausgeben.", "wie Art. 8"]
+  - ["{fs:22}", "Anbieter ausserhalb der EU benennen vor der Bereitstellung schriftlich einen Bevollmächtigten in der EU.", "wie Art. 8"]
+  - ["{fs:25(2)}", "Als ursprünglicher Anbieter nach einem Rollenwechsel mit dem neuen Anbieter zusammenarbeiten und Informationen bereitstellen.", "wie Art. 8"]
+  - ["{fs:25(4)}", "Mit Zulieferern von Modellen, Werkzeugen und Komponenten schriftlich vereinbaren, welche Informationen und Unterstützung sie liefern.", "wie Art. 8"]
+  - ["{fs:43}", "Konformitätsbewertung: für Anhang III Nr. 2 bis 8 interne Kontrolle nach Anhang VI; für Biometrie (Nr. 1) je nach Normen mit notifizierter Stelle; für Anhang I A nach dem Produktrecht.", "{frist:FRIST-07} formell, wie Art. 8 praktisch"]
+  - ["{fs:47}", "EU-Konformitätserklärung ausstellen und zehn Jahre aufbewahren.", "{frist:FRIST-07} formell, wie Art. 8 praktisch"]
+  - ["{fs:48}", "CE-Kennzeichnung anbringen.", "{frist:FRIST-07} formell, wie Art. 8 praktisch"]
+  - ["{fs:49}", "Vor dem Inverkehrbringen in der EU-Datenbank registrieren (Anhang III ausser Nr. 2; auch bei Ausnahme nach Art. 6(3), Art. 49(2)).", "{frist:FRIST-07} formell, wie Art. 8 praktisch"]
+  - ["{fs:72}", "Beobachtung nach dem Inverkehrbringen mit Plan, Teil der technischen Dokumentation.", "{frist:FRIST-07} formell, wie Art. 8 praktisch"]
+  - ["{fs:73}", "Schwerwiegende Vorfälle melden: spätestens 15 Tage nach Kenntnis, 10 Tage bei Todesfall, 2 Tage bei weitverbreitetem Verstoss oder Störung kritischer Infrastruktur.", "{frist:FRIST-07} formell, wie Art. 8 praktisch"]
+kmu_liste:
+  - "**Vereinfachte technische Dokumentation** ({fs:11(1)}): KMU und kleine Midcap-Unternehmen dürfen das vereinfachte Formular der Kommission verwenden; notifizierte Stellen akzeptieren es."
+  - "**QMS im Verhältnis zur Grösse** ({fs:17(2)}): Umfang angemessen, aber mit dem nötigen Schutzniveau."
+  - "**Vereinfachtes QMS** ({fs:63(1)}): KMU ohne Partner- oder verbundene Unternehmen dürfen bestimmte Elemente vereinfacht erfüllen; von Art. 9 bis 15, 72 und 73 befreit das nicht (Art. 63(2))."
+  - "**Weitere:** vorrangiger Zugang zu Reallaboren, nur mit Sitz oder Zweigniederlassung in der Union, und tiefere Gebühren für die Konformitätsbewertung (Art. 62(1), (2)); bei Bussen gilt für KMU der niedrigere Betrag (Art. 99(6))."
+bev_text: "Anbieter mit Sitz in der Schweiz und ohne Niederlassung in der EU benennen vor der Bereitstellung eines Hochrisiko-KI-Systems in der EU schriftlich einen Bevollmächtigten mit Sitz in der EU ({fs:22(1)}). Der Auftrag muss ihn mindestens zu den Aufgaben nach Art. 22(3) ermächtigen, etwa Prüfung von Erklärung und Dokumentation, Bereithalten der Unterlagen für zehn Jahre und Zusammenarbeit mit Behörden. Je System halten wir fest, ob der Bevollmächtigte benannt ist."
+nicht_erforderlich: "nicht erforderlich"
+bev_kopf: [KI-System, Bevollmächtigter benannt, "Nachweis (Auftrag, Name, Sitz)"]
+bev_hinweis: "Halten Sie je System fest, ob der Bevollmächtigte benannt ist."
+bev_eu: "Wir haben eine Niederlassung in der EU. Ein Bevollmächtigter nach Art. 22 ist nur für Anbieter mit Sitz ausserhalb der EU nötig. Je System prüfen wir, welche Gesellschaft als Anbieter auftritt: Ist es die Schweizer Gesellschaft, braucht sie trotz der Niederlassung einen Bevollmächtigten."
+aims_text: "Die Tabelle zeigt, was ein AIMS nach ISO/IEC 42001 zu den Anbieterpflichten beiträgt. Die Zuordnung ist eine fachliche Einschätzung; Details je Pflicht in E-03."
+aims_kopf: [Thema, Beitrag des AIMS, Was zusätzlich nötig ist, Abdeckung]
+aims:
+  - ["Risikomanagement (Art. 9)", "Risikoprozess, Register, Behandlung (6.1, 8.2, 8.3, D-06, D-07)", "Bezug auf Gesundheit, Sicherheit und Grundrechte je System, Tests mit Metriken", "teilweise"]
+  - ["Daten (Art. 10)", "Datenregeln, Herkunft, Qualität (A.7, D-13)", "Prüfung auf Verzerrungen, Repräsentativität, Datenblätter je Datensatz", "teilweise"]
+  - ["Technische Dokumentation (Art. 11)", "Dokumentation im Lebenszyklus (A.6.2.7, D-12)", "Inhalte nach Anhang IV oder vereinfachtes KMU-Formular", "teilweise"]
+  - ["Protokollierung (Art. 12, 19)", "Ereignisprotokolle (A.6.2.8)", "automatische Protokollierung im Produkt, Aufbewahrung mindestens sechs Monate", "teilweise"]
+  - ["Betriebsanleitung, Aufsicht, Robustheit (Art. 13 bis 15)", "Information für Nutzende, Verifikation, Betrieb (A.8.2, A.6.2.4 bis A.6.2.6)", "Inhalte nach Art. 13(3), Eingriffs- und Stoppfunktion, Sicherheitstests", "teilweise"]
+  - ["QMS (Art. 17)", "Managementsystem mit Leitlinie, Rollen, Audits, Verbesserung (Abschnitte 4 bis 10)", "Elemente nach Art. 17(1); harmonisierte Norm EN 18286:2026 (ABl. L 2026/2274 vom 14.10.2026), Abdeckung laut Anhang ZA der Norm", "teilweise"]
+  - ["Lieferkette (Art. 25(2), (4))", "Lieferanten und Verantwortungsteilung (A.10, D-16)", "schriftliche Vereinbarung mit den Inhalten nach Art. 25(4)", "teilweise"]
+  - ["Beobachtung und Vorfälle (Art. 72, 73)", "Überwachung, Meldungen, Korrekturen (A.6.2.6, A.8.4, 10.2, D-14, D-22)", "Plan nach Art. 72, Meldung an Behörden mit Fristen nach Art. 73", "teilweise"]
+  - ["Konformitätsbewertung, Erklärung, CE, Registrierung (Art. 43, 47 bis 49)", "kein Beitrag", "eigenes Verfahren, Erklärung, Kennzeichnung, Eintrag in der EU-Datenbank", "nicht"]
+  - ["Bevollmächtigter (Art. 22), Barrierefreiheit (Art. 16 Bst. l)", "kein Beitrag", "Auftrag an Bevollmächtigten in der EU; Barrierefreiheit nach EU-Recht", "nicht"]

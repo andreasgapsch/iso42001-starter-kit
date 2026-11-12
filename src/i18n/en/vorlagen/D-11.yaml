@@ -1,0 +1,50 @@
+# D-11 Statement of applicability
+blaetter:
+  soa: SoA
+  auswertung: Evaluation
+titel_soa: "Statement of applicability: controls from ISO/IEC 42001 Annex A"
+titel_auswertung: "Evaluation of the statement of applicability"
+hinweis_vorhanden: "‘Already in place’ is not a reason for exclusion. Enter a control that is already implemented as ‘applicable: yes’ with the status ‘implemented’ and a reference to how it is implemented (e.g. ‘implemented through ISMS access control policy’)."
+hinweise_soa:
+  - "Decide for every control whether it applies, and give reasons for inclusion and exclusion. Reasons for inclusion are, for example, a risk (column ‘Risks’), a legal or contractual obligation or an expectation of interested parties."
+  - "An exclusion is permitted if the control does not apply within your scope, e.g. controls that only concern development (A.6.1.2, A.6.1.3, A.7.2) if you only buy AI and do not adapt it. Give a specific reason for every exclusion."
+  - "Status: open, planned, partly, implemented or effective (effectiveness checked). Every applicable control needs evidence. Controls that do not apply have no status."
+  - "Column ‘Effectiveness checked’: how effectiveness was checked (e.g. sample, test, evaluation of metrics), when and by whom, plus the result. The yardstick is not set solely by the person who operates the control. Only set ‘effective’ once this column is filled in."
+  - "The ‘Group’ column is calculated and used for the evaluation. Do not change it."
+hinweise_auswertung:
+  - "The values are calculated from the ‘SoA’ sheet. Do not change the ‘Code’ column."
+spalten_soa:
+  - ID
+  - Short title
+  - Applicable
+  - Reason for inclusion or exclusion
+  - Risks
+  - Status
+  - Implementation, reference
+  - Evidence
+  - "Effectiveness checked (how, when, by whom; result)"
+  - Responsible
+  - Related ISO/IEC 27001 controls
+  - Group
+spalten_auswertung: [Section, Code, Controls, Applicable, "Implemented or effective", "Share implemented (%)"]
+status: [open, planned, partly, implemented, effective]
+abschnitt_euaia: "Additional controls (EU AI Act)"
+euaia_nicht_aufgenommen: "Not included because they do not apply to the roles and risk classes of our AI systems: {ids}"
+abschnitt_eigene: "Own controls"
+gesamt_anhang_a: "Total Annex A"
+euaia_kurz: "Additional controls EU AI Act"
+eigene_kurz: Own controls
+artikel: "Art. {artikel}"
+freigabe:
+  titel: "Approval of the statement of applicability"
+  text: "{{fakt:freigabe.soa|gross}} has checked and approved this SoA. It is kept up to date whenever the treatment plan (D-07) changes."
+  durch: Approved by
+  am: Approved on
+  version: Version
+ausbau_systeme: "If you have many AI systems, you can record applicability per system: add a column ‘applies to AI systems’ with the IDs from the inventory (D-10). Blank means: applies to all."
+# NIST AI RMF module
+abschnitt_rmf: "Additional controls (NIST AI RMF)"
+subkategorien: "AI RMF {ids}"
+rmf_offen: "Proposed for our AI systems, decision open: {ids}"
+rmf_nicht_aufgenommen: "Not included because they do not apply to the type, role and use of our AI systems: {ids}"
+rmf_kurz: "Additional controls NIST AI RMF"

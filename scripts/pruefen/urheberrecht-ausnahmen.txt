@@ -1,0 +1,23 @@
+# Ausnahmen für Tor G6 (Urheberrecht): bekannte, unvermeidbare Fachfolgen.
+# Eine Folge pro Zeile, Gross-/Kleinschreibung und Satzzeichen spielen keine Rolle.
+# Eine 8-Wort-Folge ist ausgenommen, wenn sie eine kürzere Ausnahme enthält
+# oder Teil einer längeren Ausnahme ist. Nur Titel und feste Fachbegriffe, kein Fliesstext.
+
+# Normtitel (bibliografische Angaben)
+information technology artificial intelligence management system
+Informationstechnik Künstliche Intelligenz Managementsystem
+information technology artificial intelligence AI system impact assessment
+Informationstechnik Künstliche Intelligenz Folgenabschätzung für KI-Systeme
+information security cybersecurity and privacy protection information security management systems
+Informationssicherheit Cybersicherheit und Datenschutz Informationssicherheitsmanagementsysteme
+
+# Eigene Verweisformel des Kits (Normverweis mit Abschnittsnummer)
+ISO/IEC 42001 clause
+ISO/IEC 42001 Abschnitt
+
+# Bibliografische Angaben NIST (amtliche Download-Adressen, src/nist-rmf/stand.yaml)
+https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf
+https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf
+
+# Abschnittsnummern als Zuordnung (N-02, Bezug ISO/IEC 42001 zu GV-2.1), keine Textübernahme
+9.1, 5.3, 7.1, 7.2, 7.3, 7.4, A.3.2

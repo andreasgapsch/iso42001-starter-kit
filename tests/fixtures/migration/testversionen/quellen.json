@@ -1,0 +1,26 @@
+{
+  "1.0.0-test.1": {
+    "quelle": "Beispiele der Testversion 1.0.0-test.1 (src/beispiele)",
+    "dateien": "1.0.0-test.1/<beispiel>.<sprache>.aims.json"
+  },
+  "1.0.0-test.2": {
+    "quelle": "Release-ZIP der Testversion 1.0.0-test.2, AIMS-Manager/Beispiele_Examples",
+    "gleichWie": "../v1.<beispiel>.<sprache>.aims.json",
+    "sha256": {
+      "muster-maschinenbau.de": "9095c0ecd8589c104fdb8c4d8e13d2f57ff9cfd2cca1e4185323b373366d6207",
+      "muster-maschinenbau.en": "5506c3f0e39e7641bd7e370bc85ce7049ee66d2faf0cfe3f7d97374eec961bf6",
+      "praezisionsteile.de": "389affe9c43eb42be21aff32617b73cba5285a652b31b3686ee49b7b062369eb",
+      "praezisionsteile.en": "d6903a5abbd45c5bfaa3c07813619ef425c5a68402e97ba9e8bcf0a55833b935"
+    }
+  },
+  "1.0.0-test.3": {
+    "quelle": "Release-ZIP der Testversion 1.0.0-test.3, AIMS-Manager/Beispiele_Examples",
+    "gleichWie": "../v1.<beispiel>.<sprache>.aims.json",
+    "sha256": {
+      "muster-maschinenbau.de": "9095c0ecd8589c104fdb8c4d8e13d2f57ff9cfd2cca1e4185323b373366d6207",
+      "muster-maschinenbau.en": "5506c3f0e39e7641bd7e370bc85ce7049ee66d2faf0cfe3f7d97374eec961bf6",
+      "praezisionsteile.de": "389affe9c43eb42be21aff32617b73cba5285a652b31b3686ee49b7b062369eb",
+      "praezisionsteile.en": "d6903a5abbd45c5bfaa3c07813619ef425c5a68402e97ba9e8bcf0a55833b935"
+    }
+  }
+}

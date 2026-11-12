@@ -1,0 +1,145 @@
+# D-10 AI inventory and survey questionnaire
+blaetter:
+  inventar: Inventory
+  ressourcen: Resources
+  fragebogen: Business unit questionnaire
+  freigabe: Approval list
+titel_inventar: "AI inventory: all AI systems within the scope"
+titel_ressourcen: "Resources per AI system"
+titel_fragebogen: "Questionnaire: where do you use AI?"
+titel_freigabe: "Approval list of AI tools"
+hinweise_inventar:
+  - "One row per AI system. Also record AI features in purchased software (e.g. assistants in office, CRM or HR applications) and shadow AI, that is, tools used without approval."
+  - "Type: purchased (software or device), SaaS (cloud service), in-house (developed or retrained by you), shadow AI (in use without approval)."
+  - "Sensitive use follows from the screening (D-08, D-09). Plan the next review no later than one year ahead."
+  - "Acting AI: ‘Level of autonomy’ shows how far the system acts on its own: informs (gives information, drafts), recommends, prepares (e.g. a booking for confirmation), executes within limits (single actions without confirmation), acts in several steps (plans and carries out several steps with tools, so-called agents). From ‘executes within limits’ upwards the system needs a way to stop it, logs and named oversight. ‘Access and tools’ lists the systems, file stores, interfaces, connectors and extensions it can read or operate."
+  - "Model and version: provider, model and version; for services the provider's statement with date. A model change triggers a reassessment (D-12). ‘Reads third-party content’ means emails, web pages or documents from others; together with ‘publicly accessible’ and ‘generative’ it determines whether misuse cases are tested (D-12)."
+  - "Plan or type of contract: commitments on training, retention and contract depend on the offering, not on the provider. Confidential data only with business, enterprise contract or own operation. ‘Retirement by the provider’ is the announced date on which the model or service is discontinued; ‘Source of provider information’ names the reference and date retrieved at the manufacturer or provider, not from third-party collections."
+  - "Critical for operations: if an outage disrupts important processes; then state the fallback. ‘Retain until’ applies to systems retired or replaced: until then records, outputs and settings are kept (D-12)."
+hinweis_aiact: "You only need the ‘AI Act role’ and ‘AI Act risk class’ columns with the AI Act module (E-01, E-02). Otherwise leave them blank or hide them."
+hinweise_ressourcen:
+  - "One row per AI system from the ‘Inventory’ sheet. Key words are enough; refer to existing registers instead of copying them."
+  - "Data: inputs, outputs and, if known, training data. Tools and models: model or service, version, provider. Computing resources: place of operation (own data centre, cloud with region, end device). People: roles for operation, oversight and support."
+  - "Dependencies: systems and processes that feed data to the AI system or use its outputs. They show who is affected by an outage, a change or retirement."
+hinweise_fragebogen:
+  - "One row for each tool or feature that uses artificial intelligence; if in doubt, list it. The aim is an overview, not control. This includes free and private accounts used for work."
+  - "Examples: chat and writing assistants (Microsoft 365 Copilot, ChatGPT and similar), AI features in CRM (lead scoring, text suggestions), HR tools (pre-selection of applications), translation, minutes and transcription of meetings, image and text generation, receipt recognition, chatbots on the website, and browser extensions and apps."
+  - "The column headings stay unchanged. This allows the answers from all business units to be merged and transferred to the inventory."
+hinweise_freigabe:
+  - "This list shows which AI tools employees may use, under which conditions and up to which data classification. The rules are set out in the AI use policy (D-15)."
+  - "Prohibited tools stay on the list with the reason, so that the decision can be traced."
+  - "Extensions, connectors (including tool servers, for example under the Model Context Protocol), custom assistants and agents need their own approval: name the approved ones in the column ‘Approved access’. Anything else is not permitted (D-15)."
+  - "Functions: the chosen setting for each function switch of the service, e.g. ‘Web search: on; Memory: off’. Functions not named are unclarified."
+  - "‘Requested on’ and ‘Decided on’: date on which the request came in and date of approval or rejection (PR-07). The PR-07 metric calculates the days to the decision from these (D-05)."
+hinweis_eb: "With an ISMS: either keep AI systems in the existing asset inventory with the tag ‘AI’ and the columns of this sheet, or keep this inventory and refer to the asset ID for each system (‘Resources’ sheet)."
+ausbau_eigenbau: "For in-house developments: in the ‘Resources’ sheet, also record model versions, training and test data sets and development tools for each version (A.4.3, A.4.4, A.6.2.3)."
+spalten_inventar:
+  - ID
+  - Name
+  - Type
+  - Description
+  - Purpose
+  - Business unit
+  - System owner
+  - Supplier
+  - Personal data
+  - Sensitive personal data
+  - Affected persons
+  - Automation
+  - Life cycle
+  - Status
+  - Sensitive use
+  - Next review
+  - Recorded on
+  - Changed on
+  - "Human oversight (who reviews)"
+  - Level of autonomy
+  - Access and tools
+  - Memory across sessions
+  - "Way to stop (how, who)"
+  - Type of AI task
+  - Generative
+  - Model and version
+  - Reads third-party content
+  - Publicly accessible
+  - Critical for operations
+  - Fallback
+  - Retain until
+  - Plan or type of contract
+  - Retirement by the provider
+  - "Source of provider information, retrieved on"
+spalten_aiact: [AI Act role, AI Act risk class, Rationale for role and class, "Determined by, on"]
+spalten_aiact_optional: ["AI Act role (optional, module)", "AI Act risk class (optional, module)", "Rationale for role and class (optional)", "Determined by, on (optional)"]
+spalten_ressourcen:
+  - ID
+  - AI system
+  - "Data (A.4.3)"
+  - "Tools and models (A.4.4)"
+  - "Computing resources, place of operation (A.4.5)"
+  - "People and competences (A.4.6)"
+  - "Dependencies (systems and processes before and after)"
+spalte_asset: "Asset ID in the ISMS inventory"
+spalten_fragebogen:
+  - Business unit
+  - Completed by
+  - "1 Name of the tool or feature"
+  - "2 What do you use it for?"
+  - "3 How did the tool come to you?"
+  - "4 Provider or manufacturer"
+  - "5 How many people use it?"
+  - "6 How often do you use it?"
+  - "7 What data do you enter?"
+  - "8 Does this include personal data?"
+  - "9 Does this include especially sensitive data (health, applications, salaries, customer secrets)?"
+  - "10 Who is affected by the outputs?"
+  - "11 Does a person check the output before it is used?"
+  - "12 Remarks or concerns"
+  - "13 Can the tool do things itself, e.g. send emails, trigger appointments or bookings, change files or data?"
+  - "14 Which systems, file stores, mailboxes or accounts does it access (e.g. through extensions, connectors or agents)?"
+spalten_freigabe:
+  - Tool
+  - AI system
+  - Provider
+  - Status
+  - Permitted use and conditions
+  - Highest permitted data class
+  - Reason
+  - Approved by
+  - Approved on
+  - Next review
+  - Level of autonomy
+  - "Approved access, extensions and agents"
+  - Plan or type of contract
+  - "Functions (on, off)"
+# Data source of the PR-07 metric (AF-104), at the end of the approval list
+spalten_antrag: [Requested on, Decided on]
+listen:
+  typ: [purchased, cloud service (SaaS), in-house, shadow AI]
+  automatisierung: [assisting, partly automated, fully automated]
+  lebenszyklus: [idea, development, test, operation, retired]
+  aiact_rolle: [provider, deployer, importer, distributor, product manufacturer, authorised representative]
+  risikoklasse: [open, prohibited, high-risk Annex III, high-risk Annex I, transparency, minimal]
+  herkunft: [provided by the company, AI feature in existing software, obtained myself or free version, developed myself]
+  haeufigkeit: [daily, weekly, rarely]
+  ja_nein_unklar: ["yes", "no", "don't know"]
+  pruefung: [always, mostly, rarely or never]
+  datenklasse: [public, internal, confidential, strictly confidential]
+  # Order as HANDLUNGSBEFUGNISSE and AUFGABENARTEN in src/model/typen.ts
+  handlungsbefugnis: [informs, recommends, prepares, executes within limits, acts in several steps]
+  aufgabenart: [generates content, classifies or detects, forecasts, recommends or prioritizes, controls]
+  # Order as TARIFE in src/model/typen.ts
+  tarif: [free account, personal or individual plan, business or team, enterprise contract, own operation]
+  funktion_stand: ["on", "off"]
+# Function switches (order as FUNKTIONEN in src/model/typen.ts)
+funktionen:
+  websuche: Web search
+  codeausfuehrung: Code execution
+  dateiupload: File upload
+  gedaechtnis: Memory
+  konnektoren: Connectors and tool servers
+  agenten: Own assistants and agents
+  teilen: Sharing outside
+# Freigabeliste: untersagtes System
+keine_nutzung: "no use permitted"
+modell_teile: [Provider, Model, Version]
+hinweis_fragebogen_firma: "This sheet is the blank form for the next survey. The answers of earlier surveys have been taken over into the inventory; the returned forms are filed as records in the document register (D-26)."

@@ -1,0 +1,229 @@
+# D-16 Lieferanten und eingekaufte KI
+modul_praefix_leer: "Nur mit Modul EU AI Act:"
+modul_praefix: "EU AI Act:"
+modul_hinweis: "Mit Prüffrage PF-10 klären wir, ob der Lieferant Anbieter eines KI-Systems oder eines KI-Modells mit allgemeinem Verwendungszweck ist. Seine Pflichten und unsere Pflichten als Betreiber zeigen E-03 und E-05."
+eb_titel: Ergänzungsblatt zum Lieferantenmanagement
+eb_einleitung: "Diese Mappe ergänzt unser bestehendes Verfahren für Lieferanten um eingekaufte KI. Die folgenden Punkte gelten zusätzlich im Verfahren und im Lieferantenregister; alles Übrige gilt unverändert."
+eb_abschnitte:
+  - "**KI-Lieferanten kennzeichnen:** im Lieferantenregister die Spalten «KI-Systeme», «Prüfstatus» und «Nächste Prüfung» aus dem Blatt «Lieferanten» ergänzen."
+  - "**Prüfpunkte:** die Prüffragen in die Bewertung vor dem Einkauf aufnehmen."
+  - "**Vertragsklauseln:** die Checkliste in die Vertragsprüfung aufnehmen."
+  - "**Verantwortung aufteilen:** je KI-System festhalten, was beim Lieferanten, bei uns und beim Kunden liegt (A.10.2)."
+  - "**Überwachung:** KI-Lieferanten mindestens jährlich und bei Anlass neu prüfen (Regel im Blatt «Lieferanten»)."
+blaetter:
+  lieferanten: Lieferanten
+  fragen: Prüffragen
+  klauseln: Vertragsklauseln
+  verantwortung: Verantwortung
+  dienste: Dienste
+titel_lieferanten: "Lieferanten von KI-Systemen und KI-Leistungen"
+titel_lieferanten_eb: "KI-Lieferanten (Ergänzung zum Lieferantenregister)"
+titel_fragen: "Prüffragen vor dem Einkauf und bei der Neubeurteilung"
+titel_klauseln: "Checkliste Vertragsklauseln"
+titel_verantwortung: "Aufteilung der Verantwortung (A.10.2)"
+titel_dienste: "Dienste, Tarife und Funktionen"
+hinweise_dienste:
+  - "Eine Zeile je eingekauftem Dienst oder Werkzeug aus dem KI-Inventar (D-10). Die Zusagen zu Training, Aufbewahrung und Vertrag hängen am Tarif, nicht am Anbieter: Derselbe Anbieter hat Gratis-, Privat-, Business- und Unternehmensangebote mit verschiedenen Bedingungen. Nutzt eine Firma zwei Tarife desselben Anbieters, führt sie zwei Zeilen und beantwortet die Prüffragen für den Tarif, den sie freigibt."
+  - "Vertrauliche oder strengere Daten gehören nicht in einen Gratis- oder Privattarif; dafür fehlen Vertrag zur Auftragsbearbeitung und Zusagen zum Training."
+  - "Funktionen: Halten Sie je Funktion fest, ob sie ein- oder ausgeschaltet ist, z. B. Websuche, Codeausführung, Datei-Upload, Gedächtnis, Konnektoren, eigene Assistenten und Agenten, Teilen nach aussen. Nicht festgehaltene Funktionen gelten als ungeklärt, nicht als ausgeschaltet."
+  - "Quelle der Angaben: Fundstelle beim Hersteller oder Anbieter (Vertragsbedingungen, Systemkarte, Verwaltungskonsole) mit Abrufdatum. Angaben aus Sammlungen Dritter ersetzen die Herstellerquelle nicht."
+spalten_dienste: [ID, Dienst oder Werkzeug, Lieferant, Tarif oder Vertragsart, Höchste erlaubte Datenklasse, "Funktionen (ein, aus)", Abkündigung durch den Anbieter, "Quelle der Angaben, abgerufen am"]
+hinweise_lieferanten:
+  - "«Lieferant» heisst, wer Ihnen das System liefert; «Anbieter» ist die Rolle nach AI Act. Beides kann dieselbe Firma sein."
+  - "Eine Zeile je Lieferant, der KI liefert oder in seiner Leistung KI einsetzt, auch eingebettete KI in Software. Die KI-Systeme stehen im KI-Inventar (D-10)."
+regel_ueberwachung: "Regel: Wir prüfen KI-Lieferanten vor dem Einkauf, danach mindestens jährlich und zusätzlich nach einem Vorfall, einem Modellwechsel, neuen Unterauftragnehmern oder geänderten Vertragsbedingungen."
+hinweise_fragen:
+  - "Beantworten Sie die Fragen aus den Unterlagen des Lieferanten oder durch Rückfrage. «ja» bedeutet: erfüllt. Ein «nein» führt zu einer Auflage, einem Risiko in D-07 oder zur Ablehnung."
+  - "PF-16 bis PF-21 betreffen vor allem generative KI (Assistenten, Chatbots, Plattformen mit Abrechnung nach Verbrauch). Bei einem öffentlichen Chatbot auf einer Cloud-Plattform sind PF-16, PF-19 und PF-21 am wichtigsten."
+  - "PF-22, PF-23, PF-25 und PF-26 betreffen handelnde KI (Agenten, Konnektoren, Gedächtnis); ohne solche Funktionen genügt «ja» mit dem Vermerk «nicht genutzt». PF-24 und PF-27 gelten für jeden Dienst."
+  - "Warnsignale bei der Prüfung: dürftige oder veraltete Dokumentation, Änderungen ohne Ankündigung, keine Angaben zur Sicherheit, unklare oder wechselnde Unterauftragnehmer. Halten Sie solche Beobachtungen in der Bemerkung fest und prüfen Sie ein Risiko in D-07."
+hinweise_klauseln:
+  - "Prüfen Sie je Lieferant, ob der Vertrag die Klausel enthält. Bei Standardverträgen grosser Anbieter genügt die Fundstelle in den Vertragsbedingungen."
+hinweise_verantwortung:
+  - "Die Vorschläge passen zu einem typischen SaaS-Dienst. Passen Sie die Aufteilung je KI-System an; kopieren Sie das Blatt, wenn sie stark abweicht. Die Spalte «Kunde» betrifft nur KI in Leistungen für Kunden."
+spalten_lieferanten: [L-ID, Name, Leistung, KI-Systeme, Prüfstatus, "Geprüft durch, am", Nächste Prüfung, Bemerkung]
+spalten_fragen: [Nr., Thema, Prüffrage, Warum das wichtig ist, Bemerkung]
+spalten_klauseln: [Nr., Klausel, Prüffrage, "Fundstelle, Bemerkung"]
+spalten_verantwortung: [Aufgabe, Lieferant, Wir, Kunde, Bemerkung]
+spalte_antwort: Erfüllt
+spalte_im_vertrag: Im Vertrag
+listen:
+  pruefstatus: [offen, in Prüfung, geprüft, mit Auflagen, abgelehnt]
+  antwort: [ja, nein, offen]
+  klausel: [ja, nein, offen, nicht nötig]
+  verantwortung: [verantwortlich, mitwirkend, informiert, keine]
+fragen:
+  PF-01:
+    thema: Training mit unseren Daten
+    frage: "Ist ausgeschlossen, dass der Anbieter unsere Eingaben, Dateien und Ergebnisse zum Training oder zur Verbesserung seiner Modelle verwendet, oder lässt sich das abschalten?"
+    warum: "Sonst können vertrauliche Inhalte in Ergebnissen für andere auftauchen."
+  PF-02:
+    thema: Speicherort und Region
+    frage: "Ist bekannt, in welchen Ländern Daten gespeichert und verarbeitet werden, und können wir eine Region wählen, z. B. Schweiz oder EU?"
+    warum: "Datenschutz, Kundenverträge und Geheimhaltung hängen vom Ort ab."
+  PF-03:
+    thema: Aufbewahrung und Löschung
+    frage: "Sind Fristen für Eingaben, Ergebnisse und Protokolle festgelegt, und löscht der Anbieter auf Verlangen nachweisbar?"
+    warum: "Daten sollen nicht länger liegen als nötig."
+  PF-04:
+    thema: Unterauftragnehmer
+    frage: "Liegt eine Liste der Unterauftragnehmer vor, einschliesslich der Anbieter der verwendeten Modelle, und werden Änderungen vorher angekündigt?"
+    warum: "Viele Dienste geben Daten an den Hersteller des Modells weiter."
+  PF-05:
+    thema: Dokumentation
+    frage: "Beschreibt der Anbieter Zweck, Fähigkeiten, Grenzen und bekannte Risiken des Systems so, dass wir unsere Nutzenden informieren können? Bei KI, die über Personen mitentscheidet: Legt er Ergebnisse seiner Tests auf Qualität und Verzerrungen offen?"
+    warum: "Grundlage für Tests, Risiken und Information der Nutzenden (D-12, D-14)."
+  PF-06:
+    thema: Ankündigung von Änderungen
+    frage: "Kündigt der Anbieter Modellwechsel und wesentliche Funktionsänderungen mindestens [[30]] Tage vorher an, und können wir eine geprüfte Modellversion für eine Übergangszeit beibehalten?"
+    frage_firma: "Kündigt der Anbieter Modellwechsel und wesentliche Funktionsänderungen mit angemessener Frist vorher an, und können wir eine geprüfte Modellversion für eine Übergangszeit beibehalten?"
+    warum: "Nach Änderungen müssen wir erneut prüfen (D-12)."
+  PF-07:
+    thema: Meldung von Vorfällen
+    frage: "Meldet der Anbieter Sicherheits- und KI-Vorfälle, die uns betreffen, innert festgelegter Frist an eine benannte Stelle?"
+    warum: "Wir müssen selbst Fristen gegenüber Kunden und Behörden einhalten (D-14)."
+  PF-08:
+    thema: Sicherheitsnachweise
+    frage: "Liegen aktuelle Zertifikate oder Prüfberichte vor, z. B. ISO/IEC 27001, ISO/IEC 42001 oder SOC 2, und decken sie den genutzten Dienst ab?"
+    warum: "Erspart eigene Prüfungen, wenn der Geltungsbereich passt."
+  PF-09:
+    thema: Datenschutz
+    frage: "Gibt es einen Vertrag zur Auftragsbearbeitung, und ist die Übermittlung in andere Länder rechtlich abgesichert?"
+    warum: "Pflicht, sobald Personendaten in den Dienst gelangen."
+  PF-10:
+    thema: Rolle nach EU AI Act
+    frage: "Hat der Anbieter seine Rolle nach EU AI Act geklärt und stellt er die Unterlagen bereit, die wir als Betreiber brauchen?"
+    warum: "Bestimmt, welche Pflichten beim Anbieter und welche bei uns liegen."
+  PF-11:
+    thema: Protokolle
+    frage: "Erhalten wir Nutzungs- und Ereignisprotokolle im nötigen Umfang und für die nötige Dauer (D-12)?"
+    warum: "Ohne Protokolle lassen sich Vorfälle und Missbrauch nicht aufklären."
+  PF-12:
+    thema: Zentrale Steuerung
+    frage: "Können wir Funktionen, Nutzerkreis und Datenzugriffe zentral steuern, z. B. über eine Verwaltungskonsole und Single Sign-on?"
+    warum: "Nur so lassen sich Regeln aus D-15 technisch durchsetzen."
+  PF-13:
+    thema: Rechte an Ergebnissen
+    frage: "Ist geregelt, wem die Ergebnisse gehören und wer haftet, wenn Ergebnisse Rechte Dritter verletzen?"
+    warum: "Schützt vor Ansprüchen wegen Urheber- oder Markenrecht."
+  PF-14:
+    thema: Test vor dem Kauf
+    frage: "Können wir das System vor dem Kauf mit eigenen, typischen Fällen testen?"
+    warum: "Die Prüfung vor dem Einsatz (D-12) setzt einen Testzugang voraus."
+  PF-15:
+    thema: Ausstieg und Notfall
+    frage: "Können wir unsere Daten in einem gängigen Format exportieren und den Dienst ohne grossen Aufwand beenden, mit Löschung nach Vertragsende? Gibt es bei kritischen Diensten Zusagen zu Verfügbarkeit und Unterstützung im Notfall?"
+    warum: "Verhindert Abhängigkeit und Datenreste beim Anbieter; bei kritischen Diensten braucht es einen Rückfallweg (D-12)."
+  PF-16:
+    thema: Schutz vor manipulierten Eingaben
+    frage: "Beschreibt der Anbieter, wie der Dienst mit manipulierten Eingaben in Chats, Dokumenten und E-Mails umgeht, testet er das regelmässig (z. B. Penetrationstests) und nimmt er Meldungen dazu in sein Programm für Schwachstellen auf?"
+    warum: "Versteckte Anweisungen lassen sich nicht ganz verhindern; entscheidend ist, wie der Anbieter den Schaden begrenzt."
+  PF-17:
+    thema: Berechtigungen bei der Suche
+    frage: "Sieht das System nur Inhalte, auf die die jeweilige Person Zugriff hat, und wird das schon bei der Suche geprüft, nicht erst bei der Anzeige?"
+    warum: "Sonst erscheinen fremde oder vertrauliche Daten in Antworten."
+  PF-18:
+    thema: Erweiterungen und Aktionen
+    frage: "Können wir Erweiterungen, Konnektoren, Agenten und Aktionen einzeln sperren oder freigeben, Aktionen mit Aussenwirkung an eine Bestätigung binden und erhalten wir Protokolle der ausgeführten Aktionen?"
+    warum: "Begrenzt den Handlungsspielraum handelnder KI; ergänzt PF-11 und PF-12."
+  PF-19:
+    thema: Kosten und Verbrauch
+    frage: "Lassen sich Verbrauch und Kosten je Konto oder Anwendung begrenzen, mit hartem Kostendach statt nur einer Warnung?"
+    warum: "Schützt vor Kostenexplosion durch Missbrauch, vor allem bei Abrechnung nach Verbrauch."
+  PF-20:
+    thema: Darstellung von Antworten
+    frage: "Werden externe Bilder, Links und Vorschauen in Antworten automatisch geladen, und lässt sich das einschränken?"
+    warum: "Automatisch geladene Inhalte sind ein bekannter Weg für Datenabfluss."
+  PF-21:
+    thema: Modell, Version und Komponenten
+    frage: "Nennt der Anbieter Modell, Version und wesentliche Komponenten, behebt er bekannte Schwachstellen innert festgelegter Frist und sind bei offenen Modellen und Datensätzen Lizenz und Herkunft geklärt?"
+    warum: "Grundlage für die Neubeurteilung bei Modellwechsel (D-12) und für Rechte an der Nutzung."
+  PF-22:
+    thema: Werkzeugserver und Konnektoren
+    frage: "Sind Herkunft, Prüfung und Version von Werkzeugservern, Konnektoren und Erweiterungen Dritter bekannt, die der Dienst einbindet, können wir sie auf freigegebene Einträge mit fester Version beschränken, und sind die Berechtigungen von Assistenten in Browser oder Desktop festgelegt?"
+    warum: "Beschreibungen und Updates fremder Werkzeuge können Anweisungen enthalten, denen ein Agent folgt."
+  PF-23:
+    thema: Identität von Agenten
+    frage: "Handeln Agenten mit eigener Identität oder mit den Rechten der auslösenden Person, mit kurzlebigen Zugängen statt einem Dienstkonto mit Vollrechten, und lässt sich nachvollziehen, welcher Agent was getan hat?"
+    warum: "Sonst reicht ein Agent weiter als die Person, die ihn nutzt, und Aktionen lassen sich niemandem zuordnen."
+  PF-24:
+    thema: Einsicht des Anbieters in Inhalte
+    frage: "Ist offengelegt, wer beim Anbieter oder bei seinen Dienstleistern Eingaben, Dateien und Ergebnisse einsehen kann (z. B. zur Prüfung auf Missbrauch, zur Beschriftung oder zur Fehlersuche), unter welchen Bedingungen und wie das protokolliert wird?"
+    warum: "Menschliche Einsicht ist ein eigener Weg, auf dem vertrauliche Daten den Betrieb verlassen."
+  PF-25:
+    thema: Zwischenspeicher und Gedächtnis
+    frage: "Sind Zwischenspeicher, Gedächtnis und gemeinsame Arbeitsbereiche zwischen Kunden und zwischen Personen getrennt, und lassen sich gespeicherte Einträge einsehen und löschen?"
+    warum: "Sonst erscheinen Inhalte einer Person oder eines anderen Kunden in fremden Antworten."
+  PF-26:
+    thema: Notstopp und Entzug der Rechte
+    frage: "Können wir Agenten und Automationen zentral pausieren und ihnen Zugänge und Rechte sofort entziehen, auch ausserhalb der Bürozeiten?"
+    warum: "Bei einer Fehlaktion zählt, wie schnell sich weitere Aktionen stoppen lassen (D-12)."
+  PF-27:
+    thema: Nutzungsbedingungen und Lizenzschranken
+    frage: "Erlauben die Nutzungsbedingungen des Anbieters unseren Einsatz, z. B. ohne Verbot für automatisierte Entscheide über Personen oder für unsere Branche, und haben offene Modelle keine Schranken nach Gebiet, Gewerbe oder Nutzerzahl, die uns ausschliessen?"
+    warum: "Ein Einsatz gegen die Bedingungen oder die Lizenz kann den Zugang kosten und Ansprüche auslösen."
+klauseln:
+  VK-01: { klausel: "Keine Verwendung unserer Daten zum Training oder zur Verbesserung von Modellen ohne schriftliche Zustimmung", bezug: PF-01 }
+  VK-02: { klausel: "Speicher- und Verarbeitungsort sowie Region festgelegt; Wechsel nur nach Ankündigung", bezug: PF-02 }
+  VK-03: { klausel: "Aufbewahrungsfristen, Löschung auf Verlangen und Rückgabe oder Löschung bei Vertragsende mit Bestätigung", bezug: "PF-03, PF-15" }
+  VK-04: { klausel: "Liste der Unterauftragnehmer, Ankündigung von Änderungen und Widerspruchsrecht", bezug: PF-04 }
+  VK-05: { klausel: "Ankündigung von Modellwechseln und wesentlichen Änderungen mit angemessener Frist", bezug: PF-06 }
+  VK-06: { klausel: "Meldung von Sicherheits- und KI-Vorfällen innert einer vereinbarten Frist an eine benannte Stelle", bezug: PF-07 }
+  VK-07: { klausel: "Vertrag zur Auftragsbearbeitung nach DSG und, falls anwendbar, DSGVO; Absicherung von Übermittlungen ins Ausland", bezug: PF-09 }
+  VK-08: { klausel: "Vertraulichkeit, auch für Mitarbeitende und Unterauftragnehmer des Anbieters", bezug: PF-01 }
+  VK-09: { klausel: "Bereitstellung von Dokumentation, Protokollen und Unterstützung bei Anfragen von Behörden oder Kunden", bezug: "PF-05, PF-10, PF-11" }
+  VK-10: { klausel: "Recht auf aktuelle Prüfberichte oder Zertifikate, ersatzweise Auskunfts- oder Auditrecht", bezug: PF-08 }
+  VK-11: { klausel: "Rechte an Ergebnissen und Freistellung bei Ansprüchen Dritter", bezug: PF-13 }
+  VK-12: { klausel: "Verfügbarkeit, Support und Notfallunterstützung, Datenexport und Ausstieg ohne unverhältnismässige Kosten", bezug: PF-15 }
+  VK-13: { klausel: "Angemessene Sicherheitsmassnahmen gegen missbräuchliche und manipulierte Eingaben, Nachweis durch regelmässige Sicherheitstests; Behebung bekannter Schwachstellen innert vereinbarter Frist", bezug: "PF-16, PF-21" }
+  VK-14: { klausel: "Durchsetzung der Zugriffsrechte unserer Nutzenden bei Suche und Antworten", bezug: PF-17 }
+  VK-15: { klausel: "Verbrauchsgrenzen oder Kostendach und Information bei Überschreitung", bezug: PF-19 }
+  VK-16: { klausel: "Einsicht des Anbieters und seiner Dienstleister in unsere Inhalte nur für einen festgelegten Zweck, protokolliert und unter Vertraulichkeit", bezug: PF-24 }
+  VK-17: { klausel: "Trennung unserer Daten von anderen Kunden auch in Zwischenspeichern, Gedächtnis und gemeinsamen Arbeitsbereichen", bezug: PF-25 }
+  VK-18: { klausel: "Pausieren von Agenten und sofortiger Entzug ihrer Zugänge und Rechte auf unser Verlangen", bezug: "PF-23, PF-26" }
+  VK-19: { klausel: "Ankündigung von Änderungen der Nutzungsbedingungen, die unseren Einsatz einschränken, mit angemessener Frist", bezug: PF-27 }
+verantwortung_vorschlag:
+  - ["Modell entwickeln, trainieren und testen", verantwortlich, keine, keine]
+  - ["Dokumentation zu Zweck, Grenzen und Risiken bereitstellen", verantwortlich, informiert, keine]
+  - ["System vor dem Einsatz mit eigenen Fällen prüfen (D-12)", mitwirkend, verantwortlich, keine]
+  - ["Einstellungen, Zugriffsrechte und Nutzerkreis festlegen", mitwirkend, verantwortlich, keine]
+  - ["Rechtmässigkeit und Qualität der Eingabedaten (D-13)", keine, verantwortlich, mitwirkend]
+  - ["Nutzende informieren und schulen (D-14, D-17)", mitwirkend, verantwortlich, keine]
+  - ["Ergebnisse durch Menschen prüfen", keine, verantwortlich, mitwirkend]
+  - ["Betrieb überwachen und Störungen melden", mitwirkend, verantwortlich, informiert]
+  - ["Verfügbarkeit, Sicherheit und Updates des Dienstes", verantwortlich, informiert, keine]
+  - ["Schutz vor manipulierten Eingaben und Missbrauch", verantwortlich, mitwirkend, keine]
+  - ["Agenten pausieren und ihre Rechte entziehen", mitwirkend, verantwortlich, keine]
+  - ["Protokolle erzeugen und bereitstellen", verantwortlich, informiert, keine]
+  - ["Protokolle aufbewahren und auswerten", mitwirkend, verantwortlich, keine]
+  - ["Vorfälle melden, beheben und auswerten", verantwortlich, mitwirkend, informiert]
+  - ["Datenschutz: Verantwortlicher und Auftragsbearbeiter", mitwirkend, verantwortlich, keine]
+  - ["Löschung und Rückgabe bei Vertragsende", verantwortlich, mitwirkend, keine]
+  - ["Kunden über KI in unseren Leistungen informieren (D-14)", keine, verantwortlich, informiert]
+# Firmendokument: Verantwortungsmatrix je Gruppe von KI-Systemen nach Rolle (N-22)
+hinweis_verantwortung_firma: "Die Aufteilung gilt für alle Systeme der jeweiligen Gruppe. Abweichungen einzelner Lieferanten stehen in der Spalte «Bemerkung»."
+gruppe_betreiber: "Eingekaufte KI-Systeme und Dienste (wir als Betreiber): {systeme}"
+gruppe_anbieter: "Eigene KI-Systeme und Produkte (wir als Anbieter): {systeme}"
+abweichung: "Abweichende Aufteilung mit {lieferant}"
+verantwortung_anbieter:
+  - ["Modell entwickeln, trainieren und testen", keine, verantwortlich, keine]
+  - ["Grundmodell oder Plattform bereitstellen, falls zugekauft (D-16)", verantwortlich, informiert, keine]
+  - ["Technische Dokumentation und Betriebsanleitung für Kunden erstellen (D-12)", keine, verantwortlich, informiert]
+  - ["System vor jeder Freigabe einer Version testen (D-12)", mitwirkend, verantwortlich, keine]
+  - ["Rechtmässigkeit und Qualität der Trainings- und Testdaten (D-13)", mitwirkend, verantwortlich, keine]
+  - ["Nutzende über die KI informieren (D-14)", keine, verantwortlich, mitwirkend]
+  - ["Bestimmungsgemässe Verwendung und menschliche Aufsicht beim Kunden", keine, informiert, verantwortlich]
+  - ["Eingabedaten im Betrieb beim Kunden", keine, informiert, verantwortlich]
+  - ["Rückmeldungen und Störungen auswerten, Leistung überwachen", mitwirkend, verantwortlich, mitwirkend]
+  - ["Vorfälle melden, beheben und auswerten", mitwirkend, verantwortlich, mitwirkend]
+  - ["Updates und neue Modellversionen bereitstellen", mitwirkend, verantwortlich, informiert]
+  - ["Schutz vor manipulierten Eingaben und Missbrauch in der eigenen Anwendung", mitwirkend, verantwortlich, informiert]
+# Firmendokument: Übernahme als Nachweis statt Anweisung
+eb_einleitung_firma: "Diese Mappe ergänzt unser bestehendes Verfahren für Lieferanten um eingekaufte KI. Die folgenden Punkte sind im Verfahren und im Lieferantenregister umgesetzt; alles Übrige gilt unverändert."
+eb_abschnitte_firma:
+  - "**KI-Lieferanten gekennzeichnet:** Das Lieferantenregister führt die Spalten «KI-Systeme», «Prüfstatus» und «Nächste Prüfung» aus dem Blatt «Lieferanten»."
+  - "**Prüfpunkte:** Die Prüffragen sind Teil der Bewertung vor dem Einkauf."
+  - "**Vertragsklauseln:** Die Checkliste ist Teil der Vertragsprüfung."
+  - "**Verantwortung aufgeteilt:** Je KI-System ist festgehalten, was beim Lieferanten, bei uns und beim Kunden liegt (A.10.2)."
+  - "**Überwachung:** KI-Lieferanten prüfen wir mindestens jährlich und bei Anlass neu (Regel im Blatt «Lieferanten»)."
+eb_aufgenommen: "Aufgenommen in: {dokument}."

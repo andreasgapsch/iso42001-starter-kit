@@ -1,0 +1,29 @@
+# Graphregeln des Prozesskatalogs (AF-096, QK-52): «Freigabe X setzt Schritt Y voraus».
+# Geprüft vom Tor G45 (scripts/pruefen/prozessgraph.mts) und in tests/unit/prozesse-katalog.test.ts gegen
+# src/prozesse/katalog.yaml. Sprachneutral: nur Regel-IDs und Schritt-IDs; die Begründung steht als Kommentar.
+#
+# art: erarbeitung  gilt für alle Prozesse: Jeder Schritt mit «entscheid» (Freigabe nach Entscheidungsrechten) ist vom
+#                   Start aus nur über mindestens eine Aufgabe ohne «entscheid» erreichbar (keine Freigabe ohne Erarbeitung).
+# art: voraus       Jeder Weg vom Start zu einem der Schritte in «freigabe» führt über alle Schritte in «voraus»
+#                   (die Freigabe ist nicht erreichbar, wenn einer dieser Schritte fehlt).
+# offen             bekannter Verstoss, den ein anderes Paket behebt: das Tor meldet ihn als Warnung; ist er behoben, meldet
+#                   das Tor den Eintrag als überholt (Fehler), damit «offen» gestrichen wird.
+regeln:
+  - { id: GR-00, art: erarbeitung }
+  # Volle Folgenabschätzung: Freigabe durch die Geschäftsleitung erst nach Beschreibung der Betroffenen, Abwägung von Nutzen
+  # und Schaden und Massnahmen (D-08 Abschnitt Durchführung); der Kurzweg mit erreichter Schwelle springt zurück (A3-11).
+  - { id: GR-01, art: voraus, prozess: PR-09, freigabe: [PR-09.09], voraus: [PR-09.03, PR-09.04, PR-09.05] }
+  # Kurzprüfung: Freigabe durch die AIMS-Verantwortung erst nach Kurzprüfung und Rückprüfung gegen die Schwelle aus D-06.
+  - { id: GR-02, art: voraus, prozess: PR-09, freigabe: [PR-09.06], voraus: [PR-09.01, PR-09.10, PR-09.08] }
+  # Behandlungsplan und Restrisiko: Freigabe und Annahme durch die Geschäftsleitung erst nach Bewertung, Behandlung und
+  # Bewertung des Restrisikos (D-06; M4-32).
+  - { id: GR-03, art: voraus, prozess: PR-08, freigabe: [PR-08.07], voraus: [PR-08.03, PR-08.04, PR-08.05] }
+  # Einführung eines KI-Systems: Freigabe erst nach Anbieterprüfung, Abnahmekriterien und Test mit eigenen Fällen (D-12).
+  - { id: GR-04, art: voraus, prozess: PR-11, freigabe: [PR-11.06, PR-11.09], voraus: [PR-11.02, PR-11.03, PR-11.04] }
+  # Neues KI-Werkzeug: Freigabe durch die Geschäftsleitung (hohes Risiko) erst nach Beurteilung von Risiko und Folgen.
+  # Ohne vertiefte Prüfung entscheidet die AIMS-Verantwortung; der Zweig zur Geschäftsleitung folgt nur auf PR-07.04 (P14).
+  - { id: GR-05, art: voraus, prozess: PR-07, freigabe: [PR-07.10], voraus: [PR-07.04] }
+  # Neues KI-Werkzeug, beide Freigaben (auch der Zweig ohne vertiefte Prüfung): erst nach Prüfung nach den Freigabekriterien
+  # (Lieferant, Daten, Kurzprüfung der Folgen, Risikoeintrag; PR-07.02) und Test mit eigenen Fällen (PR-07.11; D-15, D-08,
+  # D-12; M4-33).
+  - { id: GR-06, art: voraus, prozess: PR-07, freigabe: [PR-07.05, PR-07.10], voraus: [PR-07.02, PR-07.11] }

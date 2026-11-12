@@ -1,0 +1,117 @@
+# D-09 Folgenabschätzung für ein KI-System
+hinweis_umfang: "Eine Datei je KI-System. Ergibt Teil A «nein», Begründung eintragen und in Teil C freigeben."
+teil_a: "A Kurzprüfung"
+teil_b: "B Vollständige Folgenabschätzung"
+teil_c: "C Ergebnis und Freigabe"
+kopf:
+  system: KI-System
+  eigner: Eigner/in
+  fachbereich: Fachbereich
+  typ: Art des Systems
+triage_kopf: [Nr., Frage, Antwort]
+triage_ergebnis:
+  voll: "Vollständige Abschätzung nötig"
+  begruendung: Begründung
+  durch: Kurzprüfung durch, am
+hinweis_teil_b: "Nur ausfüllen, wenn Teil A oder die Rückprüfung nach der Risikobeurteilung (D-06, D-08) eine vollständige Abschätzung verlangt. Stichworte genügen."
+b:
+  beschreibung: Systembeschreibung
+  zweck: Zweck, Verwendungen und Fehlanwendungen
+  daten: Daten
+  modell: Modell
+  umfeld: Einsatzumfeld
+  betroffene: Betroffene Parteien
+  nutzen: Nutzen und Schaden
+  gesellschaft: Gesellschaft und Umwelt
+  ausfaelle: Ausfälle und Missbrauch
+  massnahmen: Massnahmen
+felder:
+  zweck: Zweck
+  verwendungen: Beabsichtigte Verwendungen
+  fehlanwendungen: Vorhersehbare Fehlanwendungen
+  modell_typ: Modell, Version, Anbieter
+  modell_training: Herkunft der Trainingsdaten
+  modell_training_eigen: Daten für das eigene Training
+  modell_grundmodell: Trainingsdaten des Grundmodells
+  modell_grenzen: Bekannte Grenzen
+  modell_tests: Tests und Kennzahlen
+hinweis_beschreibung: "Was macht das System, wer nutzt es, wie fliessen Eingaben und Ergebnisse? Drei bis fünf Sätze."
+hinweis_zweck: "Fehlanwendungen sind Nutzungen, die nicht vorgesehen, aber naheliegend sind, z. B. ein Textassistent, der für Rechtsauskünfte verwendet wird."
+hinweis_daten: "Welche Daten gehen ein, welche entstehen? Herkunft, Personendaten, Qualität. Als Betreiber kennen Sie Trainingsdaten oft nicht: Fragen Sie den Lieferanten an und halten Sie Datum und Antwort fest."
+daten_lieferant: "beim Lieferanten angefragt am TT.MM.JJJJ"
+grundmodell_ohne_training: "Wir trainieren das Modell nicht selbst. Trainingsdaten und Tests des Modells nach Angaben des Anbieters"
+grundmodell_nachtraining: "Das Grundmodell stammt vom Anbieter; Trainingsdaten und Tests nach dessen Angaben"
+grundmodell_anbieter: ": {anbieter}"
+ausbau_modell: "Nur bei Eigenentwicklung oder wenn der Lieferant die Angaben liefert."
+hinweis_umfeld: "Wo und unter welchen Bedingungen läuft das System? Länder, Sprachen, Nutzergruppen, Arbeitsablauf, Grad der menschlichen Prüfung."
+betroffene_kopf: [Gruppe, "direkt/indirekt", Wirkung, Konsultiert]
+betroffene_art:
+  direkt: direkt
+  indirekt: indirekt
+hinweis_betroffene: "Direkt betroffen ist, wer das System nutzt oder über wen es Ergebnisse liefert. Indirekt betroffen sind z. B. Angehörige, Kundschaft der Kundschaft oder die Öffentlichkeit. Halten Sie fest, ob und wie Sie die Gruppe angehört haben."
+nutzen_kopf: [Ziel, Nutzen, Schaden, "Ausmass ({skala})"]
+hinweis_nutzen: "Je Ziel: Was verbessert das System, was kann es verschlechtern? Ausmass vor Massnahmen mit der Skala aus D-06; nicht relevante Ziele mit «nicht betroffen» und Begründung."
+ziele:
+  rechenschaft:
+    name: Rechenschaft
+    frage: "Ist klar, wer für Ergebnisse und Fehler einsteht und wo sich Betroffene beschweren können? Können Betroffene eine Prüfung durch einen Menschen verlangen?"
+  transparenz:
+    name: Transparenz
+    frage: "Wissen Nutzende und Betroffene, dass KI mitwirkt und wofür?"
+  fairness:
+    name: Fairness
+    frage: "Werden Personen oder Gruppen ohne sachlichen Grund unterschiedlich behandelt?"
+  datenschutz:
+    name: Datenschutz
+    frage: "Werden Personendaten nur im nötigen Umfang und rechtmässig bearbeitet?"
+  zuverlaessigkeit:
+    name: Zuverlässigkeit
+    frage: "Liefert das System auch bei ungewohnten Fällen und auch nach Updates des Anbieters brauchbare Ergebnisse?"
+  sicherheit:
+    name: Sicherheit
+    frage: "(1) Kann ein Fehler oder Ausfall Menschen gefährden, und fällt das System dann sicher aus? (2) Hält das System Angriffen und Missbrauch stand, und erholt es sich nach einer Störung?"
+  erklaerbarkeit:
+    name: Erklärbarkeit
+    frage: "Lässt sich ein einzelnes Ergebnis so begründen, dass Betroffene es verstehen? Können Nutzende das Ergebnis im Zusammenhang richtig deuten (was es aussagt und was nicht)?"
+  umwelt:
+    name: Umwelt
+    frage: "Stehen Energie- und Ressourcenverbrauch in einem vernünftigen Verhältnis zum Nutzen?"
+hinweis_gesellschaft: "Wirkt das System über die direkt Betroffenen hinaus, etwa auf Arbeitsplätze, den Zugang zu Leistungen, die Verbreitung von Falschinformation oder die Umwelt? Bei kleinen internen Systemen genügt ein begründeter Satz."
+hinweis_ausfaelle: "Was geschieht bei falschem Ergebnis, Ausfall, Update oder Missbrauch? Wer merkt es, und wie wird reagiert?"
+hinweis_massnahmen: "Nennen Sie die Massnahmen mit Verweis auf den Behandlungsplan (D-07), z. B. M-003 menschliche Prüfung vor Versand."
+c:
+  ergebnis: Ergebnis und Entscheid
+  eingeschraenkt: Eingeschränkte Nutzung, Auflagen
+  dsfa: Verknüpfte DSFA, FRIA oder andere Abschätzungen
+  naechste: Nächste Überprüfung
+  freigabe_durch: Freigegeben durch
+  freigabe_am: Freigegeben am
+  unterschrift_erste_fassung: "Unterschriften zur ersten Fassung. Die geltende Fassung ist bei den Neubeurteilungen unterschrieben."
+hinweis_ergebnis: "Entscheid: einsetzen wie geplant, einsetzen mit Auflagen oder nicht einsetzen. Nennen Sie den grössten verbleibenden Schaden und sein Ausmass."
+platzhalter_entscheid: "einsetzen wie geplant / mit Auflagen / nicht einsetzen"
+platzhalter_dsfa: "keine / DSFA Nr. / FRIA Nr."
+fria_ref: "Grundrechte-Folgenabschätzung {ref} (E-06)"
+fria_nicht_noetig: "keine Grundrechte-Folgenabschätzung nötig (E-06)"
+neubeurteilung:
+  titel: Neubeurteilungen
+  kopf: [Datum, Durchgeführt von, Anlass, Ergebnis, Freigabe]
+  hinweis: "Nach der ersten Freigabe tragen Sie jede Neubeurteilung als eigene Zeile ein (8.4): Datum, wer sie gemacht hat, Anlass (z. B. Nachtraining, Modell- oder Anbieterwechsel, Vorfall), Ergebnis und Freigabe nach D-08. Die Tabelle ist die Datenquelle der Kennzahlen PR-09 und PR-13 im Messplan (D-05)."
+  platzhalter: [TT.MM.JJJJ, Name, Anlass, "unverändert / angepasst", "Name, Datum"]
+# Prüfraster verletzliche Gruppen, Einsatzentscheid und Mitwirkende
+hinweis_verletzliche: "Prüfen Sie verletzliche Gruppen: Kinder, ältere Menschen, Menschen mit Behinderung, finanzielle Notlage, geringe digitale oder sprachliche Kompetenz, Abhängige wie Mitarbeitende."
+hinweis_einsatz: "Nutzen, geprüfte Lösung ohne KI, Nachkontrolle und Mitwirkende festhalten."
+einsatz:
+  titel: Einsatzentscheid und Mitwirkende
+  nutzen: Erwarteter Nutzen
+  alternative: "Lösung ohne KI und warum sie nicht genügt"
+  wiedervorlage: "Wiedervorlage (Nutzen nachkontrollieren)"
+  mitgewirkt: Mitgewirkt haben
+  verweis: "Einsatzentscheid und Mitwirkende: siehe Anlage 1."
+# Modul NIST AI RMF: Vertrauensmerkmale und Zielkonflikte (RMF-01)
+nist:
+  praefix_leer: "Nur mit Modul NIST AI RMF:"
+  praefix: "NIST AI RMF:"
+  verweis_leer: "Die drei bis vier wichtigsten Vertrauensmerkmale dieses Systems und die entschiedenen Zielkonflikte (RMF-01) stehen im Mess- und Prüfkonzept (N-03); dort sind die Ziele aus Teil B den sieben Merkmalen des AI RMF zugeordnet."
+  verweis: "Wichtigste Vertrauensmerkmale, Zielkonflikte und Prüfungen dieses Systems stehen im Mess- und Prüfkonzept (N-03)."
+  merkmale: "Wichtigste Vertrauensmerkmale: {merkmale}.{konflikte} Prüfungen im Mess- und Prüfkonzept (N-03)."
+  konflikte: "Zielkonflikte: {text}."

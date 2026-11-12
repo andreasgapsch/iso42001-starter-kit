@@ -1,0 +1,553 @@
+{
+  "stand": "2026-11-07",
+  "hinweis": "Je Modul (Muster unter src/) die Testebene und die Tests, die es prüfen (AF-049). Tor G39 (scripts/pruefen/testebenen.mts) prüft die Liste gegen die Quelldateien und, mit Abdeckungsbericht, die Kernlogik (AF-048). Ebenen: unit (tests/unit), dokument (tests/dokumente, LibreOffice), e2e (tests/e2e, Browser), fuzz (tests/fuzz).",
+  "schwellen": {
+    "kernZeilen": 90,
+    "kernVerzweigungen": 80,
+    "untergrenze": 60
+  },
+  "kern": [
+    "src/app/zustand/store.ts",
+    "src/app/zustand/kern.ts",
+    "src/app/logik/prozesse.ts",
+    "src/app/logik/logo.ts",
+    "src/model/migrationen.ts"
+  ],
+  "ausnahmen": [
+    {
+      "datei": "src/app/Fehler.tsx",
+      "grund": "Nur der FehlerDialog (Oberfläche, Zeilen 59 bis 81) ist ungetestet und läuft im Browser; meldeFehler, fehlerbericht, stapelOhnePfad und installiereFehlerbehandlung sind unit-getestet"
+    },
+    {
+      "datei": "src/app/ansichten/gefuehrt/aktionen.ts",
+      "grund": "Schreibaktionen des Guides, vom parallelen Paket P7 (AF-009, Abhängigkeitsanzeige) gerade geändert; der Test dazu folgt mit P7 in tests/unit/integritaet.test.ts"
+    },
+    {
+      "datei": "src/app/daten.ts",
+      "grund": "Datenblöcke werden aus dem Browserdokument gelesen (document.getElementById); die Logik lazyBloecke ist unit-getestet"
+    },
+    {
+      "datei": "src/beispiele/bau/bauen.mts",
+      "grund": "Bauskript der Beispielprojekte, läuft im Build (scripts/beispiele.mts); sein Ergebnis prüfen beispiele.test.ts und die Audit-Tests"
+    },
+    {
+      "datei": "src/beispiele/bau/datumspruefung.mts",
+      "grund": "Bauskript der Beispielprojekte, läuft im Build (scripts/beispiele.mts); sein Ergebnis prüfen beispiele.test.ts und die Audit-Tests"
+    },
+    {
+      "datei": "src/beispiele/bau/englisch.mts",
+      "grund": "Bauskript der Beispielprojekte, läuft im Build (scripts/beispiele.mts); sein Ergebnis prüfen beispiele.test.ts und die Audit-Tests"
+    },
+    {
+      "datei": "src/beispiele/bau/gemeinsam.mts",
+      "grund": "Bauskript der Beispielprojekte, läuft im Build (scripts/beispiele.mts); sein Ergebnis prüfen beispiele.test.ts und die Audit-Tests"
+    },
+    {
+      "datei": "src/beispiele/bau/muster-1.mts",
+      "grund": "Bauskript der Beispielprojekte, läuft im Build (scripts/beispiele.mts); sein Ergebnis prüfen beispiele.test.ts und die Audit-Tests"
+    },
+    {
+      "datei": "src/beispiele/bau/muster-3.mts",
+      "grund": "Bauskript der Beispielprojekte, läuft im Build (scripts/beispiele.mts); sein Ergebnis prüfen beispiele.test.ts und die Audit-Tests"
+    },
+    {
+      "datei": "src/beispiele/bau/muster-4.mts",
+      "grund": "Bauskript der Beispielprojekte, läuft im Build (scripts/beispiele.mts); sein Ergebnis prüfen beispiele.test.ts und die Audit-Tests"
+    },
+    {
+      "datei": "src/beispiele/bau/muster-5.mts",
+      "grund": "Bauskript der Beispielprojekte, läuft im Build (scripts/beispiele.mts); sein Ergebnis prüfen beispiele.test.ts und die Audit-Tests"
+    },
+    {
+      "datei": "src/beispiele/bau/muster.mts",
+      "grund": "Bauskript der Beispielprojekte, läuft im Build (scripts/beispiele.mts); sein Ergebnis prüfen beispiele.test.ts und die Audit-Tests"
+    },
+    {
+      "datei": "src/beispiele/bau/praezision-2.mts",
+      "grund": "Bauskript der Beispielprojekte, läuft im Build (scripts/beispiele.mts); sein Ergebnis prüfen beispiele.test.ts und die Audit-Tests"
+    },
+    {
+      "datei": "src/beispiele/bau/praezision-3.mts",
+      "grund": "Bauskript der Beispielprojekte, läuft im Build (scripts/beispiele.mts); sein Ergebnis prüfen beispiele.test.ts und die Audit-Tests"
+    },
+    {
+      "datei": "src/beispiele/bau/praezision.mts",
+      "grund": "Bauskript der Beispielprojekte, läuft im Build (scripts/beispiele.mts); sein Ergebnis prüfen beispiele.test.ts und die Audit-Tests"
+    },
+    {
+      "datei": "src/beispiele/bau/prozesse.mts",
+      "grund": "Bauskript der Beispielprojekte, läuft im Build (scripts/beispiele.mts); sein Ergebnis prüfen beispiele.test.ts und die Audit-Tests"
+    },
+    {
+      "datei": "src/beispiele/bau/rc3.mts",
+      "grund": "Bauskript der Beispielprojekte, läuft im Build (scripts/beispiele.mts); sein Ergebnis prüfen beispiele.test.ts und die Audit-Tests"
+    }
+  ],
+  "module": [
+    {
+      "muster": "src/app/zustand/**",
+      "ebenen": [
+        "unit",
+        "fuzz"
+      ],
+      "tests": [
+        "tests/unit/zustand-store.test.ts",
+        "tests/unit/fehlerpfade.test.ts",
+        "tests/fuzz/pflichtteil.test.ts"
+      ]
+    },
+    {
+      "muster": "src/app/speicher/**",
+      "ebenen": [
+        "unit"
+      ],
+      "tests": [
+        "tests/unit/speicher-anwender-nacharbeit.test.ts",
+        "tests/unit/speicher-anwender.test.ts",
+        "tests/unit/speicher.test.ts",
+        "tests/unit/speicher-adapter.test.ts",
+        "tests/unit/fehlerpfade.test.ts"
+      ]
+    },
+    {
+      "muster": "src/app/import/**",
+      "ebenen": [
+        "unit",
+        "fuzz"
+      ],
+      "tests": [
+        "tests/unit/speicher-anwender.test.ts",
+        "tests/unit/app-logik.test.ts",
+        "tests/unit/teilimport-migration.test.ts",
+        "tests/unit/fehlerpfade.test.ts",
+        "tests/fuzz/pflichtteil.test.ts"
+      ]
+    },
+    {
+      "muster": "src/app/worker/client.ts",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/aims-manager.e2e.ts",
+        "tests/e2e/app/bibliothek.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/worker/einstieg.ts",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/aims-manager.e2e.ts",
+        "tests/e2e/app/bibliothek.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/worker/start.ts",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/aims-manager.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/worker/**",
+      "ebenen": [
+        "unit"
+      ],
+      "tests": [
+        "tests/unit/runde1-cde.test.ts",
+        "tests/unit/fehlerpfade.test.ts",
+        "tests/unit/fehlertexte.test.ts"
+      ]
+    },
+    {
+      "muster": "src/app/logik/**",
+      "ebenen": [
+        "unit"
+      ],
+      "tests": [
+        "tests/unit/app-logik.test.ts",
+        "tests/unit/app-prozesse-aktionen.test.ts",
+        "tests/unit/app-logo-import.test.ts",
+        "tests/unit/integritaet.test.ts",
+        "tests/unit/modell-folgen.test.ts"
+      ]
+    },
+    {
+      "muster": "src/app/ui/*.tsx",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/aims-manager.e2e.ts",
+        "tests/e2e/app/breite.e2e.ts",
+        "tests/e2e/abnahme/hell-dunkel.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/ui/beschaeftigt.ts",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/beschaeftigt.e2e.ts",
+        "tests/e2e/app/downloads.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/ui/fokus-halten.ts",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/beschaeftigt.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/ui/rollbereiche.ts",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/aims-manager.e2e.ts",
+        "tests/e2e/app/breite.e2e.ts",
+        "tests/e2e/abnahme/hell-dunkel.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/rahmen/*.tsx",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/speicher-anwender.e2e.ts",
+        "tests/e2e/app/rahmen-rc12.e2e.ts",
+        "tests/e2e/app/navigation.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/rahmen/blatt.ts",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/rahmen-rc12.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/rahmen/**",
+      "ebenen": [
+        "unit"
+      ],
+      "tests": [
+        "tests/unit/speicher-anwender-nacharbeit.test.ts",
+        "tests/unit/speicher-anwender.test.ts",
+        "tests/unit/rahmen.test.ts",
+        "tests/unit/rahmen-rc12.test.ts",
+        "tests/unit/rahmen-speichern.test.ts",
+        "tests/unit/rahmen-suche-i18n.test.ts"
+      ]
+    },
+    {
+      "muster": "src/app/normtexte/pdf.ts",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/normtexte.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/normtexte/*.tsx",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/normtexte.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/normtexte/**",
+      "ebenen": [
+        "unit",
+        "e2e"
+      ],
+      "tests": [
+        "tests/unit/normtexte-lokal.test.ts",
+        "tests/e2e/app/normtexte.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/ansichten/**/*.tsx",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/aims-manager.e2e.ts",
+        "tests/e2e/app/gefuehrt-ueberblick.e2e.ts",
+        "tests/e2e/abnahme/gefuehrt-volldurchlauf.e2e.ts",
+        "tests/e2e/app/bibliothek.e2e.ts",
+        "tests/e2e/app/prozesse.e2e.ts",
+        "tests/e2e/app/gestaltung.e2e.ts",
+        "tests/e2e/app/normtexte.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/ansichten/bibliothek/idb.ts",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/bibliothek.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/ansichten/bibliothek/zustand.ts",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/bibliothek.e2e.ts",
+        "tests/e2e/app/runde2-bib.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/ansichten/**",
+      "ebenen": [
+        "unit",
+        "e2e"
+      ],
+      "tests": [
+        "tests/unit/stimmigkeit.test.ts",
+        "tests/unit/gefuehrt.test.ts",
+        "tests/e2e/app/aims-manager.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/App.tsx",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/aims-manager.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/main.tsx",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/aims-manager.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/Fehler.tsx",
+      "ebenen": [
+        "unit",
+        "e2e"
+      ],
+      "tests": [
+        "tests/unit/fehlertexte.test.ts",
+        "tests/e2e/app/aims-manager.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/app/*",
+      "ebenen": [
+        "unit",
+        "e2e"
+      ],
+      "tests": [
+        "tests/unit/rahmen-suche-i18n.test.ts",
+        "tests/unit/app-logik.test.ts",
+        "tests/e2e/app/aims-manager.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/beispiele/bau/**",
+      "ebenen": [
+        "unit"
+      ],
+      "tests": [
+        "tests/unit/beispiele.test.ts",
+        "tests/unit/audit-befunde-r4.test.ts"
+      ]
+    },
+    {
+      "muster": "src/bibliothek/**",
+      "ebenen": [
+        "unit",
+        "fuzz"
+      ],
+      "tests": [
+        "tests/unit/bibliothek.test.ts",
+        "tests/fuzz/pflichtteil.test.ts"
+      ]
+    },
+    {
+      "muster": "src/generator/worker.ts",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/aims-manager.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/generator/**",
+      "ebenen": [
+        "unit",
+        "dokument"
+      ],
+      "tests": [
+        "tests/unit/generator.test.ts",
+        "tests/dokumente/libreoffice.test.ts"
+      ]
+    },
+    {
+      "muster": "src/grafik/preact/*.tsx",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/grafik.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/grafik/**",
+      "ebenen": [
+        "unit"
+      ],
+      "tests": [
+        "tests/unit/grafik-daten.test.ts",
+        "tests/unit/grafik-darstellung.test.ts",
+        "tests/unit/generator-grafik.test.ts"
+      ]
+    },
+    {
+      "muster": "src/i18n/**",
+      "ebenen": [
+        "unit"
+      ],
+      "tests": [
+        "tests/unit/sprachgleichheit.test.ts",
+        "tests/unit/pruefen-i18n.test.ts"
+      ]
+    },
+    {
+      "muster": "src/kataloge/**",
+      "ebenen": [
+        "unit"
+      ],
+      "tests": [
+        "tests/unit/katalog-27001.test.ts",
+        "tests/unit/katalog-aiact.test.ts"
+      ]
+    },
+    {
+      "muster": "src/model/**",
+      "ebenen": [
+        "unit",
+        "fuzz"
+      ],
+      "tests": [
+        "tests/unit/migration.test.ts",
+        "tests/unit/app-logik.test.ts",
+        "tests/fuzz/pflichtteil.test.ts",
+        "tests/unit/integritaet.test.ts"
+      ]
+    },
+    {
+      "muster": "src/nist-rmf/**",
+      "ebenen": [
+        "unit"
+      ],
+      "tests": [
+        "tests/unit/katalog-nist.test.ts",
+        "tests/unit/werkzeug-nist.test.ts"
+      ]
+    },
+    {
+      "muster": "src/normtexte/pdf-bild.ts",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/normtexte.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/normtexte/pdf-worker.ts",
+      "ebenen": [
+        "e2e"
+      ],
+      "tests": [
+        "tests/e2e/app/normtexte.e2e.ts"
+      ]
+    },
+    {
+      "muster": "src/normtexte/**",
+      "ebenen": [
+        "unit",
+        "fuzz"
+      ],
+      "tests": [
+        "tests/unit/speicher-anwender.test.ts",
+        "tests/unit/normtexte-parser.test.ts",
+        "tests/unit/normtexte-generator.test.ts",
+        "tests/fuzz/pflichtteil.test.ts"
+      ]
+    },
+    {
+      "muster": "src/prozesse/**",
+      "ebenen": [
+        "unit",
+        "dokument"
+      ],
+      "tests": [
+        "tests/unit/prozesse.test.ts",
+        "tests/unit/prozesse-katalog.test.ts",
+        "tests/dokumente/prozesse-libreoffice.test.ts"
+      ]
+    },
+    {
+      "muster": "src/regeln/**",
+      "ebenen": [
+        "unit"
+      ],
+      "tests": [
+        "tests/unit/regeln.test.ts",
+        "tests/unit/stimmigkeit.test.ts"
+      ]
+    },
+    {
+      "muster": "src/vorlagen/**",
+      "ebenen": [
+        "unit",
+        "dokument"
+      ],
+      "tests": [
+        "tests/unit/vorlagen.test.ts",
+        "tests/unit/vorlagen-g1.test.ts",
+        "tests/dokumente/libreoffice.test.ts"
+      ]
+    },
+    {
+      "muster": "src/eingang/**",
+      "ebenen": [
+        "unit",
+        "fuzz"
+      ],
+      "tests": [
+        "tests/unit/speicher-anwender.test.ts",
+        "tests/unit/eingang.test.ts",
+        "tests/fuzz/klassen.test.ts",
+        "tests/fuzz/abnahme-q9.test.ts"
+      ]
+    }
+  ]
+}

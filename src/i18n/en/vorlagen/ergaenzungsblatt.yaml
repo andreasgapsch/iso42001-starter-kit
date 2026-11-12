@@ -1,0 +1,17 @@
+# Frame for all supplementary sheets D-xx-EB (content: ergaenzungsblaetter.yaml)
+einleitung: "This sheet extends the existing ISMS document ‘{isms}’ with the content that the AI management system to ISO/IEC 42001 requires. Add the sections to the ISMS document and adapt terms and numbering. The corresponding kit template is {vorlage} {titel}."
+einleitung_firma: "At {firma}, this sheet extends the ISMS document ‘{isms}’ with the content for the AI management system to ISO/IEC 42001. The sections form part of that document."
+felder:
+  isms_dokument: ISMS document extended
+  isms_version: "Included in (document, version)"
+  normbezug: ISO/IEC 42001 reference
+  iso27001: Related ISO/IEC 27001 controls
+  keine: none
+abschnitte_titel: Sections to add
+hinweis_abschnitt: "For each section, check whether your ISMS document already covers the content. If so, a cross-reference is enough; otherwise, adopt the text and adapt it."
+uebernahme_titel: Adoption into the ISMS document
+uebernahme_text: "The sections have been added to the ISMS document and approved together with it."
+uebernahme_felder:
+  version: "Added to (document, version)"
+  datum: "Approved on"
+  durch: "Approved by"

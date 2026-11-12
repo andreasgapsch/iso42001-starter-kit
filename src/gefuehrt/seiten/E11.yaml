@@ -1,0 +1,169 @@
+# Etappe E11 Ziele, Messung, Dokumentenlenkung. Format: src/gefuehrt/FORMAT.md
+seiten:
+  - { id: E11-einfuehrung, typ: info, norm: "6.2, 6.3, 7.5, 9.1", vorlage: D-05, leitfaden: 8 }
+  - id: E11-ziele
+    typ: liste
+    mindestensEiner: true
+    liste: ziele
+    norm: "6.2"
+    vorlage: D-05
+    leitfaden: 8
+    beispiel: ziele[0]
+    felder:
+      - { pfad: ziel, typ: text, pflicht: true }
+      - { pfad: kiSysteme, typ: verweis, quelle: kiSysteme }
+      - { pfad: bezugLeitlinie, typ: text }
+      - { pfad: kennzahl, typ: text, pflicht: true }
+      - { pfad: sollwert, typ: text, pflicht: true }
+      - { pfad: massnahmen, typ: textarea }
+      - { pfad: verantwortlich, typ: person, pflicht: true }
+      - { pfad: termin, typ: datum, pflicht: true }
+      - { pfad: ressourcen, typ: text }
+      - { pfad: status, typ: auswahl, optionen: zielStatus }
+  - id: E11-messplan
+    typ: liste
+    liste: ziele
+    norm: "9.1"
+    vorlage: D-05
+    leitfaden: 8
+    anlegen: false
+    beispiel: ziele[0]
+    felder:
+      - { pfad: messmethode, typ: textarea, pflicht: true }
+      - { pfad: haeufigkeit, typ: auswahl, optionen: rhythmus, pflicht: true }
+      - { pfad: werMisst, typ: person }
+      - { pfad: bewertung, typ: text, pflicht: true }
+      - { pfad: auswertungWann, typ: text }
+      - { pfad: werWertetAus, typ: person }
+      - { pfad: empfaenger, typ: text }
+  - id: E11-nicht-gemessen
+    typ: formular
+    norm: "9.1"
+    vorlage: D-05
+    leitfaden: 8
+    beispiel: organisation.nichtGemessen
+    felder:
+      - pfad: organisation.nichtGemessen
+        typ: tabelle
+        spalten:
+          - { pfad: was, typ: text, pflicht: true }
+          - { pfad: begruendung, typ: textarea, pflicht: true }
+  - id: E11-messungen
+    typ: liste
+    liste: ziele
+    norm: "9.1"
+    vorlage: D-05
+    leitfaden: 9
+    anlegen: false
+    beispiel: ziele[0]
+    felder:
+      - pfad: messungen
+        typ: tabelle
+        spalten:
+          - { pfad: datum, typ: datum, pflicht: true }
+          - { pfad: wert, typ: text, pflicht: true }
+          - { pfad: sollErreicht, typ: auswahl, optionen: sollErreicht }
+          - { pfad: bemerkung, typ: text }
+  - id: E11-kennzahlen
+    typ: formular
+    norm: "9.1"
+    vorlage: D-05
+    leitfaden: 8
+    beispiel: kennzahlen
+    felder:
+      - pfad: kennzahlen
+        typ: tabelle
+        spalten:
+          - { pfad: id, typ: text, pflicht: true }
+          - { pfad: kennzahl, typ: text }
+          - { pfad: messmethode, typ: textarea }
+          - { pfad: haeufigkeit, typ: auswahl, optionen: rhythmus }
+          - { pfad: werMisst, typ: person }
+          - { pfad: auswertungWann, typ: text }
+          - { pfad: werWertetAus, typ: person }
+          - { pfad: empfaenger, typ: text }
+      - pfad: kennzahlMessungen
+        typ: tabelle
+        spalten:
+          - { pfad: kennzahl, typ: text, pflicht: true }
+          - { pfad: datum, typ: datum, pflicht: true }
+          - { pfad: wert, typ: text, pflicht: true }
+          - { pfad: zaehler, typ: zahl }
+          - { pfad: nenner, typ: zahl }
+          - { pfad: sollErreicht, typ: auswahl, optionen: sollErreicht }
+          - { pfad: keineMessung, typ: auswahl, optionen: keineMessung }
+          - { pfad: bemerkung, typ: text }
+  - id: E11-lenkung-isms
+    typ: formular
+    norm: "7.5"
+    vorlage: D-26
+    leitfaden: 8
+    wenn: { mitIsms: true }
+    beispiel: organisation.dokumentenlenkung
+    felder:
+      - { pfad: organisation.dokumentenlenkung.ismsRegelnGelten, typ: janein, pflicht: true }
+      - { pfad: organisation.dokumentenlenkung.ablage, typ: text, pflicht: true }
+      - { pfad: organisation.dokumentenlenkung.klassifikation, typ: text }
+      - pfad: organisation.dokumentenlenkung.externeDokumente
+        typ: tabelle
+        spalten:
+          - { pfad: dokument, typ: text, pflicht: true }
+          - { pfad: herausgeber, typ: text }
+          - { pfad: stand, typ: text }
+          - { pfad: ablage, typ: text }
+          - { pfad: zustaendig, typ: person }
+          - { pfad: naechstePruefung, typ: datum }
+  - id: E11-lenkung
+    typ: formular
+    norm: "7.5"
+    vorlage: D-26
+    leitfaden: 8
+    wenn: { mitIsms: false }
+    beispiel: organisation.dokumentenlenkung
+    felder:
+      - { pfad: organisation.dokumentenlenkung.ablage, typ: text, pflicht: true }
+      - { pfad: organisation.dokumentenlenkung.namensregel, typ: text }
+      - { pfad: organisation.dokumentenlenkung.freigabe, typ: auswahl, optionen: dokumentFreigabe, pflicht: true }
+      - { pfad: organisation.dokumentenlenkung.aufbewahrungJahre, typ: zahl }
+      - { pfad: organisation.dokumentenlenkung.extern, typ: textarea }
+      - { pfad: organisation.dokumentenlenkung.klassifikation, typ: text }
+      - pfad: organisation.dokumentenlenkung.externeDokumente
+        typ: tabelle
+        spalten:
+          - { pfad: dokument, typ: text, pflicht: true }
+          - { pfad: herausgeber, typ: text }
+          - { pfad: stand, typ: text }
+          - { pfad: ablage, typ: text }
+          - { pfad: zustaendig, typ: person }
+          - { pfad: naechstePruefung, typ: datum }
+  - id: E11-dokumente
+    typ: liste
+    liste: dokumente
+    norm: "7.5"
+    vorlage: D-26
+    leitfaden: 8
+    beispiel: dokumente[3]
+    felder:
+      - { pfad: id, typ: verweis, quelle: katalog-dokumente, pflicht: true }
+      - { pfad: version, typ: text, pflicht: true }
+      - { pfad: status, typ: auswahl, optionen: dokumentStatus, pflicht: true }
+      - { pfad: eigner, typ: person, pflicht: true }
+      - { pfad: geprueft, typ: freigabe }
+      - { pfad: freigabe, typ: freigabe }
+      - { pfad: bestaetigt, typ: freigabe }
+      - { pfad: aenderungen, typ: tabelle, spalten: [{ pfad: version, typ: text }, { pfad: datum, typ: datum }, { pfad: was, typ: text }, { pfad: von, typ: person }] }
+      - { pfad: ablageort, typ: text, pflicht: true }
+      - { pfad: klassifikation, typ: text }
+      - { pfad: aufbewahrung, typ: text }
+      - { pfad: naechsteUeberpruefung, typ: datum }
+      - { pfad: giltFuerIsms, typ: janein, wenn: { mitIsms: true } }
+      - { pfad: aufgenommenIn, typ: text, wenn: { mitIsms: true } }
+  - id: E11-aenderungen
+    typ: formular
+    norm: "6.3"
+    vorlage: D-26
+    leitfaden: 8
+    beispiel: meta.gefuehrt.antworten.aenderungen
+    felder:
+      - { pfad: meta.gefuehrt.antworten.aenderungen.weg, typ: auswahl, optionen: aenderungsweg, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.aenderungen.notiz, typ: textarea }

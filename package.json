@@ -1,0 +1,71 @@
+{
+  "name": "iso42001-starter-kit",
+  "version": "1.0.0",
+  "description": "ISO/IEC 42001 Starter-Kit für KMU von Andreas Gapsch, KMU-CIO: Leitfaden, Vorlagen, AIMS-Manager, Beispiele, KI-Assistent",
+  "license": "(CC-BY-4.0 AND MIT)",
+  "author": "Andreas Gapsch, KMU-CIO (https://kmu-cio.ch)",
+  "homepage": "https://kmu-cio.ch",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreasgapsch/iso42001-starter-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andreasgapsch/iso42001-starter-kit/issues"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage",
+    "test:e2e": "playwright test",
+    "fuzz": "scripts/werkzeug/begrenzt.sh 3G tsx tests/fuzz/cli.mts",
+    "abnahme:q9": "scripts/werkzeug/begrenzt.sh 3G tsx scripts/abnahme-q9.mts",
+    "kataloge": "tsx scripts/kataloge.mts",
+    "build:app": "npm run kataloge && npm run schema && tsx scripts/app-bauen.mts && tsx scripts/csp.mts --trusted-types aims-worker --schriften dist/app/aims-manager.html",
+    "build:kit": "tsx scripts/build.mts",
+    "pruefen": "tsx scripts/pruefen/alle.mts",
+    "pruefen:lokal": "tsx scripts/pruefen/alle.mts --lokal",
+    "pruefen:audit": "tsx scripts/pruefen/audit.mts --signaturen",
+    "pruefen:abdeckung": "tsx scripts/pruefen/ratsche.mts",
+    "pruefen:erwartungen": "tsx scripts/pruefen/erwartungen.mts",
+    "rot-gruen": "scripts/werkzeug/rot-gruen.sh",
+    "bildschirmfotos": "scripts/werkzeug/begrenzt.sh 3G tsx scripts/werkzeug/bildschirmfotos.mts",
+    "qr": "tsx scripts/qr.mts",
+    "schema": "tsx scripts/schema.mts",
+    "pruefen:release": "tsx scripts/pruefen/version.mts --release && tsx scripts/pruefen/rechtsstand.mts --release"
+  },
+  "dependencies": {
+    "@preact/signals": "2.11.3",
+    "docx": "9.12.0",
+    "exceljs": "4.4.0",
+    "fflate": "0.8.3",
+    "pdfjs-dist": "6.4.299",
+    "preact": "10.29.8"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "@types/markdown-it": "14.2.0",
+    "@types/node": "26.6.5",
+    "@types/qrcode": "1.5.6",
+    "@vitest/coverage-v8": "5.0.5",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "markdown-it": "15.0.3",
+    "qrcode": "1.5.4",
+    "ts-json-schema-generator": "2.9.0",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "vite": "8.3.4",
+    "vite-plugin-singlefile": "2.3.4",
+    "vitest": "5.0.5",
+    "yaml": "2.9.1"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

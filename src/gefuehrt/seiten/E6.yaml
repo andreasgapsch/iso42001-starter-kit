@@ -1,0 +1,109 @@
+# Etappe E6 Risiken und Chancen. Format: src/gefuehrt/FORMAT.md
+seiten:
+  - { id: E6-einfuehrung, typ: info, norm: "6.1.1, 6.1.2, 8.2", vorlage: D-06, leitfaden: 6 }
+  - id: E6-isms-skalen
+    typ: formular
+    norm: "6.1.2"
+    vorlage: D-06
+    leitfaden: 6
+    wenn: { mitIsms: true }
+    beispiel: organisation.risikokriterien
+    felder:
+      - { pfad: organisation.risikokriterien.ausIsmsUebernommen, typ: janein, pflicht: true }
+  - id: E6-zeitraum
+    typ: formular
+    norm: "6.1.1, 6.1.2"
+    vorlage: D-06
+    leitfaden: 6
+    beispiel: organisation.risikokriterien
+    felder:
+      - { pfad: organisation.risikokriterien.zeitraum, typ: auswahl, optionen: zeitraum, pflicht: true }
+  - id: E6-skalen
+    typ: formular
+    norm: "6.1.2"
+    vorlage: D-06
+    leitfaden: 6
+    beispiel: organisation.risikokriterien
+    felder:
+      - pfad: organisation.risikokriterien.wahrscheinlichkeit
+        typ: tabelle
+        pflicht: true
+        spalten:
+          - { pfad: stufe, typ: zahl, pflicht: true }
+          - { pfad: bezeichnung, typ: text, pflicht: true }
+          - { pfad: beschreibung, typ: textarea }
+      - pfad: organisation.risikokriterien.auswirkung
+        typ: tabelle
+        pflicht: true
+        spalten:
+          - { pfad: stufe, typ: zahl, pflicht: true }
+          - { pfad: bezeichnung, typ: text, pflicht: true }
+          - { pfad: beschreibung, typ: textarea }
+  - id: E6-akzeptanz
+    typ: formular
+    norm: "6.1.1"
+    vorlage: D-06
+    leitfaden: 6
+    beispiel: organisation.risikokriterien
+    felder:
+      - { pfad: organisation.risikokriterien.akzeptanzBis, typ: zahl, pflicht: true }
+      - { pfad: organisation.risikokriterien.unannehmbarAb, typ: zahl, pflicht: true }
+  - id: E6-register
+    typ: liste
+    mindestensEiner: true
+    liste: risiken
+    norm: "6.1.2, Anhang C"
+    vorlage: D-07
+    leitfaden: 6
+    filter: { art: [risiko] }
+    vorgabe: { art: risiko, status: offen }
+    beispiel: risiken[0]
+    felder:
+      - { pfad: titel, typ: text, pflicht: true }
+      - { pfad: kiSystem, typ: verweis, quelle: kiSysteme }
+      - { pfad: quelle, typ: auswahl, optionen: risikoquelle, pflicht: true }
+      - { pfad: ebenen, typ: mehrfach, optionen: ebene, pflicht: true }
+      - { pfad: ursache, typ: textarea }
+      - { pfad: folge, typ: textarea, pflicht: true }
+      - { pfad: bestehendeMassnahmen, typ: textarea }
+      - { pfad: eigner, typ: person, pflicht: true }
+      - { pfad: ismsRisiko, typ: text, wenn: { mitIsms: true } }
+  - { id: E6-genai, typ: vorschlaege, katalog: genaiRisiken, norm: "6.1.2, Anhang C", vorlage: D-07, leitfaden: 6, wenn: { generativ: true } }
+  - id: E6-bewertung
+    typ: liste
+    liste: risiken
+    norm: "6.1.2"
+    vorlage: D-07
+    leitfaden: 6
+    filter: { art: [risiko] }
+    anlegen: false
+    beispiel: risiken[0]
+    felder:
+      - { pfad: w, typ: zahl, skala: wahrscheinlichkeit, pflicht: true }
+      - { pfad: a, typ: zahl, skala: auswirkung, pflicht: true }
+      - { pfad: beurteiltAm, typ: datum }
+      - { pfad: erfasstAm, typ: datum }
+  - id: E6-chancen
+    typ: liste
+    liste: risiken
+    norm: "6.1.1"
+    vorlage: D-07
+    leitfaden: 6
+    filter: { art: [chance] }
+    vorgabe: { art: chance, behandlung: nutzen, status: offen }
+    beispiel: risiken[20]
+    felder:
+      - { pfad: titel, typ: text, pflicht: true }
+      - { pfad: kiSystem, typ: verweis, quelle: kiSysteme }
+      - { pfad: beschreibung, typ: textarea }
+      - { pfad: eigner, typ: person }
+      - { pfad: massnahmen, typ: verweis, quelle: massnahmen }
+  - id: E6-neubeurteilung
+    typ: formular
+    norm: "8.2"
+    vorlage: D-06
+    leitfaden: 6
+    beispiel: meta.gefuehrt.antworten.neubeurteilung
+    felder:
+      - { pfad: meta.gefuehrt.antworten.neubeurteilung.rhythmus, typ: auswahl, optionen: rhythmus, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.neubeurteilung.ausloeser, typ: mehrfach, optionen: neubeurteilung, pflicht: true }

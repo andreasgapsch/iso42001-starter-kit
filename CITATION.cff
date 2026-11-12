@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Wenn Sie das Kit zitieren, verwenden Sie bitte diese Angaben. / If you cite this kit, please use these details."
+type: software
+title: "ISO/IEC 42001 Starter-Kit für KMU"
+abstract: "Leitfaden, Word- und Excel-Vorlagen, AIMS-Manager (offline im Browser), Beispiele und KI-Assistent für den Aufbau eines KI-Managementsystems nach ISO/IEC 42001 in kleinen und mittleren Unternehmen. Enthält keinen Normtext."
+authors:
+  - family-names: Gapsch
+    given-names: Andreas
+    affiliation: KMU-CIO
+    website: "https://kmu-cio.ch"
+version: 1.0.0
+date-released: 2026-11-12
+license:
+  - CC-BY-4.0
+  - MIT
+url: "https://kmu-cio.ch"
+repository-code: "https://github.com/andreasgapsch/iso42001-starter-kit"
+keywords:
+  - ISO/IEC 42001
+  - AIMS
+  - KI-Managementsystem
+  - EU AI Act
+  - NIST AI RMF
+  - KMU

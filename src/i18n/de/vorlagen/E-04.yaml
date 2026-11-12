@@ -1,0 +1,46 @@
+# E-04 KI-Kompetenz der Mitarbeitenden
+hinweis_umfang: "Dieses Konzept hält fest, wie Sie die KI-Kompetenz fördern. Passen Sie Zielgruppen und Formen an Ihre KI-Systeme an. Zwei bis drei Seiten genügen; die Teilnahmen führen Sie in D-17."
+abschnitte:
+  wozu: Wozu dieses Konzept
+  zielgruppen: Zielgruppen und Bedarf
+  inhalte: Inhalte
+  formen: Formen
+  nachweis: Nachweis
+  verbindung: Verbindung zum AIMS
+wozu_text: "Wer KI-Systeme anbietet oder betreibt, ergreift nach {fs:4} Massnahmen, damit Mitarbeitende und weitere Personen, die in seinem Auftrag mit KI-Systemen arbeiten, die nötige KI-Kompetenz entwickeln können. Massgebend sind ihr Vorwissen, ihre Erfahrung und Ausbildung, der Einsatzkontext und die Personen, bei denen die Systeme eingesetzt werden."
+wozu_pflicht: "Die Pflicht gilt seit {frist:FRIST-02} und seit 27.07.2026 in der geänderten Fassung: Sie verlangt **Massnahmen zur Förderung**, aber **kein garantiertes Kompetenzniveau** einzelner Personen. Art. 4 steht nicht im Bussgeldkatalog von Art. 99(4); Verstösse können nur nach nationalem Recht geahndet werden ({fs:99(1)}). Kommission und Mitgliedstaaten unterstützen besonders KMU mit Beispielen (Art. 4(2))."
+hinweis_zielgruppen: "Streichen Sie Zielgruppen, die es bei Ihnen nicht gibt, und ergänzen Sie den Bedarf aus der Kompetenzmatrix (D-17, Blatt «Kompetenzbedarf»)."
+zielgruppen_kopf: [Zielgruppe, Was sie wissen und können sollen, Form, Häufigkeit, Nachweis]
+zielgruppen_zeilen:
+  - ["Alle Mitarbeitenden mit Zugang zu KI-Werkzeugen", "Was KI kann und nicht kann, Regeln der KI-Nutzung (D-15), Umgang mit vertraulichen Daten, Ergebnisse prüfen, Vorfälle melden", "Einführung, Merkblatt", "beim Eintritt, jährlich", "Teilnahmeliste, Quittung Richtlinie"]
+  - ["Nutzende eines bestimmten KI-Systems", "Zweck und Grenzen des Systems, Betriebsanleitung, typische Fehler, wann ein Mensch entscheidet", "Einweisung am System", "vor der Nutzung, bei grossen Updates", "Einweisungsprotokoll"]
+  - ["Personen mit menschlicher Aufsicht", "Ausgaben beurteilen, eingreifen und stoppen, Meldepflichten; bei Hochrisiko-Systemen Kompetenz, Ausbildung und Befugnis nach Art. 26(2)", "Schulung mit Übung", "vor der Übernahme, jährlich", "Schulungsnachweis, Ernennung (D-04)"]
+  - ["Geschäftsleitung und Führungskräfte", "Chancen und Risiken, Rollen nach AI Act, Pflichten des Unternehmens, Entscheide in der Managementbewertung", "Kurzworkshop", "jährlich", "Protokoll"]
+  - ["Entwicklung und IT (bei Eigenentwicklung)", "Daten, Tests, Protokollierung, Sicherheit, Dokumentation im Lebenszyklus (D-12, D-13)", "Fachschulung", "nach Bedarf", "Zertifikat, Kursnachweis"]
+  - ["Externe Personen im Auftrag", "Regeln der KI-Nutzung und Vertraulichkeit", "Merkblatt, Vertragsklausel", "bei Auftragsbeginn", "Bestätigung, Vertrag (D-16)"]
+systeme_text: "KI-Systeme im Betrieb oder Test, für die wir Nutzende einweisen:"
+inhalte_liste:
+  - "**Grundlagen:** was ein KI-System ist, wie es zu Ergebnissen kommt, typische Fehler wie erfundene Angaben oder Verzerrungen."
+  - "**Regeln im Unternehmen:** erlaubte und verbotene Nutzungen, freigegebene Werkzeuge, Umgang mit Personendaten, Geschäftsgeheimnissen und Kundendaten (D-15)."
+  - "**Ergebnisse prüfen:** Quellen nachprüfen, Plausibilität, wann ein Mensch entscheiden muss."
+  - "**Melden:** Fehler, Vorfälle und Schatten-KI über den Meldeweg melden (D-04, D-14)."
+  - "**Systemspezifisch:** Zweck, Grenzen und Betriebsanleitung je System, besonders bei menschlicher Aufsicht."
+  - "**AI Act in Grundzügen** für Verantwortliche: Rolle, Risikoklasse, Transparenz, Meldepflichten (E-01 bis E-09)."
+formen_liste:
+  - "Einführung beim Eintritt und bei der Freigabe eines neuen Werkzeugs (15 bis 30 Minuten)."
+  - "Merkblatt oder Kurzvideo zu den Regeln der KI-Nutzung."
+  - "Einweisung am System durch die Eignerin oder den Eigner des Systems."
+  - "Übungen mit eigenen Beispielen, etwa Ergebnisse gemeinsam prüfen."
+  - "Jährliche Auffrischung mit Änderungen und Vorfällen aus dem eigenen Betrieb."
+nachweis_isms: "Teilnahmen je Person mit Datum und Inhalt im bestehenden Schulungsnachweis mit dem Thema «KI» (D-17)."
+nachweis_liste:
+  - "Teilnahmen je Person mit Datum und Inhalt im Blatt «Schulungen» von D-17."
+  - "Unterlagen und Version der Schulung aufbewahren (Lenkung nach D-26)."
+  - "Wirksamkeit prüfen, etwa mit Kurzfragen, Stichproben in der Praxis oder Auswertung von Meldungen (ISO/IEC 42001, 7.2)."
+  - "Stand der Massnahmen jährlich in der Managementbewertung berichten (D-21)."
+kompetenzen_text: "Massnahmen je Rolle; Anforderungen und Nachweise im Einzelnen in D-17:"
+kompetenzen_kopf: [ID, Rolle, Massnahme, Status]
+status: [offen, teilweise, erfüllt]
+verbindung_text: "Das Konzept erfüllt zugleich die Anforderungen an Kompetenz (7.2) und Bewusstsein (7.3) von ISO/IEC 42001 und das Zusatz-Control EUAIA-02. Den Kompetenzbedarf je Rolle, die Schulungen und die Kommunikation führen wir in D-17; dieses Dokument begründet, warum und wie wir schulen."
+juristisch: "Art. 4 ist knapp formuliert. Das Konzept zeigt eine angemessene Umsetzung, ist aber keine Rechtsberatung. Prüfen Sie die praktischen Beispiele der Kommission auf ihrer zentralen Informationsplattform (Art. 4(2))."
+juristisch_firma: "Art. 4 ist knapp formuliert. Das Konzept beschreibt unsere Umsetzung, ist aber keine Rechtsberatung. Die praktischen Beispiele der Kommission auf ihrer zentralen Informationsplattform (Art. 4(2)) ziehen wir bei der jährlichen Überprüfung bei."

@@ -1,0 +1,237 @@
+# Page texts for phase E3 AI policy, roles and reporting channels. Format: src/gefuehrt/FORMAT.md
+E3-einfuehrung:
+  titel: AI policy, roles and reporting channels
+  frage: Which principles apply to AI, who is responsible for what, and where do employees report concerns?
+  warum: The standard requires [[g:oberste-leitung|top management]] to take responsibility. This becomes visible in an approved [[g:ki-leitlinie|AI policy]], in assigned roles and in a reporting channel that works.
+  fehler: Policies that nobody knows about and roles the people concerned are unaware of are typical findings. Auditors ask employees directly whether they know the policy and whom they would tell about a problem.
+E3-grundsaetze:
+  titel: Principles of the AI policy
+  frage: Which principles guide how your organization develops, buys and uses AI?
+  warum: The principles are the core of the policy and the yardstick for all other rules. Five to eight short, clear sentences are enough. The specific rules for employees belong in the acceptable use policy D-15 (stage E9, page ‘Rules for employees’); start on it alongside the policy, as step 3 of the Guide suggests.
+  fehler: 'Policies that name products (‘We only use Copilot’) soon go out of date. Tools belong in the inventory and the acceptable use policy. Auditors expect principles that match your purpose.'
+  felder:
+    organisation.leitlinie.grundsaetze:
+      label: Principles
+      hilfe: One principle per line. Take over text snippets and adapt them.
+E3-elemente:
+  titel: What the policy must contain
+  frage: Does your policy contain the elements the standard expects?
+  warum: The standard requires four things of the policy, which you tick off here. If one is missing, the check reports an error.
+  fehler: What is most often missing is the commitment to continual improvement or the link to the AI objectives. Auditors look for the passages in the text.
+  felder:
+    meta.gefuehrt.antworten.leitlinie.elemente:
+      label: Elements included
+      hilfe: Template D-03 contains all four elements as text snippets.
+E3-andere-leitlinien:
+  titel: Link to other policies
+  frage: Which existing policies in your organization does AI touch?
+  warum: AI affects data protection, information security, HR and purchasing. Contradictions between policies confuse employees. You record whether you will adapt a policy or refer to it.
+  fehler: The new AI policy often contradicts the existing rule on using cloud services. Auditors ask to see the list of policies you have checked.
+  felder:
+    organisation.leitlinie.abgleich.informationssicherheit:
+      label: "Information security policy"
+      hilfe: "Amended, referring to the AI policy, or unchanged because it does not touch AI."
+    organisation.leitlinie.abgleich.datenschutz:
+      label: "Privacy notice and data protection policy"
+      hilfe: "Personal data in AI systems and the rights of data subjects."
+    organisation.leitlinie.abgleich.qualitaet:
+      label: "Quality policy"
+      hilfe: "Quality of results and products created with AI."
+    organisation.leitlinie.abgleich.personal:
+      label: "Staff regulations"
+      hilfe: "Use of AI by employees and monitoring at the workplace."
+    organisation.leitlinie.abgleichNotiz:
+      label: "Note on the review"
+      hilfe: "e.g. date of the review and where the references are."
+E3-ausnahmen:
+  titel: Exceptions and review
+  frage: How do you handle exceptions, and when do you review the policy?
+  warum: There will be cases where a rule does not fit. A clear route for exceptions stops rules from being quietly bypassed. A fixed review keeps the policy up to date.
+  fehler: Policies without a review date go out of date. Auditors expect a named person, a review cycle (usually yearly) and a note of the last review.
+  felder:
+    organisation.leitlinie.ausnahmeprozess:
+      label: Route for exceptions
+      hilfe: e.g. "The system owner requests exceptions in writing from the [[g:aims|AIMS]] lead; management decides; exceptions are valid for one year at most".
+    organisation.leitlinie.ausnahmeHoechstMonate:
+      label: Maximum validity of an exception (months)
+      hilfe: e.g. "6". The check reports exceptions that are valid for longer.
+    organisation.leitlinie.version:
+      label: Version
+      hilfe: e.g. "1.0".
+    organisation.leitlinie.naechsteUeberpruefung:
+      label: Next review
+      hilfe: Usually one year after approval.
+E3-leitlinie-freigabe:
+  titel: Approval and announcement
+  frage: Has management approved the policy, and when was it announced?
+  warum: The policy only applies once it is approved. The standard also requires it to be known within the organization and available to interested parties where needed.
+  fehler: A policy in a folder that nobody opens does not count as announced. Auditors want to see evidence, such as an intranet notice or a confirmation in the e-learning.
+  felder:
+    organisation.leitlinie.freigabe:
+      label: Approval
+      hilfe: Member of management and date.
+    organisation.leitlinie.kommuniziertAm:
+      label: Announced on
+      hilfe: Date of the notice to all employees.
+E3-isms:
+  titel: Roles and channels from the ISMS
+  frage: Which roles and processes from the [[g:isms]] do you want to extend to AI?
+  warum: With an ISMS, you already have roles, a security policy and a channel for reporting security events. You extend these in a [[g:ergaenzungsblatt|supplementary sheet]] instead of writing new documents.
+  fehler: Separate reporting channels for security and AI cause confusion. Auditors like to see one shared channel that explicitly mentions AI topics.
+  felder:
+    meta.gefuehrt.antworten.ismsFuehrung.rollenErgaenzen:
+      label: Add AI tasks to the ISMS roles
+      hilfe: Supplementary sheet D-04-EB instead of a separate role description.
+    meta.gefuehrt.antworten.ismsFuehrung.meldewegErgaenzen:
+      label: Extend the existing channel for security events to cover AI
+      hilfe: Also covers concerns about AI systems, not just security incidents.
+    meta.gefuehrt.antworten.ismsFuehrung.leitlinieVerweis:
+      label: Information security policy refers to the AI policy
+      hilfe: One sentence in the existing policy is enough.
+E3-pflichtrollen:
+  titel: Two mandatory roles
+  frage: Who makes sure the management system meets the standard, and who reports to management on its performance?
+  warum: The standard explicitly requires these two responsibilities. In an SME, one person often does both; what matters is that it is written down.
+  fehler: If these roles are missing, the check reports an error. Auditors ask the named person when they last reported.
+  felder:
+    bereich:
+      label: Responsibility
+      hilfe: The two entries are already prepared.
+    verantwortlich:
+      label: Responsible
+      hilfe: The person who carries out the task.
+    rechenschaft:
+      label: Accountable
+      hilfe: The person who answers for it, usually a member of management.
+    stellvertretung:
+      label: "Deputy"
+      hilfe: "Person who steps in when the responsible person is absent."
+E3-raci:
+  titel: Further roles
+  frage: Who is responsible for risks, impact assessments, the inventory, suppliers, oversight and incidents?
+  warum: For every important AI task, it must be clear who acts, who decides, who is consulted and who is informed. The [[g:raci|RACI matrix]] shows this at a glance.
+  fehler: Roles without a deputy leave gaps during holidays or when someone leaves. Auditors check whether people know their role and act on it.
+  felder:
+    bereich:
+      label: Task
+      hilfe: Suggested tasks are prepared; you can add more.
+    verantwortlich:
+      label: Does the work (R)
+      hilfe: The person who carries out the work.
+    rechenschaft:
+      label: Answers for it (A)
+      hilfe: Exactly one person.
+    konsultiert:
+      label: Is consulted (C)
+      hilfe: People whose opinion is sought beforehand.
+    informiert:
+      label: Is informed (I)
+      hilfe: People who are told the result.
+    stellvertretung:
+      label: "Deputy"
+      hilfe: "Person who steps in when the responsible person is absent."
+E3-gremien:
+  titel: "Committees"
+  frage: "In which existing meetings do you deal with AI topics?"
+  warum: "Decisions on AI need a fixed place: approvals, risks, new tools. Usually it is enough to add these topics to existing meetings instead of setting up a new committee."
+  fehler: "It is often unclear who approves new AI tools. Auditors ask for agendas and minutes in which AI topics appear."
+  felder:
+    organisation.gremien:
+      label: "Committees with AI topics"
+      hilfe: "One row per committee."
+    organisation.gremien.name:
+      label: "Committee"
+      hilfe: "e.g. management meeting, [[g:isms]] meeting."
+    organisation.gremien.themen:
+      label: "New AI topics"
+      hilfe: "What is added to the agenda."
+    organisation.gremien.rhythmus:
+      label: "Frequency"
+      hilfe: "e.g. monthly, quarterly."
+    organisation.gremien.vorsitz:
+      label: "Chair"
+      hilfe: "Person who chairs the meeting."
+E3-meldeweg:
+  titel: Channel for reporting concerns
+  frage: How do employees report a problem with an AI system?
+  warum: Anyone who notices in day-to-day work that an AI system is wrong or being misused should be able to report it without any disadvantage. A [[g:meldeweg|channel for reporting concerns]] with an alternative contact and a response time makes sure reports get through.
+  fehler: A channel that only goes through the direct line manager puts people off. Auditors ask about an alternative contact, about confidentiality and about a log of reports.
+  felder:
+    organisation.meldeweg.kanaele:
+      label: Channels
+      hilfe: At least two routes, so that nobody has to report only through their line manager.
+    organisation.meldeweg.ausweichstelle:
+      label: Alternative contact
+      hilfe: A person outside the reporting line, e.g. a member of management or the whistleblowing office.
+    organisation.meldeweg.vertraulich:
+      label: Reports can be made confidentially
+      hilfe: The reporter's identity is only passed on with their consent.
+    organisation.meldeweg.fristTage:
+      label: Acknowledgement within working days
+      hilfe: e.g. 10 working days until the first reply. Same unit as for the external reporting channel (D-14).
+    organisation.meldeweg.kanal:
+      label: "Channel as worded"
+      hilfe: "e.g. mailbox address or name of the whistleblowing office, as it should appear in the document."
+    organisation.meldestelle:
+      label: "Reporting point in policies"
+      hilfe: "How policies and procedures name the point for reports, e.g. ‘[[g:aims|AIMS]] lead, ai-report@company.example’."
+    organisation.meldeweg.fristErgebnisTage:
+      label: "Feedback on the outcome within days"
+      hilfe: "e.g. 30 days until the reporter learns what happened."
+    organisation.meldeweg.eskalation:
+      label: "Escalation"
+      hilfe: "Where a report goes if the deadline passes or there is a serious risk."
+    organisation.meldeweg.bekanntmachung:
+      label: "Communication"
+      hilfe: "How employees learn about the channel, e.g. training, intranet."
+E3-risikobereitschaft:
+  titel: "Risk appetite"
+  frage: "What is never allowed when using AI, what only with top management approval, and what may the [[g:aims|AIMS]] lead decide without top management?"
+  warum: "Top management decides how much risk it is willing to take with AI. Three short lists make this tangible and give the AIMS lead a clear framework for approvals and exceptions. The entries appear in the [[g:ki-leitlinie]] D-03, section risk appetite."
+  fehler: "General statements such as ‘We use AI responsibly’ help no one. Auditors ask who approves a new system that affects customers and compare the answer with the policy. Without your own entries, D-03 uses the suggestion of the kit."
+  felder:
+    organisation.risikobereitschaft.nie:
+      label: "Never allowed"
+      hilfe: "One short sentence per entry. The text modules match the suggestion in D-03."
+    organisation.risikobereitschaft.nurGl:
+      label: "Only with top management approval"
+      hilfe: "Anything with a significant effect on customers, employees or other affected persons, or above the acceptance threshold."
+    organisation.risikobereitschaft.aimsAllein:
+      label: "Decided by the AIMS lead without top management"
+      hilfe: "For low risk the AIMS lead decides alone, for medium risk together with the system owner; top management decides on high risk. Low means up to the acceptance threshold from phase 6."
+E3-merkmale:
+  titel: "Trustworthiness characteristics and trade-offs"
+  frage: "Which three or four trustworthiness characteristics matter most for each AI system, and which trade-offs have you decided?"
+  warum: "The NIST AI RMF names seven characteristics of trustworthy AI, such as valid and reliable, safe or privacy-enhanced. Not all of them are equally important for every system, and some get in each other's way, for example accuracy and explainability. If you set the most important ones and decide trade-offs deliberately, you later measure the right things (additional [[g:control|control]] RMF-01, measurement and test plan N-03)."
+  fehler: "Ticking all seven characteristics means making no choice. A trade-off without a decision and reason only shows that it is known. Record what applies when two characteristics cannot be achieved at the same time."
+  felder:
+    messkonzept.merkmale:
+      label: "Most important trustworthiness characteristics"
+      hilfe: "Choose three or four. Name the most important one first in the trade-offs; you set the tests for them in phase 9."
+    messkonzept.zielkonflikte:
+      label: "Decided trade-offs"
+      hilfe: "Decision and reason for each trade-off, e.g. \"explainability before accuracy, because customers must understand a rejection\"."
+E3-entscheidungsrechte:
+  titel: "Decision rights by risk"
+  frage: "Who decides on introduction, residual risk, exceptions, stopping and retirement of an AI system at low, medium and high risk?"
+  warum: "Clear decision rights prevent systems from going live without approval or nobody being allowed to stop a running system. The levels follow the risk criteria from phase 6: low up to the acceptance threshold, high from the ‘unacceptable’ threshold, medium in between. The table appears in D-04."
+  fehler: "Whoever requests or operates a system does not approve it themselves at high risk. Auditors check one example to see whether the approval came from the right place. Without your own entries, the suggestion in D-04 applies."
+  felder:
+    organisation.entscheidungsrechte:
+      label: "Decision rights"
+      hilfe: "One row per decision. Enter a function or a person; the text modules match the suggestion in D-04."
+    organisation.entscheidungsrechte.entscheid:
+      label: "Decision"
+      hilfe: "Which decision is governed."
+    organisation.entscheidungsrechte.wer.tief:
+      label: "Low risk"
+      hilfe: "Who decides at low risk."
+    organisation.entscheidungsrechte.wer.mittel:
+      label: "Medium risk"
+      hilfe: "Who decides at medium risk."
+    organisation.entscheidungsrechte.wer.hoch:
+      label: "High risk"
+      hilfe: "At high risk, usually top management."
+    organisation.naechsthoehereStelle:
+      label: "Next higher body"
+      hilfe: "Who decides when top management itself requests or operates a system or owns a risk, e.g. the board of directors or the shareholders' meeting. Appears in D-04 under ‘No self-approval’."

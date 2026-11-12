@@ -1,0 +1,82 @@
+# D-03 KI-Leitlinie
+einleitung: "Diese Leitlinie legt fest, wie [[Firmenname]] künstliche Intelligenz (KI) entwickelt, einkauft und nutzt. Sie gilt für alle Mitarbeitenden und für alle, die in unserem Auftrag mit KI-Systemen arbeiten."
+einleitung_firma: "Diese Leitlinie legt fest, wie {firma} künstliche Intelligenz (KI) entwickelt, einkauft und nutzt. Sie gilt für alle Mitarbeitenden und für alle, die in unserem Auftrag mit KI-Systemen arbeiten."
+einleitung_firma_ohne_entwicklung: "Diese Leitlinie legt fest, wie {firma} künstliche Intelligenz (KI) einkauft und nutzt. Sie gilt für alle Mitarbeitenden und für alle, die in unserem Auftrag mit KI-Systemen arbeiten."
+hinweis_umfang: "Halten Sie die Leitlinie kurz (zwei bis drei Seiten). Sie regelt das Warum und das Was, nicht das Wie. Nennen Sie keine Produktnamen; Werkzeuge stehen im KI-Inventar (D-10) und in der Nutzungsrichtlinie (D-15)."
+abschnitte:
+  zweck: Zweck und Geltungsbereich
+  grundsaetze: Unsere Grundsätze
+  verpflichtungen: Unsere Verpflichtungen
+  risikobereitschaft: Risikobereitschaft
+  ziele: Rahmen für KI-Ziele
+  zustaendigkeiten: Zuständigkeiten
+  bezug: Bezug zu anderen Leitlinien
+  ausnahmen: Abweichungen und Ausnahmen
+  bekanntmachung: Bekanntmachung und Verfügbarkeit
+  ueberpruefung: Überprüfung
+  freigabe: Freigabe
+zweck_text: "Die Leitlinie gilt für den Geltungsbereich des KI-Managementsystems gemäss D-02. Sie bildet den Rahmen für unsere KI-Ziele, Verfahren und Regeln."
+hinweis_grundsaetze: "Wählen Sie vier bis sieben Grundsätze, die zu Ihrem Unternehmen passen, und formulieren Sie sie in eigenen Worten. Die Vorschläge sind ein Ausgangspunkt."
+grundsaetze_vorschlag:
+  - "**Der Mensch entscheidet.** KI unterstützt unsere Arbeit. Entscheide mit erheblicher Wirkung auf Menschen trifft oder prüft eine verantwortliche Person."
+  - "**Vertraulichkeit zuerst.** Vertrauliche Daten, Personendaten und Kundendaten geben wir nur in freigegebene KI-Systeme ein."
+  - "**Transparenz.** Wir sagen offen, wo wir KI einsetzen, und kennzeichnen KI-erzeugte Inhalte, wo es für andere wichtig ist."
+  - "**Fairness.** Wir achten darauf, dass KI-Systeme niemanden ungerechtfertigt benachteiligen."
+  - "**Sicherheit und Qualität.** Wir prüfen KI-Ergebnisse, bevor wir uns auf sie verlassen, und schützen KI-Systeme wie andere wichtige Informationen."
+  - "**Recht und Verträge.** Wir halten die anwendbaren Gesetze und vertraglichen Pflichten ein."
+  - "**Verantwortung für Folgen.** Bevor wir KI-Systeme mit Wirkung auf Menschen einsetzen, schätzen wir die Folgen ab."
+verpflichtungen:
+  - "Wir erfüllen die anwendbaren Anforderungen an unseren KI-Einsatz, insbesondere gesetzliche, vertragliche und selbst gewählte Anforderungen."
+  - "Wir verbessern unser KI-Managementsystem fortlaufend."
+  - "Wir stellen die nötigen Mittel bereit."
+risikobereitschaft_text: "Die Geschäftsleitung legt fest, welche Risiken wir beim Einsatz von KI eingehen. Die Bewertung der Risiken und die Akzeptanzgrenze stehen in D-06, die Entscheidungsrechte je Risikostufe in D-04."
+hinweis_risikobereitschaft: "Die Geschäftsleitung entscheidet hier in wenigen Sätzen, was nie erlaubt ist, was nur mit ihrer Freigabe geht und was die oder der AIMS-Verantwortliche ohne die Geschäftsleitung entscheiden darf. Die Vorschläge sind ein Ausgangspunkt. Bei Bedarf ergänzen Sie Fristen, z. B. «Behandlungsplan für hohe Risiken innert 30 Tagen», und wie lange eine Ausnahme höchstens gilt."
+risikobereitschaft_kopf: [Rahmen, Festlegung]
+risikobereitschaft_rahmen:
+  nie: Nie erlaubt
+  nurGl: Nur mit Freigabe der Geschäftsleitung
+  aimsAllein: AIMS-Verantwortliche/r entscheidet ohne Geschäftsleitung
+risikobereitschaft_vorschlag:
+  nie:
+    - "KI entscheidet allein über Anstellung, Kündigung, Lohn oder Kredit von Personen"
+    - "Vertrauliche Daten gehen in KI-Dienste, die nicht freigegeben sind"
+    - "Praktiken, die das Recht verbietet, z. B. verdeckte Beeinflussung von Personen"
+  nurGl:
+    - "KI mit erheblicher Wirkung auf Kunden, Mitarbeitende oder andere Betroffene"
+    - "KI, die ohne Bestätigung durch einen Menschen in anderen Systemen handelt"
+    - "Restrisiken über der Akzeptanzgrenze"
+  aimsAllein:
+    - "Alleinige Freigabe von KI-Systemen mit tiefem Risiko (D-04, D-12)"
+    - "Freigabe von KI-Systemen mit mittlerem Risiko zusammen mit der Eignerin oder dem Eigner des Systems (D-04, D-12)"
+    - "Befristete Ausnahmen für Systeme mit tiefem Risiko, höchstens drei Monate"
+ziele_text: "Aus dieser Leitlinie leiten wir messbare KI-Ziele ab und überprüfen sie jährlich. Die Ziele und ihre Planung stehen in D-05."
+hinweis_ziele: "Nennen Sie hier die Themen, aus denen Ziele abgeleitet werden, z. B. Vertraulichkeit, Qualität der Ergebnisse, Kompetenz der Mitarbeitenden, vollständiges KI-Inventar."
+zustaendigkeiten_text: "Die Geschäftsleitung trägt die Gesamtverantwortung. Zuständig für das KI-Managementsystem ist {verantwortlich}. Weitere Rollen und die Meldewege stehen in D-04."
+bezug_text: "Die folgenden Leitlinien berühren den Einsatz von KI. Wir haben sie geprüft und, wo nötig, angepasst oder hier ergänzt."
+bezug_kopf: [Leitlinie, Bezug zu KI, Massnahme]
+bezug_vorschlag:
+  - [Informationssicherheitsleitlinie, "Schutz von Daten in KI-Systemen, KI-spezifische Bedrohungen", "[[angepasst / Verweis / keine / nicht vorhanden]]"]
+  - [Datenschutzerklärung und Datenschutzrichtlinie, "Personendaten in KI-Systemen, Rechte Betroffener", "[[angepasst / Verweis / keine / nicht vorhanden]]"]
+  - [Qualitätspolitik, "Qualität KI-gestützter Ergebnisse und Produkte", "[[angepasst / Verweis / keine / nicht vorhanden]]"]
+  - [Personalreglement, "Nutzung von KI durch Mitarbeitende, Überwachung am Arbeitsplatz", "[[angepasst / Verweis / keine / nicht vorhanden]]"]
+abgleich_werte:
+  angepasst: angepasst
+  verweis: Verweis auf diese Leitlinie ergänzt
+  keine: keine Anpassung nötig
+  nicht-vorhanden: nicht vorhanden
+abgleich_offen: "noch nicht abgeglichen"
+abgleich_ohne_isms: "nicht vorhanden; den Schutz der Daten in KI-Systemen regeln diese Leitlinie und die Richtlinie zur verantwortungsvollen KI-Nutzung (D-15)"
+bezug_weitere: "Einsatz von KI im jeweiligen Bereich"
+# Bezug zu KI je weitere Leitlinie (Schlüssel der Optionsgruppe leitlinienBezug)
+bezug_weitere_je:
+  beschaffung: "KI-Funktionen in eingekaufter Software und Diensten, Prüfung der Lieferanten vor dem Kauf"
+  verhaltenskodex: "Geheimhaltung, Umgang mit Kundendaten und faires Verhalten bei der Nutzung von KI"
+  nachhaltigkeit: "Energie- und Ressourcenbedarf von KI-Systemen"
+hinweis_bezug: "Prüfen Sie Widersprüche, z. B. ob eine KI-gestützte Auswertung von Mitarbeitendendaten mit dem Personalreglement und dem Datenschutz vereinbar ist."
+ausnahmen_text: "Abweichungen von dieser Leitlinie sind nur mit vorheriger, schriftlicher Zustimmung zulässig. Zustimmen können die Geschäftsleitung und {verantwortlich}. Jede Ausnahme wird mit Begründung, Dauer und Massnahmen festgehalten. Verstösse werden gemeldet (D-04) und wie andere Verstösse gegen interne Regeln behandelt."
+ausnahmen_text_firma: "Abweichungen von dieser Leitlinie sind nur als vorher genehmigte Ausnahme zulässig. {regel} Jede Ausnahme wird mit Begründung, Dauer und Massnahmen festgehalten. Verstösse werden gemeldet (D-04) und wie andere Verstösse gegen interne Regeln behandelt."
+bekanntmachung_text: "Die Leitlinie wird allen Mitarbeitenden bei Eintritt und nach jeder Änderung bekannt gemacht. Interessierte Parteien erhalten sie auf Anfrage."
+hinweis_bekanntmachung: "Halten Sie fest, wie Sie die Bekanntmachung belegen, z. B. Intranet-Mitteilung mit Datum oder Teilnahmeliste der Schulung."
+ueberpruefung_text: "Die Leitlinie wird mindestens jährlich sowie bei wesentlichen Änderungen von Technik, Recht oder Geschäft überprüft, zuständig ist {verantwortlich}. Die Ergebnisse der Managementbewertung (D-21) fliessen ein. Nächste Überprüfung: {naechste}."
+freigabe_text: "Die Geschäftsleitung hat diese Leitlinie am {datum} freigegeben."
+ausbau_themen: "Für Unternehmen, die KI entwickeln oder mit Wirkung auf Kunden einsetzen, können ergänzende Themenleitlinien sinnvoll sein, z. B. zur Entwicklung von KI-Systemen, zu Folgenabschätzungen oder zu KI-Ressourcen. Verweisen Sie hier darauf."

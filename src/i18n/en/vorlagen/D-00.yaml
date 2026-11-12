@@ -1,0 +1,121 @@
+# D-00 Gap analysis and project mandate
+blaetter:
+  auftrag: Project mandate
+  abschnitte: Clauses
+  controls: Annex A controls
+  reifegrade: Maturity levels
+  schnellcheck: Quick check
+titel_auftrag: "Project mandate for the AI management system"
+titel_abschnitte: "Gap analysis of clauses 4 to 10"
+titel_controls: "Gap analysis of Annex A controls"
+titel_reifegrade: "Maturity levels 0 to 5"
+titel_schnellcheck: "Quick check in 15 questions"
+hinweise_auftrag:
+  - "Fill in the project mandate first and have it approved by top management. Without approval you lack time and resources, and the audit lacks evidence that management backs the project."
+  - "One page is enough. Keep the entries short and specific."
+hinweise_abschnitte:
+  - "One row per clause. In column D, briefly describe what is already in place today (documents, processes followed in practice, evidence)."
+  - "Select the current maturity and the target maturity (levels in the ‘Maturity levels’ sheet). The gap is calculated. You set the target maturity yourself; level 3 (defined and applied) is typical. Choose a higher or lower level where it matches your goal."
+  - "With an ISMS: many clauses (e.g. 7.5, 9.2, 9.3, 10) are already implemented in the ISMS. Enter the existing document as the current state; an extension is often enough."
+hinweise_controls:
+  - "One row per Annex A control. Whether a control applies is decided later in the statement of applicability (D-11). Here you only record today's status."
+  - "If you only buy and use AI, you meet many controls in groups A.6 and A.7 in a lean form or through information from the supplier."
+hinweise_reifegrade:
+  - "**Maturity is not a certification criterion.** The certification body checks conformity: whether every requirement is met and whether the company can show evidence of it. The maturity levels only help to estimate gaps and effort."
+  - "Certification usually requires level 3: defined, applied and demonstrable. Levels 4 and 5 are not a must."
+hinweise_schnellcheck:
+  - "Answer each question with Yes, Partly or No. The traffic light for each chapter appears as soon as all its questions are answered: green means everything is met, amber means partly met on average at most, red means worse than partly met on average (value above 1, with Yes = 0, Partly = 1, No = 2)."
+  - "The quick check takes about 15 minutes and works well for a first conversation with top management. The detailed analysis follows in the ‘Clauses’ and ‘Annex A controls’ sheets."
+hinweise_schnellcheck_firma:
+  - "Status on {datum}, from the assessment for each chapter. Traffic light: green means everything is met, amber means partly met on average at most, red means worse than partly met on average (value above 1, with Yes = 0, Partly = 1, No = 2)."
+hinweise_reifegrade_firma:
+  - "The target for certification is level 3: defined, applied and demonstrable. The maturity levels serve to estimate gaps and effort; what is audited is conformity."
+aufwand_mit_pensum: "{pt} person-days, AIMS role at {pensum}%"
+spalten_auftrag: [Item, Content, Note]
+auftrag:
+  - id: ziel
+    label: Objective
+    hinweis: "What should be achieved by when? For example, an AI management system ready for certification by a set date."
+  - id: geltungsbereich
+    label: Scope (outline)
+    hinweis: "Which areas, sites and AI systems should be included? The exact boundaries follow in D-02."
+  - id: nutzen
+    label: Benefits
+    hinweis: "Why is it worth it? For example, customer requirements, lower risk with AI tools, preparation for the EU AI Act."
+  - id: zieltermin
+    label: Target date for certification
+    hinweis: "Allow three to six months until you are ready for stage 1, more without an ISMS."
+  - id: ziel_stage1
+    label: Target date for stage 1 readiness
+    hinweis: "Date by which the internal audit and management review are complete; starting point for planning the ten steps."
+  - id: aufwand_intern
+    label: Internal effort (person-days)
+    hinweis: "{richtwert} Also plan for the time of the business units."
+  - id: aufwand_extern
+    label: External costs (CHF)
+    hinweis: "Consulting, training, tools and the certification body (stage 1, stage 2, surveillance audits)."
+  - id: projektleitung
+    label: Project lead
+    hinweis: "Usually the person who will later be responsible for the AI management system."
+  - id: sponsor
+    label: Sponsor (top management)
+    hinweis: "A member of top management who drives decisions and removes obstacles."
+  - id: team
+    label: Project team
+    hinweis: "For example IT, information security, data protection, legal, HR and the business units with the most AI systems."
+  - id: meilensteine
+    label: Milestones
+    hinweis: "For example gap analysis, AI inventory, risks and impact assessments, statement of applicability, internal audit, management review, stage 1, stage 2."
+  - id: risiken
+    label: Project risks
+    hinweis: "For example too little time in the business units, unknown shadow AI, suppliers who do not provide information."
+  - id: freigabe_von
+    label: Approved by top management
+    hinweis: "Name and role of the person approving the mandate."
+  - id: freigabe_am
+    label: Approved on
+    hinweis: "Date of approval. Keep the approved mandate on file."
+ziel_vorschlag: "[[AI management system under ISO/IEC 42001 ready for certification by DD/MM/YYYY]]"
+ziel_firma: "AI management system under ISO/IEC 42001 ready for certification by {datum}"
+richtwert_mit_isms: "Guide value with an existing ISMS: 25 to 35 person-days."
+richtwert_ohne_isms: "Guide value without an ISMS: 45 to 65 person-days."
+richtwert_beide: "Guide values: 25 to 35 person-days with an existing ISMS, 45 to 65 without an ISMS."
+spalten_gap:
+  - ID
+  - Title
+  - Expected evidence
+  - Current state
+  - Current maturity
+  - Target maturity
+  - Gap
+  - Action
+  - Responsible
+  - Deadline
+spalten_reifegrade: [Level, Name, Meaning, Typical evidence]
+reifegrade:
+  - [0, "not in place", "The topic is unknown or not addressed.", "none"]
+  - [1, "initial", "Individuals act at their own discretion. Nothing is recorded.", "verbal information, individual emails"]
+  - [2, "repeatable", "There is a usual way of doing things. But it depends on individuals and is not described, or only in part.", "draft, notes, document without approval"]
+  - [3, "defined and applied", "The approach is described, approved and known. Work demonstrably follows it.", "approved document and records from its use"]
+  - [4, "measured and managed", "The effect is monitored with metrics. Deviations lead to actions.", "metrics, evaluations, action list"]
+  - [5, "continually improved", "Results from measurement, audits and feedback regularly feed into improvements.", "improvement register, comparison over several years"]
+spalten_schnellcheck: [No., Chapter, Question, Answer, Points, Chapter score, Chapter traffic light, Remarks]
+antworten: [Yes, Partly, No]
+ampel: [green, amber, red]
+schnellcheck:
+  - { kapitel: K-4, frage: "Is there a complete list of the AI systems, including AI in purchased software and the tools employees use on their own?" }
+  - { kapitel: K-4, frage: "Is it recorded which role the company takes for each AI system, e.g. provider or user?" }
+  - { kapitel: K-4, frage: "Is it set out in writing which areas, sites and AI systems the management system covers?" }
+  - { kapitel: K-5, frage: "Has top management approved binding principles for the use of AI?" }
+  - { kapitel: K-5, frage: "Is someone named who looks after the AI management system and reports on it to top management?" }
+  - { kapitel: K-6, frage: "Are the risks of the AI systems assessed with a fixed method and the results recorded?" }
+  - { kapitel: K-6, frage: "Before an AI system is introduced, is it estimated how it affects the people concerned?" }
+  - { kapitel: K-6, frage: "Are there measurable objectives for dealing with AI, with owners and deadlines?" }
+  - { kapitel: K-7, frage: "Do employees know which AI tools they may use for what, and which data they must never enter?" }
+  - { kapitel: K-7, frage: "Do documents on AI have a version, an approval and a fixed storage location?" }
+  - { kapitel: K-8, frage: "Does a new AI tool need approval before it is used?" }
+  - { kapitel: K-8, frage: "Are providers of AI systems checked before a contract is signed?" }
+  - { kapitel: K-9, frage: "Is it regularly checked internally whether the AI rules are followed (internal audit)?" }
+  - { kapitel: K-9, frage: "Does top management discuss the status of the AI management system at least once a year?" }
+  - { kapitel: K-10, frage: "Are problems with AI systems recorded, investigated for their cause and fixed for good?" }
+ausbau_wiederholung: "Repeat the gap analysis about four weeks before stage 1 as a readiness check. At that point maturity no longer matters; what counts is whether there is evidence for every row."

@@ -1,0 +1,64 @@
+# E-08 Provider obligations at a glance
+hinweis_umfang: "This overview shows what providers of high-risk AI systems must meet and where the AIMS helps. It replaces neither reading the articles nor the legal review. You track the individual obligations with their status in E-03."
+aussage_titel: Clear statement
+aussage: "**ISO/IEC 42001 does not replace a conformity assessment under Art. 43 and does not give rise to a presumption of conformity.** A presumption arises only from harmonised standards whose references are published in the Official Journal (Art. 40(1)); ISO/IEC 42001 is not one of them. A certified AIMS makes much of the evidence easier to provide, nothing more."
+juristisch: "Anyone who is the provider of a high-risk AI system, or becomes one through a change of role under Art. 25(1), should have the classification, the conformity assessment procedure and the appointment of an authorised representative reviewed by a lawyer. This overview is not legal advice."
+juristisch_firma: "If we are the provider of a high-risk AI system, or become one through a change of role under Art. 25(1), we have the classification, the conformity assessment procedure and the appointment of an authorised representative reviewed by a lawyer. This overview is not legal advice."
+abschnitte:
+  wann: When these obligations apply
+  ueberblick: Obligations at a glance
+  kmu: Relief for SMEs
+  bevollmaechtigter: Authorised representative for Swiss providers
+  aims: Where the AIMS helps and where it does not
+wann_text: "These obligations apply to us as the **provider** of a high-risk AI system (role from E-01, class from E-02), including where we offer another party's system under our own name, make a substantial modification to it or repurpose it for a high-risk use ({fs:25(1)}). They apply to systems under Annex III from {frist:FRIST-13} and to systems under Annex I from {frist:FRIST-15}. For products under Annex I Section B, such as machinery, only Art. 6(1), 60a and 102 to 112 of the AI Act apply (Art. 2(2))."
+systeme_ja: "We are the provider of these high-risk AI systems: {systeme}."
+systeme_nein: "We are not the provider of any high-risk AI system. The overview remains in case of a change of role; we check the role and classification once a year (E-01, E-02)."
+formell: "Art. 43, 47 to 49, 72 and 73 have formally applied since {frist:FRIST-07}, but only take effect together with the requirements for high-risk AI systems. This is a marked interpretation, not legal text (E-09)."
+ueberblick_kopf: [Article, What to do, Applies from]
+ueberblick:
+  - ["{fs:8}", "The system meets all requirements of Art. 9 to 15, taking into account its intended purpose and the state of the art; for products under Annex I Section A, aligned with product legislation.", "{frist:FRIST-13} (III), {frist:FRIST-15} (I)"]
+  - ["{fs:9}", "Risk management system across the entire life cycle, with testing before placing on the market.", "as Art. 8"]
+  - ["{fs:10}, {fs:4a}", "Select and examine training, validation and testing data under defined practices; special categories of personal data only to detect and correct bias, under strict conditions.", "as Art. 8"]
+  - ["{fs:11}", "Technical documentation with at least the elements of Annex IV before placing on the market.", "as Art. 8"]
+  - ["{fs:12}", "Automatic recording of events (logs) for traceability.", "as Art. 8"]
+  - ["{fs:13}", "Transparent design and instructions for use for deployers.", "as Art. 8"]
+  - ["{fs:14}", "Effective human oversight built into the design, including intervention and stop.", "as Art. 8"]
+  - ["{fs:15}", "Appropriate accuracy, robustness and cybersecurity throughout the life cycle.", "as Art. 8"]
+  - ["{fs:16}", "General provider obligations, including indicating name and address, conformity assessment, declaration, CE marking, registration, corrective actions, accessibility (points (a) to (l)).", "as Art. 8"]
+  - ["{fs:17}", "Quality management system with written policies, procedures and instructions.", "as Art. 8"]
+  - ["{fs:18}", "Keep the documentation at the disposal of the authorities for ten years.", "as Art. 8"]
+  - ["{fs:19}", "Keep automatically generated logs for at least six months, to the extent they are under our control.", "as Art. 8"]
+  - ["{fs:20}", "In case of nonconformity, immediately correct, withdraw or recall the system and inform the parties concerned.", "as Art. 8"]
+  - ["{fs:21}", "Cooperate with the authorities and provide documents and logs.", "as Art. 8"]
+  - ["{fs:22}", "Providers established outside the EU appoint an authorised representative in the EU by written mandate before making the system available.", "as Art. 8"]
+  - ["{fs:25(2)}", "As the original provider after a change of role, cooperate with the new provider and make information available.", "as Art. 8"]
+  - ["{fs:25(4)}", "Agree in writing with suppliers of models, tools and components which information and assistance they provide.", "as Art. 8"]
+  - ["{fs:43}", "Conformity assessment: for Annex III points 2 to 8, internal control under Annex VI; for biometrics (point 1), with a notified body depending on the standards applied; for Annex I Section A, under product legislation.", "{frist:FRIST-07} formally, as Art. 8 in practice"]
+  - ["{fs:47}", "Draw up the EU declaration of conformity and keep it for ten years.", "{frist:FRIST-07} formally, as Art. 8 in practice"]
+  - ["{fs:48}", "Affix the CE marking.", "{frist:FRIST-07} formally, as Art. 8 in practice"]
+  - ["{fs:49}", "Register in the EU database before placing on the market (Annex III except point 2; also with an exception under Art. 6(3), Art. 49(2)).", "{frist:FRIST-07} formally, as Art. 8 in practice"]
+  - ["{fs:72}", "Post-market monitoring with a plan that is part of the technical documentation.", "{frist:FRIST-07} formally, as Art. 8 in practice"]
+  - ["{fs:73}", "Report serious incidents: no later than 15 days after becoming aware, 10 days in the event of death, 2 days for a widespread infringement or a disruption of critical infrastructure.", "{frist:FRIST-07} formally, as Art. 8 in practice"]
+kmu_liste:
+  - "**Simplified technical documentation** ({fs:11(1)}): SMEs and small mid-cap enterprises may use the Commission's simplified form; notified bodies accept it."
+  - "**QMS proportionate to size** ({fs:17(2)}): an appropriate scope, but with the required level of protection."
+  - "**Simplified QMS** ({fs:63(1)}): SMEs without partner or linked enterprises may comply with certain elements in a simplified manner; this does not exempt them from Art. 9 to 15, 72 and 73 (Art. 63(2))."
+  - "**Other relief:** priority access to regulatory sandboxes, only with a registered office or branch in the Union, and lower fees for conformity assessment (Art. 62(1), (2)); for fines, the lower amount applies to SMEs (Art. 99(6))."
+bev_text: "Providers established in Switzerland with no establishment in the EU appoint, by written mandate, an authorised representative established in the EU before making a high-risk AI system available in the EU ({fs:22(1)}). The mandate must empower the representative to carry out at least the tasks under Art. 22(3), such as verifying the declaration and documentation, keeping the documents for ten years and cooperating with authorities. For each system we record whether the authorised representative has been appointed."
+nicht_erforderlich: "not required"
+bev_kopf: [AI system, Authorised representative appointed, "Evidence (mandate, name, registered office)"]
+bev_hinweis: "Record for each system whether the authorised representative has been appointed."
+bev_eu: "We have an establishment in the EU. An authorised representative under Art. 22 is required only for providers established outside the EU. For each system we check which company acts as the provider: if it is the Swiss company, it needs an authorised representative despite the establishment."
+aims_text: "The table shows what an AIMS under ISO/IEC 42001 contributes to the provider obligations. The mapping is a professional assessment; details per obligation in E-03."
+aims_kopf: [Topic, Contribution of the AIMS, What is needed in addition, Coverage]
+aims:
+  - ["Risk management (Art. 9)", "Risk process, register, treatment (6.1, 8.2, 8.3, D-06, D-07)", "Reference to health, safety and fundamental rights for each system, testing with metrics", "partly"]
+  - ["Data (Art. 10)", "Data rules, provenance, quality (A.7, D-13)", "Examination for bias, representativeness, data sheets per data set", "partly"]
+  - ["Technical documentation (Art. 11)", "Documentation across the life cycle (A.6.2.7, D-12)", "Content under Annex IV or the simplified SME form", "partly"]
+  - ["Logging (Art. 12, 19)", "Event logs (A.6.2.8)", "Automatic logging in the product, retention for at least six months", "partly"]
+  - ["Instructions for use, oversight, robustness (Art. 13 to 15)", "Information for users, verification, operation (A.8.2, A.6.2.4 to A.6.2.6)", "Content under Art. 13(3), intervention and stop function, security testing", "partly"]
+  - ["QMS (Art. 17)", "Management system with policy, roles, audits, improvement (clauses 4 to 10)", "Elements under Art. 17(1); harmonised standard EN 18286:2026 (OJ L 2026/2274 of 14/10/2026), coverage according to the standard's Annex ZA", "partly"]
+  - ["Supply chain (Art. 25(2), (4))", "Suppliers and allocation of responsibilities (A.10, D-16)", "Written agreement with the content under Art. 25(4)", "partly"]
+  - ["Monitoring and incidents (Art. 72, 73)", "Monitoring, reports, corrections (A.6.2.6, A.8.4, 10.2, D-14, D-22)", "Plan under Art. 72, reporting to authorities within the deadlines under Art. 73", "partly"]
+  - ["Conformity assessment, declaration, CE, registration (Art. 43, 47 to 49)", "no contribution", "Separate procedure, declaration, marking, entry in the EU database", "not"]
+  - ["Authorised representative (Art. 22), accessibility (Art. 16(l))", "no contribution", "Mandate to an authorised representative in the EU; accessibility under Union law", "not"]

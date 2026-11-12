@@ -1,0 +1,25 @@
+# Abhaengigkeiten und Builds
+node_modules/
+dist/
+coverage/
+.cache/
+playwright-report/
+test-results/
+*.log
+.DS_Store
+
+# Quellen: nie ins Repo (Normen, Vergleichstexte, AI-Act-PDFs, extrahierter Text)
+*.pdf
+!src/**/assets/**/*.pdf
+quellen/
+iso42001-quellen/
+*.normtext.txt
+.urheberrecht-cache/
+
+# Lokale Einstellungen
+.claude/
+.env
+.env.*
+src/generiert/
+spikes/befunde/
+spikes/*/dist/

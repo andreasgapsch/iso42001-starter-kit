@@ -1,0 +1,216 @@
+# D-20 Internes Audit
+blaetter:
+  programm: Auditprogramm
+  plan: Auditplan
+  checkliste: Checkliste 42001
+  stichproben: Stichproben
+  feststellungen: Feststellungen
+titel_programm: "Auditprogramm über den Zertifizierungszyklus"
+titel_plan: "Auditplan für ein einzelnes Audit"
+titel_checkliste: "Checkliste ISO/IEC 42001: Abschnitte 4 bis 10 und Controls aus Anhang A"
+titel_feststellungen: "Feststellungen aus internen Audits"
+hinweise_programm:
+  - "Planen Sie die Audits so, dass innerhalb von drei Jahren alle Normabschnitte und alle anwendbaren Controls mindestens einmal geprüft werden. Im ersten Jahr auditieren Sie das ganze AIMS, und zwar vor dem Stage-1-Audit, damit Sie Feststellungen noch bearbeiten können. Nennen Sie im Umfang auch die Prozesse aus D-27."
+  - "Erstes Jahr: 9.3 und A.2.4 lassen sich erst nach der ersten Managementbewertung prüfen, die Bewertung wiederum braucht das Audit. Planen Sie deshalb vor Stage 1 ein kurzes Ergänzungsaudit nach der Managementbewertung, das diese Punkte und was bis dahin neu dazukam (etwa D-27) nachprüft."
+  - "Prüfen Sie Abschnitte 9.2, 9.3 und 10.2 jedes Jahr, ebenso KI-Systeme mit hohem Risiko oder grossen Änderungen. Die Vorschlagszeilen zeigen eine mögliche Verteilung; passen Sie sie an Ihre Risiken an."
+  - "Auditoren prüfen nicht ihre eigene Arbeit. Im KMU bewährt sich ein externer Auditor oder ein gegenseitiges Audit mit einer Partnerfirma. Halten Sie in der Spalte «Unabhängigkeit» fest, wie Sie das sichergestellt haben."
+  - "Den Auditbericht bilden die Blätter Checkliste, Stichproben und Feststellungen mit der Spalte «Ergebnis und Bericht» im Programm; ein eigenes Berichtsdokument, etwa im Format des ISMS, nennt Ziel, Umfang, Kriterien, Feststellungen und Empfänger und wird im Programm verlinkt."
+  - "Mit ISMS: Führen Sie ein gemeinsames Programm. Abschnitte 4 bis 10 prüfen Sie für beide Normen in denselben Gesprächen, die Controls aus Anhang A der ISO/IEC 42001 mit der Checkliste in diesem Dokument."
+hinweise_programm_eb:
+  - "Ergänzen Sie Ihr bestehendes ISMS-Auditprogramm um die Zeilen oder Spalten für das AIMS. Ein gemeinsames Programm für beide Normen genügt."
+  - "Innerhalb des Zyklus von drei Jahren werden alle Abschnitte und anwendbaren Controls der ISO/IEC 42001 mindestens einmal geprüft. Vor der ersten Zertifizierung wird das AIMS einmal vollständig auditiert."
+  - "Wer das AIMS auditiert, braucht Grundkenntnisse zu KI und zur ISO/IEC 42001 und prüft nicht die eigene Arbeit."
+hinweise_programm_firma:
+  - "Interne Audits finden jährlich statt. Innerhalb des Zertifizierungszyklus von drei Jahren werden alle Normabschnitte und alle anwendbaren Controls mindestens einmal geprüft; 9.2, 9.3 und 10.2 jedes Jahr."
+hinweise_programm_firma_leer:
+  - "Es ist noch kein Audit geplant. Die Zeilen unten sind ein Vorschlag für den Zyklus von drei Jahren."
+hinweise_plan:
+  - "Ein Plan je Audit. Senden Sie ihn den Beteiligten rechtzeitig, damit sie Nachweise bereitlegen können."
+  - "Wählen Sie für den Praxisteil ein bis zwei KI-Systeme als Stichprobe, darunter möglichst eines mit hohem Risiko. Abschnitt 9.2 prüft eine andere Person als die, die das Auditprogramm führt."
+hinweise_checkliste:
+  - "Die Prüffragen sind Anregungen in eigenen Worten. Den Anforderungstext lesen Sie in Ihrer Normausgabe nach."
+  - "Notieren Sie in «Nachweis gesehen» Dokument, Version oder Aufzeichnung und in «Stichprobe» das geprüfte Beispiel (z. B. KI-System, Datum, Person). Ohne gesehenen Nachweis gibt es kein «konform»."
+  - "Ergebnis: «NK schwer», wenn eine Anforderung gar nicht umgesetzt ist oder die Wirksamkeit des Systems in Frage steht. «NK leicht» bei einer einzelnen Lücke in einem sonst wirksamen Ablauf. «Beobachtung», wenn noch keine Abweichung vorliegt, aber eine droht."
+  - "Jede Nichtkonformität und Beobachtung erhält eine Feststellung-ID und wird im Blatt «Feststellungen» beschrieben."
+hinweise_checkliste_firma:
+  - "Die Spalte «SoA» zeigt den Stand der Erklärung zur Anwendbarkeit (D-11). Bei nicht anwendbaren Controls wird die Begründung geprüft."
+hinweis_checkliste_audit: "Nachweise, Stichproben und Ergebnisse des internen Audits {audit}; die Feststellungen stehen im Blatt «Feststellungen». «Nicht prüfbar, geplant» heisst: zum Auditzeitpunkt noch nicht durchgeführt."
+hinweis_soa_stand: "Die Spalte «SoA» zeigt den Stand der Erklärung zur Anwendbarkeit zur Zeit des Audits {audit}, nicht den aktuellen."
+# Zusatz-Controls der Erklärung zur Anwendbarkeit (EU AI Act, eigene Controls) in der Checkliste
+frage_zusatz: "Ist das Control wie in der Erklärung zur Anwendbarkeit beschrieben umgesetzt und belegt?"
+dokumente_zusatz: D-11
+spalte_dokumente: Dokumente
+ablauf: Ablauf
+hinweise_feststellungen:
+  - "Beschreiben Sie jede Feststellung so, dass sie ohne Auditor verständlich ist: Was wurde verlangt, was wurde gesehen, wo liegt die Abweichung."
+  - "Übertragen Sie jede Feststellung in das Register D-22: Nichtkonformitäten und Beobachtungen in das Blatt «Nichtkonformitäten», Verbesserungen in das Blatt «Verbesserungen». Dort folgen Ursachenanalyse, Korrekturmassnahme und Wirksamkeitsprüfung."
+ausbau: "Bei vielen KI-Systemen oder Standorten: Legen Sie die Audithäufigkeit je KI-System nach Risiko fest (z. B. hohes Risiko jährlich, übrige im Zyklus) und führen Sie dafür eine eigene Spalte im Auditprogramm."
+spalten_programm:
+  - Jahr
+  - Audit
+  - Umfang Normabschnitte
+  - Umfang Controls
+  - Kriterien
+  - Methode
+  - Zeitraum
+  - Auditor/in
+  - Unabhängigkeit
+  - Bericht an
+  - Mit ISMS kombiniert
+  - Status
+  - Ergebnis und Bericht
+umfang_controls_alle: "alle anwendbaren"
+umfang_prozesse: "Prozesse im Umfang: {liste}"
+umfang_prozesse_alle: "Prozesse im Umfang: alle Prozesse des Managementsystems"
+spalten_plan: [Zeit, Punkt, Inhalt und Normbezug, Beteiligte, Bemerkung]
+spalten_checkliste:
+  - Bezug
+  - Titel
+  - Prüffrage
+  - Wo im Kit
+  - SoA
+  - Nachweis gesehen
+  - Stichprobe
+  - Ergebnis
+  - Feststellung-ID
+spalten_feststellungen:
+  - Feststellung-ID
+  - Audit
+  - Datum
+  - Einstufung
+  - Normbezug
+  - Feststellung
+  - Objektiver Nachweis
+  - Verantwortlich
+  - In D-22 übertragen
+listen:
+  unabhaengigkeit: [extern beauftragt, gegenseitiges Audit mit Partnerfirma, intern aus anderem Bereich]
+  status: [geplant, durchgeführt, Bericht abgeschlossen, verschoben]
+  ergebnis: [konform, Beobachtung, NK leicht, NK schwer, nicht geprüft, "nicht prüfbar, geplant"]
+  einstufung: [NK schwer, NK leicht, Beobachtung, Verbesserung]
+  art:
+    intern: internes Audit
+    extern-stage1: Stage-1-Audit
+    extern-stage2: Stage-2-Audit
+    ueberwachung: Überwachungsaudit
+soa:
+  ja: anwendbar
+  nein: nicht anwendbar
+  offen: Entscheid offen
+  fehlt: nicht in der SoA
+  status:
+    offen: offen
+    geplant: geplant
+    teilweise: teilweise umgesetzt
+    umgesetzt: umgesetzt
+    wirksam: wirksam
+programm_vorschlag:
+  - ["Jahr 1", "AU-001 Vollaudit vor Stage 1, danach Ergänzungsaudit zu 9.3 und A.2.4", "4.1 bis 10.2 (alle); Prozesse im Umfang: alle aus D-27", "A.2 bis A.10 (alle anwendbaren)", "ISO/IEC 42001, eigene Vorgaben (D-03, D-15), Gesetze und Verträge", "Dokumentprüfung, Interviews, Stichproben je KI-System", "[[MM.JJJJ, mit Abstand vor Stage 1]]", "[[Name]]", "", "Geschäftsleitung", "", "geplant"]
+  - ["Jahr 2", "AU-002 Teilaudit", "4.1 bis 5.3, 6.1.1 bis 6.3, 8.2 bis 8.4, 9.1 bis 10.2; Prozesse im Umfang: [[PR-xx]]", "A.2, A.3, A.4, A.5, A.9", "ISO/IEC 42001, eigene Vorgaben", "Interviews, Stichproben, Wirksamkeit der Korrekturen aus AU-001", "[[MM.JJJJ, vor Überwachungsaudit]]", "[[Name]]", "", "Geschäftsleitung", "", "geplant"]
+  - ["Jahr 3", "AU-003 Teilaudit", "6.1.2 bis 6.1.4, 7.1 bis 8.4, 9.1 bis 10.2; Prozesse im Umfang: [[PR-xx]]", "A.6, A.7, A.8, A.10", "ISO/IEC 42001, eigene Vorgaben", "Interviews, Stichproben, Wirksamkeit der Korrekturen aus AU-002", "[[MM.JJJJ, vor Rezertifizierung]]", "[[Name]]", "", "Geschäftsleitung", "", "geplant"]
+plan_rahmen:
+  - [Audit, "[[AU-001, Bezeichnung]]"]
+  - [Ziel, "[[z. B. Bereitschaft für Stage 1 prüfen, Wirksamkeit des AIMS bestätigen]]"]
+  - [Umfang, "[[Normabschnitte, Controls, Standorte, KI-Systeme]]"]
+  - [Kriterien, "[[ISO/IEC 42001, eigene Vorgaben, Gesetze, Verträge]]"]
+  - [Datum und Ort, "[[TT.MM.JJJJ, Ort oder remote]]"]
+  - [Auditor/in, "[[Name, Unabhängigkeit]]"]
+  - [Auditierte Personen, "[[Namen und Funktionen]]"]
+  - [Methode und Stichproben, "[[Interviews, Dokumente, Vorführung am System; KI-Systeme der Stichprobe]]"]
+  - [Bericht an, "[[Geschäftsleitung, AIMS-Verantwortung]]"]
+plan_ablauf:
+  - ["08:30", Eröffnung, "Ziel, Umfang, Ablauf, Vertraulichkeit", "Geschäftsleitung, AIMS-Verantwortung"]
+  - ["08:45", "Kontext, Geltungsbereich, Führung", "4.1 bis 5.3, A.2, A.3", "Geschäftsleitung, AIMS-Verantwortung"]
+  - ["09:45", "Risiken, Folgenabschätzungen, Ziele", "6.1.1 bis 6.3, A.5", "AIMS-Verantwortung, Risikoeigner"]
+  - ["11:00", "Ressourcen, Kompetenz, Kommunikation, Dokumente", "7.1 bis 7.5, A.4.6", "Personalwesen, AIMS-Verantwortung"]
+  - ["12:00", Pause, "", ""]
+  - ["13:00", "KI-Systeme in der Praxis (Stichprobe)", "8.1 bis 8.4, A.4, A.6, A.7, A.9", "Eigner/innen der Systeme, Nutzende"]
+  - ["14:30", "Information, Meldungen, Lieferanten", "A.8, A.10", "Einkauf, Kommunikation, Kundendienst"]
+  - ["15:15", "Messung, Bewertung, Verbesserung", "9.1, 9.3, 10.1, 10.2 (9.2 durch andere Person)", "AIMS-Verantwortung"]
+  - ["16:00", Vorbereitung Auditor/in, "Ergebnisse ordnen, Feststellungen formulieren", ""]
+  - ["16:30", Abschlussbesprechung, "Ergebnisse, Feststellungen, nächste Schritte", "Geschäftsleitung, AIMS-Verantwortung"]
+fragen:
+  K-4.1: "Welche internen und externen Themen wirken auf das AIMS, und wurde der Klimawandel bewertet? Ist die Rolle der Organisation je KI-System bestimmt und begründet?"
+  K-4.2: "Sind die interessierten Parteien und ihre Anforderungen erfasst? Ist je Anforderung entschieden, ob das AIMS sie aufnimmt?"
+  K-4.3: "Ist der Geltungsbereich freigegeben und verfügbar? Passen Grenzen, Schnittstellen und Ausschlüsse zu Kontext, Parteien und KI-Inventar?"
+  K-4.4: "Sind die Prozesse des AIMS und ihr Zusammenspiel beschrieben, und laufen sie so? Stichprobe: ein Prozess vom Auslöser bis zum Ergebnis."
+  K-5.1: "Woran zeigt sich, dass die Geschäftsleitung das AIMS trägt? Gesucht sind Freigaben, Ressourcenentscheide, Teilnahme an der Managementbewertung und eigene Kommunikation."
+  K-5.2: "Ist die KI-Leitlinie freigegeben, passend zum Unternehmen, mit Rahmen für Ziele und mit den nötigen Verpflichtungen? Ist sie bekannt gemacht und verfügbar?"
+  K-5.3: "Wer sorgt für die Normkonformität, und wer berichtet der Geschäftsleitung über die Leistung? Kennen befragte Personen ihre Rolle?"
+  K-6.1.1: "Wurden Risiken und Chancen aus Kontext und Anforderungen abgeleitet? Gibt es Kriterien für annehmbare Risiken und geplante Massnahmen mit Wirksamkeitsprüfung?"
+  K-6.1.2: "Gibt es eine feste Methode, die bei Wiederholung vergleichbare Ergebnisse liefert? Wurden Folgen für das Unternehmen, für Einzelne und für die Gesellschaft betrachtet?"
+  K-6.1.3: "Hat jedes Risiko über der Annahmeschwelle eine Behandlung mit Controls? Ist die Erklärung zur Anwendbarkeit vollständig begründet, und sind Plan und Restrisiken freigegeben?"
+  K-6.1.4: "Ist geregelt, wann und wie Folgenabschätzungen erfolgen? Liegen sie für die betroffenen KI-Systeme vor, und sind die Ergebnisse in die Risikobeurteilung eingeflossen?"
+  K-6.2: "Sind die KI-Ziele messbar und an der Leitlinie ausgerichtet? Ist geplant, was mit welchen Mitteln durch wen bis wann geschieht und wie der Erfolg gemessen wird?"
+  K-6.3: "Wie wurden Änderungen am AIMS seit dem letzten Audit geplant und umgesetzt? Stichprobe: eine Änderung mit Zweck, Folgen und Freigabe."
+  K-7.1: "Sind Personal, Zeit, Budget und Werkzeuge für das AIMS bestimmt und bereitgestellt? Gab es Engpässe, und wie wurden sie gelöst?"
+  K-7.2: "Ist der Kompetenzbedarf je Rolle bestimmt? Liegen Nachweise vor, und wurde die Wirkung von Schulungen bewertet?"
+  K-7.3: "Kennen befragte Mitarbeitende die KI-Leitlinie, ihren eigenen Beitrag und die Folgen, wenn Regeln nicht eingehalten werden?"
+  K-7.4: "Ist festgelegt, was zum AIMS intern und extern wann, mit wem und wie kommuniziert wird? Gibt es Belege für erfolgte Kommunikation?"
+  K-7.5: "Sind Dokumente und Aufzeichnungen gekennzeichnet, geprüft, freigegeben, geschützt und in gültiger Fassung auffindbar? Werden externe Dokumente gelenkt?"
+  K-8.1: "Werden geplante Abläufe und Controls im Alltag umgesetzt? Wie werden Änderungen und ausgelagerte Leistungen gesteuert?"
+  K-8.2: "Wurden Risikobeurteilungen in den festgelegten Abständen und bei wesentlichen Änderungen wiederholt? Sind die Ergebnisse datiert abgelegt?"
+  K-8.3: "Ist der Behandlungsplan umgesetzt, und ist die Wirkung der Massnahmen belegt?"
+  K-8.4: "Wurden Folgenabschätzungen bei Änderungen und in den festgelegten Abständen wiederholt? Sind die Ergebnisse aufbewahrt?"
+  K-9.1: "Ist festgelegt, was wie und wann gemessen und ausgewertet wird? Liegen Ergebnisse vor, und wurde die Leistung des AIMS bewertet?"
+  K-9.2: "Gibt es ein Auditprogramm mit Umfang, Kriterien und Häufigkeit? Sind die Auditoren objektiv, und wurden die Ergebnisse der Leitung berichtet?"
+  K-9.3: "Hat die Geschäftsleitung das AIMS in geplanten Abständen bewertet? Wurden alle Pflichteingaben behandelt und Entscheide zu Verbesserungen und Änderungen festgehalten?"
+  K-10.1: "Wie wird das AIMS laufend verbessert? Gesucht sind ein Verbesserungsregister und umgesetzte Vorschläge."
+  K-10.2: "Werden Nichtkonformitäten sofort korrigiert, auf ihre Ursache untersucht und dauerhaft behoben? Wurde die Wirksamkeit der Korrektur geprüft?"
+  A.2.2: "Liegt eine freigegebene KI-Leitlinie vor, und kennen befragte Mitarbeitende sie?"
+  A.2.3: "Ist festgehalten, welche anderen Leitlinien KI berühren und wie Widersprüche ausgeräumt wurden?"
+  A.2.4: "Wer überprüft die KI-Leitlinie wie oft? Gibt es einen Vermerk zur letzten Überprüfung?"
+  A.3.2: "Sind die KI-Rollen und Zuständigkeiten vergeben und bekannt? Stichprobe: eine Rolleninhaberin oder einen Rolleninhaber befragen."
+  A.3.3: "Gibt es einen bekannten und vertraulich nutzbaren Weg, um Bedenken zu KI zu melden? Wie wurden eingegangene Meldungen bearbeitet?"
+  A.4.2: "Sind die Ressourcen jedes KI-Systems erfasst, auch bei eingekaufter und eingebetteter KI?"
+  A.4.3: "Sind die Daten je System mit Herkunft, Art und Schutzbedarf beschrieben?"
+  A.4.4: "Sind Modelle, Dienste, Versionen und wichtige Werkzeuge je System bekannt?"
+  A.4.5: "Sind Betriebsort, Infrastruktur und Abhängigkeiten je System beschrieben?"
+  A.4.6: "Sind die beteiligten Rollen je System mit dem nötigen Wissen beschrieben?"
+  A.5.2: "Gibt es ein Verfahren mit Auslösern, Zuständigkeiten, Freigabe und Wiederholung von Folgenabschätzungen?"
+  A.5.3: "Sind die Ergebnisse der Folgenabschätzungen dokumentiert, freigegeben und aufbewahrt?"
+  A.5.4: "Wurden Folgen für Einzelpersonen und Gruppen beurteilt, auch für verletzliche Gruppen?"
+  A.5.5: "Wurden Folgen für die Gesellschaft, etwa für Umwelt oder öffentliche Meinung, beurteilt oder begründet ausgeschlossen?"
+  A.6.1.2: "Nur bei Entwicklung: Sind Ziele für eine verantwortungsvolle Entwicklung gesetzt und im Entwicklungsablauf verankert?"
+  A.6.1.3: "Nur bei Entwicklung: Ist der Entwicklungsablauf mit Phasen, Prüfpunkten und Freigaben festgelegt?"
+  A.6.2.2: "Sind die Anforderungen an jedes neue oder geänderte KI-System festgehalten, auch bei eingekauften Systemen?"
+  A.6.2.3: "Sind Entwurf und Entwicklung so dokumentiert, dass Entscheide nachvollziehbar sind?"
+  A.6.2.4: "Gibt es Prüf- und Abnahmekriterien, und liegen Testergebnisse vor der Einführung vor?"
+  A.6.2.5: "Wurde die Einführung geplant und vor dem produktiven Einsatz freigegeben? Stichprobe: die letzte Einführung."
+  A.6.2.6: "Wie werden Betrieb und Leistung der KI-Systeme überwacht, und wer reagiert auf Abweichungen?"
+  A.6.2.7: "Liegt für jede Zielgruppe die nötige technische Dokumentation vor, etwa für Nutzende, Betrieb oder Kunden?"
+  A.6.2.8: "Ist festgelegt, welche Ereignisse protokolliert und wie lange Protokolle aufbewahrt werden? Sind Protokolle tatsächlich vorhanden?"
+  A.7.2: "Ist der Umgang mit Daten für Entwicklung und Verbesserung von KI-Systemen geregelt?"
+  A.7.3: "Ist festgehalten, woher Daten stammen, wie sie beschafft wurden und ob die Rechte dafür bestehen?"
+  A.7.4: "Sind Anforderungen an die Datenqualität festgelegt und geprüft?"
+  A.7.5: "Lässt sich die Herkunft der Daten über ihren ganzen Weg nachverfolgen?"
+  A.7.6: "Sind Kriterien und Schritte der Datenaufbereitung festgelegt und dokumentiert?"
+  A.8.2: "Erhalten Nutzende die nötigen Angaben zu Zweck, Grenzen und richtiger Nutzung des KI-Systems?"
+  A.8.3: "Können Externe Probleme oder Bedenken zu einem KI-System melden, und werden die Meldungen bearbeitet?"
+  A.8.4: "Ist festgelegt, wer bei einem KI-Vorfall wen auf welchem Weg informiert?"
+  A.8.5: "Sind Informationspflichten gegenüber Kunden, Behörden und anderen Dritten bekannt und erfüllt?"
+  A.9.2: "Gibt es Regeln für die verantwortungsvolle Nutzung von KI-Systemen, und werden sie eingehalten? Stichprobe: Freigabe eines Werkzeugs."
+  A.9.3: "Sind Ziele für die verantwortungsvolle Nutzung festgelegt und überwacht?"
+  A.9.4: "Werden KI-Systeme nur für den vorgesehenen Zweck und gemäss Anleitung des Anbieters genutzt?"
+  A.10.2: "Ist je KI-System vereinbart, wofür das Unternehmen, Lieferanten, Partner und Kunden verantwortlich sind?"
+  A.10.3: "Werden KI-Lieferanten vor der Auswahl geprüft und im Betrieb überwacht?"
+  A.10.4: "Wie werden Erwartungen und Bedürfnisse der Kunden beim Einsatz von KI berücksichtigt?"
+titel_stichproben: "Stichproben: ein KI-System durch alle Schritte und Prüftests"
+hinweise_stichproben:
+  - "Wählen Sie ein KI-System, möglichst mit hohem Risiko oder vielen Nutzenden, und verfolgen Sie es durch alle Schritte 1 bis 7. Externe Auditoren gehen oft genau so vor: Sie lassen sich ein System zeigen, das jede Stufe durchlaufen hat."
+  - "Die Tests 8 bis 13 decken typische Schwachstellen auf, die eine reine Dokumentprüfung übersieht. Die Spalte «Warnsignal» zeigt, worauf zu achten ist. Fragen Sie nach dem letzten konkreten Fall («Zeigen Sie mir das letzte Mal, als …»), nicht nach dem Verfahren."
+spalten_stichproben: [Nr., Schritt, Prüffrage, Warnsignal, Nachweis gesehen, Ergebnis]
+stichproben:
+  - ["Inventar (D-10)", "Ist das gewählte System mit Eigner/in, Zweck, Handlungsbefugnis, Modell und Version erfasst?", "System fehlt im Inventar oder Angaben stimmen nicht mit der Vorführung überein"]
+  - ["Risiko (D-07)", "Gibt es datierte Risiken zu diesem System, mit Behandlung und angenommenem Restrisiko?", "Nur tiefe Risiken; Beurteilung älter als die letzte wesentliche Änderung"]
+  - ["Folgenabschätzung (D-09)", "Liegt die Kurzprüfung oder die Abschätzung vor, und ist sie vor der Freigabe datiert?", "Abschätzung nach der Einführung datiert; Abschnitt zu Fairness leer"]
+  - ["Erklärung zur Anwendbarkeit (D-11)", "Sind die Controls, auf die die Risiken des Systems verweisen, anwendbar, umgesetzt und auf Wirksamkeit geprüft?", "Control ausgeschlossen, obwohl ein Risiko darauf verweist"]
+  - ["Freigabe (D-10, D-12)", "Wer hat das System wann und mit welchen Auflagen freigegeben? Entspricht das den Entscheidungsrechten (D-04)?", "Selbstfreigabe bei hohem Risiko; Auflagen ohne Umsetzung"]
+  - ["Betrieb (D-12, D-05)", "Liegen Stichproben, Korrekturquote, Protokolle und die Überprüfung im festgelegten Abstand vor?", "Keine Messung seit der Einführung; Überprüfung überfällig"]
+  - ["Vorfälle und Meldungen (D-14, D-22)", "Wurden Meldungen zu diesem System bearbeitet und Lehren in Risiken, Regeln oder Schulung übernommen?", "Meldung ohne Abschluss; gleiche Ursache mehrfach"]
+  - ["Inventar vollständig", "Zwei Fachbereiche nach genutzten KI-Werkzeugen fragen und mit dem Inventar abgleichen.", "Genanntes Werkzeug fehlt im Inventar (Schatten-KI)"]
+  - ["Korrekturquote plausibel", "Korrektur- oder Übersteuerungsquote eines Systems mit menschlicher Prüfung ansehen.", "0 % bei vielen Entscheiden (Abnicken) oder sehr hohe Quote (System taugt nicht)"]
+  - ["Schulungswirkung", "Einer Person eine Testfrage stellen, z. B. «Dürfen Kundendaten in einen frei verfügbaren Chatbot?».", "Schulungsquote 100 %, aber falsche Antwort"]
+  - ["Meldeweg gelebt", "Eine Meldung oder einen Alarm vom Eingang bis zum Abschluss verfolgen.", "Keine dokumentierte Reaktion; Frist überschritten"]
+  - ["Frühere Feststellungen", "Stichprobe geschlossener Feststellungen: Ist die Wirksamkeit belegt und das Problem nicht wieder aufgetreten?", "Geschlossen ohne Wirksamkeitsprüfung; Abweichung wiederholt"]
+  - ["Managementbewertung", "Enthält das Protokoll Entscheide mit Verantwortlichen und Terminen?", "Nur Kenntnisnahme, keine Entscheide"]

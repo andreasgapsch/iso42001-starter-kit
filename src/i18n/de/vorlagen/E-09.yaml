@@ -1,0 +1,27 @@
+# E-09 Fristen und Stand EU AI Act
+hinweis_umfang: "Dieses Dokument hält fest, auf welchem Stand des AI Act Ihre Einstufungen beruhen und welche Pflichten ab wann gelten. Überprüfen Sie es mindestens halbjährlich und vor jeder Managementbewertung (D-21)."
+hinweis_normung: "Normung und Vermutungswirkung (Art. 40, 41): Die Konformitätsvermutung einer harmonisierten Norm reicht so weit, wie die Norm die Anforderungen abdeckt; die Zuordnung zeigt ihr Anhang ZA. EN 18286:2026 zum Qualitätsmanagement ist gelistet (Durchführungsbeschluss (EU) 2026/2274, ABl. L 2026/2274 vom 14.10.2026, CELEX 32026D2274). Ob die Vermutung Art. 17 erfasst, ist offen: Art. 40(1) nennt ihn nicht ausdrücklich, Art. 40(2), letzter Unterabsatz, nennt für Normungsaufträge auch Abschnitt 3 von Kapitel III; lassen Sie das juristisch prüfen. Gemeinsame Spezifikationen nach Art. 41 sind am 07.11.2026 nicht bekannt (AI Act Service Desk der Kommission; EUR-Lex-Suche ohne Durchführungsrechtsakt nach Art. 41). Halten Sie im Abschnitt «Weitere Hinweise zum Stand» fest, ob Sie die Norm nutzen. Zu Art. 50 gibt es Leitlinien der Kommission (angenommen am 20.07.2026) und einen freiwilligen Praxisleitfaden (Code of Practice) zur Transparenz KI-erzeugter Inhalte nach Art. 50(7), endgültig seit 10.06.2026; die Kommission (Stellungnahme vom 08.07.2026) und das KI-Gremium (09.07.2026) halten ihn für angemessen für Art. 50(2), (4) und (5) (digital-strategy.ec.europa.eu, abgerufen am 07.11.2026); den Stand an der Seite der Kommission prüfen, auch bei Fragen an Lieferanten."
+pruefen_titel: Stand prüfen
+pruefen: "**Vor jeder Aktualisierung dieses Dokuments auf EUR-Lex prüfen**, ob eine neuere konsolidierte Fassung, eine Berichtigung oder eine Änderungsverordnung vorliegt (Dokument 02024R1689). Letzte Prüfung: {geprueft}."
+massgebend: "Massgebender Stand für unsere Einstufungen: {rechtsstand}."
+abschnitte:
+  stand: Stand der Rechtsgrundlage
+  fristen: Fristen
+  systeme: Was das für unsere KI-Systeme heisst
+  formell: Formeller und praktischer Geltungsbeginn
+  weitere: Weitere Hinweise zum Stand
+  schweiz: Schweizer Stand
+fristen_text: "Die Fristen stammen aus Art. 113 und Art. 111 in der geänderten Fassung sowie aus Aufträgen an die Kommission. Art. 113 hat unnummerierte Absätze; sie werden hier wie in Art. 111 gezählt («Art. 113(3)(c)» ist Absatz 3 Buchstabe c)."
+fristen_kopf: [Datum, Art und Fundstelle, Was gilt]
+arten: [Geltung, Übergang, Kommission]
+systeme_text: "Ab wann die wesentlichen Pflichten der jeweiligen Risikoklasse gelten. Art. 4 (KI-Kompetenz) und Art. 5 (Verbote) gelten für alle Systeme bereits; Einzelheiten je Pflicht in E-03."
+systeme_kopf: [Risikoklasse, Wesentliche Pflichten ab, KI-Systeme]
+einstufung_offen: "Einstufung offen (E-02)"
+auslegung_titel: Auslegung des Kits
+auslegung_kennzeichnung: "Der folgende Abschnitt ist eine Auslegung des Kits, kein Gesetzestext. Lassen Sie sie juristisch prüfen, wenn ein konkretes System betroffen ist."
+status:
+  rechtstext: am Gesetzestext geprüft
+  auslegung: Auslegung, kein Gesetzestext
+  zu_pruefen: vor Verwendung an der Quelle prüfen
+weitere_verweis: "Die Hinweise zu Hochrisiko-Altsystemen, KI in Maschinen, Berichtigung C2, ISO/IEC 42001, EN 18286, Art. 111(4) und den Leitlinien der Kommission stehen in Anlage A am Ende des Dokuments."
+schweiz_text: "Stand der Schweizer Angaben: {stand}. Die Schweiz übernimmt den AI Act nicht; er erfasst Schweizer Unternehmen nur bei EU-Bezug (E-01). Vor einer internen Mitteilung prüfen wir den Stand beim Bundesamt für Justiz."

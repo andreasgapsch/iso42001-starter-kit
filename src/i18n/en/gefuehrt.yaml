@@ -1,0 +1,893 @@
+# Guide: phases, participants, checklists, options, calendar and general texts.
+# Page texts: src/i18n/en/gefuehrt/<phase>.yaml. Format: src/gefuehrt/FORMAT.md
+etappen:
+  E0:
+    titel: Start interview
+    kurz: Start
+    ziel: In a few minutes we record the key facts about your company. They determine your route through the kit and a first roadmap.
+    warum: A company with a certified ISMS needs fewer new documents than one without. If you supply customers in the EU or sell AI, you also need the AI Act module. We set these switches first.
+    ergebnis: Route (with or without ISMS), decision on the AI Act module, roadmap with hours per phase.
+  E1:
+    titel: Mandate and starting point
+    kurz: Mandate
+    ziel: You know where your company stands today and who is on the project team, and management has approved the mandate.
+    warum: Without a clear mandate and resources from management, a management system stays on paper. The standard expects top management to back it visibly and provide resources.
+    ergebnis: Quick gap check and project mandate with approval (D-00).
+  E2:
+    titel: Context, interested parties and scope
+    kurz: Context
+    ziel: You record what influences your use of AI, who has expectations, and which parts of the company the management system covers.
+    warum: Everything else builds on this. Risks, objectives and controls only make sense once it is clear what is at stake and where the boundaries lie.
+    ergebnis: Context and register of interested parties (D-01), approved scope with AIMS overview (D-02).
+  E3:
+    titel: Policy, roles and reporting channels
+    kurz: Policy
+    ziel: Management approves an AI policy, responsibilities are assigned, and employees know where to report concerns.
+    warum: The policy is the binding framework for all other rules. Clear roles prevent important tasks from being dropped because nobody feels responsible.
+    ergebnis: AI policy (D-03), roles, RACI and reporting channel (D-04).
+  E4:
+    titel: AI inventory
+    kurz: Inventory
+    ziel: You know every AI system in the company, including AI in purchased software and shadow AI, with its purpose, system owners and resources.
+    warum: Anything missing from the inventory is neither assessed nor managed. An incomplete inventory is the most common finding in certification audits.
+    ergebnis: AI inventory with survey questionnaire (D-10).
+  E5:
+    titel: Role first
+    kurz: Role
+    ziel: For each AI system you determine whether you provide it or only use it. With the AI Act module you also assign each system to a risk class.
+    warum: Your role decides which obligations you have. Anyone who offers a system under their own name carries far more responsibility than someone who buys and uses it.
+    ergebnis: Role determination (D-24); with the module, roles and risk classes under the AI Act (E-01, E-02).
+  E6:
+    titel: Risks and opportunities
+    kurz: Risks
+    ziel: You define how you rate risks and record the main risks and opportunities for each AI system.
+    warum: At the heart of every management system is a risk assessment that gives comparable results when repeated. The controls follow from it later.
+    ergebnis: AI risk management procedure (D-06), risk register with opportunities (D-07).
+  E7:
+    titel: Impact assessments
+    kurz: Impact
+    ziel: You run a quick screening for each AI system to see whether it can noticeably affect people, and carry out a full impact assessment where needed.
+    warum: A risk to the company is not the same as an impact on people. The standard requires both views; the results feed into the risk assessment.
+    ergebnis: Procedure (D-08), screening and impact assessment per system (D-09); with the module, fundamental rights check (E-06).
+  E8:
+    titel: Controls and statement of applicability
+    kurz: Controls
+    ziel: You decide how to treat each risk, choose the controls and give reasons for all 38 controls on whether they apply.
+    warum: The statement of applicability is the key document auditors check. It shows that you chose each control deliberately or excluded it with good reason.
+    ergebnis: Statement of applicability (D-11), treatment plan with acceptance of residual risk (D-07); with the module, obligations matrix (E-03).
+  E9:
+    titel: Putting it into practice
+    kurz: Practice
+    ziel: You describe how AI systems are introduced, monitored and supplied with data, how you make them transparent and how you manage suppliers.
+    warum: Auditors do not just check paperwork; they check whether the rules are followed in everyday work. This is where the evidence for that comes from.
+    ergebnis: Life cycle (D-12), data (D-13), information and reporting (D-14), acceptable use policy (D-15), suppliers (D-16); with the module, E-05, E-07, E-08.
+  E10:
+    titel: Competence and communication
+    kurz: Skills
+    ziel: You determine who needs which knowledge, how all employees are informed, and what you communicate to whom and when.
+    warum: People make a management system work. Those who oversee AI must understand it; those who use it must know the rules.
+    ergebnis: Competence, awareness and communication plan (D-17); with the module, AI literacy (E-04).
+  E11:
+    titel: Objectives, measurement and document control
+    kurz: Goals
+    ziel: You set measurable AI objectives, decide what you measure and keep your documents in a register.
+    warum: Without objectives and measurement you cannot show that the management system works. Without document control nobody knows which version of a document applies.
+    ergebnis: Objectives, metrics and measurement plan (D-05), document control and document register (D-26).
+  E12:
+    titel: Internal audit and management review
+    kurz: Audit
+    ziel: You check your management system once in full, management reviews it, and deviations are corrected.
+    warum: Before the certification audit, every certification body expects an internal audit and a management review. Both show that the system checks and improves itself.
+    ergebnis: Audit programme and report (D-20), minutes of the management review (D-21), nonconformity register (D-22).
+  E13:
+    titel: Preparing for certification
+    kurz: Certify
+    ziel: You choose a certification body, schedule the audit dates and use the tool to check whether everything is ready for stage 1.
+    warum: Good preparation saves follow-up audits. The tool shows what is still missing as a traffic light and generates all documents.
+    ergebnis: Certification roadmap (D-25), stage 1 report with traffic light, generated documents.
+  J:
+    titel: Annual calendar
+    kurz: Calendar
+    ziel: After certification, the calendar shows which recurring tasks are due and when.
+    warum: A management system thrives on repetition. Each year the surveillance audit checks whether reviews, measurements, the internal audit and the management review have taken place.
+    ergebnis: Updated registers, completed annual tasks with evidence.
+
+beteiligte:
+  gl: Management
+  aims: AIMS lead
+  it: Head of IT
+  recht: Legal or compliance
+  hr: Human resources
+  fachbereiche: Business units
+  einkauf: Purchasing
+  ism: Information security
+  dsb: Data protection
+  kommunikation: Communications
+  auditor: Internal auditor
+
+checklisten:
+  E1-c1: Management has approved the project mandate.
+  E1-c2: The quick gap check has been discussed with the core team.
+  E1-c3: Time and budget for the project have been committed.
+  E1-c4: Shared processes with the ISMS have been decided using D-23.
+  E1-c5: The short version of document control applies (D-26 with storage, labelling and approval route).
+  E1-c6: The dates for requesting quotes from certification bodies and for choosing the body are in the project plan.
+  E2-c1: Management has approved the scope.
+  E2-c2: Interested parties and requirements have been agreed with the business units.
+  E2-c3: Every exclusion from the scope is justified.
+  E3-c1: Management has signed the AI policy.
+  E3-c2: The policy has been made known to all employees.
+  E3-c3: All roles and deputies have been communicated to the people concerned.
+  E3-c4: The channel for reporting concerns has been published.
+  E4-c1: All business units have confirmed the inventory.
+  E4-c2: AI in purchased software (e.g. ERP, CRM, office applications) has been checked.
+  E4-c3: For every case of shadow AI, a decision has been made to approve, replace or prohibit it.
+  E4-c4: Every AI system has a system owner who has confirmed this.
+  E5-c1: The role has been determined for each AI system.
+  E5-c2: All AI systems have been checked against the prohibited practices in Art. 5.
+  E5-c3: Borderline classification cases have been reviewed by a legal expert.
+  E6-c1: Management has confirmed the risk criteria.
+  E6-c2: Every AI system has at least one risk assessment.
+  E6-c3: The risks have been discussed with the system owners.
+  E7-c1: A screening is available for every AI system.
+  E7-c2: Full impact assessments have been approved by the responsible person.
+  E7-c3: The results of the impact assessments have been transferred to the risk register.
+  E8-c1: The statement of applicability gives reasons for all controls.
+  E8-c2: Management has approved the treatment plan and residual risks.
+  E8-c3: Every applicable control has a responsible person.
+  E9-c1: The acceptable use policy has been published and acknowledged by employees.
+  E9-c2: Every AI supplier has a review status.
+  E9-c3: The reporting channel for external parties can be found on the website.
+  E9-c4: AI incidents have been added to the incident procedure.
+  E9-c5: Requirements, design and test report exist for every in-house development.
+  E9-c6: The AI Act obligations have been ticked off for every system concerned.
+  E10-c1: Training records exist for all oversight roles.
+  E10-c2: The communication plan covering internal and external communication has been approved.
+  E10-c3: The effectiveness of the training has been checked.
+  E11-c1: Every objective has a metric, an owner and a deadline.
+  E11-c2: The document register is complete and up to date.
+  E11-c3: A first measurement has been recorded for every objective.
+  E12-c1: The internal audit has covered all clauses and controls.
+  E12-c2: The management review has been minuted with all required inputs.
+  E12-c3: Every nonconformity has a cause and an action.
+  E12-c4: The audit report has been presented to management.
+  E13-c1: All errors found by the check have been fixed.
+  E13-c2: The stage 1 documents have been sent to the certification body.
+  E13-c3: The certification body is accredited for ISO/IEC 42001.
+  J-c1: The annual review of the AI policy is documented.
+  J-c2: The surveillance audit is prepared and scheduled.
+  J-c3: The status of the AI Act has been checked and the classifications are up to date.
+
+kalender:
+  inventar: Review the AI inventory, record new systems, update review dates.
+  schatten-ki: Decide on open cases of shadow AI (approve, replace or prohibit).
+  ziele: Record measured values for the AI objectives.
+  risiken: Reassess risks and check the progress of actions.
+  aiact-stand: Check the status of the AI Act and of the classifications.
+  nist-stand: Check the status of the NIST AI RMF and update the profile.
+  folgen: Check that impact assessments are still up to date.
+  lieferanten: Review AI suppliers again.
+  schulung: Run training sessions and check their effectiveness.
+  kommunikation: Review the communication plan and send out messages.
+  leitlinie: Review the AI policy and record the review.
+  dokumente: Review the document register and revise documents that are due.
+  internes-audit: Carry out the internal audit and file the report.
+  managementbewertung: Carry out the management review and take minutes.
+  ueberwachungsaudit: Prepare for the surveillance audit by the certification body.
+
+optionen:
+  datenklasse: { oeffentlich: public, intern: internal, vertraulich: confidential, streng-vertraulich: strictly confidential }
+  jaNeinOffen: { ja: "yes", nein: "no", offen: still open }
+  isms:
+    zertifiziert: ISMS to ISO/IEC 27001, certified
+    vorhanden: ISMS in place, not certified
+    nein: no ISMS
+  branche:
+    maschinenbau: Machinery and plant engineering
+    metall: Metalworking
+    elektro: Electrical engineering and electronics
+    medizintechnik: Medical technology
+    chemie-pharma: Chemicals and pharmaceuticals
+    lebensmittel: Food
+    bau: Construction and building services
+    handel: Trade
+    logistik: Logistics and transport
+    it-dienste: IT and software
+    finanzen: Banking and insurance
+    gesundheit: Healthcare
+    oeffentlich: Public administration
+    dienstleistung: Services
+    andere: other industry
+  ausloeser:
+    kunde: Customers ask for it
+    lieferantenaudit: Supplier audit by a customer
+    geschaeftsleitung: Management wants it
+    aiact: Preparing for the AI Act
+    ausschreibung: Calls for tender
+    wettbewerb: Standing out from competitors
+    andere: other reason
+  reife:
+    fehlt: missing
+    begonnen: started
+    weitgehend: largely in place
+    erfuellt: met and evidenced
+  managementsysteme:
+    iso9001: Quality (ISO 9001)
+    iso27001: Information security (ISO/IEC 27001)
+    iso14001: Environment (ISO 14001)
+    iso45001: Occupational health and safety (ISO 45001)
+    iso13485: Medical devices (ISO 13485)
+    iatf16949: Automotive (IATF 16949)
+    datenschutz: Data protection management system
+    keine: none
+  aimsRolle:
+    gl: Management
+    aims: AIMS lead
+    ism: Information security
+    dsb: Data protection
+    recht: Legal or compliance
+    it: IT
+    hr: Human resources
+    fachbereich: Business unit
+    einkauf: Purchasing
+    auditor: Internal auditor
+    kommunikation: Communications
+  themaArt: { extern: external, intern: internal }
+  themaKategorie:
+    recht: Law and legislation
+    regulierung: Regulation and standards
+    markt: Market and competition
+    technik: Technology
+    kultur: Culture and values
+    governance: Leadership and organization
+    vertrag: Contracts
+    zweck: Purpose of using AI
+    umwelt: Environment and climate
+  kiZweck:
+    effizienz: Speeding up processes
+    qualitaet: Improving quality
+    produkt: AI in our own product
+    kundenservice: Customer service
+    entwicklung: Development and engineering
+    verwaltung: Administration and office
+    entscheidung: Preparing decisions
+  rolleIso:
+    anbieter: AI provider (we offer AI products or services)
+    produzent: AI producer (we develop AI)
+    kunde: AI customer or user
+    partner: Partner (e.g. integrator, data supplier)
+    betroffene: Person affected by AI
+    behoerde: Authority
+  parteiArt: { intern: internal, extern: external }
+  anforderungQuelle:
+    gesetz: Law
+    vertrag: Contract
+    norm: Standard
+    intern: internal rule
+    markt: Market expectation
+  ismsDeckung:
+    gleich: same scope as the ISMS
+    teilweise: part of the ISMS scope
+    anders: different scope
+  aimsProzesse:
+    inventar: Maintaining the AI inventory
+    freigabe-werkzeuge: Approving new AI tools
+    risiko: Assessing and treating risks
+    folgen: Assessing impacts
+    lieferanten: Reviewing suppliers
+    schulung: Training and informing
+    vorfall: Handling incidents and reports
+    aenderung: Managing changes
+    audit: Internal auditing
+    managementbewertung: Management review
+  leitlinieElemente:
+    zweck: fits the purpose of the company
+    zielrahmen: provides a framework for AI objectives
+    anforderungen: commits to meeting the requirements
+    verbesserung: commits to continual improvement
+  leitlinieGrundsaetze:
+    mensch-entscheidet: When decisions affect people, a human has the final say.
+    zweck: We use AI only for defined and reviewed purposes.
+    transparenz: We are open about where we use AI and label AI-generated content where necessary.
+    daten: We enter confidential data and personal data only into approved systems.
+    fairness: We make sure that AI does not put anyone at an unjustified disadvantage.
+    sicherheit: We protect AI systems like other important information systems.
+    recht: We comply with the legal and contractual requirements for AI.
+    freigabe: New AI tools are reviewed and approved before use.
+    melden: Anyone who sees a problem with AI reports it and suffers no disadvantage as a result.
+  leitlinienBezug:
+    informationssicherheit: Information security
+    datenschutz: Data protection
+    qualitaet: Quality
+    personal: HR and employment law
+    beschaffung: Procurement
+    verhaltenskodex: Code of conduct
+    nachhaltigkeit: Sustainability
+  leitlinieAbgleich:
+    angepasst: amended
+    verweis: refers to the AI policy
+    keine: no change needed
+    nicht-vorhanden: does not exist
+  klauselStand:
+    ja: agreed
+    nein: missing
+    offen: open
+    nicht-noetig: not needed
+  keineMessung:
+    kein-anlass: no occasion
+    erste-offen: first measurement open
+  sollErreicht:
+    ja: yes
+    teilweise: partly
+    nein: no
+  zielStatus:
+    geplant: planned
+    in-arbeit: in progress
+    erreicht: achieved
+    nicht-erreicht: not achieved
+    verworfen: dropped
+  mbEntscheid:
+    verbesserung: Improvement
+    aenderung: Change to the AIMS
+    ressourcen: Resources
+    ziele: Objectives
+    restrisiko: Residual risk
+  rollenBereich:
+    konformitaet: Ensures the standard is met
+    berichterstattung: Reports to management
+    risikomanagement: Risk management
+    folgenabschaetzung: Impact assessments
+    inventar: AI inventory
+    daten: Data for AI
+    lieferanten: Suppliers
+    menschliche-aufsicht: Human oversight
+    recht: Law and AI Act
+    schulung: Training and competence
+    vorfall: Incidents and reports
+    entwicklung: AI development
+    informationssicherheit: Information security
+    datenschutz: Data protection
+    internes-audit: Internal audit
+    dokumentenlenkung: Document control
+  meldekanal:
+    vorgesetzte: Line manager
+    aims: AIMS lead
+    whistleblowing: Whistleblowing office
+    postfach: Email mailbox
+    formular: Intranet form
+  rhythmus:
+    vierzehntaeglich: every two weeks
+    monatlich: monthly
+    quartalsweise: quarterly
+    halbjaehrlich: every six months
+    jaehrlich: annually
+  glTakt:
+    vierzehntaeglich: every two weeks (recommended during the project)
+    monatlich: monthly
+    quartalsweise: quarterly
+    halbjaehrlich: every six months
+  inventarQuellen:
+    softwareliste: Software list or asset inventory
+    lizenzen: Licences and subscriptions
+    einkauf: Purchase orders and contracts
+    netzwerk: Firewall or proxy analysis
+    umfrage: Employee survey
+    fachbereiche: Interviews with business units
+    produktentwicklung: Product development
+    spesen: Expense and credit card statements
+  fachbereich:
+    geschaeftsleitung: Management
+    verkauf: Sales
+    einkauf: Purchasing
+    produktion: Production
+    entwicklung: Development and engineering
+    qualitaet: Quality
+    hr: Human resources
+    finanzen: Finance
+    it: IT
+    service: Service
+    marketing: Marketing
+    logistik: Logistics
+  kiTyp:
+    eingekauft: purchased (software or device, run in-house)
+    saas: cloud service (SaaS)
+    eigenbau: developed in-house
+    schatten: shadow AI (used without approval)
+  kiStatus:
+    erfasst: recorded
+    in-pruefung: under review
+    freigegeben: approved
+    eingeschraenkt: approved with restrictions
+    ausgesetzt: suspended (temporarily deactivated)
+    abgeloest: replaced
+    untersagt: prohibited
+  lebenszyklus:
+    idee: Idea
+    entwicklung: Development or procurement
+    test: Testing
+    betrieb: Operation
+    ausserbetrieb: Retired
+  automatisierung:
+    unterstuetzend: supports people who decide
+    teilautomatisiert: partly decides itself, a human checks
+    vollautomatisiert: decides without human review
+  freigabeKriterien:
+    datenschutz: Data protection
+    vertraulichkeit: Confidentiality and trade secrets
+    vertrag: Contract and terms of use
+    sicherheit: Information security
+    nutzen: Benefits and costs
+    aiact: AI Act classification
+    exportkontrolle: Export control
+  aiActRolle:
+    anbieter: Provider
+    betreiber: Deployer
+    einfuehrer: Importer
+    haendler: Distributor
+    produkthersteller: Product manufacturer
+    bevollmaechtigter: Authorised representative
+  risikoklasse:
+    offen: still open
+    verboten: prohibited practice (Art. 5)
+    hochrisiko-anhang-iii: high-risk under Annex III
+    hochrisiko-anhang-i: high-risk under Annex I (product)
+    transparenz: transparency obligations only (Art. 50)
+    minimal: minimal risk
+  anhangIii:
+    "1": "1 Biometrics"
+    "2": "2 Critical infrastructure"
+    "3": "3 Education and vocational training"
+    "4a": "4a Recruitment and applications"
+    "4b": "4b Decisions in employment relationships"
+    "5a": "5a Public services and benefits"
+    "5b": "5b Creditworthiness"
+    "5c": "5c Life and health insurance"
+    "5d": "5d Emergency calls and emergency services"
+    "6": "6 Law enforcement"
+    "7": "7 Migration and border control"
+    "8": "8 Justice and democratic processes"
+  transparenz:
+    "50-1": "Art. 50(1): people interact with AI (e.g. chatbot)"
+    "50-2": "Art. 50(2): AI generates text, images, audio or video"
+    "50-3": "Art. 50(3): emotion recognition or biometric categorization"
+    "50-4": "Art. 50(4): deep fakes or AI-generated text on matters of public interest"
+  art5:
+    keine: no prohibited practice
+    a: "a: manipulative techniques"
+    b: "b: exploitation of vulnerabilities"
+    ba: "ba: intimate images without consent"
+    bb: "bb: child sexual abuse material"
+    c: "c: social scoring"
+    d: "d: crime prediction based solely on profiling"
+    e: "e: facial recognition databases from untargeted scraping"
+    f: "f: emotion recognition in the workplace or education"
+    g: "g: biometric categorization by sensitive characteristics"
+    h: "h: real-time remote biometric identification"
+    unklar: unclear, legal review needed
+  anhangI:
+    nein: no product under Annex I
+    abschnitt-a: Annex I Section A
+    abschnitt-b: "Annex I Section B (e.g. machinery)"
+    offen: still open
+  anwendungsbereich:
+    a: "point (a): placing on the market or putting into service in the EU"
+    b: "point (b): deployer established or located in the EU"
+    c: "point (c): output used in the EU"
+  registrierung:
+    ja: registered
+    nein: not registered
+    nicht-noetig: not required
+  rollenwechsel:
+    nein: no change of role
+    a: point (a), own name or trademark
+    b: point (b), substantial modification
+    c: point (c), new purpose makes the system high-risk
+    offen: still open
+  zeitraum:
+    pro-jahr: per year
+    pro-quartal: per quarter
+    pro-monat: per month
+  risikoquelle:
+    daten: Data (quality, provenance, bias)
+    modell: Model or technology (errors, robustness)
+    fehlanwendung: Misuse by users
+    transparenz: lack of transparency or explainability
+    vertraulichkeit: Confidentiality and know-how
+    sicherheit: Information security
+    lieferant: Supplier or dependency
+    recht: Law and contracts
+    kompetenz: lack of competence
+    automatisierung: high level of automation
+    umwelt: Environment and resources
+  ebene:
+    organisation: Company
+    individuen: Individuals
+    gesellschaft: Society
+  neubeurteilung:
+    neues-system: new AI system
+    wesentliche-aenderung: significant change to the system or its use
+    vorfall: incident or complaint
+    rechtslage: new laws or deadlines
+    lieferantenwechsel: change of supplier or model
+    audit: audit finding
+  triageErgebnis:
+    kurz: screening is enough
+    voll: full impact assessment needed
+    offen: still open
+  betroffenArt: { direkt: directly affected, indirekt: indirectly affected }
+  behandlung:
+    vermeiden: avoid (do not carry out the activity)
+    vermindern: reduce (controls and actions)
+    teilen: share (e.g. contract, insurance)
+    tragen: retain deliberately
+    nutzen: exploit (for opportunities)
+  risikoStatus:
+    offen: open
+    in-behandlung: being treated
+    behandelt: treated
+    akzeptiert: residual risk accepted
+    geschlossen: closed
+  controlStatus:
+    offen: open
+    geplant: planned
+    teilweise: partly implemented
+    umgesetzt: implemented
+    wirksam: implemented and effective
+  nachweisArt:
+    dokument: Document
+    aufzeichnung: Record
+    protokoll: Minutes
+    vertrag: Contract
+    schulung: Training record
+    sonstiges: Other
+  massnahmeStatus:
+    offen: open
+    in-arbeit: in progress
+    erledigt: done
+    verworfen: rejected
+  prioritaet: { hoch: high, mittel: medium, tief: low }
+  herkunft:
+    risiko: Risk
+    audit: Audit
+    managementbewertung: Management review
+    pruefung: Check in the tool
+    checkliste: Checklist
+    aiact: AI Act
+    ziel: Objective
+    sonstige: Other
+    aenderung: Change to the AIMS
+  protokollInhalt:
+    eingaben: Inputs
+    ausgaben: Results
+    entscheide: Decisions and approvals
+    nutzende: Users and time
+    fehler: Errors and faults
+    aenderungen: Changes and updates
+  nutzungsregeln:
+    nur-freigegebene: Use only approved AI tools
+    keine-vertraulichen-daten: No confidential data in tools that are not approved
+    keine-personendaten: Personal data only in approved tools
+    ergebnisse-pruefen: Check results before using them
+    kennzeichnen: Label AI content shared externally where necessary
+    firmenkonten: Company accounts only, no private accounts
+    exportkontrolle: No export-controlled data in cloud tools outside the approved framework
+    melden: Report problems and errors
+  pruefstatus:
+    offen: not yet reviewed
+    in-pruefung: under review
+    geprueft: reviewed
+    mit-auflagen: reviewed with conditions
+    abgelehnt: rejected
+  bewusstseinFormate:
+    einfuehrung: Onboarding of new employees
+    e-learning: E-learning
+    intranet: Intranet or announcement
+    teamsitzung: Team meeting
+    merkblatt: Information sheet
+    bestaetigung: Written acknowledgement of the rules
+  kompetenzStatus: { offen: open, teilweise: partly met, erfuellt: met }
+  kiKompetenzZielgruppen:
+    alle: all employees
+    generativ: users of generative AI
+    aufsicht: people with an oversight role
+    entwicklung: Development
+    geschaeftsleitung: Management
+    einkauf: Purchasing
+  richtung: { intern: internal, extern: external }
+  dokumentStatus:
+    entwurf: Draft
+    in-pruefung: under review
+    freigegeben: approved
+    veraltet: obsolete
+  dokumentFreigabe:
+    geschaeftsleitung: Management
+    eigner: Document owner
+    aims: AIMS lead
+  aenderungsweg:
+    massnahmenliste: via the action list
+    managementbewertung: in the management review
+    aims-team: in the AIMS team with approval from management
+  auditMethode:
+    interviews: Interviews
+    dokumente: Document review
+    stichproben: Samples from registers and systems
+    begehung: On-site walkthrough
+  auditArt:
+    intern: internal audit
+    extern-stage1: Stage 1
+    extern-stage2: Stage 2
+    ueberwachung: Surveillance audit
+  feststellungQuelle:
+    audit: Audit
+    managementbewertung: Management review
+    vorfall: Incident
+    beinahe-vorfall: Near miss
+    pruefung: Check in the tool
+    meldung: Report
+  einstufung:
+    nk-schwer: major nonconformity
+    nk-leicht: minor nonconformity
+    beobachtung: Observation
+    verbesserung: Opportunity for improvement
+  meldepflicht:
+    ja: must be reported
+    nein: no reporting duty
+    nicht-noetig: check not needed
+  ursacheKi:
+    daten: Data
+    modell: Model
+    zweck: Use outside the purpose
+    kompetenz: Competence
+    lieferant: Supplier
+    prozess: Process
+  checklistenErgebnis:
+    konform: conforming
+    beobachtung: observation
+    nk-leicht: NC minor
+    nk-schwer: NC major
+    nicht-geprueft: not audited
+    nicht-pruefbar: not auditable yet, planned
+  meldungArt:
+    bedenken: Concern
+    rueckmeldung: Feedback
+    einspruch: Objection
+    beschwerde: Complaint
+  meldungHerkunft:
+    intern: internal
+    extern: external
+  meldungStatus:
+    offen: open
+    in-arbeit: in progress
+    erledigt: closed
+  feststellungStatus:
+    offen: open
+    in-arbeit: in progress
+    geschlossen: closed
+  verbesserungQuellen:
+    audit: Audits
+    managementbewertung: Management review
+    meldungen: Reports and complaints
+    vorfaelle: Incidents
+    kennzahlen: Metrics
+    mitarbeitende: Suggestions from employees
+    kunden: Customer feedback
+  stage1Unterlagen:
+    geltungsbereich: Scope
+    leitlinie: AI policy
+    rollen: Roles and responsibilities
+    inventar: AI inventory
+    risiko: Risk procedure and register
+    folgen: Impact assessments
+    soa: Statement of applicability
+    ziele: Objectives and metrics
+    audit: Internal audit report
+    managementbewertung: Management review minutes
+    nichtkonformitaeten: Nonconformity register
+    dokumente: Document register
+  monat:
+    januar: January
+    februar: February
+    maerz: March
+    april: April
+    mai: May
+    juni: June
+    juli: July
+    august: August
+    september: September
+    oktober: October
+    november: November
+    dezember: December
+  # Further entries
+  schwere:
+    "1": 1 minor
+    "2": 2 moderate
+    "3": 3 significant
+    "4": 4 severe
+  tarif:
+    gratis: free account
+    privat: personal or individual plan
+    business: business or team
+    enterprise: enterprise contract
+    eigenbetrieb: own operation
+  funktionStand:
+    an: "on"
+    aus: "off"
+  handlungsbefugnis:
+    informiert: informs
+    empfiehlt: recommends
+    bereitet-vor: prepares
+    fuehrt-begrenzt-aus: executes within limits
+    handelt-mehrstufig: acts in several steps
+  aufgabenart:
+    erzeugt-inhalte: generates content
+    klassifiziert: classifies or detects
+    prognostiziert: forecasts
+    empfiehlt: recommends or prioritizes
+    steuert: controls
+  entscheid:
+    einfuehren: Introduce an AI system
+    restrisiko: Accept a residual risk
+    ausnahme: Grant an exception
+    stoppen: Stop or suspend a system
+    ausserbetrieb: Retire a system
+  entscheidungstraeger:
+    eigner: System owner
+    risikoeigner: Risk owner
+    aufsicht: Person overseeing the system, or system owner
+    aims: AIMS lead
+    aims-eigner: AIMS lead with the system owner
+    aims-gl: AIMS lead with a member of top management
+    gl: Top management
+  rbNie:
+    personalentscheid: AI alone decides on hiring, dismissal, pay or credit of individuals
+    vertrauliche-daten: Confidential data is entered into AI services that are not approved
+    verbotene-praktiken: Practices prohibited by law, e.g. covert manipulation of people
+  rbNurGl:
+    erhebliche-wirkung: AI with a significant effect on customers, employees or other affected persons
+    handelt-ohne-bestaetigung: AI that acts in other systems without confirmation by a person
+    restrisiko-hoch: Residual risks above the acceptance threshold
+  rbAimsAllein:
+    tiefes-risiko: Sole approval of AI systems with low risk
+    mittleres-risiko: Approval of AI systems with medium risk together with the system owner
+    restrisiko-tief: Residual risks up to the acceptance threshold
+    ausnahme-befristet: Time-limited exceptions for systems with low risk, for three months at most
+  mitwirkende:
+    fachbereich: Business unit that uses the system
+    it: IT
+    datenschutz: Data protection
+    personal: Human resources (where personal data is involved)
+    recht: Legal or compliance
+    betroffene: Representatives of those affected, e.g. staff committee or customer advisory board
+    extern: External expert
+  wirksamkeitWie:
+    stichprobe: Sample of cases in operation
+    test: Test with typical and difficult cases
+    auswertung: Analysis of metrics or logs
+    audit: Internal audit
+    uebung: Exercise, e.g. switch-off or fallback tested
+  vertrauensmerkmal:
+    gueltig: Valid and reliable
+    sicher: Safe
+    geschuetzt: Secure and resilient
+    rechenschaft: Accountable and transparent
+    erklaerbar: Explainable and interpretable
+    datenschutz: Privacy-enhanced
+    fair: Fair, with harmful bias managed
+
+ui:
+  modus: Guide
+  weiter: Next
+  zurueck: Back
+  spaeter: Later
+  spaeter_hinweis: Saved for later. The page appears in the list of open items.
+  offene_punkte: Open items
+  ueberspringen: Skip
+  speichern: Save
+  etappe_abschliessen: Complete phase
+  etappe_status:
+    offen: open
+    in-arbeit: in progress
+    erledigt: done
+  zur_uebersicht: To overview
+  fortschritt: "{erledigt} of {gesamt} pages done"
+  seite_von: "Page {nummer} of {gesamt}"
+  dauer: "about {stunden} hours"
+  beteiligte: Who you need
+  ergebnis: What you end up with
+  ziel: Goal
+  warum_norm: Why the standard requires this
+  pflichtfeld: Required field
+  pflicht_fehlt: "Please fill in the required fields or choose ‘Later’."
+  hilfe:
+    titel: Help
+    warum: Why do we ask this?
+    beispiel: Sample answer
+    beispiel_quelle: From the sample project Muster Maschinenbau AG (fictitious)
+    fehler: Common mistakes and what auditors want to see
+    glossar: Terms
+    links: Further reading
+    norm: "ISO/IEC 42001, clause {abschnitt}"
+    norm_hinweis: The standard is available from SNV, DIN or ISO.
+    vorlage: "Kit template {id}"
+    leitfaden: "Guide, step {nummer}"
+    aiact: "AI Act, {artikel} (page {seite} in the enclosed PDF)"
+  als_vorlage: Use as a starting point
+  als_vorlage_hinweis: Copies the sample answer into your project. Then adapt it to your company.
+  mit_ki_vertiefen: Explore further with AI
+  mit_ki_hinweis: Copies a prompt with the current state of this page for the skill to your clipboard. No data is sent.
+  live_vorschau: Live preview
+  live_vorschau_hinweis: This is how your entries appear in the document.
+  vorschlag: Suggestion
+  vorschlag_uebernehmen: Accept suggestion
+  textbausteine: Text snippets
+  eintrag_neu: Add entry
+  eintrag_entfernen: Remove entry
+  eintrag_entfernen_frage: Do you really want to remove this entry?
+  keine_eintraege: No entries yet.
+  keine_passenden: No entry applies to this page at the moment. You can move on.
+  zeile_neu: Add row
+  person_neu: Add new person
+  person_waehlen: Select person
+  freigabe_von: Approved by
+  freigabe_am: Approved on
+  je_system: Per AI system
+  system_waehlen: Select AI system
+  fragebogen:
+    export: Export questionnaire for business units
+    import: Import completed questionnaire
+    hinweis: Send the questionnaire to the business units. After importing, check each row before it is added to the inventory.
+    import_ergebnis: "{anzahl} rows read, {neu} new, {doppelt} already present"
+    import_ergebnis_eins: "1 row read, {neu} new, {doppelt} already present"
+    uebernehmen: Add selected rows
+  checkliste:
+    titel: Checklist
+    erledigt: done
+    nachweis: Evidence or storage location
+    datum: Date
+    offen: "{anzahl} items open"
+    offen_eins: "1 item open"
+  pfad:
+    mit_isms: Route with ISMS
+    ohne_isms: Route without ISMS
+  modul:
+    ein: AI Act module switched on
+    aus: AI Act module switched off
+  fahrplan:
+    titel: Your roadmap
+    etappen: Phases
+    stunden_gesamt: "around {stunden} hours of work"
+    wochen: "{wochen} weeks until the target date"
+    kein_termin: Without a target date, we use the guideline figure from the guide.
+    knapp: The target date is tight. Plan more time or more support.
+  kalender:
+    titel: Annual calendar
+    faellig: due
+    ueberfaellig: overdue
+    erledigt: done
+    naechste: Upcoming tasks
+    oeffnen: Open task
+    abhaken: Mark as done
+  pruefung:
+    titel: Check before stage 1
+    starten: Start check
+    ampel:
+      gruen: Ready for stage 1
+      gelb: Ready, with notes
+      rot: Not ready yet
+    fehler: "{anzahl} errors"
+    fehler_eins: "1 error"
+    hinweise: "{anzahl} notes"
+    hinweise_eins: "1 note"
+    zum_fehler: Go to the issue
+    bericht: Generate stage 1 report
+    dokumente: Generate all documents
+  soa:
+    vorschlag_risiko: Suggested because of a risk
+    vorschlag_aiact: Suggested because of an AI Act obligation
+    filter_alle: all controls
+    filter_offen: open only
+    gruppe: Group
+  folgen:
+    kurzpruefung: Screening
+    voll: Full impact assessment
+    schwelle: At least one question answered yes. We recommend the full impact assessment.

@@ -1,0 +1,177 @@
+# Page texts for phase E2 context, interested parties and scope. Format: src/gefuehrt/FORMAT.md
+E2-einfuehrung:
+  titel: Context, interested parties and scope
+  frage: What affects your use of AI, who has expectations, and where are the boundaries of the management system?
+  warum: The standard wants your management system to fit your situation. So you first clarify the [[g:kontext|context of the organization]], the [[g:interessierte-partei|interested parties]] and your role; the [[g:geltungsbereich|scope]] follows from that.
+  fehler: Context analyses are often copied from another company and do not fit. Auditors check whether the issues and requirements later show up again in risks, objectives and [[g:control|controls]].
+E2-isms-bezug:
+  titel: Link to the ISMS
+  frage: How does the scope of the AI management system relate to the scope of your [[g:isms]]?
+  warum: With the same scope, you can extend the context analysis and list of interested parties from the ISMS instead of writing new ones. If the scopes differ, you record the differences.
+  fehler: An [[g:aims|AIMS]] that covers only part of the ISMS is allowed, but it needs clear interfaces. Auditors ask where the existing documents are kept and how they were extended.
+  felder:
+    meta.gefuehrt.antworten.ismsKontext.deckung:
+      label: Scope compared with the ISMS
+      hilfe: The same scope is the simplest case and the most common one in SMEs.
+    meta.gefuehrt.antworten.ismsKontext.ablage:
+      label: Location of the ISMS context analysis
+      hilfe: Path or document ID, e.g. ‘ISMS-02 Context, SharePoint/ISMS’.
+E2-grundlagen:
+  titel: Basics
+  frage: What are your organization's main processes, and how is IT organized?
+  warum: Without an ISMS, there is often no overview of processes and IT. You need one to describe the boundaries and interfaces of the management system and to link AI systems to processes.
+  fehler: A process list that is too detailed is a distraction. Five to ten main processes are enough. Auditors want to understand in which workflows AI plays a part.
+  felder:
+    meta.gefuehrt.antworten.grundlagen.prozesse:
+      label: Main processes
+      hilfe: One process per line, e.g. ‘Quotation and order’, ‘Design’, ‘Manufacturing’, ‘Service’.
+    meta.gefuehrt.antworten.grundlagen.organigramm:
+      label: Location of the organization chart
+      hilfe: Path or intranet link.
+    meta.gefuehrt.antworten.grundlagen.itBetrieb:
+      label: How IT is organized
+      hilfe: In-house IT, an external IT supplier or a mix; important cloud services.
+E2-themen:
+  titel: What influences your use of AI?
+  frage: Which issues outside and inside your organization affect how you deal with AI?
+  warum: Laws, customer expectations, skills shortages or your own culture determine which risks and objectives matter. If you know these issues, you can focus the management system where it helps.
+  fehler: 'A list of general buzzwords (‘digitalization’, ‘competition’) helps nobody. Auditors want to see concrete issues with an impact, e.g. ‘Customers in the automotive industry ask for evidence on our use of AI’.'
+  felder:
+    organisation.kontext.themen:
+      label: Issues
+      hilfe: At least three external and three internal issues.
+    organisation.kontext.themen.art:
+      label: Type
+      hilfe: External issues come from outside (market, law); internal ones come from within the organization (culture, resources).
+    organisation.kontext.themen.kategorie:
+      label: Category
+      hilfe: Helps to sort the list and spot gaps.
+    organisation.kontext.themen.beschreibung:
+      label: Issue
+      hilfe: One sentence, e.g. ‘From 2027, the AI Act sets obligations for AI used in recruitment’.
+    organisation.kontext.themen.auswirkung:
+      label: Impact on the AIMS
+      hilfe: What follows from it for the [[g:aims|AIMS]], e.g. ‘Impact assessment for the pre-selection of applications’.
+E2-klima:
+  titel: Climate change
+  frage: Is climate change a relevant issue for how you deal with AI?
+  warum: ISO/IEC 42001 requires you to answer this question explicitly in 4.1 and 4.2 (as does ISO/IEC 27001 since Amd 1:2024). With AI, it can concern the energy use of data centres, for example, or AI used to optimize energy.
+  fehler: The answer ‘no’ is allowed, but it needs a reason. Auditors check that the question was asked and answered in a way others can follow.
+  felder:
+    organisation.kontext.klimawandelRelevant:
+      label: Climate change relevant
+      hilfe: Yes, if customers, laws or your use of AI have a noticeable link to the climate.
+    organisation.kontext.klimawandelBegruendung:
+      label: Reason
+      hilfe: Two or three sentences, e.g. "We use AI almost only as a cloud service. Customers ask about the carbon footprint of our machines; the AI for maintenance forecasts reduces energy use."
+E2-zweck:
+  titel: What you use AI for
+  frage: What do you want to achieve with AI?
+  warum: The standard requires you to know the purpose of your AI systems. The answer goes into the AI policy and later helps you to formulate objectives and opportunities.
+  fehler: Without a clear purpose, nobody can judge whether a system does the right thing. Auditors expect the purpose of each system to be in the inventory and to match the AI policy.
+  felder:
+    meta.gefuehrt.antworten.kiZweck.ziele:
+      label: Purposes
+      hilfe: You can pick more than one.
+    meta.gefuehrt.antworten.kiZweck.text:
+      label: In your own words
+      hilfe: One or two sentences for the AI policy, e.g. "AI takes routine work off our hands and improves the quality of our machines. Decisions about people stay with people."
+E2-rollen-iso:
+  titel: Your role with AI
+  frage: Which roles does your organization take on in relation to AI?
+  warum: An organization can use AI, develop it and supply it to customers all at once. Each role brings different obligations and different [[g:control|controls]]. In phase 5, you also determine the role for each system.
+  fehler: 'Often only ‘user’ is given, even though the organization builds AI into its own products. Auditors compare the roles with the inventory.'
+  felder:
+    organisation.rollenIso:
+      label: Roles
+      hilfe: One line per role.
+    organisation.rollenIso.rolle:
+      label: Role
+      hilfe: The terms come from ISO/IEC 22989.
+    organisation.rollenIso.bemerkung:
+      label: For what
+      hilfe: e.g. ‘[[g:anbieter]] of the maintenance forecast in our machines’.
+E2-parteien:
+  titel: Interested parties
+  frage: Who has expectations of how you deal with AI, and which of them do you take on board?
+  warum: Customers, employees, authorities or suppliers set requirements, for example from contracts or laws. The standard wants you to decide for each requirement whether your management system will address it.
+  fehler: Parties without requirements, or requirements without a decision, are a common finding. Auditors want to see a ‘yes’ or ‘no’ with a reason for each requirement.
+  felder:
+    name:
+      label: Party
+      hilfe: e.g. ‘Automotive customers’, ‘Employees’, ‘Staff committee’.
+    art:
+      label: Internal or external
+      hilfe: Internal parties include employees and management, for example.
+    anforderungen:
+      label: Requirements
+      hilfe: One line per expectation.
+    anforderungen.text:
+      label: Requirement
+      hilfe: e.g. ‘No customer drawings in public AI services’.
+    anforderungen.quelle:
+      label: Source
+      hilfe: Where the requirement comes from.
+    anforderungen.adressiert:
+      label: Does the AIMS address it?
+      hilfe: Yes, no or still open, depending on whether the [[g:aims|AIMS]] takes the requirement on. The check reports open entries.
+    anforderungen.begruendung:
+      label: Reason
+      hilfe: Needed above all for ‘no’.
+E2-grenzen:
+  titel: Scope
+  frage: Which parts of your organization does the AI management system cover?
+  warum: The [[g:geltungsbereich|scope]] sets out what the certificate refers to. It is based on the context and the requirements and names the organization, locations and technology.
+  fehler: A scope that is too narrow and leaves out sensitive AI systems stands out in the audit. Auditors check whether every AI system in the inventory is included or left out with a reason.
+  felder:
+    organisation.geltungsbereich.beschreibung:
+      label: Scope in one sentence
+      hilfe: e.g. "Development, procurement and use of AI systems in all areas of Muster Maschinenbau AG and its sales company".
+    organisation.geltungsbereich.grenzenOrganisation:
+      label: Organizational boundaries
+      hilfe: Which companies and departments are included.
+    organisation.geltungsbereich.grenzenStandorte:
+      label: Locations
+      hilfe: Which locations are included.
+    organisation.geltungsbereich.grenzenTechnik:
+      label: Technical boundaries
+      hilfe: e.g. "all AI systems in the inventory, including those in products; production network (OT) included".
+    organisation.geltungsbereich.keineAusschluesseBestaetigt:
+      label: "No exclusions"
+      hilfe: "Confirm explicitly that nothing is excluded from the scope. Otherwise record exclusions with a justification."
+E2-schnittstellen:
+  titel: Interfaces and exclusions
+  frage: Where does the management system touch other areas or companies, and what do you exclude?
+  warum: Interfaces show where responsibility is handed over, for example to an IT supplier or the parent company. Exclusions are allowed if they have a reason and do not weaken effectiveness.
+  fehler: Exclusions without a reason, or with just ‘not relevant’, are not enough. Auditors want to understand why the exclusion is justifiable.
+  felder:
+    organisation.geltungsbereich.schnittstellen:
+      label: Interfaces
+      hilfe: e.g. "IT operations by an external partner, data protection by an external data protection officer, HR software as a cloud service".
+    organisation.geltungsbereich.ausschluesse:
+      label: Exclusions
+      hilfe: Leave empty if there are none.
+    organisation.geltungsbereich.ausschluesse.was:
+      label: What is excluded
+      hilfe: e.g. ‘Subsidiary in Poland’.
+    organisation.geltungsbereich.ausschluesse.begruendung:
+      label: Reason
+      hilfe: e.g. ‘does not use AI and has its own IT; to be reviewed in 2027’.
+E2-prozesse:
+  titel: Processes of the management system
+  frage: Which processes belong to your AI management system?
+  warum: The standard requires you to define the processes of the management system and know how they work together. This becomes the process map in the [[g:aims|AIMS]] overview.
+  fehler: If a process such as approving new AI tools is missing, [[g:schatten-ki|shadow AI]] appears. Auditors ask you to walk them through a process using an example.
+  felder:
+    meta.gefuehrt.antworten.aimsProzesse:
+      label: Processes
+      hilfe: All suggested processes are standard for certification. Only deselect one if you have a good reason. You maintain owner, maturity and flow per process in the Processes area; it takes over the processes chosen here as a suggestion. Add processes missing here there as own processes (PE-01 onwards).
+E2-freigabe:
+  titel: Approval of the scope
+  frage: Has management approved the scope?
+  warum: The scope commits the organization towards the [[g:zertifizierungsstelle|certification body]]. That is why management approves it.
+  fehler: If the scope changes later, it needs a new approval. Auditors compare the approved version with what is in the certification application.
+  felder:
+    organisation.geltungsbereich.freigabe:
+      label: Approval
+      hilfe: Member of management and date.

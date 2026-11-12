@@ -1,0 +1,23 @@
+// Englische Freitexte der Felder ab rc.3 (rc3.mts) als Paare [Deutsch, Englisch]. Gleiches Format wie texte-en-rc2.mts.
+export const TEXTE_RC3: readonly (readonly [string, string?])[] = [
+  ['Wartungsvertrag und Release Notes 3.3 von Optikwerk Vision Systems', 'Maintenance contract and release notes 3.3 of Optikwerk Vision Systems'],
+  ['Produktbedingungen und Datenschutzhinweise zu Microsoft 365 Copilot, Einstellungen im Verwaltungscenter des Mandanten', 'Product terms and privacy notes for Microsoft 365 Copilot, settings in the admin centre of the tenant'],
+  ['Geschäftsbedingungen für Team-Arbeitsbereiche und Einstellungen der Verwaltungskonsole', 'Business terms for team workspaces and settings of the admin console'],
+  ['Modellkarte und Seite zum Lebenszyklus der Modelle der Cloud-KI-Plattform (L-004)', 'Model card and model life cycle page of the cloud AI platform (L-004)'],
+  ['Nutzungsbedingungen des Webdienstes', 'Terms of use of the web service'],
+  ['Vertrag und Leistungsbeschreibung der HR-SaaS mit Nachtrag zur Funktion «Kandidaten-Ranking»', 'Contract and service description of the HR SaaS with the addendum on the ‘candidate ranking’ function'],
+  ['Veralteter Suchindex lässt den Assistenten abgelöste Ersatzteile empfehlen', 'Outdated search index makes the assistant recommend superseded spare parts'],
+  ['Der Suchindex des Ersatzteil-Assistenten wird nachts aus dem Ersatzteilkatalog aufgebaut. Fällt der Lauf aus oder bleibt ein gelöschter Eintrag im Index, empfiehlt der Assistent abgelöste Teile oder alte Preise, und die Antwort wirkt trotzdem stimmig.', 'The search index of the spare parts assistant is built from the spare parts catalogue every night. If the run fails or a deleted entry remains in the index, the assistant recommends superseded parts or old prices, and the answer still seems consistent.'],
+  ['Index und Katalog werden in getrennten Abläufen gepflegt; ein Ausfall des nächtlichen Laufs fällt nur in den Protokollen der Plattform auf.', 'Index and catalogue are maintained in separate processes; a failure of the nightly run only shows in the logs of the platform.'],
+  ['Falsche Bestellungen von Kunden, Rücksendungen und Aufwand im Service; bei sicherheitsrelevanten Teilen falscher Ersatz.', 'Wrong orders by customers, returns and effort in service; for safety-relevant parts, wrong replacements.'],
+  ['Täglicher Abgleich der Teilenummern mit dem ERP (M-031), Stichproben der Antworten durch die Redaktion Ersatzteilkatalog.', 'Daily reconciliation of part numbers with the ERP (M-031), samples of answers by the spare parts catalogue editorial team.'],
+  ['Produktbedingungen zu Microsoft 365 Copilot und Einstellungen im Verwaltungscenter, geprüft durch Mittelland Informatik', 'Product terms for Microsoft 365 Copilot and settings in the admin centre, checked by Mittelland Informatik'],
+  ['Release Notes und Leistungsbeschreibung des ERP-Anbieters', 'Release notes and service description of the ERP provider'],
+  ['Lizenzvertrag und Versionshinweise der CAM-Software', 'Licence agreement and version notes of the CAM software'],
+  ['Nutzungsbedingungen des Dienstes', 'Terms of use of the service'],
+  ['Zusammenfassungen und Abschriften aus Copilot sind schlechter geschützt als die Quelle', 'Summaries and transcripts from Copilot are less protected than the source'],
+  ['Copilot fasst Besprechungen, Mails und Zeichnungsunterlagen zusammen. Die Zusammenfassungen landen in allgemeinen Teams-Kanälen oder in Mails an Lieferanten und werden nicht gelöscht, wenn die Kundenunterlagen nach Projektende gelöscht werden.', 'Copilot summarizes meetings, e-mails and drawing documents. The summaries end up in general Teams channels or in e-mails to suppliers and are not deleted when the customer documents are deleted after the end of the project.'],
+  ['Für Abschriften und Zusammenfassungen gibt es keine eigene Ablage; die Klassifikation der Quelle geht beim Kopieren verloren.', 'There is no dedicated storage for transcripts and summaries; the classification of the source is lost when copying.'],
+  ['Vertrauliche Kundenangaben bleiben nach Projektende verfügbar oder erreichen Personen ohne Berechtigung; Löschpflichten gegenüber Kunden werden verfehlt.', 'Confidential customer information remains available after the end of the project or reaches people without authorization; deletion obligations towards customers are missed.'],
+  ['Regeln zur KI-Nutzung mit Datenklassen (D-15), Aufbewahrungsfristen in M365 für Projektordner.', 'Rules on AI use with data classes (D-15), retention periods in M365 for project folders.'],
+];

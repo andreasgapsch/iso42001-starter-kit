@@ -1,0 +1,56 @@
+# Diagrammansicht (AIMS-Manager/Diagrammansicht.html): optionale Seite, die .drawio-Dateien offline anzeigt.
+# Gebaut von scripts/diagrammansicht.mts; die Texte gehen als Datenblock in die Seite, DE zusätzlich ins Markup.
+seitentitel: "Diagrammansicht, ISO/IEC 42001 Starter-Kit"
+sprung: Zur Diagrammansicht springen
+marke_name: Diagrammansicht
+marke_von: ISO/IEC 42001 Starter-Kit
+sprache_titel: Sprache
+sprache_de: Deutsch
+sprache_en: English
+theme_titel: Darstellung
+theme_hell: Hell
+theme_dunkel: Dunkel
+theme_system: System
+titel: Diagramme ansehen
+lead: "Öffnen Sie eine Diagrammdatei im Format .drawio, zum Beispiel einen Prozess, den Sie aus dem AIMS-Manager exportiert haben. Die Ansicht läuft ohne Internet und zeigt die Datei nur an; ändern können Sie das Diagramm hier nicht."
+ablage_titel: Diagrammdatei öffnen
+waehlen: Datei wählen
+ablegen: oder die Datei hierher ziehen
+ablage_aktiv: Datei loslassen, um sie zu öffnen
+status_vorbereiten: Die Ansicht wird vorbereitet.
+status_eine_seite: "«{datei}» geöffnet, eine Seite."
+status_seiten: "«{datei}» geöffnet, {anzahl} Seiten."
+status_seiten_eins: "«{datei}» geöffnet, 1 Seite."
+status_entfernt: "Nicht angezeigt, weil die Ansicht offline bleibt: {anzahl} Verweise ins Internet (Bilder, Schriften oder Formeln)."
+status_entfernt_eins: "Nicht angezeigt, weil die Ansicht offline bleibt: 1 Verweis ins Internet (Bild, Schrift oder Formel)."
+fehler_format: "«{datei}» ist keine lesbare Diagrammdatei. Erwartet wird eine Datei im Format .drawio."
+fehler_gross: "«{datei}» ist grösser als {mb} MB und wird nicht geöffnet."
+fehler_dtd: "«{datei}» enthält eine Dokumenttyp-Deklaration oder eigene Entitäten. Solche Dateien öffnet die Ansicht aus Sicherheitsgründen nicht."
+fehler_umfang: "«{datei}» ist zu umfangreich (entpackt über {mb} MB, über {seiten} Seiten oder über {formen} Formen je Seite) und wird nicht geöffnet."
+fehler_zellen: "«{datei}» enthält doppelte Kennungen oder Formen, die sich im Kreis gegenseitig enthalten. Die Ansicht würde daran hängen bleiben und öffnet die Datei nicht. Öffnen Sie sie in draw.io und speichern Sie sie dort neu."
+fehler_browser: "Dieser Browser kann die Ansicht nicht starten. Verwenden Sie eine aktuelle Version von Chrome, Edge, Firefox oder Safari."
+fehler_start: "Die Ansicht konnte nicht gestartet werden: {meldung}"
+link_blockiert: "Links auf Ziele ausserhalb der Datei öffnet die Ansicht nicht: {ziel}"
+leiste_label: Ansicht steuern
+seite_label: Seite
+seite_zurueck: Vorherige Seite
+seite_weiter: Nächste Seite
+seite_nummer: "Seite {nummer}"
+zoom_label: Zoom
+zoom_aus: Verkleinern
+zoom_ein: Vergrössern
+zoom_einpassen: Einpassen
+zoom_original: Originalgrösse
+ansicht_label: "Diagramm «{datei}», nur Ansicht"
+hinweis_titel: Gut zu wissen
+hinweise:
+  - "Die Datei bleibt auf Ihrem Rechner. Die Ansicht sendet nichts und lädt nichts aus dem Internet."
+  - "Bilder, Schriften und Formenbibliotheken aus dem Internet sowie Formeln zeigt die Ansicht nicht an. Diagramme aus dem Kit brauchen nichts davon."
+  - "Links auf andere Seiten des Diagramms funktionieren; Links ins Internet öffnet die Ansicht nicht."
+  - "Komprimierte und unkomprimierte .drawio-Dateien werden angezeigt. Bearbeiten können Sie Diagramme im AIMS-Manager oder in einem Diagrammprogramm, das .drawio-Dateien öffnet."
+ohne_skript: Die Diagrammansicht braucht JavaScript. Erlauben Sie Skripte für diese Datei oder öffnen Sie sie in einem anderen Browser.
+fuss_namensnennung: "ISO/IEC 42001 Starter-Kit von Andreas Gapsch, KMU-CIO, kmu-cio.ch"
+fuss_viewer: "Diese Ansicht verwendet den unveränderten Viewer von draw.io (viewer-static {viewer_version}, Apache License 2.0) mit den darin enthaltenen Bibliotheken DOMPurify, pako, Rough.js, spin.js und regenerator-runtime."
+fuss_marke: "draw.io ist eine eingetragene Marke von draw.io Ltd. Diese Ansicht ist nicht von draw.io Ltd oder JGraph erstellt, geprüft oder gebilligt."
+fuss_lizenzen: Lizenztexte der Diagrammansicht
+fuss_start: Zur Startseite des Kits

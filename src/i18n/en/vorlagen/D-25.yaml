@@ -1,0 +1,100 @@
+# D-25 Certification roadmap
+hinweis_umfang: "This guide shows the path from an established AIMS to the certificate. It does not replace the rules of your certification body; ask them about the process, deadlines and documents."
+einleitung: "Certification to ISO/IEC 42001 is confirmation by an independent body that the AI management system meets the standard and works. It does not check whether an individual AI system complies with the law."
+einleitung_firma: "This roadmap shows how {firma} has its AI management system certified: status of the prerequisites, chosen body, procedure, handling of findings, cycle, evidence and schedule. Certification confirms the management system, not the legal compliance of individual AI systems."
+nachweise_titel_firma: Evidence for each clause
+nachweise_text_firma: "For each clause: where the evidence is kept in our AIMS."
+zeit_titel_firma: Schedule
+abschnitte:
+  voraussetzungen: Prerequisites before stage 1
+  stelle: Choosing a certification body
+  ablauf: How stage 1 and stage 2 work
+  feststellungen: Findings of the certification body
+  zyklus: Three-year cycle
+  nachweise: What the auditor wants to see
+  haeufig: The five most common audit findings
+  zeit: Realistic timeframes
+  nist: NIST AI RMF
+voraussetzungen_kopf: [Prerequisite, Status, Evidence]
+voraussetzungen:
+  - ["AIMS implemented and in operation, with first records from measurement, internal audit and management review", "D-00 to D-17, D-26, D-27"]
+  - ["Scope, policy and statement of applicability approved", "D-02, D-03, D-11"]
+  - ["At least one internal audit covering all clauses and applicable controls; a supplementary audit after the management review checks 9.3 and A.2.4", "D-20"]
+  - ["At least one management review after the internal audit", "D-21"]
+  - ["Findings from the internal audit and management review dealt with, causes analysed", "D-22"]
+stand:
+  erfuellt: met
+  offen: open
+  audit: "conducted on {datum}"
+  audit_ergaenzung: "conducted on {datum}; supplementary audit {audit} on {geplant} re-checks {anzahl} checkpoints ({punkte})"
+  audit_ergaenzung_eins: "conducted on {datum}; supplementary audit {audit} on {geplant} re-checks 1 checkpoint ({punkte})"
+  audit_luecken: "conducted on {datum}, but {anzahl} checkpoints without a result ({punkte}); not met"
+  audit_luecken_eins: "conducted on {datum}, but 1 checkpoint without a result ({punkte}); not met"
+  bewertung: "conducted on {datum}"
+  feststellungen: "{anzahl} in progress ({details})"
+  einstufung:
+    nk-schwer: major NC
+    nk-leicht: minor NC
+    beobachtung: observation
+    verbesserung: improvement
+  controls: "{umgesetzt} of {gesamt} controls implemented"
+  controls_rmf: "{umgesetzt} of {gesamt} additional controls NIST AI RMF"
+  platzhalter: "met / open"
+stelle_liste:
+  - "**Accreditation:** we choose a body accredited for ISO/IEC 42001. Certification bodies are accredited to ISO/IEC 17021-1 and, for ISO/IEC 42001, also meet the requirements of ISO/IEC 42006. In Switzerland, accreditation is granted by the Swiss Accreditation Service (SAS), in Germany by DAkkS and in Austria by Akkreditierung Austria. We check the scope of the accreditation in the public register."
+  - "**Competence:** ISO/IEC 42006 sets out the competence that bodies and audit teams need for AI management systems. We ask about the AI experience of the proposed team and its knowledge of our industry."
+  - "**Compare quotations:** we obtain two or three quotations and compare audit days for stage 1, stage 2 and surveillance, travel costs, the share of remote work, language, dates and the costs over the whole cycle."
+  - "**With an ISMS:** a combined audit with ISO/IEC 27001 at the same body saves audit days, because clauses 4 to 10 are audited together."
+# Company document with a chosen body (instead of quotations and ‘With an ISMS’)
+stelle_titel_gewaehlt: Certification body
+stelle_gewaehlt: "**Chosen body:** {stelle}."
+stelle_akkreditiert: "**Accreditation:** the body is accredited for ISO/IEC 42001. Certification bodies are accredited to ISO/IEC 17021-1 and, for ISO/IEC 42001, also meet the requirements of ISO/IEC 42006; in Switzerland, accreditation is granted by the Swiss Accreditation Service (SAS). We have checked the scope of the accreditation in the public register."
+stelle_kombiniert: "**Combined audit:** the body audits ISO/IEC 27001 and ISO/IEC 42001 together; clauses 4 to 10 are audited jointly."
+stelle_isms_firma: "**Combined audit:** a combined audit with ISO/IEC 27001 at the same body saves audit days, because clauses 4 to 10 are audited together."
+stage1_titel: "Stage 1: document review and readiness"
+stage1_liste:
+  - "The body reviews the scope, policy, risk and impact assessment procedures, statement of applicability, internal audit and management review."
+  - "It establishes whether the AIMS is ready and plans stage 2. We resolve open points from the report before stage 2; the body sets the interval."
+stage2_titel: "Stage 2: effectiveness in practice"
+stage2_liste:
+  - "The body checks whether the AIMS is applied as described: interviews with top management, the AIMS lead, system owners and users."
+  - "It takes samples of AI systems and follows them through: inventory entry, AI risk assessment, impact assessment, approval, monitoring, supplier, records."
+feststellungen_liste:
+  - "**Major nonconformity:** a requirement has not been implemented, or the system does not work in one area. The certificate is issued only once the correction has been demonstrated."
+  - "**Minor nonconformity:** a single gap in an otherwise effective process. An action plan is usually sufficient; the body checks implementation at the next audit."
+  - "**Deadlines and format** of the action plan are set by the body. We record every finding in D-22 with cause, corrective action and effectiveness check."
+zyklus_text: "The certificate is valid for three years. In each of the two following years, a surveillance audit checks part of the AIMS. Recertification follows before expiry. The same order every year works well: internal audit, management review, external audit."
+nachweise_text: "For each clause and for important controls: which evidence is expected and in which document it is produced."
+nachweise_kopf: [No., Topic, Evidence in the AIMS]
+controls_kopf: [Control, Topic, What the auditor looks for]
+wichtige_controls: [A.2.2, A.3.3, A.4.2, A.5.3, A.6.2.6, A.6.2.8, A.8.4, A.9.2, A.10.3]
+haeufig_hinweis: "Practical observation based on published experience reports from consulting and certification firms. The order is not a statistic."
+haeufig_kopf: [Finding, How to avoid it]
+haeufig:
+  - ["AI inventory and scope incomplete, especially for AI in purchased software and cloud services", "Compile the inventory with a questionnaire to all teams, look for shadow AI, include embedded AI features (D-10)"]
+  - ["Risk assessment in general terms rather than per system, without acceptance of residual risks and without triggers for reassessment", "Assess risks for each AI system, accept residual risks with name and date, define triggers in D-06 (D-07)"]
+  - ["Impact assessment missing or incomplete; exclusions in the statement of applicability without justification", "Screening for every system, full impact assessment above the threshold (D-09); justify every exclusion (D-11)"]
+  - ["Gap between policy and practice: no evidence of tests, logs, approvals or human oversight", "Name evidence with its storage location for each control and take our own samples before the audit (D-11, D-12)"]
+  - ["Weak internal audit, management review without all required inputs, corrections without root cause analysis", "Bring in an independent auditor (D-20), use an agenda with all required inputs (D-21), document cause and effectiveness (D-22)"]
+zeit_kopf: [Starting point, Until ready for stage 1, Until certificate]
+# Rows: 0 and 1 with an ISMS, 2 without an ISMS (company document: only the rows for its own path)
+zeit:
+  - ["With ISMS, small scope", "about 90 days", "6 to 12 months"]
+  - ["With ISMS, extended scope (several in-house developments, high risk, several companies)", "about 6 months", "9 to 15 months"]
+  - ["Without ISMS", "about 150 days", "12 to 18 months"]
+zeit_plan: "Our schedule: {termine}."
+zeit_termin: "{audit} on {datum}"
+zeit_audit:
+  extern-stage1: stage 1
+  extern-stage2: stage 2
+zeit_hinweis: "Indicative values from public sources and practice. They depend on size, the number and type of AI systems, in-house development, available time and the dates offered by the body. Before stage 2, a few months of operation with records are needed."
+zieltermin: "Target date for certification: {datum}."
+ziel_stage1: "Target date for stage 1 readiness (internal audit and management review complete): {datum}."
+# Modul NIST AI RMF
+nist_praefix_leer: "Only with the NIST AI RMF module."
+nist_aims: "the AIMS"
+nist_aims_zertifiziert: "the certified AIMS"
+nist_liste:
+  - "**No certification:** NIST does not certify, and there is no accredited certificate under the AI RMF. The correct statement is ‘aligned with the NIST AI RMF’, not ‘NIST certified’."
+  - "**Evidence for customers:** When customers ask about the AI RMF, we present the profile (N-01) and the coverage matrix (N-02): which subcategories {aims} covers and how the additional controls close the rest."
+  - "**Audit:** The additional controls RMF-xx are in the statement of applicability (D-11). The certification body checks them like other additional controls for implementation, not for conformity with the AI RMF."

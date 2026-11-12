@@ -1,0 +1,114 @@
+hinweis: "Fachliche Einschätzung von KMU-CIO, was bei gemeinsamer Führung von ISMS und AIMS zu beachten ist. Anforderungstext siehe ISO/IEC 42001 und ISO/IEC 27001, Abschnitte 4 bis 10. Die Normen sind bei SNV, DIN oder ISO zu beziehen."
+gemeinsam:
+  ja: "Gemeinsam: ein Prozess und ein Nachweis für beide Systeme."
+  teilweise: "Teilweise gemeinsam: gemeinsamer Rahmen, KI-Inhalte sind zu ergänzen."
+abschnitte:
+  K-4.1:
+    titel: "Umfeld und Rolle der Organisation"
+  K-4.2:
+    titel: "Anspruchsgruppen und ihre Erwartungen"
+  K-4.3:
+    titel: "Geltungsbereich festlegen"
+  K-4.4:
+    titel: "Managementsystem aufbauen"
+  K-5.1:
+    titel: "Engagement der Geschäftsleitung"
+  K-5.2:
+    titel: "Leitlinie der Geschäftsleitung"
+  K-5.3:
+    titel: "Rollen und Befugnisse"
+  K-6.1.1:
+    titel: "Risiken und Chancen einplanen"
+  K-6.1.2:
+    titel: "Risiken beurteilen"
+  K-6.1.3:
+    titel: "Risiken behandeln"
+  K-6.1.4:
+    titel: "Folgenabschätzung für KI-Systeme"
+  K-6.2:
+    titel: "Ziele und deren Planung"
+  K-6.3:
+    titel: "Änderungen planen"
+  K-7.1:
+    titel: "Ressourcen bereitstellen"
+  K-7.2:
+    titel: "Kompetenz sicherstellen"
+  K-7.3:
+    titel: "Bewusstsein schaffen"
+  K-7.4:
+    titel: "Kommunikation planen"
+  K-7.5:
+    titel: "Dokumente und Aufzeichnungen lenken"
+  K-8.1:
+    titel: "Betrieb planen und steuern"
+  K-8.2:
+    titel: "Risikobeurteilung durchführen"
+  K-8.3:
+    titel: "Risikobehandlung umsetzen"
+  K-8.4:
+    titel: "Folgenabschätzung durchführen"
+  K-9.1:
+    titel: "Messen und bewerten"
+  K-9.2:
+    titel: "Interne Audits"
+  K-9.3:
+    titel: "Bewertung durch die Geschäftsleitung"
+  K-10.1:
+    titel: "Laufend verbessern"
+  K-10.2:
+    titel: "Abweichungen korrigieren"
+hinweise:
+  kontext-klima: |
+    Eine gemeinsame Kontextanalyse genügt, wenn sie einen eigenen Teil zu KI enthält. Neu für das AIMS sind die Rolle der Organisation (etwa Anbieter, Produzent oder Kunde von KI) und der Zweck der KI-Systeme. ISO/IEC 42001:2023 (Abschnitte 4.1 und 4.2) und ISO/IEC 27001 seit Amd 1:2024 verlangen beide, dass die Organisation beurteilt, ob der Klimawandel für sie ein relevantes Thema ist. Ein begründeter Entscheid gilt für beide Systeme.
+  parteien-ki: |
+    Das Register der interessierten Parteien wird gemeinsam geführt. Für KI kommen meist Betroffene von KI-Entscheiden, Aufsichtsbehörden nach AI Act und Anbieter von Modellen hinzu. Je Anforderung wird festgehalten, ob sie über das ISMS, das AIMS oder beide behandelt wird. In beiden Normen gehören auch mögliche Anforderungen zum Klimawandel dazu (bei ISO/IEC 27001 seit Amd 1:2024).
+  geltung-getrennt: |
+    ISMS und AIMS dürfen unterschiedliche Geltungsbereiche haben, etwa wenn nur ein Geschäftsbereich KI einsetzt. Beide Geltungsbereiche stehen im selben Dokument, mit Überschneidungen und Schnittstellen. Für das AIMS gehören die erfassten KI-Systeme und die Rolle der Organisation in die Beschreibung.
+  ein-system: |
+    Ein integriertes Managementsystem mit einer Prozesslandkarte genügt. KI-Prozesse wie Folgenabschätzung oder Freigabe neuer Werkzeuge werden als zusätzliche Prozesse eingezeichnet. So entstehen keine doppelten Abläufe für Audit, Bewertung oder Dokumentenlenkung.
+  fuehrung-gemeinsam: |
+    Die Geschäftsleitung bekennt sich einmal zu beiden Systemen, zum Beispiel im Projektauftrag und in der Managementbewertung. Wichtig ist, dass die KI-Ziele zur Strategie passen und die Ressourcen für das AIMS ausdrücklich freigegeben werden.
+  leitlinie-abgleich: |
+    Eine eigene KI-Leitlinie ist meist klarer als ein zusätzliches Kapitel in der Sicherheitsleitlinie. Beide Leitlinien verweisen aufeinander und werden gemeinsam überprüft (A.2.3). Wer die bestehende Leitlinie ergänzen will, nutzt das Ergänzungsblatt D-03-EB.
+  rollen-erweitern: |
+    Das bestehende Rollenmodell wird erweitert, nicht ersetzt. Neu sind die AIMS-Verantwortung, Eigner/in je KI-System und der Meldeweg für Bedenken. Übernimmt die für Informationssicherheit verantwortliche Person auch das AIMS, werden Zeitbudget und Stellvertretung festgehalten.
+  risiken-chancen: |
+    Der Planungsschritt für Risiken und Chancen kann gemeinsam laufen. Für das AIMS sind zusätzlich Zweck, Einsatzbereich und Rolle der KI-Systeme zu berücksichtigen. Chancen durch KI werden im selben Register erfasst wie die Risiken.
+  eine-methode: |
+    Beide Systeme verwenden eine einzige Methode mit denselben Skalen für Wahrscheinlichkeit und Auswirkung. Die Auswirkungskategorien werden um Folgen für Personen und Gesellschaft erweitert, die bei KI-Risiken zu betrachten sind. Informationssicherheitsrisiken bleiben im ISMS-Register, KI-Risiken stehen im KI-Register und werden bei Überschneidung verknüpft.
+  behandlung-soa: |
+    Die Behandlung folgt demselben Ablauf mit Massnahmenplan und Annahme der Restrisiken. Die Erklärung zur Anwendbarkeit wird je Norm gegen den eigenen Anhang A geführt, entweder als ein Dokument mit Spalte Rahmenwerk oder als zwei Listen. Zugeordnete 27001-Controls zeigen, wo Nachweise wiederverwendet werden.
+  folgenabschaetzung-neu: |
+    Die Folgenabschätzung für KI-Systeme hat im ISMS kein Gegenstück und muss neu aufgebaut werden. Gemeinsam ist nur der Rahmen: Auslöser, Freigabe und Ablage können sich am Risikoverfahren und an einer bestehenden Datenschutz-Folgenabschätzung orientieren. Die Ergebnisse fliessen in die KI-Risikobeurteilung ein.
+  ziele-getrennt: |
+    Ziele werden im selben Format und mit derselben Nachverfolgung geführt, aber je System ausgewiesen. KI-Ziele betreffen etwa Transparenz, Schulungsquote oder den Anteil geprüfter Ausgaben. Eine gemeinsame Liste mit der Spalte «ISMS, AIMS oder beide» genügt.
+  aenderungen-gemeinsam: |
+    Änderungen am Managementsystem werden über einen gemeinsamen Ablauf geplant. Bei jeder Änderung wird geprüft, ob sie das ISMS, das AIMS oder beide betrifft.
+  ressourcen-gemeinsam: |
+    Ressourcen für beide Systeme werden gemeinsam geplant und in der Managementbewertung bestätigt. Für das AIMS ist Zeit für Folgenabschätzungen und für die Überwachung der KI-Systeme ausdrücklich einzuplanen.
+  kompetenz-erweitern: |
+    Der Ablauf zur Sicherung der Kompetenz bleibt gleich. Ergänzt werden KI-Kompetenzen je Rolle, etwa zur Bewertung von Ausgaben oder zum Umgang mit Daten. Bei Bezug zur EU verlangt zudem der AI Act Massnahmen, die die KI-Kompetenz der beteiligten Personen unterstützen, aber kein bestimmtes Niveau (Art. 4).
+  bewusstsein-modul: |
+    Ein gemeinsames Bewusstseinsprogramm mit einer Lerneinheit zu KI genügt. Mitarbeitende müssen die KI-Leitlinie, ihren eigenen Beitrag und die Folgen von Regelverstössen kennen.
+  kommunikation-gemeinsam: |
+    Ein Kommunikationsplan für beide Systeme vermeidet Doppelspurigkeiten. Ergänzt werden Zeilen für KI-Themen, etwa die Information an Nutzende, Betroffene und Behörden.
+  dokumente-gemeinsam: |
+    Dokumentierte Information wird nach denselben Regeln gelenkt und in einem Register geführt. Ein Feld zeigt, ob ein Dokument für ISMS, AIMS oder beide gilt. Für KI kommen neue Dokumentarten wie Folgenabschätzungen und technische Dokumentationen hinzu.
+  betrieb-lebenszyklus: |
+    Die Steuerung des Betriebs kann gemeinsam beschrieben werden. Neu für das AIMS sind die Prozesse entlang des Lebenszyklus von KI-Systemen und die Steuerung eingekaufter KI-Leistungen. Änderungen an KI-Systemen laufen über den bestehenden Änderungsprozess.
+  beurteilung-zyklus: |
+    Risikobeurteilungen werden im selben Rhythmus und bei denselben Auslösern durchgeführt. Zusätzliche Auslöser für KI sind neue Systeme, Modellwechsel und neue Ergebnisse aus Folgenabschätzungen.
+  behandlung-umsetzen: |
+    Die Umsetzung der Massnahmen wird im selben Plan verfolgt. KI-Massnahmen werden mit dem jeweiligen KI-System verknüpft, damit die Restrisiken je System sichtbar bleiben.
+  folgenabschaetzung-durchfuehren: |
+    Auch die Durchführung der Folgenabschätzung hat kein Gegenstück im ISMS. Die Termine stehen im gemeinsamen Jahresplan, damit sie mit Risikobeurteilung und Managementbewertung abgestimmt sind.
+  messplan-gemeinsam: |
+    Ein Messplan mit Kennzahlen für beide Systeme ist übersichtlicher als zwei. Für das AIMS kommen Kennzahlen zu Leistung und Verhalten der KI-Systeme hinzu, die oft aus der Überwachung im Betrieb stammen.
+  audit-gemeinsam: |
+    Ein gemeinsames Auditprogramm deckt beide Normen ab, die Abschnitte 4 bis 10 meist in denselben Gesprächen. Die Controls aus Anhang A der ISO/IEC 42001 brauchen eigene Prüffragen. Wer auditiert, braucht Grundkenntnisse zu KI und prüft nicht die eigene Arbeit.
+  bewertung-gemeinsam: |
+    Eine Managementbewertung für beide Systeme spart Zeit, wenn die Agenda je Thema beide Normen abdeckt. KI-spezifische Eingaben sind etwa Ergebnisse von Folgenabschätzungen, Meldungen über Bedenken und Änderungen im KI-Recht.
+  verbesserung-gemeinsam: |
+    Verbesserungen werden in einem gemeinsamen Register geführt. Ein Feld zeigt, welches System betroffen ist.
+  abweichung-gemeinsam: |
+    Nichtkonformitäten und Korrekturmassnahmen laufen über denselben Ablauf. Bei Abweichungen mit KI-Bezug ist zusätzlich zu prüfen, ob Risikobeurteilung oder Folgenabschätzung angepasst werden müssen.

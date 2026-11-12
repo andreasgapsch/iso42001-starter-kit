@@ -1,0 +1,105 @@
+# Seitentexte Etappe E10 Kompetenz und Kommunikation. Format: src/gefuehrt/FORMAT.md
+E10-einfuehrung:
+  titel: Kompetenz und Kommunikation
+  frage: Wer braucht welches Wissen über KI, und was teilen Sie wem mit?
+  warum: Die Norm verlangt, dass Personen mit KI-Aufgaben kompetent sind, alle Mitarbeitenden die Leitlinie kennen und die Kommunikation geplant ist. Mit dem Modul kommt die Pflicht zur [[g:ki-kompetenz]] nach AI Act dazu.
+  fehler: Schulungen ohne Nachweis und ohne Wirksamkeitsprüfung zählen im Audit wenig. Auditoren fragen Personen mit Aufsichtsrolle, wie sie geschult wurden.
+E10-kompetenzen:
+  titel: Kompetenzbedarf je Rolle
+  frage: Welche Rolle braucht welche Kompetenz, und wie stellen Sie sie sicher?
+  warum: Wer KI beaufsichtigt, entwickelt oder einkauft, braucht anderes Wissen als jemand, der einen Textassistenten nutzt. Je Rolle legen Sie Anforderung, Massnahme und Nachweis fest.
+  fehler: Aufsichtsrollen ohne Kompetenznachweis meldet die Prüfung als Hinweis. Auditoren fragen, wie Sie die Wirkung einer Schulung geprüft haben.
+  felder:
+    rolle:
+      label: Rolle
+      hilfe: z. B. «Aufsicht Bewerbungsvorselektion».
+    anforderung:
+      label: Anforderung
+      hilfe: Was die Person können muss, z. B. «Grenzen des Systems kennen, Ergebnisse auf Benachteiligung prüfen».
+    personen:
+      label: Personen
+      hilfe: Wer diese Rolle hat.
+    gruppe:
+      label: Weitere Personen ohne eigenen Eintrag
+      hilfe: z. B. «zwei CAM-Programmierer» oder «Recruiterinnen Lea Graf und Sara Imhof»; erscheint in D-17 bei den Personen.
+    massnahme:
+      label: Massnahme
+      hilfe: Schulung, Einführung durch Lieferant, Selbststudium.
+    nachweis:
+      label: Nachweis
+      hilfe: z. B. Teilnahmeliste, Zertifikat.
+    wirksamkeit:
+      label: Wirksamkeit
+      hilfe: Wie Sie geprüft haben, ob es gewirkt hat, z. B. Fallbesprechung nach drei Monaten.
+    status:
+      label: Status
+      hilfe: Erfüllt, wenn Nachweis und Wirksamkeit vorliegen.
+E10-bewusstsein:
+  titel: Alle Mitarbeitenden informieren
+  frage: Wie erfahren alle Mitarbeitenden von Leitlinie, Regeln und ihrem Beitrag?
+  warum: Jede Person soll die KI-Leitlinie kennen, wissen, was ihr Beitrag ist, und was passiert, wenn Regeln nicht eingehalten werden. Kurze, wiederholte Formate wirken besser als eine einmalige Schulung.
+  fehler: Information nur per E-Mail erreicht Mitarbeitende in der Produktion oft nicht. Auditoren fragen Mitarbeitende am Arbeitsplatz.
+  felder:
+    meta.gefuehrt.antworten.bewusstsein.formate:
+      label: Formate
+      hilfe: Mehrere Antworten möglich.
+    meta.gefuehrt.antworten.bewusstsein.rhythmus:
+      label: Wiederholung
+      hilfe: Mindestens jährlich auffrischen.
+    organisation.bewusstsein:
+      label: Themen mit Durchführung und Nachweis
+      hilfe: Je Zeile ein Thema, z. B. KI-Leitlinie, Nutzungsregeln, Meldeweg. Mit Datum und Nachweis zeigt D-17, dass die Bewusstseinsbildung stattgefunden hat; leer bleibt der Vorschlag der Vorlage.
+    organisation.bewusstsein.thema:
+      label: Thema
+      hilfe: z. B. «KI-Leitlinie und Grundsätze».
+    organisation.bewusstsein.inhalt:
+      label: Inhalt
+      hilfe: Was die Mitarbeitenden wissen sollen, in einem Satz.
+    organisation.bewusstsein.zielgruppe:
+      label: Zielgruppe
+      hilfe: z. B. «alle Mitarbeitenden» oder «Nutzende von KI-001».
+    organisation.bewusstsein.kanal:
+      label: Kanal
+      hilfe: z. B. Intranet, Teamsitzung, E-Learning.
+    organisation.bewusstsein.datum:
+      label: Datum
+      hilfe: Wann das Thema vermittelt wurde.
+    organisation.bewusstsein.nachweis:
+      label: Nachweis
+      hilfe: z. B. Teilnahmeliste oder Lesebestätigung mit Ablageort.
+E10-ki-kompetenz:
+  titel: KI-Kompetenz nach AI Act
+  frage: Für welche Gruppen ergreifen Sie Massnahmen zur KI-Kompetenz und welche?
+  warum: Seit Februar 2025 müssen [[g:anbieter]] und [[g:betreiber]] Massnahmen ergreifen, damit ihre Mitarbeitenden KI sachkundig nutzen. Verlangt ist ein angemessenes Bemühen nach Rolle und Risiko, kein bestimmtes Niveau.
+  fehler: Eine einzige Schulung für alle passt selten. Halten Sie fest, welche Gruppe was erhält; die Vorlage E-04 hilft dabei.
+  felder:
+    meta.gefuehrt.antworten.kiKompetenz.zielgruppen:
+      label: Zielgruppen
+      hilfe: Gruppen mit unterschiedlichem Bedarf.
+    meta.gefuehrt.antworten.kiKompetenz.massnahmen:
+      label: Massnahmen
+      hilfe: z. B. «E-Learning 30 Minuten für alle; Workshop für Nutzende generativer KI; Schulung durch Lieferant für Aufsicht HR».
+E10-kommunikation:
+  titel: Kommunikationsplan
+  frage: Was kommunizieren Sie zum KI-Managementsystem wann, mit wem und auf welchem Weg?
+  warum: Der Plan hält fest, welche Informationen intern und extern fliessen, etwa die Leitlinie an alle, Statusberichte an die Geschäftsleitung oder Hinweise an Kunden.
+  fehler: Pläne ohne externe Kommunikation meldet die Prüfung als Hinweis. Auditoren prüfen, ob Kunden, Behörden oder Betroffene bedacht sind.
+  felder:
+    was:
+      label: Was
+      hilfe: z. B. «KI-Leitlinie», «Hinweis auf KI im Kundenportal».
+    richtung:
+      label: Intern oder extern
+      hilfe: Mindestens ein externer Eintrag wird erwartet.
+    mitWem:
+      label: Mit wem
+      hilfe: Empfänger, z. B. «alle Mitarbeitenden», «Kunden», «Personalkommission».
+    wann:
+      label: Wann
+      hilfe: Anlass oder Rhythmus, z. B. «bei Freigabe, danach jährlich».
+    wie:
+      label: Wie
+      hilfe: z. B. Intranet, Website, Sitzung.
+    wer:
+      label: Wer
+      hilfe: Verantwortliche Person.

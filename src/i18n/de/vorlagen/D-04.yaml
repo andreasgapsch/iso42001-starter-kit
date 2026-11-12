@@ -1,0 +1,170 @@
+# D-04 Rollen, Verantwortlichkeiten und Meldewege
+einleitung: "Dieses Dokument legt fest, wer bei [[Firmenname]] für welche Aufgaben im KI-Managementsystem zuständig ist und wie Mitarbeitende Bedenken zu KI-Systemen melden."
+einleitung_firma: "Dieses Dokument legt fest, wer bei {firma} für welche Aufgaben im KI-Managementsystem zuständig ist und wie Mitarbeitende Bedenken zu KI-Systemen melden."
+eb_einleitung_firma: "Diese Abschnitte ergänzen das Rollen- und Organisationsdokument aus dem ISMS der {firma} um die Aufgaben des KI-Managementsystems. Bestehende Rollen und Gremien bleiben bestehen; neue Rollen kommen nur hinzu, wo das ISMS keine passende kennt."
+eb_einleitung: "Diese Abschnitte in Ihr bestehendes Dokument aufnehmen. Sie ergänzen Ihr Rollen- oder Organisationsdokument aus dem ISMS um die Aufgaben des KI-Managementsystems. Übernehmen Sie bestehende Rollen und Gremien, statt neue zu schaffen."
+eb_felder:
+  dokument: Aufgenommen in Dokument
+  version: Version und Datum
+eb_platzhalter:
+  dokument: Titel des bestehenden Dokuments
+  version: Version, TT.MM.JJJJ
+abschnitte:
+  grundsaetze: Grundsätze
+  pflichtrollen: Pflichtrollen
+  raci: Zuständigkeiten nach Bereichen
+  bahnrollen: Rollen in den Prozessabläufen
+  gremien: Gremien
+  meldeweg: Meldeweg für Bedenken
+  entscheidungsrechte: Entscheidungsrechte nach Risikostufe
+  aufsicht: Wirksame menschliche Aufsicht
+  freigabe: Freigabe
+grundsaetze:
+  - "Die Geschäftsleitung trägt die Gesamtverantwortung für das KI-Managementsystem und weist die Rollen zu."
+  - "Wenige Personen tragen mehrere Rollen. Das ist zulässig, solange niemand die eigene Arbeit prüft, besonders im internen Audit."
+  - "Jede Rolle hat eine Stellvertretung. Rollen und Stellvertretungen sind den Betroffenen bekannt."
+  - "Änderungen der Rollen werden in diesem Dokument nachgeführt und den Mitarbeitenden mitgeteilt."
+hinweis_pflichtrollen: "Zwei Aufgaben müssen ausdrücklich vergeben sein: dafür sorgen, dass das Managementsystem die Norm erfüllt, und der Geschäftsleitung über seine Leistung berichten. Im KMU übernimmt oft dieselbe Person beides."
+pflichtrollen_fehlen: "Mindestens eine der beiden Pflichtrollen ist noch nicht vergeben; die Zuweisung erfolgt vor der Freigabe."
+pflichtrollen:
+  aims: Zuständig für das KI-Managementsystem
+  konformitaet: "Sorgt dafür, dass das Managementsystem ISO/IEC 42001 erfüllt (5.3 a)"
+  berichterstattung: "Berichtet der Geschäftsleitung über die Leistung des Managementsystems (5.3 b)"
+  stellvertretung: Stellvertretung
+hinweis_raci: |
+  Tragen Sie je Bereich Personen oder Funktionen ein:
+  • R (responsible): erledigt die Aufgabe,
+  • A (accountable): entscheidet und trägt die Verantwortung, genau eine Person,
+  • C (consulted): wird vorher angehört,
+  • I (informed): wird nachher informiert.
+  Die Spalte «Stellvertretung» nennt, wer R vertritt.
+  Mit ISMS: Übernehmen Sie für Informationssicherheit und Datenschutz die bestehenden Zuständigkeiten.
+raci_kopf: [Bereich, Aufgaben, R, A, Stellvertretung, C, I]
+prozessrollen: "Weitere Rollen in den Abläufen der Prozesse (Bahnen) und wer sie wahrnimmt:"
+prozessrollen_ki_eigner: "Eignerin oder Eigner des jeweiligen KI-Systems laut KI-Inventar (D-10)"
+prozessrollen_alle: "alle Mitarbeitenden im Geltungsbereich"
+prozessrollen_offen: "noch nicht zugewiesen"
+bereiche:
+  - id: risikomanagement
+    name: Risikomanagement
+    aufgaben: "KI-Risiken und Chancen beurteilen, Behandlung planen, Register führen (D-06, D-07)"
+  - id: folgenabschaetzung
+    name: Folgenabschätzung
+    aufgaben: "Folgen für Menschen und Gesellschaft abschätzen und freigeben (D-08, D-09)"
+  - id: inventar
+    name: KI-Inventar
+    aufgaben: "Alle KI-Systeme erfassen und aktuell halten, Schatten-KI klären (D-10)"
+  - id: daten
+    name: Daten
+    aufgaben: "Herkunft, Qualität und Aufbereitung der Daten steuern (D-13)"
+  - id: informationssicherheit
+    name: Informationssicherheit
+    aufgaben: "KI-Systeme und ihre Daten schützen, Sicherheitsvorfälle behandeln"
+  - id: datenschutz
+    name: Datenschutz
+    aufgaben: "Datenschutzverantwortliche: Personendaten in KI-Systemen prüfen, Datenschutz-Folgenabschätzungen begleiten, Verletzungen der Datensicherheit melden (D-14)"
+  - id: menschliche-aufsicht
+    name: Menschliche Aufsicht
+    aufgaben: "Regeln für die Prüfung von KI-Ergebnissen festlegen, eingreifen und Systeme bei Bedarf stoppen; wer je System prüft, steht im KI-Inventar (D-10)"
+  - id: lieferanten
+    name: Lieferanten
+    aufgaben: "Anbieter von KI prüfen, Verträge und Verantwortungsaufteilung regeln (D-16)"
+  - id: recht
+    name: Recht und EU AI Act
+    aufgaben: "Rechtliche Anforderungen verfolgen, Rolle und Pflichten je KI-System klären"
+  - id: schulung
+    name: Schulung
+    aufgaben: "Kompetenzbedarf bestimmen, Schulungen planen und nachweisen (D-17)"
+  - id: internes-audit
+    name: Internes Audit
+    aufgaben: "Managementsystem prüfen, unabhängig vom geprüften Bereich (D-20)"
+  - id: dokumentenlenkung
+    name: Dokumentenlenkung
+    aufgaben: "Dokumente und Aufzeichnungen kennzeichnen, freigeben und ablegen (D-26)"
+isms_zustaendigkeit: "(bestehende ISMS-Zuständigkeit übernehmen)"
+isms_zustaendigkeit_firma: "(Zuständigkeit wie im ISMS festgelegt)"
+# Internes Audit ohne Eintrag in der Matrix: Auditorin oder Auditor des letzten internen Audits (D-20)
+audit_aus_programm: "{auditor} (nach Auditprogramm D-20)"
+# Leere Vorlage: zusätzliche Bereiche der Matrix (Vorfälle und Meldungen, Entwicklung von KI), A3-13
+aufgaben_zusatz_leer:
+  vorfall: "KI-Vorfälle, Beinahe-Vorfälle und Meldungen aufnehmen, einstufen, eindämmen und bis zum Abschluss verfolgen (D-14, D-22)"
+  entwicklung: "Eigene KI-Systeme nach dem Lebenszyklus entwickeln, testen und freigeben lassen (D-12, D-13); ohne eigene Entwicklung: Anforderungen, Abnahme und Einführung eingekaufter Systeme (D-12)"
+# Leere Vorlage: Rollen der Bahnen in den Prozessabläufen (D-27) ohne Zeile in der Matrix, in dieser Reihenfolge
+hinweis_bahnrollen: "Die Abläufe der Prozesse (D-27) nennen weitere Rollen als Bahnen. Tragen Sie ein, wer sie wahrnimmt und wer vertritt; eine Person kann mehrere Rollen tragen."
+bahnrollen_kopf: [Rolle in den Abläufen, Aufgaben, Prozesse (D-27), Person oder Funktion, Stellvertretung]
+bahnrollen_aufgaben:
+  fachbereich: "Beantragt KI-Werkzeuge, nutzt KI-Systeme nach den Regeln, meldet Auffälligkeiten"
+  it: "Betreibt, ändert und schützt KI-Systeme technisch, stellt Protokolle bereit"
+  hr: "Begleitet Rollen, Schulung und Kompetenzen, bei Personalfragen auch Folgenabschätzungen"
+  kommunikation: "Informiert intern und extern über KI-Themen, Vorfälle und Meldungen"
+  ki-eigner: "Verantwortet ein KI-System über den Lebenszyklus, beurteilt Risiken und Folgen mit"
+aufgaben_zusatz:
+  vorfall: "KI-Vorfälle und Meldungen aufnehmen, bewerten und bis zum Abschluss verfolgen (D-14, D-22)"
+  entwicklung: "Eigene KI-Systeme nach dem Lebenszyklus entwickeln, testen und freigeben lassen (D-12, D-13)"
+# Bereich «Entwicklung» ohne eigene Entwicklung: Beschaffung, Abnahme und Einführung eingekaufter Systeme
+ohne_entwicklung:
+  name: Einführung eingekaufter KI-Systeme
+  aufgaben: "Anforderungen festhalten, Abnahme mit eigenen Fällen prüfen und die Einführung freigeben lassen (D-12); keine eigene Entwicklung"
+meldeweg_frist:
+  beide: "Eingangsbestätigung innert {tage} Arbeitstagen, Rückmeldung zum Ergebnis innert {ergebnis} Tagen"
+  bestaetigung: "Eingangsbestätigung innert {tage} Arbeitstagen"
+  ergebnis: "Rückmeldung zum Ergebnis innert {ergebnis} Tagen"
+meldeweg_nicht_vertraulich: "Meldungen sind nicht anonym möglich. Die Identität der meldenden Person wird nur an die Personen weitergegeben, die die Meldung bearbeiten."
+raci_fehlen: "Für einige Bereiche sind noch keine Zuständigkeiten festgelegt; die markierten Felder sind noch offen."
+hinweis_gremien: "Erweitern Sie bestehende Gremien um KI-Themen, statt neue zu schaffen. Halten Sie fest, was neu traktandiert wird und wie oft."
+gremien_kopf: [Gremium, Neue KI-Themen, Rhythmus, Vorsitz]
+gremien_vorschlag:
+  - [Geschäftsleitungssitzung, "Freigaben (Leitlinie, Geltungsbereich, Behandlungsplan, Restrisiken, Erklärung zur Anwendbarkeit), Managementbewertung", "[[z. B. jährlich und bei Bedarf]]", "[[Name, Funktion]]"]
+  - [Sicherheits- oder ISMS-Runde, "KI-Risiken, Vorfälle, Lieferanten, Stand der Massnahmen", "[[z. B. quartalsweise]]", "[[Name, Funktion]]"]
+  - [IT- oder Digitalisierungsrunde, "Freigabe neuer KI-Werkzeuge, KI-Inventar, Änderungen an KI-Systemen", "[[z. B. monatlich]]", "[[Name, Funktion]]"]
+ausbau_gremien: "Wer KI selbst entwickelt oder viele KI-Systeme mit Wirkung auf Menschen einsetzt, kann ein eigenes KI-Gremium einrichten, z. B. für Freigaben von Folgenabschätzungen. Halten Sie dann Mitglieder, Entscheidungsbefugnisse und Protokollierung fest."
+hinweis_meldeweg: "Mitarbeitende und Personen, die für Sie arbeiten, sollen Bedenken zu KI-Systemen ohne Nachteile melden können. Nutzen Sie einen bestehenden Kanal, z. B. eine Meldestelle für Hinweise oder die vorgesetzte Person mit einer Ausweichstelle. Den Meldekanal für Externe regelt D-14."
+meldeweg_felder:
+  meldestelle: Meldestelle
+  kanal: Meldekanal
+  ausweich: Ausweichstelle
+  vertraulichkeit: Vertraulichkeit
+  schutz: Schutz vor Nachteilen
+  frist: Fristen
+  eskalation: Eskalation
+  erfassung: Erfassung und Auswertung
+  bekanntmachung: Bekanntmachung
+meldeweg_werte:
+  meldestelle: "[[z. B. AIMS-Verantwortliche, ki-meldung@firma.example]]; nimmt Meldungen zu KI-Vorfällen und Bedenken entgegen"
+  kanal: "[[z. B. E-Mail an ki-meldung@firma.example oder Formular im Intranet; anonyme Meldung über die Meldestelle]]"
+  ausweich: "[[Name, Funktion, falls die Meldung die zuständige Person selbst betrifft]]"
+  vertraulichkeit: "Die Identität der meldenden Person wird nur mit ihrem Einverständnis weitergegeben. Meldungen sehen nur die Personen, die sie bearbeiten."
+  schutz: "Wer in gutem Glauben meldet, hat keine Nachteile zu befürchten. Benachteiligungen werden wie ein Verstoss gegen interne Regeln behandelt."
+  frist: "[[Eingangsbestätigung innert 7 Tagen, Rückmeldung zum Ergebnis innert 30 Tagen]]"
+  eskalation: "[[An die Geschäftsleitung, wenn eine Meldung nicht fristgerecht bearbeitet wird oder ein erhebliches Risiko für Menschen besteht]]"
+  erfassung: "Jede Meldung wird mit Datum, Inhalt, Massnahmen und Abschluss erfasst (D-22). Die Auswertung fliesst in die Managementbewertung (D-21)."
+  bekanntmachung: "[[z. B. Schulung, Intranet, Nutzungsrichtlinie D-15]]"
+freigabe_text: "Die Geschäftsleitung hat diese Rollenzuweisung am {datum} freigegeben."
+entscheidungsrechte_text: "Wer entscheidet, hängt von der Risikostufe ab: tief bis zur Akzeptanzgrenze, hoch ab der Grenze «unannehmbar» der Risikokriterien (D-06), mittel dazwischen. Massgebend ist das höchste Risiko des betroffenen KI-Systems im Risikoregister (D-07). Für die Annahme eines Restrisikos zählt der Wert nach der Behandlung: Ein Restrisiko ab der Grenze «unannehmbar» lässt sich nicht annehmen, sondern nur befristet als Ausnahme tragen (Zeile «Ausnahme bewilligen», D-06). Unabhängig von der Risikostufe gelten die Vorbehalte der Risikobereitschaft in der KI-Leitlinie (D-03): Was dort der Geschäftsleitung vorbehalten ist, entscheidet sie auch bei tiefem oder mittlerem Risiko."
+hinweis_entscheidungsrechte: "Passen Sie die Vorschläge an Ihre Organisation an und nennen Sie Funktionen statt Namen, damit die Tabelle bei Personalwechseln gültig bleibt. Stoppen muss schnell gehen: Wer ein System beaufsichtigt, darf es ohne Rückfrage aussetzen. Die Grenzen dessen, was überhaupt erlaubt ist, legt die Risikobereitschaft in der KI-Leitlinie (D-03) fest."
+entscheidungsrechte_kopf: [Entscheid, Tiefes Risiko, Mittleres Risiko, Hohes Risiko]
+entscheide:
+  einfuehren: KI-System einführen
+  restrisiko: Restrisiko annehmen
+  ausnahme: Ausnahme bewilligen
+  stoppen: System stoppen oder aussetzen
+  ausserbetrieb: System ausser Betrieb nehmen
+entscheidungsrechte_vorschlag:
+  einfuehren: ["{{fakt:freigabe.einfuehren}}", "{{fakt:freigabe.einfuehren}} mit Eigner/in des Systems", "{{fakt:freigabe.einfuehren-hoch}}"]
+  restrisiko: ["Risikoeigner/in", "{{fakt:freigabe.restrisiko}}", "{{fakt:freigabe.restrisiko}}"]
+  ausnahme: ["AIMS-Verantwortung", "AIMS-Verantwortung mit einem Mitglied der Geschäftsleitung", "Geschäftsleitung"]
+  stoppen: ["Wer das System beaufsichtigt, oder Eigner/in", "Wer das System beaufsichtigt, oder Eigner/in", "Wer das System beaufsichtigt, Eigner/in oder AIMS-Verantwortung; Information an die Geschäftsleitung"]
+  ausserbetrieb: ["Eigner/in des Systems", "AIMS-Verantwortung", "Geschäftsleitung"]
+keine_selbstfreigabe: "**Keine Selbstfreigabe ab hohem Risiko.** Wer ein KI-System beantragt, betreibt oder als Eigner/in verantwortet, gibt es bei hohem Risiko nicht selbst frei und nimmt sein Restrisiko nicht selbst an. Ist eine Person in beiden Rollen, entscheidet die nächsthöhere Stelle."
+# Firmendokument mit organisation.naechsthoehereStelle
+keine_selbstfreigabe_stelle: "**Keine Selbstfreigabe ab hohem Risiko.** Wer ein KI-System beantragt, betreibt oder als Eigner/in verantwortet, gibt es bei hohem Risiko nicht selbst frei und nimmt sein Restrisiko nicht selbst an. Ist eine Person in beiden Rollen, entscheidet ihre vorgesetzte Stelle; bei einem Mitglied der Geschäftsleitung die Geschäftsleitung ohne diese Person, bei der Geschäftsleitung als Ganzes oder ihrer einzigen Person die nächsthöhere Stelle ({stelle})."
+aufsicht_text: "Menschliche Aufsicht wirkt nur, wenn die prüfende Person tatsächlich eingreifen kann. Für jedes KI-System mit Aufsicht (KI-Inventar, D-10) gelten fünf Prüfpunkte:"
+aufsicht_pruefpunkte:
+  - "**Versteht die Folgen:** Die Person weiss, was ein falsches Ergebnis für Betroffene und für uns bedeutet."
+  - "**Sieht Quelle und Vorschlag:** Sie sieht, worauf das Ergebnis beruht, und kann es mit den Ausgangsdaten vergleichen."
+  - "**Hat Zeit:** Menge und Takt lassen eine echte Prüfung zu."
+  - "**Darf ablehnen:** Sie kann ein Ergebnis verwerfen oder das System stoppen, ohne Nachteile zu befürchten."
+  - "**Bleibt verantwortlich:** Die Entscheidung bleibt bei ihr, nicht beim System."
+aufsicht_abnicken: "Wer grosse Mengen von Ergebnissen in kurzer Zeit bestätigt, prüft nicht mehr, sondern nickt ab. Stichproben der Korrekturquote (D-05) zeigen das: Eine Quote nahe null bei vielen Fällen ist ein Warnsignal."
+anlage_verweis: "Die Entscheidungsrechte nach Risikostufe und die Anforderungen an wirksame menschliche Aufsicht stehen in Anlage A."
+anlage_titel: Entscheidungsrechte und menschliche Aufsicht

@@ -1,0 +1,27 @@
+# N-03 Mess- und Prüfkonzept je KI-System
+blaetter:
+  merkmale: Merkmale
+  pruefungen: Prüfungen
+  erklaerung: Vertrauensmerkmale
+titel_merkmale: "Wichtigste Vertrauensmerkmale und Zielkonflikte je KI-System"
+titel_pruefungen: "Prüfungen und Messgrössen je KI-System und Merkmal"
+titel_erklaerung: "Die sieben Vertrauensmerkmale des AI RMF und die Ziele der Folgenabschätzung (D-09)"
+merkmal_kopf: "{merkmal} (D-09: {ziele})"
+d09_ausmass: "D-09: Ausmass {ausmass}"
+abschnitt: "AI 100-1 Abschnitt {abschnitt}"
+ohne_merkmal: kein NIST-Merkmal
+keine_systeme: "Im KI-Inventar sind keine aktiven KI-Systeme erfasst."
+hinweise_merkmale:
+  - "Wählen Sie je KI-System die drei bis vier wichtigsten Vertrauensmerkmale und setzen Sie in deren Spalte den Rang 1 bis 4 (1 = wichtigstes). Der Klammerzusatz im Spaltenkopf nennt das Ziel der Folgenabschätzung (D-09), das dem Merkmal entspricht; erfassen Sie Nutzen und Schaden dort, nicht hier."
+  - "Halten Sie bekannte Zielkonflikte mit Entscheid und Begründung fest, z. B. Genauigkeit gegen Erklärbarkeit oder Nutzen gegen Datensparsamkeit (RMF-01). Die letzte Spalte nennt die vorgeschlagenen Zusatz-Controls mit dem Entscheid in der Erklärung zur Anwendbarkeit (D-11)."
+hinweise_merkmale_firma:
+  - "Rang 1 bis 4 der wichtigsten Vertrauensmerkmale je KI-System (1 = wichtigstes) und entschiedene Zielkonflikte. Ohne Rangfolge zeigt die Zelle das höchste Ausmass eines Schadens aus der Folgenabschätzung (D-09)."
+hinweise_pruefungen:
+  - "Je KI-System und wichtigem Merkmal eine Zeile: Prüffälle aus dem Arbeitsalltag (typische, schwierige und unklare Fälle), Messgrösse, Schwelle, ab der gehandelt wird, und Häufigkeit. Kennzahlen aus dem Messplan (D-05) und die Missbrauchsfälle aus der Prüfung vor dem Einsatz (D-12) können Sie übernehmen."
+  - "Was sich nicht messen lässt, halten Sie mit Begründung fest und beobachten es qualitativ, etwa über Meldungen und Gespräche (Spalte I). Tests mit Personen, z. B. ein Pilot mit Mitarbeitenden, nur mit Information und Einwilligung."
+  - "Unabhängige Prüfung (RMF-10): Jemand ausserhalb des Teams, das das System baut oder einführt, beurteilt mindestens jährlich, ob Messgrössen und Tests Fehler tatsächlich aufdecken; das interne Audit (D-20) kann das übernehmen."
+hinweise_pruefungen_firma:
+  - "Prüfungen je KI-System und Merkmal mit Prüffällen, Messgrösse, Schwelle und Häufigkeit; nicht Messbares mit Begründung. Ohne eigene Prüfungen stehen hier die Kennzahlen aus dem Messplan (D-05) und die Missbrauchsfälle (D-12) des Systems."
+spalten_merkmale: [ID, KI-System, Zielkonflikte und Entscheid, Vorgeschlagene Zusatz-Controls]
+spalten_pruefungen: [ID, KI-System, Merkmal, Ziel in D-09, Prüffälle, Messgrösse, Schwelle, Häufigkeit, "Nicht messbar: Begründung und Beobachtung", "Unabhängige Prüfung (wer, wann, Ergebnis)", Ergebnis]
+spalten_erklaerung: [Merkmal, Beschreibung, Ziel in D-09, Rolle, Subkategorien, Fundstelle, Hinweis zu D-09]

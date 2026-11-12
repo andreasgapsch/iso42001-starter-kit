@@ -1,0 +1,156 @@
+# D-26 Control of documented information
+hinweis_umfang: "These rules are the lean basis for organizations without an ISMS. They are built so that a later ISMS to ISO/IEC 27001 can adopt them unchanged: the ‘applies to’ field in the register is already provided. Keep the rules to two pages; the details are in the register (Excel file D-26)."
+einleitung: "These rules set out how [[Company name]] creates, approves, stores, protects and retains the documents and records of the AI management system (AIMS), and how changes to the AIMS are planned."
+einleitung_firma: "These rules set out how {firma} creates, approves, stores, protects and retains the documents and records of the AI management system (AIMS), and how changes to the AIMS are planned."
+abschnitte:
+  arten: What is controlled
+  kennzeichnung: Identification
+  freigabe: Review and approval
+  ablage: Storage, access and protection
+  versionen: Versions and review
+  aufbewahrung: Retention and disposal
+  extern: External documents
+  ki: Documents created with AI
+  aenderungen: Planning changes to the AIMS
+  freigabe_regeln: Approval of these rules
+arten_liste:
+  - "**Documents** set out what is to be done: policy, procedures, guidelines, plans. They are approved and changed as needed."
+  - "**Records** show what was done: minutes, audit reports, impact assessments, training records, event logs of AI systems. Once created, they are not changed."
+  - "**External documents** come from third parties and are needed for the AIMS: standards, laws, contracts, documentation from providers of AI systems."
+kennzeichnung_text: "Every document shows on its first page or in the ‘Document’ sheet: document ID (for example D-03) and title, version (1.0, 1.1, 2.0), date of approval (DD/MM/YYYY), owner (responsible for content and keeping it current), approved by, and classification (public, internal, confidential)."
+dateiname: "File names follow the pattern **ID_Title**, for example D-03_AI-Policy. Version and date are shown in the document and in the register; older versions in the archive also carry the version, for example D-03_AI-Policy_v1.0."
+freigabe_text: "Before approval, a second person reviews the content for accuracy and suitability; the document header and the register name who reviewed and who approved. Who approves depends on the type of document:"
+freigabe_text_firma: "Before approval, a second person reviews the content for accuracy and suitability; the document header and the register state who reviewed and who approved it. The owner of a document does not approve it, unless the table provides for this. The following applies:"
+freigabe_kopf: [Type, Reviewed by, Approved by]
+# Approval rule of the company (dokumentenlenkung.freigabe, option group dokumentFreigabe)
+freigabe_zeilen_firma:
+  geschaeftsleitung:
+    - ["AI policy, scope", "second person, not the owner", "Top management"]
+    - ["Procedures, guidelines, statement of applicability, registers", "Subject matter expert or AIMS lead", "Top management"]
+    - ["Treatment plan and residual risks", "second person, not the owner", "Top management"]
+    - ["Impact assessments", "second person, not the one carrying it out", "as per D-08, never the person carrying it out"]
+    - ["Work instructions, forms", "Subject matter expert", "Owner"]
+  aims:
+    - ["AI policy, scope", "second person, not the owner", "Top management"]
+    - ["Procedures, guidelines, statement of applicability, registers", "Subject matter expert", "AIMS lead or top management; documents owned by the AIMS lead are approved by top management"]
+    - ["Treatment plan and residual risks", "second person, not the owner", "Top management"]
+    - ["Impact assessments", "second person, not the one carrying it out", "as per D-08, never the person carrying it out"]
+    - ["Work instructions, forms", "Subject matter expert", "Owner"]
+  eigner:
+    - ["AI policy, scope", "second person, not the owner", "Top management"]
+    - ["Procedures, guidelines, statement of applicability, registers", "Second subject matter expert", "Owner"]
+    - ["Treatment plan and residual risks", "second person, not the owner", "Top management"]
+    - ["Impact assessments", "second person, not the one carrying it out", "as per D-08, never the person carrying it out"]
+    - ["Work instructions, forms", "Subject matter expert", "Owner"]
+freigabe_zeilen:
+  - ["AI policy, scope", "second person, not the owner", "Top management"]
+  - ["Procedures on risks and impact (D-06, D-08)", "Subject matter expert", "Top management"]
+  - ["Statement of applicability (D-11)", "Subject matter expert or AIMS lead", "{{fakt:freigabe.soa|gross}}"]
+  - ["Other procedures, guidelines", "Subject matter expert", "AIMS lead; documents owned by the AIMS lead are approved by top management"]
+  - ["Treatment plan and residual risks (D-07)", "second person, not the owner", "Treatment plan: {{fakt:freigabe.behandlungsplan}}; residual risks according to the decision rights (D-04, Appendix A), above the acceptance threshold {{fakt:freigabe.restrisiko}}"]
+  - ["Work instructions, forms", "Subject matter expert", "Owner"]
+ablage_text: "Valid documents are kept in a single location known to everyone authorized: {ort}. There, only the valid version is ever identifiable as such. Printouts and local copies are uncontrolled; if in doubt, the version in the storage location applies. Access rights follow the classification. Approved documents and all records are protected against unintended change, for example by write protection or version history. The storage location is backed up."
+protokolle_je_system: "set per system (register, Records sheet)"
+dateiname_firma: "File names follow the pattern **{regel}**. If a file name contains a version or a date, the details in the document and in the register prevail in case of discrepancies."
+aufbewahrung_firma: "Unless otherwise specified, records are retained for {wert} years."
+extern_firma: "In our organization: {wert}"
+ablage_bibliothek: "Documents and evidence may also be kept in the library, a folder with versions, checksums and status. For document control, the register applies: it names every library file with version and path. A library entry replaces neither review nor approval; links to controls match the statement of applicability. Other files in the library are not part of the generated document set and are opened there directly."
+ablage_platzhalter: "Storage location, for example SharePoint library AIMS"
+versionen_text: "A change increases the minor number (1.0 to 1.1), including an addition to the content. The major number increases (1.1 to 2.0) if the document is rewritten or its message changes fundamentally. Every new version is approved; what changed in each version is recorded in the change history in the register (sheet ‘Changes’) and as the last change in the document header. An approved document is only changed through a new version. Outdated versions are marked and archived, not deleted. Owners review their documents at least once a year; the register shows the next review date. Status information such as maturity, last run and measurements of the processes (D-27) are records; they do not change the version."
+aufbewahrung_text: "The following periods are suggestions. Legal and contractual periods take precedence; personal data is deleted when it is no longer needed. When the period ends, documents are securely disposed of and the disposal is noted in the register."
+aufbewahrung_text_firma: "The following periods apply. Legal and contractual periods take precedence; personal data is deleted when it is no longer needed. When the period ends, documents are securely disposed of and the disposal is noted in the register."
+aufbewahrung_protokolle_grund: "Purpose and data protection"
+aufbewahrung_kopf: [Type, Retention, Reason]
+aufbewahrung_zeilen:
+  - ["Policy, procedures, statement of applicability", "Validity plus 3 years", "Evidence across one certification cycle"]
+  - ["Audit reports, management reviews, nonconformities", "at least 3 years", "Certification cycle"]
+  - ["Risk assessments, impact assessments", "Life of the AI system plus 3 years", "Traceability of decisions"]
+  - ["Training and competence records", "Duration of employment plus 3 years", "Evidence of competence"]
+  - ["Event logs of AI systems", "[[as defined for each system]]", "Purpose and data protection; deployers of high-risk AI systems under the AI Act at least 6 months"]
+  - ["Technical documentation as provider of high-risk AI systems", "10 years after placing on the market", "AI Act Art. 18"]
+extern_text: "External documents are listed in the register with their origin, edition or status date and storage location. Owners check once a year whether a newer version exists, especially for the EU AI Act and the providers' documentation. Standards are used only to the extent purchased and are not passed on."
+ki_text: "Documents may be drafted with the help of AI. Confidential content is entered only into approved tools (D-15). Before approval, the person responsible reviews the entire content; they are responsible for its accuracy."
+aenderungen_text: "Changes to the AIMS, such as a new process, an extended scope or new roles, are carried out in a planned way. For each change, the following is recorded:"
+aenderungen_liste:
+  - "purpose of the change and possible consequences"
+  - "documents, roles, risks and AI systems affected"
+  - "resources needed, owner and due date"
+  - "approval before implementation and information for those affected"
+aenderungen_ablage: "Planned changes and their actions are kept in the {{fakt:register.massnahmen}}. Major changes are dealt with in the management review (D-21)."
+ausbau: "With many documents: a document management system with an approval workflow, automatic versioning and reminders of review dates replaces manual upkeep of the register."
+freigabe_regeln_text: "These rules were approved on {datum} by {person}."
+eb_einleitung: "This supplementary sheet lists what your existing rules for the control of documented information additionally need for the AIMS. All other ISMS rules also apply unchanged to the AIMS."
+eb_einleitung_firma: "At {firma}, the ISMS rules for the control of documented information also apply to the AIMS. This sheet lists the additions."
+eb_einleitung_firma_dokument: "At {firma}, the ISMS rules for the control of documented information ({dokument}) also apply to the AIMS. This sheet lists the additions."
+eb_aufbewahrung: Retention of the new document types
+eb_freigabe: Review, approval and versions of AIMS documents
+# Register (Excel)
+register:
+  d27_anlage: "Process diagrams, appendix to D-27 (file {datei})"
+  blaetter:
+    dokumente: Documents
+    aufzeichnungen: Records
+    extern: External documents
+    aenderungen: Changes
+    nachweise: Evidence
+  titel_dokumente: "Document register"
+  titel_aufzeichnungen: "Register of records"
+  titel_extern: "External documents"
+  hinweise_dokumente:
+    - "One row per controlled document. The list contains the kit templates; delete what you do not use and add your own documents."
+    - "‘Applies to ISMS’ column: without an ISMS, ‘no’. If an ISMS is added later, keep using this register for both systems."
+  hinweise_aufzeichnungen:
+    - "One row per type of record, not per individual record. Define storage, protection and retention."
+  hinweise_extern:
+    - "List standards, laws, contracts and provider documentation with their status date. Check at least once a year whether a newer version exists."
+  spalten_dokumente: [ID, Title, Type, Version, Status, Owner, Reviewed by, Approved by, Approved on, Next review, Storage location, Applies to ISMS, Classification, Remarks]
+  spalten_aenderungen: [ID, Title, Version, Approved on, Change, Approved by]
+  titel_aenderungen: "Change history"
+  titel_nachweise: "Register of evidence"
+  hinweise_nachweise:
+    - "One row per item of evidence referred to by the statement of applicability (D-11), the audit checklist (D-20) or other documents: ID N-001 onwards, title, type, date and storage location. Three-digit numbers distinguish evidence from documents such as N-01 to N-04."
+  hinweise_nachweise_firma:
+    - "Evidence with a three-digit ID (N-001 onwards) referred to by the statement of applicability, the audit checklist and other documents."
+  hinweise_nachweise_nist:
+    - "Evidence with a three-digit ID (N-001 onwards) referred to by the statement of applicability, the audit checklist and other documents. Documents with a two-digit ID (e.g. N-01) are listed in the sheet ‘Documents’."
+  spalten_nachweise: [ID, Title, Type, Date, Storage location]
+  aenderung_erstfassung: "First version"
+  aenderung_ohne_historie: "current version (earlier versions in the version history of the storage location)"
+  aenderung_eb_zum_haupt: "Supplement to {id}; for changes see {id}"
+  hinweise_aenderungen:
+    - "One row per version of a document, oldest first: what changed and who approved the version. The last row for each document matches the version in the sheet ‘Documents’."
+  spalten_aufzeichnungen: [Record, Example, Created in, Storage location, Protection, Retention, Owner]
+  spalten_extern: [Document, Publisher, Edition or status, Storage location, Responsible, Next check]
+  listen:
+    art: [Document, Record, Guide]
+    status:
+      entwurf: draft
+      in-pruefung: under review
+      freigegeben: approved
+      veraltet: outdated
+    klassifikation: [public, internal, confidential]
+  modul: "only with AI Act module"
+  modul_nist: "only with NIST AI RMF module"
+  protokolle_wie_beschrieben: "as described"
+  bemerkung_aufbewahrung: "retention {wert}"
+  bemerkung_aufgenommen: "included in {wert}"
+  bemerkung_erweitert: "extends {wert}"
+  bemerkung_bestaetigt: "confirmed without change by {person} on {datum}"
+  aufzeichnungen_vorschlag:
+    - ["Audit reports and checklists", "Report AU-001", "D-20", "", "write-protected", "at least 3 years", ""]
+    - ["Management review minutes", "Minutes MB-001", "D-21", "", "write-protected", "at least 3 years", ""]
+    - ["Nonconformities and corrections", "F-001", "D-22", "", "version history", "at least 3 years", ""]
+    - ["Risk assessments and acceptance of residual risks", "Register with date", "D-07", "", "version history", "Life of AI system plus 3 years", ""]
+    - ["Impact assessments", "IA-001", "D-09", "", "write-protected", "Life of AI system plus 3 years", ""]
+    - ["Measurement results and metrics", "Quarterly measurement", "D-05", "", "version history", "3 years", ""]
+    - ["Training and competence records", "Attendance list", "D-17", "", "HR access only", "Employment plus 3 years", ""]
+    - ["Approvals of new AI tools", "Request with decision", "D-15", "", "version history", "Period of use plus 3 years", ""]
+    - ["Reports, concerns, AI incidents", "Report log", "D-14, D-04", "", "confidential", "3 years", ""]
+    - ["Event logs of AI systems", "Logs", "D-12", "", "technically protected", "[as defined for each system]", ""]
+  extern_vorschlag:
+    - ["ISO/IEC 42001", "ISO, SNV, DIN", "2023", "", "", ""]
+    - ["ISO/IEC 42005 (impact assessment of AI systems)", "ISO, SNV, DIN", "2025", "", "", ""]
+    - ["EU AI Act, Regulation (EU) 2024/1689", "EUR-Lex", "{rechtsstand}", "", "", ""]
+    - ["Data protection laws (Swiss DSG, GDPR)", "Swiss Confederation, EU", "[status]", "", "", ""]
+    - ["Documentation and terms of use of AI providers", "Suppliers (D-16)", "[status per provider]", "", "", ""]
+    - ["Contracts with customers on AI", "Customers", "[status]", "", "", ""]

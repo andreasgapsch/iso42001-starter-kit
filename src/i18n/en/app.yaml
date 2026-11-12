@@ -1,0 +1,1999 @@
+# User interface texts of the AIMS Manager (tool). Keys app.*; same structure as src/i18n/de/app.yaml.
+allgemein:
+  abbrechen: Cancel
+
+bestaetigen:
+  # V-18 (A-12): title of every confirmation as a question naming the action and its object
+  titel_wechseln: "Switch from project ‘{name}’?"
+  titel_zwischenstand_uebernehmen: Use the newer interim version?
+  titel_zwischenstand_verwerfen: Discard the interim version?
+  titel_sicherung_speichern: Store a backup before saving?
+  titel_neuer_name: Save under a new name?
+  titel_geaendert_speichern: Save the changed details?
+  titel_ohne_speichern_beenden: Finish without saving?
+  titel_speicher_leeren: Clear interim storage?
+  titel_projekt_ersetzen: Replace the open project?
+  titel_ablauf_zuruecksetzen: Reset your own procedure?
+  titel_gestaltung_entfernen: Remove the design?
+  titel_felder_ersetzen: Replace filled-in fields?
+  titel_normtexte_entfernen: "Remove standard texts {bezeichnung} ({sprache})?"
+  titel_normtexte_exportieren: Export standard texts?
+  titel_normtexte_loeschen: Delete all standard texts?
+  titel_register_uebernehmen: Take over the library entries?
+  titel_sicherung_laden: Load the backup?
+  titel_entwuerfe_erzeugen: "Create {anzahl} new drafts?"
+  titel_entwuerfe_erzeugen_eins: Create 1 new draft?
+  wechseln: Switch project
+  zwischenstand_uebernehmen: Use newer version
+  datei_behalten: Keep the file version
+  zwischenstand_verwerfen: Discard interim version
+  sicherung_speichern: Store backup and save
+  neuer_name: Save under a new name
+  geaendert_speichern: Save with changes
+  ohne_speichern_beenden: Finish without saving
+  speicher_leeren: Clear browser storage
+  nicht_leeren: Do not clear
+  projekt_ersetzen: Replace project
+  ablauf_zuruecksetzen: Reset procedure
+  gestaltung_entfernen: Remove design
+  felder_ersetzen: Replace filled-in fields
+  nur_leere: Fill empty fields only
+  normtexte_entfernen: Remove standard texts
+  normtexte_exportieren: Export
+  normtexte_loeschen: Delete standard texts
+  register_uebernehmen: Adopt entries
+  sicherung_laden: Load backup
+  entwuerfe_erzeugen: Create new drafts
+
+kopf:
+  schreibfehler_allgemein: "The file could not be written. Your entries are kept; use ‘Save as’ to save in another location."
+  schreibfehler_voll: "There is not enough space on the drive. Your entries are kept; use ‘Save as’ to save in another location."
+  schreibfehler_recht: "The file must not be written, for example because permission is missing or the file is protected. Your entries are kept; use ‘Save as’ to save in another location."
+  extern_abbruch: "Not saved: ‘{name}’ was changed outside this app. Your entries remain in the browser. Use ‘Save as’ to save under a new name."
+  extern_frage: "The file ‘{name}’ was changed outside this app, for example by a second person or in a second tab. ‘Save under a new name’ keeps your version in a new file; both versions are kept. Cancel writes nothing."
+  repariert_abbruch: "Not saved. Your entries are unchanged. Correct these places and save again:"
+  repariert_frage: "These entries cannot be saved as they are. ‘Save with changes’ changes them as follows and saves under a new file name; the previous file stays untouched. Cancel leaves everything as it is:"
+  rettung: "The project file was not written because it could not be opened again afterwards. All your data is in the rescue file {name} in the downloads folder. Keep it: use ‘Open project file’ and ‘Repair and open file’ to continue working with it. The places concerned:"
+  repariert: "Saved under a new name. Changed before saving:"
+  namensnennung: ISO/IEC 42001 Starter Kit by Andreas Gapsch, KMU-CIO, kmu-cio.ch
+  ohne_name: Untitled project
+  ungespeichert: Unsaved changes
+  gespeichert: Saved
+  nur_lesen: Read-only
+  zeit_gespeichert: "saved at {zeit}"
+  zeit_zwischenstand: "interim copy at {zeit}"
+  beispiel_unveraendert: Example, unchanged
+  speichern: Save
+  gespeichert_datei: "Saved to ‘{name}’."
+  gespeichert_download: "‘{name}’ has been downloaded. Store the file in a secure location."
+  speichern_fehler: Saving failed
+  pruefung: Check
+  sprache: Interface language
+  theme: Appearance
+
+theme:
+  system: as system
+  hell: light
+  dunkel: dark
+
+navi:
+  prozesse: Processes
+  mitarbeitende: For employees
+  menue: Menu
+  titel: Main navigation
+  sprung: Skip to content
+  start: Start
+  gefuehrt: Guide
+  formular: Form view
+  abschluss: Completion
+  pruefung: Check
+  dokumente: Generate documents
+  mehr: More
+  einstellungen: Settings
+  ueber: About
+
+pfad:
+  mit_isms: Route with ISMS
+  ohne_isms: Route without ISMS
+
+modul:
+  ein: EU AI Act module switched on
+  aus: EU AI Act module switched off
+  nist_ein: NIST AI RMF module switched on
+
+start:
+  wechsel_frage: "‘{name}’ has unsaved changes. They remain available as an interim copy on the start page. Switch anyway?"
+  titel: AIMS Manager
+  datenschutz: "Your data does not leave this computer. Save the project file in a secure location. Other HTML files opened locally could read interim storage in the same browser. On shared computers clear it afterwards (Settings, Storage)."
+  einleitung: The AIMS Manager guides you step by step to an AI management system under ISO/IEC 42001 and generates the documents for certification. Your entries are kept in a project file (extension .aims.json) that you store yourself.
+  zurueck_projekt: "Back to ‘{name}’"
+  neu: New project
+  neu_text: Start with a short interview. The Guide then takes you through all phases.
+  neu_titel: Create a new project
+  pfad_frage: Does your company already have an information security management system (ISMS)?
+  pfad_hilfe: With an ISMS you extend existing documents with supplementary sheets instead of writing new ones. You can change this later in the settings.
+  isms_zertifiziert: Yes, certified to ISO/IEC 27001
+  isms_vorhanden: Yes, but not certified
+  isms_nein: "No"
+  modul_frage: Should the EU AI Act module be included?
+  modul_hilfe: Useful if you supply the EU, AI outputs are used there or you offer AI products. When switched off, all entries are kept.
+  modul_ja: Yes, include the EU AI Act module
+  modul_nein: No, without the module for now
+  dokumentsprache: Language of the generated documents
+  anlegen: Create project
+  oeffnen: Open project file
+  oeffnen_text: Open a saved project file (.aims.json) to continue working.
+  geoeffnet: "Project ‘{name}’ opened."
+  neuerer_zwischenstand: "The browser holds a newer, unsaved version of this project from {datum}. Do you want to use that version?"
+  beispiele: Open examples
+  beispiele_text: Look at a fully completed example of a fictitious company. Changes only affect your copy.
+  beispiele_fehlen: The example projects are not yet included in this version.
+  wiederherstellen_titel: Unsaved work found
+  wiederherstellen_text: The browser has kept these versions. Save the project file afterwards so that nothing is lost.
+  stand: "Version of {datum}"
+  weitermachen: Continue
+  verwerfen: Discard
+  verwerfen_frage: Discard this saved version permanently?
+
+laden:
+  nur_lesen_titel: "Opened read-only."
+  nur_lesen_text: "The file comes from a newer version (file format {version}; this AIMS Manager knows {bekannt}). Details it does not know are missing from the view. Changes and saving are blocked so that the file is not damaged. To change it, open it with the newer version."
+  nur_lesen_gesperrt: "Nothing saved: the file is open read-only because it comes from a newer version."
+  migriert_titel: "Project upgraded to a newer version."
+  migriert_text: "The project was in file format version {von} and is being upgraded to version {nach}. The backup of the original file is called ‘{name}’. Save it before you overwrite the file."
+  sicherung_nicht_gespeichert: "Nothing saved. The original file is unchanged; the backup is still available."
+  nur_lesen_bibliothek: "Nothing stored: the file is open read-only because it comes from a newer version. The library stays unchanged."
+  nur_lesen_ki_import: "Nothing imported: the file is open read-only because it comes from a newer version. The project stays unchanged."
+  sicherung_ablegen: "Save backup"
+  sicherung_verwerfen: "Continue without a backup"
+  sicherung_abgelegt: "Backup saved: ‘{name}’."
+  sicherung_vor_speichern: "The file was upgraded to a newer version when it was opened, and saving overwrites the original. ‘Store backup and save’ stores the backup ‘{name}’ first and then saves. Choose Cancel to save nothing. To save without a backup, choose ‘Continue without a backup’ in the notice."
+  liste_eigeneProzesse: "Own process"
+  liste_prozesse: "Process"
+  liste_managementbewertungen: "Management review"
+  liste_feststellungen: "Finding"
+  liste_audits: "Audit"
+  liste_kommunikation: "Communication"
+  liste_kompetenzen: "Competence"
+  liste_ziele: "Objective"
+  liste_lieferanten: "Supplier"
+  liste_massnahmen: "Action"
+  liste_dokumente: "Document"
+  liste_nachweise: "Evidence"
+  liste_eigeneControls: "Own control"
+  liste_controls: "Control"
+  liste_folgenabschaetzungen: "Impact assessment"
+  liste_risiken: "Risk"
+  liste_kiSysteme: "AI system"
+  liste_rollen: "Role"
+  liste_parteien: "Party"
+  liste_personen: "Person"
+  s_entfernt: "entry removed"
+  s_gesetzt: "now ‘{wert}’"
+  s_war: "previously ‘{wert}’"
+  s_schluessel: "{ort}: field name too long (at most {max} characters)"
+  s_zeichen: "{ort}: invalid character"
+  reparatur_aenderungen: "The repair changes these places ({anzahl}). The original file remains unchanged:"
+  repariert_zusatz: "repaired"
+  repariert_eins: "File repaired, 1 place changed. Save it under the suggested new name."
+  reparatur_fehlgeschlagen: "This file cannot be repaired automatically. The original file is unchanged. Check that it really is a project file, or open an earlier copy."
+  repariert: "File repaired, {anzahl} changes. Save it under the suggested new name."
+  reparieren: "Repair and open file"
+  s_doppelt: "{ort}: identifier ‘{wert}’ used more than once"
+  s_datum: "{ort}: not a valid date"
+  feld_personen: People
+  feld_schemaVersion: File format version
+  feld_meta: Project details
+  feld_organisation: Organization
+  feld_eigner: Owner
+  feld_von: Person
+  feld_am: Date
+  feld_freigabe: Approval
+  feld_funktion: Function
+  feld_art: Type
+  feld_risiken: Risks
+  feld_massnahmen: Actions
+  feld_kiSysteme: AI systems
+  feld_controls: Controls
+  feld_dokumente: Documents
+  feld_termin: due date
+  feld_datum: date
+  feld_titel: title
+  feld_name: name
+  feld_status: status
+  feld_wert: value
+  feld_version: version
+  feld_beschreibung: description
+  feld_verantwortlich: owner
+  s_muster: "{ort}: format not allowed"
+  s_zu_lang: "{ort}: text too long (at most {max} characters)"
+  s_wurzel: (top level)
+  s_fehlt: "{ort}: ‘{feld}’ is missing"
+  s_unbekannt: "{ort}: unknown field ‘{feld}’"
+  s_wert: "{ort}: value not allowed (allowed: {werte})"
+  s_typ: "{ort}: wrong data type (expected {typ})"
+  s_sonst: "{ort}: {feld}"
+  s_weitere: "and {anzahl} more"
+  s_weitere_eins: "and 1 more"
+  titel: The file could not be opened
+  leer: The file is empty.
+  zu-gross: The file is too large for a project file ({grenze_projektdatei} at most).
+  kein-json: The file is not a valid project file (no readable JSON). Was it changed in another application?
+  kein-projekt: The file is not an AIMS Manager project file.
+  keine-version: The file has no version information (schemaVersion).
+  zu-neu: The file comes from a newer version of the Starter Kit. Please use the AIMS Manager of that version.
+  luecke: The file has a version this AIMS Manager cannot convert.
+  schema: "The file contains entries that do not match the format:"
+  unbekannt: An unexpected error occurred while opening the file.
+
+gefuehrt:
+  pflicht_eintrag: "At least one entry is required. Create one or choose ‘Later’."
+  pflicht_eintrag_haken: "At least one entry is required. Record one, tick ‘No entry is needed on this page’ or choose ‘Later’."
+  pflicht_zukunft: "The approval date is in the future. The page counts as done from that day. Until then, you can continue with ‘Later’."
+  pflicht_fehlt_eins: "Please complete the marked required field or choose ‘Later’."
+  eintraege_titel: "Entries"
+  skala_warnung: "With your scale the highest risk value is {hoechst}. The threshold {grenze} can never be reached. Adjust the thresholds or the scale."
+  triage_vorschlag_kurz: "Suggestion from your answers: the short check is sufficient, because all questions were answered no."
+  triage_vorschlag_voll: "Suggestion from your answers: full impact assessment, because at least one question was answered yes."
+  vorschlag_inventar: "Suggestion from the AI inventory: {wert}"
+  sensibel_widerspruch: "The AI inventory records ‘Sensitive use: {inventar}’ for {id}; this assessment says ‘{hier}’. The inventory and the assessment must match."
+  sensibel_uebernehmen: "Apply to the inventory"
+  sensibel_uebernommen: "Sensitive use of {id} updated in the AI inventory."
+  controls_27001: "With ISMS: matching ISO/IEC 27001 controls for the linked controls (42001 to 27001 mapping). One click records the link in the Statement of Applicability:"
+  control27001_verknuepfen: "Link ISO/IEC 27001 {id}"
+  sensibel_widerspruch_juengste: "The AI inventory records ‘Sensitive use: {inventar}’ for {id}; the latest assessment {ia} says ‘{hier}’. The inventory and the assessment must match."
+  vorschlag_gesetzt: "‘{feld}’: {wert} applied."
+  control27001_verknuepft: "ISO/IEC 27001 {id} linked with {fuer}."
+  massnahme_angelegt: "{id} created and linked to {risiko}. Add owner and due date on the ‘Actions’ page."
+  massnahme_neu_label: "New measure for {id}"
+  massnahme_neu: "Add measure"
+  etappen: Phases
+  fortschritt: "{erledigt} of {gesamt} pages done"
+  fortschritt_gesamt: Progress in the Guide
+  keine_etappen: No phases are available for this project.
+  seite_von: "Page {nummer} of {gesamt}"
+  zum_feld: "Go to field {feld}"
+  grund:
+    vermindern_ohne_control: "‘Reduce’ needs at least one linked control."
+    zukunft: The date is in the future.
+  bewertung_vorher: "Before (E6):"
+  bewertung_danach: "After:"
+  bewertung_wa: "Likelihood {w} · Impact {a}"
+  bewertung_fehlt: not yet assessed (E6)
+  bewertung_offen: assess below
+  controls_vermindern: "‘Reduce’ needs at least one control. Suggestions from this risk:"
+  controls_vorschlaege: "Suggestions from this risk:"
+  controls_weitere: "More suggestions from this risk:"
+  control_verknuepfen: "Link {id}"
+  risiko_von: "Risk {nummer} of {gesamt}"
+  risiko_vorher: Previous risk
+  risiko_naechstes: "Go to {id}"
+  etappe_von: "Stage {nummer} of {gesamt}"
+  seite_fehlt_titel: Page in preparation
+  seite_fehlt: This page is being prepared and will appear in the next version. You can move on.
+  sie_sind_hier: You are here
+  seitenpunkte: "Pages of phase {etappe}"
+  ort_abschluss: Completing the phase
+  hilfe_auf: Show help
+  hilfe_zu: Collapse help
+  hilfe_auf_kurz: Help
+  hilfe_zu_kurz: Collapse help
+  hilfe_breite: Width of the help panel
+  hilfe_breite_tipp: Drag or use the arrow keys; double-click restores the default width.
+  status:
+    offen: open
+    in-arbeit: partly done
+    erledigt: done
+  status_spaeter: postponed
+  seitenstatus:
+    offen: open
+    erledigt: done
+    spaeter: later
+    unvollstaendig: required entries missing
+    befund: check reports a finding
+  befund_titel: The check reports on this page
+  befund_text: All required entries are there, but the check rules object to something. Fix it here; only then does the page count as done.
+  befund_text_luecken: Required entries are missing, and the check rules also object to something. Add the entries and fix the finding here; only then does the page count as done.
+  befund_springen: Go to the place
+  weiter: Next
+  weiter_taste: Enter
+  zurueck: Back
+  zurueck_taste: Alt+Shift+Left arrow
+  spaeter: Later
+  spaeter_hinweis: Postponed. The page appears among the open items of the phase.
+  pflicht_fehlt: "Please complete the highlighted required entries ({anzahl}) or choose ‘Later’."
+  pflicht_fehlt_start: "Please answer the marked questions ({anzahl})."
+  ziel: Goal
+  warum: Why the standard requires this
+  ergebnis: What you have at the end
+  eckdaten: Key facts
+  dauer: "Guide value: about {stunden} hours"
+  beteiligte: Participants
+  seiten_der_etappe: Pages of this phase
+  seiten_anzahl: "Pages to complete in this phase: {anzahl}. The dots above lead to each page; the phases are listed in the menu on the left."
+  vorschlag: "Suggestion: {wert}"
+  vorschlag_uebernehmen: Accept suggestion
+  eintrag_neu: Add entry
+  eintrag_entfernen: Remove entry
+  eintrag_entfernen_frage: Do you really want to remove this entry?
+  eintrag_waehlen: Select an entry above to edit it.
+  keine_eintraege: No entries yet.
+  keine_passenden: No entry applies to this page at the moment. You can move on.
+  ohne_titel: (no name yet)
+  startwerte: Create suggested entries
+  bekannte_werkzeuge: "Named in the start interview: {namen}. Add these tools as entries and complete the details."
+  bekannte_uebernehmen: "Add to inventory ({anzahl})"
+  nicht_noetig: No entry is needed on this page.
+  nicht_noetig_hilfe: The page then counts as done without an entry as long as the list stays empty. If useful, record the reason in the phase checklist.
+  nicht_zutreffend: This page does not apply to your project. It only appears in the sequence when its condition is met.
+  nicht_zutreffend_grund: "The page only applies under this condition:"
+  nicht_zutreffend_aendern: If your answers change, for example the path in the start interview or the role of an AI system, the page appears in the sequence again.
+  zur_etappe: To the first page of the phase
+  rueckweg_text: You jumped here from the check.
+  rueckweg: Back to the check
+  bedingung:
+    mitIsms:
+      "true": on the path with an ISMS (start interview, question on information security)
+      "false": on the path without an ISMS (start interview, question on information security)
+    modul:
+      "true": with the EU AI Act module switched on
+      "false": without the EU AI Act module
+    entwickeltKi:
+      "true": if you develop or train AI yourselves
+      "false": if you do not develop AI yourselves
+    verkauftKiProdukte:
+      "true": if you sell products or services with AI
+      "false": if you do not sell products with AI
+    rolle:
+      anbieter: if at least one AI system has the role of provider (E5)
+      betreiber: if at least one AI system has the role of deployer (E5)
+    typ:
+      eigenbau: if at least one AI system is developed in-house (E4)
+    modulNistRmf:
+      "true": with the NIST AI RMF module switched on (start interview or settings)
+      "false": without the NIST AI RMF module
+    generativ:
+      "true": if at least one AI system is generative AI (E4)
+      "false": if no AI system is generative AI
+
+
+ueberblick:
+  kurz: Overview
+  titel: Overview of the Guide
+  einleitung: "Status on {datum}: where you stand in the Guide, what comes next and whether you are on schedule."
+  hier_weiter: Continue here
+  weitermachen: Continue
+  weitermachen_ziel: "{etappe} {titel}, page {nummer} of {anzahl}"
+  drucken: Print overview
+  kennzahlen: Key figures for the Guide
+  gesamt: Overall progress
+  gesamt_text: "{erledigt} of {gesamt} pages done"
+  etappen_zahlen: "Phases: {vollstaendig} complete, {teilweise} partly done, {offen} open"
+  aktuell: Current phase
+  aktuell_text: "{titel}, page {nummer} of {anzahl}"
+  zeit: Calendar week today
+  zeit_plan: "According to plan now step {nr} ({etappen}), {von} to {bis}."
+  zeit_vor: "The plan starts in {kw}."
+  zeit_nach: "The target date of {datum} has been reached."
+  zeit_ziel: "Target for stage 1 readiness: {datum} ({kw}), plan over {wochen} weeks."
+  im_plan: on schedule
+  im_verzug: behind schedule
+  verzug_text: "Due according to plan but not complete: {etappen}."
+  ohne_termin: no target date
+  ohne_termin_text: With a target date in the start interview, the overview compares your status with the roadmap.
+  zum_termin: Set target date
+  etappen: Phases and status
+  etappen_text: Pages of each phase by status; on the right the share of pages done. A tick means complete, a part circle partly done.
+  kategorie:
+    erledigt: done
+    unvollstaendig: required entries missing
+    spaeter: later
+    offen: open
+  naechste: Next open pages
+  naechste_leer: No open pages. All pages are done or postponed.
+  spaeter: Postponed
+  spaeter_leer: No pages postponed.
+  fahrplan: Roadmap and today
+  zum_fahrplan: To the roadmap
+  fehler: Open errors from the checking rules
+  keine_fehler: The checking rules report no errors.
+  fehler_jetzt: Errors up to the current phase
+  fehler_spaeter: "Plus {anzahl} from phases still to come. They are usually resolved as you work through the Guide."
+  zur_pruefung: To the check
+  weitere_fehler: "{anzahl} more errors in the check"
+  weitere_fehler_eins: "1 more error in the check"
+  module: Modules
+  modul_aiact: EU AI Act
+  modul_nist: NIST AI RMF
+  modul_ein: switched on
+  modul_aus: switched off
+  zu_einstellungen: Modules in the settings
+
+abschluss:
+  titel: Complete the phase
+  text: Tick off the checklist items and record where the evidence is kept. You can turn open items into actions.
+  checkliste: Checklist
+  offen: Open items
+  alles_erledigt: All pages and items of this phase are done.
+  als_massnahme: Turn into an action
+  ist_massnahme: Already recorded as an action
+  massnahme_angelegt: "Action {id} created."
+  weiter: "Continue to: {etappe}"
+  zur_pruefung: Go to check
+  stand: Status of the phase
+  hinweis: You can leave a phase with open items and come back later.
+
+hilfe:
+  nichts_uebernommen: "Nothing applied: your entries stay unchanged."
+  ersetzen_frage_eins: "1 field is already completed. Replace it with the example?"
+  ersetzen_frage: "{anzahl} fields are already filled in. Replace them with the example?"
+  titel: Help
+  warum: Why do we ask this?
+  beispiel: Example answer
+  beispiel_quelle: "From the example project {firma} (fictitious)."
+  beispiel_fehlt: The example answer will follow with the example project.
+  als_vorlage: Use as a starting point
+  uebernommen: Example copied. Adapt the entries to your company; choose the people yourself.
+  fehler: Common mistakes and what auditors want to see
+  begriffe: Terms
+  nachlesen: Further reading
+  norm: "ISO/IEC 42001, clause {abschnitt}"
+  norm_hinweis: The standard is available from SNV, DIN or ISO.
+  vorlage: "Kit template {id} {titel}"
+  leitfaden: "Guide, step {nummer}"
+  artikel: "Art. {nummer}"
+  anhang: "Annex {nummer}"
+  aiact_link: "EU AI Act, {artikel} (page {seite} of the enclosed PDF)"
+  weitere: "{anzahl} more"
+  weitere_eins: "1 more"
+
+ki:
+  titel: Go deeper with AI
+  hinweis: Creates a request with the state of this page for the kit's AI assistant. You copy it yourself; no data is sent.
+  knopf: Create request
+  dialog_hinweis: Deselect anything that does not belong in the request. Confidential entries such as names are already deselected.
+  mitsenden: Include in the request
+  vorschau: Request
+  kopieren: Copy to clipboard
+  kopiert: Request copied. Paste it into the AI assistant.
+  kopieren_fehler: Copying is not possible. Select the text and copy it by hand.
+  einleitung: I am working on our AI management system with the ISO/IEC 42001 Starter Kit. Please help me with the following page of the Guide.
+  auftrag: Check my entries for completeness and plausibility, suggest improvements in your own words and name what an auditor would also want to see.
+  firma_name: Company
+  firma_branche: Industry
+  firma_groesse: Employees
+  firma_pfad: Route
+  firma_modul: Module
+  l_seite: Page
+  l_frage: Question
+  l_norm: Clause
+  l_vorlage: Kit template
+  l_firma: Company
+  l_angaben: My entries so far
+  l_leer: (still empty)
+  l_auftrag: Task
+
+feld:
+  version_format: Please enter the version number only, for example 1.0.
+  jahr_pruefen: "Please check the year: it has four digits, for example 2026."
+  stufen_wahrscheinlichkeit: [rare, possible, likely, frequent]
+  stufen_auswirkung: [minor, noticeable, significant, severe]
+  skala_vorgabe: Default 1 to 4 until you set your own scale in the Guide (phase 6).
+  ja: "Yes"
+  nein: "No"
+  pflicht: required
+  noch_keine: Nothing linked yet
+  verweis_entfernen: "Remove {wert} from {feld}"
+  verweis_hinzufuegen: Add …
+  pflicht_wort: Required
+  norm: "ISO/IEC 42001 {abschnitt}"
+  fehlt: This entry is still missing.
+  bitte_waehlen: Please select
+  ausserhalb_skala: "The value {wert} is outside your scale. Choose a level."
+  keine_optionen: No entries to choose from yet
+  filtern: Filter
+  gewaehlt: "{anzahl} selected"
+  person_waehlen: Select person
+  person_neu: Add person
+  person_name: Name
+  person_funktion: Function
+  person_anlegen: Create and select person
+  lieferant_neu: Add supplier
+  lieferant_name: Supplier name
+  lieferant_leistung: Service, e.g. cloud service for text generation
+  lieferant_anlegen: Create and select supplier
+  lieferant_hinweis: Record the supplier review later under ‘Suppliers’.
+  freigabe_von: Approved by
+  freigabe_am: Approved on
+  geprueft_von: Reviewed by
+  geprueft_am: Reviewed on
+  eingestuft_von: Classified by
+  eingestuft_am: Classified on
+  bestaetigt_von: Confirmed by
+  bestaetigt_am: Confirmed on
+  angenommen_von: Accepted by
+  angenommen_am: Accepted on
+  zeile_neu: Add row
+  zeile_entfernen: Remove row
+  entfernen: Remove
+  textbausteine: Text snippets
+  uebernehmen: Use
+  aktionen: Actions
+  erledigt: done
+  noch_offen: still open
+  nachweis: Evidence or storage location
+  datum: Date
+  unbekannt: This field cannot be displayed yet.
+  pruefpunkt: Audit item
+  pruefpunkte_erfasst: "{anzahl} of {gesamt} recorded"
+  pruef_nachweis: Evidence seen
+  pruef_stichprobe: Sample
+  pruef_ergebnis: Result
+  pruef_ergebnis_leer: automatic
+  pruef_soa: SoA at the audit
+  pruef_soa_leer: current status
+
+risiken:
+  filter_status: Status
+  gruppe_grenze: Acceptance threshold
+  lage_ueber: above the acceptance threshold
+  lage_annahme-offen: acceptance of residual risk pending
+  filter_hinweis: "Filtered: {status}."
+  wert_vor: Value before
+  wert_nach: Value after
+  wert_vor_nach: Value before and after
+  restrisiko: Residual risk
+  angenommen_von: "accepted by {name}, {datum}"
+  angenommen_durch: "by {name}, {datum}"
+
+liste:
+  leer_erfassen: "No entries yet. Create the first one with the button above."
+  leer_filter: "No matches for this filter."
+  anzahl_eins: "1 entry"
+  bereich: Area
+  verantwortlich: Responsible
+  funktion: Function
+  ziel: Objective
+  messungen: Measurements
+  was: What
+  richtung: Direction
+  rolle: Role
+  suchen: Search
+  filtern_liste: "Filter {titel}"
+  anzahl: "{anzahl} entries"
+  neu: Add entry
+  leer: "No entries yet."
+  waehlen: Select an entry on the left.
+  bearbeiten: Edit entry
+  entfernen: Remove entry
+  entfernen_frage: Do you really want to remove this entry?
+  filter_ki: "Filtered to {ki}."
+  filter_aus: Clear filter
+  id: ID
+  name: Name
+  titel: Name
+  typ: Type
+  status: Status
+  system: AI system
+  wert: Score
+  termin: Due date
+  ergebnis: Result
+  anwendbar: Applicable
+  ohne_angabe: not answered
+  umsetzung: Implementation
+  wirksamkeit: Effectiveness
+  vorschlag: Suggestion
+  stand: Status
+  vollstaendig: complete
+  offen: open
+
+module:
+  nachweise: Evidence
+  feststellungen: Findings and incidents
+  meldungen: Reports and appeals
+  mitarbeitende: For employees
+  nachweise_text: Evidence register with type, storage location and date; controls and documents refer to it.
+  feststellungen_text: Findings from audits and management review, incidents and near misses with correction and effectiveness.
+  meldungen_text: Reports, feedback and appeals from employees, customers and affected persons.
+  audits_text: Audit programme, internal audits and certification body audits (stage 1, stage 2, surveillance).
+  ziele: Objectives and metrics
+  kompetenz: Competence and communication
+  organisation_text: Key facts, context, interested parties, scope, AI policy, roles and risk criteria.
+  ziele_text: Measurable AI objectives with metric, target value, responsible person, deadline and measurements.
+  kompetenz_text: Who needs which knowledge, how staff are informed and what you communicate to whom and when.
+  aiact_text: Role and risk class per AI system, obligations under the AI Act, additional controls and deadlines. The classification does not replace legal advice.
+  nistrmf_text: Current and target profile for each subcategory of the NIST AI RMF, additional controls RMF-xx and status of the version. The NIST AI RMF is voluntary and cannot be certified.
+  brucke27001_text: Where you can reuse evidence from your ISMS under ISO/IEC 27001 and which ISMS documents receive a supplementary sheet.
+  uebersicht: Overview
+  organisation: Organization
+  inventar: AI inventory
+  risiken: Risks
+  folgen: Impact assessments
+  soa: Statement of Applicability
+  dokumente: Document register
+  massnahmen: Actions
+  lieferanten: Suppliers
+  audits: Audits
+  generator: Document generator
+  aiact: EU AI Act
+  nistrmf: NIST AI RMF
+  brucke27001: ISO 27001 bridge
+  folgt: The form view for this module follows in the next version. Until then, record the entries in the Guide.
+  im_gefuehrten: "Edit in the Guide: {etappe}"
+  inventar_text: All AI systems in the company, including AI in purchased software and shadow AI.
+  risiken_text: Risks and opportunities with assessment, treatment and linked controls.
+  folgen_text: Quick check and impact assessment for each active AI system.
+  soa_text: Decision and justification for each control, with suggestions from risks and AI Act obligations.
+  dokumente_text: Version, status, approval and storage of each document.
+
+soa:
+  stand_alle: "Set status to ‘implemented’ for all {anzahl} controls with description and evidence"
+  stand_alle_eins: "Set status to ‘implemented’ for the one control with description and evidence"
+  vorschlaege_alle_eins: "Accept the one suggestion"
+  standard_nicht_text: "Not applicable: we do not develop our own AI models; the control does not concern any of our activities."
+  standard_anwendbar_text: "Applicable: the control is needed to operate our AI systems. Implementation and evidence are recorded with the control."
+  standard_nicht: "Insert template wording: no in-house AI development"
+  standard_anwendbar: "Insert template wording: applicable"
+  vorschlaege_spalte: "Suggestion"
+  vorschlaege_alle: "Accept all {anzahl} suggestions"
+  nicht_anwendbar: not applicable
+  filter_status: Implementation
+  filter_wirksamkeit: Effectiveness
+  filter_ki: AI system
+  filter_alle: all
+  filter_geprueft: checked
+  filter_ungeprueft: not yet checked
+  filter_aktiv: "Filtered: {anzahl} of {gesamt} controls."
+  vorschlag_risiko: "Suggested because of {quellen}"
+  vorschlag_aiact: "Suggested because of an AI Act obligation ({quellen})"
+  vorschlag_uebernehmen: Accept suggestion
+  begruendung_risiko: "Treats the risks {quellen}."
+  begruendung_aiact: "Required for AI Act obligations for {quellen}."
+  kurz_risiko: Risk
+  kurz_aiact: AI Act
+  vorschlag_nistrmf: "Suggested because of the NIST AI RMF ({quellen})"
+  begruendung_nistrmf: "Additional control from the NIST AI RMF for {quellen}."
+  kurz_nistrmf: NIST
+
+uebersicht:
+  titel: Overview
+  stage1: Ready for stage 1?
+  zur_pruefung: Go to check
+  gefuehrt: Guide
+  gesamt: Total
+  weitermachen: Continue
+  offen: Open and due
+  massnahmen: "{anzahl} open actions"
+  massnahmen_eins: "1 open action"
+  faellig: Reviews due (next 30 days)
+  nichts_faellig: No review due.
+  kapitel: Progress by clause
+  kapitel_kurz: "Cl. "
+  gruppen: Progress by control group
+
+pruefung:
+  bereitschaft_titel: Stage 1 readiness
+  spur: "{erledigt} of {gesamt} guide pages done"
+  bereitschaft_regel: "Ready means: no errors and no gaps. Notes allow ‘Ready with notes’, except {ausnahmen}: these count as gaps."
+  bindend_H88: an approval not by top management or by the owner (H88)
+  bindend_H89: a date in the future (H89)
+  warum: "Why: {text}"
+  zahl_luecken_eins: "1 gap"
+  luecke_dokumente_eins: "1 mandatory document not yet approved"
+  fehlt_triage: "screening with the result ‘full’"
+  fehlt_verweis_personen: "person"
+  fehlt_verweis_kiSysteme: "AI system"
+  fehlt_verweis_risiken: "risk"
+  fehlt_verweis_massnahmen: "action"
+  fehlt_verweis_nachweise: "evidence record"
+  fehlt_verweis_lieferanten: "supplier"
+  fehlt_verweis_ziele: "objective"
+  fehlt_verweis_audits: "audit"
+  fehlt_verweis_feststellungen: "finding"
+  fehlt_verweis_managementbewertungen: "management review"
+  fehlt_verweis_controls: "control"
+  fehlt_verweis_prozesse: "process"
+  fehlt_verweis_kennzahlen: "indicator"
+  fehlt_betroffene: "affected parties"
+  fehlt_nutzen_schaden: "benefit, harm and extent per objective"
+  fehlt_stand: "implementation status (still ‘open’)"
+  fehlt_nachweis: "description or evidence"
+  luecke_regel_H88: "Approval not by top management, or by the owner: {anzahl}"
+  luecke_regel_H89: "Date in the future: {anzahl} approvals, audits or management reviews do not count as done yet"
+  luecke_regel_H89_eins: "Date in the future: 1 approval, audit or management review does not count as done yet"
+  keine_befunde_luecken: "The check rules report nothing, but the parts listed above are still missing."
+  luecke_dokumente: "{anzahl} mandatory documents not yet approved"
+  luecke_register: "Register empty: {register}"
+  luecke_etappe: "Phase {etappe}: {erledigt} of {gesamt} pages done"
+  luecken_text: "‘Ready’ appears only when all phases are worked through, the mandatory registers are filled and the mandatory documents are approved."
+  luecken_titel: "What is still missing before stage 1"
+  zahl_luecken: "{anzahl} gaps"
+  zahl_fehler: "{anzahl} errors"
+  zahl_fehler_eins: "1 error"
+  zahl_hinweise: "{anzahl} notes"
+  zahl_hinweise_eins: "1 note"
+  zahl_offen: "{anzahl} open from phases still to come"
+  zahl_offen_eins: "1 open from a phase still to come"
+  stellen: "{anzahl} places"
+  stellen_eins: "1 place"
+  einheit_fehler: errors
+  einheit_fehler_eins: error
+  titel: Check before stage 1
+  einleitung: The check shows what is still missing before the certification audit. Errors must be fixed; you should review the notes.
+  ampel:
+    aufbau: Being set up
+    gruen: Ready for stage 1
+    gelb: Ready with notes
+    rot: Not ready yet
+  zahlen: "{fehler} errors, {hinweise} notes"
+  schwere:
+    offen: open
+    fehler: Error
+    hinweis: Note
+  liste: Findings of the check
+  springen: Go to entry
+  keine_befunde: No findings. Your project is ready for stage 1.
+  bericht: Print stage 1 report
+  dokumente: Generate documents
+
+  register:
+    kommunikation: "Communication"
+    kompetenzen: "Competences"
+    ziele: "AI objectives and indicators"
+    risiken: "Risk register"
+    kiSysteme: "AI inventory"
+# Kopf und Fuss jedes Ausdrucks (A-06)
+druck:
+  stand: "As of {datum}"
+stage1:
+  fuss: "{firma} · As of {datum}"
+  seite: Page
+  vor_audit: "All errors and gaps must be closed before the audit. Notes are recommendations; review them and record why you deviate."
+  ergebnis_zahlen: "errors: {fehler}, gaps: {luecken}"
+  titel: Stage 1 report
+  untertitel: Status of preparation for the stage 1 audit under ISO/IEC 42001
+  firma: Organization
+  datum: Date
+  pfad: Path
+  pfad_zertifiziert: with certified ISMS (ISO/IEC 27001)
+  pfad_mit_isms: with ISMS
+  pfad_ohne_isms: without ISMS
+  module: Modules
+  module_keine: none
+  modul_aiact: EU AI Act
+  modul_nist: NIST AI RMF
+  termin: Stage 1 audit
+  termin_offen: not yet scheduled
+  bis: to
+  ziel: Target for stage 1 readiness
+  ergebnis: Result of the check
+  regeln_titel: Rules checked
+  regeln_text: "{geprueft} rules checked: {fehler}, {hinweise}."
+  regeln_fehler: "{anzahl} errors"
+  regeln_fehler_eins: "1 error"
+  regeln_hinweise: "{anzahl} notes"
+  regeln_hinweise_eins: "1 note"
+  regel: Rule
+  art: Type
+  norm: Reference to the standard
+  befunde: Findings
+  ohne_befund: "No findings: {anzahl} rules"
+  ohne_befund_eins: "No findings: 1 rule"
+  etappen_titel: Status per phase
+  etappe: Phase
+  stand: Status
+  seiten: Pages
+  seiten_wert: "{erledigt} of {gesamt}"
+  zustand:
+    erledigt: complete
+    teilweise: partial
+    offen: open
+  dokumente_titel: Mandatory documents
+  prozesse_titel: Processes of the management system (4.4)
+  id: ID
+  dokument: Document
+  version: Version
+  status: Status
+  freigabe: Approval
+  nicht_im_register: not in the register
+  offen_titel: Open items
+  offen_keine: No open items.
+  offen_etappen: "Phases not complete: {etappen}"
+  offen_dokumente: "Mandatory documents without approval: {ids}"
+  offen_massnahme: "Action {id} (high priority): {titel}, due {termin}"
+  ohne_termin: no due date
+
+fahrplan:
+  ziel_puffer: "Target for stage 1 readiness: {datum}. The guide's plan covers {wochen} weeks; counted from today it starts in the week of {start} ({kw}) and leaves you {puffer} weeks of buffer."
+  titel_schritte: The 10 steps with calendar weeks
+  schritt: Step
+  etappen: Phases in the tool
+  plan: Week in the plan
+  kalender: Calendar week
+  pt: Person-days
+  bis: to
+  woche: "Week {woche}"
+  wochen_bereich: "Weeks {von} to {bis}"
+  kw: "week {woche}/{jahr}"
+  kw_bereich: "{von} to {bis}"
+  ziel: "Target for stage 1 readiness: {datum}. The Guide's plan covers {wochen} weeks; counting back, it starts in the week of {start} ({kw})."
+  kein_termin: "Without a target for stage 1 readiness, the roadmap only shows the weeks of the plan ({wochen} weeks in total). Enter the target and it counts back and shows calendar weeks."
+  zum_termin: Enter the target
+  grund:
+    eigenbau: several in-house developments
+    produkt: AI in your own product
+    hochrisiko: high-risk system under the EU AI Act
+  gestreckt: "Extended scope ({gruende}): with an ISMS, the Guide expects about 6 months until stage 1 readiness and {von} to {bis} person-days. The plan is stretched accordingly."
+  erweitert_ohne_isms: "Extended scope ({gruende}): without an ISMS, such a scope takes longer than the 22-week plan. Plan a reserve and check the target date."
+  start_vorbei: "According to the Guide's plan, the project should have started in the week of {start}. The target date is too tight; move it or plan more working time and support."
+  puffer: "Your target date leaves about {wochen} weeks of slack. The plan starts in the week of {start} and reaches stage 1 readiness before the target date. Use the slack for holidays, bottlenecks or a slower pace."
+  pt_summe: "Internal effort according to chapter 5 of the Guide: {von} to {bis} person-days for everyone involved, of which about {aimsVon} to {aimsBis} for the AIMS lead."
+  modul_nist: "NIST AI RMF module: the total includes a guide value of {von} to {bis} additional person-days for the profile, additional controls, measurement and test plan and the assessment of generative AI. With an in-house development or many systems, plan for the upper value."
+  stunden: "The phases in the tool itself take about {stunden} hours; the person-days also include workshops, clarifications, training and approvals."
+  ohne_pensum: Enter the share of working time of the AIMS lead (page Target date or Project mandate). The roadmap then checks whether the person-days are enough until the target.
+  ab_auftrag: "counted from the approval of the project mandate on {datum}"
+  ab_heute: counted from today
+  pt_ok: "At {pensum}% of working time, the AIMS lead has about {kapazitaet} person-days until the target ({ab}). According to the reference values ({von} to {bis} person-days), this is enough."
+  pt_knapp: "At {pensum}% of working time, the AIMS lead has about {kapazitaet} person-days until the target ({ab}). This is tight, as the reference values call for {von} to {bis} person-days. Increase the working time, move the target or plan support."
+  pt_reicht_nicht: "At {pensum}% of working time, the AIMS lead only has about {kapazitaet} person-days until the target ({ab}). This is not enough, as the reference values call for at least {von} person-days. Increase the working time, move the target or plan external support."
+  meilensteine_titel: Milestones
+  meilenstein: Milestone
+  meilensteine_uebernehmen: "Add {anzahl} milestones to the project mandate"
+  meilensteine_uebernehmen_eins: "Add 1 milestone to the project mandate"
+  meilensteine_uebernommen: "{anzahl} milestones added to the project mandate (E1)."
+  meilensteine_uebernommen_eins: "1 milestone added to the project mandate (E1)."
+  meilensteine_vorhanden: All milestones are in the project mandate.
+  meilensteine:
+    auftrag: Project mandate approved
+    lenkung: Short version of document control applies (D-26)
+    leitlinie: AI policy and scope approved
+    inventar: AI inventory complete
+    offerten: Quotes requested from 2 to 3 accredited certification bodies
+    triage: Screening complete for all systems, procedure D-08 approved
+    stelle: Certification body chosen
+    auditperson: Internal auditor appointed
+    folgen: Impact assessments approved
+    einarbeitung: Internal auditor trained in ISO/IEC 42001 or external specialist auditor booked
+    soa: Statement of applicability approved
+    schulung: Employee training carried out
+    dokumente: All documents approved
+    audit: Internal audit carried out, audit report available
+    mb: Management review minuted
+    stage1: Stage 1 readiness
+  freigaben_titel: Management approval calendar
+  freigabe: What management approves
+  vorlagen: Templates
+  freigaben_text: Management approves seven times during the project. Fix the meetings in the first week and bundle the approvals around them. During the project, management should meet every two weeks or approve by circulation; with a monthly agenda item the project takes considerably longer than planned.
+  freigaben_text_ohne_isms: Management approves seven times during the project. Fix the meetings in the first week and bundle the approvals around them. During the project, management should meet every two weeks or approve by circulation; with a monthly agenda item, expect 7 to 9 months instead of about 150 days.
+  stand: Status
+  stand_erledigt: approved
+  stand_offen: open
+  takt_langsam: "The project mandate plans the status report to management {takt}. This plan needs approvals within one week: agree on a two-week rhythm or approval by circulation during the project."
+  freigaben:
+    auftrag: Project mandate
+    leitlinie: AI policy, scope, roles
+    kriterien: Risk criteria and impact assessment procedure
+    folgen: Full impact assessments and restricted use
+    soa: Treatment plan, residual risks, statement of applicability
+    richtlinien: Policies, procedures, objectives
+    mb: Minutes of the management review
+  freigaben_ohne_isms:
+    auftrag: Project mandate and short version of document control
+
+
+kalender:
+  anzahl_ueberfaellig: "{anzahl} overdue"
+  anzahl_bald: "{anzahl} in the next 30 days"
+  anzahl_erledigt: "{anzahl} done {jahr}"
+  betroffen: "{anzahl} entries overdue"
+  betroffen_eins: "1 entry overdue"
+  stand:
+    ueberfaellig: overdue
+    bald: due soon
+    geplant: planned
+    offen: no fixed date
+    erledigt: done
+  faellig: "due on {datum}"
+  ueberfaellig: "overdue since {datum}"
+  alle: "every {monate} months"
+  oeffnen: Open task
+  erledigt: "done {jahr}"
+
+vorschau:
+  titel: "Live preview: {id} {titel}"
+  hinweis: This is how your entries appear in the document. Places highlighted in yellow are still missing.
+  laedt: Creating preview …
+  nicht_verfuegbar: No preview is available for this document yet.
+  version: Version
+  eigner: Owner
+  freigabe: Approved by
+  datum: Date
+  gekuerzt: "Preview shortened, {anzahl} rows in total."
+
+  gekuerzt_eins: "Preview shortened, 1 row in total."
+dokumente:
+  fertig_eins: "1 file created in {sekunden} s."
+  teilweise_eins: "1 file could not be created:"
+  titel: Generate documents
+  einleitung: The generator creates the complete document set from your project file as Word and Excel files. With an ISMS it produces supplementary sheets; with the EU AI Act module also documents E-01 to E-09. The documents belong to your company and contain no reference to the kit.
+  eb_erklaerung: "EB marks a supplementary sheet: it contains only the sections you add to an existing document of your ISMS instead of keeping a separate document. The ZIP starts with a table of contents (00_Contents.xlsx) that links each supplementary sheet to its ISMS document."
+  sprache: Document language
+  set: Download set
+  startet: Starting the generator …
+  fortschritt: "{fertig} of {gesamt} files: {datei}"
+  fertig: "{anzahl} files generated in {sekunden} s."
+  nichts: No file was generated.
+  teilweise: "{anzahl} files could not be generated:"
+  ohne_vorlage: "No template yet in this version: {ids}"
+  fehler: Generation failed
+  einzeln: Individual documents
+  herunterladen: "Download {format}"
+  druckansicht: Print view
+  drucken: Print or save as PDF
+  zurueck: Back to the list
+
+einstellungen:
+  modul_an: "Module switched on. Phase 5 has new pages: classify your AI systems there. Phases 7 to 10 also get new entries; the check lists them as gaps."
+  zwischenspeicher_aus_hinweis: "Without interim copies only the saved project file protects against loss. Save regularly. Use the button below to delete existing copies."
+  zwischenspeicher_aus: "Do not keep interim copies in the browser"
+  titel: Settings
+  projekt: Project
+  pfad: Route
+  pfad_hilfe: With an ISMS the generator creates supplementary sheets for existing ISMS documents.
+  modul: EU AI Act module
+  modul_hilfe: When switched off, all fields, views and documents on the AI Act disappear. Your entries remain in the project file.
+  modul_label: Include the EU AI Act
+  modul_nist: NIST AI RMF module
+  modul_nist_label: Include the NIST AI RMF
+  modul_nist_hilfe: Voluntary US framework for managing AI risks, useful for US customers or customer questionnaires on it. When switched off, the pages, views and documents of the module disappear; the profile, additional controls and entries remain in the project file.
+  dokumentsprache: Language of the generated documents
+  darstellung: Appearance
+  uisprache: Interface language
+  theme: Light or dark
+  zwischenspeicher: Browser storage
+  zwischenspeicher_text: "The AIMS Manager keeps an interim copy every two seconds ({art}). It protects against loss but does not replace the project file."
+  zwischenspeicher_datenschutz: "Interim storage is not encrypted; other locally opened HTML files and other people using the same browser profile can read it, even after closing. Saved interim copies are deleted after {tage} days. On shared computers, switch interim copies off or clear the storage when you finish (‘Finish’ in the project menu suggests it)."
+  ablage_indexeddb: IndexedDB
+  ablage_localstorage: localStorage
+  ablage_speicher: memory only, lost when closing
+  leeren: Clear browser storage
+  leeren_frage: "Clear interim storage? All interim copies (with project and logo) and your own standard texts are deleted from the browser. The open project stays open in this session; save it as a file first. Project files and the library files stay."
+  geleert: "Interim storage cleared: {anzahl} interim copies and {normpaket} standards package deleted."
+
+  geleert_eins: "Interim storage cleared: 1 interim copy and {normpaket} standards package deleted."
+ueber:
+  titel: About the AIMS Manager
+  version: "Version {version}, built on {gebaut}"
+  text: The AIMS Manager is part of the Starter Kit and runs entirely offline in your browser.
+  lizenz_titel: Licences
+  lizenz: "The Starter Kit is provided under the terms in LICENCE.txt in the folder LIZENZ_LICENCE. The AIMS Manager contains these libraries (licence texts in DRITTLIZENZEN_THIRD-PARTY.txt):"
+  schriften_titel: Fonts
+  schriften: "The AIMS Manager uses the font Inter (The Inter Project Authors) under the SIL Open Font License 1.1, embedded in the file (subsets latin and latin-ext, weights 400 to 700) and not downloaded. The icons are the kit's own drawings."
+  schriften_lizenz: "Save licence text {schrift}"
+  haftung_titel: Disclaimer
+  haftung: The kit supports you with the implementation but replaces neither the standard nor legal advice. If in doubt, have AI Act classifications reviewed by a lawyer. Only the certification body decides on certification.
+  norm: Requirement texts of ISO/IEC 42001 are not included. The standard is available from SNV, DIN or ISO. If you have your own copy, load it under ‘Settings, Texts from your edition of the standard’ to see the original texts in the tool; they stay on this computer.
+
+fehler:
+  datei_pfad: "The file contains file names or paths that are not allowed and was not imported."
+  start_link: "Go to the start page"
+  start_text: "The address leads to a view that does not exist, or the data in the browser is damaged. Interim copies are kept."
+  start_titel: "The AIMS Manager could not draw this page"
+  text_ohne_speicher: "Caution: interim storage is not writing at the moment. Save the project file now, then reload the page. If the error persists, please send us the error report; it contains no project data."
+  speicher_voll: "There is not enough storage space for this file. Nothing was changed. Free up space or keep the file elsewhere and refer to it in an evidence entry."
+  datei_aufwand: "The file is too large or too deeply nested and will not be processed."
+  datei_defekt: "The file is damaged or not in the expected format."
+  zeitgrenze: "Processing took too long and was stopped. The file is probably damaged or too large; your project is not affected."
+  schritt_datei: "Your project is unchanged. Check the file or choose another one."
+  schreibrecht: "The file or folder cannot be written to. Your entries are kept; use ‘Save as’ to save in another location."
+  nicht_gefunden: "The file or folder was not found, for example because it was moved or deleted. Your entries are kept; choose the file or folder again."
+  unbekannt: "The operation could not be completed. Your data is unchanged. Try again; if the error persists, reload the page (your interim copy is kept) and save the project file."
+  ursache: "Cause"
+  technik: "Technical details for the error report"
+  titel: An unexpected error occurred
+  text: Your data is kept in the browser storage. Save the project file and reload the page. If the error persists, send us the error report; it contains no project data.
+  kopieren: Copy error report
+  schliessen: Close
+  ansicht: This view could not be displayed. Choose another view; your data is not affected.
+
+reiter:
+  titel: "Sections: {modul}"
+  im_gefuehrten: "Open in the Guide: {etappe}"
+  organisation:
+    kontext: Company and context
+    parteien: Interested parties
+    geltungsbereich: Scope
+    leitlinie: AI policy
+    rollen: Roles and people
+    risikokriterien: Risk criteria
+  kompetenz:
+    kompetenzen: Competence and awareness
+    kommunikation: Communication plan
+  aiact:
+    systeme: Role and risk class
+    pflichten: Obligations per system
+    vorschlaege: Additional controls
+    fristen: Deadlines and status
+  nistrmf:
+    profil: Current and target profile
+    controls: Additional controls
+    stand: Status of the version
+  brucke27001:
+    mapping: Mapping to ISO/IEC 27001
+    dokumente: ISMS documents with supplementary sheet
+
+organisation:
+  rollen: Roles (RACI)
+  personen: People
+
+aiact:
+  modul_aus: The EU AI Act module is switched off. Switch it on in the settings; information already entered has been kept.
+  art: Art.
+  seite: "p. {seite}"
+  rolle: Role
+  klasse: Risk class
+  keine_systeme: First record active AI systems in the inventory.
+  pflichten_text: For each AI system, the obligations that follow from its role and risk class. ‘Fully’ is covered by the AIMS; ‘partly’ and ‘not’ need the additional control.
+  offen_anzahl: "{anzahl} open obligations without an action"
+  offen_anzahl_eins: "1 open obligation without an action"
+  alle_als_massnahmen: Turn all open obligations into actions
+  als_massnahme: As action
+  massnahmen_angelegt: "{anzahl} actions created."
+  massnahmen_angelegt_eins: "1 action created."
+  pflichten_anzahl: "{anzahl} obligations, {offen} of them open"
+  pflichten_anzahl_eins: "1 obligation, {offen} of them open"
+  pflichten_von: "Obligations for {name}"
+  keine_pflichten: No obligations from the catalogue apply to the role and risk class of this system.
+  art50_anbieter: "Art. {absaetze} places the obligation on the provider, not on you as deployer: the provider ensures that people can tell they are interacting with AI, or that synthetic content is marked. Require this notice in the contract and check in operation that it appears (D-16, E-07). If you offer the system under your own name, you become a provider yourself (Art. 25)."
+  rolle_fehlt: First determine the role under the AI Act (section ‘Role and risk class’).
+  pflicht: Obligation
+  abdeckung: Coverage by the AIMS
+  zusatz: Additional control
+  gilt_ab: Applies from
+  stand: Status
+  grad:
+    ganz: fully
+    teilweise: partly
+    nicht: not
+  pflichtstand:
+    abgedeckt: covered by the AIMS
+    umgesetzt: implemented
+    offen: open
+    abgelehnt: rejected with justification
+  keine_vorschlaege: No additional controls result from the recorded AI systems yet. Determine their role and risk class.
+  vorschlaege_text: These additional controls follow from the roles and risk classes of your AI systems. Add them to the statement of applicability or reject them with a justification.
+  ausgeloest: "Triggered by {systeme}"
+  entscheid:
+    offen: not decided yet
+    ja: applicable in the SoA
+    nein: rejected
+  in_soa: Add to the SoA
+  uebernommen: "{id} has been added to the statement of applicability."
+  ablehnen: Reject with justification
+  ablehnen_grund: Justification for the rejection
+  ablehnen_bestaetigen: Save rejection
+  in_soa_oeffnen: Open in the SoA
+  fassung: Version of the AI Act
+  stand_text: "Basis: consolidated version of {fassung}, checked in the kit on {geprueft}."
+  datum: Date
+  art_frist: Type
+  artikel: Reference
+  inhalt: What applies
+  naechste: next deadline
+  fristart:
+    geltung: Start of application
+    uebergang: Transition
+    kommission: EU date
+
+bruecke:
+  kapitel27001: "ISO/IEC 27001 clause {abschnitt}"
+  ohne_isms: Your project follows the path without an ISMS. The mapping still shows where a later ISMS would connect.
+  grad: Degree of reuse (catalogue)
+  hoch: Controls with a strong correspondence
+  mittel: Controls with at least a medium correspondence
+  projekt: "Your project: {verknuepft} of {anwendbar} applicable controls linked to 27001"
+  grad_erklaerung: The degree of reuse weights the strongest correspondence of each 42001 control (strong fully, medium half, weak not at all). It indicates the effort and is not an audit statement.
+  verknuepfen: Enter strong and medium correspondences for applicable controls without a link
+  verknuepft_meldung: "27001 links entered for {anzahl} controls."
+  verknuepft_meldung_eins: "27001 links entered for 1 control."
+  filter: Correspondence
+  alle: all
+  staerke:
+    hoch: strong
+    mittel: medium
+    tief: weak
+  control42001: ISO/IEC 42001 Annex A
+  control27001: Related controls ISO/IEC 27001 Annex A
+  im_projekt: In your SoA
+  keine: no correspondence
+  dokumente_text: With an ISMS, you extend these existing documents with a supplementary sheet instead of writing new ones. The generator creates the sheets on the path with an ISMS.
+  isms_dokument: ISMS document
+  blatt: Supplementary sheet
+  normbezug: Reference ISO/IEC 42001
+  zu: "for {id} {titel}"
+  erfassen: record in the register
+
+fragebogen:
+  titel: Questionnaire for business units
+  text: Export the survey questionnaire (sheet from D-10) for each business unit and import the completed files. Check every row before it is added to the inventory.
+  fachbereich: Business unit
+  alle_bereiche: all business units
+  geplant: Planned for the survey
+  weitere: Other departments
+  export: Export questionnaire
+  import: Import completed questionnaire
+  exportiert: "‘{name}’ has been downloaded."
+  fehler_export: The questionnaire could not be created
+  zu_gross: The file is too large for a questionnaire ({grenze_fragebogen} at most).
+  kein_xlsx: The file is not a readable Excel workbook (.xlsx).
+  kein_fragebogen: No questionnaire was found in the file. Use the exported questionnaire and do not change the column headings.
+  leer: The questionnaire contains no completed rows.
+  bestaetigen_titel: Add rows from the questionnaire
+  bestaetigen_text: Select the rows to be added to the inventory as new AI systems. Rows with a name that is already recorded are deselected. Add the owner, status and classification in the inventory afterwards.
+  ergebnis: "{anzahl} rows read, {neu} new, {doppelt} already recorded"
+  ergebnis_eins: "1 row read, {neu} new, {doppelt} already recorded"
+  uebernehmen_spalte: Add
+  zeile_uebernehmen: "Add ‘{name}’"
+  zeile: "Row {nr}"
+  zweck: Purpose
+  hinweise: Notes
+  doppelt: "already recorded ({id})"
+  hinweis:
+    personendaten-unklar: Personal data unclear, recorded as ‘yes’ to be on the safe side.
+    besondere-unklar: Sensitive data unclear, recorded as ‘yes’ to be on the safe side.
+    schatten: Obtained by staff themselves, added as shadow AI under review.
+    fachbereich-frei: Business unit added as free text.
+    handelnd: Can act on its own, added as ‘executes within limits’; record the way to stop it.
+    handlung-unklar: Unclear whether the tool acts on its own; added as ‘executes within limits’ to be on the safe side.
+  uebernehmen: "Add {anzahl} rows"
+  uebernehmen_eins: "Add 1 row"
+  uebernommen: "{anzahl} AI systems added to the inventory."
+  uebernommen_eins: "1 AI system added to the inventory."
+  b_ausgefuellt: Completed by
+  b_personen: Number of users
+  b_haeufigkeit: Use
+  b_anbieter: Provider
+  b_bemerkungen: Remarks
+  b_unklar: Information on personal data in the questionnaire is unclear; please check.
+
+ki_import:
+  oeffnen: Paste answer
+  titel: Use the result of the AI assistant
+  text: The kit's AI assistant outputs a project file. Paste the answer here or choose the saved file. Explanatory text around the JSON block does no harm.
+  einfuegen: Answer of the AI assistant (JSON)
+  uebernehmen: Use result
+  datei: Choose file
+  kein_json: No readable project file was found in the answer. Ask the assistant to output the whole project file as one JSON block.
+  schema: The assistant's project file does not quite match the format. Ask it to correct these points and output the whole file again.
+  keine_version: The answer contains no schema version. Ask the AI assistant to output the answer again in the format of the skill (schemaVersion and meta.projektId).
+  allgemein: The result could not be used.
+  ersetzen: "This file belongs to a different project from the open one, ‘{name}’. Close the open project and continue with the answer? Its state is kept as interim storage on the start page."
+  uebernommen: "Project ‘{name}’ taken over from the AI result. Check the information and save the project file."
+  ergaenzt: "Empty information was added: {felder}."
+  migriert: The file was converted to the current format.
+  teil_titel: Use a selection
+  teil_text: "The answer belongs to the open project ‘{name}’. Choose what to take over. Entries with the same ID are replaced, new ones are added; everything else stays as it is. The answer may be an extract with the changed lists."
+  teil_keine: The answer contains no changes compared with the open state.
+  teil_anzahl: "{neu} new, {geaendert} changed, {gleich} unchanged"
+  teil_bereiche: Other information
+  teil_uebernehmen: "Use selection ({anzahl})"
+  teil_uebernommen: "{anzahl} entries and areas taken over from the AI result. Check the information and save the project file."
+  teil_uebernommen_eins: "1 entry or area taken over from the AI result. Check the information and save the project file."
+  teil_schema: "After merging, the project file does not quite match the format. Deselect the entries concerned or ask the assistant to correct them:"
+  ganz_ersetzen: Replace the whole state
+  art:
+    neu: new
+    geaendert: changed
+  listen:
+    personen: People
+    parteien: Interested parties
+    rollen: Roles
+    kiSysteme: AI systems
+    risiken: Risks and opportunities
+    folgenabschaetzungen: Impact assessments
+    controls: Statement of applicability
+    eigeneControls: Own controls
+    nachweise: Evidence
+    dokumente: Document register
+    massnahmen: Actions
+    lieferanten: Suppliers
+    ziele: Objectives
+    kompetenzen: Competences
+    kommunikation: Communication
+    audits: Audits
+    feststellungen: Findings
+    managementbewertungen: Management reviews
+    prozesse: Processes
+    eigeneProzesse: Own processes
+  bereiche:
+    organisation.name: Company name
+    organisation.kontext: Context and issues
+    organisation.rollenIso: Roles of the organization
+    organisation.geltungsbereich: Scope
+    organisation.leitlinie: AI policy
+    organisation.risikokriterien: Risk criteria
+    organisation.projektauftrag: Project mandate
+    organisation.dokumentenlenkung: Document control
+    organisation.meldeweg: Internal reporting route
+    organisation.meldekanalExtern: Reporting channel for external parties
+    organisation.gremien: Committees
+    organisation.bewusstsein: Awareness
+    gapAnalyse: Gap analysis
+    meta.checklisten: Checklists
+
+vorschlaege:
+  controls_uebernommen: "Suggested controls entered: {controls}."
+  genai_titel: Security suggestions for systems with generative AI
+  keine_systeme: No active AI system is marked as generative AI. Mark systems in the inventory (phase 4, page ‘Generative AI and model’).
+  system: Suggestions for the AI system
+  stand: "{offen} of {gesamt} suggestions not yet adopted"
+  ursache: Cause
+  folge: Consequence
+  massnahmen: Typical actions
+  quelle_text: "Risk source: {quelle}"
+  controls: "Suggested controls: {controls}"
+  als_risiko: Adopt as a risk
+  angelegt: "Risk {id} for {system} created, system owner taken from the AI system. The assessment follows on the next page. You can change the owner under ‘Record risks’."
+  uebernommen: "Adopted as {id}."
+  oeffnen: Open in the register
+  kennzeichen: "Suggestion {id} ({verweis})"
+  nist: "Related NIST AI 600-1 risks: {risiken}"
+
+nist:
+  modul_aus: The NIST AI RMF module is switched off. Switch it on in the settings; the profile, additional controls and entries have been kept.
+  katalog_fehlt: The catalogues of the NIST AI RMF module are missing in this version of the tool.
+  profil_text: Current and target level for each subcategory, from 0 not achieved to 3 effective. The suggestion for the current level comes from your documents, controls and entries in the project. For a gap (target above current), record an action.
+  vorschlaege_uebernehmen: "Adopt the suggested current level for {anzahl} subcategories without one"
+  vorschlaege_uebernehmen_eins: "Adopt the suggested current level for 1 subcategory without one"
+  vorschlaege_uebernommen: "Suggested current level adopted for {anzahl} subcategories."
+  vorschlaege_uebernommen_eins: "Suggested current level adopted for 1 subcategory."
+  alle_mit_ist: All subcategories have a current level.
+  funktion_stand: "{bewertet} of {gesamt} with current and target level, {luecken} gaps, of which {ohne} without an action"
+  stufe_leer: not set
+  stufe:
+    "0": 0 not achieved
+    "1": 1 partly
+    "2": 2 achieved
+    "3": 3 effective
+  spalte:
+    subkategorie: Subcategory
+    ist: Current
+    ziel: Target
+    prioritaet: Priority
+    massnahmen: Actions
+    notiz: Note
+  abdeckung: "Coverage in the kit: {abdeckung}"
+  vorschlag: "Suggestion {stufe}"
+  vorschlag_ohne: No entries in the project
+  angaben_fehlen: entries missing
+  luecke_kit: additional control not implemented
+  massnahme_wahl: Add action
+  massnahme_entfernen: "Remove {id} from {subkategorie}"
+  zu_massnahmen: Edit actions
+  stand_text: "Status of the module last checked on {geprueft}, next check {naechste}."
+  keine_vorschlaege: There are no suggestions for your AI systems. Record systems in the inventory.
+  vorschlaege_text: Additional controls from the NIST AI RMF module, suggested for each AI system. Include them in the statement of applicability or reject them with a reason.
+
+kopf_marke:
+  zusatz: AIMS Manager
+
+lagebild:
+  prozesse: Processes
+  zu_prozesse: To the processes
+  prozesse_leer: No process status recorded yet. Set owners and maturity in the Processes area.
+  gl_titel: For top management
+  gl_entscheidungsrechte: Decision rights
+  gl_offen: open
+  gl_stage1: Stage 1 audit by the certification body
+  gl_stage1_fehlt: Date of the stage 1 audit not yet agreed.
+  gl_ziel: "Target date for readiness: {datum}."
+  gl_keine_freigaben: No open approvals from the approval calendar.
+  gl_freigeben: approve
+  gl_annehmen: accept
+  gl_restrisiken: "Residual risks above the acceptance threshold without acceptance: {ids}"
+  titel: AIMS situation report
+  einleitung: "As at {datum}: risks, statement of applicability, actions, AI inventory and check at a glance."
+  einleitung_bildschirm: Each card leads to its module.
+  drucken: Print situation report
+  kennzahlen: Key figures
+  pruefung: Check before stage 1
+  gefuehrt: Guide
+  gefuehrt_wert: "{erledigt} of {gesamt}"
+  gefuehrt_text: pages completed
+  ueberfaellig: Actions overdue
+  ueberfaellig_text: "{bald} due in the next 30 days"
+  ueber_akzeptanz: Risks above the acceptance threshold
+  ueber_akzeptanz_text: "current status (after treatment where rated); before treatment: {vor}"
+  ueber_akzeptanz_offen: "of which {anzahl} not yet rated after treatment"
+  ueber_akzeptanz_offen_eins: "of which 1 not yet rated after treatment"
+  etappen: Phases of the Guide
+  risiken: Risk matrix before and after treatment
+  zu_risiken: Go to risk register
+  soa: Implementation of controls by group
+  zu_soa: Go to statement of applicability
+  soa_leer: No controls in the catalogue yet.
+  massnahmen: Actions by due date
+  zu_massnahmen: Go to actions
+  massnahmen_zeile: Actions
+  massnahmen_leer: No actions recorded yet.
+  ueberfaellige: Overdue actions
+  inventar: AI inventory by risk class and level of autonomy
+  zu_inventar: Go to inventory
+  inventar_leer: No AI systems in the inventory yet.
+  inventar_ecke: Risk class
+  inventar_ohne: not stated
+  summe: total
+  ziele: Objectives with measurements
+  zu_ziele: Go to objectives
+  ziele_leer: No objective has two or more numeric measurements yet. As soon as measurements are available, the report shows the trend.
+  ziel_verlauf: "Trend {kennzahl}: {werte}"
+  ziel_soll: "Target {soll}"
+  kapitel: Progress by clause
+  faellig: Reviews due (next 30 days)
+
+grafik:
+  achse_w: Likelihood
+  achse_a: Impact
+  kurz_w: L
+  kurz_a: I
+  ecke: Impact in the rows, likelihood in the columns
+  matrix_vor: Before treatment
+  matrix_nach: After treatment
+  matrix_vorschau: Preview of the risk matrix with your thresholds
+  matrix_vorschau_text: The preview follows your entries immediately. Each cell shows the risk value L×I and its level.
+  matrix_e6: Your risks in the matrix
+  stufe:
+    tief: low
+    mittel: medium
+    hoch: high
+  legende_tief: "low: up to {bis}, accepted"
+  legende_mittel: "medium: {von} to {bis}, treat"
+  legende_mittel_leer: "medium: no value between the thresholds"
+  legende_hoch: "high: from {ab}, unacceptable (hatched)"
+  zelle_vor: "{kurzW} {w}, {kurzA} {a}, value"
+  zelle_mitte: ", level {stufe}, risks: "
+  zelle_link: ". Open filtered list"
+  unbewertet: "not assessed: {anzahl}"
+  ausserhalb: "outside the scales: {anzahl}"
+  bewertet: "assessed: {anzahl}"
+  ueber: "above the acceptance threshold: {anzahl}"
+  liste: "Risks as a table ({anzahl})"
+  spalte_id: ID
+  spalte_titel: Risk
+  spalte_wert: Value
+  spalte_stufe: Level
+  filter_zelle: "Filtered to {kurzW} {w} and {kurzA} {a} ({stand})."
+  stand_vor: before treatment
+  stand_nach: after treatment
+  stufe_spalte: "{wert} {stufe}"
+  soa:
+    umgesetzt: implemented or effective
+    teilweise: partly
+    offen: planned or open
+    unentschieden: not decided
+    ausgeschlossen: not applicable
+  faelligkeit:
+    ueberfaellig: overdue
+    bald: within 30 days
+    spaeter: later
+    ohneTermin: no due date
+    erledigt: completed
+  zusammen: "total {anzahl}"
+  werte_tabelle: Values as a table
+  heute: today
+  stichtag: reference date
+  kurz_kw: wk
+  gantt_titel: Roadmap as a timeline
+  gantt_beschreibung: "The 10 steps over {wochen} weeks. {schritte}"
+  gantt_schritt: "Step {nr}"
+  gantt_zeile: "Step {nr}, {zustand}, week {von} to {bis}"
+  gantt_marke_meilenstein: Milestone
+  gantt_marke_freigabe: Approval by top management
+  gantt_freigaben: Approvals
+  gantt_legende: "Bar: step (solid completed, medium in progress, light open). Diamonds: milestones and approvals by top management at the end of their week; a number next to one means several in the same week, the tables below list them individually. Dashed: today."
+  zustand:
+    erledigt: completed
+    aktiv: in progress
+    offen: open
+  hantel_titel: Current and target by function
+  hantel_beschreibung: "Average of levels 0 to 3 by function. {zeilen}"
+  hantel_wert: "Current {ist} · Target {ziel}"
+  hantel_zeile: "{funktion}: current {ist}, target {ziel}"
+  hantel_leer: not stated
+  hantel_kopf_funktion: Function
+  hantel_legende: "Solid node: current. Ring: target. Line: gap to the target."
+  fristen_titel: Deadlines of the EU AI Act
+  fristen_vorbei: in force
+  fristen_naechste: next deadline
+  fristen_offen: upcoming
+
+# Texts of the standard from the company's own edition (src/normtexte, src/app/normtexte, settings)
+normtexte:
+  titel: Texts from your edition of the standard
+  text: "Load the PDF edition of ISO/IEC 42001 or ISO/IEC 27001 that you have purchased (also SN EN or DIN EN, German or English). The AIMS Manager reads the text in this browser and then shows the titles and requirement texts of the standard instead of the kit's own short titles."
+  datenschutz: "The text does not leave this computer. It is kept in the browser separately from the project and never goes into the project file. Other HTML files opened locally could read it there: do not load licensed texts on shared computers."
+  ablage_dauerhaft: "Stored in the browser (separate store ‘standards package’, IndexedDB), separately from the project."
+  ablage_sitzung: "This browser does not allow permanent storage for this file: the texts only remain until you close it. Export the standards package to load it again."
+  leer: No texts of the standard loaded yet. The app shows the kit's own short titles and explanations.
+  teil: "{bezeichnung} ({sprache}), {gefunden} of {pflicht} entries, loaded on {datum} from {datei}"
+  teil_amd: "with {amd}"
+  bearbeiten: Check and correct entries
+  entfernen: Remove
+  entfernen_frage: "Remove the texts of {bezeichnung} ({sprache}) from this browser?"
+  lizenz_titel: Licence
+  lizenz_hinweis: "Standards are protected by copyright. Only load an edition for which your organization holds a valid licence, and use the texts only within the terms of that licence."
+  lizenz_bestaetigen: "We hold a valid licence for the edition of the standard we are loading and use the texts only within our organization."
+  pdf_laden: Load PDF of the standard
+  paket_laden: Load standards package file
+  lesen: "Reading PDF: page {fertig} of {gesamt}"
+  lesen_start: Reading PDF …
+  passwort: "The PDF is protected by a password. Password to open it:"
+  fehler_pdf: "The file could not be read. {meldung}"
+  fehler_norm: "No ISO/IEC 42001 or ISO/IEC 27001 was recognized in the file."
+  fehler_nicht_unterstuetzt: "The file is {norm}. This standard is not supported: load ISO/IEC 42001 or ISO/IEC 27001."
+  fehler_paket: "The file is not a standards package of the AIMS Manager."
+  geladen: "Texts of {bezeichnung} applied."
+  geloescht: Texts of the standard deleted.
+  vorschau_titel: Preview of the texts of the standard
+  vorschau_text: "Recognized: {bezeichnung}, edition {ausgabe}, language {sprache}. Found: {gefunden} of {pflicht} required entries ({art})."
+  vorschau_art_42001: clauses of chapters 4 to 10 and 38 controls from Annex A
+  vorschau_art_27001: 93 controls from Annex A
+  vorschau_amd: "Amendment recognized: {amd}. The additions on climate change are included in clauses 4.1 and 4.2."
+  vorschau_nur_amd: "The file only contains the amendment {amd}. It supplements the ISO/IEC 27001 already loaded in the same language."
+  vorschau_ohne_amd: "No amendment Amd 1:2024 in this file. You can load the amendment later as a separate file."
+  vorschau_unvollstaendig: "Not all entries were found. Add missing entries by hand from your edition of the standard or apply the ones found; the kit's short title remains for the others."
+  sprache_label: Language of the edition
+  spalte_id: Number
+  spalte_status: Match
+  spalte_titel: Title
+  spalte_text: Text
+  gefunden: found
+  nicht_gefunden: not found
+  manuell: by hand
+  zeile_bearbeiten: "Edit entry {id}"
+  fertig: Done
+  zeile_knopf: Edit
+  uebernehmen: Apply
+  nur_titel: title only
+  dokumente_titel: Texts of the standard in generated documents
+  dokumente_text: "Without this confirmation, the AIMS Manager shows the texts of the standard in the app only. With confirmation, the generator includes titles and texts in the company documents (Statement of Applicability, audit checklist, gap analysis, integration matrix, extract at the end of the documents) with a source note."
+  dokumente_bestaetigen: Our licence permits inclusion in internal documents.
+  lizenzgeber: "Licensor (for the source note, e.g. SNV)"
+  lizenznummer: Licence number (optional)
+  vermerk_vorschau: "Source note in the documents: {vermerk}"
+  export: Export standards package
+  export_hinweis: "The file contains texts of the standard. Use it only on computers of your organization within the terms of your licence and do not pass it on. The confirmation for documents is not included."
+  export_frage: "The file contains texts from your licensed edition of the standard. Use it only within your organization. Export?"
+  loeschen: Delete texts of the standard
+  loeschen_frage: Delete all texts of the standard and licence details from this browser? The project remains unchanged.
+  hilfe_normtext: Show text of the standard
+  quelle_app: "From your edition {bezeichnung}"
+  kennzeichen: Standard text
+  sprache_marke_de: Standard text in German
+  sprache_marke_en: Standard text in English
+  rueckfall_de: "Only the German edition of {bezeichnung} is loaded: the app shows this text and marks it ‘Standard text in German’."
+  rueckfall_en: "Only the English edition of {bezeichnung} is loaded: the app shows this text and marks it ‘Standard text in English’."
+lieferant:
+  gruppe_allgemein: "General review questions (PF-01 to PF-15)"
+  gruppe_genai: "Security of generative AI (PF-16 to PF-27)"
+  gruppe_klauseln: Contract clauses
+mitarbeitende:
+  titel: For employees
+  einleitung: What you may do with AI at work, how to request a new tool and where to report something. You can print this page or put it on the intranet.
+  drucken: Print page
+  erlaubt_titel: Which AI tools may I use?
+  erlaubt_leer: No tool approved yet. Ask the person in charge before you use an AI tool.
+  werkzeug: Tool
+  stand: Status
+  datenklasse: At most this data
+  auflagen: Conditions
+  verboten: "Not allowed:"
+  datenklassen: "‘Public’ means anyone may see it. ‘Internal’: for employees only, e.g. internal instructions. ‘Confidential’: customer, personnel and contract data, design data. ‘Strictly confidential’: for a few people only. If in doubt, the classification of your information security applies."
+  beantragen_titel: How do I request a new AI tool?
+  beantragen_bei: "Report the tool to {wer} before you use it. Describe what you need it for and which data you want to enter."
+  beantragen_offen: Report the tool to the AIMS lead before you use it.
+  beantragen_frist: "You will receive a decision within {tage} days."
+  beantragen_kriterien: "The review covers:"
+  beantragen_bis: Until the decision, do not use the tool with company data. Free and private accounts are not allowed for company data.
+  melden_titel: Where do I report an incident or a concern?
+  melden_text: "Report it if an AI gives wrong or unfair results, if data ended up in the wrong place or if something seems odd. Reporting is always right, even if the suspicion is not confirmed."
+  melden_offen: The reporting channel has not been set yet. Contact your line manager.
+  ausweich: "If the report concerns the person responsible: {wer}"
+  vertraulich: You can report confidentially.
+  mehr_titel: More
+  fragebogen: Questionnaire for departments (which AI you already use)
+  richtlinie: View or download the policy on responsible AI use (D-15)
+verknuepft:
+  titel: Linked to this AI system
+  risiken: Risks
+  folgen: "Impact assessment {id}"
+  folgen_offen: Impact assessment (not yet created)
+  controls: Controls related to this system
+  massnahmen: "Actions:"
+  feststellungen: Findings and incidents
+  meldungen: Reports and appeals
+  lieferant: "Supplier {id}"
+
+gestaltung:
+  titel: Document design
+  einleitung: Your company's logo, colours and typeface for all generated company documents (Word, Excel, PDF via the print view). Blank templates and examples of the kit keep the kit design. Everything stays on this computer and in your project file.
+  karte_text: Logo, corporate colours, typeface, footer, cover page and watermark of the generated documents.
+  oeffnen: Open document design
+  zurueck: Back to settings
+  ohne_projekt: The document design belongs to the project. Open or start a project first.
+  stand_keine: "Design: kit design (no logo, no corporate colours)"
+  stand: "Design: {teile}"
+  stand_logo: logo
+  stand_farben: "colours {farbe}"
+  stand_schrift: "typeface {schrift}"
+  aendern: change
+  logo:
+    titel: Logo
+    hilfe: "PNG, JPEG, SVG, WebP or GIF up to {grenze_bild}, a logo for a light background. The tool trims empty margins, scales down to at most {grenze_logo_kante} and stores a PNG without metadata (at most {grenze_logo_png}). A Word template (.dotx, .docx) provides suggestions for logo, colours and typeface."
+    waehlen: Choose file
+    ablegen: Drop a logo or Word template here
+    entfernen: Remove logo
+    vorschau_alt: "Preview of the logo on a white background"
+    info: "{breite} x {hoehe} px, {kb} KB, shape: {form}"
+    form_quer: wide banner
+    form_breit: landscape
+    form_quadratisch: square
+    form_hoch: portrait
+    quelle: "Source: {datei}"
+    position: Position in the header
+    links: left
+    rechts: right
+    name_zeigen: Show the company name next to the logo
+    name_zeigen_hilfe: With a wordmark the name is already part of the logo; unless you choose otherwise, the AIMS Manager therefore hides it when the logo contains a wordmark. When hidden, it remains in the alternative text and in the file properties.
+    hoehe: "Height in the header: {mm} mm"
+    hoehe_auto: by shape
+    hoehe_hilfe: Without a value the height follows the shape of the logo (wide banner 9 mm, landscape 10 mm, square and portrait 12 mm), at most 53 mm wide.
+    alt: Alternative text
+    alt_hilfe: "Describes the logo for screen readers; empty: ‘Logo {firma}’."
+    laedt: Converting the logo …
+    uebernommen: Logo applied.
+    hinweis:
+      raender: Empty margins were trimmed.
+      verkleinert: The logo was scaled down.
+      farben-reduziert: The logo was reduced to 256 colours to stay below {grenze_logo_png}.
+      klein: The logo is less than 120 px high and may look blurred in print. If possible, choose a larger file or an SVG.
+      dunkler-grund: This logo is meant for a dark background (light on a transparent background). Please choose the version for a light background.
+      svg-bereinigt: Scripts, external references or unknown elements were removed from the SVG.
+      svg-zu-gross: The SVG is larger than {grenze_logo_svg} and is only used as PNG.
+      erstes-bild: The first frame of an animated GIF is used.
+    svg_code:
+      aufbau: "The file structure is faulty (elements not closed or not matching)"
+      entitaeten: "The file contains entities (DOCTYPE)"
+      aufwand: "The file is too large or nested too deeply"
+      verweis: "The file contains ambiguous or circular references"
+    fehler:
+      zu-gross: The file is larger than {grenze_bild}.
+      leer: The image is empty or fully transparent.
+      format-pdf: PDF is not supported. Please export the logo as SVG or PNG.
+      format-eps: EPS and AI are not supported. Please export the logo as SVG or PNG.
+      format-unbekannt: This format is not supported. Possible formats are PNG, JPEG, SVG, WebP, GIF and Word templates (.dotx, .docx).
+      nicht-lesbar: This browser could not read the image.
+      zu-viele-pixel: The image has more than 50 megapixels.
+      svg-ungueltig: "The SVG is invalid or contains parts that are not allowed (for example entities): {detail}"
+      svg-aufwand: "The SVG is too complex to draw, so the import was stopped. Simplify the file or upload the logo as a PNG."
+      logo-zu-gross: The logo cannot be brought below {grenze_logo_png}.
+      vorlage-ohne-logo: The Word template does not contain a readable logo in the header.
+      paket: "The file is not a design package: {grund}"
+  vorlage:
+    titel: Suggestion from your Word template
+    text: "Read from ‘{datei}’. Only what you confirm is applied; the tool does not take over the layout and styles of the template."
+    farben: "Theme colours: {farben}"
+    schriften: "Theme fonts: headings {titel}, body {text}"
+    logo_nicht_lesbar: "The header image has the format {format} and cannot be used."
+    uebernehmen: Apply suggestion
+    verwerfen: Discard
+    uebernommen: Suggestion from the Word template applied.
+  farben:
+    titel: Colours
+    hilfe: "Hex value from your corporate design manual (for example #1C5D94). Office only knows RGB: for Pantone or HKS, use the RGB value from the manual."
+    primaer: Primary colour
+    sekundaer: Secondary colour
+    akzent: Accent colour
+    waehler: "Colour picker {farbe}"
+    ungueltig: "Please enter a colour as hex value, for example #1C5D94."
+    leeren: Remove colour
+    vorschlagen: Suggest colours from the logo
+    vorschlaege: "Suggestions from the logo:"
+    vorschlag_setzen: "Use {farbe} as primary colour"
+    keine_vorschlaege: The logo contains no vivid colours.
+    semantisch: Risk levels, status and notes keep their colours so that they mean the same in all documents.
+    kontrast: "Contrast against white {wert}:1"
+    korrigiert_text: "Your {quelle} {original} is too light for text on white. Headings use {ersatz} (contrast {kontrast}:1)."
+    korrigiert_grafik: "Your {quelle} {original} is too light for lines and bars. Charts use {ersatz} (contrast {kontrast}:1)."
+    korrigiert_flaeche: "The strong table header with white text uses {ersatz} instead of {original} (contrast {kontrast}:1)."
+    nahe_status: "Your {quelle} is close to the status colour ‘{status}’{sicht}. It is only used for headings, header and table header, not in charts."
+    nahe_sicht: " (with {sicht})"
+    reihe_ersetzt: "Chart series {reihe} would hardly be distinguishable from the previous one with {sicht} and receives a kit colour."
+    sicht:
+      normal: normal vision
+      protanopie: red weakness (protanopia)
+      deuteranopie: green weakness (deuteranopia)
+      tritanopie: blue weakness (tritanopia)
+    status:
+      status-kritisch: critical
+      status-gut: good
+      status-warnung: warning
+      risiko-hoch: high risk
+      risiko-mittel: medium risk
+      status-neutral: neutral
+    quelle_primaer: primary colour
+    quelle_sekundaer: secondary colour
+    quelle_akzent: accent colour
+    wo: Where the corporate colours apply
+    ueberschriften: "Title and headings in the primary colour (off: black)"
+    tabellenkopf: Table header and field labels in a tint of the primary colour
+    kraeftig: Strong table header (primary colour with white text)
+    diagramme: Neutral chart series in the corporate colours
+  schrift:
+    titel: Typeface
+    hilfe: Fonts are not embedded (licences, file size). Safe pairs are available with Office on Windows and macOS.
+    paar: Font pair
+    paare:
+      arial-cambria: "Arial and Cambria (default)"
+      arial: Arial
+      calibri: Calibri
+      aptos: "Aptos (Microsoft 365 from 2024 only)"
+      georgia: Georgia
+      verdana: Verdana
+      eigen: Own corporate font
+    eigen_titel: Font for headings and tables
+    eigen_text: Font for body text
+    bestaetigung: This font is installed on all computers on which the documents are edited.
+    ohne_bestaetigung: Without confirmation the documents use Arial and Cambria.
+    vorhanden: "‘{schrift}’ is available on this computer (an indication, not proof for other computers)."
+    fehlt: "‘{schrift}’ cannot be found on this computer. Word replaces it with another font; page breaks may shift."
+  weitere:
+    titel: Further details
+    kurzname: Short name
+    kurzname_hilfe: "For the header and file names, for example ‘MMB’, at most 30 characters."
+    zusatz: Additional footer line
+    zusatz_hilfe: Address, commercial register or website, one line, at most 160 characters. The classification stays in the first line.
+    titelseite: Cover page
+    titelseite_keine: none
+    titelseite_grundlagen: "scope, AI policy and statement of applicability only"
+    titelseite_alle: all Word documents
+    wasserzeichen: Watermark ‘Draft’ in documents that are not approved
+    wasserzeichen_hilfe: Word shows it diagonally on every page and can delete it via ‘Remove Watermark’. Excel has no watermarks; there the note appears in the header and in the sheet ‘Document’.
+    praefix: Prefix of the document ID
+    praefix_hilfe: "For display in the document header only, for example ‘AIMS-’ gives ‘AIMS-D-07’. Internally, in the register and in references it stays D-07. Allowed: letters, digits, full stop, hyphen, underscore, at most 12 characters."
+    praefix_ungueltig: Letters, digits, full stop, hyphen and underscore only, at most 12 characters.
+    praefix_dateien: Also put the prefix in front of the file names
+    praefix_dateien_hilfe: "The generated files are then called, for example, ‘AIMS-D-07_Risk-Register.xlsx’. The table of contents of the set lists the new names; identifiers in the documents, in the register and in references remain D-07."
+  vorschau:
+    titel: Preview
+    hilfe: Sample document with the values that Word and Excel receive as well. The actual Office result is what counts.
+    fehlsicht: View with colour vision deficiency
+    fehlsicht_keine: normal vision
+    word: Download sample as Word
+    excel: Download sample as Excel
+    pdf: Print sample or save as PDF
+    semantisch: "These colours stay fixed:"
+  muster:
+    titel: Policy for the use of AI (sample)
+    absatz: This sample document shows how your company documents look. Title, header, table header and neutral chart series follow your design; risk levels and status keep their colours.
+    h_grundsaetze: Principles
+    h_risiken: Risks and progress
+    tabelle_kopf: [Principle, Responsible, Status]
+    zeilen:
+      - ["People decide, AI supports", Management, implemented]
+      - [Transparency towards affected persons, AIMS lead, in progress]
+      - [Data only after approval, Head of IT, planned]
+    liste:
+      - Every AI system is recorded in the inventory.
+      - Risks are assessed before use.
+    hinweis: ISO/IEC 42001, clause 5.2
+    matrix_titel: Risk matrix
+    matrix_ecke: "I \\ L"
+    matrix_alt: "Sample values: two risks low, one medium, one high."
+    tief: low
+    mittel: medium
+    hoch: high
+    diagramm_titel: Implementation of actions
+    diagramm_kat: [Q1, Q2, Q3, Q4]
+    reihe_ist: Actual
+    reihe_plan: Plan
+    reihe_ueberfaellig: overdue
+    diagramm_alt: "Sample values: actual 2, 4, 6, 8; plan 3, 5, 7, 9."
+    blatt: Register
+    spalten: [ID, Title, Status, Value]
+    klassifikation: Internal
+    version: "1.0"
+    eigner: AIMS lead
+  paket:
+    logo_bereinigt: "The logo was cleaned in the process."
+    titel: Design package
+    hilfe: The design as JSON file for further projects of the same company. The copy in the project file always prevails.
+    exportieren: Export design
+    importieren: Import design
+    zuruecksetzen: Reset to default
+    zuruecksetzen_frage: Remove the logo, colours and all details of the document design?
+    importiert: Design applied.
+    zurueckgesetzt: Design removed, the documents use the kit design.
+    grund:
+      kein-json: not a JSON file
+      kein-paket: not an ‘aims-gestaltung’ file
+      version: unknown version
+      schema: invalid details
+      zu-gross: larger than {grenze_gestaltungspaket} or nested too deeply
+  kurz:
+    hilfe: Optional. Logo and primary colour are enough to start with; everything else can be found later in the settings.
+    alle: All settings of the document design
+
+prozesse:
+  raci_waehlen: "Choose"
+  titel: Processes
+  start_text: "No process status has been recorded for this project yet. With the first entry (e.g. owner or maturity) the project manages its processes: the check then reports missing owners and overdue runs, and the documents include the process descriptions (D-27)."
+  vorschlaege_text: "In the Guide you indicated {anzahl} processes as already in practice ({liste}). Take over the maturity ‘defined’ for them as a suggestion."
+  vorschlaege_text_eins: "In the Guide you indicated 1 process as already in practice ({liste}). Take over the maturity ‘defined’ for it as a suggestion."
+  vorschlaege_uebernehmen: Take over suggestions
+  dashboard: Process status
+  rollen_offen: "Roles in this flow without an assigned person: {rollen}. They are neither an area of responsibility with a responsible person nor the role of a person; D-04 lists them as ‘not yet assigned’, and the check reports F37."
+  rollen_offen_link: "Go to responsibilities: add role"
+  dashboard_text: "Status on {datum}: applicable AIMS processes, without an ISMS also the minimum set of base processes. Maturity, owners, due runs, indicators and open actions."
+  reife_verteilung: Processes by maturity
+  reife_zeile: Applicable processes
+  kennzahlen: Process indicators
+  ohne_eigner: Without owner
+  alle_mit_eigner: All processes have an owner.
+  ueberfaellig: Overdue
+  ueberfaellig_text: Run overdue according to the cycle
+  ueberfaellig_wort: overdue
+  kennzahlen_aktuell: Indicator measured
+  kennzahlen_text: Value in the last twelve months
+  massnahmen_offen: Open actions
+  massnahmen_ueberfaellig: "of which {anzahl} overdue"
+  kurz: "Without owner: {ohne}. Overdue: {ueberfaellig}. Open actions: {massnahmen}."
+  faellig_titel: Runs due (next 30 days)
+  nichts_faellig: No run due in the next 30 days.
+  filter_art: Type
+  filter_pflicht: Obligation
+  drawio_alle: All processes as a draw.io file
+  drawio_dieser: This process as a draw.io file
+  drawio_import: Take over a draw.io file
+  drawio_exportiert: "File {name} created."
+  drawio_fehler: The draw.io file could not be processed
+  drawio_hinweis: "Open the file in draw.io Desktop or app.diagrams.net and save it compressed or uncompressed. When you take it over, your shapes, layers and notes are kept; the data stays on your computer."
+  drawio_stand: "Flow taken over from draw.io on {datum} ({datei})."
+  prozess: Process
+  art: Type
+  verbindlichkeit: Obligation
+  eigner: Owner
+  kein_eigner: no owner
+  vorschlag: suggestion
+  reife: Maturity
+  naechste: Next run
+  offen: open
+  massnahmen: Actions
+  nicht_anwendbar: not applicable
+  isms_titel: Base processes in the ISMS
+  isms_text: "Your ISMS runs these information security processes. Record the reference to the ISMS for each process; the AIMS does not need its own flow."
+  isms_verweis: Reference to the ISMS
+  kein_verweis: no reference
+  empfohlen_titel: "Further basic information security processes (recommended, {anzahl})"
+  unbekannt: "Process {id} is neither in the catalogue nor among the own processes."
+  zur_liste: To the process list
+  stand_titel: Status
+  anwendbar: Applicable
+  anwendbar_ja: applicable
+  anwendbar_nein: not applicable
+  anwendbar_offen: open
+  vorschlag_wert: "Suggestion: {wert}"
+  begruendung: Justification
+  eigner_aus_rolle: "Suggestion: {person} (role {rolle} from D-04). Choose a person to set the owner."
+  eigner_rolle: "Suggested role: {rolle}. D-04 does not yet name a person for it."
+  stellvertretung: Deputy
+  reife_vorschlag: "Suggestion from the project data: {stufe}."
+  vorschlag_uebernehmen: Take over suggestion
+  rhythmus: Cycle
+  letzte: Last run (manual)
+  abgeleitet: "From the project data: last on {datum}."
+  nicht_abgeleitet: No run can be seen in the project data yet.
+  nur_hand: The run cannot be derived from the project data; enter the date manually.
+  faellig_berechnet: "Next run according to the cycle: {datum}."
+  kennzahl: Indicator
+  kennzahl_vorschlag: "Suggestion: {kennzahl}; target {soll}. Choose an objective or an indicator from D-05."
+  keine_kennzahlen: No objectives or indicators recorded yet
+  kennzahl_wert: "Last value: {wert} on {datum}."
+  kennzahl_ohne_wert: No value yet.
+  nachweise: Records
+  notiz: Note
+  ablauf_titel: Flow
+  ablauf_katalog: Flow from the catalogue. Adapt it in the table or take over a file from draw.io.
+  ablauf_eigen: The company's own flow (edited or taken over from draw.io).
+  ablauf_svg: "Flow {prozess}"
+  ablauf_svg_text: "Flow with {anzahl} steps in the lanes {bahnen}. The table below lists every step."
+  ablauf_svg_text_eins: "Flow with 1 step in the lanes {bahnen}. The table below lists the step."
+  schritte_titel: Steps
+  nr: No.
+  schritt: Step
+  schrittart: Type
+  rolle: Role
+  wirkt_mit: Contributes
+  informiert: Informed
+  weiter: Continue with
+  bearbeiten: Edit flow
+  bearbeiten_fertig: Finish editing
+  zuruecksetzen: Reset to catalogue
+  zuruecksetzen_frage: Discard the own flow and the draw.io data and use the catalogue flow?
+  beschreibung_titel: Description
+  massnahmen_titel: Actions for the process
+  keine_massnahmen: No actions related to this process.
+  massnahme_neu: Create action
+  massnahme_titel: "Improvement {prozess}"
+  dateien_titel: Documents and files
+  beschreibung_docx: Process description (Word)
+  beschreibung_erzeugt: "Process description {name} created."
+  beschreibung_fehler: The process description could not be created
+  import_titel: Take over a draw.io file
+  import_text: "Check the difference to the current status. Only ‘Take over’ changes the project."
+  import_ohne_prozess: not assigned to a process
+  import_neu: "New steps: {anzahl}"
+  import_geaendert: "Changed steps: {anzahl}"
+  import_entfernt: "No longer included: {anzahl}"
+  import_bahnen_offen: Lanes without role
+  import_formen_offen: Shapes without assignment
+  import_nichts_geloescht: Shapes the tool does not know stay in the file and appear again in the next export.
+  import_uebernehmen: Take over
+  import_uebernommen: "{anzahl} flows taken over."
+  import_uebernommen_eins: "1 flow taken over."
+  import_zu_gross: The file is larger than {grenze_drawio}.
+  import_leer: The file contains no flow that can be taken over.
+  fehler:
+    zu-gross: The file is larger than {grenze_drawio}.
+    kein-xml: The file is not readable XML.
+    kein-drawio: The file contains no draw.io diagram.
+    dtd: The file contains a document type definition; for security reasons it is not read.
+    entitaet: The file contains unknown entities; for security reasons it is not read.
+    tiefe: The file is nested too deeply.
+    kompression: A compressed page could not be unpacked.
+  landkarte_titel: Process map
+  landkarte_text: "Processes by group, coloured by maturity. The colours follow a fixed scale, not your company colours; every tile also shows the level as a word. A click opens the process."
+  landkarte_legende: Maturity levels
+  ansicht: View
+  ansicht_liste: List
+  ansicht_karte: Map
+  eigen_neu: Add own process
+  eigen_neu_titel: Add own process
+  eigen_neu_text: "For processes of your company that the catalogue does not cover. The tool assigns the identifier (PE-01 onwards). You then build the flow in the step table or take it over from draw.io."
+  eigen_titel: Title
+  eigen_titel_fehlt: Please enter a title.
+  eigen_zweck: Purpose
+  eigen_gruppe: Group
+  eigen_bahnen: Roles involved (lanes)
+  eigen_bahnen_hilfe: "Each selected role gets a lane in the flow. Without a selection the flow starts in the lane of the AIMS lead."
+  eigen_anlegen: Add
+  eigen_angelegt: "Process {id} added."
+  eigen_start: Trigger occurs
+  eigen_schritt: Describe the first step
+  eigen_ende: Result available
+  eigen_angaben: Details of the own process
+  eigen_normbezug: Reference to ISO/IEC 42001
+  eigen_normbezug_hilfe: "Numbers only, separated by commas, for example 8.1, A.6.2.6."
+  eigen_ausloeser: Triggers
+  eigen_eingaben: Inputs
+  eigen_ausgaben: Outputs and records
+  eigen_zeilen_hilfe: "One entry per line. The details appear in the process description (D-27)."
+  eigen_dokumente: Documents
+  eigen_dokumente_hilfe: "IDs of the documents in which the process is governed and evidenced, for example D-22, D-14."
+  eigen_kennzahl: Indicator with target value
+  eigen_kennzahl_text: What is measured
+  eigen_kennzahl_soll: Target value
+  eigen_kennzahl_wert: Number of the target value
+  eigen_kennzahl_einheit: Unit
+  eigen_schnittstellen: Related processes
+  eigen_schnittstellen_hilfe: "IDs of other processes, for example PR-18, PR-12."
+  eigen_schnittstellen_text: Definition of the interfaces
+  extern: Carried out by
+  extern_nein: the company itself
+  extern_ohne_register: Service provider without an entry in the supplier register
+  extern_hilfe: "If a service provider carries out the process, the company remains responsible. Record the provider in the supplier register (D-16) and describe how you control it."
+  extern_name: Name of the service provider
+  extern_steuerung: Steering by the company (contract, order, report, check)
+  eigen_beschreibung: Own process of the company. Purpose and flow are shown above; assign the indicator and evidence under status.
+  eigen_loeschen: Delete process
+  eigen_loeschen_frage: "Delete process {id} ‘{titel}’ with its status and flow? It is also removed from the scope of the audits."
+  eigen_geloescht: "Process {id} deleted."
+  eigen_loeschen_massnahmen: "{anzahl} actions refer to this process; they are kept."
+  eigen_loeschen_massnahmen_eins: "1 action refers to this process; it is kept."
+  kennzahl_eigen: Choose an objective or an indicator from D-05 that shows effectiveness.
+  keine_angabe: not specified
+  neuer_schritt: New step
+  schritt_aktionen: Insert or remove step
+  schritt_einfuegen: Insert
+  nach_schritt: "after step {nr}"
+  schritt_entfernen: Remove
+  schritt_nr: "step {nr}"
+  bahnen_offen_titel: Assignment after draw.io open
+  bahnen_offen_text: "These lanes from draw.io do not have a role yet. Choose the matching role; the note in the checks then disappears."
+  bahn_rolle: "Role for the lane ‘{bahn}’"
+  formen_offen_text: "Shapes without assignment (for example images): {liste}. They are kept in the file and appear again in the next export."
+  formen_geprueft: Noted
+  import_als_eigen: "new as own process {id}"
+  import_eigen_titel: "Title of process {id}"
+  import_eigen_hilfe: If left empty, the page name is used. Adjust group and type afterwards on the detail page.
+  import_uebernommen_eigen: "{anzahl} flows taken over, newly added: {liste}."
+  import_uebernommen_eigen_eins: "1 flow taken over, newly added: {liste}."
+
+beenden:
+  ungespeichert: "The project has unsaved changes. ‘Finish without saving’ closes it anyway; choose Cancel to stay in the project and save first."
+  leeren_frage: "Clear the interim storage of this browser? This is recommended on shared computers. ‘Clear browser storage’ deletes all interim copies (with project and logo) and your own standard texts from the browser; project files on disk and the library files in the browser stay (Settings, Library). ‘Do not clear’ keeps an interim copy for next time."
+  geleert: "Finished. Interim storage has been cleared."
+  beendet: "Finished. An interim copy stays in the browser."
+
+speicher_hinweis:
+  titel: "Interim copies are stored unencrypted in this browser."
+  # V-19: one-line notice bar; the full text with the retention period is in the settings (zwischenspeicher_datenschutz)
+  kurz: "More in the settings."
+  text: "The AIMS Manager keeps your project as an interim copy in the storage of this browser ({art}). It is not encrypted and can be read by other people using the same browser profile. Saved interim copies are deleted after {tage} days. On shared computers, switch interim copies off in the settings or clear the interim storage when you finish."
+  ok: "Understood"
+  einstellungen: "Go to settings"
+
+warnung:
+  tabs_text: "Both tabs write to the same interim copy and the last one wins. Work in one tab only and close the other."
+  tabs_titel: "This project is also open in another tab."
+  zwischenspeicher_text: "The browser is no longer keeping interim copies, for instance because storage is full or blocked. Save the project file now and regularly from now on."
+  zwischenspeicher_titel: "Interim storage unavailable."
+sprung:
+  schliessen: "Close bar"
+  leiste: "Items from the check"
+  naechste: "Next item ({nr} of {anzahl})"
+  zurueck: "Back to the check"
+# Notice in the frame when the legal status is old or an open item has not been reviewed recently (AF-117, W10)
+rechtsstand_hinweis:
+  titel: "Check the legal status."
+  alt: "The legal information in this kit was last checked on {datum}, more than six months ago."
+  alt_ohne_datum: "No review date is recorded for the legal information in this kit."
+  zu_pruefen: "Not reviewed in the last six months: {liste}."
+  tun: "Download the latest version of the kit (kmu-cio.ch/42001) and check classifications and deadlines at the source before you rely on them. Not legal advice."
+# Deleting with dependencies (AF-009, ui/Loeschen.tsx)
+loeschen:
+  titel: "Delete {eintrag}?"
+  titel_name: "Delete {eintrag} ‘{name}’?"
+  abhaengig: "{anzahl} other entries refer to this entry. Deleting it removes these references; the entries themselves remain unless stated."
+  abhaengig_eins: "One other entry refers to this entry. Deleting it removes the reference; the entry itself remains unless stated."
+  verweise: "{anzahl} references"
+  verweise_eins: "1 reference"
+  weitere: "and {anzahl} more entries"
+  weitere_eins: "and 1 more entry"
+  mitgeloescht: "is deleted as well because it belongs to the deleted entry"
+  endstatus: "already completed (approved, done or effective), please check after deleting"
+  verweise_entfernen: Remove references and delete
+  bereich_organisation: Organization
+  bereich_nistProfil: NIST AI RMF profile
+  bereich_kennzahlMessungen: Indicator measurements
+eingang:
+  zwischenstand-gross: "This saved version is {wert}, larger than a project file (at most {grenze}), and therefore cannot be opened. It stays in the browser and is not deleted."
+  schritt_zwischenstand: "Open the project file you saved last. If the project is still open in another tab, save it there as a file and shorten large content (logo, pasted text) before you discard the saved version."
+  zu-gross: "The file is too large for {art} (at most {grenze}) and was not read."
+  zu-viele: "The file contains too many entries for {art} (at most {grenze}) and was not imported."
+  zu-tief: "The data are nested too deeply for {art} (at most {grenze} levels) and were not imported."
+  zeit: "Reading the file ({art}) took longer than {grenze} and was stopped."
+  zu-viele-seiten: "The PDF has {wert} pages, more than {art} may have (at most {grenze}), and was not read."
+  herzschlag: "Reading the file ({art}) made no progress for {grenze} and was stopped."
+  art:
+    projektdatei: a project file
+    ki-ergebnis: an AI result
+    sicherung: a library backup
+    gestaltungspaket: a design package
+    svg-logo: an SVG logo
+    word-vorlage: a Word template
+    drawio: a draw.io file
+    normpaket: a standards package
+    norm-pdf: a standard PDF
+    bild: a logo or a Word template
+    fragebogen: a questionnaire
+    bibliotheksdatei: a library file
+
+# Names of symbols for screen readers (A-24)
+symbol:
+  pfeil_links: Left arrow
+  pfeil_rechts: Right arrow
+  pfeil_hoch: Up arrow
+  pfeil_runter: Down arrow
+  nach: to
+  weiter_zu: to

@@ -1,0 +1,244 @@
+# Texts and labels for the guide and the poster (English). Structure: src/leitfaden/schritte.yaml
+sprache: en
+kitordner: EN
+datei:
+  leitfaden: Guide_Minimal-Viable-AIMS
+  poster: AIMS-on-one-page
+  ordner: 00_Guide
+titel: Minimal Viable AIMS
+untertitel: "Guide to the ISO/IEC 42001 Starter Kit for SMEs with 50 to 500 employees"
+absender: "ISO/IEC 42001 Starter Kit by Andreas Gapsch, KMU-CIO, kmu-cio.ch"
+versprechen: "Download the kit, unzip it, get started. The only thing you need to buy is the standard ISO/IEC 42001."
+stand: "As of October 2026, EU AI Act in the consolidated version of 27/07/2026"
+version: Version
+seite: Page
+von: of
+inhalt: Contents
+lizenzzeile: "Licence CC BY 4.0. Not legal advice, no guarantee of certification."
+poster_titel: AIMS on one page
+poster_untertitel: "ISO/IEC 42001 for SMEs: clauses 4 to 10, the 10 steps, Annex A and the EU AI Act and NIST AI RMF modules"
+
+# Chapters in print order (same file names as in src/leitfaden/de/)
+kapitel:
+  - 01-minimal-viable-aims.md
+  - 02-wo-anfangen.md
+  - 03-zehn-schritte.md
+  - 04-zeitplaene.md
+  - 05-aufwand.md
+  - 06-auditfeststellungen.md
+  - 07-rolle-zuerst-ai-act.md
+  - 08-zertifizierung.md
+  - 09-ki-assistent.md
+  - 10-nist-ai-rmf.md
+  - 11-anhang.md
+
+steckbrief:
+  norm: Clauses to read
+  vorlagen: Templates
+  etappe: Stage in the tool
+  modus: Mode in the AI assistant
+  dauer: Duration
+  aufwand: Internal effort
+  beteiligte: People involved
+  mit_isms: with ISMS
+  ohne_isms: without ISMS
+  woche: week
+  wochen: weeks
+  bis: to
+  pt: PD
+  modul: Module
+  modul_nist: NIST module
+
+aufwand:
+  schritt: Step
+  mit_isms: "With ISMS (PD)"
+  ohne_isms: "Without ISMS (PD)"
+  summe: Internal total
+
+uebersicht:
+  id: ID
+  titel: Title
+  normbezug: Reference
+  pfad: Path in the kit
+  format: Format
+  je_system: "per AI system"
+  gruppen:
+    pflicht: Core templates
+    leitfaden: Guides and aids
+    modul: EU AI Act module (optional)
+    modul_nist: NIST AI RMF module (optional)
+    eb: "Supplementary sheets for the path with an ISMS"
+
+# Folders in the unpacked kit (below EN/), as in src/kataloge/kit-ordner.yaml
+ordner:
+  vorlagen: 01_Templates
+  integration: 03_ISO27001-Integration
+  ergaenzungsblaetter: 03_ISO27001-Integration
+  modul: 02_Module_EU-AI-Act
+  modul_nist: 02_Module_NIST-AI-RMF
+
+
+
+# First-day reading path (AF-136): chapter 1 names the three steps and the chapters that fall away on the first day.
+# tests/unit/erstkontakt.test.ts checks that chapter 1 contains these numbers in both languages.
+erster_tag:
+  minuten: 60
+  schritte: 3
+  entfallen: [4, 5, 6, 7, 8, 9, 10, 11]
+
+schritte:
+  1: Mandate and starting point
+  2: Context, roles, scope
+  3: Policy, roles, reporting channels
+  4: AI inventory
+  5: Role first and classification
+  6: Risks and impact assessments
+  7: Controls, statement of applicability, approval
+  8: Implementation
+  9: Measure, audit, review, improve
+  10: Certification
+
+modi:
+  1: Quick check
+  2: Scoping interview
+  3: AI inventory
+  4: Role first
+  5: Risk and impact assessment
+  6: SoA proposal
+  7: Tailor documents
+  8: Audit preparation
+  9: Operation
+  10: ISMS integration
+  11: EU AI Act (module only)
+  12: NIST AI RMF (module only)
+
+# Short content per clause 4 to 10 in the cycle on the poster (own words)
+poster_kapitel:
+  K-4: "Setting, parties, roles, scope"
+  K-5: "Policy, top management accountability, roles"
+  K-6: "Risks, impact assessments, controls, objectives"
+  K-7: "Resources, competence, communication, documents"
+  K-8: "Running operations, reassessing risks and impacts"
+  K-9: "Measuring, internal audit, management review"
+  K-10: "Fixing deviations, improving continually"
+poster_mitte: "AI systems in the inventory (D-10)"
+poster_mitte_klein: "Each system with owner, role, risks, impact assessment and controls"
+
+# Chapters that start on a new page in print (only chapter 1 after the contents; further forced breaks left pages
+# half empty, check: no gap larger than a third of the page)
+neue_seite: [01-minimal-viable-aims.md]
+
+# Chapter 10 NIST AI RMF: labels of the blocks <!-- nistbilanz -->, <!-- niststand -->, <!-- nistgenai -->
+nist:
+  bilanz:
+    funktion: Function
+    anzahl: Subcategories
+    norm: "Coverage by ISO/IEC 42001"
+    kit: "Coverage by the kit without the module"
+    ganz: full
+    teilweise: partial
+    nicht: none
+    summe: Total
+    satz: "Without the module, {teilweise} subcategories remain partly open: {liste}. With the module, every subcategory is either fully covered or assigned to an additional control: {allgemein} general ones ({allgemein_von} to {allgemein_bis}) and {genai} for generative AI ({genai_von} to {genai_bis}). For {praezisierungen} subcategories a note in existing templates is enough."
+  stand:
+    dokument: Document
+    datum: Date
+    seiten: Pages
+    quelle: DOI or address
+    version: version
+    pdf_vom: PDF of
+    satz: "Status checked on {geprueft}. The US ‘AI Action Plan’ of {angekuendigt} announced a revision of the AI RMF; on the date of the check there was no draft, no version number and no date. AI RMF 1.0 remains authoritative. The kit checks the status before every release; the AIMS Manager reminds you when the last check is more than {monate} months old."
+  genai:
+    nr: "No."
+    risiko: "Risk (kit's short title)"
+    relevanz: Relevance for SMEs
+    controls: Additional controls
+    hinweis: "none, a note is enough"
+
+
+# Figures (blocks <!-- abb:name --> and <!-- aiactfristen -->): titles, source lines, labels.
+# The data come from the sources (schritte.yaml, landkarte.yaml, src/ai-act/stand.yaml, src/nist-rmf/subkategorien.yaml,
+# suggested scales and decision tree from src/i18n/en/vorlagen); only words are kept here.
+abbildung: Figure
+quelle: Source
+abbildungen:
+  fahrplan:
+    titel: "Roadmap in weeks to stage 1 readiness: 90 days with an ISMS and about 150 days without"
+    quelle: "Schedules and approval calendar of the kit (schritte.yaml); own illustration."
+    mit: "with ISMS (week {von} to {bis})"
+    ohne: "without ISMS (week {von} to {bis})"
+    mit_kurz: "Week with ISMS"
+    ohne_kurz: "Week without ISMS"
+    freigaben_mit: "Approvals with ISMS"
+    freigaben_ohne: "Approvals without ISMS"
+    freigabe: "Approval by top management"
+    legende_mit: "Step with ISMS"
+    legende_ohne: "Step without ISMS"
+    legende_freigabe_mit: "Approval with ISMS"
+    legende_freigabe_ohne: "Approval without ISMS"
+    schritt: "Step {nr} {titel}: with ISMS {mit}, without ISMS {ohne}"
+    woche: "week {von}"
+    wochen: "weeks {von} to {bis}"
+    beschreibung: "Bars per step on an axis in weeks. {schritte}. Approvals by top management with an ISMS in weeks {freigaben_mit}, without an ISMS in weeks {freigaben_ohne}. Stage 1 readiness with an ISMS after week {ende_mit}, without an ISMS after week {ende_ohne}."
+  risikomatrix:
+    titel: "Risk matrix: level from likelihood times impact, with an example before and after treatment"
+    quelle: "Suggested 4×4 scales from D-07, thresholds and consequences from D-06; own illustration."
+    achse_w: "Likelihood (per year)"
+    achse_a: "Impact"
+    kurz_w: L
+    kurz_a: I
+    vor: before
+    nach: after
+    zonen: "How to read the zones"
+    beispiel: "Example: a risk with L {w1} × I {a1} = {v1} ({s1}) drops through controls to L {w2} × I {a2} = {v2} ({s2}). The residual risk is acceptable."
+    beschreibung: "Matrix of 4 likelihood levels (columns) and 4 impact levels (rows), each cell with the risk score L×I. {zonen}. {beispiel}"
+    zone: "{stufe} (risk score {werte}): {text}"
+  rollenbaum:
+    quelle: "Questions from D-24 Role first; Art. 3, 22 to 25 of Regulation (EU) 2024/1689. Not legal advice."
+  landkarte:
+    titel: "Map of the frameworks: side by side by bindingness and topic"
+    quelle: "Classification by the kit (landkarte.yaml), as of October 2026; own illustration."
+    achse: "binding (law)  →  voluntary"
+    spalten: ["Law", "Standard, certifiable", "Guidance and framework, voluntary"]
+    zeilen: ["Obligations and fundamental rights", "Management of AI", "Security of information and AI"]
+    markiert: "covered in the kit"
+    offen: "not covered or only monitored"
+    feld: "{zeile}, {spalte}: {eintraege}"
+    leer: none
+    beschreibung: "Three columns by bindingness (law, certifiable standard, voluntary guidance or framework) and three rows by topic; no ranking. {felder}. Covered in the kit: {markiert}."
+    eintraege:
+      ai-act: EU AI Act
+      datenschutz: "FADP, GDPR"
+      ki-konvention: "Council of Europe AI Convention"
+      iso42001: ISO/IEC 42001
+      iso27001: ISO/IEC 27001
+      iso27090: ISO/IEC 27090
+      nist-ai-rmf: NIST AI RMF
+      owasp: "OWASP Top 10 (LLM, agents)"
+      mitre-atlas: MITRE ATLAS
+      enisa: "ENISA, good practice for AI"
+      csa: "CSA AI Controls Matrix, MAESTRO"
+  nist:
+    titel: "NIST AI RMF: coverage of the 72 subcategories per function by ISO/IEC 42001 and by the kit without the module"
+    quelle: "NIST AI 100-1 (AI RMF 1.0); mapping by the kit (subkategorien.yaml, N-02); own illustration."
+    norm: "Standard"
+    kit: "Kit"
+    zeile: "{funktion} ({anzahl}), {quelle}"
+    wert: "{funktion} {quelle}: full {ganz}, partial {teilweise}, none {nicht}"
+    beschreibung: "Stacked bars per function GOVERN, MAP, MEASURE and MANAGE, one bar for the standard and one for the kit without the module; on the right the share of fully covered subcategories. {werte}."
+  fristen:
+    titel: "EU AI Act: what applies from when"
+    quelle: "Regulation (EU) 2024/1689, consolidated version of {fassung}, Art. 111 and 113; status checked on {geprueft}."
+    heute: "As of {datum}"
+    ab: From
+    was: What applies
+    beschreibung: "Timeline from {von} to {bis}: {eintraege}. Status checked on {geprueft}."
+    # Short title for the timeline and text for the table per deadline from src/ai-act/stand.yaml; {FRIST-xx} becomes the date
+    eintraege:
+      FRIST-02: { kurz: "Prohibitions, AI literacy", text: "prohibited practices (Art. 5) and the duty to take AI literacy actions (Art. 4)" }
+      FRIST-03: { kurz: "General-purpose AI models", text: "obligations for providers of general-purpose AI models, governance, penalties" }
+      FRIST-07: { kurz: "Application, transparency", text: "general date of application, including the transparency obligations (Art. 50)" }
+      FRIST-08: { kurz: "Additional prohibitions", text: "additional prohibitions under Art. 5 (amending regulation 2026)" }
+      FRIST-09: { kurz: "", text: "marking of synthetic content also for systems placed on the market before {FRIST-07}" }
+      FRIST-13: { kurz: "High-risk under Annex III", text: "obligations for high-risk AI under Annex III (for example recruitment, creditworthiness)" }
+      FRIST-15: { kurz: "High-risk under Annex I", text: "obligations for high-risk AI under Annex I (AI in products covered by EU product legislation)" }

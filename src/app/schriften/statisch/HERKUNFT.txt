@@ -1,0 +1,1 @@
+Statische Schnitte aus archivo-latin-wdth-normal.woff2 (Breite 100) und source-serif-4-latin-wght-normal.woff2 (optische Grösse 14), erzeugt mit fontTools instancer. Lizenz wie die Ausgangsdateien: OFL (../OFL-Archivo.txt, ../OFL-Source-Serif-4.txt). Nur für den Druck des Leitfadens und der Poster, nicht im AIMS-Manager.

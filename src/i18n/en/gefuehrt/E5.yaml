@@ -1,0 +1,134 @@
+# Page texts for phase E5 Role first and classification. Format: src/gefuehrt/FORMAT.md
+E5-einfuehrung:
+  titel: Role first
+  frage: Do you provide this AI system, or do you only use it?
+  warum: Your role determines your obligations. As a [[g:anbieter]], you are responsible for development, documentation and conformity; as a [[g:betreiber]], for correct use and oversight. That is why you clarify the role before any other obligation.
+  fehler: An ISO/IEC 42001 certificate does not prove that you comply with the AI Act. It only shows that you manage AI in an orderly way. Auditors and customers expect you to know this boundary and say so.
+E5-rolle:
+  titel: Role per AI system
+  frage: What is your role for this AI system?
+  warum: If you develop a system or offer it under your own name, you are a [[g:anbieter|provider]]. If you use a purchased system in a professional context, you are a [[g:betreiber|deployer]]. Both can apply to the same system.
+  fehler: A chatbot that you buy but run under your own name on your website often makes you a provider. Auditors compare the role with your contracts and how you present yourself externally.
+  felder:
+    aiAct.rollen:
+      label: Role
+      hilfe: You can select more than one. The decision tree in D-24 helps with borderline cases.
+    aiAct.anwendungsbereich:
+      label: Territorial scope (Art. 2(1))
+      hilfe: Which points of Art. 2(1) apply to this system? Selecting none means no link to the EU, for example for a system used only at a Swiss site. Shown in E-01, column M.
+    aiAct.geprueft:
+      label: Role checked by, on
+      hilfe: Who checked the role using the decision tree, in borderline cases the legal adviser. Shown in E-01, column ‘Checked by, on’.
+E5-rollenwechsel:
+  titel: Do you become a provider?
+  frage: Have you offered the system under your own name, substantially modified it or used it for a new purpose?
+  warum: Under the AI Act, a [[g:betreiber|deployer]] becomes a [[g:anbieter|provider]] in these cases if the system is high-risk ([[g:rollenwechsel]]). Retraining with your own data can also be a [[g:wesentliche-aenderung]].
+  fehler: The change of role is often overlooked because the system was ‘bought in’. Record the check and your reasoning, even if the result is ‘no change’.
+  felder:
+    aiAct.rollenwechsel:
+      label: Result of the check under Art. 25(1)
+      hilfe: No change or the point that applies. The change only concerns high-risk systems; for other systems E-01 sets ‘not relevant’. Shown in E-01, column ‘Change of role under Art. 25(1)’.
+    aiAct.rollen:
+      label: Role after the check
+      hilfe: Add ‘provider’ if your role has changed.
+    aiAct.begruendung:
+      label: Reasoning
+      hilfe: e.g. "Retrained with our own images, but not a high-risk system, since it is quality control of our own production (Art. 6). No change of role."
+E5-verbote:
+  titel: Prohibited practices
+  frage: Before you classify a system, check it against the prohibitions in Art. 5. You record the result per system on the next page. The full list of prohibitions is in the selection on that page.
+  warum: Some uses are banned outright, such as manipulative techniques, scoring people by their social behaviour, or emotion recognition at work and in schools. Check every system against these before you classify it ([[g:verbotene-praxis]]).
+  fehler: Emotion recognition is sometimes hidden in video conferencing or call centre tools. If a system is affected, stop using it and have it reviewed by a lawyer. Tick off the check in the checklist.
+E5-risikoklasse:
+  titel: Risk class
+  frage: Which AI Act risk class does this system fall into?
+  warum: The class determines the obligations. [[g:hochrisiko|High-risk systems]] under Annex III cover areas such as recruitment or credit checks; under Annex I they are safety components in products such as machinery. Most SME systems have minimal risk or only transparency obligations.
+  fehler: Under Art. 6, AI for quality control or performance optimization is not a [[g:sicherheitsbauteil]] unless its failure puts people at risk. Record borderline cases with your reasoning. High-risk obligations under Annex III apply from 02/12/2027, under Annex I from 02/08/2028.
+  felder:
+    aiAct.risikoklasse:
+      label: Risk class
+      hilfe: The check reports ‘still open’ as an error.
+    aiAct.anhangIiiBereich:
+      label: Area under Annex III
+      hilfe: e.g. 4a for systems that filter or rate job applications.
+    aiAct.ausnahmeArt63:
+      label: Exception under Art. 6(3)
+      hilfe: Only if the system performs a narrow supporting task and does no profiling of people. You must document the reasoning.
+    aiAct.art5.ergebnis:
+      label: Check for prohibited practices (Art. 5)
+      hilfe: Result of the check against Art. 5(1). Any hit other than ‘none’ stops use until the legal review.
+    aiAct.art5.begruendung:
+      label: Reasoning for the Art. 5 check
+      hilfe: One or two sentences, for example why there is no emotion recognition.
+    aiAct.produkt.anhangI:
+      label: Product under Annex I
+      hilfe: Is the system part of a product under Annex I, for example a machine (Section B)?
+    aiAct.produkt.sicherheitsbauteil:
+      label: Safety component or product itself (Art. 6(1)(a))
+      hilfe: Is the system a safety component of the product or the product itself?
+    aiAct.produkt.nurNichtSicherheitsrelevant:
+      label: Only functions without safety relevance (Art. 6(1a))
+      hilfe: User assistance, performance optimization, efficiency, automation, usability or quality control.
+    aiAct.produkt.ausfallGefaehrdet:
+      label: Failure endangers health and safety (Art. 6(1b))
+      hilfe: Would a failure or malfunction endanger health and safety? Then it is a safety component despite Art. 6(1a).
+    aiAct.produkt.drittpruefung:
+      label: Third-party assessment because of health or safety risks (Art. 6(1)(b), 6(1c))
+      hilfe: Does the product need a third-party conformity assessment because of health or safety risks? Radio or EMC risks alone are not enough.
+    aiAct.produkt.begruendung:
+      label: Reasoning on Art. 6(1a) and 6(1b)
+      hilfe: Why the system is or is not a safety component; shown in E-02.
+    aiAct.profiling:
+      label: Profiling of natural persons
+      hilfe: With profiling, an Annex III system is always high-risk; the exception under Art. 6(3) does not apply.
+    aiAct.registrierung:
+      label: Registration in the EU database (Art. 49(2))
+      hilfe: "Only with an exception under Art. 6(3): the [[g:anbieter|provider]] registers the system before placing it on the market."
+    aiAct.eingestuft:
+      label: Classified by, on
+      hilfe: Who set the risk class and when. Shown in E-02, column ‘Classified by, on’.
+E5-transparenz:
+  titel: Transparency obligations
+  frage: Does the system talk to people or generate content?
+  warum: Since 02/08/2026, chatbots, AI-generated content and [[g:deepfake|deep fakes]] have been subject to disclosure and labelling obligations, regardless of the risk class ([[g:transparenzpflicht]]).
+  fehler: A chatbot without a notice such as ‘You are talking to an AI’ is a clear breach. Auditors look at the user interface.
+  felder:
+    aiAct.transparenz:
+      label: Applicable obligations
+      hilfe: Leave empty if no obligation applies.
+    aiAct.kennzeichnung:
+      label: Method of machine-readable marking
+      hilfe: How generated content is marked in a machine-readable way, e.g. metadata in the image or the [[g:anbieter|provider]]'s watermark. Leave empty if the implementation is described in the [[g:soa|statement of applicability]] for [[g:control|control]] EUAIA-06. Shown in E-07.
+E5-gpai:
+  titel: General-purpose model
+  frage: Does your organization itself place a general-purpose AI model on the market with this system?
+  warum: Many tools use large language models in the background ([[g:gpai]]). The specific obligations for these models lie with the [[g:anbieter|providers]] of the models, not with those who use them. Yes applies only if you develop or substantially modify such a model yourself and make it available to others.
+  fehler: People often tick ‘yes’ because Copilot or ChatGPT is based on a large model. That triggers needless obligations and suggestions. Instead, record the model used in the description in the inventory.
+  felder:
+    aiAct.gpai:
+      label: We place a general-purpose AI model on the market ourselves
+      hilfe: No when using Copilot, ChatGPT and similar services, and for your own chatbot or assistant built on a third-party model via an interface.
+E5-begruendung:
+  titel: Reasoning for the classification
+  frage: How do you justify the role and risk class of this system, and has the classification been reviewed by a lawyer?
+  warum: Clear reasoning protects you when customers or authorities ask. A [[g:anbieter|provider]] who decides under Art. 6(3) that a system is not high-risk has to document this anyway.
+  fehler: A plain ‘not high-risk’ without reasoning convinces no one. For borderline cases, a short legal review is worth it; note it here.
+  felder:
+    aiAct.begruendung:
+      label: Reasoning
+      hilfe: Two to four sentences referring to the articles.
+    aiAct.juristischGeprueft:
+      label: Legally reviewed
+      hilfe: By your legal department or an external expert.
+E5-vermerk:
+  titel: Note on the AI Act
+  frage: Why do you not need the AI Act module at the moment?
+  warum: Even without the module, you should record why the AI Act does not affect you. That way you can answer the question at any time and spot changes, such as a new customer in the EU.
+  fehler: The note goes out of date as soon as your business or systems change. Review it at least once a year. Auditors ask how you keep track of legal requirements for AI.
+  felder:
+    meta.gefuehrt.antworten.aiActVermerk.text:
+      label: Note
+      hilfe: e.g. "No AI in our products, no high-risk cases, results only used internally in Switzerland. Classification without legal review."
+    meta.gefuehrt.antworten.aiActVermerk.naechstePruefung:
+      label: Next review
+      hilfe: Within one year at the latest.

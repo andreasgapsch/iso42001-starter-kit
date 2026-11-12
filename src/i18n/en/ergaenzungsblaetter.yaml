@@ -1,0 +1,276 @@
+hinweis: |
+  This supplementary sheet is intended for organizations with an existing ISMS. Add the sections to your current document instead of creating a new one, and adapt terms and numbering to your document. For the requirement text, see ISO/IEC 42001, sections as listed under the reference. The standard is available from SNV, DIN or ISO.
+ismsDokumente:
+  isms-leitlinie: "Information security policy"
+  isms-rollen: "Roles, responsibilities and organization chart"
+  isms-risikoverfahren: "Information security risk procedure"
+  isms-risikoregister: "Risk register and treatment plan"
+  isms-asset-inventar: "Information asset inventory"
+  isms-vorfallmanagement: "Security incident procedure"
+  isms-akzeptable-nutzung: "Acceptable use policy"
+  isms-lieferanten: "Supplier management"
+  isms-awareness: "Training, awareness and communication"
+  isms-auditprogramm: "Internal audit programme"
+  isms-managementbewertung: "Management review"
+  isms-nichtkonformitaeten: "Nonconformities and corrective actions"
+  isms-dokumentenlenkung: "Control of documented information"
+blaetter:
+  D-03-EB:
+    titel: "Supplement to the information security policy"
+    abschnitte:
+      geltung-ki:
+        titel: "Application to AI"
+        inhalt: |
+          This policy also applies to AI systems that we develop, operate or use as a service, including AI features in existing software. Data entered into or produced by AI tools is information within the meaning of this policy. It is subject to the same rules on classification, access and retention.
+      verhaeltnis-ki-leitlinie:
+        titel: "Relationship to the AI policy"
+        inhalt: |
+          The AI policy sets out how we develop and use AI responsibly. This policy covers the security of information. Both policies refer to each other and must not contradict each other. If a conflict nevertheless arises, the stricter rule applies until top management has decided.
+      sicherheitsgrundsaetze-ki:
+        titel: "Security principles for AI"
+        inhalt: |
+          We enter confidential information only into approved AI tools. We protect training data, models and system prompts against unauthorized change, because tampering can alter how an AI system behaves. We check outputs of AI systems before further use where they influence decisions about people or customers.
+      gemeinsame-ueberpruefung:
+        titel: "Joint review"
+        inhalt: |
+          The information security policy and the AI policy are reviewed together, at least once a year and whenever significant changes occur. Significant changes include new AI systems, new legal requirements such as the AI Act, or serious incidents. The outcome is recorded in the management review.
+  D-04-EB:
+    titel: "Supplement to roles and organization chart"
+    abschnitte:
+      aims-verantwortung:
+        titel: "AIMS lead"
+        inhalt: |
+          Top management appoints a person who runs the AI management system and reports on it to top management. In small organizations, this can be the person responsible for information security. In that case, the time budget, the deputy and the handling of conflicts of interest are recorded in writing, for example where this person would have to assess their own AI projects.
+      systemverantwortung:
+        titel: "System owner per AI system"
+        inhalt: |
+          Each AI system in the inventory has a system owner, just as each information asset has an asset owner. The system owner knows the purpose and limits of the system, initiates the impact assessment and risk assessment, and decides on changes. For purchased services, the system owner is also the contact person for the provider.
+      raci-ki:
+        titel: "Additional responsibilities (RACI)"
+        inhalt: |
+          The existing responsibility matrix is extended by the areas of the AI management system, such as AI risks, impact assessments, AI inventory, data, human oversight, AI suppliers, law and the AI Act, training, internal audit and document control. For information security and data protection, the existing ISMS responsibilities apply. For each area it is defined who carries out the work, who decides, who is consulted and who is informed. Existing committees take on AI topics such as approving new AI tools, rather than new committees being set up.
+      meldeweg-bedenken:
+        titel: "Channel for raising AI concerns"
+        inhalt: |
+          Employees and people working for us can raise concerns about AI systems through an existing channel, such as the whistleblowing office or their line manager. Topics without a security angle may also be reported, such as unfair outputs or use outside the intended purpose. The identity of the person reporting is only passed on with their consent, and anyone reporting in good faith need not fear any disadvantage. If a report concerns the responsible person, it goes to an alternative contact. Acknowledgement, feedback and escalation follow defined deadlines; every report is recorded and evaluated in the management review. Reports from external parties are covered by the incident procedure.
+  D-06-EB:
+    titel: "Supplement to the risk management procedure"
+    abschnitte:
+      eine-methode:
+        titel: "One method for both systems"
+        inhalt: |
+          AI risks are assessed with the same method and the same likelihood and impact scales as information security risks. This keeps results comparable, and top management decides on consistent criteria. The risk acceptance criteria apply to both systems.
+      auswirkungen-ki:
+        titel: "Additional impact categories"
+        inhalt: |
+          The impact scale is extended by two levels: consequences for individuals and groups, such as discrimination, intrusion into privacy or wrong decisions, and consequences for society, such as an effect on many people or on the environment. For each level, an example describes what it means. The impact is the most severe realistic consequence across all three levels.
+      risikoquellen-ki:
+        titel: "Typical AI risk sources"
+        inhalt: |
+          Risk identification also considers typical AI sources: poor or biased data, declining model performance in operation (drift), lack of traceability, a high degree of automation without human control, dependence on one model provider, and attacks through inputs such as prompt injection, including through emails, web pages and documents that an assistant reads. Typical AI threats are added, such as poisoned data, inference about training data, leakage through outputs, excessive rights of agents and abuse of costs. The list serves as a prompt and is reviewed once a year.
+      verbindung-folgenabschaetzung:
+        titel: "Link to the impact assessment"
+        inhalt: |
+          The AI system impact assessment (D-08) is a separate procedure, but its results feed into the risk assessment. Conversely, a new or changed AI system with possible effects on individuals triggers an impact assessment. Risk assessment and impact assessment refer to each other.
+      risikoeigner-ki:
+        titel: "Risk owner and acceptance"
+        inhalt: |
+          The risk owner of an AI risk is normally the system owner of the affected system. They propose the treatment. They confirm low risks themselves in the register; top management approves the acceptance of medium risks and any time-limited exception for high risks. The acceptance is recorded with date and name.
+  D-07-EB:
+    titel: "Supplement to the risk register"
+    abschnitte:
+      zusatzspalten:
+        titel: "Additional columns"
+        inhalt: |
+          The ISMS risk register gets additional columns for risks with an AI link: AI system concerned (ID from the AI inventory) and a reference to the AI risk register (D-07). Existing columns such as owner, rating and actions stay unchanged. Groups of people affected, the reference to the impact assessment and the related controls from Annex A of ISO/IEC 42001 are kept in the AI risk register.
+      trennung-verknuepfung:
+        titel: "Keep separate, link"
+        inhalt: |
+          Information security risks, including those of an AI system, stay in the ISMS risk register. AI-specific risks such as bias, incorrect outputs or missing human review are kept in the AI risk register (D-07). If an AI risk also has a security aspect, such as data leaking through an AI tool, it is not recorded twice but linked through the risk ID (column ‘ISMS reference’ in D-07). This way, every risk sits in one place and has exactly one owner.
+      chancen:
+        titel: "Recording opportunities"
+        inhalt: |
+          Opportunities are recorded alongside risks, such as time savings, better quality or new offerings through AI. For each opportunity, it is recorded who pursues it and by when. Opportunities and risks of the same AI system are considered together.
+      restrisiko:
+        titel: "Acceptance of residual risk"
+        inhalt: |
+          For each treated AI risk, it is recorded who accepted the residual risk and when. Residual risks above the acceptance threshold are accepted by top management. Acceptance is reviewed at the latest at the next risk assessment or when the AI system changes significantly.
+  D-10-EB:
+    titel: "Supplement to the asset inventory"
+    abschnitte:
+      ki-kennzeichen:
+        titel: "AI flag"
+        inhalt: |
+          Each inventory entry gets an "AI" field with the values "AI system", "contains AI feature" or "no AI". Standard software and cloud services with built-in AI features are flagged in the same way, such as office software with an assistant feature. For each AI system, the ID from the AI inventory is entered.
+      ressourcen-zuordnen:
+        titel: "Linking resources to the AI system"
+        inhalt: |
+          For each AI system, the resources it uses are linked: data sets, tools and models, compute and system resources, and people with the necessary skills. Assets already in the inventory are only linked, not recorded again. Missing resources such as models or training data is added.
+      schatten-ki:
+        titel: "Finding unrecorded AI"
+        inhalt: |
+          Once a year and before every audit, a check is made whether AI is being used without approval. Aids include a short questionnaire to the teams, evaluations of the web filter or proxy, and a review of credit card and expense reports for AI subscriptions. Tools found are added to the AI inventory. A decision is then made whether to approve them, replace them with an approved tool or prohibit them; prohibited tools remain on the approval list with the reason.
+      pflege:
+        titel: "Maintaining the inventory"
+        inhalt: |
+          The system owner reports changes such as new model versions, new data sources, new access rights, extensions or agents, or decommissioning. For acting AI the inventory also records the level of autonomy, access and the way to stop the system. The inventory is reviewed at least once a year together with the asset inventory.
+  D-14-EB:
+    titel: "Supplement to incident management"
+    abschnitte:
+      ki-vorfaelle:
+        titel: "What counts as an AI incident"
+        inhalt: |
+          Besides security incidents, an AI incident is any event in which an AI system harms or could harm people, for example through discriminatory outputs, wrong decisions or dangerous recommendations. This includes data leaking through inputs into AI tools. AI incidents are recorded in the existing incident process and linked to the AI system concerned.
+      meldekanal-extern:
+        titel: "Reporting channel for external parties"
+        inhalt: |
+          Customers, users and affected people can report problems with our AI systems through a publicly known channel, such as a form on the website or a dedicated email address. Incoming reports are triaged like internal reports and answered within a defined period. The person reporting receives an acknowledgement of receipt.
+      kommunikation:
+        titel: "Communication during AI incidents"
+        inhalt: |
+          The communication plan defines who informs users, customers, affected people and partners during an AI incident, through which channel and within what time. A named person coordinates and decides with top management on external communication. Where necessary, the AI feature is temporarily switched off or replaced by manual processing, and those affected are informed. The procedure is rehearsed once a year using an example.
+      meldepflichten:
+        titel: "Reporting obligations to third parties"
+        inhalt: |
+          A list records which reporting obligations apply to AI incidents, to whom and within what time. Depending on the role, these include obligations under the AI Act, such as reporting serious incidents involving high-risk AI systems by providers (Art. 73) and informing the provider by deployers (Art. 26). Reports under data protection law and contractual duties towards customers are added. The list is aligned with the register of legal requirements.
+      lehren:
+        titel: "Lessons from AI incidents"
+        inhalt: |
+          After each AI incident and near miss, the cause, effect, severity and actions are recorded in the register of nonconformities and improvements. A check is made whether the risk assessment, the impact assessment or the information for users need to be updated; accepted residual risks that affect users or customers are included in the information for them. These arrangements are reviewed every year and after significant incidents.
+      information-nutzende:
+        titel: "Information for users and customers"
+        inhalt: |
+          These arrangements do not concern incidents only. They belong to the supplementary sheet so that information for users and customers is covered. Anyone who uses an AI system or is affected by its results learns that AI is involved, what it is for, where its limits are, who checks results and whom to contact. Customers whose services include AI or who receive AI from us are also informed about known sources of error and how their data is used. For each AI system, the target group, information and location are recorded.
+  D-15-EB:
+    titel: "Supplement to the acceptable use policy"
+    abschnitte:
+      freigegebene-werkzeuge:
+        titel: "Approved AI tools"
+        inhalt: |
+          Only AI tools on the list of approved tools may be used for work, and only with the company account. The list states for each tool the permitted purpose and the highest classification level of data allowed. Private accounts must not be used for work.
+      dateneingabe:
+        titel: "What data may be entered"
+        inhalt: |
+          Public and internal information may be entered into approved tools. Confidential information and personal data only into tools that the AI inventory expressly approves for this and that do not use our data for training. Passwords and other credentials, sensitive personal data, documents under contractual confidentiality and export-controlled data never belong in an AI tool.
+      ergebnisse-pruefen:
+        titel: "Checking outputs"
+        inhalt: |
+          Anyone who uses AI remains responsible for the result. Facts, figures, quotations, sources, translations and code are checked before further use. If a result concerns customers, contracts, safety or people, a person with the necessary expertise always checks it. Content that comes largely from AI is labelled where others would otherwise assume a human author, for example in published texts and images. AI assistants, agents and extensions act only after confirmation by a person and only if they are approved; third-party content can contain hidden instructions.
+      neue-werkzeuge:
+        titel: "Requesting new AI tools"
+        inhalt: |
+          Anyone who wants a new AI tool or a new use submits a short request stating the tool, purpose, users, data and the solution without AI that was considered. Until the decision, the use is not allowed. The responsible function checks the supplier, data, risks and, where necessary, the impacts, and decides within a defined period: allowed, allowed with conditions, or prohibited. The decision is entered in the AI inventory, and users are informed and trained.
+      verbotene-nutzung:
+        titel: "Prohibited uses"
+        inhalt: |
+          Using AI for purposes that breach the law or our AI policy is prohibited, including the practices prohibited by the AI Act such as emotion recognition in the workplace. In addition, we do not use AI for decisions about people without human review, for monitoring or assessing employees without approval by top management, for deception or for circumventing security rules. If in doubt, employees ask before using it.
+  D-16-EB:
+    titel: "Supplement to supplier management"
+    abschnitte:
+      ki-lieferanten:
+        titel: "Flagging AI suppliers"
+        inhalt: |
+          The supplier list flags which suppliers deliver AI systems, models or AI features. The following checks apply to these suppliers in addition. The flag is reviewed at every contract renewal, because many providers add AI features later.
+      pruefpunkte:
+        titel: "Additional checks"
+        inhalt: |
+          Before selection, the provider is asked whether our data is used for training, where the model comes from and where data is processed. It is also clarified what documentation on purpose, limits and testing is available and what role the provider has under the AI Act. For generative AI, protection against manipulated inputs, permissions in search, control of extensions and actions, a cost cap, the display of answers, and the model and version are added. The answers are filed with the supplier questionnaire.
+      vertragsklauseln:
+        titel: "Contract clauses"
+        inhalt: |
+          Contracts with AI suppliers also cover: no training on our data without consent, notice of significant model changes, reporting of AI incidents, support with our legal obligations, and an orderly exit with return or deletion of data. If a clause is missing, for example in standard contracts, this leads to a condition, an entry in the AI risk register with a knowingly accepted residual risk, or rejection.
+      verantwortungsteilung:
+        titel: "Dividing responsibilities"
+        inhalt: |
+          For each purchased AI system, a short table records who is responsible for what: model and training, configuration, data entered, checking outputs, monitoring and reporting incidents. The table is agreed with the provider as far as the provider is willing.
+      ueberwachung:
+        titel: "Monitoring in operation"
+        inhalt: |
+          AI suppliers are reviewed before purchase, then at least once a year and additionally after an incident, a model change, new subcontractors or changed contract terms. Besides the usual points, the review checks whether the model, terms of use or data location have changed. Significant changes trigger a new risk assessment.
+  D-17-EB:
+    titel: "Supplement to competence, awareness and communication"
+    abschnitte:
+      ki-kompetenzen:
+        titel: "AI competences per role"
+        inhalt: |
+          The competence profile is extended with AI competences per role: safe use of AI tools for everyone, evaluation of outputs for business owners, and knowledge of data and models for developers. Anyone who deploys or provides AI systems with a link to the EU takes actions under Art. 4 of the AI Act to support the AI literacy of the people involved; the article does not require a specific level. Gaps are closed through training or external support.
+      awareness-ki:
+        titel: "Learning unit on AI in the awareness programme"
+        inhalt: |
+          The existing awareness programme gets a short learning unit on AI. It covers the AI policy, the usage rules, typical errors in AI outputs and the channel for raising concerns. New staff complete the module when they join, everyone else at least once a year.
+      kommunikation-ki:
+        titel: "Communication about AI"
+        inhalt: |
+          The communication plan is extended with AI topics: announcing the AI policy, informing users and affected people about AI systems, and exchanges with providers and, where necessary, authorities. For each topic, content, audience, channel, timing and responsibility are defined.
+      nachweise:
+        titel: "Evidence"
+        inhalt: |
+          Attendance at AI training, course certificates and records of briefings are filed like other training records. Whether an action has worked is checked later, for example through a conversation, a short test or a sample of the work. The records also demonstrate AI literacy under Art. 4 AI Act.
+  D-20-EB:
+    titel: "Supplement to the audit programme"
+    abschnitte:
+      umfang:
+        titel: "Scope of the programme"
+        inhalt: |
+          The audit programme covers the ISMS and the AIMS together. Clauses 4 to 10 are audited for both standards in the same interviews, and the controls in Annex A of ISO/IEC 42001 with their own audit questions. The audit plan shows for each date which standard and which sections are audited.
+      planung:
+        titel: "Planning across the cycle"
+        inhalt: |
+          Within the three-year certification cycle, all clauses and all applicable controls of both standards are audited at least once. Before the first certification, the AIMS is audited once in full. AI systems with high risk or major changes are audited more often.
+      auditoren:
+        titel: "Competence and independence"
+        inhalt: |
+          Anyone auditing the AIMS needs basic knowledge of AI and of ISO/IEC 42001, for example from a training course. Nobody audits their own work. Small organizations can bring in an external person for this.
+      berichte:
+        titel: "Findings and report"
+        inhalt: |
+          Findings are recorded with a reference to the standard, so that it is clear whether the ISMS, the AIMS or both are affected. One joint report is enough. Findings go into the shared nonconformity register.
+  D-21-EB:
+    titel: "Supplement to the management review"
+    abschnitte:
+      eingaben-ki:
+        titel: "Additional inputs"
+        inhalt: |
+          The agenda is extended with AI topics: status of AI risks and impact assessments, reported concerns and AI incidents, indicators on the performance of AI systems, changes among interested parties and in AI legislation, and results of supplier reviews. Each item is prepared briefly so that the review can still be done in one meeting.
+      entscheide-ki:
+        titel: "Decisions on AI"
+        inhalt: |
+          Top management explicitly decides on the suitability of the AI policy, resources for the AIMS, acceptance of significant AI residual risks and improvements. Decisions are recorded with owners and deadlines.
+      protokoll:
+        titel: "Minutes"
+        inhalt: |
+          One set of minutes for both systems is enough. Each item is marked as relating to the ISMS, the AIMS or both, so that evidence for each standard is easy to find.
+  D-22-EB:
+    titel: "Supplement to nonconformities and improvements"
+    abschnitte:
+      bereich:
+        titel: "Field for the area"
+        inhalt: |
+          Each entry gets an "area" field with the values ISMS, AIMS or both. For AI topics, the ID of the AI system concerned is also entered. Analyses by area show where the focus lies.
+      ursachen-ki:
+        titel: "Causes of AI deviations"
+        inhalt: |
+          For deviations involving AI, a check is made whether the cause lies in the data, the model, use outside the intended purpose or a lack of competence. Depending on the cause, the risk assessment, the impact assessment or the usage rules are updated. The effectiveness of the corrective action is reviewed after a defined period.
+      verbesserungen:
+        titel: "Recording improvements"
+        inhalt: |
+          Suggestions for improving AI, for example from reports, audits or monitoring, are kept in the same register as other improvements. The management review prioritizes this list. AI incidents and near misses are also given a severity level on a four-level scale, so that errors, incidents and near misses are counted in one place.
+  D-26-EB:
+    titel: "Supplement to control of documented information"
+    abschnitte:
+      geltung-feld:
+        titel: "‘Applies to’ field"
+        inhalt: |
+          The document register gets an "applies to" field with the values ISMS, AIMS or both. Shared documents are kept only once and, when changed, approved for both systems.
+      dokumentarten-ki:
+        titel: "New document types"
+        inhalt: |
+          The AIMS adds document types: impact assessments, technical documentation of AI systems, descriptions of data sets and records of model versions. For each type, owner, storage location and retention period are defined. The AI Act sets long periods in some cases, such as ten years for the technical documentation of high-risk AI systems kept by providers and at least six months for logs kept by deployers.
+      aenderungen-aims:
+        titel: "Changes to the management system"
+        inhalt: |
+          Changes to the AIMS, such as new processes or an extended scope, follow the same change process as changes to the ISMS. Before implementation, a check is made of which documents, roles and risks are affected. Planned changes to the AIMS and their actions are listed in the {{fakt:register.massnahmen}}.
+      ki-erstellte-dokumente:
+        titel: "Documents drafted with AI"
+        inhalt: |
+          Management system documents may be drafted with AI support. Before approval, the responsible person reviews the content in full, because that person is accountable for its accuracy. Confidential content is entered only into approved tools.

@@ -1,0 +1,64 @@
+# E-03 Pflichtenmatrix EU AI Act
+blaetter:
+  pflichten: Pflichten
+  abdeckung: Abdeckung
+titel_pflichten: "Pflichten nach EU AI Act je Rolle und Risikoklasse"
+titel_abdeckung: "Abdeckung durch das AIMS: was ISO/IEC 42001 leistet und was nicht"
+hinweise_pflichten:
+  - "Die Liste enthält alle Pflichten aus dem Katalog des Kits. Streichen Sie Zeilen nicht, sondern setzen Sie den Status «nicht anwendbar» mit kurzer Begründung, wenn eine Pflicht für keines Ihrer Systeme gilt."
+  - "Voraussetzung: Rolle (E-01) und Risikoklasse (E-02) je KI-System. Tragen Sie in Spalte M die betroffenen Systeme ein."
+  - "Spalten H und I zeigen, welche Controls und Abschnitte von ISO/IEC 42001 die Pflicht stützen und wie weit (ganz, teilweise, nicht). Bei «teilweise» oder «nicht» nehmen Sie das Zusatz-Control aus Spalte J in die Erklärung zur Anwendbarkeit (D-11) auf oder begründen den Verzicht."
+  - "Spalte L nennt einen typischen Nachweis. Halten Sie in Spalte O fest, wo Ihr Nachweis liegt."
+hinweis_gefiltert: "Pflichten nach den Rollen und Risikoklassen unserer KI-Systeme (D-10, E-02); Spalte M zeigt die betroffenen Systeme. Ist eine Einstufung noch offen, gelten bis zum Entscheid alle Pflichten der Rolle. Status, Nachweis und Verantwortung wie in der Erklärung zur Anwendbarkeit (D-11)."
+hinweis_alle: "Im Projekt sind noch keine KI-Systeme erfasst; die Liste enthält deshalb alle Pflichten des Katalogs."
+hinweis_formell: "Spalte F nennt den Geltungsbeginn nach Art. 113 und 111, Spalte G den praktischen Beginn. Einige Pflichten gelten formell ab 02.08.2026, greifen aber erst mit den Hochrisiko-Pflichten. Das ist eine gekennzeichnete Auslegung, kein Gesetzestext (E-09)."
+alle_klassen: alle Klassen
+fria_nicht_erforderlich: "E-06 und {ia}: Grundrechte-Folgenabschätzung nicht erforderlich (geprüft am {datum})"
+nicht_anwendbar: nicht anwendbar
+spalten:
+  - Pflicht-ID
+  - Artikel
+  - Kurzbeschreibung
+  - Rollen
+  - Risikoklassen
+  - Gilt ab (formell)
+  - Gilt ab (praktisch)
+  - "Abdeckung 42001: Controls und Abschnitte"
+  - "Abdeckung 42001: Grad"
+  - Zusatz-Control
+  - KMU-Erleichterung
+  - Typischer Nachweis
+  - Betroffene KI-Systeme
+  - Status
+  - Nachweis im Unternehmen
+  - Verantwortlich
+listen:
+  grad: [ganz, teilweise, nicht]
+  status: [offen, geplant, teilweise, umgesetzt, wirksam]
+hinweis_abdeckung: "Zusammenfassung über die Pflichten im Blatt «Pflichten». Rollen im Katalog: {rollen}. Die Zuordnung zu ISO/IEC 42001 ist eine fachliche Einschätzung."
+spalten_abdeckung: [Thema, Anzahl, Erläuterung]
+abdeckung:
+  anzahl: Pflichten in dieser Matrix
+  gefiltert: "gefiltert nach den Rollen und Risikoklassen der KI-Systeme im KI-Inventar (D-10)"
+  alle: "alle Pflichten des Katalogs"
+  grad_ganz: "Das AIMS deckt die Pflicht vollständig ab, wenn die genannten Controls umgesetzt sind."
+  grad_teilweise: "Das AIMS liefert Struktur und Nachweise, die Pflicht verlangt aber mehr. Zusatz-Control umsetzen."
+  grad_nicht: "Das AIMS deckt die Pflicht nicht ab. Zusatz-Control und eigenes Verfahren nötig."
+  zusatz: Zusatz-Controls EUAIA
+  ohne: "Pflichten ohne Abdeckung durch 42001"
+  leistet: "Was das AIMS leistet"
+  leistet_liste:
+    - "Ein Managementsystem mit Leitlinie, Rollen, Zielen, Audits und Managementbewertung, in das sich die AI-Act-Pflichten einfügen lassen (Abschnitte 4 bis 10)."
+    - "Ein KI-Inventar mit Rolle und Risikoklasse je System als Grundlage für jede Pflichtprüfung (A.4, D-10, E-01, E-02)."
+    - "Risikobeurteilung, Risikobehandlung und Folgenabschätzung, auf denen Art. 9 und Art. 27 aufbauen können (6.1, 8.2 bis 8.4, A.5)."
+    - "Regeln für Daten, Protokollierung, Lebenszyklus und menschliche Aufsicht, die die Anforderungen nach Art. 10 bis 15 und Art. 26 teilweise erfüllen (A.6, A.7, A.9)."
+    - "Information von Nutzenden und Betroffenen, Meldewege und Zusammenarbeit mit Lieferanten (A.8, A.10)."
+    - "Massnahmen zur Kompetenz und zum Bewusstsein, die Art. 4 stützen (7.2, 7.3, E-04)."
+  leistet_nicht: "Was das AIMS nicht leistet"
+  leistet_nicht_liste:
+    - "Keine Konformitätsbewertung, keine EU-Konformitätserklärung, keine CE-Kennzeichnung und keine Registrierung in der EU-Datenbank (Art. 43, 47 bis 49)."
+    - "Keine Konformitätsvermutung: ISO/IEC 42001 ist keine harmonisierte Norm im Sinne von Art. 40(1). Das ist eine Auslegung, kein Gesetzestext."
+    - "Keine rechtliche Einstufung eines Systems und keine Rollenbestimmung mit Rechtswirkung; beides bleibt eine juristische Beurteilung."
+    - "Keine maschinenlesbare Kennzeichnung synthetischer Inhalte (Art. 50(2)) und keine Information von Arbeitnehmenden nach Art. 26(7)."
+    - "Keine Benennung eines Bevollmächtigten in der EU für Anbieter aus der Schweiz (Art. 22) und keine Barrierefreiheit nach Art. 16 Bst. l."
+    - "Keine Pflichten für KI-Modelle mit allgemeinem Verwendungszweck (Art. 53 bis 55)."

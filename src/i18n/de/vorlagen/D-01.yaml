@@ -1,0 +1,81 @@
+# D-01 Kontext, interessierte Parteien und Rollen
+einleitung: "Dieses Dokument hält fest, in welchem Umfeld [[Firmenname]] KI einsetzt, welche Rolle das Unternehmen dabei einnimmt und welche Erwartungen interessierter Parteien das KI-Managementsystem aufnimmt. Es ist die Grundlage für den Geltungsbereich (D-02) und die Risikobeurteilung (D-06, D-07)."
+einleitung_firma: "Dieses Dokument hält fest, in welchem Umfeld {firma} KI einsetzt, welche Rolle das Unternehmen dabei einnimmt und welche Erwartungen interessierter Parteien das KI-Managementsystem aufnimmt. Es ist die Grundlage für den Geltungsbereich (D-02) und die Risikobeurteilung (D-06, D-07)."
+hinweis_umfang: "Zwei bis drei Seiten genügen. Halten Sie nur Themen fest, die das KI-Managementsystem tatsächlich beeinflussen. Überprüfen Sie das Dokument jährlich vor der Managementbewertung (D-21)."
+isms_hinweis: "Mit ISMS: Führen Sie Kontext und interessierte Parteien gemeinsam mit dem ISMS. Ergänzen Sie das bestehende Dokument um die KI-Themen oder verweisen Sie hier darauf. Kreuzen Sie unten an, ob dieses Dokument für beide Managementsysteme gilt."
+gilt_fuer_isms: Gilt für ISMS und AIMS
+abschnitte:
+  themen: Externe und interne Themen
+  klima: Klimawandel
+  rollen: Rollen der Organisation
+  zwecke: Zweck der KI-Systeme
+  parteien: Interessierte Parteien und ihre Anforderungen
+  ueberpruefung: Überprüfung
+hinweis_themen: "Fragen Sie sich je Thema: Was wirkt von aussen oder innen auf unseren KI-Einsatz, und was folgt daraus für das Managementsystem? Die Vorschläge zeigen typische Themen für KMU. Streichen Sie, was nicht zutrifft."
+themen_fehlen: "Im Projekt sind noch keine Themen erfasst. Ergänzen Sie die Tabelle oder erfassen Sie die Themen im Werkzeug."
+themen_kopf: [ID, Art, Kategorie, Thema, Auswirkung auf das AIMS]
+art:
+  extern: extern
+  intern: intern
+kategorien:
+  recht: Recht
+  regulierung: Regulierung
+  markt: Markt und Kunden
+  kultur: Kultur und Kompetenz
+  governance: Organisation und Steuerung
+  vertrag: Verträge
+  zweck: Zweck der KI-Systeme
+  technik: Technik
+  lieferanten: Lieferanten
+  umwelt: Umwelt und Klima
+themen_vorschlag:
+  - [extern, Recht, "Datenschutzgesetz (DSG), bei EU-Bezug DSGVO und EU AI Act", "[[Auswirkung ergänzen]]"]
+  - [extern, Markt und Kunden, "Kunden verlangen Nachweise zum Umgang mit KI und mit ihren Daten", "[[Auswirkung ergänzen]]"]
+  - [extern, Technik, "KI-Funktionen kommen laufend in bestehende Software, oft ohne Ankündigung", "[[Auswirkung ergänzen]]"]
+  - [extern, Lieferanten, "Abhängigkeit von wenigen grossen KI-Anbietern, Daten im Ausland", "[[Auswirkung ergänzen]]"]
+  - [intern, Organisation und Steuerung, "Bestehende Managementsysteme (z. B. ISMS, Qualität), Rollen und Gremien", "[[Auswirkung ergänzen]]"]
+  - [intern, Kultur und Kompetenz, "Wissen der Mitarbeitenden über KI, Haltung zu neuen Werkzeugen", "[[Auswirkung ergänzen]]"]
+  - [intern, Zweck der KI-Systeme, "Wofür wir KI einsetzen und welche Entscheide sie vorbereitet", "[[Auswirkung ergänzen]]"]
+hinweis_klima: "Entscheiden Sie ausdrücklich, ob der Klimawandel für Ihr KI-Managementsystem ein relevantes Thema ist, und begründen Sie den Entscheid in ein bis zwei Sätzen. Relevant kann er sein, wenn KI-Systeme viel Energie brauchen, Rechenzentren oder Lieferketten Klimarisiken ausgesetzt sind oder Kunden Angaben zum Fussabdruck verlangen."
+klima_felder:
+  relevant: Relevant
+  begruendung: Begründung
+klima_werte:
+  ja: ja
+  nein: nein
+  offen: offen
+klima_platzhalter: "ja / nein"
+hinweis_rollen: "Kreuzen Sie an, welche Rollen Ihr Unternehmen bei KI einnimmt. Mehrere Rollen sind üblich. Diese Rollen beschreiben Ihre Stellung im KI-Ökosystem; die Rollen nach EU AI Act (z. B. Betreiber) bestimmen Sie je System in D-24 oder E-01."
+rollen_kopf: [Rolle, Trifft zu, Bemerkung]
+rollen:
+  anbieter: "Anbieter: stellt KI-Systeme oder KI-Dienste für andere bereit"
+  produzent: "Produzent: entwickelt oder trainiert KI-Systeme selbst"
+  kunde: "Kunde und Nutzer: kauft KI-Systeme ein und setzt sie ein"
+  partner: "Partner: liefert Daten, Infrastruktur oder Integrationsleistungen"
+  betroffene: "Betroffene: ist selbst von KI-Systemen anderer betroffen"
+  behoerde: "Behörde: beaufsichtigt oder regelt den Einsatz von KI"
+zwecke_text: "Die beabsichtigten Zwecke unserer KI-Systeme stehen im KI-Inventar (D-10). Zurzeit sind dies:"
+zwecke_leer: "Die beabsichtigten Zwecke unserer KI-Systeme stehen im KI-Inventar (D-10)."
+hinweis_parteien: "Halten Sie je Partei die Anforderungen fest, die den KI-Einsatz betreffen, und woher sie stammen. Entscheiden Sie je Anforderung, ob das Managementsystem sie aufnimmt. Auch «nein» ist zulässig, braucht aber eine Begründung. Offene Entscheide klären Sie vor Stage 1."
+parteien_fehlen: "Im Projekt sind noch keine interessierten Parteien erfasst. Ergänzen Sie die Tabelle."
+parteien_kopf: [Partei, Anforderung, Quelle, Durch AIMS behandelt, Begründung]
+quelle:
+  gesetz: Gesetz
+  vertrag: Vertrag
+  norm: Norm
+  intern: intern
+  markt: Markt
+adressiert:
+  ja: ja
+  nein: nein
+  offen: offen
+parteien_vorschlag:
+  - [Kunden, "Vertrauliche Daten und Zeichnungen gelangen nicht in fremde KI-Systeme", Vertrag, "[[ja/nein]]", "[[Begründung]]"]
+  - [Mitarbeitende, "Klare Regeln, welche KI-Werkzeuge erlaubt sind; keine verdeckte Leistungsüberwachung", intern, "[[ja/nein]]", "[[Begründung]]"]
+  - [Geschäftsleitung und Eigentümer, "Nutzen aus KI bei beherrschtem Risiko, Nachweis gegenüber Kunden", intern, "[[ja/nein]]", "[[Begründung]]"]
+  - [Aufsichtsbehörden, "Einhaltung von Datenschutz und, bei EU-Bezug, EU AI Act", Gesetz, "[[ja/nein]]", "[[Begründung]]"]
+  - [Lieferanten von KI-Systemen, "Nutzung gemäss Vertrag und Nutzungsbedingungen", Vertrag, "[[ja/nein]]", "[[Begründung]]"]
+  - [Betroffene Personen, "Information, wenn KI sie betrifft, und eine Möglichkeit, Bedenken zu melden", Gesetz, "[[ja/nein]]", "[[Begründung]]"]
+  - [Zertifizierungsstelle, "Konformität mit ISO/IEC 42001 und nachweisbare Umsetzung", Norm, "[[ja/nein]]", "[[Begründung]]"]
+ueberpruefung_text: "Dieses Dokument wird mindestens jährlich und bei wesentlichen Änderungen überprüft, z. B. bei neuen KI-Systemen, neuen Märkten oder neuen Gesetzen; zuständig ist {verantwortlich}. Änderungen bei Themen und Parteien sind eine Eingabe der Managementbewertung (D-21)."
+ausbau_umfeld: "Für eine gründlichere Umfeldanalyse gehen Sie die Bereiche Politik, Wirtschaft, Gesellschaft, Technik, Umwelt und Recht einzeln durch. Bei vielen betroffenen Personen lohnt es sich, wichtige Parteien direkt zu befragen, z. B. mit einer kurzen Umfrage bei Kunden oder Mitarbeitenden."

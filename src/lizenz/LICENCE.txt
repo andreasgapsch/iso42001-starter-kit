@@ -1,0 +1,142 @@
+﻿LICENCE
+ISO/IEC 42001 Starter Kit by Andreas Gapsch, KMU-CIO, kmu-cio.ch
+
+German version: LIZENZ.txt
+
+
+OVERVIEW
+--------
+The content of this kit is licensed under Creative Commons Attribution 4.0
+International (CC BY 4.0), the software code under the MIT License. Thanks to
+an additional permission, you may use and share documents that you create
+with the kit for your organization or for your clients without attribution.
+If you share or publish the kit itself, including in modified form,
+attribute it as described below in the section ‘How to attribute us
+correctly’.
+
+
+1. CONTENT: CC BY 4.0
+---------------------
+Applies to: the guide, poster, templates, supplementary sheets, examples,
+start page, quick guides and the texts of the AI assistant (skill).
+
+Licensor: Andreas Gapsch, KMU-CIO
+Copyright (c) 2026 Andreas Gapsch, KMU-CIO
+
+Full licence text in this folder:
+  CC-BY-4.0_legalcode.txt     Official English licence text
+  CC-BY-4.0_legalcode_de.txt  Note on the official German translation
+Online: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary: https://creativecommons.org/licenses/by/4.0/
+
+
+2. SOFTWARE CODE: MIT LICENSE
+-----------------------------
+Applies to: the AIMS Manager (aims-manager.html) excluding the third-party
+libraries it contains, the diagram viewer (Diagrammansicht.html) excluding
+the viewer it contains, the build and check scripts and any scripts of the
+AI assistant.
+
+Full licence text in this folder: MIT.txt
+
+
+3. ADDITIONAL PERMISSION FOR YOUR OWN DOCUMENTS
+-----------------------------------------------
+You may use, modify, print and share documents that you create with this kit
+for your organization or for your clients (completed templates and output of
+the AIMS Manager and of the AI assistant) without attribution. You may delete
+the reference to the kit in the templates. The attribution requirement
+applies to the kit itself.
+
+Full text: ADDITIONAL-PERMISSION_EN.txt (German: ZUSATZERLAUBNIS_DE.txt)
+
+
+4. NAME AND BRAND
+-----------------
+Neither the licences nor the additional permission allow you to use
+‘KMU-CIO’, the domain kmu-cio.ch or the name Andreas Gapsch as your own
+brand, company name or product name. Nor do they allow you to claim or imply
+that KMU-CIO or Andreas Gapsch has reviewed, endorsed or supported your
+organization, your management system, your documents or a modified version
+of the kit (see also CC BY 4.0, Sections 2(a)(6) and 2(b)(2)). This does not
+affect attribution under CC BY 4.0: attribution is a requirement, not an
+endorsement.
+
+
+5. THIRD-PARTY LICENCES AND THIRD-PARTY CONTENT
+-----------------------------------------------
+- Libraries in the AIMS Manager (including preact, @preact/signals, docx,
+  exceljs, fflate and their bundled dependencies) are subject to their own
+  licences. The licence texts are in DRITTLIZENZEN_THIRD-PARTY.txt.
+- The optional diagram viewer (AIMS-Manager/Diagrammansicht.html) contains
+  the unmodified draw.io viewer, version 32.4.1, under the Apache License
+  2.0, with the libraries DOMPurify, pako, Rough.js, spin.js and
+  regenerator-runtime. Licence texts, notices (NOTICE) and source are in the
+  folder DIAGRAMMANSICHT_DIAGRAM-VIEWER. draw.io is a registered trademark
+  of draw.io Ltd; the diagram viewer is not made or endorsed by draw.io Ltd
+  or JGraph.
+- EU legal texts (folder Rechtstexte_Legal-Texts) and marked verbatim
+  extracts from the EU AI Act are not licensed under CC BY 4.0. Their reuse
+  is governed by Commission Decision 2011/833/EU; details in
+  Rechtstexte_Legal-Texts/EU-AI-Act/LIESMICH_README.txt.
+- Standards: the kit contains no text from standards. Designations such as
+  ISO/IEC 42001 or ISO/IEC 27001 serve reference purposes only.
+- Product names mentioned (for example Microsoft Office, LibreOffice,
+  Claude, ChatGPT, Codex) are trademarks of their respective owners.
+
+
+6. HOW TO ATTRIBUTE US CORRECTLY
+--------------------------------
+Wording of the attribution:
+  ISO/IEC 42001 Starter Kit by Andreas Gapsch, KMU-CIO, kmu-cio.ch
+
+When you share the kit or parts of it, CC BY 4.0 requires: the attribution,
+a reference to the licence with a link and, for modified versions, a note
+that you made changes and what they are. A link to the licence is
+sufficient: https://creativecommons.org/licenses/by/4.0/
+
+Your own documents (for example your approved AI policy or your completed
+risk register) need no attribution. The additional permission covers this.
+
+Example 1: sharing within your company
+  You place the kit or blank templates from it on your intranet. Keep the
+  folder LIZENZ_LICENCE with the kit and write on the intranet page:
+    ‘ISO/IEC 42001 Starter Kit by Andreas Gapsch, KMU-CIO, kmu-cio.ch,
+    licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)’
+
+Example 2: training
+  You use content from the guide or templates in slides or handouts. On the
+  title or source slide:
+    ‘Content partly from: ISO/IEC 42001 Starter Kit by Andreas Gapsch,
+    KMU-CIO, kmu-cio.ch, licence CC BY 4.0
+    (https://creativecommons.org/licenses/by/4.0/), shortened and adapted.’
+
+Example 3: consulting engagement
+  Documents that you create for your client need no attribution. If you
+  also hand over the kit or blank templates to the client, add this note to
+  the handover or the report:
+    ‘Working aid: ISO/IEC 42001 Starter Kit by Andreas Gapsch, KMU-CIO,
+    kmu-cio.ch, licence CC BY 4.0
+    (https://creativecommons.org/licenses/by/4.0/)’
+
+Example 4: publishing an adapted version
+  You publish your own version, for example for a particular industry. At
+  the beginning of the version and in its licence file:
+    ‘This version is based on the ISO/IEC 42001 Starter Kit by Andreas
+    Gapsch, KMU-CIO, kmu-cio.ch, licence CC BY 4.0
+    (https://creativecommons.org/licenses/by/4.0/). Modified by [name] in
+    [month year]: [changes in one sentence]. This version has not been
+    reviewed or endorsed by KMU-CIO.’
+  Give your version its own name without ‘KMU-CIO’. For software code, keep
+  the copyright notice and the text of the MIT License.
+
+
+7. EXCEPTION FROM THE STYLE RULES
+---------------------------------
+The full texts CC-BY-4.0_legalcode.txt and MIT.txt, the texts in
+DRITTLIZENZEN_THIRD-PARTY.txt and the files volltext_* in the folder
+DIAGRAMMANSICHT_DIAGRAM-VIEWER are reproduced unchanged. They do not follow
+the writing rules of the kit.
+
+
+Andreas Gapsch, KMU-CIO, kmu-cio.ch

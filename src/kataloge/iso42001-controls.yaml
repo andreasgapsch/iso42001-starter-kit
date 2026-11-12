@@ -1,0 +1,63 @@
+# ISO/IEC 42001:2023 Anhang A: 38 Controls in 9 Gruppen.
+# Nur Nummern und Beziehungen. Kurzbezeichnungen und Erklärungen in eigenen Worten: src/i18n/<sprache>/controls42001.yaml
+# dokumentpflicht: das Control verlangt dokumentierte Information (Kit-Prüfung G15)
+# vorlagen: wo das Control im Kit umgesetzt wird
+# betreiber_lite: für reine Betreiber (eingekaufte KI) meist in schlanker Form anwendbar
+gruppen:
+  - id: A.2
+    controls:
+      - { id: A.2.2, dokumentpflicht: true, vorlagen: [D-03], betreiber_lite: true }
+      - { id: A.2.3, dokumentpflicht: false, vorlagen: [D-03], betreiber_lite: true }
+      - { id: A.2.4, dokumentpflicht: false, vorlagen: [D-03, D-21], betreiber_lite: true }
+  - id: A.3
+    controls:
+      - { id: A.3.2, dokumentpflicht: false, vorlagen: [D-04], betreiber_lite: true }
+      - { id: A.3.3, dokumentpflicht: false, vorlagen: [D-04], betreiber_lite: true }
+  - id: A.4
+    controls:
+      - { id: A.4.2, dokumentpflicht: true, vorlagen: [D-10], betreiber_lite: true }
+      - { id: A.4.3, dokumentpflicht: true, vorlagen: [D-10, D-13], betreiber_lite: true }
+      - { id: A.4.4, dokumentpflicht: true, vorlagen: [D-10], betreiber_lite: true }
+      - { id: A.4.5, dokumentpflicht: true, vorlagen: [D-10], betreiber_lite: true }
+      - { id: A.4.6, dokumentpflicht: true, vorlagen: [D-10, D-17], betreiber_lite: true }
+  - id: A.5
+    controls:
+      - { id: A.5.2, dokumentpflicht: false, vorlagen: [D-08], betreiber_lite: true }
+      - { id: A.5.3, dokumentpflicht: true, vorlagen: [D-09], betreiber_lite: true }
+      - { id: A.5.4, dokumentpflicht: true, vorlagen: [D-09], betreiber_lite: true }
+      - { id: A.5.5, dokumentpflicht: true, vorlagen: [D-09], betreiber_lite: true }
+  - id: A.6
+    untergruppen: [A.6.1, A.6.2]
+    controls:
+      - { id: A.6.1.2, dokumentpflicht: true, vorlagen: [D-05, D-12], betreiber_lite: false }
+      - { id: A.6.1.3, dokumentpflicht: true, vorlagen: [D-12], betreiber_lite: false }
+      - { id: A.6.2.2, dokumentpflicht: true, vorlagen: [D-12], betreiber_lite: false }
+      - { id: A.6.2.3, dokumentpflicht: true, vorlagen: [D-12], betreiber_lite: false }
+      - { id: A.6.2.4, dokumentpflicht: true, vorlagen: [D-12], betreiber_lite: true }
+      - { id: A.6.2.5, dokumentpflicht: true, vorlagen: [D-12], betreiber_lite: true }
+      - { id: A.6.2.6, dokumentpflicht: true, vorlagen: [D-12], betreiber_lite: true }
+      - { id: A.6.2.7, dokumentpflicht: true, vorlagen: [D-12, D-14], betreiber_lite: false }
+      - { id: A.6.2.8, dokumentpflicht: false, vorlagen: [D-12], betreiber_lite: true }
+  - id: A.7
+    controls:
+      - { id: A.7.2, dokumentpflicht: true, vorlagen: [D-13], betreiber_lite: false }
+      - { id: A.7.3, dokumentpflicht: true, vorlagen: [D-13], betreiber_lite: false }
+      - { id: A.7.4, dokumentpflicht: true, vorlagen: [D-13], betreiber_lite: true }
+      - { id: A.7.5, dokumentpflicht: true, vorlagen: [D-13], betreiber_lite: false }
+      - { id: A.7.6, dokumentpflicht: true, vorlagen: [D-13], betreiber_lite: false }
+  - id: A.8
+    controls:
+      - { id: A.8.2, dokumentpflicht: false, vorlagen: [D-14], betreiber_lite: true }
+      - { id: A.8.3, dokumentpflicht: false, vorlagen: [D-14], betreiber_lite: true }
+      - { id: A.8.4, dokumentpflicht: true, vorlagen: [D-14], betreiber_lite: true }
+      - { id: A.8.5, dokumentpflicht: true, vorlagen: [D-14], betreiber_lite: true }
+  - id: A.9
+    controls:
+      - { id: A.9.2, dokumentpflicht: true, vorlagen: [D-15], betreiber_lite: true }
+      - { id: A.9.3, dokumentpflicht: true, vorlagen: [D-05, D-15], betreiber_lite: true }
+      - { id: A.9.4, dokumentpflicht: false, vorlagen: [D-15, D-12], betreiber_lite: true }
+  - id: A.10
+    controls:
+      - { id: A.10.2, dokumentpflicht: false, vorlagen: [D-16, D-04], betreiber_lite: true }
+      - { id: A.10.3, dokumentpflicht: false, vorlagen: [D-16], betreiber_lite: true }
+      - { id: A.10.4, dokumentpflicht: false, vorlagen: [D-16, D-14], betreiber_lite: true }

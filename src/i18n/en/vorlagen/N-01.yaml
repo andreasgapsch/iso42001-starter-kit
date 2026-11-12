@@ -1,0 +1,49 @@
+# N-01 AI RMF profile: current and target
+blaetter:
+  profil: Profile
+  uebersicht: Overview
+titel_profil: "AI RMF profile: current and target level per subcategory"
+titel_uebersicht: "Overview per function"
+hinweise_profil:
+  - "The profile shows for each subcategory of the NIST AI RMF how far your AIMS achieves the outcome today (current) and how far it is to achieve it (target). Column L calculates the gap as target minus current."
+  - "Current: the tool derives the level from the project file, from approved documents, the status of the linked controls in the statement of applicability (D-11) and entries in the AI inventory (D-10). Column J shows the basis. If the AIMS covers a subcategory only partly and the additional control in column H is not implemented, the level stays at 1 at most. Overwrite the level if you know better."
+  - "Target: decide which subcategories matter to you. For an SME that buys AI, level 2 for the lite subcategories is usually enough. Extended subcategories are needed for in-house development, a provider role or AI that affects people or safety. Nobody expects all 72 at level 3."
+  - "Action: refer to actions in the treatment plan (M-xxx, D-07). Include the additional control from column H in the statement of applicability (D-11) or give reasons for not doing so (N-02)."
+hinweise_profil_firma:
+  - "Profile under the NIST AI RMF: current level per subcategory in our AIMS, target level as we decided. The gap is target minus current."
+  - "The current level is based on approved documents, the status of the controls in the statement of applicability (D-11) and the entries in the AI inventory (D-10); column J states the basis. Actions are in the treatment plan (D-07)."
+hinweise_uebersicht:
+  - "The values are calculated from the ‘Profile’ sheet. Do not change the ‘Key’ column; ‘??’ stands for all functions."
+abschnitt: "{nist}: {titel}"
+gesamt: "Total (all functions)"
+gesamt_kennung: all
+spalten:
+  - ID
+  - NIST designation
+  - Function
+  - Short title
+  - "Scope (lite or extended)"
+  - Coverage by the AIMS
+  - Documents in the AIMS
+  - Additional control or refinement
+  - "Current (0 to 3)"
+  - Basis for current level
+  - "Target (0 to 3)"
+  - Gap
+  - Priority
+  - "Action, note"
+  - Evidence
+  - NIST reference
+spalten_uebersicht: [Function, Key, Subcategories, "Current on average", "Target on average", "Subcategories with a gap", "Fully covered by the AIMS"]
+listen:
+  prioritaet: [high, medium, low]
+herleitung:
+  profil: recorded in the profile
+  dokumente: "Documents {liste}"
+  controls: "Controls {liste}"
+  angaben: Entries per AI system incomplete
+  luecke: "Additional control {control} not implemented"
+  luecke_praez: Refinement not recorded
+  keine: no basis in the project
+  dok_status: [missing, in progress, approved]
+  ctrl_status: [open, partly, implemented, effective]

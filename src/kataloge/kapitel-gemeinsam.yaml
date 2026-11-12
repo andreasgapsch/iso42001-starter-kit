@@ -1,0 +1,169 @@
+# Gemeinsame Abschnitte der Harmonized Structure (Kapitel 4 bis 10)
+# in ISO/IEC 27001:2022 mit Amd 1:2024 und ISO/IEC 42001:2023.
+# gemeinsam: ja = ein Prozess und ein Nachweis für ISMS und AIMS;
+#            teilweise = gemeinsamer Rahmen, aber eigene KI-Inhalte nötig.
+# gegenstueck27001: Abschnitt in ISO/IEC 27001, null = kein Gegenstück.
+# Titel und Hinweise: src/i18n/{de,en}/kapitel-gemeinsam.yaml
+abschnitte:
+  - id: K-4.1
+    nummer: "4.1"
+    gegenstueck27001: "4.1"
+    gemeinsam: teilweise
+    hinweis: kontext-klima
+    vorlagen: [D-01, D-24]
+  - id: K-4.2
+    nummer: "4.2"
+    gegenstueck27001: "4.2"
+    gemeinsam: teilweise
+    hinweis: parteien-ki
+    vorlagen: [D-01]
+  - id: K-4.3
+    nummer: "4.3"
+    gegenstueck27001: "4.3"
+    gemeinsam: teilweise
+    hinweis: geltung-getrennt
+    vorlagen: [D-02]
+  - id: K-4.4
+    nummer: "4.4"
+    gegenstueck27001: "4.4"
+    gemeinsam: ja
+    hinweis: ein-system
+    vorlagen: [D-02]
+  - id: K-5.1
+    nummer: "5.1"
+    gegenstueck27001: "5.1"
+    gemeinsam: ja
+    hinweis: fuehrung-gemeinsam
+    vorlagen: [D-00, D-21]
+  - id: K-5.2
+    nummer: "5.2"
+    gegenstueck27001: "5.2"
+    gemeinsam: teilweise
+    hinweis: leitlinie-abgleich
+    vorlagen: [D-03]
+  - id: K-5.3
+    nummer: "5.3"
+    gegenstueck27001: "5.3"
+    gemeinsam: teilweise
+    hinweis: rollen-erweitern
+    vorlagen: [D-04]
+  - id: K-6.1.1
+    nummer: "6.1.1"
+    gegenstueck27001: "6.1.1"
+    gemeinsam: ja
+    hinweis: risiken-chancen
+    vorlagen: [D-06, D-07]
+  - id: K-6.1.2
+    nummer: "6.1.2"
+    gegenstueck27001: "6.1.2"
+    gemeinsam: teilweise
+    hinweis: eine-methode
+    vorlagen: [D-06]
+  - id: K-6.1.3
+    nummer: "6.1.3"
+    gegenstueck27001: "6.1.3"
+    gemeinsam: teilweise
+    hinweis: behandlung-soa
+    vorlagen: [D-07, D-11]
+  - id: K-6.1.4
+    nummer: "6.1.4"
+    gegenstueck27001: null
+    gemeinsam: nein
+    hinweis: folgenabschaetzung-neu
+    vorlagen: [D-08, D-09]
+  - id: K-6.2
+    nummer: "6.2"
+    gegenstueck27001: "6.2"
+    gemeinsam: teilweise
+    hinweis: ziele-getrennt
+    vorlagen: [D-05]
+  - id: K-6.3
+    nummer: "6.3"
+    gegenstueck27001: "6.3"
+    gemeinsam: ja
+    hinweis: aenderungen-gemeinsam
+    vorlagen: [D-26]
+  - id: K-7.1
+    nummer: "7.1"
+    gegenstueck27001: "7.1"
+    gemeinsam: ja
+    hinweis: ressourcen-gemeinsam
+    vorlagen: [D-21]
+  - id: K-7.2
+    nummer: "7.2"
+    gegenstueck27001: "7.2"
+    gemeinsam: teilweise
+    hinweis: kompetenz-erweitern
+    vorlagen: [D-17]
+  - id: K-7.3
+    nummer: "7.3"
+    gegenstueck27001: "7.3"
+    gemeinsam: ja
+    hinweis: bewusstsein-modul
+    vorlagen: [D-17]
+  - id: K-7.4
+    nummer: "7.4"
+    gegenstueck27001: "7.4"
+    gemeinsam: ja
+    hinweis: kommunikation-gemeinsam
+    vorlagen: [D-17]
+  - id: K-7.5
+    nummer: "7.5"
+    gegenstueck27001: "7.5"
+    gemeinsam: ja
+    hinweis: dokumente-gemeinsam
+    vorlagen: [D-26]
+  - id: K-8.1
+    nummer: "8.1"
+    gegenstueck27001: "8.1"
+    gemeinsam: teilweise
+    hinweis: betrieb-lebenszyklus
+    vorlagen: [D-12, D-16]
+  - id: K-8.2
+    nummer: "8.2"
+    gegenstueck27001: "8.2"
+    gemeinsam: teilweise
+    hinweis: beurteilung-zyklus
+    vorlagen: [D-07]
+  - id: K-8.3
+    nummer: "8.3"
+    gegenstueck27001: "8.3"
+    gemeinsam: teilweise
+    hinweis: behandlung-umsetzen
+    vorlagen: [D-07]
+  - id: K-8.4
+    nummer: "8.4"
+    gegenstueck27001: null
+    gemeinsam: nein
+    hinweis: folgenabschaetzung-durchfuehren
+    vorlagen: [D-09]
+  - id: K-9.1
+    nummer: "9.1"
+    gegenstueck27001: "9.1"
+    gemeinsam: teilweise
+    hinweis: messplan-gemeinsam
+    vorlagen: [D-05]
+  - id: K-9.2
+    nummer: "9.2"
+    gegenstueck27001: "9.2"
+    gemeinsam: ja
+    hinweis: audit-gemeinsam
+    vorlagen: [D-20]
+  - id: K-9.3
+    nummer: "9.3"
+    gegenstueck27001: "9.3"
+    gemeinsam: ja
+    hinweis: bewertung-gemeinsam
+    vorlagen: [D-21]
+  - id: K-10.1
+    nummer: "10.1"
+    gegenstueck27001: "10.1"
+    gemeinsam: ja
+    hinweis: verbesserung-gemeinsam
+    vorlagen: [D-22]
+  - id: K-10.2
+    nummer: "10.2"
+    gegenstueck27001: "10.2"
+    gemeinsam: ja
+    hinweis: abweichung-gemeinsam
+    vorlagen: [D-22]

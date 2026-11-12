@@ -1,0 +1,62 @@
+# E-05 Deployer obligations for high-risk AI
+blaetter:
+  checkliste: Checklist Art. 26
+titel: "Obligations of deployers of high-risk AI systems (Art. 26)"
+geltung: "Application: the obligations under Art. 26 apply to high-risk AI systems under Annex III from {anhang_iii} and to systems under Annex I from {anhang_i} (Art. 113(3)(c)). We prepare the evidence before the date of application; systems put into service earlier are only covered if their design is significantly changed (Art. 111(2))."
+hinweise:
+  - "One block of twelve rows for each high-risk AI system for which you are the deployer (role from E-01, class from E-02). Copy the block for each further system."
+  - "Column E: does the paragraph apply to the system? ‘Not applicable’ is suggested for para. 8 (Union institutions, bodies, offices and agencies only) and para. 10 (law enforcement only); para. 3 contains no obligation of its own."
+  - "Column H: record the specific evidence, such as the document name and storage location."
+  - "Report risks and serious incidents under para. 5 through the reporting channel in D-14; the providers' deadlines are in {fs:73}. Affected persons have a right to explanation under {fs:86}."
+  - "Also check whether a fundamental rights impact assessment is required ({fs:27}, E-06)."
+keine_systeme: "We are not the deployer of any high-risk AI system. The checklist serves as a template in case of a new classification; we check the classification once a year (E-02)."
+spalten:
+  - AI system
+  - Paragraph
+  - Obligation
+  - What to do
+  - Applicable
+  - Applies from
+  - Done
+  - Evidence
+  - Date
+  - Responsible
+listen:
+  anwendbar: ["yes", "no", not applicable, note]
+punkte:
+  betriebsanleitung:
+    pflicht: "Technical and organizational measures to ensure that the system is used in accordance with the provider's instructions for use."
+    tun: "Obtain the current version of the instructions for use, transfer the key requirements into a work instruction, check them with every update (D-15)."
+  aufsicht:
+    pflicht: "Assign human oversight to persons who have the necessary competence, training and authority, and give them the necessary support."
+    tun: "Appoint the persons responsible for oversight (D-04), carry out and record training based on the instructions for use (D-17, E-04), record the authority to intervene and stop."
+  organisation:
+    pflicht: "Other obligations under Union or national law remain unaffected; the deployer decides itself how to organize oversight."
+    tun: "No obligation of its own. Record which other obligations apply, such as data protection or employment law."
+  eingabedaten:
+    pflicht: "To the extent that we exercise control over the input data, it is relevant to the intended purpose and sufficiently representative."
+    tun: "Set rules for input data and check them by sampling (D-13); document deviations from the intended use."
+  ueberwachung:
+    pflicht: "Monitor operation on the basis of the instructions for use and inform the provider; where there is a risk, inform the provider or distributor and the authority without undue delay and suspend use; report serious incidents first to the provider, then to the importer or distributor and the authority."
+    tun: "Define monitoring in operation (metrics, responsibility), enter the reporting channel and the contacts of the provider and the authority in D-14, describe suspension of use as a procedure."
+  protokolle:
+    pflicht: "Keep automatically generated logs, to the extent they are under our control, for an appropriate period and for at least six months, unless other law provides otherwise."
+    tun: "Define the storage location and retention period, align them with deletion periods under data protection law, clarify with the provider which logs we receive."
+  arbeitnehmende:
+    pflicht: "As an employer, before putting the system into service at the workplace, inform workers' representatives and the affected workers that they will be subject to its use."
+    tun: "Provide the information in writing and before use, observe participation rights under national law, record the date and recipients."
+  eu-stellen:
+    pflicht: "Only for Union institutions, bodies, offices and agencies: registration under Art. 49 and not using systems that are not registered."
+    tun: "As a rule not applicable to companies; give a short reason for the classification."
+  dsfa:
+    pflicht: "Use the information provided by the provider under Art. 13 for the data protection impact assessment, where one is required."
+    tun: "Determine whether a DPIA is required (GDPR Art. 35, in Switzerland Art. 22 FADP), include the provider's information, refer to D-09 and E-06."
+  biometrie:
+    pflicht: "Only for systems for post-remote biometric identification in criminal investigations: authorization, documentation and reports."
+    tun: "As a rule not applicable to companies; give a short reason for the classification."
+  betroffene:
+    pflicht: "For Annex III systems that make or assist in making decisions about natural persons: inform those persons that the system is used."
+    tun: "Build the information into the process and documents (for example a notice in the application process), store the template wording in D-14, define a procedure for requests under Art. 86."
+  behoerden:
+    pflicht: "Cooperate with the competent authorities in any action they take in relation to the system."
+    tun: "Name a contact person for authorities, describe the procedure for requests and the release of documents (D-14)."

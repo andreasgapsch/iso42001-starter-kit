@@ -1,0 +1,257 @@
+naechste_schritte: "So geht es weiter: Öffnen Sie einen Entwurf und geben Sie ihn «zur Prüfung». Eine zweite Person prüft, danach «Freigeben». Die Freigabe trägt Version, Prüfung und Datum in erzeugte Dokumente ein. Freigaben im Guide (Projektauftrag, Geltungsbereich, Leitlinie, Folgenabschätzung) gelten auch hier."
+# Bibliothek (R4): Oberfläche src/app/ansichten/bibliothek, Register D-26. Schlüssel bibliothek.*; gleiche Struktur in en.
+titel: Bibliothek
+suche: In der Bibliothek suchen
+filter: Unterbereiche der Bibliothek
+menue:
+  arbeitsliste: Arbeitsliste
+unter:
+  alle: Alle Dokumente
+  firma: Firmendokumente
+  eigene: Eigene Dateien
+  nachweise: Nachweise
+  vorlagen: Vorlagen
+  recht: Rechtstexte
+  pruefen: Zu prüfen
+  entwurf: Entwürfe
+  ersetzt: Ersetzt und archiviert
+art:
+  firmendokument: Firmendokument
+  eigene: Eigene Datei
+  nachweis: Nachweis
+  vorlage: Vorlage
+  rechtstext: Rechtstext
+status:
+  entwurf: Entwurf
+  in-pruefung: In Prüfung
+  freigegeben: Freigegeben
+  ersetzt: Ersetzt
+  archiviert: Archiviert
+  abgelegt: Abgelegt
+faellig:
+  ueberfaellig: "Prüfung seit {tage} Tagen fällig"
+  bald: "Prüfung in {tage} Tagen"
+tabelle:
+  titel: "Dokumente der Bibliothek ({anzahl})"
+  dokument: Dokument
+  status: Status
+  version: Version
+  gueltig: Gültig
+  pruefung: Nächste Prüfung
+  kein_treffer: Kein Dokument passt zur Suche.
+leer:
+  alle: Noch keine Dokumente. Verbinden Sie einen Ordner oder nutzen Sie den Browserspeicher, dann laden Sie Dateien hoch oder legen erzeugte Firmendokumente ab.
+  firma: Noch keine Firmendokumente. Einträge im Dokumentenregister und erzeugte Dokumente erscheinen hier.
+  eigene: Noch keine eigenen Dateien, zum Beispiel Verträge, Richtlinien oder Fotos.
+  nachweise: Noch keine Nachweise.
+  vorlagen: Keine Vorlagen für die eingeschalteten Module.
+  recht: Keine Rechtstexte.
+  pruefen: Nichts zu prüfen.
+  entwurf: Keine Entwürfe.
+  ersetzt: Keine ersetzten oder archivierten Dokumente.
+verbindung:
+  ordner: Verbunden mit
+  anzahl: "Dokumente mit Datei: {anzahl}"
+  abgleich_am: "zuletzt abgeglichen {zeit}"
+  browser_name: Browserspeicher
+  browser_titel: Die Bibliothek liegt im Browserspeicher.
+  browser_text: Die Dateien liegen nur in diesem Browser auf diesem Rechner und können beim Aufräumen des Browsers verloren gehen. Sichern Sie die Bibliothek regelmässig als ZIP und legen Sie die Sicherung an einem gesicherten Ort ab.
+  gesichert_am: "Letzte Sicherung: {zeit}."
+  nie_gesichert: Noch keine Sicherung.
+  freigabe_text: "Der Bibliotheksordner «{name}» ist gemerkt. Der Browser fragt nach dem Neuladen einmal nach, ob der AIMS-Manager wieder darauf zugreifen darf."
+  keine_titel: Kein Bibliotheksordner verbunden.
+  keine_text: Dokumente, Versionen und Nachweise liegen dann als echte Dateien in einem Ordner Ihrer Wahl, zum Beispiel einem OneDrive- oder Netzlaufwerk-Ordner. Die Projektdatei enthält nur Verweise und Prüfsummen.
+  ohne_fsa: Dieser Browser kann keinen Ordner verbinden (nur Edge und Chrome). Die Bibliothek kann im Browserspeicher liegen, mit Sicherung als ZIP.
+  ordner_anderswo: "Die Bibliothek dieses Projekts liegt im Ordner «{name}». Öffnen Sie das Projekt in Edge oder Chrome, um ihn zu verbinden."
+aktion:
+  vorschau_projekt: Vorschau aus dem Projekt
+  hochladen: Datei hochladen
+  verbinden: Ordner verbinden
+  browser: Browserspeicher nutzen
+  freigeben_ordner: Zugriff auf den Ordner erlauben
+  abgleichen: Abgleichen
+  trennen: Trennen
+  sichern: Als ZIP sichern
+  laden: Sicherung laden
+  zum_ordner: In einen Ordner verschieben
+  aenderung_uebernehmen: Änderung übernehmen
+  als_version: Als neue Version einchecken
+  aufnehmen_eigene: Als eigene Datei aufnehmen
+  aufnehmen_nachweis: Als Nachweis aufnehmen
+  freigeben: Freigeben
+  abbrechen: Abbrechen
+  oeffnen: Rechtstext öffnen
+  vorlage: Vorlage herunterladen
+  einchecken: Neue Version einchecken
+  herunterladen: Herunterladen
+  vorschau: Vorschau
+  version_laden: "Version {version} herunterladen"
+  archivieren: Archivieren
+  zurueckholen: Aus dem Archiv holen
+  erzeugen: Firmendokumente in die Bibliothek legen
+wechsel:
+  in-pruefung: Zur Prüfung geben
+  entwurf: Zurück an Entwurf
+  freigegeben: Freigeben …
+hochladen:
+  erst_ablage: Zuerst Ablage wählen
+  eigene: Neue Dateien werden als eigene Dateien abgelegt.
+  nachweis: Neue Dateien werden als Nachweise abgelegt.
+  erst_verbinden: Zuerst einen Ordner verbinden oder den Browserspeicher nutzen.
+  ziehen_eigene: Dateien hierher ziehen, um sie als eigene Dateien abzulegen.
+  ziehen_nachweis: Dateien hierher ziehen, um sie als Nachweise abzulegen.
+  erzeugen_hinweis: Erzeugt alle Firmendokumente aus dem Projekt. Geänderte Dokumente erhalten eine neue Version als Entwurf, unveränderte bleiben, wie sie sind.
+abgleich:
+  fehlen_titel: "{anzahl} Dateien der Bibliothek fehlen in diesem Browser."
+  fehlen_titel_eins: "1 Datei der Bibliothek fehlt in diesem Browser."
+  fehlen_text: "Die Projektdatei kennt sie, die Dateien selbst liegen im Browserspeicher des Rechners, auf dem sie entstanden sind. Holen Sie sie mit «Sicherung laden» aus einer Sicherung (ZIP). Prüfung und Bericht zählen Freigaben aus dem Register weiter."
+  titel: "Abgleich mit dem Ordner (Befunde: {anzahl})"
+  geaendert: Ausserhalb geändert
+  alt-geaendert: Ältere Version verändert
+  fehlt: Datei fehlt
+  nicht-lokal: Nicht lokal verfügbar
+  neu: Neue Datei
+feld:
+  status: Status
+  version: Version
+  titel: Titel
+  eigner: Eigner/in
+  keiner: keine Angabe
+  waehlen: Person wählen
+  geprueft_von: Geprüft durch
+  freigabe_von: Freigegeben durch
+  am: am
+  aenderung: Was wurde geändert?
+  naechste_pruefung: Nächste Prüfung
+  normbezug: Normbezug
+  verknuepft: Verknüpft
+  ablageort: Ablageort
+  beschreibung: Beschreibung
+verknuepfung:
+  kiSysteme: KI-Systeme (KI-001)
+  risiken: Risiken (R-001)
+  controls: Controls (A.5.4)
+  prozesse: Prozesse (PR-08)
+  nachweise: Nachweise (N-001)
+detail:
+  ohne_ablage: Vorschau und Herunterladen brauchen eine verbundene Ablage (Ordner oder Browserspeicher). Beispiele bringen keine Dateien mit.
+  ohne_ablage_firma: Vorschau und Herunterladen der abgelegten Dateien brauchen eine verbundene Ablage; Beispiele bringen keine Dateien mit. Die Vorschau aus dem Projekt zeigt den Inhalt nach dem aktuellen Projektstand.
+  aus_entwurf: "aus Entwurf {version}"
+  bearbeiten: Angaben bearbeiten
+  gueltig: "gültig ist {version}"
+  ohne_version: noch keine Datei
+  hauptversion: Inhaltliche Änderung (neue Hauptnummer)
+  versionen: Versionen
+  ueberschrieben: Datei ausserhalb überschrieben
+  hinweis_d26: "Freigabe nach D-26: Eine zweite Person prüft vor der Freigabe; ein freigegebenes Dokument ändert sich nur über eine neue Version. Die Versionen liegen als Dateien in der Bibliothek."
+  hinweis_vorlage: Vorlage des Kits, schreibgeschützt. Sie wird beim Herunterladen leer erzeugt, wie im Ordner der Vorlagen.
+  hinweis_rechtstext: Rechtstext im Kit, schreibgeschützt. Er öffnet sich aus dem Ordner der Rechtstexte neben dem AIMS-Manager.
+freigabe:
+  eigene_datei: "Eigene Datei: Die Freigabe steht im Register; der Inhalt der Datei bleibt, wie er ist."
+  titel: "Version {version} freigeben"
+  nummer: "Der Entwurf {entwurf} wird als Version {version} freigegeben (D-26: Entwürfe 0.x, erste Freigabe 1.0). Der Dateiname nennt danach diese Version."
+  regel_standard: "Prüfung durch eine zweite Person, Freigabe nach der Art des Dokuments (D-26): Leitlinie und Geltungsbereich durch die Geschäftsleitung, Verfahren und Richtlinien durch die AIMS-Verantwortung."
+  regel_geschaeftsleitung: "Regel der Firma: Prüfung durch eine zweite Person, Freigabe durch die Geschäftsleitung."
+  regel_eigner: "Regel der Firma: Prüfung durch eine zweite Person, Freigabe durch die Eignerschaft des Dokuments."
+  regel_aims: "Regel der Firma: Prüfung durch eine zweite Person, Freigabe durch die AIMS-Verantwortung."
+fehler:
+  datei_fehlt_browser: "Die Datei fehlt in diesem Browser: {pfad}. Holen Sie sie mit «Sicherung laden» aus einer Sicherung."
+  datei_fehlt_ordner: "Die Datei fehlt im Ordner: {pfad}. Prüfen Sie den Ordner oder laden Sie sie neu hoch."
+  datei_gross: "«{name}» ist grösser als {mb} MB und wird im Browserspeicher nicht übernommen. Verbinden Sie in Edge oder Chrome einen Ordner, dort gilt diese Grenze nicht, oder legen Sie die Datei ausserhalb ab und verweisen Sie in einem Nachweis darauf."
+  datei_gross_lesen: "«{name}» ist grösser als {mb} MB und lässt sich hier nicht öffnen. Die Datei selbst ist unverändert: Laden Sie sie herunter oder öffnen Sie sie im Ordner."
+  sicherung_bestand_gross: "Die Dateien zusammen sind grösser als {grenze_sicherung} und passen nicht in eine Sicherung. Sichern Sie den verbundenen Ordner mit den Mitteln Ihrer Ablage."
+  register_schreiben: "bibliothek.json im Ordner liess sich nicht nachführen. Die Projektdatei stimmt, das Register im Ordner ist aber alt. Prüfen Sie die Schreibrechte."
+  datei_extern: "«{id}» wurde nicht neu erzeugt, weil die Datei ausserhalb geändert wurde. Ihre Bearbeitung bleibt erhalten. Wählen Sie im Eintrag «Änderung übernehmen»."
+  datei_erneuern: "Freigegeben, die Datei liess sich aber nicht neu erzeugen"
+  sicherung_gross: "Die Sicherung ist grösser als {grenze_sicherung} und wird nicht geladen."
+  register_ungueltig: "bibliothek.json passt nicht zum Projekt und wurde nicht übernommen."
+  allgemein: Das hat nicht geklappt
+  ordner: Der Ordner liess sich nicht öffnen
+  berechtigung: Der Browser hat den Zugriff auf den Ordner nicht erlaubt.
+  keine_ablage: Zuerst einen Ordner verbinden oder den Browserspeicher nutzen.
+  keine_sicherung: Die Datei ist keine Sicherung der Bibliothek (bibliothek.json fehlt).
+  keine-version: Für diesen Eintrag gibt es noch keine Datei.
+  nicht-erlaubt: Dieser Statuswechsel ist nach D-26 nicht vorgesehen.
+  pruefung-fehlt: Wer hat geprüft und wann? Vor der Freigabe prüft eine zweite Person.
+  freigabe-fehlt: Wer gibt frei und wann?
+  gleiche-person: Prüfung und Freigabe brauchen zwei verschiedene Personen.
+  reihenfolge: Die Prüfung liegt nach der Freigabe. Erst prüfen, dann freigeben.
+  aenderung-fehlt: Beschreiben Sie kurz, was sich gegenüber der vorigen Version geändert hat.
+warnung:
+  eigner-gibt-frei: "Hinweis: Die Eignerschaft gibt das eigene Dokument frei; die Regel der Firma sieht das nicht vor."
+  eigner-prueft: "Hinweis: Die Eignerschaft hat das eigene Dokument geprüft; besser prüft eine zweite Person."
+meldung:
+  lauf_abgebrochen: "Nichts erzeugt. Die Bibliothek ist unverändert."
+  verbunden_abweichend: "{anzahl} Dateien im Ordner weichen ab; sie blieben unverändert, der Stand aus dem Browser liegt jeweils als Kopie «.browser» daneben."
+  verbunden_abweichend_eins: "1 Datei im Ordner weicht ab; sie blieb unverändert, der Stand aus dem Browser liegt als Kopie «.browser» daneben."
+  sicherung_ausserhalb: "{anzahl} Dateien ausserhalb des Registers wurden nicht übernommen."
+  sicherung_ausserhalb_eins: "1 Datei ausserhalb des Registers wurde nicht übernommen."
+  freigegeben_erneuert: "Die Datei wurde mit Version und Freigabe im Kopf neu erzeugt."
+  freigegeben_eigene: "Die Datei selbst bleibt unverändert: Tragen Sie Version und Freigabe im Dokument nach, falls es sie nennt."
+  register_abgelehnt: "{anzahl} Einträge aus bibliothek.json wurden nicht übernommen, weil sie ungültig sind: {ids}."
+  register_abgelehnt_eins: "1 Eintrag aus bibliothek.json wurde nicht übernommen, weil er ungültig ist: {ids}."
+  verbunden: "Ordner «{name}» verbunden. Kopierte Dateien: {kopiert}, übernommene Versionen aus dem Ordner: {uebernommen}."
+  getrennt: Ordner getrennt. Die Dateien bleiben im Ordner, die Verweise in der Projektdatei.
+  browser: Die Bibliothek nutzt den Browserspeicher. Sichern Sie sie regelmässig als ZIP.
+  hochgeladen: "Abgelegte Dateien: {anzahl}."
+  eingecheckt: "{id}: Version {version} eingecheckt (Entwurf)."
+  freigegeben: "{id}: Version {version} freigegeben."
+  status: "{id}: {status}."
+  abgleich_ok: Ordner und Register stimmen überein.
+  abgleich_befunde: "Abgleich abgeschlossen, Befunde: {anzahl}."
+  uebernommen: "{id}: Änderung übernommen."
+  aufgenommen: "{id} aufgenommen."
+  gesichert: "«{name}» heruntergeladen (Dateien: {anzahl}). Legen Sie die Sicherung an einem gesicherten Ort ab."
+  wiederhergestellt: "Sicherung geladen. Dateien: {dateien}, neue Versionen im Register: {versionen}."
+  erzeugt: "Firmendokumente erzeugt. Neue Versionen: {neu}, unverändert: {gleich}, Fehler: {fehler}."
+arbeit:
+  verbinden: Ordner wird verbunden …
+  hochladen: Dateien werden abgelegt …
+  einchecken: Version wird eingecheckt …
+  lesen: Datei wird gelesen …
+  vorlage: Vorlage wird erzeugt …
+  abgleich: Ordner wird abgeglichen …
+  sichern: Sicherung wird erstellt …
+  wiederherstellen: Sicherung wird geladen …
+  erzeugen: Firmendokumente werden erzeugt …
+vorschau:
+  titel_projekt: Vorschau aus dem Projekt (aktueller Stand)
+  titel: "Vorschau Version {version}"
+  projektstand: Aktuellen Stand aus dem Projekt zeigen
+  laedt: Vorschau wird geladen …
+  fehler: Keine Vorschau möglich
+  keine: Für dieses Dateiformat gibt es keine Vorschau. Laden Sie die Datei herunter und öffnen Sie sie im passenden Programm.
+  bild: "{titel}, Seite {seite}"
+  seite: "Seite {seite} von {seiten}"
+  zurueck: Vorige Seite
+  weiter: Nächste Seite
+  blatt: Tabellenblatt
+recht:
+  aiact: "EU AI Act, Verordnung (EU) 2024/1689, konsolidierte Fassung vom {datum} ({sprache})"
+register:
+  bemerkung_datei: "Datei {pfad}"
+  bemerkung_in_arbeit: "Version {version} in Arbeit ({status})"
+norm:
+  filter: Nach Normbezug filtern
+  alle: "Normbezug: alle"
+  wert: "Norm {norm}"
+
+frage:
+  lauf_alle: "{anzahl} Dokumente ändern sich, {frei} davon sind freigegeben. Sie erhalten je einen neuen Entwurf, gültig bleibt bis zur nächsten Freigabe die freigegebene Version."
+  lauf_alle_eins: "1 Dokument ändert sich und erhält einen neuen Entwurf. Ist es freigegeben, bleibt diese Version bis zur nächsten Freigabe gültig."
+  sicherung_konflikt: "{anzahl} Dateien der Sicherung weichen vom Bestand ab, etwa:\n{namen}\n\n«Sicherung laden» ersetzt sie; der bisherige Stand bleibt je als Kopie «.vor-sicherung» liegen. Mit Abbrechen wird nichts geladen."
+  sicherung_konflikt_eins: "1 Datei der Sicherung weicht vom Bestand ab:\n{namen}\n\n«Sicherung laden» ersetzt sie; der bisherige Stand bleibt als Kopie «.vor-sicherung» liegen. Mit Abbrechen wird nichts geladen."
+  unbenannt: "ohne Namen"
+  fremdes_projekt: "Diese Bibliothek gehört zu einem anderen Projekt («{name}»). Ihre Einträge in das offene Projekt übernehmen?"
+sammel:
+  aenderung: "Erstfassung und Sammelfreigabe."
+  teilweise: "{anzahl} Dokumente geändert, {fehler} nicht: {ids}."
+  teilweise_eins: "1 Dokument geändert, {fehler} nicht: {ids}."
+  fertig: "{anzahl} Dokumente geändert."
+  fertig_eins: "1 Dokument geändert."
+  freigeben: "{anzahl} Dokumente in Prüfung freigeben"
+  freigeben_eins: "1 Dokument in Prüfung freigeben"
+  zur_pruefung: "{anzahl} Entwürfe zur Prüfung geben"
+  zur_pruefung_eins: "1 Entwurf zur Prüfung geben"
+  text: "Gibt alle Entwürfe zur Prüfung oder alle geprüften Dokumente mit denselben Angaben frei. Die Vier-Augen-Regel gilt auch hier."
+  titel: "Mehrere Dokumente auf einmal"

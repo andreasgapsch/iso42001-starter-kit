@@ -1,0 +1,71 @@
+# D-07 AI risk register and treatment plan
+blaetter:
+  register: Risk register
+  plan: Treatment plan
+  skalen: Scales
+titel_register: "AI risks and opportunities"
+titel_plan: "Treatment plan and approval"
+titel_skalen: "Rating scales and criteria (from D-06)"
+hinweise_register:
+  - "One row per risk or opportunity. Relate risks to an AI system (column C) or to the whole company (leave blank)."
+  - "Rate likelihood (L) and impact (I) with the scales in the ‘Scales’ sheet. The score is calculated."
+  - "With an ISMS: information security risks of an AI system stay in the ISMS register. Only enter the reference here (column X)."
+  - "For systems using generative AI: the sheet ‘GenAI security suggestions’ lists typical security and data risks as a prompt, including risks of AI that acts (agents, connectors, memory) (also offered as a suggestion list in the Guide of the AIMS Manager). Only copy what applies to your systems."
+hinweise_plan:
+  - "For each completed action, enter in the column ‘Evidence’ what shows implementation and effectiveness (N-xxx). This keeps the chain of risk, control, action and evidence closed."
+  - "The treatment plan and the acceptance of residual risks must be approved by the responsible management (ISO/IEC 42001, 6.1.3)."
+  - "The plan contains all actions, including those arising from the AI Act, audits or reviews. The column ‘Origin’ names the reason, the column ‘Risks’ the risks treated."
+hinweise_plan_firma:
+  - "The plan contains all actions with their reason (column ‘Origin’) and the risks treated. The responsible management approves the plan and the residual risks (ISO/IEC 42001, 6.1.3)."
+hinweise_skalen:
+  - "Take the scales from your procedure D-06. With an ISMS: use the same scales as in the ISMS."
+spalten_register:
+  - ID
+  - Type
+  - AI system
+  - Title
+  - Description
+  - Risk source
+  - Level affected
+  - Cause
+  - Consequence
+  - Existing actions
+  - L
+  - I
+  - Score
+  - Treatment
+  - Controls (SoA)
+  - Actions
+  - Owner
+  - L after
+  - I after
+  - Residual score
+  - Residual risk accepted by
+  - Accepted on
+  - Status
+  - Assessed on
+  - Reason for acceptance, exception
+  - ISMS reference
+spalten_plan: [Action, Title, Origin, Risks, Responsible, Deadline, Status, Priority, Description, Evidence]
+spalten_skalen: [Level, Likelihood, Description, Impact, Description]
+freigabe_plan: "Treatment plan and residual risks approved by:"
+ausnahme_text: "Temporary exception granted by {von} on {am}, valid until {bis}"
+listen:
+  art: [Risk, Opportunity]
+  ebene: [Organization, Individuals, Society, several]
+  behandlung: [avoid, reduce, share, accept, exploit]
+  status: [open, in treatment, treated, accepted, closed]
+  massnahme_status: [open, in progress, done, discarded]
+  herkunft: [Risk, Audit, Management review, Review, Checklist, AI Act, Objective, Change to the AIMS, other]
+  prioritaet: [high, medium, low]
+skalen_vorschlag:
+  wahrscheinlichkeit:
+    - [1, rare, "less than once in 5 years"]
+    - [2, possible, "once in 2 to 5 years"]
+    - [3, likely, "about once a year"]
+    - [4, frequent, "several times a year"]
+  auswirkung:
+    - [1, minor, "barely noticeable, quickly remedied"]
+    - [2, noticeable, "annoyance, effort or minor harm for affected persons or the company"]
+    - [3, significant, "clear harm, breach of law or loss of trust"]
+    - [4, severe, "danger to health, fundamental rights or the survival of the company"]

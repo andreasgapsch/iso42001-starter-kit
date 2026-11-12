@@ -1,0 +1,141 @@
+# Page texts for phase E1 Mandate and starting point. Format: src/gefuehrt/FORMAT.md
+E1-einfuehrung:
+  titel: Mandate and starting point
+  frage: Where does your company stand today, and who is behind the project?
+  warum: Before you write any documents, take an honest look at what already exists. Management then approves the mandate. This shows that [[g:oberste-leitung]] stands behind the management system.
+  fehler: The maturity level is not a certification criterion. It only helps you estimate the effort. Auditors want to see that management visibly supports the work, for example through approvals and resources.
+E1-vorhanden:
+  titel: Existing management systems
+  frage: Which management systems does your company already have?
+  warum: Reuse whatever already works for quality, environment or information security. Document control, internal audit and management review can usually be run jointly.
+  fehler: New parallel structures cost time and confuse employees. Auditors welcome an integrated system, as long as the AI topics are clearly visible in it.
+  felder:
+    meta.gefuehrt.antworten.vorhandeneSysteme:
+      label: Existing management systems
+      hilfe: Systems without certification count too, as long as they are used in practice.
+E1-schnellcheck-a:
+  titel: Quick check, part 1
+  frage: How far have you got with context, leadership, planning and inventory?
+  warum: The quick check shows where the biggest gaps are and weights your roadmap. It is a rough estimate, not an audit.
+  fehler: Many people rate themselves too highly because some document exists on the topic. ‘Met’ means it is approved, applied and can be backed up with evidence.
+  felder:
+    gapAnalyse.kapitel.k4:
+      label: Context, interested parties, scope (clause 4)
+      hilfe: Is there a description of your environment and a defined scope for AI?
+    gapAnalyse.kapitel.k5:
+      label: Leadership, policy, roles (clause 5)
+      hilfe: Is there a rule set for AI approved by management, and are responsibilities clear?
+    gapAnalyse.kapitel.k6:
+      label: Risks, impact assessments, objectives (clause 6)
+      hilfe: Are AI risks assessed using a fixed method?
+    gapAnalyse.kapitel.inventar:
+      label: Overview of the AI in use
+      hilfe: Do you know which AI tools are used in the company?
+E1-schnellcheck-b:
+  titel: Quick check, part 2
+  frage: How far have you got with support, operation, evaluation and improvement?
+  warum: These clauses cover day-to-day work. This is where it shows whether rules are actually followed, and where you can reuse the most from an [[g:isms]].
+  fehler: Training without records and audits without a report do not count for auditors. Only rate what you can prove.
+  felder:
+    gapAnalyse.kapitel.k7:
+      label: Resources, competence, communication, documents (clause 7)
+      hilfe: Is there AI training and a controlled way of storing documents?
+    gapAnalyse.kapitel.k8:
+      label: Operation and control (clause 8)
+      hilfe: Are new AI tools checked and approved before use?
+    gapAnalyse.kapitel.k9:
+      label: Measurement, audit, management review (clause 9)
+      hilfe: Are there regular internal audits and a management review?
+    gapAnalyse.kapitel.k10:
+      label: Improvement (clause 10)
+      hilfe: Are deviations handled with a root cause and a check of effectiveness?
+E1-team:
+  titel: Project team
+  frage: Who works on the project, and what role does each person have?
+  warum: An AI management system touches IT, business units, HR, legal and purchasing. People involved early will support the rules later. The people you enter here can be selected in every stage.
+  fehler: A one-person project in IT leads to rules that never reach the business units. Auditors also interview people outside IT and quickly notice whether they were involved.
+  felder:
+    name:
+      label: Name
+      hilfe: First name and surname.
+    funktion:
+      label: Job title
+      hilfe: e.g. ‘Head of IT’, ‘Quality Manager’.
+    aimsRollen:
+      label: Role in the project
+      hilfe: In an SME, one person often has several roles.
+E1-auftrag:
+  titel: Project mandate
+  frage: What should the project achieve, and what resources are available?
+  warum: The project mandate records the objective, effort and budget. It is the first evidence that management provides resources, as the standard requires.
+  fehler: A mandate without allocated working time means the project fizzles out next to daily business. Record how much time the [[g:aims|AIMS]] lead gets. Typical values are 25 to 35 person-days with an [[g:isms]] and 45 to 65 without.
+  felder:
+    organisation.projektauftrag.ziel:
+      label: Project objective
+      hilfe: e.g. "Certification to ISO/IEC 42001 by June 2027, and proof to customers that we use AI responsibly".
+    organisation.projektauftrag.aufwandPt:
+      label: Planned effort in person-days
+      hilfe: Internal effort of everyone involved.
+    organisation.projektauftrag.budget:
+      label: Budget in CHF
+      hilfe: For external support, training and certification.
+    organisation.projektauftrag.pensumProzent:
+      label: Working time of the AIMS lead in per cent
+      hilfe: During the build-up phase, e.g. 40%. The Guide assumes 40 to 50%; the roadmap in E0 checks whether the person-days are enough.
+    organisation.projektauftrag.nutzen:
+      label: "Benefits"
+      hilfe: "Why the effort pays off, e.g. customer requirements, lower risk from AI tools, preparation for the EU AI Act."
+    organisation.projektauftrag.sponsor:
+      label: "Sponsor in top management"
+      hilfe: "Member of top management who drives decisions and removes obstacles."
+    organisation.projektauftrag.team:
+      label: "Project team"
+      hilfe: "Who works on setting up the AIMS. Internal auditors are not part of it, so that the internal audit stays independent. Empty: everyone with AIMS roles except the audit role."
+    organisation.projektauftrag.geltungsbereich:
+      label: "Scope (rough)"
+      hilfe: "Which units, sites and AI systems are to be included, as known at the start of the project. The precise boundaries follow in D-02."
+    organisation.projektauftrag.meilensteine:
+      label: "Milestones"
+      hilfe: "e.g. gap analysis, AI inventory, [[g:zertifizierungsstelle|certification body]] chosen, internal auditor appointed, auditor trained in ISO/IEC 42001, risks and impact assessments, internal audit, management review, [[g:stage-1|stage 1]] readiness. The roadmap in E0 adds the Guide's milestones with dates."
+    organisation.projektauftrag.meilensteine.was:
+      label: "Milestone"
+      hilfe: "What is to be achieved."
+    organisation.projektauftrag.meilensteine.termin:
+      label: "Date"
+      hilfe: "Planned date."
+    organisation.projektauftrag.risiken:
+      label: "Project risks"
+      hilfe: "e.g. little time in the business units, unknown [[g:schatten-ki|shadow AI]], suppliers who do not answer."
+E1-freigabe:
+  titel: Approval of the mandate
+  frage: Has management approved the project mandate?
+  warum: By approving it, management takes responsibility for the project. A fixed schedule for status reports keeps it informed afterwards.
+  fehler: Verbal commitments cannot be proven. Auditors want to see a dated approval, for example in the minutes of a management meeting.
+  felder:
+    organisation.projektauftrag.freigabe:
+      label: Approval of the project mandate
+      hilfe: Member of management and date.
+    organisation.projektauftrag.glTraktandum:
+      label: Status report to management
+      hilfe: How often the project is on the management meeting agenda. During the project every two weeks, otherwise the project takes considerably longer than planned. The roadmap in E0 shows the approval calendar.
+E1-zertifizierung:
+  titel: Ask certification bodies early
+  frage: By when will you request quotes, and when will you choose the [[g:zertifizierungsstelle|certification body]]?
+  warum: Only a few bodies are accredited for ISO/IEC 42001, and their dates are scarce. The Guide plans quotes in week 4 and the choice in week 6 with an [[g:isms]], and in weeks 7 to 10 without one. Asking only at the end costs weeks until the [[g:stage-1|stage 1]] date. The information appears in the certification roadmap D-25.
+  fehler: Many ask only after the management review and then wait for a date. Ask two to three accredited bodies and have them show you the scope of their accreditation. With an ISMS, it is worth asking your current body about a combined audit.
+  felder:
+    meta.gefuehrt.antworten.zertifizierung.offertenBis:
+      label: Request quotes by
+      hilfe: Week 4 with an ISMS, weeks 7 to 8 without. The roadmap in E0 shows the date at the milestone for quotes.
+    meta.gefuehrt.antworten.zertifizierung.angefragt:
+      label: Bodies asked
+      hilfe: One body per line with the date of the request, e.g. ‘Example Certification Ltd, asked on 12/03’.
+    meta.gefuehrt.antworten.zertifizierung.wahlBis:
+      label: Choose the body by
+      hilfe: Week 6 with an ISMS, weeks 9 to 10 without.
+    meta.gefuehrt.antworten.zertifizierung.stelle:
+      label: Chosen certification body
+      hilfe: If already known. You can add it later in E13.
+    meta.gefuehrt.antworten.zertifizierung.akkreditiert:
+      label: Accredited for ISO/IEC 42001
+      hilfe: Check the public register of the accreditation body, in Switzerland the SAS.

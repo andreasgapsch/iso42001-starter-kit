@@ -1,0 +1,68 @@
+# Etappen des Guides. Format: src/gefuehrt/FORMAT.md
+etappen:
+  - { id: E0, norm: "4.1, 4.3, 5.3", vorlagen: [], leitfaden: 1, dauer_h: { mit_isms: 0.5, ohne_isms: 0.5 }, beteiligte: [aims], seiten: [E0-start, E0-firma, E0-groesse, E0-isms, E0-eu, E0-ki, E0-termin, E0-verantwortung, E0-modul, E0-gestaltung, E0-fahrplan], checkliste: [] }
+  - { id: E1, norm: "4 bis 10 (Überblick), 5.1, 7.1", vorlagen: [D-00], leitfaden: 1, dauer_h: { mit_isms: 4, ohne_isms: 6 }, beteiligte: [gl, aims], seiten: [E1-einfuehrung, E1-vorhanden, E1-schnellcheck-a, E1-schnellcheck-b, E1-team, E1-auftrag, E1-freigabe, E1-zertifizierung], checkliste: [E1-c1, E1-c2, E1-c3, { id: E1-c4, wenn: { mitIsms: true } }, { id: E1-c5, wenn: { mitIsms: false } }, E1-c6] }
+  - { id: E2, norm: "4.1 bis 4.4", vorlagen: [D-01, D-02], leitfaden: 2, dauer_h: { mit_isms: 4, ohne_isms: 8 }, beteiligte: [gl, aims, it, recht], seiten: [E2-einfuehrung, E2-isms-bezug, E2-grundlagen, E2-themen, E2-klima, E2-zweck, E2-rollen-iso, E2-parteien, E2-grenzen, E2-schnittstellen, E2-prozesse, E2-freigabe], checkliste: [E2-c1, E2-c2, E2-c3] }
+  - { id: E3, norm: "5.1 bis 5.3, A.2, A.3", vorlagen: [D-03, D-04], leitfaden: 3, dauer_h: { mit_isms: 4, ohne_isms: 6 }, beteiligte: [gl, aims, hr], seiten: [E3-einfuehrung, E3-grundsaetze, E3-risikobereitschaft, E3-merkmale, E3-elemente, E3-andere-leitlinien, E3-ausnahmen, E3-leitlinie-freigabe, E3-isms, E3-pflichtrollen, E3-raci, E3-entscheidungsrechte, E3-gremien, E3-meldeweg], checkliste: [E3-c1, E3-c2, E3-c3, E3-c4] }
+  - { id: E4, norm: "A.4, A.9.2", vorlagen: [D-10], leitfaden: 4, dauer_h: { mit_isms: 8, ohne_isms: 10 }, beteiligte: [aims, it, fachbereiche, einkauf], seiten: [E4-einfuehrung, E4-suche, E4-fragebogen, E4-systeme, E4-daten, E4-handlung, E4-generativ, E4-dienst, E4-kritisch, E4-ressourcen, E4-schatten, E4-freigabeprozess, E4-ueberpruefung], checkliste: [E4-c1, E4-c2, E4-c3, E4-c4] }
+  - { id: E5, norm: "4.1", vorlagen: [D-24, E-01, E-02], leitfaden: 5, dauer_h: { mit_isms: 3, ohne_isms: 3 }, beteiligte: [aims, recht], seiten: [E5-einfuehrung, E5-rolle, E5-rollenwechsel, E5-verbote, E5-risikoklasse, E5-transparenz, E5-gpai, E5-begruendung, E5-vermerk], checkliste: [E5-c1, { id: E5-c2, wenn: { modul: true } }, { id: E5-c3, wenn: { modul: true } }] }
+  - { id: E6, norm: "6.1.1, 6.1.2, 8.2, Anhang C", vorlagen: [D-06, D-07], leitfaden: 6, dauer_h: { mit_isms: 6, ohne_isms: 10 }, beteiligte: [aims, it, fachbereiche, ism], seiten: [E6-einfuehrung, E6-isms-skalen, E6-zeitraum, E6-skalen, E6-akzeptanz, E6-register, E6-genai, E6-bewertung, E6-chancen, E6-neubeurteilung], checkliste: [E6-c1, E6-c2, E6-c3] }
+  - { id: E7, norm: "6.1.4, 8.4, A.5", vorlagen: [D-08, D-09, E-06], leitfaden: 6, dauer_h: { mit_isms: 6, ohne_isms: 6 }, beteiligte: [aims, fachbereiche, dsb, hr], seiten: [E7-einfuehrung, E7-verfahren, E7-triage, E7-triage-ergebnis, E7-beschreibung, E7-umfeld-betreiber, E7-umfeld-anbieter, E7-betroffene, E7-ziele-a, E7-ziele-b, E7-ausfaelle, E7-dsfa, E7-fria, E7-ergebnis, E7-einsatzentscheid, E7-freigabe], checkliste: [E7-c1, E7-c2, E7-c3] }
+  - { id: E8, norm: "6.1.3, 8.3, Anhang A und B", vorlagen: [D-11, D-07, E-03], leitfaden: 7, dauer_h: { mit_isms: 6, ohne_isms: 8 }, beteiligte: [aims, gl, ism], seiten: [E8-einfuehrung, E8-behandlung, E8-soa, E8-euaia, E8-rmf, E8-eigene, E8-massnahmen, E8-nachweise, E8-umsetzung, E8-wirksamkeit, E8-restrisiko, E8-plan-freigabe, E8-plan-freigabe-eb], checkliste: [E8-c1, E8-c2, E8-c3] }
+  - { id: E9, norm: "8.1, A.6 bis A.10, Anhang B", vorlagen: [D-12, D-13, D-14, D-15, D-16, E-05, E-07, E-08], leitfaden: 8, dauer_h: { mit_isms: 10, ohne_isms: 14 }, beteiligte: [aims, it, einkauf, fachbereiche, kommunikation], seiten: [E9-einfuehrung, E9-lebenszyklus, E9-dokumentation, E9-protokolle, E9-protokolle-systeme, E9-missbrauch, E9-rueckfall, E9-ausserbetrieb, E9-messkonzept, E9-genai, E9-entwicklung, E9-daten-betrieb, E9-daten-entwicklung, E9-information, E9-nutzerinformation, E9-meldekanal, E9-meldekanal-soa, E9-nutzungsregeln, E9-nutzung, E9-lieferanten, E9-vertragsklauseln, E9-dritte, E9-betreiber-hr, E9-betreiber-info, E9-transparenz, E9-anbieter], checkliste: [E9-c1, E9-c2, E9-c3, E9-c4, { id: E9-c5, wenn: { typ: eigenbau } }, { id: E9-c6, wenn: { modul: true } }] }
+  - { id: E10, norm: "7.2 bis 7.4", vorlagen: [D-17, E-04], leitfaden: 8, dauer_h: { mit_isms: 3, ohne_isms: 5 }, beteiligte: [aims, hr, kommunikation], seiten: [E10-einfuehrung, E10-kompetenzen, E10-bewusstsein, E10-ki-kompetenz, E10-kommunikation], checkliste: [E10-c1, E10-c2, E10-c3] }
+  - { id: E11, norm: "6.2, 6.3, 7.5, 9.1", vorlagen: [D-05, D-26], leitfaden: 8, dauer_h: { mit_isms: 3, ohne_isms: 6 }, beteiligte: [aims, gl], seiten: [E11-einfuehrung, E11-ziele, E11-messplan, E11-nicht-gemessen, E11-messungen, E11-kennzahlen, E11-lenkung-isms, E11-lenkung, E11-dokumente, E11-aenderungen], checkliste: [E11-c1, E11-c2, E11-c3] }
+  - { id: E12, norm: "9.2, 9.3, 10.1, 10.2", vorlagen: [D-20, D-21, D-22], leitfaden: 9, dauer_h: { mit_isms: 8, ohne_isms: 12 }, beteiligte: [aims, gl, auditor], seiten: [E12-einfuehrung, E12-programm, E12-audit, E12-feststellungen, E12-korrektur, E12-meldungen, E12-rmf-profil, E12-mb, E12-mb-eingaben, E12-mb-ergebnisse, E12-mb-entscheide, E12-verbesserung], checkliste: [E12-c1, E12-c2, E12-c3, E12-c4] }
+  - { id: E13, norm: "9.2, 9.3, Zertifizierung", vorlagen: [D-25], leitfaden: 10, dauer_h: { mit_isms: 2, ohne_isms: 3 }, beteiligte: [aims, gl], seiten: [E13-einfuehrung, E13-stelle, E13-termine, E13-unterlagen, E13-pruefung], checkliste: [E13-c1, E13-c2, E13-c3] }
+  - { id: J, norm: "8.2, 8.4, 9.2, 9.3", vorlagen: [], leitfaden: 10, dauer_h: { mit_isms: 1, ohne_isms: 1 }, beteiligte: [aims], seiten: [J-einfuehrung, J-termine, J-kalender, J-inventar, J-risiken, J-folgen, J-lieferanten, J-ziele, J-rmf, J-ueberwachungsaudit], checkliste: [J-c1, J-c2, { id: J-c3, wenn: { modul: true } }] }
+
+# Fahrplan (Seitentyp fahrplan, E0-fahrplan): rechnet vom Ziel Stage-1-Bereitschaft (organisation.zielterminStage1) rückwärts.
+# schritte: Wochen und Personentage je Schritt wie in src/leitfaden/schritte.yaml (tests/unit/gefuehrt.test.ts prüft die Gleichheit).
+# wochen: Länge des Plans je Pfad (Kapitel 4); erweitert: Pfad mit ISMS bei erweitertem Umfang (Kapitel 4 und 5, rund 6 Monate),
+# die Wochen des Plans werden gestreckt. anteilAims: Anteil der Personentage, den die AIMS-Verantwortliche trägt (Kapitel 4).
+# meilensteine und freigaben (Freigabekalender der Geschäftsleitung): Woche je Pfad; fehlt ein Pfad, gilt der Eintrag dort nicht.
+# Texte: src/i18n/<sprache>/app.yaml unter fahrplan.meilensteine.<id> und fahrplan.freigaben.<id>.
+fahrplan:
+  wochen: { mit_isms: 13, ohne_isms: 22 }
+  erweitert: { wochen: 26, pt: [45, 55] }
+  anteilAims: 0.6
+  # Zuschlag je eingeschaltetem Modul (Richtwert in Personentagen, in der Summe enthalten); Modul NIST AI RMF: Profil,
+  # Zusatz-Controls RMF-xx, Mess- und Prüfkonzept, GenAI-Bewertung (Anteil der Anwenderfirma)
+  module:
+    nistRmf: { pt: [3, 5] }
+  schritte:
+    - { nr: 1, wochen: { mit_isms: [1, 1], ohne_isms: [1, 2] }, pt: { mit_isms: [1.5, 2], ohne_isms: [2.5, 3.5] } }
+    - { nr: 2, wochen: { mit_isms: [2, 3], ohne_isms: [3, 5] }, pt: { mit_isms: [1.5, 2], ohne_isms: [3, 4.5] } }
+    - { nr: 3, wochen: { mit_isms: [3, 4], ohne_isms: [4, 6] }, pt: { mit_isms: [1.5, 2], ohne_isms: [3, 4] } }
+    - { nr: 4, wochen: { mit_isms: [2, 4], ohne_isms: [3, 7] }, pt: { mit_isms: [3, 4.5], ohne_isms: [4, 6] } }
+    - { nr: 5, wochen: { mit_isms: [4, 5], ohne_isms: [7, 8] }, pt: { mit_isms: [1, 1.5], ohne_isms: [1, 1.5] } }
+    - { nr: 6, wochen: { mit_isms: [5, 7], ohne_isms: [8, 12] }, pt: { mit_isms: [4.5, 6.5], ohne_isms: [8, 11.5] } }
+    - { nr: 7, wochen: { mit_isms: [7, 8], ohne_isms: [12, 14] }, pt: { mit_isms: [2.5, 3.5], ohne_isms: [3.5, 5] } }
+    - { nr: 8, wochen: { mit_isms: [8, 10], ohne_isms: [13, 18] }, pt: { mit_isms: [5.5, 7], ohne_isms: [12, 16] } }
+    - { nr: 9, wochen: { mit_isms: [10, 12], ohne_isms: [18, 21] }, pt: { mit_isms: [3, 4.5], ohne_isms: [6, 10] } }
+    - { nr: 10, wochen: { mit_isms: [12, 13], ohne_isms: [21, 22] }, pt: { mit_isms: [1, 1.5], ohne_isms: [2, 3] } }
+  meilensteine:
+    - { id: auftrag, wochen: { mit_isms: 1, ohne_isms: 2 } }
+    - { id: lenkung, wochen: { ohne_isms: 2 } }
+    - { id: leitlinie, wochen: { mit_isms: 4, ohne_isms: 6 } }
+    - { id: inventar, wochen: { mit_isms: 4, ohne_isms: 8 } }
+    - { id: offerten, wochen: { mit_isms: 4, ohne_isms: 8 } }
+    - { id: triage, wochen: { mit_isms: 5, ohne_isms: 10 } }
+    - { id: stelle, wochen: { mit_isms: 6, ohne_isms: 10 } }
+    - { id: auditperson, wochen: { mit_isms: 6, ohne_isms: 12 } }
+    - { id: folgen, wochen: { mit_isms: 7, ohne_isms: 12 } }
+    - { id: einarbeitung, wochen: { mit_isms: 8, ohne_isms: 12 } }
+    - { id: soa, wochen: { mit_isms: 8, ohne_isms: 14 } }
+    - { id: schulung, wochen: { mit_isms: 9, ohne_isms: 18 } }
+    - { id: dokumente, wochen: { mit_isms: 10, ohne_isms: 18 } }
+    - { id: audit, wochen: { mit_isms: 11, ohne_isms: 20 } }
+    - { id: mb, wochen: { mit_isms: 12, ohne_isms: 22 } }
+    - { id: stage1, wochen: { mit_isms: 13, ohne_isms: 22 } }
+  freigaben:
+    - { id: auftrag, wochen: { mit_isms: 1, ohne_isms: 2 }, vorlagen: { mit_isms: [D-00], ohne_isms: [D-00, D-26] } }
+    - { id: leitlinie, wochen: { mit_isms: 4, ohne_isms: 6 }, vorlagen: { mit_isms: [D-02, D-03, D-04], ohne_isms: [D-02, D-03, D-04] } }
+    - { id: kriterien, wochen: { mit_isms: 5, ohne_isms: 10 }, vorlagen: { mit_isms: [D-06, D-08], ohne_isms: [D-06, D-08] } }
+    - { id: folgen, wochen: { mit_isms: 7, ohne_isms: 12 }, vorlagen: { mit_isms: [D-09], ohne_isms: [D-09] } }
+    - { id: soa, wochen: { mit_isms: 8, ohne_isms: 14 }, vorlagen: { mit_isms: [D-07, D-11], ohne_isms: [D-07, D-11] } }
+    - { id: richtlinien, wochen: { mit_isms: 10, ohne_isms: 18 }, vorlagen: { mit_isms: [D-05, D-12, D-13, D-14, D-15, D-16, D-17, D-26, D-27], ohne_isms: [D-05, D-12, D-13, D-14, D-15, D-16, D-17, D-26, D-27] } }
+    - { id: mb, wochen: { mit_isms: 12, ohne_isms: 22 }, vorlagen: { mit_isms: [D-21], ohne_isms: [D-21] } }

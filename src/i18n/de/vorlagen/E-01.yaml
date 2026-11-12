@@ -1,0 +1,64 @@
+# E-01 Rollenbestimmung nach EU AI Act
+blaetter:
+  rollen: Rollen
+  hilfe: Entscheidungshilfe
+titel_rollen: "Rolle je KI-System nach EU AI Act"
+titel_hilfe: "Entscheidungshilfe: in welcher Rolle sind wir?"
+hinweise_rollen:
+  - "Eine Zeile je KI-System aus dem Inventar (D-10). Beantworten Sie die Prüffragen in den Spalten D bis K mit ja, nein oder offen und leiten Sie daraus die Rolle ab (Spalte N). Ein System kann mehrere Rollen haben, etwa Anbieter und Betreiber."
+  - "Die Fragen folgen der Entscheidungshilfe im zweiten Blatt. Begriffe nach {fs:3 Nr. 3 bis 8}; räumlicher Geltungsbereich nach {fs:2(1)}."
+  - "Spalte L: Bei Hochrisiko-Systemen prüfen, ob Sie nach {fs:25(1)} zum Anbieter werden. Bei Systemen ohne Hochrisiko-Bezug «nicht relevant» wählen, aber bei jeder Änderung der Zweckbestimmung neu prüfen (Bst. c)."
+  - "Spalte M: Für Schweizer Unternehmen gilt der AI Act bei Inverkehrbringen oder Inbetriebnahme in der EU (Art. 2(1) Bst. a) und wenn die Ausgabe eines Systems in der EU verwendet wird (Art. 2(1) Bst. c). Ohne EU-Bezug ist das System nicht erfasst; halten Sie das trotzdem fest."
+  - "Begründen Sie die Rolle in zwei bis drei Sätzen und übertragen Sie das Ergebnis ins Inventar (D-10). Juristisch prüfen lassen: Rollenwechsel, Grenzfälle und alle Systeme mit Hochrisiko-Bezug."
+hinweis_vorbelegt: "Rolle, Begründung und Prüfstand je System wie im KI-Inventar (D-10). Spalte M zeigt den räumlichen Anwendungsbereich je System nach Art. 2(1)."
+spalten:
+  - ID
+  - KI-System
+  - Typ
+  - "KI-System im Sinne des AI Act?"
+  - "Selbst entwickelt oder entwickeln lassen und unter eigenem Namen oder eigener Marke angeboten oder in Betrieb genommen?"
+  - "In der EU in Verkehr gebracht oder in Betrieb genommen?"
+  - "Ausgabe (Output) wird in der EU verwendet?"
+  - "Nur Nutzung, beruflich und unter eigener Verantwortung?"
+  - "Einführer: System eines Anbieters ausserhalb der EU erstmals in der EU bereitgestellt?"
+  - "Händler: System weitergegeben, ohne Anbieter oder Einführer zu sein?"
+  - "Produkthersteller: System mit eigenem Produkt unter eigenem Namen in Verkehr gebracht?"
+  - "Rollenwechsel nach Art. 25(1)"
+  - "Schweizer Bezug (Art. 2(1))"
+  - Rolle(n) nach AI Act
+  - Begründung
+  - Juristisch geprüft
+  - "Geprüft durch, am"
+  - Nächste Überprüfung
+listen:
+  wechsel:
+    - nein
+    - "nicht relevant (kein Hochrisiko-System)"
+    - "ja, Bst. a: eigener Name oder eigene Marke"
+    - "ja, Bst. b: wesentliche Veränderung"
+    - "ja, Bst. c: neue Zweckbestimmung"
+    - offen
+  # Reihenfolge: a, b, c, a+b, a+c, b+c, a+b+c, kein Bezug, offen (E-01.ts bezug)
+  bezug:
+    - "Inverkehrbringen oder Inbetriebnahme in der EU (Art. 2(1) Bst. a)"
+    - "Betreiber mit Sitz oder Niederlassung in der EU (Art. 2(1) Bst. b)"
+    - "Ausgabe wird in der EU verwendet (Art. 2(1) Bst. c)"
+    - "Bst. a und Bst. b"
+    - "Bst. a und Bst. c"
+    - "Bst. b und Bst. c"
+    - "Bst. a, b und c"
+    - "kein EU-Bezug erkennbar"
+    - offen
+hinweis_hilfe: "Die Fragen werden der Reihe nach beantwortet. Die Seitenangaben beziehen sich auf die {rechtsstand}."
+spalten_hilfe: [Nr., Frage, Wenn ja, Wenn nein, Fundstelle]
+hilfe:
+  - ["Ist es ein KI-System im Sinne des AI Act: ein maschinengestütztes System, das aus Eingaben ableitet, wie es Ausgaben wie Vorhersagen, Inhalte, Empfehlungen oder Entscheidungen erzeugt?", "Weiter mit Frage 2.", "Der AI Act gilt für dieses System nicht. Es bleibt im Inventar, wenn es KI-Funktionen hat.", "{fs:3 Nr. 1}"]
+  - ["Gibt es einen EU-Bezug: Sitz oder Niederlassung in der EU, Inverkehrbringen oder Inbetriebnahme in der EU oder Verwendung der Ausgabe in der EU?", "Weiter mit Frage 3.", "Nicht erfasst. Das Ergebnis wird festgehalten und jährlich geprüft, ob ein EU-Bezug entstanden ist.", "{fs:2(1)}"]
+  - ["Haben wir das System entwickelt oder entwickeln lassen und bieten es unter eigenem Namen oder eigener Marke an oder nehmen es so in Betrieb, auch nur für den eigenen Gebrauch?", "Wir sind **Anbieter**. Weiter mit Frage 7.", "Weiter mit Frage 4.", "{fs:3 Nr. 3}"]
+  - ["Verwenden wir ein System eines anderen Anbieters beruflich und unter eigener Verantwortung?", "Wir sind **Betreiber**. Weiter mit Frage 7.", "Weiter mit Frage 5.", "{fs:3 Nr. 4}"]
+  - ["Stellen wir als Unternehmen mit Sitz in der EU ein System eines Anbieters aus einem Drittland erstmals in der EU bereit?", "Wir sind **Einführer** (Pflichten nach {fs:23}). Weiter mit Frage 7.", "Weiter mit Frage 6.", "{fs:3 Nr. 6}"]
+  - ["Geben wir ein System in der Lieferkette weiter, ohne Anbieter oder Einführer zu sein?", "Wir sind **Händler** (Pflichten nach {fs:24}). Weiter mit Frage 7.", "Zu prüfen bleibt, ob wir Produkthersteller (Art. 2(1) Bst. e, {fs:25(3)}) oder Bevollmächtigter ({fs:22}) sind.", "{fs:3 Nr. 7}"]
+  - ["Ist das System ein Hochrisiko-System (E-02)?", "Weiter mit Frage 8.", "Kein Rollenwechsel nach Art. 25(1). Rolle festhalten (Frage 9).", "{fs:6}"]
+  - ["Setzen wir unseren Namen oder unsere Marke auf das System, verändern wir es wesentlich, sodass es hochriskant bleibt, oder ändern wir seinen Zweck so, dass es hochriskant wird?", "Wir gelten als **Anbieter** dieses Systems und übernehmen die Anbieterpflichten (E-08). Der ursprüngliche Anbieter muss mitwirken ({fs:25(2)}).", "Die Rolle aus Frage 3 bis 6 bleibt.", "{fs:25(1)}"]
+  - ["Rolle festhalten: Rolle, Begründung, Datum und Auslöser für die nächste Prüfung (Änderung von Zweck, Name, Modell oder Vertrieb).", "Ergebnis ins Inventar (D-10) übertragen, Pflichten in E-03 ableiten.", "", "{fs:3}"]
+  - ["Sind wir Schweizer Anbieter eines Hochrisiko-Systems ohne Niederlassung in der EU?", "Vor der Bereitstellung in der EU schriftlich einen **Bevollmächtigten** in der EU benennen (E-08).", "", "{fs:22(1)}"]

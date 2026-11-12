@@ -1,0 +1,87 @@
+# Texte zu src/ai-act/stand.yaml (Deutsch, Leitsprache). Keine Rechtsberatung.
+
+fassung:
+  titel: Konsolidierte Fassung vom 27.07.2026, inklusive Berichtigung vom 29.09.2026
+  text: |
+    Grundlage ist die konsolidierte Fassung der Verordnung (EU) 2024/1689 vom 27.07.2026 (Dokument 02024R1689, deutsche Version 001.002, englische Version 001.001). Sie enthält die Änderungen durch die Verordnung (EU) 2026/1744 (Digital-Omnibus-Verordnung zur KI), veröffentlicht im ABl. L 1744 vom 24.07.2026 und in Kraft seit 27.07.2026.
+
+    Die deutsche Version nennt auf dem Deckblatt zwei Berichtigungen: C1 (ABl. L 90802 vom 09.10.2025) zur Verordnung (EU) 2024/1689 und C2 (ABl. L 90810 vom 29.09.2026) zur Verordnung (EU) 2026/1744. Die englische Version nennt keine Berichtigung.
+
+    Konsolidierte Texte dienen nur der Information. Verbindlich sind allein die im Amtsblatt der Europäischen Union veröffentlichten Texte.
+  geprueft: Geprüft am {datum}
+  naechste: Der Stand wird mindestens halbjährlich und vor Entscheiden über Einstufungen geprüft
+
+fristen:
+  FRIST-01: Inkrafttreten der Verordnung (EU) 2024/1689 (zwanzigster Tag nach der Veröffentlichung am 12.07.2024).
+  FRIST-02: Kapitel I und II gelten, darunter KI-Kompetenz (Art. 4) und die Verbote nach Art. 5(1) Bst. a bis h. Art. 4 gilt seit 27.07.2026 in der geänderten Fassung.
+  FRIST-03: Kapitel III Abschnitt 4 (notifizierende Behörden, notifizierte Stellen), Kapitel V (KI-Modelle mit allgemeinem Verwendungszweck), Kapitel VII (Governance), Kapitel XII (Sanktionen) und Art. 78 gelten, ausser Art. 101.
+  FRIST-04: Die Kommission veröffentlicht Leitlinien zur Meldung schwerwiegender Vorfälle. Stand siehe Hinweis zu den Leitlinien.
+  FRIST-05: Die Kommission stellt Leitlinien und Beispiele zur Einstufung als Hochrisiko-KI-System bereit. Stand siehe Hinweis zu den Leitlinien.
+  FRIST-06: Inkrafttreten der Verordnung (EU) 2026/1744; die Artikel 102 bis 110 (Änderungen anderer Rechtsakte) gelten.
+  FRIST-07: Allgemeiner Geltungsbeginn, unter anderem Transparenzpflichten (Art. 50), Konformitätsbewertung, Erklärung, CE-Kennzeichnung und Registrierung (Art. 40 bis 49), Beobachtung nach dem Inverkehrbringen und Vorfallmeldung (Art. 72, 73) sowie Recht auf Erläuterung (Art. 86).
+  FRIST-08: Neue Verbote nach Art. 5(1) Bst. ba und bb sowie Art. 5(1a) und (1b) gelten (nicht einvernehmliche intime Darstellungen, Darstellungen sexuellen Missbrauchs von Kindern). Art. 113(3)(a) nennt dieses Datum zusätzlich zum 02.02.2025 für die Kapitel I und II.
+  FRIST-09: Anbieter von Systemen, die synthetische Inhalte erzeugen und vor dem 02.08.2026 in Verkehr gebracht wurden, erfüllen die Kennzeichnungspflicht nach Art. 50(2).
+  FRIST-10: Anbieter von KI-Modellen mit allgemeinem Verwendungszweck, die vor dem 02.08.2025 in Verkehr gebracht wurden, erfüllen ihre Pflichten.
+  FRIST-11: Die Kommission erlässt delegierte Rechtsakte, mit denen Anforderungen für Hochrisiko-KI-Systeme nach Anhang I Abschnitt A beschränkt werden können (Art. 2(13)).
+  FRIST-12: Die Kommission nimmt Leitlinien mit einem Muster für den Plan zur Beobachtung nach dem Inverkehrbringen an.
+  FRIST-13: Kapitel III Abschnitte 1 bis 3 gelten für Hochrisiko-KI-Systeme nach Art. 6(2) und Anhang III (Pflichten der Anbieter, Betreiber, Einführer, Händler und Bevollmächtigten).
+  FRIST-14: Notifizierte Stellen nach Anhang I Abschnitt A beantragen ihre Benennung nach dem AI Act.
+  FRIST-15: Kapitel III Abschnitte 1 bis 3 gelten für Hochrisiko-KI-Systeme nach Art. 6(1) und Anhang I.
+  FRIST-16: Delegierte Rechtsakte zu Anhang III der Maschinenverordnung (EU) 2023/1230 mit Anforderungen an KI-Sicherheitsbauteile gelten.
+  FRIST-17: Anbieter und Betreiber von Hochrisiko-KI-Systemen, die von Behörden verwendet werden sollen, erfüllen die Anforderungen auch für Altsysteme.
+  FRIST-18: KI-Systeme in IT-Grosssystemen nach Anhang X, die vor dem 02.08.2027 in Verkehr gebracht wurden, werden mit der Verordnung in Einklang gebracht.
+  FRIST-19: Jeder Mitgliedstaat hat mindestens ein KI-Reallabor auf nationaler Ebene in Betrieb, auch gemeinsam mit anderen Mitgliedstaaten (Art. 57(1)); vorrangiger Zugang für KMU mit Sitz oder Zweigniederlassung in der Union (Art. 62(1)).
+
+hinweise:
+  berichtigung-c2:
+    titel: Berichtigung C2 zu Art. 6(1b)
+    text: |
+      Die deutsche konsolidierte Fassung kennzeichnet Art. 6(1b) als berichtigt durch C2 vom 29.09.2026: KI-Systeme, deren Ausfall oder Fehlfunktion Gesundheit und Sicherheit gefährden würde, gelten ungeachtet von Art. 6(1a) als Sicherheitsbauteile. Die Berichtigung ist jünger als das Konsolidierungsdatum, in der deutschen Version 001.002 aber enthalten. Bei jeder Prüfung des Stands wird auf EUR-Lex kontrolliert, ob eine neuere Konsolidierung vorliegt.
+  formell-praktisch:
+    titel: Formeller und praktischer Geltungsbeginn
+    text: |
+      Art. 43, 47 bis 49, 72, 73 und 86 stehen nicht in Kapitel III Abschnitte 1 bis 3 und gelten deshalb formell ab 02.08.2026. Sie knüpfen aber an Hochrisiko-KI-Systeme und die Anforderungen aus Kapitel III Abschnitt 2 an, die erst ab 02.12.2027 (Anhang III) oder 02.08.2028 (Anhang I) gelten. Deshalb werden beide Daten genannt. Dies ist eine Auslegung, kein Gesetzestext; sie wird juristisch geprüft, wenn ein konkretes System betroffen ist.
+  altsysteme:
+    titel: Hochrisiko-Altsysteme
+    text: |
+      Für Hochrisiko-KI-Systeme, die vor dem Geltungsbeginn von Kapitel III in Verkehr gebracht oder in Betrieb genommen wurden, gilt die Verordnung nur, wenn ihre Konzeption danach erheblich verändert wird (Art. 111(2)). Die Verbote nach Art. 5 gelten unabhängig davon. Ausnahme: Systeme für Behörden müssen bis 02.08.2030 angepasst sein.
+  maschinen:
+    titel: KI in Maschinen
+    text: |
+      Die Maschinenverordnung (EU) 2023/1230 steht neu in Anhang I Abschnitt B Nr. 21. Für Hochrisiko-KI-Systeme im Zusammenhang mit solchen Produkten gelten aus dem AI Act nur Art. 6(1), 60a und 102 bis 112 (Art. 2(2)); Art. 57 bis 59 nur, soweit die Anforderungen ins Produktrecht übernommen sind.
+
+      KI-Systeme, die ausschliesslich für nicht sicherheitsrelevante Nutzerunterstützung, Leistungsoptimierung, Leistungseffizienz, Automatisierung, Benutzerfreundlichkeit oder Qualitätskontrolle verwendet werden, gelten nicht als Sicherheitsbauteile (Art. 6(1a)). Würde ihr Ausfall oder ihre Fehlfunktion Gesundheit und Sicherheit gefährden, gelten sie dennoch als Sicherheitsbauteile (Art. 6(1b)). Eine Drittprüfung nur wegen Funk- oder EMV-Risiken ohne Sicherheitsbezug erfüllt Art. 6(1) Bst. b nicht (Art. 6(1c)).
+
+      Die KI-Anforderungen für Maschinen kommen über delegierte Rechtsakte zu Anhang III der Maschinenverordnung, die ab 02.08.2028 gelten (Art. 8 der Maschinenverordnung, angefügt durch Art. 3 Nr. 1 der Verordnung (EU) 2026/1744). Bis eigene Normen vorliegen, begründen harmonisierte Normen nach dem AI Act eine Konformitätsvermutung auch für die Maschinenverordnung (deren Art. 20(10)). Übernimmt KI in einer Maschine eine Schutzfunktion, wird die Einstufung juristisch geprüft.
+  normen-en-18286:
+    titel: EN 18286:2026 und Art. 17 (offene Auslegung)
+    text: |
+      Durchführungsbeschluss (EU) 2026/2274 vom 12.10.2026 (ABl. L 2026/2274 vom 14.10.2026, CELEX 32026D2274) listet EN 18286:2026 ohne Einschränkung. Offene Auslegung: Art. 40(1) nennt für die Vermutung ausdrücklich nur die Anforderungen aus Kapitel III Abschnitt 2 und die Pflichten aus Kapitel V Abschnitte 2 und 3. Art. 17 steht in Kapitel III Abschnitt 3. Art. 40(2), letzter Unterabsatz, nennt für Normungsaufträge dagegen auch Abschnitt 3. Ob und wie weit die Listung trotzdem eine Vermutung für das Qualitätsmanagement nach Art. 17 trägt, entscheidet dieses Dokument nicht. Massgebend ist die Zuordnung in Anhang ZA der gekauften Norm; die Frage wird juristisch geprüft, bevor man sich darauf stützt.
+  iso-42001-keine-vermutung:
+    titel: ISO/IEC 42001 begründet keine Konformitätsvermutung
+    text: |
+      ISO/IEC 42001 ist keine harmonisierte Norm im Sinne von Art. 40(1). Ein zertifiziertes AIMS hilft beim Nachweis vieler Pflichten, ersetzt aber weder die Konformitätsbewertung noch die übrigen Pflichten des AI Act. Dies ist eine Auslegung auf Basis von Art. 40(1), kein Gesetzestext.
+  leitlinien-kommission:
+    titel: Leitlinien der Kommission (Stand 07.11.2026, zu prüfen)
+    text: |
+      Leitlinien sind nicht verbindlich, zeigen aber die Sicht der Kommission. Art. 50, Transparenz: an der Seite der Kommission geprüft am 07.11.2026; von der Kommission angenommen und veröffentlicht am 20.07.2026, Seite der Kommission aktualisiert 05.11.2026, Fassungen in 23 Sprachen. Art. 6(5), Einstufung als Hochrisiko: Entwurf vom 19.05.2026, Seite aktualisiert 23.07.2026; gesetzliche Frist verstrichen, Endfassung am 07.11.2026 nicht veröffentlicht. Art. 73, schwerwiegende Vorfälle: Entwurf mit Meldeformular vom 26.09.2025, Konsultation bis 07.11.2025, Seite aktualisiert 04.11.2025; gesetzliche Frist verstrichen, Endfassung am 07.11.2026 nicht veröffentlicht. Quelle: digital-strategy.ec.europa.eu, abgerufen am 07.11.2026. Der Stand wird dort geprüft, bevor sich eine Einstufung darauf stützt.
+  uebergang-art-111-4:
+    titel: Übergang nach Art. 111(4) bei selbst betriebenen Systemen (offene Auslegung)
+    text: |
+      Art. 111(4) gibt bis 02.12.2026 Zeit für die Kennzeichnung nach Art. 50(2), nennt aber nur Systeme, die vor dem 02.08.2026 in Verkehr gebracht wurden. Art. 3 Nr. 9 und 11 trennen das Inverkehrbringen von der Inbetriebnahme. Ob die Frist auch für ein System gilt, das eine Firma selbst betreibt und nur in Betrieb genommen hat, entscheidet dieses Dokument nicht; die Frage wird juristisch geprüft. Wer die Kennzeichnung vor dem 02.08.2026 umsetzt, muss sie nicht beantworten.
+  kmu-erleichterungen:
+    titel: Erleichterungen für KMU und kleine Midcap-Unternehmen
+    text: |
+      KMU sind nach der Empfehlung 2003/361/EG bestimmt, kleine Midcap-Unternehmen nach der Empfehlung (EU) 2025/1099 (Art. 3 Nr. 14a, 14b). Erleichterungen: Unterstützung bei der KI-Kompetenz (Art. 4(2)), vereinfachte technische Dokumentation mit Formular der Kommission (Art. 11(1)), QMS im Verhältnis zur Grösse (Art. 17(2)), vereinfachtes QMS für KMU ohne Partner- oder verbundene Unternehmen (Art. 63(1)), vorrangiger Zugang zu Reallaboren (nur mit Sitz oder Zweigniederlassung in der Union) und tiefere Gebühren für die Konformitätsbewertung (Art. 62(1), (2)), bei Bussen jeweils der niedrigere Betrag aus Prozentsatz oder Summe (Art. 99(6) für KMU, Art. 99(6a) für kleine Midcap-Unternehmen bei Art. 99(4) und (5)).
+  sanktionen:
+    titel: Bussgeldrahmen
+    text: |
+      Verbotene Praktiken bis 35 Mio. EUR oder 7 % des weltweiten Jahresumsatzes (Art. 99(3)); Pflichten nach Art. 16, 22, 23, 24, 25(2) und (4), 26 und 50 bis 15 Mio. EUR oder 3 % (Art. 99(4)); falsche Angaben gegenüber Behörden bis 7,5 Mio. EUR oder 1 % (Art. 99(5)). Art. 4 steht nicht im Katalog von Art. 99(4); Verstösse können nur nach nationalen Vorschriften gemäss Art. 99(1) geahndet werden.
+  schweiz-geltungsbereich:
+    titel: Wann der AI Act Schweizer Unternehmen erfasst
+    text: |
+      Der AI Act erfasst Anbieter, die KI-Systeme in der EU in Verkehr bringen oder in Betrieb nehmen, unabhängig von ihrem Sitz (Art. 2(1)(a)), sowie Anbieter und Betreiber in Drittländern, wenn die Ausgabe des KI-Systems in der EU verwendet wird (Art. 2(1)(c)). Ein Schweizer Betreiber ohne EU-Bezug ist nicht erfasst. Anbieter von Hochrisiko-KI-Systemen aus der Schweiz benennen einen Bevollmächtigten in der EU (Art. 22(1)). Gehen Ausgaben eines Systems an Kunden oder Gesellschaften in der EU, wird der Bezug juristisch geprüft.
+  schweiz-regulierung:
+    titel: Regulierung in der Schweiz (Stand 07.11.2026, zu prüfen)
+    text: |
+      In der Schweiz gibt es keine spezifische Gesetzgebung zu KI. Der Bundesrat hat am 12.02.2025 entschieden, die KI-Konvention des Europarats zu ratifizieren. Nötige Gesetzesanpassungen sollen möglichst sektorbezogen ausfallen; eine sektorübergreifende Regelung beschränkt sich auf zentrale, grundrechtsrelevante Bereiche wie den Datenschutz. Das EJPD erarbeitet eine Vernehmlassungsvorlage zu Transparenz, Datenschutz, Nichtdiskriminierung und Aufsicht. Das EJPD soll die Vernehmlassungsvorlage bis Ende 2026 dem Bundesrat vorlegen (Stellungnahme des Bundesrats vom 20.05.2026 zur Interpellation 26.3414 «Umsetzung der KI-Konvention des Europarates in der Schweiz», parlament.ch, abgerufen am 07.11.2026). Für KMU wichtig: Nach dieser Stellungnahme soll die Vorlage grundsätzlich auch Pflichten für Private vorsehen, wo Grundrechte zwischen Privaten wirken. Die Teilnehmenden einer Arbeitstagung mit rund 60 Fachleuten waren sich laut Stellungnahme weitgehend einig, dass bestimmte Vorschriften, insbesondere zur Transparenz, im öffentlichen und im privaten Sektor gelten sollten; ein Entscheid des Bundesrats ist das nicht. Das KMU-Portal des Bundes erwartet die Vorlage im Frühjahr 2027 (kmu.admin.ch, 23.09.2026). Eröffnet ist die Vernehmlassung am 07.11.2026 nicht.

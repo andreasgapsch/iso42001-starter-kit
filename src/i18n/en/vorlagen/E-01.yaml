@@ -1,0 +1,64 @@
+# E-01 Role determination under the EU AI Act
+blaetter:
+  rollen: Roles
+  hilfe: Decision aid
+titel_rollen: "Role per AI system under the EU AI Act"
+titel_hilfe: "Decision aid: what is our role?"
+hinweise_rollen:
+  - "One row per AI system from the inventory (D-10). Answer the check questions in columns D to K with yes, no or open and derive the role from them (column N). A system can have more than one role, for example provider and deployer."
+  - "The questions follow the decision aid in the second sheet. Definitions under {fs:3(3) to (8)}; territorial scope under {fs:2(1)}."
+  - "Column L: for high-risk AI systems, check whether you become the provider under {fs:25(1)}. For systems with no link to high risk, select ‘not relevant’, but check again whenever the intended purpose changes (point (c))."
+  - "Column M: for Swiss companies, the AI Act applies where they place a system on the market or put it into service in the EU (Art. 2(1)(a)) and where the output of a system is used in the EU (Art. 2(1)(c)). Without a link to the EU, the system is not covered; record this all the same."
+  - "Give the reasons for the role in two or three sentences and transfer the result to the inventory (D-10). Have changes of role, borderline cases and all systems with a link to high risk reviewed by a lawyer."
+hinweis_vorbelegt: "Role, reasoning and review status per system as in the AI inventory (D-10). Column M shows the territorial scope per system under Art. 2(1)."
+spalten:
+  - ID
+  - AI system
+  - Type
+  - "AI system within the meaning of the AI Act?"
+  - "Developed in-house or had developed, and offered or put into service under our own name or trademark?"
+  - "Placed on the market or put into service in the EU?"
+  - "Output used in the EU?"
+  - "Use only, in a professional context and under our own authority?"
+  - "Importer: first to make available in the EU a system from a provider outside the EU?"
+  - "Distributor: system passed on without being the provider or importer?"
+  - "Product manufacturer: system placed on the market together with our own product under our own name?"
+  - "Change of role under Art. 25(1)"
+  - "Swiss link (Art. 2(1))"
+  - Role(s) under the AI Act
+  - Reasoning
+  - Reviewed by a lawyer
+  - "Checked by, on"
+  - Next review
+listen:
+  wechsel:
+    - "no"
+    - "not relevant (not a high-risk AI system)"
+    - "yes, point (a): own name or trademark"
+    - "yes, point (b): substantial modification"
+    - "yes, point (c): new intended purpose"
+    - open
+  # Order: a, b, c, a+b, a+c, b+c, a+b+c, no link, open (E-01.ts bezug)
+  bezug:
+    - "Placing on the market or putting into service in the EU (Art. 2(1)(a))"
+    - "Deployer established or located in the EU (Art. 2(1)(b))"
+    - "Output used in the EU (Art. 2(1)(c))"
+    - "points (a) and (b)"
+    - "points (a) and (c)"
+    - "points (b) and (c)"
+    - "points (a), (b) and (c)"
+    - "no link to the EU identified"
+    - open
+hinweis_hilfe: "The questions are answered in order. The page numbers refer to the {rechtsstand}."
+spalten_hilfe: ["No.", Question, If yes, If no, Reference]
+hilfe:
+  - ["Is it an AI system within the meaning of the AI Act: a machine-based system that infers from the input it receives how to generate outputs such as predictions, content, recommendations or decisions?", "Go to question 2.", "The AI Act does not apply to this system. It stays in the inventory if it has AI features.", "{fs:3(1)}"]
+  - ["Is there a link to the EU: registered office or establishment in the EU, placing on the market or putting into service in the EU, or use of the output in the EU?", "Go to question 3.", "Not covered. The result is recorded and checked once a year for any new link to the EU.", "{fs:2(1)}"]
+  - ["Have we developed the system or had it developed, and do we offer it or put it into service under our own name or trademark, even if only for our own use?", "We are the **provider**. Go to question 7.", "Go to question 4.", "{fs:3(3)}"]
+  - ["Do we use another provider's system in a professional context and under our own authority?", "We are the **deployer**. Go to question 7.", "Go to question 5.", "{fs:3(4)}"]
+  - ["Are we a company established in the EU that is the first to make available in the EU a system from a provider in a third country?", "We are the **importer** (obligations under {fs:23}). Go to question 7.", "Go to question 6.", "{fs:3(6)}"]
+  - ["Do we pass on a system in the supply chain without being the provider or importer?", "We are the **distributor** (obligations under {fs:24}). Go to question 7.", "It remains to be determined whether we are a product manufacturer (Art. 2(1)(e), {fs:25(3)}) or an authorised representative ({fs:22}).", "{fs:3(7)}"]
+  - ["Is the system a high-risk AI system (E-02)?", "Go to question 8.", "No change of role under Art. 25(1). Record the role (question 9).", "{fs:6}"]
+  - ["Do we put our name or trademark on the system, make a substantial modification to it so that it remains high-risk, or change its intended purpose so that it becomes high-risk?", "We are considered the **provider** of this system and take on the provider obligations (E-08). The original provider must cooperate ({fs:25(2)}).", "Our role from questions 3 to 6 remains.", "{fs:25(1)}"]
+  - ["Record the role: role, reasoning, date and trigger for the next review (change of purpose, name, model or distribution).", "Transfer the result to the inventory (D-10) and derive the obligations in E-03.", "", "{fs:3}"]
+  - ["Are we a Swiss provider of a high-risk AI system with no establishment in the EU?", "Before making the system available in the EU, appoint an **authorised representative** in the EU by written mandate (E-08).", "", "{fs:22(1)}"]

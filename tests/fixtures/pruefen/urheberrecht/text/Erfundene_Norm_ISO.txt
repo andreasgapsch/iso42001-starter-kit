@@ -1,0 +1,9 @@
+ISO/IEC 99999:2099(de)
+Seite 3 von 40
+© ISO 2099 Alle Rechte vorbehalten
+Die erfundene Testorganisation muss ein sorgfältig gepflegtes Verzeichnis
+aller fiktiven Prüfobjekte führen und jährlich gegenüber dem Gremium berichten.
+17
+Lizenziert für Testkunde, Kopieren verboten
+Jede Vorgabe in diesem Testdokument wurde ausschliesslich für automatische Prü-
+fungen geschrieben und hat keinerlei Bedeutung ausserhalb der Testumgebung.

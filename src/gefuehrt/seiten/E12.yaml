@@ -1,0 +1,192 @@
+# Etappe E12 Internes Audit, Managementbewertung, Korrekturen. Format: src/gefuehrt/FORMAT.md
+seiten:
+  - { id: E12-einfuehrung, typ: info, norm: "9.2, 9.3, 10.1, 10.2", vorlage: D-20, leitfaden: 9 }
+  - id: E12-programm
+    typ: formular
+    norm: "9.2"
+    vorlage: D-20
+    leitfaden: 9
+    beispiel: meta.gefuehrt.antworten.auditprogramm
+    felder:
+      - { pfad: meta.gefuehrt.antworten.auditprogramm.rhythmus, typ: auswahl, optionen: rhythmus, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.auditprogramm.methoden, typ: mehrfach, optionen: auditMethode }
+      - { pfad: meta.gefuehrt.antworten.auditprogramm.kombiniert, typ: janein, wenn: { mitIsms: true } }
+  - id: E12-audit
+    typ: liste
+    mindestensEiner: true
+    liste: audits
+    norm: "9.2"
+    vorlage: D-20
+    leitfaden: 9
+    filter: { art: [intern] }
+    vorgabe: { art: intern }
+    beispiel: audits[0]
+    felder:
+      - { pfad: geplant, typ: datum, pflicht: true }
+      - { pfad: ziel, typ: textarea }
+      - { pfad: umfang, typ: textarea, pflicht: true }
+      - { pfad: umfangControls, typ: verweis, quelle: controls }
+      - { pfad: umfangProzesse, typ: verweis, quelle: prozesse }
+      - { pfad: kriterien, typ: text, pflicht: true }
+      - { pfad: ort, typ: text }
+      - { pfad: auditor, typ: text, pflicht: true }
+      - { pfad: unabhaengigkeit, typ: textarea, pflicht: true }
+      - { pfad: methode, typ: textarea }
+      - { pfad: auditierte, typ: textarea }
+      - { pfad: agenda, typ: textarea }
+      - { pfad: berichtAn, typ: text }
+      - { pfad: kombiniertMitIsms, typ: janein, wenn: { mitIsms: true } }
+      - { pfad: durchgefuehrt, typ: datum }
+      - { pfad: durchgefuehrtBis, typ: datum }
+      - { pfad: checkliste, typ: pruefliste }
+      - pfad: stichproben
+        typ: tabelle
+        spalten:
+          - { pfad: nr, typ: zahl, pflicht: true }
+          - { pfad: nachweis, typ: textarea }
+          - { pfad: ergebnis, typ: auswahl, optionen: checklistenErgebnis }
+      - { pfad: ergebnis, typ: textarea }
+      - { pfad: bericht, typ: text }
+  - id: E12-feststellungen
+    typ: liste
+    liste: feststellungen
+    norm: "10.2"
+    vorlage: D-22
+    leitfaden: 9
+    vorgabe: { status: offen }
+    beispiel: feststellungen[0]
+    felder:
+      - { pfad: quelle, typ: auswahl, optionen: feststellungQuelle, pflicht: true }
+      - { pfad: datum, typ: datum }
+      - { pfad: erfasstAm, typ: datum }
+      - { pfad: audit, typ: verweis, quelle: audits, wenn: { eintrag: { quelle: [audit] } } }
+      - { pfad: einstufung, typ: auswahl, optionen: einstufung, pflicht: true }
+      - { pfad: schwere, typ: auswahl, optionen: schwere, wenn: { eintrag: { quelle: [vorfall, beinahe-vorfall] } } }
+      - { pfad: entdecktAm, typ: zeitpunkt, wenn: { eintrag: { quelle: [vorfall, beinahe-vorfall] } } }
+      - { pfad: eingedaemmtAm, typ: zeitpunkt, wenn: { eintrag: { quelle: [vorfall, beinahe-vorfall] } } }
+      - { pfad: beschreibung, typ: textarea, pflicht: true }
+      - { pfad: nachweis, typ: textarea }
+      - { pfad: kiSystem, typ: verweis, quelle: kiSysteme }
+      - { pfad: bereich, typ: text }
+      - { pfad: normbezug, typ: text }
+      - { pfad: korrektur, typ: textarea }
+  - id: E12-korrektur
+    typ: liste
+    liste: feststellungen
+    norm: "10.2"
+    vorlage: D-22
+    leitfaden: 9
+    anlegen: false
+    filter: { einstufung: [nk-schwer, nk-leicht] }
+    beispiel: feststellungen[0]
+    felder:
+      - { pfad: ursache, typ: textarea, pflicht: true }
+      - { pfad: ursacheMethode, typ: text }
+      - { pfad: ursacheKategorie, typ: text, vorschlaege: ursacheKi }
+      - { pfad: aehnlicheFaelle, typ: textarea }
+      - { pfad: meldepflicht, typ: auswahl, optionen: meldepflicht }
+      - { pfad: massnahmen, typ: verweis, quelle: massnahmen, pflicht: true }
+      - { pfad: risikoAngepasst, typ: janein }
+      - { pfad: wirksamkeitGeplant, typ: datum }
+      - { pfad: wirksamkeit.am, typ: datum }
+      - { pfad: wirksamkeit.ergebnis, typ: textarea }
+      - { pfad: status, typ: auswahl, optionen: feststellungStatus }
+  - id: E12-meldungen
+    typ: formular
+    norm: "A.3.3, A.8.3, 10.2"
+    vorlage: D-22
+    leitfaden: 9
+    beispiel: meldungen
+    felder:
+      - pfad: meldungen
+        typ: tabelle
+        spalten:
+          - { pfad: id, typ: text, pflicht: true }
+          - { pfad: datum, typ: datum, pflicht: true }
+          - { pfad: art, typ: auswahl, optionen: meldungArt, pflicht: true }
+          - { pfad: herkunft, typ: auswahl, optionen: meldungHerkunft, pflicht: true }
+          - { pfad: kanal, typ: text }
+          - { pfad: kiSystem, typ: verweis, quelle: kiSysteme }
+          - { pfad: beschreibung, typ: textarea, pflicht: true }
+          - { pfad: bearbeitung, typ: person }
+          - { pfad: bestaetigtAm, typ: datum }
+          - { pfad: erledigtAm, typ: datum }
+          - { pfad: ergebnis, typ: textarea }
+          - { pfad: status, typ: auswahl, optionen: meldungStatus, pflicht: true }
+  - { id: E12-rmf-profil, typ: nist-profil, norm: "9.3", vorlage: N-01, leitfaden: 9, nist: [kern], wenn: { modulNistRmf: true } }
+  - id: E12-mb
+    typ: liste
+    mindestensEiner: true
+    liste: managementbewertungen
+    norm: "9.3"
+    vorlage: D-21
+    leitfaden: 9
+    beispiel: managementbewertungen[0]
+    felder:
+      - { pfad: datum, typ: datum, pflicht: true }
+      - { pfad: ort, typ: text }
+      - { pfad: leitung, typ: person }
+      - { pfad: teilnehmende, typ: text, pflicht: true }
+      - { pfad: zeitraum.von, typ: datum }
+      - { pfad: zeitraum.bis, typ: datum }
+      - { pfad: kombiniertMitIsms, typ: janein, wenn: { mitIsms: true } }
+  - id: E12-mb-eingaben
+    typ: liste
+    liste: managementbewertungen
+    norm: "9.3"
+    vorlage: D-21
+    leitfaden: 9
+    anlegen: false
+    beispiel: managementbewertungen[0]
+    felder:
+      - { pfad: eingaben.statusMassnahmen, typ: textarea, pflicht: true }
+      - { pfad: eingaben.aenderungenThemen, typ: textarea, pflicht: true }
+      - { pfad: eingaben.aenderungenParteien, typ: textarea, pflicht: true }
+      - { pfad: eingaben.leistung, typ: textarea, pflicht: true }
+      - { pfad: eingaben.messung, typ: textarea }
+      - { pfad: eingaben.audits, typ: textarea }
+      - { pfad: eingaben.verbesserungen, typ: textarea, pflicht: true }
+      - { pfad: eingaben.weitere, typ: textarea }
+  - id: E12-mb-ergebnisse
+    typ: liste
+    liste: managementbewertungen
+    norm: "9.3, A.2.4"
+    vorlage: D-21
+    leitfaden: 9
+    anlegen: false
+    beispiel: managementbewertungen[0]
+    felder:
+      - { pfad: ergebnisse.inventar, typ: textarea }
+      - { pfad: ergebnisse.risiken, typ: textarea }
+      - { pfad: ergebnisse.meldungen, typ: textarea }
+      - { pfad: ergebnisse.lieferanten, typ: textarea }
+      - { pfad: ergebnisse.ziele, typ: textarea }
+      - { pfad: ergebnisse.ressourcen, typ: textarea }
+      - { pfad: ergebnisse.aiact, typ: textarea, wenn: { modul: true } }
+      - { pfad: ergebnisse.leitlinie, typ: textarea, pflicht: true }
+  - id: E12-mb-entscheide
+    typ: liste
+    liste: managementbewertungen
+    norm: "9.3, 10.1"
+    vorlage: D-21
+    leitfaden: 9
+    anlegen: false
+    beispiel: managementbewertungen[0]
+    felder:
+      - { pfad: gesamtbeurteilung.geeignet.urteil, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: gesamtbeurteilung.geeignet.begruendung, typ: textarea }
+      - { pfad: gesamtbeurteilung.angemessen.urteil, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: gesamtbeurteilung.angemessen.begruendung, typ: textarea }
+      - { pfad: gesamtbeurteilung.wirksam.urteil, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: gesamtbeurteilung.wirksam.begruendung, typ: textarea }
+      - { pfad: entscheide, typ: textarea, pflicht: true }
+      - { pfad: entscheideListe, typ: tabelle, spalten: [{ pfad: art, typ: auswahl, optionen: mbEntscheid }, { pfad: text, typ: textarea }, { pfad: verantwortlich, typ: person }, { pfad: termin, typ: datum }, { pfad: massnahme, typ: verweis, quelle: massnahmen }] }
+      - { pfad: massnahmen, typ: verweis, quelle: massnahmen }
+  - id: E12-verbesserung
+    typ: formular
+    norm: "10.1"
+    vorlage: D-22
+    leitfaden: 9
+    beispiel: meta.gefuehrt.antworten.verbesserung
+    felder:
+      - { pfad: meta.gefuehrt.antworten.verbesserung.quellen, typ: mehrfach, optionen: verbesserungQuellen, pflicht: true }

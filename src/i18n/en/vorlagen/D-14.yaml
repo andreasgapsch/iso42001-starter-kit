@@ -1,0 +1,117 @@
+# D-14 Information, transparency and reporting
+hinweis_umfang: "Keep the document short and adapt deadlines and channels. With an ISMS, use the supplementary sheet D-14-EB for your existing security incident procedure instead."
+einleitung: "This document sets out how [[Company name]] informs users and customers about AI, receives external reports and communicates during AI incidents."
+einleitung_firma: "This document sets out how {firma} informs users and customers about AI, receives external reports and communicates during AI incidents."
+hinweis_eb: "Add sections 1 to 5 to your security incident procedure (ISO/IEC 27001, A.5.24 to A.5.28) and adapt the numbering. Section 6 does not belong in the incident procedure. Keep it as a separate short sheet so that A.8.2 and A.10.4 remain covered."
+einleitung_eb: "This supplementary sheet extends our existing security incident procedure to cover AI incidents, a reporting channel for external parties and information obligations. Unless stated otherwise, the existing procedure applies."
+einleitung_eb_firma: "This supplementary sheet extends our security incident procedure ({dokument}) to cover AI incidents, a reporting channel for external parties and information obligations. Unless stated otherwise, that procedure applies."
+modul_praefix_leer: "Only with the EU AI Act module:"
+modul_praefix: "EU AI Act:"
+abschnitte:
+  information: Information for users
+  meldekanal: Reporting channel for external parties
+  vorfall: AI incidents
+  kommunikation: Communication during AI incidents
+  pflichten: Information obligations towards third parties
+  kunden: Informing customers about limits
+  lehren: Lessons learned and review
+  schwere: Severity levels for AI incidents
+  einspruch: Objection to AI outputs
+  ausserhalb: Information for users and customers
+info_text: "Anyone who uses an AI system or is affected by its outputs receives the information they need: that AI is involved, what it is for, where its limits are, who checks outputs and whom to contact. We provide this information if at least one of the following applies:"
+info_kriterien:
+  - "people write or talk directly to an AI system"
+  - "outputs go to customers or the public without a check"
+  - "the system prepares decisions about individuals"
+  - "staff work with the system regularly"
+systeme_fehlen: "No AI system has been recorded in the AI inventory yet. Complete D-10 first."
+info_kopf: [AI system, Audience, Information, Where]
+info_vorschlag: "Notice that AI is used, purpose, limits, checks, contact"
+info_ort_im_text: "as described"
+info_untersagt: "use prohibited; note in the responsible AI use policy (D-15)"
+modul_info: "Transparency obligations apply to chatbots, generated or manipulated content, emotion recognition and deep fakes (Art. 50). A checklist and template wording are in E-07."
+modul_info_systeme: "This concerns: {systeme}."
+meldekanal_text: "Customers, affected persons and partners can report adverse impacts of our AI systems to us, including suspected vulnerabilities and bias. We treat reports confidentially. Nobody suffers any disadvantage for reporting in good faith."
+hinweis_meldekanal: "An existing channel is sufficient, for example the general contact address or the whistleblowing channel, provided it explicitly mentions AI reports. The channel must be publicly easy to find, for example on the website."
+meldekanal_felder:
+  kanal: "Channel (address, form)"
+  veroeffentlicht: Published on
+  bearbeitung: Handled by
+  fristen: Deadlines
+  ablage: Storage of reports
+  verfahren: Further handling
+meldekanal_ort: "[[Website, contact page]]"
+meldekanal_fristen: "Acknowledgement within [[5]] working days, reply within [[30]] days"
+meldekanal_fristen_firma: "Acknowledgement within {bestaetigung} working days, reply within {antwort} days"
+vorfall_bestehend: "AI incidents are handled through our existing incident procedure ({verfahren}). This section adds only what is different for AI."
+vorfall_isms: "If we have a security incident procedure, AI incidents are handled through it. This section adds only what is different for AI."
+vorfall_definition: "An AI incident is an event in which an AI system harms or could harm people, data, customers or the organization. Examples:"
+vorfall_beispiele:
+  - "confidential data or personal data reaches unauthorized persons through an AI system"
+  - "wrong or invented outputs reach customers or feed into decisions"
+  - "a system disadvantages individuals or groups"
+  - "a system is manipulated, for example through hidden instructions in documents or web pages"
+  - "a system is used outside its purpose or fails during an important task"
+kommunikation_text: "In an AI incident, we inform in this order. Coordination and, together with top management, the decision on external communication lie with the person responsible for incidents (D-04): {verantwortlich}."
+hinweis_kommunikation: "Adapt deadlines and channels consistently in this table, in the severity levels and in procedure PR-19 (D-27). Rehearse the procedure once a year using an example; the auditor will ask about it."
+kommunikation_kopf: [Who, informs whom, Deadline, Channel]
+kommunikation_tabelle:
+  - ["Whoever notices the incident", "Reporting point (D-04)", "{{fakt:vorfall.meldung}}", "[[Phone, ticket]]"]
+  - ["Reporting point", "system owner", "[[{{fakt:vorfall.erfassung}}]]", "[[Ticket]]"]
+  - ["Reporting point", "AIMS lead, from level 2", "within [[{{fakt:vorfall.stufe2}}]]", "[[Ticket]]"]
+  - ["AIMS lead", "top management, from level 3", "within [[{{fakt:vorfall.stufe3}}]], at level 4 {{fakt:vorfall.stufe4}}", "directly"]
+  - ["System owner", "supplier of the AI system", "{{fakt:vorfall.lieferant}}", "support channel as per contract"]
+  - ["System owner", "affected internal users", "within [[{{fakt:vorfall.nutzende}}]]", "[[Email, intranet]]"]
+  - ["Top management", "affected customers and individuals", "as soon as possible", "[[in writing]]"]
+  - ["Data protection officer (D-04)", "authorities as listed in section 4", "statutory deadline", "authority's reporting form"]
+frist_kunden_offen: "as soon as possible"
+frist_kunden: "as soon as possible, within {stunden} hours at the latest"
+kommunikation_tabelle_eb:
+  - ["Reporting point of the incident procedure", "system owner", "[[{{fakt:vorfall.erfassung}}]]", "[[Ticket]]"]
+  - ["Reporting point of the incident procedure", "AIMS lead, from level 2", "within [[{{fakt:vorfall.stufe2}}]]", "[[Ticket]]"]
+  - ["System owner", "supplier of the AI system", "{{fakt:vorfall.lieferant}}", "support channel as per contract"]
+  - ["System owner", "affected internal users", "within [[{{fakt:vorfall.nutzende}}]]", "[[Email, intranet]]"]
+  - ["Top management", "affected customers and individuals", "as soon as possible", "[[in writing]]"]
+pflichten_text: "These information and reporting obligations apply to us. The list is updated when new contracts or laws come into effect."
+hinweis_pflichten: "Delete what does not apply and add obligations from customer contracts. If in doubt, have the list checked by a legal adviser."
+pflichten_kopf: [Obligation, Source, Recipient, Owner]
+pflichten_tabelle:
+  - ["Report a data security breach likely to result in a high risk, as soon as possible", "DSG (Swiss Federal Act on Data Protection) Art. 24", "FDPIC (Federal Data Protection and Information Commissioner), affected persons where required", "[[Name, role]]"]
+  - ["Report a personal data breach within 72 hours", "GDPR Art. 33 and 34, if applicable", "Supervisory authority, affected persons where required", "[[Name, role]]"]
+  - ["Report a cyberattack within 24 hours (critical infrastructure operators only)", "ISG (Swiss Information Security Act) Art. 74a et seq.", "BACS (Swiss Federal Office for Cybersecurity)", "[[Name, role]]"]
+  - ["Inform about automated individual decisions", "DSG Art. 21, GDPR Art. 22", "affected persons", "[[Name, role]]"]
+  - ["Inform about AI use, subcontractors and incidents", "[[Customer contracts, supplier audits]]", "Customers", "[[Name, role]]"]
+  - ["Provide information on request", "Law, certification", "Authorities, certification body", "[[Name, role]]"]
+pflichten_eb: "The existing procedure covers reporting obligations for data security breaches and cyberattacks. For AI, the following are added:"
+pflichten_tabelle_eb:
+  - ["Inform about automated individual decisions", "DSG Art. 21, GDPR Art. 22", "affected persons", "[[Name, role]]"]
+  - ["Inform about AI use, subcontractors and incidents", "[[Customer contracts, supplier audits]]", "Customers", "[[Name, role]]"]
+  - ["Provide information on request", "Law, certification", "Authorities, certification body", "[[Name, role]]"]
+pflichten_modul_tabelle:
+  - ["Report a serious incident involving a high-risk AI system", "AI Act Art. 26(5), Art. 73", "Provider, market surveillance authority", "[[Name, role]]"]
+  - ["Inform workers before a high-risk AI system is put into use at the workplace", "AI Act Art. 26(7)", "Workers, workers' representatives", "[[Name, role]]"]
+  - ["Inform affected persons about the use of high-risk AI systems in decisions and explain decisions on request", "AI Act Art. 26(11), Art. 86", "affected persons", "[[Name, role]]"]
+modul_pflichten: "Which of these obligations apply to our roles and risk classes is set out in E-03 and E-05."
+kunden_text: "If we use AI in services for customers or supply AI to customers, we inform them about:"
+kunden_inhalt:
+  - "where and for what AI is used in the service"
+  - "what the system can and cannot do, including known sources of error"
+  - "which outputs a person checks"
+  - "how customer data is used, in particular whether it is used for training"
+  - "where to send questions and reports (reporting channel)"
+kunden_ort: "The information is given in [[quotation, contract or service description]]. We record customer requirements for our use of AI in D-01 and take them into account when introducing and changing systems (D-12)."
+lehren_text: "After every AI incident and near miss, we record the cause, impact and actions (D-22) and check whether risks (D-07), the impact assessment (D-09) and the information for users need to be updated. Accepted residual risks that affect users or customers are included in the information for them. We review these rules once a year and after significant incidents."
+ausserhalb_text: "The following rules do not only concern incidents. They are part of this supplementary sheet so that all topics from A.8 and A.10.4 are covered."
+ausserhalb_text_firma: "The following rules apply to the operation of our AI systems, not only to incidents (A.8.2, A.10.4)."
+# Severity levels for AI incidents and objection
+schwere_text: "We grade every AI incident and near miss by its most serious consequence; in case of doubt, the higher level applies. The level determines escalation and deadline and is recorded in the register D-22. We reconcile reports and register {{fakt:vorfall.abgleich}} so that no incident is missing."
+schwere_text_eb: "We grade every AI incident and near miss by its most serious consequence; in case of doubt, the higher level applies. The levels supplement the grading of the existing incident procedure and are recorded in the register D-22. We reconcile reports and register {{fakt:vorfall.abgleich}} so that no incident is missing."
+schwere_kopf: [Level, Examples, Escalation and deadline]
+schwere_tabelle:
+  - ["1 minor", "a single wrong output, detected before use; no harm", "system owner, entry in the register [[{{fakt:vorfall.erfassung}}]]"]
+  - ["2 moderate", "a wrong output reaches an internal decision or a customer and can be corrected quickly; near miss with possible significant harm", "AIMS lead within [[{{fakt:vorfall.stufe2}}]]"]
+  - ["3 significant", "confidential or personal data reaches unauthorized persons, people are disadvantaged, several customers are affected", "top management within [[{{fakt:vorfall.stufe3}}]], check reporting obligations under section 4"]
+  - ["4 severe", "danger to health or safety, many people affected, obligation to report to authorities", "top management {{fakt:vorfall.stufe4}}, suspend the system, inform as set out in sections 3 and 4"]
+einspruch_text: "Anyone affected by an output of one of our AI systems can ask, through the reporting channel, for a human to review the output. This applies to all AI systems, not only to high-risk AI. The system owner reviews the request within [[10 working days]], explains the output and corrects it where necessary. We record objections in the register D-22 and analyse them when the system is reviewed."
+anlage_titel: "Severity levels and objection"
+anlage_verweis: "Severity levels for AI incidents and the objection to AI outputs are set out in Appendix {nr}."

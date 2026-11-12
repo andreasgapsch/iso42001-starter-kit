@@ -1,0 +1,51 @@
+# E-07 Transparenzpflichten
+hinweis_umfang: "Diese Vorlage hilft, die Transparenzpflichten nach Art. 50 je KI-System zu prüfen und umzusetzen. Übernehmen Sie die passenden Textbausteine in Ihre Oberflächen und Unterlagen und legen Sie die Regeln in D-14 und D-15 ab."
+juristisch: "Ob ein Hinweis «offensichtlich» entbehrlich ist oder ein Werk künstlerisch ist, bleibt eine Auslegungsfrage. Lassen Sie Grenzfälle juristisch prüfen. Die Textbausteine sind Vorschläge, keine Rechtsberatung. Zu Art. 50 gibt es Leitlinien der Kommission (angenommen am 20.07.2026) und einen freiwilligen Praxisleitfaden (Code of Practice) zur Transparenz KI-erzeugter Inhalte nach Art. 50(7), endgültig seit 10.06.2026; die Kommission (Stellungnahme vom 08.07.2026) und das KI-Gremium (09.07.2026) halten ihn für angemessen für Art. 50(2), (4) und (5) (digital-strategy.ec.europa.eu, abgerufen am 07.11.2026); den Stand an der Seite der Kommission prüfen, auch bei Fragen an Lieferanten."
+juristisch_firma: "Ob ein Hinweis «offensichtlich» entbehrlich ist oder ein Werk künstlerisch ist, bleibt eine Auslegungsfrage. Grenzfälle lassen wir juristisch prüfen. Dieses Dokument ist keine Rechtsberatung. Zu Art. 50 gibt es Leitlinien der Kommission (angenommen am 20.07.2026) und einen freiwilligen Praxisleitfaden (Code of Practice) zur Transparenz KI-erzeugter Inhalte nach Art. 50(7), endgültig seit 10.06.2026; die Kommission (Stellungnahme vom 08.07.2026) und das KI-Gremium (09.07.2026) halten ihn für angemessen für Art. 50(2), (4) und (5) (digital-strategy.ec.europa.eu, abgerufen am 07.11.2026); den Stand an der Seite der Kommission prüfen, auch bei Fragen an Lieferanten."
+abschnitte:
+  wozu: Wozu
+  checkliste: Checkliste Art. 50
+  uebergang: Übergang für bestehende Systeme
+  systeme: Unsere Systeme mit Transparenzpflichten
+  bausteine: Textbausteine
+wozu_text: "Personen sollen erkennen, wann sie mit einer KI zu tun haben und wann Inhalte künstlich erzeugt sind. Die Pflichten nach {fs:50} gelten seit {frist:FRIST-07} für alle Risikoklassen, zusätzlich zu allen anderen Pflichten. Verstösse können nach Art. 99(4) gebüsst werden."
+hinweis_checkliste: "Prüfen Sie jede Zeile für jedes KI-System aus dem Inventar (D-10). Die Fälle halten Sie in E-02 (Spalten P bis S) fest."
+checkliste_kopf: [Absatz, Wer, Wann zutreffend, Was tun, Erledigt]
+checkliste:
+  - ["{fs:50(1)}", "Anbieter", "Das System interagiert direkt mit Personen, z. B. Chatbot, Sprachassistent, automatische Antworten.", "So gestalten, dass Personen erfahren, dass sie mit einer KI interagieren, ausser es ist aus den Umständen offensichtlich. Baustein «Chatbot»."]
+  - ["{fs:50(2)}", "Anbieter", "Das System erzeugt synthetische Bilder, Videos, Töne oder Texte.", "Ausgaben maschinenlesbar als künstlich erzeugt kennzeichnen, etwa mit Metadaten oder Wasserzeichen, soweit technisch möglich. Nicht nötig bei blosser Unterstützung der Standardbearbeitung. Baustein «Erzeugte Inhalte»."]
+  - ["{fs:50(3)}", "Betreiber", "Wir setzen Emotionserkennung oder biometrische Kategorisierung ein (am Arbeitsplatz verboten, Art. 5(1) Bst. f).", "Betroffene über den Betrieb informieren, Personendaten nach Datenschutzrecht verarbeiten. Baustein «Emotionserkennung»."]
+  - ["{fs:50(4)}", "Betreiber", "Wir erzeugen oder verändern Bild-, Ton- oder Videoinhalte, die echt wirken (Deepfake), etwa in Marketing oder Schulung.", "Offenlegen, dass der Inhalt künstlich erzeugt oder verändert ist; bei offensichtlich künstlerischen oder satirischen Werken in zurückhaltender Form. Baustein «Deepfake»."]
+  - ["{fs:50(4) UAbs. 2}", "Betreiber", "Wir veröffentlichen KI-erzeugte Texte, um die Öffentlichkeit über Themen von öffentlichem Interesse zu informieren.", "Offenlegen, ausser der Text wurde redaktionell geprüft und eine Person trägt die redaktionelle Verantwortung. Baustein «KI-Text»."]
+  - ["{fs:50(5)}", "Anbieter und Betreiber", "Immer, wenn eine der Pflichten oben gilt.", "Information klar und eindeutig spätestens bei der ersten Interaktion oder Aussetzung geben, barrierefrei (z. B. als Text, nicht nur als Symbol)."]
+ausnahmen: "Ausnahmen für gesetzlich zugelassene Zwecke der Strafverfolgung sind für Unternehmen kaum relevant. Andere Transparenzpflichten, etwa aus dem Datenschutz oder dem Lauterkeitsrecht, bleiben bestehen (Art. 50(6))."
+uebergang_text: "Anbieter von Systemen, die synthetische Inhalte erzeugen und vor dem 02.08.2026 in Verkehr gebracht wurden, müssen die Kennzeichnung nach Art. 50(2) bis {frist:FRIST-09} umsetzen ({fs:111(4)}). Offen ist, ob das auch für selbst betriebene Systeme gilt, die nur in Betrieb genommen wurden (E-09); das prüfen wir juristisch. Die Kommission hat am 20.07.2026 Leitlinien zu Art. 50 angenommen (E-09). Bei zugekauften Modellen klären wir mit dem Lieferanten, ob er die Kennzeichnung liefert (D-16)."
+systeme_kopf: [ID, KI-System, Rolle, Transparenzfälle]
+faelle: ["Art. 50(1) Interaktion", "Art. 50(2) synthetische Inhalte", "Art. 50(3) Emotionserkennung oder biometrische Kategorisierung", "Art. 50(4) Deepfake oder Text"]
+bausteine_text: "Ersetzen Sie die gelb markierten Stellen. Kurze, klare Sätze in der Sprache der Nutzenden; dieselben Bausteine in allen Kanälen verwenden."
+nicht_zutreffend: "nicht zutreffend"
+bausteine_nicht_noetig: "Nicht nötig, weil keines unserer KI-Systeme diesen Fall betrifft: {bausteine}. Bei einem neuen Fall ergänzen wir den Baustein."
+platzhalter_verfahren: "Verfahren der maschinenlesbaren Kennzeichnung"
+baustein_titel: Textbaustein
+bausteine:
+  chatbot:
+    titel: "Hinweis auf einen Chatbot (Art. 50(1))"
+    wann: "Gut sichtbar beim Start des Gesprächs, nicht erst in den Nutzungsbedingungen."
+    text: "«Sie schreiben mit [[Name des Assistenten]], einem KI-Assistenten von [[Firmenname]]. Die Antworten werden automatisch erzeugt und können Fehler enthalten. Für verbindliche Auskünfte erreichen Sie uns unter [[Kontakt]].»"
+  inhalte:
+    titel: "Kennzeichnung erzeugter Inhalte (Art. 50(2))"
+    wann: "Zusätzlich zur maschinenlesbaren Kennzeichnung (Metadaten, Wasserzeichen) ein sichtbarer Hinweis bei Bildern, Videos und Texten, die unsere KI-Systeme erzeugen."
+    text: "«Dieser Inhalt wurde mit [[Produktname]] durch künstliche Intelligenz erzeugt.» Technische Kennzeichnung: [[Verfahren, z. B. Metadaten oder Wasserzeichen]]."
+    text_firma: "Die Ausgaben des Systems «{system}» werden als künstlich erzeugt gekennzeichnet. Technische Kennzeichnung: {verfahren}. Den sichtbaren Hinweis für die Nutzenden legt die Information je System fest (D-14)."
+  deepfake:
+    titel: "Offenlegung eines Deepfakes (Art. 50(4))"
+    wann: "Direkt beim Inhalt, zu Beginn eines Videos oder einer Tonaufnahme und in der Beschreibung."
+    text: "«Dieses [[Video/Bild/Tondokument]] wurde mit künstlicher Intelligenz erzeugt oder verändert. Die gezeigten Personen oder Ereignisse sind [[nicht echt/nachgestellt]].»"
+  text:
+    titel: "KI-Text zu Themen von öffentlichem Interesse (Art. 50(4) UAbs. 2)"
+    wann: "Nur nötig, wenn der Text nicht redaktionell geprüft wurde. Mit Prüfung genügt ein Freigabevermerk im eigenen Ablauf."
+    text: "«Dieser Text wurde mit Unterstützung künstlicher Intelligenz erstellt.» Oder intern: «Redaktionell geprüft durch [[Name, Funktion]] am [[Datum]].»"
+  emotion:
+    titel: "Information bei Emotionserkennung oder biometrischer Kategorisierung (Art. 50(3))"
+    wann: "Vor dem Einsatz, gut sichtbar am Ort der Erfassung und in der Datenschutzerklärung. Am Arbeitsplatz und in der Bildung ist Emotionserkennung verboten, ausser aus medizinischen oder Sicherheitsgründen."
+    text: "«In diesem Bereich setzt [[Firmenname]] ein KI-System ein, das [[Emotionen erkennt/Personen nach Merkmalen einordnet]], um [[Zweck]]. Weitere Informationen und Ihre Rechte finden Sie unter [[Link zur Datenschutzerklärung]].»"

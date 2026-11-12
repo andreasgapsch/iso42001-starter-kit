@@ -1,0 +1,313 @@
+# Texte zu src/ai-act/pflichten.yaml (Deutsch, Leitsprache)
+# kurz: Pflicht in eigenen Worten; nachweis: typischer Nachweis. Keine Rechtsberatung.
+
+P-ALLE-01:
+  kurz: Massnahmen ergreifen, damit Mitarbeitende und weitere Personen, die in unserem Auftrag KI-Systeme betreiben oder nutzen, die nötige KI-Kompetenz aufbauen. Ein bestimmtes Niveau muss nicht garantiert werden.
+  nachweis: Schulungsplan mit Zielgruppen, Teilnahmelisten, Unterlagen der Einführung neuer KI-Werkzeuge.
+
+P-ALLE-02:
+  kurz: Kein KI-System in Verkehr bringen, in Betrieb nehmen oder verwenden, das eine verbotene Praktik nach Art. 5(1) umsetzt, etwa Manipulation, soziale Bewertung oder Emotionserkennung am Arbeitsplatz.
+  nachweis: Dokumentierte Prüfung je KI-System gegen die Verbote, Ergebnis im KI-Inventar, Freigabevermerk.
+
+P-ALLE-03:
+  kurz: Ab 02.12.2026 zusätzlich keine KI-Systeme anbieten oder einsetzen, die nicht einvernehmliche intime Darstellungen oder Darstellungen sexuellen Missbrauchs von Kindern erzeugen (Art. 5(1)(ba), (bb)).
+  nachweis: Ergänzte Prüfung der Verbote je KI-System, bei Anbietern Beschreibung der technischen Schutzvorkehrungen.
+
+P-ALLE-04:
+  kurz: Bei einem KI-System, das ein Risiko birgt, mit der Marktüberwachungsbehörde zusammenarbeiten und verlangte Korrekturmassnahmen für alle betroffenen Systeme umsetzen.
+  nachweis: Festgelegter Ansprechpartner für Behörden, Ablauf für Behördenanfragen, Protokoll umgesetzter Korrekturmassnahmen.
+
+P-ANB-01:
+  kurz: Für jedes Hochrisiko-KI-System ein Risikomanagementsystem über den ganzen Lebenszyklus einrichten, dokumentieren und pflegen, inklusive Tests vor dem Inverkehrbringen.
+  nachweis: Risikomanagementplan je System, Risikoregister mit Restrisiko-Bewertung, Testberichte mit vorab festgelegten Metriken.
+
+P-ANB-02:
+  kurz: Trainings-, Validierungs- und Testdaten nach festgelegten Verfahren auswählen und prüfen (Herkunft, Aufbereitung, Repräsentativität, Verzerrungen). Besondere Kategorien personenbezogener Daten nur unter den Bedingungen von Art. 4a(1).
+  nachweis: Datenblätter je Datensatz, Bias-Prüfung mit Ergebnis, Aufzeichnung nach Art. 4a(1)(f), wenn besondere Daten verarbeitet werden.
+
+P-ANB-03:
+  kurz: Vor dem Inverkehrbringen eine technische Dokumentation mit mindestens den Angaben aus Anhang IV erstellen und aktuell halten. KMU und kleine Midcap-Unternehmen dürfen das vereinfachte Formular der Kommission verwenden.
+  nachweis: Technische Dokumentation je System mit Versionsstand, bei KMU das vereinfachte Formular.
+
+P-ANB-04:
+  kurz: Das Hochrisiko-KI-System so bauen, dass es Ereignisse über den Lebenszyklus automatisch protokolliert und die Rückverfolgbarkeit sichert.
+  nachweis: Protokollierungskonzept, Beispielprotokoll, Testnachweis der Protokollfunktion.
+
+P-ANB-05:
+  kurz: Das System transparent auslegen und mit einer Betriebsanleitung liefern, die mindestens die Angaben aus Art. 13(3) enthält (Zweckbestimmung, Genauigkeit, Grenzen, menschliche Aufsicht, Wartung).
+  nachweis: Freigegebene Betriebsanleitung je Version, Prüfliste gegen Art. 13(3).
+
+P-ANB-06:
+  kurz: Das System so gestalten, dass natürliche Personen es wirksam beaufsichtigen können, inklusive Möglichkeit, Ausgaben zu übersteuern und den Betrieb sicher anzuhalten.
+  nachweis: Konzept der menschlichen Aufsicht, Beschreibung der Eingriffsmöglichkeiten, Testprotokoll der Stoppfunktion.
+
+P-ANB-07:
+  kurz: Ein angemessenes Mass an Genauigkeit, Robustheit und Cybersicherheit erreichen und über den Lebenszyklus halten, inklusive Schutz gegen KI-spezifische Angriffe.
+  nachweis: Testberichte zu Genauigkeit und Robustheit, Sicherheitstests, angegebene Genauigkeitsmetriken in der Betriebsanleitung.
+
+P-ANB-08:
+  kurz: Name, eingetragenen Handelsnamen oder Handelsmarke und Kontaktanschrift auf dem System, der Verpackung oder der Begleitdokumentation angeben.
+  nachweis: Muster der Kennzeichnung oder Begleitdokumentation.
+
+P-ANB-09:
+  kurz: Ein Qualitätsmanagementsystem nach Art. 17 einrichten und schriftlich dokumentieren. Der Umfang richtet sich nach der Grösse der Organisation; KMU ohne Partner- oder verbundene Unternehmen dürfen einzelne Elemente vereinfacht umsetzen.
+  nachweis: QMS-Handbuch oder AIMS-Dokumentation mit Abgleich gegen Art. 17(1)(a) bis (m).
+
+P-ANB-10:
+  kurz: Technische Dokumentation, QMS-Dokumentation, Entscheide notifizierter Stellen und EU-Konformitätserklärung zehn Jahre ab Inverkehrbringen für Behörden bereithalten.
+  nachweis: Aufbewahrungsregel im Dokumentenregister, Ablageort, Löschsperre.
+
+P-ANB-11:
+  kurz: Automatisch erzeugte Protokolle, soweit sie unter unserer Kontrolle stehen, mindestens sechs Monate aufbewahren, sofern anderes Recht nichts anderes vorsieht.
+  nachweis: Aufbewahrungseinstellung im System, Aufbewahrungsregel, Stichprobe der ältesten Protokolle.
+
+P-ANB-12:
+  kurz: Vor dem Inverkehrbringen das passende Konformitätsbewertungsverfahren durchführen (für Anhang III Nr. 2 bis 8 interne Kontrolle nach Anhang VI). KMU profitieren von reduzierten Gebühren nach Art. 62(2).
+  nachweis: Bericht über die Konformitätsbewertung, bei Anhang VII Bescheinigung der notifizierten Stelle.
+
+P-ANB-13:
+  kurz: Für jedes Hochrisiko-KI-System eine EU-Konformitätserklärung mit den Angaben aus Anhang V ausstellen, zehn Jahre bereithalten und aktuell halten.
+  nachweis: Unterzeichnete EU-Konformitätserklärung je System und Version.
+
+P-ANB-14:
+  kurz: Die CE-Kennzeichnung gut sichtbar anbringen, bei digitalen Systemen digital und leicht zugänglich.
+  nachweis: Foto oder Bildschirmfoto der CE-Kennzeichnung, Verweis auf die Konformitätserklärung.
+
+P-ANB-15:
+  kurz: Vor dem Inverkehrbringen sich und das System in der EU-Datenbank registrieren (Anhang III ausser Nr. 2; Nr. 2 wird national registriert).
+  nachweis: Registrierungsbestätigung mit Kennung aus der EU-Datenbank.
+
+P-ANB-16:
+  kurz: Bei Nichtkonformität unverzüglich Korrekturmassnahmen ergreifen (herstellen, zurücknehmen, deaktivieren, zurückrufen) und Händler sowie gegebenenfalls Betreiber, Bevollmächtigte und Einführer informieren; bei Risiko die Marktüberwachungsbehörde.
+  nachweis: Ablauf für Korrekturmassnahmen, Protokoll mit Ursachenanalyse und versandten Informationen.
+
+P-ANB-17:
+  kurz: Auf begründete Anfrage einer zuständigen Behörde die Konformität nachweisen, Unterlagen in einer verständlichen Amtssprache übermitteln und Zugang zu Protokollen gewähren.
+  nachweis: Ablauf für Behördenanfragen, Unterlagenpaket zur Konformität, Ansprechperson.
+
+P-ANB-18:
+  kurz: Sicherstellen, dass das Hochrisiko-KI-System die Barrierefreiheitsanforderungen der Richtlinien (EU) 2016/2102 und (EU) 2019/882 erfüllt.
+  nachweis: Prüfbericht zur Barrierefreiheit oder Konformitätsaussage zu den Richtlinien.
+
+P-ANB-19:
+  kurz: Anbieter ohne Niederlassung in der EU, etwa aus der Schweiz, benennen vor der Bereitstellung schriftlich einen in der EU niedergelassenen Bevollmächtigten und ermöglichen ihm seine Aufgaben.
+  nachweis: Schriftlicher Auftrag an den Bevollmächtigten mit den Aufgaben nach Art. 22(3).
+
+P-ANB-20:
+  kurz: Wird unser KI-System durch einen anderen nach Art. 25(1) zum Hochrisiko-KI-System, gelten wir nicht mehr als dessen Anbieter, müssen aber mit dem neuen Anbieter zusammenarbeiten (Unterlagen, bekannte Grenzen, technischer Zugang), ausser wir haben die Umwandlung ausdrücklich ausgeschlossen.
+  nachweis: Vertragsklausel zur Zusammenarbeit oder dokumentierter Ausschluss der Umwandlung in ein Hochrisiko-KI-System.
+
+P-ANB-21:
+  kurz: Mit Dritten, die KI-Systeme, Modelle, Werkzeuge, Dienste oder Komponenten für das Hochrisiko-KI-System liefern, schriftlich vereinbaren, welche Informationen, Fähigkeiten, technischer Zugang und Unterstützung wir erhalten.
+  nachweis: Schriftliche Vereinbarung je Zulieferer, Lieferantenregister mit Vermerk Art. 25(4).
+
+P-ANB-22:
+  kurz: Ein System zur Beobachtung nach dem Inverkehrbringen auf Basis eines Plans einrichten, Leistungsdaten über die Lebensdauer erheben und auswerten. Der Plan ist Teil der technischen Dokumentation.
+  nachweis: Plan zur Beobachtung nach dem Inverkehrbringen, periodischer Auswertungsbericht.
+
+P-ANB-23:
+  kurz: Schwerwiegende Vorfälle der Marktüberwachungsbehörde des betroffenen Mitgliedstaats melden, spätestens nach 15 Tagen, bei Todesfall nach 10 Tagen, bei weitverbreitetem Verstoss oder Störung kritischer Infrastruktur nach 2 Tagen; danach untersuchen.
+  nachweis: Meldeverfahren mit Fristen, Vorlage Erstmeldung, Vorfallprotokoll.
+
+P-ANB-24:
+  kurz: Stellt die Behörde fest, dass ein konformes Hochrisiko-KI-System trotzdem ein Risiko darstellt, innerhalb der gesetzten Frist Korrekturmassnahmen für alle betroffenen Systeme ergreifen.
+  nachweis: Protokoll der Behördenaufforderung und der umgesetzten Massnahmen.
+
+P-ANB6-3-01:
+  kurz: Halten wir ein System aus Anhang III nach Art. 6(3) für nicht hochriskant, dokumentieren wir diese Bewertung vor dem Inverkehrbringen und legen sie auf Verlangen vor. Systeme mit Profiling natürlicher Personen gelten immer als hochriskant.
+  nachweis: Einstufungsbegründung je System mit geprüfter Bedingung nach Art. 6(3) Bst. a bis d und Profiling-Prüfung.
+
+P-ANB6-3-02:
+  kurz: Auch ein nach Art. 6(3) nicht hochriskantes System aus Anhang III vor dem Inverkehrbringen in der EU-Datenbank registrieren.
+  nachweis: Registrierungsbestätigung aus der EU-Datenbank.
+
+P-ANB6-3-03:
+  kurz: Stuft die Marktüberwachungsbehörde das System doch als hochriskant ein, innerhalb der Frist die Konformität herstellen und Korrekturmassnahmen für alle betroffenen Systeme umsetzen.
+  nachweis: Massnahmenplan nach Behördenentscheid, Nachweis der Umsetzung.
+
+P-BETR-01:
+  kurz: Technische und organisatorische Massnahmen treffen, damit das Hochrisiko-KI-System gemäss der Betriebsanleitung des Anbieters verwendet wird.
+  nachweis: Betriebsanleitung im Zugriff der Nutzenden, interne Arbeitsanweisung, Freigabe der Nutzung.
+
+P-BETR-02:
+  kurz: Die menschliche Aufsicht Personen übertragen, die über die nötige Kompetenz, Ausbildung und Befugnis verfügen, und sie dabei unterstützen.
+  nachweis: Benennung der Aufsichtspersonen, Kompetenznachweis, beschriebene Befugnisse.
+
+P-BETR-03:
+  kurz: Soweit wir die Eingabedaten kontrollieren, sicherstellen, dass sie der Zweckbestimmung entsprechen und ausreichend repräsentativ sind.
+  nachweis: Regeln für Eingabedaten, Stichprobenprüfung, Abgleich mit der Zweckbestimmung.
+
+P-BETR-04:
+  kurz: Den Betrieb anhand der Betriebsanleitung überwachen, den Anbieter bei Bedarf informieren und bei Grund zur Annahme eines Risikos Anbieter oder Händler und Marktüberwachungsbehörde unverzüglich informieren und die Nutzung aussetzen.
+  nachweis: Überwachungsplan, Meldeweg an den Anbieter, dokumentierter Entscheid zur Aussetzung.
+
+P-BETR-05:
+  kurz: Einen schwerwiegenden Vorfall unverzüglich zuerst dem Anbieter, dann dem Einführer oder Händler und der Marktüberwachungsbehörde melden. Ist der Anbieter nicht erreichbar, gilt Art. 73 entsprechend.
+  nachweis: Meldeverfahren mit Reihenfolge und Fristen, Kontaktliste, Vorfallprotokoll.
+
+P-BETR-06:
+  kurz: Automatisch erzeugte Protokolle, soweit unter unserer Kontrolle, mindestens sechs Monate aufbewahren, sofern anderes Recht, etwa Datenschutzrecht, nichts anderes vorsieht.
+  nachweis: Aufbewahrungseinstellung, Aufbewahrungsregel, Abgleich mit Datenschutzvorgaben.
+
+P-BETR-07:
+  kurz: Als Arbeitgeber vor der Inbetriebnahme oder Verwendung am Arbeitsplatz die Arbeitnehmervertreter und die betroffenen Mitarbeitenden informieren, dass sie der Verwendung des Hochrisiko-KI-Systems unterliegen werden.
+  nachweis: Datierte Information an Mitarbeitende und Personalvertretung, Protokoll der Mitwirkung.
+
+P-BETR-08:
+  kurz: Die Informationen des Anbieters nach Art. 13 für die Datenschutz-Folgenabschätzung nach Art. 35 DSGVO nutzen, soweit diese erforderlich ist.
+  nachweis: Datenschutz-Folgenabschätzung mit Verweis auf die Anbieterinformationen.
+
+P-BETR-09:
+  kurz: Natürliche Personen informieren, dass ein Hochrisiko-KI-System aus Anhang III Entscheide über sie trifft oder dabei unterstützt.
+  nachweis: Informationstext, etwa im Bewerbungsprozess oder in der Datenschutzerklärung, mit Datum der Veröffentlichung.
+
+P-BETR-10:
+  kurz: Mit den zuständigen Behörden bei allen Massnahmen zum Hochrisiko-KI-System zusammenarbeiten.
+  nachweis: Ansprechperson für Behörden, Ablauf für Anfragen.
+
+P-BETR-11:
+  kurz: Öffentliche Stellen, private Erbringer öffentlicher Dienste sowie Betreiber von Systemen zur Kreditwürdigkeit (Anhang III Nr. 5 Bst. b) oder zu Lebens- und Krankenversicherung (Nr. 5 Bst. c) führen vor der ersten Verwendung eine Grundrechte-Folgenabschätzung durch und halten sie aktuell. Teile einer Datenschutz-Folgenabschätzung dürfen übernommen werden.
+  nachweis: Grundrechte-Folgenabschätzung mit den Elementen nach Art. 27(1)(a) bis (f), Anwendbarkeitsprüfung in E-06.
+
+P-BETR-12:
+  kurz: Die Ergebnisse der Grundrechte-Folgenabschätzung der Marktüberwachungsbehörde mit dem ausgefüllten Muster mitteilen.
+  nachweis: Versandnachweis der Mitteilung mit ausgefülltem Muster.
+
+P-BETR-13:
+  kurz: Betroffenen Personen auf Verlangen eine klare und aussagekräftige Erläuterung zur Rolle des KI-Systems und zu den wichtigsten Elementen des Entscheids geben, wenn der Entscheid rechtliche oder ähnlich erhebliche Wirkung hat. Ausgenommen sind Systeme nach Anhang III Nr. 2.
+  nachweis: Ablauf für Erläuterungsanfragen, Vorlage Antwortschreiben, Anfragenprotokoll.
+
+P-BETR-14:
+  kurz: Prüfung, ob die Organisation durch eigenen Namen oder Handelsmarke, eine wesentliche Veränderung oder eine neue Zweckbestimmung selbst zum Anbieter eines Hochrisiko-KI-Systems wird. Dann gelten die Anbieterpflichten nach Art. 16.
+  nachweis: Rollenprüfung je KI-System mit Datum, Auslöser für Neuprüfung bei Änderungen.
+
+P-EINF-01:
+  kurz: Vor dem Inverkehrbringen prüfen, ob der Anbieter die Konformitätsbewertung durchgeführt, die technische Dokumentation erstellt und einen Bevollmächtigten benannt hat und ob CE-Kennzeichnung, Konformitätserklärung und Betriebsanleitung vorliegen.
+  nachweis: Eingangsprüfliste je System mit Belegen.
+
+P-EINF-02:
+  kurz: Bei Verdacht auf Nichtkonformität oder Fälschung das System erst nach Herstellung der Konformität in Verkehr bringen; bei Risiko Anbieter, Bevollmächtigte und Marktüberwachungsbehörde informieren.
+  nachweis: Sperrvermerk, Meldung an Anbieter und Behörde.
+
+P-EINF-03:
+  kurz: Eigenen Namen, Handelsnamen oder Handelsmarke und Kontaktanschrift auf der Verpackung oder in der Begleitdokumentation angeben.
+  nachweis: Muster der Verpackung oder Begleitdokumentation.
+
+P-EINF-04:
+  kurz: Sicherstellen, dass Lagerung und Transport die Konformität nicht beeinträchtigen, solange das System in unserer Verantwortung ist.
+  nachweis: Lager- und Transportvorgaben, soweit für das System relevant.
+
+P-EINF-05:
+  kurz: Bescheinigung der notifizierten Stelle, Betriebsanleitung und EU-Konformitätserklärung zehn Jahre bereithalten.
+  nachweis: Ablage mit Aufbewahrungsregel im Dokumentenregister.
+
+P-EINF-06:
+  kurz: Behörden auf begründete Anfrage alle Informationen zur Konformität in verständlicher Sprache liefern, die technische Dokumentation verfügbar machen und bei Massnahmen zusammenarbeiten.
+  nachweis: Ablauf für Behördenanfragen, Zusage des Anbieters zur Bereitstellung der Dokumentation.
+
+P-HAEN-01:
+  kurz: Vor der Bereitstellung prüfen, ob CE-Kennzeichnung, Konformitätserklärung und Betriebsanleitung vorliegen und ob Anbieter und Einführer ihre Angabepflichten erfüllt haben.
+  nachweis: Eingangsprüfliste je System.
+
+P-HAEN-02:
+  kurz: Bei Grund zur Annahme einer Nichtkonformität das System erst nach Herstellung der Konformität bereitstellen; bei Risiko Anbieter oder Einführer informieren.
+  nachweis: Sperrvermerk, Meldung an Anbieter oder Einführer.
+
+P-HAEN-03:
+  kurz: Sicherstellen, dass Lagerung und Transport die Konformität nicht beeinträchtigen, solange das System in unserer Verantwortung ist.
+  nachweis: Lager- und Transportvorgaben, soweit relevant.
+
+P-HAEN-04:
+  kurz: Bei Nichtkonformität eines bereitgestellten Systems Korrekturmassnahmen ergreifen oder veranlassen (herstellen, zurücknehmen, zurückrufen); bei Risiko Anbieter oder Einführer und Behörden unverzüglich informieren.
+  nachweis: Protokoll der Korrekturmassnahmen und Meldungen.
+
+P-HAEN-05:
+  kurz: Behörden auf begründete Anfrage Informationen zu unseren Prüfungen liefern und bei Massnahmen zusammenarbeiten.
+  nachweis: Ablauf für Behördenanfragen, Ablage der Eingangsprüfungen.
+
+P-BEV-01:
+  kurz: Die Aufgaben aus dem Auftrag des Anbieters wahrnehmen, insbesondere Konformitätserklärung und technische Dokumentation prüfen, Unterlagen zehn Jahre bereithalten, Behörden informieren und mit ihnen zusammenarbeiten.
+  nachweis: Auftrag des Anbieters, Prüfprotokoll, Ablage der Unterlagen.
+
+P-BEV-02:
+  kurz: Den Auftrag beenden, wenn der Anbieter gegen seine Pflichten verstösst, und Marktüberwachungsbehörde sowie gegebenenfalls notifizierte Stelle unverzüglich mit Begründung informieren.
+  nachweis: Kündigungsschreiben und Mitteilung an die Behörde.
+
+P-PROD-01:
+  kurz: Bringen wir ein Produkt nach Anhang I Abschnitt A mit einem Hochrisiko-KI-System als Sicherheitsbauteil unter unserem Namen in Verkehr oder nehmen es in Betrieb, gelten wir als Anbieter und tragen die Pflichten nach Art. 16.
+  nachweis: Rollenprüfung je Produkt, Verweis auf die Anbieterpflichten in E-08.
+
+P-PROD-02:
+  kurz: Für KI in Produkten prüfen, ob sie ein Sicherheitsbauteil ist (Art. 6(1)). KI nur für Nutzerunterstützung, Leistungsoptimierung, Effizienz, Automatisierung, Benutzerfreundlichkeit oder Qualitätskontrolle gilt nicht als Sicherheitsbauteil, ausser ihr Ausfall gefährdet Gesundheit und Sicherheit. Für Maschinen (Anhang I Abschnitt B) gelten aus dem AI Act nur Art. 6(1), 60a und 102 bis 112.
+  nachweis: Dokumentierte Einstufung je Produkt mit Begründung zu Art. 6(1a) und 6(1b), Hinweis auf die Maschinenverordnung.
+
+P-PROD-03:
+  kurz: Für Hochrisiko-KI-Systeme in Produkten nach Anhang I Abschnitt A das Konformitätsbewertungsverfahren des jeweiligen Produktrechts durchführen und die Anforderungen aus Kapitel III Abschnitt 2 sowie die QMS-Bewertung einbeziehen.
+  nachweis: Konformitätsbewertung nach Produktrecht mit Abschnitt zu den KI-Anforderungen.
+
+P-TRANSP-ANB-01:
+  kurz: KI-Systeme für die direkte Interaktion mit Menschen, etwa Chatbots, so gestalten, dass die Personen erfahren, dass sie mit einer KI interagieren, ausser es ist offensichtlich.
+  nachweis: Bildschirmfoto des Hinweises, Gestaltungsvorgabe, Freigabe vor Inbetriebnahme.
+
+P-TRANSP-ANB-02:
+  kurz: Synthetische Audio-, Bild-, Video- oder Textinhalte maschinenlesbar kennzeichnen, damit sie als künstlich erzeugt oder manipuliert erkennbar sind, soweit technisch möglich.
+  nachweis: Beschreibung der Kennzeichnungslösung (z. B. Wasserzeichen, Metadaten), Testnachweis.
+
+P-TRANSP-ANB-03:
+  kurz: Für Systeme, die synthetische Inhalte erzeugen und vor dem 02.08.2026 in Verkehr gebracht wurden, die Kennzeichnung nach Art. 50(2) bis 02.12.2026 nachrüsten.
+  nachweis: Umsetzungsplan mit Termin, Nachweis der Kennzeichnung im Altsystem.
+
+P-TRANSP-ANB-04:
+  kurz: Den Hinweis nach Art. 50(1) spätestens bei der ersten Interaktion klar, eindeutig und barrierefrei geben.
+  nachweis: Bildschirmfoto mit Zeitpunkt des Hinweises, Prüfung der Barrierefreiheit.
+
+P-TRANSP-BETR-01:
+  kurz: Personen informieren, wenn ein Emotionserkennungssystem oder ein System zur biometrischen Kategorisierung bei ihnen eingesetzt wird, und das Datenschutzrecht einhalten. Am Arbeitsplatz ist Emotionserkennung nach Art. 5(1)(f) grundsätzlich verboten.
+  nachweis: Informationstext, Datenschutz-Folgenabschätzung, Prüfung gegen Art. 5(1)(f).
+
+P-TRANSP-BETR-02:
+  kurz: Offenlegen, dass Bild-, Ton- oder Videoinhalte künstlich erzeugt oder manipuliert sind, wenn es sich um ein Deepfake handelt. Bei offensichtlich künstlerischen oder satirischen Werken genügt ein dezenter Hinweis.
+  nachweis: Kennzeichnungsregel in der Richtlinie zur KI-Nutzung, Beispiele gekennzeichneter Inhalte.
+
+P-TRANSP-BETR-03:
+  kurz: Offenlegen, dass ein veröffentlichter Text zu Angelegenheiten von öffentlichem Interesse künstlich erzeugt oder manipuliert wurde, ausser er wurde redaktionell geprüft und eine Person trägt die redaktionelle Verantwortung.
+  nachweis: Redaktionsregel mit Prüf- und Freigabeschritt oder Kennzeichnungsregel.
+
+P-TRANSP-BETR-04:
+  kurz: Die Informationen nach Art. 50(3) und (4) spätestens bei der ersten Interaktion oder Aussetzung klar, eindeutig und barrierefrei bereitstellen.
+  nachweis: Beispiele mit Platzierung des Hinweises, Prüfung der Barrierefreiheit.
+
+P-GPAI-01:
+  kurz: Als Anbieter eines KI-Modells mit allgemeinem Verwendungszweck die technische Dokumentation (Anhang XI) und Informationen für nachgelagerte Anbieter (Anhang XII) erstellen und aktuell halten. Ausnahme für bestimmte quelloffene Modelle ohne systemisches Risiko.
+  nachweis: Modelldokumentation nach Anhang XI und XII.
+
+P-GPAI-02:
+  kurz: Eine Strategie zur Einhaltung des Urheberrechts der Union einführen, inklusive Beachtung von Rechtsvorbehalten nach Art. 4(3) der Richtlinie (EU) 2019/790.
+  nachweis: Urheberrechtsstrategie, Verfahren zur Erkennung von Rechtsvorbehalten.
+
+P-GPAI-03:
+  kurz: Eine hinreichend detaillierte Zusammenfassung der Trainingsinhalte nach der Vorlage des Büros für Künstliche Intelligenz veröffentlichen.
+  nachweis: Veröffentlichte Zusammenfassung mit Fundstelle.
+
+P-GPAI-04:
+  kurz: Anbieter aus Drittländern, etwa aus der Schweiz, benennen vor dem Inverkehrbringen eines KI-Modells mit allgemeinem Verwendungszweck schriftlich einen Bevollmächtigten in der EU.
+  nachweis: Schriftlicher Auftrag an den Bevollmächtigten.
+
+P-GPAI-05:
+  kurz: "Nur bei systemischem Risiko: die Kommission innert zwei Wochen nach Erreichen der Schwelle informieren, Modelle bewerten und Angriffstests durchführen, systemische Risiken mindern, schwerwiegende Vorfälle melden und Cybersicherheit gewährleisten."
+  nachweis: Mitteilung an die Kommission, Bewertungs- und Testberichte, Vorfallprotokoll.
+
+P-GPAI-06:
+  kurz: Als Bevollmächtigter eines Anbieters von KI-Modellen mit allgemeinem Verwendungszweck die Aufgaben aus dem Auftrag wahrnehmen und den Auftrag bei Pflichtverstössen beenden.
+  nachweis: Auftrag, Prüfprotokoll, gegebenenfalls Mitteilung an das Büro für Künstliche Intelligenz.
+
+P-GPAI-07:
+  kurz: Für KI-Modelle mit allgemeinem Verwendungszweck, die vor dem 02.08.2025 in Verkehr gebracht wurden, die Pflichten bis 02.08.2027 erfüllen.
+  nachweis: Umsetzungsplan mit Termin.
+
+ausgeklammert:
+  erlaubnis: Erlaubnis unter Bedingungen, keine Pflicht. Wird im Umsetzungshinweis zu EUAIA-20 erwähnt.
+  behoerden: Richtet sich an Behörden, Strafverfolgung oder Organe der Union, nicht an KMU.
+  freiwillig: Gilt nur bei freiwilliger Teilnahme an Reallaboren oder Tests unter Realbedingungen.
+  verweis: Verweis auf anderes Unionsrecht (Hinweisgeberschutz), keine eigene Pflicht aus dem AI Act.
+  keine_pflicht: Sanktionen der Mitgliedstaaten; die Bussgeldrahmen und KMU-Regeln stehen in stand.yaml.

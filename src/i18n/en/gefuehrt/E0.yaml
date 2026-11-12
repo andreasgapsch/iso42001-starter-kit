@@ -1,0 +1,118 @@
+# Page texts for phase E0 start interview. Format: src/gefuehrt/FORMAT.md
+E0-start:
+  titel: Welcome to the Guide
+  frage: How do you get, step by step, to an AI management system that can be certified?
+  warum: The Guide asks you one question at a time, much like tax return software. Your answers become the documents of the kit, and the tool keeps checking whether anything is missing. You can stop at any time, put questions aside for later and pick up where you left off.
+  fehler: Many people start by writing documents and realize too late that the inventory and the scope are missing. Auditors want to see an [[g:aims|AI management system]] that fits your organization, not a pile of templates. Take ten minutes for the start interview; it will save you hours later.
+E0-firma:
+  titel: Your organization
+  frage: What is your organization called and which industry does it work in?
+  warum: The company name appears in every document. The industry helps us suggest suitable examples and typical risks, such as export control in mechanical engineering or patient data in healthcare.
+  fehler: "Choose the industry that brings in most of your revenue. Auditors check that industry topics such as product liability or sector standards show up again in the [[g:kontext|context of the organization]]."
+  felder:
+    organisation.name:
+      label: Company name
+      hilfe: As in the commercial register, e.g. ‘Muster Maschinenbau AG’.
+    organisation.branche:
+      label: Industry
+      hilfe: Your main activity. You can record other activities later in the context.
+E0-groesse:
+  titel: Size and locations
+  frage: How many employees does your organization have, and at which locations do you work?
+  warum: Size determines how lean your processes may be and how much audit time the [[g:zertifizierungsstelle|certification body]] plans. We need the locations for the [[g:geltungsbereich|scope]].
+  fehler: Sites abroad and subsidiaries are often forgotten. Auditors check that every location where AI is used is either inside the scope or excluded with a reason.
+  felder:
+    organisation.mitarbeitende:
+      label: Number of employees
+      hilfe: Headcount or full-time equivalents; a rough figure is enough.
+    organisation.standorte:
+      label: Locations
+      hilfe: Town and country for each site, e.g. ‘Head office Wil SG, sales company in Stuttgart’.
+E0-isms:
+  titel: Information security
+  frage: Does your organization already have an information security management system to ISO/IEC 27001?
+  warum: ISO/IEC 42001 has the same structure as ISO/IEC 27001. With an [[g:isms|ISMS]] you reuse the risk method, document control, audit and management review, and only add the AI topics in [[g:ergaenzungsblatt|supplementary sheets]]. Without an ISMS, we guide you through the basics you need. With an ISMS, the integration matrix D-23 shows what you can reuse. The dialog when creating the project pre-filled this question; here you can state your answer more precisely.
+  fehler: Organizations with an ISMS often build a second, parallel system. Auditors would rather see one shared system with one audit programme and one management review covering both standards.
+  felder:
+    meta.gefuehrt.antworten.isms:
+      label: Status of the ISMS
+      hilfe: '‘In place’ means there is a policy, a risk method and roles to ISO/IEC 27001, but no certificate.'
+E0-eu:
+  titel: Links to the EU
+  frage: Do you have customers in the EU, is the output of your AI used in the EU, or do you have a branch there?
+  warum: The AI Act also applies to Swiss companies if they offer AI in the EU or if its output is used there. Based on these three answers, we suggest whether you need the AI Act module.
+  fehler: Many Swiss SMEs think they are not affected because they have no company in the EU. What counts, however, is where the AI has its effect. One example is a chatbot on your website that customers in Germany use.
+  felder:
+    organisation.euBezug.kundenEu:
+      label: We supply products or services to customers in the EU.
+      hilfe: Individual customers or distributors count too.
+    organisation.euBezug.outputEu:
+      label: Output of our AI is used in the EU.
+      hilfe: e.g. AI-supported analyses for a subsidiary in Germany or a chatbot for EU customers.
+    organisation.euBezug.niederlassungEu:
+      label: We have a branch or subsidiary in the EU.
+      hilfe: Pure sales companies count too.
+E0-ki:
+  titel: How you work with AI
+  frage: Do you develop AI yourself, do you sell products with AI, and which AI tools do you already know of?
+  warum: If you develop AI yourself, you need extra rules for design, testing and data. If you sell AI, you are often a [[g:anbieter|provider]] with more obligations. We take the tools you know as the starting point for the [[g:ki-inventar|AI inventory]].
+  fehler: AI inside purchased software is often overlooked, such as forecasts in the ERP system or assistants in office software. Auditors ask about it specifically. Better to name one tool too many than one too few.
+  felder:
+    organisation.entwickeltKi:
+      label: We develop or train AI ourselves.
+      hilfe: Retraining a purchased model with your own data also counts.
+    organisation.verkauftKiProdukte:
+      label: We sell products or services that contain AI.
+      hilfe: e.g. a machine with an AI function or a customer portal chatbot under your own name.
+    meta.gefuehrt.antworten.bekannteKiWerkzeuge:
+      label: Known AI tools
+      hilfe: One tool per line, e.g. ‘M365 Copilot’, ‘ChatGPT Team’, ‘AI forecast in the ERP’. The list is a starting point for the inventory.
+E0-termin:
+  titel: Target date
+  frage: By when do you want to be ready for stage 1, and what is prompting it?
+  warum: From the target for stage 1 readiness, the roadmap counts back to the calendar week in which each step must be finished. Ready means that the internal audit and the [[g:managementbewertung|management review]] have been carried out and the documents are approved. With an [[g:isms]], allow around 90 days until then; without one, around 150 days. The [[g:stage-2|stage 2 audit]] and the certificate follow a few weeks to months later.
+  fehler: A deadline that is too tight leads to a system that exists only on paper. Auditors want to see records from several weeks of operation. Record the working time, otherwise the roadmap cannot check whether the time is enough.
+  felder:
+    organisation.zielterminStage1:
+      label: Target for stage 1 readiness
+      hilfe: By this date the internal audit and the management review have been carried out and the documents for the certification body are ready. Leave the field empty if it is still open.
+    organisation.projektauftrag.pensumProzent:
+      label: Working time of the AIMS lead in per cent
+      hilfe: Share of working time the person spends on the [[g:aims|AIMS]] project, e.g. 40. The Guide assumes 40 to 50%; at 20%, the build-up takes about twice as long. Also appears in the project mandate (D-00).
+    organisation.zielterminZertifizierung:
+      label: Preferred date for the certificate
+      hilfe: After stage 1 come the [[g:stage-2|stage 2 audit]] and the certification decision; allow a few weeks to months for this. Appears in the project mandate (D-00) as the target date for certification.
+    meta.gefuehrt.antworten.ausloeser:
+      label: Reason
+      hilfe: You can pick more than one. The reason helps to set priorities.
+E0-verantwortung:
+  titel: Responsibility
+  frage: Who in your organization is responsible for the AI management system?
+  warum: One person has to coordinate the build-up and report to management. In an SME, this is often the IT lead, quality management or information security.
+  fehler: The role is often given to someone with neither the time nor the authority. Auditors ask whether the person reports directly to management and has enough time. Record the time allocation later in the project mandate.
+  felder:
+    organisation.aimsVerantwortlich:
+      label: AIMS lead
+      hilfe: Choose the person who coordinates the [[g:aims|AIMS]] or add a new one (name, job title).
+E0-modul:
+  titel: Optional modules
+  frage: Do you want to switch on the EU AI Act module and the NIST AI RMF module?
+  warum: The module adds the obligations from the AI Act to the kit, such as the role and risk class of each system, transparency and [[g:betreiber|deployer]] obligations. You need it if you offer AI in the EU or if its output is used there; without any link to the EU, a short note with the reason is enough. The NIST AI RMF module is voluntary and worthwhile if you have US customers, a US parent company or customer questionnaires on the NIST AI RMF.
+  fehler: An ISO/IEC 42001 certificate does not replace the obligations under the AI Act. If you have links to the EU and leave out the module, you have a gap that customers and authorities will notice. You can switch the module on or off at any time later.
+  felder:
+    meta.modulAiAct:
+      label: Switch on AI Act module
+      hilfe: Suggested on the basis of your answers about links to the EU and about selling AI products.
+    meta.modulNistRmf:
+      label: "Switch on NIST AI RMF module"
+      hilfe: "The NIST AI RMF is a voluntary framework of the US agency NIST for managing AI risks; it is neither law nor certifiable and is mainly worthwhile for US customers or customer questionnaires on it. The module adds a current and target profile, 23 additional controls, a measurement and test plan per system and the assessment of generative AI to the kit, and needs about 3 to 5 additional person-days."
+E0-gestaltung:
+  titel: Your logo and colour (optional)
+  frage: Should the documents carry your logo and your company colour?
+  warum: The generated documents belong to your company. With a logo and a primary colour, header, titles and table headers appear in your corporate design. Risk levels, status and notes keep their colours so that they mean the same everywhere. You can skip this page and set the design later in the settings.
+  fehler: A logo for a dark background (white on transparent) is invisible on light paper. Choose the version for a light background. The tool automatically corrects very light colours for text and shows the result.
+E0-fahrplan:
+  titel: Your roadmap
+  frage: What happens next?
+  warum: Your answers determine your path, the phases and a plan based on the Guide. Counting back from the target for [[g:stage-1|stage 1]] readiness, you see the calendar weeks of the 10 steps, the milestones that fall due and when management has to approve. The person-days come from chapter 5 of the Guide.
+  fehler: The roadmap is a guide figure, not a promise. Coordination with business units and approvals by management take the most time. Ask certification bodies early, as accredited bodies for ISO/IEC 42001 often have long lead times.

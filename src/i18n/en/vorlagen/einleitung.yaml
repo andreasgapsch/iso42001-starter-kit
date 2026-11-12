@@ -1,0 +1,162 @@
+# Introduction of every blank template: why, what to do, evidence
+titel: In brief
+wozu: Why
+was: What to do
+nachweis: Evidence
+texte:
+  D-00:
+    wozu: "You see where the company stands against ISO/IEC 42001 and obtain the mandate for the set-up."
+    was: "Rate maturity per clause and control, prioritize gaps, have the project mandate approved."
+    nachweis: "Approved project mandate and dated gap analysis."
+  D-01:
+    wozu: "The management system reflects the company's context, parties and role."
+    was: "Record issues, climate change, parties with their requirements and your own role."
+    nachweis: "Approved document, reviewed annually."
+  D-02:
+    wozu: "You define what the management system covers and what it does not."
+    was: "Enter boundaries, exclusions and processes."
+    nachweis: "Approved scope with the list of processes."
+  D-03:
+    wozu: "Top management sets binding principles for AI."
+    was: "Adapt principles, objectives and exceptions, approve them and communicate them."
+    nachweis: "Signed policy and evidence that it was communicated."
+  D-04:
+    wozu: "Every task has a responsible person, and concerns have a route."
+    was: "Name the roles, set decision rights and the reporting route."
+    nachweis: "Approved role matrix and a known reporting route."
+  D-05:
+    wozu: "Objectives and measurements show whether the management system works."
+    was: "Set objectives, maintain the measurement plan with process indicators, enter values."
+    nachweis: "Dated measured values and their evaluation for the management review."
+  D-06:
+    wozu: "Risks are assessed with one consistent, repeatable method."
+    was: "Adapt scales, acceptance limit and flow to the company and approve them."
+    nachweis: "Approved procedure, applied in register D-07."
+  D-07:
+    wozu: "The register tracks every risk through to the action and the evidence."
+    was: "Assess risks, assign controls and actions, have residual risks accepted."
+    nachweis: "Dated assessment, accepted residual risks, evidence for each completed action."
+  D-08:
+    wozu: "Effects on people and society are checked according to fixed rules."
+    was: "Set triggers, thresholds, participants and approval."
+    nachweis: "Approved procedure, applied in D-09."
+  D-09:
+    wozu: "For each AI system you clarify the effects it can have on people."
+    was: "Complete the screening; if a threshold is reached, do the full assessment before operation."
+    nachweis: "Approved assessment per system, reassessed on changes."
+  D-10:
+    wozu: "All AI systems are known, including AI in purchased software."
+    was: "Survey the systems, enter system owners and data, keep the approval list up to date."
+    nachweis: "Current inventory with an approval for each system."
+  D-11:
+    wozu: "You justify for each control whether it applies and how it is implemented."
+    was: "Enter decision, reason, status and evidence for each control."
+    nachweis: "Approved statement with evidence and effectiveness checks."
+  D-12:
+    wozu: "AI systems follow clear rules from introduction to replacement."
+    was: "Adopt the relevant parts."
+    nachweis: "Approved document, test and operation records per system."
+  D-13:
+    wozu: "The origin, quality and protection of AI data are settled."
+    was: "Set sources, quality rules and the handling of personal data."
+    nachweis: "Approved document and data details per system."
+  D-14:
+    wozu: "Users and affected persons are informed and can report concerns."
+    was: "Set the information, reporting channel and communication in incidents."
+    nachweis: "Published information, reports and how they were handled."
+  D-15:
+    wozu: "Staff know what they may and may not do with AI."
+    was: "Adapt the rules, enter approved tools, communicate them."
+    nachweis: "Approved policy and confirmation that it was read."
+  D-16:
+    wozu: "Purchased AI is checked before buying and managed afterwards."
+    was: "Answer the check questions per supplier, split the duties, record conditions."
+    nachweis: "Checked suppliers with date and conditions."
+  D-17:
+    wozu: "Whoever works with AI is able to do so and is informed."
+    was: "Determine needs per role, plan training and communication, record attendance."
+    nachweis: "Attendance lists and a check of effectiveness."
+  D-20:
+    wozu: "The internal audit shows whether the management system works before a certification body checks it."
+    was: "Plan the programme with clauses, controls and processes, keep the checklist, report."
+    nachweis: "Audit report, completed checklist, findings in D-22."
+  D-21:
+    wozu: "Top management evaluates the management system and decides."
+    was: "Prepare the agenda items, hold the review, record decisions and actions."
+    nachweis: "Minutes with all inputs and decisions."
+  D-22:
+    wozu: "Deviations are fixed and their cause is removed."
+    was: "Record the finding, clarify the cause, plan the action, check effectiveness."
+    nachweis: "Register with cause, action and effectiveness check."
+  D-23:
+    wozu: "With an ISMS you reuse what exists and add only what is missing."
+    was: "Record per clause: reuse, extend or new."
+    nachweis: "Approved matrix with references to the ISMS documents."
+  D-24:
+    wozu: "You clarify whether you are provider or deployer and what a certificate says."
+    was: "Go through the decision tree per system and record the result."
+    nachweis: "Recorded role for each AI system."
+  D-25:
+    wozu: "You see the route to the certificate and what must be met before stage 1."
+    was: "Enter the status of the prerequisites, choose a body, plan a supplementary audit."
+    nachweis: "Prerequisites met and a timeline."
+  D-26:
+    wozu: "Documents are current, reviewed, approved and easy to find."
+    was: "Set the rules, list every document in the register, keep review notes and versions up to date."
+    nachweis: "Register, review notes in the document header, change history."
+  D-27:
+    wozu: "Processes describe who does what in which order and what results."
+    was: "Adapt flows, owners, maturity and indicator; without an ISMS also the base processes, with an ISMS a reference there."
+    nachweis: "Approved handbook, records and measured values per process."
+  E-01:
+    wozu: "Obligations under the AI Act depend on your role."
+    was: "Determine the role per AI system, including a possible change to provider."
+    nachweis: "Role per system with reason and date."
+  E-02:
+    wozu: "The risk class determines which obligations apply."
+    was: "Go through the check points per system from left to right, justify the result."
+    nachweis: "Class per system with reasons; borderline cases legally reviewed."
+  E-03:
+    wozu: "You see which obligations apply to you and what the AIMS already covers."
+    was: "Mark the applicable obligations, enter status and responsibility."
+    nachweis: "Matrix with the status of each obligation."
+  E-04:
+    wozu: "Art. 4 requires actions to support AI literacy, not a guaranteed level."
+    was: "Set target groups and formats, record attendance."
+    nachweis: "Concept and attendance lists."
+  E-05:
+    wozu: "Deployers of high-risk AI have their own obligations."
+    was: "Go through the checklist per system, track open points as actions."
+    nachweis: "Completed checklist with supporting evidence."
+  E-06:
+    wozu: "The fundamental rights impact assessment extends the impact assessment where the AI Act requires it."
+    was: "Check whether it is needed; then complete the sections before first use."
+    nachweis: "Approved assessment or a justified ‘not needed’."
+  E-07:
+    wozu: "People should recognize when they are dealing with AI."
+    was: "Check the checklist per system, add the matching wording to interfaces and documents."
+    nachweis: "Notices in the interfaces, reviewed checklist."
+  E-08:
+    wozu: "Providers of high-risk AI see what they must meet and where the AIMS helps."
+    was: "Compare the obligations, track gaps as actions, have legal points reviewed."
+    nachweis: "Comparison with status and actions."
+  E-09:
+    wozu: "You record the legal status on which your classifications are based."
+    was: "Check the status on EUR-Lex, derive deadlines per system, clarify open interpretations."
+    nachweis: "Dated status, reviewed every six months."
+  N-01:
+    wozu: "The profile shows current and target state against the NIST AI RMF."
+    was: "Check the current level, set targets, prioritize gaps."
+    nachweis: "Dated profile with targets."
+  N-02:
+    wozu: "You see what ISO/IEC 42001 covers per subcategory and what is missing."
+    was: "Check the coverage, decide on additional controls for gaps."
+    nachweis: "Matrix with decisions on the gaps."
+  N-03:
+    wozu: "Trustworthiness characteristics become measurable per AI system."
+    was: "Choose characteristics, set test cases, thresholds and frequency."
+    nachweis: "Measurement concept and test results per system."
+  N-04:
+    wozu: "Risks of generative AI are checked specifically per system."
+    was: "Assess the relevance of the twelve risks, assign actions."
+    nachweis: "Assessment per system with actions."

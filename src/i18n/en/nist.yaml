@@ -1,0 +1,949 @@
+# Texts for the NIST AI RMF module (English)
+# Structure: src/nist-rmf/*.yaml. All texts in the kit's own words; short titles are the kit's own wording. Verbatim
+# NIST excerpts with the kit's own German translation are in src/nist-rmf/original-*.yaml (quotation source); here only
+# the display texts (original.*). Nothing from the Microsoft crosswalk, nothing from OWASP.
+# subkategorien.<id>: titel, massnahmen (lite measures; ‘(extended)’ = only for own development or
+# high risk), nachweise, optional praezisierung, revision, genai.
+# controls.<id>: titel, zweck, umsetzung, nachweis (as controls42001).
+
+funktionen:
+  govern:
+    titel: Govern
+    kurz: 'Cross-cutting: rules, roles, culture and supply chain for managing AI risk.'
+  map:
+    titel: Map
+    kurz: Clarify the context, categorize the system and capture benefits, costs and impacts; the basis for the deployment decision.
+  measure:
+    titel: Measure
+    kurz: Evaluate risks and trustworthiness with suitable methods and track them over time.
+  manage:
+    titel: Manage
+    kurz: Prioritize and treat risks, manage third parties, monitor and improve operation.
+kategorien:
+  GV-1:
+    titel: Rules and processes for AI risk
+  GV-2:
+    titel: Accountability and enablement
+  GV-3:
+    titel: Diverse perspectives in the team
+  GV-4:
+    titel: Risk-aware culture
+  GV-5:
+    titel: Engagement with interested parties
+  GV-6:
+    titel: Third parties and supply chain
+  MP-1:
+    titel: Context of use clarified
+  MP-2:
+    titel: System categorized
+  MP-3:
+    titel: Capabilities, benefits and costs
+  MP-4:
+    titel: Risks of all components
+  MP-5:
+    titel: Impacts on people and society
+  MS-1:
+    titel: Measurement methods chosen
+  MS-2:
+    titel: Trustworthiness evaluated
+  MS-3:
+    titel: Risks tracked over time
+  MS-4:
+    titel: Measurement reviewed
+  MG-1:
+    titel: Risks prioritized and treated
+  MG-2:
+    titel: Benefits secured, harm limited
+  MG-3:
+    titel: Third-party risks managed
+  MG-4:
+    titel: Monitoring, incidents, improvement
+subkategorien:
+  GV-1.1:
+    titel: Legal requirements for AI known and met
+    massnahmen:
+    - Record and maintain laws, contracts and sector rules that apply to AI use.
+    - Track legal changes and feed them into training.
+    nachweise:
+    - Register of requirements with the decision ‘addressed’
+    - List of reporting and information duties
+  GV-1.2:
+    titel: Trustworthiness built into policies
+    massnahmen:
+    - Approve an AI policy with principles for trustworthy AI.
+    - Align the policy with privacy, security, quality and procurement rules.
+    - Explicitly cover purchased and existing AI.
+    nachweise:
+    - Approved AI policy
+    - Alignment with other policies
+    - Acceptable-use rules
+  GV-1.3:
+    titel: Risk effort scaled to risk tolerance
+    massnahmen:
+    - Use uniform likelihood and impact scales with acceptance thresholds.
+    - Scale review depth, sample size and review interval to the risk level.
+    nachweise:
+    - Risk procedure with scales and criteria
+    - Review intervals per risk level
+    genai: 'Generative AI: extend the risk levels in D-06 with misuse, new vulnerabilities, psychological effects and dependence on other systems.'
+  GV-1.4:
+    titel: Risk process transparently defined
+    massnahmen:
+    - 'Set documentation rules per AI system: purpose, limits, tests, dependencies, contacts.'
+    - Assess the effectiveness of the risk process yearly.
+    - Decide what is disclosed about AI use.
+    nachweise:
+    - Document register
+    - Management review with an assessment of the risk process
+    - User information
+  GV-1.5:
+    titel: Risk process periodically reviewed
+    massnahmen:
+    - Define monitoring per system with frequency and the person in charge.
+    - The incident procedure explicitly covers AI.
+    - Affected people can challenge outputs and ask for human review.
+    nachweise:
+    - Operating rules with spot checks
+    - Incident procedure
+    - Public reporting channel
+  GV-1.6:
+    praezisierung: "The standard requires resources per system but no mandatory inventory. D-10 keeps a complete one anyway; treat it as binding."
+    titel: AI inventory maintained
+    massnahmen:
+    - Keep a complete AI inventory with a system owner per system.
+    - Define mandatory attributes per system and name who maintains the inventory.
+    nachweise:
+    - AI inventory
+    - Reconciliation with the licence and software list
+    - Questionnaire for business units
+    genai: 'Generative AI: also record generative AI embedded in standard software, with base model, version and access mode (RMF-16).'
+  GV-1.7:
+    titel: Safe retirement of AI systems
+    massnahmen:
+    - On retirement, check dependent processes and organize the hand-over to a successor.
+    - Define retention of logs, outputs, settings and assessments.
+    - Obtain deletion confirmation from the vendor, update the inventory status.
+    nachweise:
+    - Decision with date
+    - Deletion confirmation
+    - Inventory status ‘retired’ with retention period
+  GV-2.1:
+    titel: Roles and reporting lines for AI risk
+    massnahmen:
+    - Define roles, responsibilities and reporting lines for AI risk (RACI).
+    - Separate checking from doing where size allows.
+    - Disclose conflicts of interest.
+    nachweise:
+    - RACI
+    - Mandatory roles with deputies
+  GV-2.2:
+    praezisierung: "The standard does not require training for partners. Explicitly include partners in D-17 and E-04 if they work with your AI systems."
+    titel: AI risk training for staff and partners
+    massnahmen:
+    - 'Train by role: users, oversight, management, procurement.'
+    - Have staff acknowledge the acceptable-use rules.
+    - Communicate significant system changes.
+    nachweise:
+    - Competence matrix
+    - Attendance lists
+    - Acknowledgements
+    - Communication plan
+  GV-2.3:
+    titel: Top management owns AI risk decisions
+    massnahmen:
+    - Top management sets risk appetite and accepts residual risk.
+    - Assign resources and authority.
+    nachweise:
+    - Approved project mandate
+    - Approval of the treatment plan
+    - Minutes of the management review
+  GV-3.1:
+    titel: Decisions informed by varied viewpoints
+    massnahmen:
+    - Involve business, IT, privacy and HR in assessments.
+    - Bring in outside expertise where knowledge is missing.
+    - Actively build team diversity (extended).
+    nachweise:
+    - Participants per assessment
+    - Involvement of outside experts
+    revision: The announced US revision may drop or reword this item. The kit keeps it as cross-disciplinary involvement, because sound assessments need the knowledge of the business, IT, data protection and human resources.
+  GV-3.2:
+    titel: Human-AI roles and oversight defined
+    massnahmen:
+    - Per system, define who reviews outputs and who may intervene.
+    - Distinguish oversight from mere use.
+    - Set competence requirements for oversight.
+    nachweise:
+    - Inventory column for human oversight
+    - RACI section for human oversight
+    - Training record
+  GV-4.1:
+    titel: Critical thinking and safety first
+    massnahmen:
+    - Grant approvals under the four-eyes principle.
+    - Offer a protected channel for raising concerns.
+    - Structured challenge, for example red-team exercises (extended).
+    nachweise:
+    - Approvals by a second person
+    - Reporting channel with protection against retaliation
+  GV-4.2:
+    titel: Risks and impacts recorded and shared
+    massnahmen:
+    - Carry out an impact assessment per system before use.
+    - Repeat it after changes, after incidents and at set intervals.
+    - Transfer identified harms to the risk register.
+    nachweise:
+    - Screenings
+    - Full assessments
+    - Linked risks
+  GV-4.3:
+    titel: Testing, incident detection, sharing
+    massnahmen:
+    - Test before use and after updates.
+    - Share limitations and incidents internally.
+    - Set rules on when and how incidents are disclosed.
+    nachweise:
+    - Test reports
+    - Incident log
+    - Lessons learned from incidents
+    genai: 'Generative AI: set minimum content for AI incident reports and hold a review after every incident (D-14).'
+  GV-5.1:
+    titel: External feedback on impacts collected
+    massnahmen:
+    - Offer a channel for feedback from customers and affected people.
+    - Evaluate and answer feedback.
+    - Publish AI principles (optional).
+    nachweise:
+    - Public reporting channel
+    - Report log
+  GV-5.2:
+    titel: Vetted feedback fed into design
+    massnahmen:
+    - 'Approval with three possible outcomes: use, use with conditions, do not use.'
+    - Turn justified feedback into changes.
+    - Retire systems early when risks cannot be controlled.
+    nachweise:
+    - Decision in D-09 part C
+    - Changes with their trigger
+  GV-6.1:
+    titel: Third-party AI risk rules incl. IP
+    massnahmen:
+    - Use due-diligence questions and contract clauses for AI vendors.
+    - Clarify rights to data, models and outputs.
+    - 'Know the supply chain: subprocessors, model makers.'
+    nachweise:
+    - Vendor assessment
+    - Contract check
+    - Allocation of responsibilities
+  GV-6.2:
+    titel: Contingency for third-party AI failure
+    massnahmen:
+    - 'Provide a fallback for critical purchased AI: manual or an alternative service.'
+    - The incident plan covers vendor outages and incidents.
+    nachweise:
+    - Fallback per critical system
+    - Incident drill with a vendor outage
+  MP-1.1:
+    titel: Purpose, setting, users and limits described
+    massnahmen:
+    - Describe purpose, users, affected people and setting.
+    - Record foreseeable misuse.
+    - Consider a non-AI alternative.
+    nachweise:
+    - System description
+    - Request under D-15
+    - Note on alternatives
+  MP-1.2:
+    titel: Cross-disciplinary input documented
+    massnahmen:
+    - Record who contributed to the assessment.
+    - Include expertise beyond IT (business, legal, HR).
+    nachweise:
+    - Participants recorded in D-09
+  MP-1.3:
+    titel: Mission and AI goals documented
+    massnahmen:
+    - Check system purpose against business goals and policy.
+    - Spot perverse incentives, e.g. speed over quality.
+    nachweise:
+    - Request with justification
+    - Reference to the policy
+  MP-1.4:
+    titel: Business value defined or re-assessed
+    massnahmen:
+    - Record expected benefit before use.
+    - Reassess benefit at every review.
+    nachweise:
+    - Request
+    - Review with an assessment of benefits
+  MP-1.5:
+    titel: Risk tolerance set
+    massnahmen:
+    - Set acceptance thresholds and a no-go threshold.
+    - Record and review off-label use.
+    nachweise:
+    - Acceptance criteria
+    - Approved-use list with conditions
+    - Misuse cases in D-09
+  MP-1.6:
+    titel: Requirements elicited, socio-technical view
+    massnahmen:
+    - Record requirements before buying or building.
+    - Ask future users early.
+    nachweise:
+    - Request or requirements document
+    - Test cases with users
+  MP-2.1:
+    titel: Task and technique of the system defined
+    massnahmen:
+    - 'Record the AI task type: generate, classify, predict, recommend.'
+    - Note assumptions and limits.
+    nachweise:
+    - Inventory description
+    - Limits recorded in D-09
+  MP-2.2:
+    titel: Knowledge limits and human use of outputs
+    massnahmen:
+    - Document operating limits and out-of-scope conditions.
+    - Record dependencies on data, interfaces and other systems.
+    - Inform users about limits and review duties.
+    nachweise:
+    - Limits recorded in D-09
+    - User information
+    - Dependencies in the resource sheet
+  MP-2.3:
+    titel: Test basis and data choices justified
+    massnahmen:
+    - Check data for suitability, representativeness, provenance and currency.
+    - Record test method, metrics and assumptions.
+    - Challenge proxies when a model estimates the unobservable (extended).
+    nachweise:
+    - Datasheets
+    - Test plan
+  MP-3.1:
+    titel: Expected benefits examined
+    massnahmen:
+    - Describe benefits per affected group.
+    - Compare with today's process without AI.
+    nachweise:
+    - Benefit column in D-09
+    - Opportunities in D-07
+  MP-3.2:
+    titel: Costs of errors and failures estimated
+    massnahmen:
+    - Record who or what could be harmed, when and how.
+    - Roughly estimate cost of errors and outages, including non-monetary.
+    nachweise:
+    - Section on failures and misuse in D-09
+    - Impact in the register
+  MP-3.3:
+    titel: Application scope matched to capability
+    massnahmen:
+    - 'Keep permitted use narrow: purposes, data, users, countries.'
+    - Involve procurement and legal.
+    nachweise:
+    - Approved-use list with conditions and data class
+  MP-3.4:
+    titel: Operator proficiency ensured
+    massnahmen:
+    - Define competence requirements per role.
+    - Train on limits, failure patterns and over-reliance.
+    - Involve users in testing.
+    nachweise:
+    - Competence matrix
+    - Training material
+    - Test record with users
+  MP-3.5:
+    titel: Human oversight defined and checked
+    massnahmen:
+    - Define oversight per system.
+    - Spot-check that oversight works.
+    nachweise:
+    - Inventory column for oversight
+    - Spot check of reviews
+  MP-4.1:
+    titel: Technical and legal risks of components
+    massnahmen:
+    - Review terms, licences and rights, including open source.
+    - 'Record third-party material: models, libraries, datasets.'
+    - Watch the vendor's release and change practice.
+    nachweise:
+    - Contract check
+    - Resource sheet
+    - Datasheet with rights
+  MP-4.2:
+    titel: Controls per component incl. third party
+    massnahmen:
+    - Keep an approved-tools list.
+    - Apply normal procurement, security and privacy controls to AI.
+    nachweise:
+    - Approved-tools list
+    - Supplier register
+  MP-5.1:
+    titel: Likelihood and size of each impact
+    massnahmen:
+    - Rate likelihood and magnitude per impact, benefits included.
+    - Consider known incidents with similar systems.
+    nachweise:
+    - Risk register
+    - Magnitude recorded in D-09
+  MP-5.2:
+    titel: Ongoing dialogue about impacts
+    massnahmen:
+    - Consult affected people or their representatives.
+    - Feed operational feedback into assessments.
+    nachweise:
+    - Column ‘consulted’ in D-09
+    - Reports
+  MS-1.1:
+    titel: Metrics for top risks selected
+    massnahmen:
+    - Choose metrics for the main risks.
+    - Record unmeasured risks with reasons.
+    - Set acceptable error limits per system.
+    nachweise:
+    - Measurement plan
+    - Test criteria
+    - Reasons for unmeasured risks
+  MS-1.2:
+    titel: Metrics and controls regularly reassessed
+    massnahmen:
+    - Review metrics and controls for fitness yearly.
+    - Add a metric where errors went unnoticed.
+    nachweise:
+    - Management review with a check of the metrics
+  MS-1.3:
+    titel: Independent and external experts involved
+    massnahmen:
+    - Have it reviewed by people who did not deploy the system.
+    - Involve users and experts as needed.
+    nachweise:
+    - Approval by a second person
+    - Internal audit
+  MS-2.1:
+    praezisierung: "The standard requires decisions on tests but does not show whether test tools and data are valid. Record test tools and their status in D-12 and D-13."
+    titel: Test sets, metrics and tools documented
+    massnahmen:
+    - Record test cases, criteria, results, version and tools.
+    nachweise:
+    - Test report with system version
+  MS-2.2:
+    titel: Human-subject tests protected, representative
+    massnahmen:
+    - Test with personal data only lawfully and sparingly.
+    - Choose test data that matches the real users and affected people.
+    - Break results down by group (extended).
+    nachweise:
+    - Description of the test data
+    - Legal basis or consent
+  MS-2.3:
+    titel: Performance measured in realistic conditions
+    massnahmen:
+    - Test with own typical, hard and ambiguous cases.
+    - Note differences between test and live use.
+    nachweise:
+    - Test report
+  MS-2.4:
+    titel: Behaviour monitored in production
+    massnahmen:
+    - Compare live samples with test results.
+    - Retest after vendor updates.
+    - Set an alert threshold for quality loss.
+    nachweise:
+    - Spot-check record
+    - Measured values
+    - Retest after an update
+  MS-2.5:
+    praezisierung: "The standard requires decisions, not proof of validity or test details. Record the test details in D-12 and in D-14 what you disclose."
+    titel: Validity shown, limits of generalization noted
+    massnahmen:
+    - Define validity range and operating conditions.
+    - Measure robustness and variance.
+    - Define actions when used outside the range.
+    nachweise:
+    - Validation report
+    - Operating limits in the documentation
+  MS-2.6:
+    titel: Safety checked, safe failure shown
+    massnahmen:
+    - Show safe behaviour on error and outage.
+    - Test edge cases and load before use.
+    - Run an incident drill and measure the response time.
+    nachweise:
+    - Edge-case test report
+    - Drill record
+  MS-2.7:
+    titel: Security and resilience evaluated
+    massnahmen:
+    - Include manipulation and misuse cases in tests.
+    - Check vendor security evidence.
+    - Red-team exercises for own development (extended).
+    nachweise:
+    - Test cases with manipulated inputs
+    - Certificates or audit reports
+  MS-2.8:
+    titel: Transparency and accountability risks examined
+    massnahmen:
+    - Keep logs for traceability.
+    - Count overrides, complaints and response times.
+    - Record go and no-go decisions with names.
+    nachweise:
+    - Logs
+    - Statistics on overrides and complaints
+    - Approvals
+  MS-2.9:
+    titel: Model explained, outputs interpreted
+    massnahmen:
+    - Decide the needed level of explainability per system.
+    - Check explanations with users for clarity.
+    - Keep a model card for own development (extended).
+    nachweise:
+    - Explainability objective in D-09
+    - Model card
+    praezisierung: 'In D-09, extend the explainability objective to interpretation in context: do users understand what an output means for their case? In D-14, tailor information to each audience.'
+  MS-2.10:
+    titel: Privacy risk examined
+    massnahmen:
+    - Record and minimize personal data in the system.
+    - Control access to training and production data.
+    - Link the data protection impact assessment.
+    nachweise:
+    - Data rules in D-13
+    - Data protection impact assessment
+    - Access concept
+    praezisierung: In D-09, reference the linked data protection impact assessment (the field exists); with an ISMS also ISO/IEC 27001 control 5.34. Add AI-specific privacy risks such as inferences about people and data leakage through outputs to D-06 as risk sources.
+  MS-2.11:
+    titel: Fairness and bias evaluated
+    massnahmen:
+    - 'For AI about people: compare outputs by group in samples.'
+    - Request bias test information from the vendor.
+    - Set tolerated disparity and response.
+    nachweise:
+    - Results per group
+    - Vendor information
+    - Threshold
+  MS-2.12:
+    titel: Environmental impact assessed
+    massnahmen:
+    - Assess relevance of energy and resource use per system.
+    - Ask the vendor for figures.
+    - Estimate consumption of own training (extended).
+    nachweise:
+    - Environment objective in D-09
+    - Vendor information
+    - Reference to climate change in D-01
+    praezisierung: For SMEs, the environment objective in D-09 and the compute resources in D-10 with a rough estimate of consumption per system are enough. Choose a smaller model where it suffices.
+    revision: The announced US revision may drop this item. The kit keeps it because ISO/IEC 42001:2023 requires climate change to be considered in 4.1.
+  MS-2.13:
+    titel: Effectiveness of test methods evaluated
+    massnahmen:
+    - Check whether metrics and tests actually catch errors.
+    - Prefer simple metrics.
+    nachweise:
+    - Note in the management review
+  MS-3.1:
+    titel: Known and emerging risks tracked
+    massnahmen:
+    - Compare user reports with internal metrics.
+    - Measure response time to errors.
+    - Compare with the result without AI.
+    nachweise:
+    - Report log
+    - Response-time metric
+  MS-3.2:
+    titel: Hard-to-measure risks still tracked
+    massnahmen:
+    - 'Track hard-to-measure risks qualitatively: interviews, reports.'
+    - Name who tracks emerging risks.
+    nachweise:
+    - Reports
+    - Interview notes
+    - Roles
+  MS-3.3:
+    titel: Reports and appeals from affected people used
+    massnahmen:
+    - Analyse reports and appeals by type and number.
+    - Check awareness of the reporting channel.
+    nachweise:
+    - Analysis of reports
+    - Metric Z-005
+  MS-4.1:
+    titel: Measurement tied to deployment context
+    massnahmen:
+    - Involve users in test cases and evaluation.
+    - Make it easy to voice doubts and feedback.
+    nachweise:
+    - Test record with users
+  MS-4.2:
+    titel: Results validated with domain experts
+    massnahmen:
+    - Ask users periodically about satisfaction and trust.
+    - Analyse overrides and feed them into improvements.
+    nachweise:
+    - Short survey
+    - Statistics on overrides
+  MS-4.3:
+    titel: Gains or declines in performance recorded
+    massnahmen:
+    - Record baselines and track trends.
+    - Measure the effect of updates and changes.
+    nachweise:
+    - Measured values over time
+  MG-1.1:
+    titel: Go or no-go decision made
+    massnahmen:
+    - Decide before use whether the system meets its purpose.
+    - Rebalance benefits and risks regularly in operation.
+    nachweise:
+    - Approval with test report
+    - Review with an assessment of benefits
+  MG-1.2:
+    titel: Treatment prioritized by impact and likelihood
+    massnahmen:
+    - Prioritize treatment by risk score.
+    - Allocate effort and oversight by risk.
+    nachweise:
+    - Treatment plan with priority
+  MG-1.3:
+    titel: Responses to high risks planned
+    massnahmen:
+    - 'Choose an option per high risk: avoid, reduce, share, accept.'
+    - Store records in an organized, protected repository.
+    nachweise:
+    - Treatment plan
+    - Filing under D-26
+  MG-1.4:
+    titel: Residual risks disclosed downstream
+    massnahmen:
+    - Record and approve residual risks.
+    - Inform users and customers about remaining limits.
+    nachweise:
+    - Acceptance of residual risk with date
+    - User and customer information
+  MG-2.1:
+    titel: Resources and non-AI options weighed
+    massnahmen:
+    - Plan effort for risk treatment.
+    - Seriously consider manual or semi-automated alternatives.
+    nachweise:
+    - Resources in the plan
+    - Note on alternatives
+  MG-2.2:
+    titel: Value of deployed systems sustained
+    massnahmen:
+    - Set conditions and business rules for outputs.
+    - Collect feedback during operation.
+    - Check insurance and contracts for risk transfer.
+    nachweise:
+    - Conditions in the approved-use list
+    - Insurance check
+  MG-2.3:
+    titel: Response to newly found risks
+    massnahmen:
+    - 'Process for new, unexpected risks: report, assess, treat.'
+    - Be able to switch a system off quickly.
+    nachweise:
+    - Incident log
+    - Reassessment with date
+  MG-2.4:
+    titel: Misbehaving systems replaced or switched off
+    massnahmen:
+    - Define authority and thresholds for suspension.
+    - Maintain and know the fallback.
+    - Root-cause analysis and criteria for redeployment.
+    nachweise:
+    - RACI for human oversight
+    - Fallback
+    - Analysis in D-22
+  MG-3.1:
+    titel: Third-party risks monitored
+    massnahmen:
+    - Reassess AI vendors yearly and on events.
+    - 'Watch warning signs: thin documentation, unannounced changes, missing security info.'
+    - Plan for dependency and exit.
+    nachweise:
+    - Supplier register with review date
+    - Conditions
+    - Exit clause
+  MG-3.2:
+    titel: Pre-trained models kept under watch
+    massnahmen:
+    - Keep pre-trained models with version in the inventory.
+    - Retest after model changes.
+    - Replace models that no longer meet criteria (extended).
+    nachweise:
+    - Resource sheet with model version
+    - Test report after a change
+  MG-4.1:
+    titel: Post-deployment monitoring plan in place
+    massnahmen:
+    - 'Monitoring plan per system: samples, reports, updates, incidents.'
+    - Track deletion and correction requests.
+    - Share findings with vendor and users.
+    nachweise:
+    - Operating rules in D-12
+    - Measurement plan
+    - Log of data requests
+  MG-4.2:
+    titel: Measurable improvements built into updates
+    massnahmen:
+    - Derive improvements from feedback and measurements.
+    - Justify trade-offs and decisions.
+    nachweise:
+    - Improvement register
+    - Decisions of the management review
+  MG-4.3:
+    titel: Incidents and errors communicated and handled
+    massnahmen:
+    - Keep a register of incidents, errors and near misses with severity and response.
+    - Log changes with reason, test and approval.
+    - Inform affected people and users.
+    nachweise:
+    - Register D-22
+    - Change log
+    - Notifications
+controls:
+  RMF-01:
+    titel: Trustworthiness priorities and trade-offs set
+    zweck: For each AI system the company knows which trustworthiness characteristics matter most, and it resolves trade-offs deliberately rather than by chance.
+    umsetzung: Pick the three or four most important characteristics per system, for example reliability and privacy for a chatbot that handles customer data. Record known trade-offs, such as accuracy against explainability or usefulness against data minimization, each with the decision and its rationale. The principles belong in the AI policy D-03, the selection per system in the test and measurement plan.
+    nachweis: Principles in D-03, ranking of characteristics and resolved trade-offs per system with date and approval.
+  RMF-02:
+    titel: Orderly retirement of AI systems
+    zweck: An AI system is retired in a way that leaves no data, access rights or dependencies behind and lets work continue without interruption.
+    umsetzung: 'Define triggers, for example replacement, end of contract or a risk that cannot be controlled. Then work through a checklist: check dependent processes and interfaces, provide a successor or substitute process, inform users and affected external parties, revoke access, terminate contracts, have the vendor delete data and file the confirmation, set retention for logs, settings and assessments, and update the inventory status. People who have worked with the system for a long time need a short introduction to the new process.'
+    nachweis: Decision with date, completed checklist, deletion confirmation, inventory status ‘retired’ with retention period.
+  RMF-03:
+    titel: Cross-disciplinary assessments
+    zweck: Risks and impacts are not assessed from an IT perspective alone but with the knowledge of the areas that use the system or are affected by it.
+    umsetzung: 'Set a minimum line-up in procedure D-08: business unit, IT, data protection, human resources where people are affected, and legal or representatives of affected people where needed. Where in-house knowledge is missing, bring in outside experts. Record in D-09 who contributed.'
+    nachweis: Minimum line-up in D-08, contributors per impact assessment, involvement of outside experts.
+  RMF-04:
+    titel: Oversight and intervention per AI system
+    zweck: For every system it is clear who reviews outputs, when a person steps in, and that this person is competent to do so.
+    umsetzung: Record the level of automation in the inventory D-10 and, per system, who reviews outputs, who may intervene or stop the system, and in which cases a person must decide. Distinguish oversight from mere use. Spot-check that oversight works, for example by looking at the number of overrides. Roles are set out in D-04, procedures in D-12.
+    nachweis: Oversight column in the inventory, RACI for human oversight, training record, spot check of reviews.
+  RMF-05:
+    titel: Feedback and appeals handled
+    zweck: Customers, staff and affected people can give feedback and appeal against an AI output; the company evaluates this and learns from it.
+    umsetzung: 'Extend the reporting channel in D-14: affected people can ask for a person to review an AI output. Describe the channel in plain language, with a contact point and a deadline. Analyse reports and appeals quarterly by type and number and feed findings into the risk register D-07 and the operating rules D-12. Check from time to time whether people know the channel.'
+    nachweis: Description of the reporting channel including appeals, report log, quarterly analysis, resulting changes.
+  RMF-06:
+    titel: Third-party rights in AI components and outputs
+    zweck: Models, data and outputs are used only as far as licences and third-party rights allow.
+    umsetzung: Before use, review the terms and licences of models, libraries and datasets, including open source. Clarify who owns the outputs and whether the vendor indemnifies against third-party claims. Set out in the acceptable-use rules D-15 how images, code and texts produced by AI may be used. The review belongs in the supplier assessment D-16.
+    nachweis: Licence and contract review per system, rules for outputs in D-15, allocation of responsibilities with the vendor.
+  RMF-07:
+    titel: Switch-off and fallback per AI system
+    zweck: If a system fails or misbehaves, the company can switch it off quickly and keep working without AI.
+    umsetzung: Define per system who may switch it off or suspend it, at which thresholds and triggers this happens, and what the fallback looks like, either manual or an alternative service. Test the fallback for critical systems, inform users when a system is switched off, and govern redeployment with a root-cause analysis. Agree with vendors on incident notification, advance notice of model changes and response times.
+    nachweis: Authority, triggers and fallback per system in D-12, test record of the fallback, contract clauses in D-16.
+  RMF-08:
+    titel: Deployment decision with value, cost, alternatives
+    zweck: An AI system is used only if its benefits outweigh risks and costs and a solution without AI has been considered.
+    umsetzung: Extend the decision in D-09 with the expected business value, the solution without AI that was considered (manual or semi-automated), the effort for risk treatment and minimum quality thresholds as a condition. Set a date for the next review and reassess the benefits at every review.
+    nachweis: Decision in D-09 with benefits, alternative, conditions and review date; review with an assessment of benefits.
+  RMF-09:
+    titel: Test and measurement plan per AI system
+    zweck: Every system is tested with cases from real use and monitored with metrics that fit its main risks.
+    umsetzung: Record per system test cases from daily work (typical, hard and ambiguous cases), metrics with threshold and frequency, and differences between test and live use. Record risks you cannot measure with reasons and track them qualitatively. Tests involving people, such as a pilot with staff, only with information, consent and the option to withdraw. Deployers of purchased AI can rely on their own spot checks and the vendor's evidence; for own development or own training the full form applies.
+    nachweis: Test and measurement plan per system, test report with system version, reasons for unmeasured risks.
+  RMF-10:
+    titel: Measurements independently reviewed
+    zweck: Someone who did not build or deploy the system checks whether metrics and tests actually catch errors.
+    umsetzung: 'At least once a year, have a person outside the team that builds or configures the system assess the test and measurement plan: fitness of the metrics, effectiveness of the controls, confirmation of results by experts from the business. The internal audit D-20 can take on this role. Where errors went unnoticed, add a new metric.'
+    nachweis: Review or audit report with findings on the metrics, note in the management review.
+  RMF-11:
+    titel: Safety and fail-safe behaviour demonstrated
+    zweck: A system that could endanger people or property fails safely and stays under control even outside its intended range.
+    umsetzung: Before use, test edge cases, load and behaviour outside the intended range. Demonstrate the safe state on error and outage, and measure the response time in a drill. This matters most for AI in machines and plants.
+    nachweis: Edge-case test report, evidence of the safe state, drill record with response time.
+  RMF-12:
+    titel: AI-specific attacks tested
+    zweck: Attacks that exist only for AI are tested before use and after major changes.
+    umsetzung: 'Include manipulation and misuse cases in the tests: manipulated inputs (prompt injection), poisoned training or knowledge data, leakage of the model or of data through outputs. Deployers of purchased AI check the vendor''s security evidence and run their own spot checks; for own development or own training, targeted red-team exercises are added. With an ISMS this belongs in the security testing under ISO/IEC 27001.'
+    nachweis: Test cases with manipulated inputs and results, vendor certificates or audit reports.
+  RMF-13:
+    titel: Unequal treatment measured and limited
+    zweck: AI that judges people or opens up opportunities for them does not treat groups differently without objective reason.
+    umsetzung: 'Only where people are affected: compare outputs by group in samples (for example language, age or gender where lawful), check outputs for stereotypes, request information on bias testing from the vendor, and set which disparity is tolerable and what happens when it is exceeded. Keep three causes in mind: skewed data, statistical effects and human assumptions.'
+    nachweis: Results per group, threshold and response, vendor information.
+  RMF-14:
+    titel: Emerging and hard-to-measure risks watched
+    zweck: The company spots new AI risks early, including those for which no metric exists yet.
+    umsetzung: Define sources (vendor notices, public collections of AI incidents, authorities, industry associations) and a responsible person. Review the sources every six months, track hard-to-measure risks qualitatively, for example through conversations and reports, and transfer findings to the risk register D-07.
+    nachweis: Source list with owner, review note with date, new entries in the risk register.
+  RMF-15:
+    titel: Residual risks communicated downstream
+    zweck: Anyone who uses AI outputs or receives an AI product knows the limits the company has knowingly accepted.
+    umsetzung: 'Include accepted residual risks that affect users or customers in the user information or product documentation: known limits, typical errors and what users must check themselves. The acceptance of the residual risk with date is recorded in the risk register D-07.'
+    nachweis: Acceptance of the residual risk with date, user or customer information stating the limits.
+  RMF-16:
+    titel: Provider model and version changes tracked
+    zweck: The company notices when a vendor changes the model behind a service and then briefly checks that the system still works as expected.
+    umsetzung: Record vendor, base model, version and access mode per system in the inventory D-10, including generative AI embedded in standard software. Subscribe to change notices and read the vendors' system and model cards. A model change, an announced retirement of the model or service (date in the inventory), own fine-tuning, connecting own data or a new area of use triggers a short check with the test cases from RMF-09.
+    nachweis: Inventory with model and version, change notices, test report after the change.
+  RMF-G01:
+    titel: Fabricated content checked before use
+    zweck: Generative AI outputs that sound convincing but are wrong do not reach customers or decisions unchecked.
+    umsetzung: A competent person checks outputs that are used externally or support decisions; sources and citations are looked up. Do not judge quality from anecdotes; before approval, use 10 to 20 own test cases from daily work. Record detected errors and near misses briefly and review them quarterly.
+    nachweis: Review rule in D-15, test cases with results, error list with quarterly review.
+  RMF-G02:
+    titel: No confidential data in unvetted AI services
+    zweck: Confidential and personal data go only into AI services that have been checked and approved for them.
+    umsetzung: Keep a list in D-15 of approved AI services and the data classes that may be entered. Before purchase, check whether inputs are used for training, where data is stored, which subprocessors are involved and how deletion works. Review outputs for personal data before publication.
+    nachweis: Approved-services list with data classes, vendor assessment with the answers, review note before publication.
+  RMF-G03:
+    titel: Provenance and labelling of AI-generated content
+    zweck: Customers and the public can see where AI was involved, and the company can show where its content came from.
+    umsetzung: Tell customers and affected people when they interact with AI or receive AI content (with the EU AI Act module together with EUAIA-05 to EUAIA-07). For published images, videos and texts, record whether and with which tool AI was involved, and do not remove labels or metadata. Train staff to recognize fakes and understand labels.
+    nachweis: Labelling rule in D-15, provenance note for published content, training record.
+  RMF-G04:
+    titel: Protection against prompt injection and tool abuse
+    zweck: Chatbots, plug-ins and agents cannot be tricked by hidden instructions into unwanted actions or into leaking data.
+    umsetzung: For systems with access to data or tools, create a simple threat model, grant the least privilege possible and allow no automatic actions without confirmation. Before approval and after major changes, run targeted attack attempts, both direct and indirect via documents, emails or web pages. After fine-tuning or connecting own data, check that the safeguards still work.
+    nachweis: Threat model, authorization concept, record of attack attempts with results.
+  RMF-G05:
+    titel: Copyright in inputs and outputs respected
+    zweck: The company does not enter protected third-party content into AI services without permission and uses outputs only within its rights.
+    umsetzung: Classify content with third-party rights (customer drawings, licensed texts, images, voices) and set rules per class in D-15. In contracts, cover rights to outputs, indemnity by the vendor and quality and security requirements. Define who reviews infringement claims and how content is taken down.
+    nachweis: Rules per content class in D-15, contract review, procedure for infringement claims.
+  RMF-G06:
+    titel: Harmful outputs of public-facing chatbots prevented
+    zweck: Publicly accessible chatbots and generators do not produce dangerous, hateful, offensive or discriminatory content in the company's name.
+    umsetzung: Publish terms of use for publicly accessible chatbots and generators. Enable the vendor's content filters and define topics the chatbot does not answer. Review reported problematic answers and adjust the configuration.
+    nachweis: Terms of use, filter settings and blocked topics, review of reported answers.
+  RMF-G07:
+    titel: Over-reliance on AI outputs avoided
+    zweck: Staff do not adopt generative AI outputs blindly, and chatbots do not create false expectations.
+    umsetzung: Define per type of use who checks and when AI is not used (together with RMF-04). Train all users on the limits of generative AI, such as fabricated content and bias. Record cases where people override AI outputs and review them. Avoid human-like chatbot design (name, picture, simulated feelings) unless there is a reason.
+    nachweis: Rules per type of use in D-15, training record, review of overrides.
+genai_risiken:
+  gai-cbrn:
+    titel: Help towards weapons of mass harm
+    kmu_fall: Hardly relevant; at most in chemistry, laboratories or pharma, where a chatbot answers technical questions about hazardous substances.
+    praezisierung: No control of its own; a note in the guide is enough. Companies handling hazardous substances block such topics in the chatbot (RMF-G06).
+  gai-konfabulation:
+    titel: Confident but false output
+    kmu_fall: A quotation, a translated safety instruction or legal information in a chat contains invented details that nobody checks.
+  gai-gefaehrlich:
+    titel: Dangerous, violent or hateful output
+    kmu_fall: A customer chatbot gives violent or hateful answers to provocative questions.
+  gai-datenschutz:
+    titel: Leakage and inference of personal data
+    kmu_fall: Staff paste personal data into a free chatbot; an assistant draws conclusions about employees.
+  gai-umwelt:
+    titel: High energy and resource use
+    kmu_fall: A large model handles a simple task that a smaller one could have done.
+    praezisierung: No control of its own; MS-2.12 with the environment objective in D-09 and the compute resources in D-10 is enough.
+  gai-verzerrung:
+    titel: Biased or uniform output
+    kmu_fall: Job ads with one-sided wording, pre-selection of applications, poorer answers in dialect or a foreign language.
+  gai-mensch-ki:
+    titel: Over-reliance, aversion, anthropomorphism
+    kmu_fall: Outputs are adopted without checking, or a chatbot with a person's name comes across as human.
+  gai-integritaet:
+    titel: Misinformation and fakes
+    kmu_fall: Unlabelled marketing images, cloned voices, fake calls from the boss.
+  gai-sicherheit:
+    titel: Attacks using and against generative AI
+    kmu_fall: Phishing emails written with AI, hidden instructions in emails or documents that steer the assistant, poisoned knowledge sources.
+  gai-schutzrechte:
+    titel: Infringement of IP and likeness
+    kmu_fall: Customer drawings in a free chatbot, generated images or voices that infringe third-party rights.
+  gai-anstoessig:
+    titel: Obscene or abusive imagery
+    kmu_fall: A publicly accessible image generator run by the company produces offensive or abusive images.
+  gai-lieferkette:
+    titel: Opaque components in the value chain
+    kmu_fall: Copilot, extensions and plug-ins with unclear components; the vendor switches the model without notice.
+merkmale:
+  gueltig:
+    titel: Valid and reliable
+    beschreibung: The system demonstrably serves its purpose and performs consistently, even with unusual inputs. Foundation for the other characteristics.
+    d09_hinweis: 'Reliability objective. Add: accuracy evidenced, for example by an own test or vendor information.'
+  sicher:
+    titel: Safe
+    beschreibung: The system puts neither people nor property nor the environment at risk, even when it fails.
+    d09_hinweis: 'The safety objective asks about hazards and attacks in one question. Split it into two sub-questions: harm to people; attacks and misuse.'
+  geschuetzt:
+    titel: Secure and resilient
+    beschreibung: The system withstands attacks and misuse and recovers after a disruption.
+    d09_hinweis: Sub-question on attacks and misuse in the safety objective; add recovery and fallback (D-12).
+  rechenschaft:
+    titel: Accountable and transparent
+    beschreibung: Responsibility is assigned, and affected people receive appropriate information about the system and its outputs. Cuts across all characteristics.
+    d09_hinweis: Accountability and transparency objectives. The kit separates what NIST combines; no change needed.
+  erklaerbar:
+    titel: Explainable and interpretable
+    beschreibung: How the system reaches an output can be set out, and users understand what the output means for their case.
+    d09_hinweis: The explainability objective asks how an output is justified. Add interpretation in context.
+  datenschutz:
+    titel: Privacy-enhanced
+    beschreibung: The system protects privacy and personal data and avoids unwanted inferences about people.
+    d09_hinweis: Privacy objective. Name AI-specific inferences about people as an example.
+  fair:
+    titel: Fair, with harmful bias managed
+    beschreibung: The system treats people equally; bias from data, statistics and human assumptions is identified and limited.
+    d09_hinweis: Fairness objective. Add the three causes of bias as help text.
+ziele_ohne_merkmal:
+  umwelt: Not a NIST characteristic; the AI RMF covers environmental impact in MS-2.12. The objective comes from ISO/IEC 42001 Annex C and clause 4.1 and stays.
+werte:
+  abdeckung:
+    ganz: fully
+    teilweise: partly
+    nicht: not
+  stufe:
+    lite: Lite (basic scope)
+    ausbau: Extended (own development, high risk)
+  kmu_relevanz:
+    hoch: high
+    mittel: medium
+    gering: low
+  passung:
+    gut: good
+    teilweise: partial
+    vermischt: mixed
+  rolle:
+    grundlage: foundation
+    querschnitt: cross-cutting
+    merkmal: characteristic
+  art:
+    allgemein: general
+    genai: generative AI
+stand:
+  modul: NIST AI RMF
+  kurz: The NIST AI RMF is a voluntary framework from the US agency NIST that sets out outcomes for managing AI risk. It is neither law nor a standard; NIST does not certify.
+  botschaft: ISO/IEC 42001 is the certifiable management system, the AI RMF a voluntary catalogue of outcomes. NIST does not certify.
+  fassungen:
+    ai-100-1: NIST AI 100-1, Artificial Intelligence Risk Management Framework (AI RMF 1.0), 26/01/2023
+    ai-600-1: NIST AI 600-1, Generative Artificial Intelligence Profile, July 2024
+    playbook: NIST AI RMF Playbook (PDF of 02/08/2024, no version stated)
+  revision: NIST has announced a revision of AI RMF 1.0 (US ‘AI Action Plan’, July 2025). On 21/10/2026 there was no draft, no version number and no date. AI RMF 1.0 remains authoritative. The revision is likely to affect GOVERN 3 and MEASURE 2.12 in particular; the kit keeps these items on its own grounds.
+  veraltet: The status of the NIST AI RMF was last checked on {datum}. Check nist.gov for a new version.
+  weitere:
+    ir-8596: 'NIST IR 8596, Cyber AI Profile: initial preliminary draft of 16/12/2025 only (comments until 30/01/2026). Not part of the module; worth noting for companies with an ISMS once the final version appears.'
+    profil-kritische-infrastruktur: 'Profile ‘Trustworthy AI in Critical Infrastructure’: concept note of 07/04/2026 only. Not part of the module.'
+  abgleich:
+    crosswalk-42001: The mapping to ISO/IEC 42001 is the kit's own assessment. It was cross-checked against the crosswalk ‘NIST AI RMF to ISO/IEC FDIS 42001’ (provided by Microsoft, listed on airc.nist.gov, not a NIST work). Its tables are not reproduced; 7 errors in it are corrected in the kit's own mapping.
+  lizenz: The NIST documents are works of the US government and in the public domain in the United States under 17 U.S.C. § 105. Outside the United States, NIST reserves its rights but grants a worldwide, royalty-free licence to reprint them and to create derivative works (nist.gov/oism/copyrights). The kit quotes the functions, categories and subcategories, the trustworthiness characteristics, the twelve GenAI risks and the referenced actions of NIST AI 600-1 verbatim with page references, uses its own short titles and texts, and ships the PDFs unchanged, with the notice "Republished courtesy of the National Institute of Standards and Technology". Their mention does not imply endorsement by NIST.
+  quellenangabe: 'Source: National Institute of Standards and Technology (NIST), NIST AI 100-1, AI RMF 1.0, January 2023, https://doi.org/10.6028/NIST.AI.100-1'
+  pdf_pruefung: The PDFs supplied are bit-identical to the files on nvlpubs.nist.gov and airc.nist.gov (SHA-256 checked on 21/10/2026).
+original:
+  uebersetzung: Translation by KMU-CIO, not official
+  fundstelle: '{dokument}, p. {seite}'
+  fundstelle_bis: '{dokument}, pp. {seite} to {bis}'
+  aufklappen: Original text
+  massnahmen_600: Actions from NIST AI 600-1 on which the control is based
+  subkategorien_control: Subcategories whose gap the control closes
+  merkmale: Trustworthiness characteristics according to NIST AI 100-1 section 3
+  messen: Subcategories MEASURE 2 (evaluation of the trustworthiness characteristics)
+  risiken: The twelve risks according to NIST AI 600-1 section 2
+  nachlesen_100: 'NIST AI 100-1, p. {seite}: {was}'
+  nachlesen_600: 'NIST AI 600-1, p. {seite}: {was}'
+  was:
+    tabellen: categories and subcategories (tables 1 to 4)
+    merkmale: trustworthiness characteristics (section 3)
+    messen: MEASURE 2 (table 3)
+    risiken: twelve risks of generative AI (section 2)
+    massnahmen: suggested actions (section 3)

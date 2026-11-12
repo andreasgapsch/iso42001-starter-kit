@@ -1,0 +1,90 @@
+# Etappe E0 Startinterview. Format: src/gefuehrt/FORMAT.md
+seiten:
+  - { id: E0-start, typ: info, norm: "4.1", leitfaden: 1 }
+  - id: E0-firma
+    typ: formular
+    norm: "4.1"
+    leitfaden: 1
+    beispiel: organisation
+    felder:
+      - { pfad: organisation.name, typ: text, pflicht: true }
+      - { pfad: organisation.branche, typ: auswahl, optionen: branche, pflicht: true }
+  - id: E0-groesse
+    typ: formular
+    norm: "4.1, 4.3"
+    leitfaden: 1
+    beispiel: organisation
+    felder:
+      - { pfad: organisation.mitarbeitende, typ: zahl, pflicht: true }
+      - { pfad: organisation.standorte, typ: textarea }
+  - id: E0-isms
+    typ: formular
+    norm: "4.4, Anhang D"
+    vorlage: D-23
+    leitfaden: 2
+    beispiel: meta.gefuehrt.antworten.isms
+    felder:
+      - pfad: meta.gefuehrt.antworten.isms
+        typ: auswahl
+        optionen: isms
+        pflicht: true
+        setzt:
+          zertifiziert: { meta.mitIsms: true, meta.ismsZertifiziert: true }
+          vorhanden: { meta.mitIsms: true, meta.ismsZertifiziert: false }
+          nein: { meta.mitIsms: false, meta.ismsZertifiziert: false }
+  - id: E0-eu
+    typ: formular
+    norm: "4.1"
+    vorlage: D-24
+    leitfaden: 5
+    aiact: [art-2]
+    beispiel: organisation.euBezug
+    felder:
+      - { pfad: organisation.euBezug.kundenEu, typ: janein, pflicht: true }
+      - { pfad: organisation.euBezug.outputEu, typ: janein, pflicht: true }
+      - { pfad: organisation.euBezug.niederlassungEu, typ: janein, pflicht: true }
+  - id: E0-ki
+    typ: formular
+    norm: "4.1, A.6"
+    leitfaden: 1
+    beispiel: organisation
+    felder:
+      - { pfad: organisation.entwickeltKi, typ: janein, pflicht: true }
+      - { pfad: organisation.verkauftKiProdukte, typ: janein, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.bekannteKiWerkzeuge, typ: liste-text }
+  - id: E0-termin
+    typ: formular
+    norm: "9.2, 9.3"
+    vorlage: D-25
+    leitfaden: 10
+    beispiel: organisation
+    felder:
+      - { pfad: organisation.zielterminStage1, typ: datum }
+      - { pfad: organisation.projektauftrag.pensumProzent, typ: zahl }
+      - { pfad: organisation.zielterminZertifizierung, typ: datum }
+      - { pfad: meta.gefuehrt.antworten.ausloeser, typ: mehrfach, optionen: ausloeser }
+  - id: E0-verantwortung
+    typ: formular
+    norm: "5.3"
+    vorlage: D-04
+    leitfaden: 1
+    beispiel: organisation.aimsVerantwortlich
+    felder:
+      - { pfad: organisation.aimsVerantwortlich, typ: person, pflicht: true }
+  - id: E0-modul
+    typ: formular
+    norm: "4.1"
+    vorlage: E-09
+    leitfaden: 5
+    aiact: [art-2, art-3, art-113]
+    beispiel: meta.modulAiAct
+    felder:
+      - pfad: meta.modulAiAct
+        typ: janein
+        vorschlag:
+          wert: true
+          wennEines: [organisation.euBezug.kundenEu, organisation.euBezug.outputEu, organisation.euBezug.niederlassungEu, organisation.verkauftKiProdukte]
+      - { pfad: meta.modulNistRmf, typ: janein }
+  # Optional und überspringbar: Logo und Primärfarbe der Firmendokumente; zählt nicht zum Fortschritt
+  - { id: E0-gestaltung, typ: gestaltung, norm: "7.5.2", leitfaden: 1 }
+  - { id: E0-fahrplan, typ: fahrplan, norm: "4 bis 10", vorlage: D-25, leitfaden: 1 }

@@ -1,0 +1,64 @@
+# N-02 Coverage matrix AI RMF and ISO/IEC 42001
+blaetter:
+  abdeckung: Coverage
+  controls: Additional controls
+  stand: Status
+titel_abdeckung: "Coverage of the 72 subcategories of the NIST AI RMF by ISO/IEC 42001 and the AIMS"
+titel_controls: "Additional controls RMF-xx for the statement of applicability"
+spalte_nist_firma: "NIST AI RMF documents (N-01 to N-04)"
+titel_stand: "Balance and status of the NIST basis"
+hinweise_abdeckung:
+  - "Column E shows how far ISO/IEC 42001 covers the outcome of the subcategory (the kit's professional assessment). Column F shows how far the kit templates cover it without this module; in several places they go beyond the standard."
+  - "Where coverage is ‘partly’ or ‘not’, column I names the additional control that closes the gap, or a refinement of existing documents (column J). Record the decision in column K: additional control included in the statement of applicability (D-11), refinement implemented, or not included with reasons."
+  - "Column M gives the number of actions NIST AI 600-1 suggests for generative AI (0 = not in the profile). The mapping to ISO/IEC 42001 is our own assessment, not taken from the crosswalk."
+hinweise_abdeckung_firma:
+  - "Coverage per subcategory by ISO/IEC 42001 (column E) and by our AIMS (column F). Where coverage is ‘partly’ or ‘not’, column K shows our decision on the additional control from the statement of applicability (D-11) or on the refinement."
+hinweise_controls:
+  - "The additional controls close the gaps between ISO/IEC 42001 and the AI RMF. Like the additional controls for the EU AI Act, they belong in the section ‘Additional controls’ of the statement of applicability (D-11)."
+  - "RMF-Gxx apply only to systems with generative AI (flag ‘Generative’ in the AI inventory D-10). Column H: deployers of purchased AI can use a shorter form; the full form applies to in-house development or own training."
+  - "The tool proposes the controls per AI system, e.g. RMF-13 only for AI affecting the legal position or opportunities of people (quick check D-09). Column K gives only the IDs of the actions in NIST AI 600-1 as origin."
+hinweis_controls_firma: "Proposal per AI system by type, role, quick check and the flag ‘Generative’; decision from the statement of applicability (D-11)."
+nicht_noetig: not needed
+praezisiert: refined
+nicht_vorgeschlagen: not proposed for any of our systems
+form_betreiber: "Deployer form: {systeme}"
+spalten:
+  - ID
+  - NIST designation
+  - Short title
+  - "ISO/IEC 42001 reference (clauses, controls)"
+  - "Coverage by ISO/IEC 42001"
+  - Coverage by the AIMS
+  - Documents in the AIMS
+  - NIST templates
+  - "Additional control or refinement"
+  - Refinement
+  - Decision
+  - "Scope (lite or extended)"
+  - "Actions in NIST AI 600-1"
+  - NIST reference
+spalten_controls: [ID, Title, Type, Subcategories, "Related ISO/IEC 42001", "Related ISO/IEC 27001", Documents, Deployer form, "Proposed for AI systems", Decision, "Origin NIST AI 600-1", "NIST AI 600-1 actions (original text)"]
+spalten_stand: [Topic, Value, Addition, Explanation]
+listen:
+  entscheid: ["included in the SoA", refined, not included, open, not needed]
+stand:
+  bilanz: Balance of the 72 subcategories
+  norm: ISO/IEC 42001
+  aims: AIMS
+  grad_ganz: "The outcome is achieved once the documents and controls listed are implemented."
+  grad_teilweise: "Structure and evidence exist, but the outcome requires more. Implement the additional control or refinement."
+  grad_nicht: "Not covered. Additional control needed."
+  zusatz: "Additional controls general, generative AI"
+  zusatz_text: "RMF-01 to RMF-16 and RMF-G01 to RMF-G07 (sheet ‘Additional controls’)"
+  praezisierungen: Refinements without a control of their own
+  fassungen: Version
+  datei: File
+  seiten: Pages
+  url: Source
+  geprueft: Status checked on
+  revision: Revision
+  revision_firma: "AI RMF 1.0 applies; a revision has been announced. We check the status before every update of the profile."
+  lizenz: Licence
+  abgleich: Cross-check of the mapping
+  pdf: PDFs in the kit
+  ablage: "Location: folder {ordner}."

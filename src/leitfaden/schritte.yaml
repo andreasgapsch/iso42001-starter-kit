@@ -1,0 +1,27 @@
+# Struktur des Leitfadens «Minimal Viable AIMS»: die 10 Schritte (sprachneutral).
+# Etappen, Normabschnitte, Vorlagen und Beteiligte kommen aus src/gefuehrt/etappen.yaml
+# (Feld «leitfaden» = Schritt). Hier steht nur, was der Leitfaden zusätzlich braucht.
+#
+# vorlagen_zusatz  weitere Vorlagen, die im Schritt helfen (nicht Ergebnis einer Etappe); Schritt 1:
+#                  D-23 nur mit ISMS, D-26 nur ohne ISMS (Kurzfassung der Lenkung ab Woche 2, Kapitel 3 und 4);
+#                  N-01 bis N-04 nur mit Modul NIST AI RMF (Kapitel 10; Aufwand nicht in pt, rund 3 bis 5 PT zusätzlich)
+# modi             Modi des KI-Assistenten (Texte: src/leitfaden/<sprache>/leitfaden.yaml, modi)
+# wochen           Kalenderwochen im Zeitplan: mit ISMS 90 Tage (Woche 1 bis 13),
+#                  ohne ISMS rund 150 Tage (Woche 1 bis 22)
+# pt               interner Aufwand in Personentagen [von, bis] je Pfad; Annahmen im Kapitel 5
+schritte:
+  - { nr: 1, vorlagen_zusatz: [D-23, D-26], modi: [1], wochen: { mit_isms: [1, 1], ohne_isms: [1, 2] }, pt: { mit_isms: [1.5, 2], ohne_isms: [2.5, 3.5] } }
+  - { nr: 2, vorlagen_zusatz: [D-27], modi: [2], wochen: { mit_isms: [2, 3], ohne_isms: [3, 5] }, pt: { mit_isms: [1.5, 2], ohne_isms: [3, 4.5] } }
+  - { nr: 3, vorlagen_zusatz: [D-15], modi: [7], wochen: { mit_isms: [3, 4], ohne_isms: [4, 6] }, pt: { mit_isms: [1.5, 2], ohne_isms: [3, 4] } }
+  - { nr: 4, vorlagen_zusatz: [D-16], modi: [3], wochen: { mit_isms: [2, 4], ohne_isms: [3, 7] }, pt: { mit_isms: [3, 4.5], ohne_isms: [4, 6] } }
+  - { nr: 5, vorlagen_zusatz: [], modi: [4, 11], wochen: { mit_isms: [4, 5], ohne_isms: [7, 8] }, pt: { mit_isms: [1, 1.5], ohne_isms: [1, 1.5] } }
+  - { nr: 6, vorlagen_zusatz: [N-04], modi: [5], wochen: { mit_isms: [5, 7], ohne_isms: [8, 12] }, pt: { mit_isms: [4.5, 6.5], ohne_isms: [8, 11.5] } }
+  - { nr: 7, vorlagen_zusatz: [N-02], modi: [6, 12], wochen: { mit_isms: [7, 8], ohne_isms: [12, 14] }, pt: { mit_isms: [2.5, 3.5], ohne_isms: [3.5, 5] } }
+  - { nr: 8, vorlagen_zusatz: [N-03], modi: [7, 10], wochen: { mit_isms: [8, 10], ohne_isms: [13, 18] }, pt: { mit_isms: [5.5, 7], ohne_isms: [12, 16] } }
+  - { nr: 9, vorlagen_zusatz: [D-05, N-01], modi: [9, 12], wochen: { mit_isms: [10, 12], ohne_isms: [18, 21] }, pt: { mit_isms: [3, 4.5], ohne_isms: [6, 10] } }
+  - { nr: 10, vorlagen_zusatz: [], modi: [8], wochen: { mit_isms: [12, 13], ohne_isms: [21, 22] }, pt: { mit_isms: [1, 1.5], ohne_isms: [2, 3] } }
+
+# Freigaben der Geschäftsleitung (Freigabekalender in Kapitel 4): Ende dieser Wochen, je Pfad gleich viele
+freigaben:
+  mit_isms: [1, 4, 5, 7, 8, 10, 12]
+  ohne_isms: [2, 6, 10, 12, 14, 18, 22]

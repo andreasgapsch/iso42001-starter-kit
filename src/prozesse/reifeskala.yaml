@@ -1,0 +1,10 @@
+# Reifeskala der Prozesse (Status-Dashboard): fünf Stufen 0 bis 4, eigene Skala des Kits.
+# Titel, Erklärung, Kriterium und Hilfetext zur Gap-Skala: src/i18n/<sprache>/prozesse.yaml, Schlüssel reifeskala.<schluessel>
+# gap: Stufen der Gap-Analyse D-00 (Reifegrade 0 bis 5, src/i18n/<sprache>/vorlagen/D-00.yaml, reifegrade), die einer
+#      Prozessstufe am ehesten entsprechen. Die Zuordnung ist eine Hilfe für die Einschätzung, keine Umrechnung.
+stufen:
+  - { stufe: 0, schluessel: nicht-begonnen, gap: [0, 1] }
+  - { stufe: 1, schluessel: definiert, gap: [2] }
+  - { stufe: 2, schluessel: eingefuehrt, gap: [3] }
+  - { stufe: 3, schluessel: wirksam, gap: [4] }
+  - { stufe: 4, schluessel: ueberprueft, gap: [5] }

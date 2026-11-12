@@ -1,0 +1,45 @@
+# E-06 Grundrechte-Folgenabschätzung
+hinweis_umfang: "Eine Datei je Hochrisiko-KI-System nach Anhang III, für das Sie Betreiber sind. Seite 1 klärt, ob die Abschätzung überhaupt nötig ist; für die meisten KMU ist sie es nicht. Höchstens vier Seiten; Details stehen in D-09."
+juristisch: "Ob Ihr Unternehmen öffentliche Dienste erbringt, ist eine Rechtsfrage. Lassen Sie die Anwendbarkeit und jede durchgeführte Abschätzung juristisch prüfen. Diese Vorlage ist keine Rechtsberatung."
+juristisch_firma: "Ob wir öffentliche Dienste erbringen, ist eine Rechtsfrage. Die Anwendbarkeit und jede durchgeführte Abschätzung lassen wir juristisch prüfen. Dieses Dokument ist keine Rechtsberatung."
+abschnitte:
+  anwendbarkeit: Anwendbarkeitsprüfung
+  abschaetzung: Abschätzung der Folgen für Grundrechte
+  dsfa: Verbindung zur Datenschutz-Folgenabschätzung
+  mitteilung: Mitteilung an die Marktüberwachungsbehörde
+  freigabe: Freigabe
+anwendbarkeit_text: "Eine Grundrechte-Folgenabschätzung nach {fs:27} ist vor der ersten Verwendung eines Hochrisiko-KI-Systems nach Anhang III nötig, aber nur für bestimmte Betreiber. Sie gilt ab {frist:FRIST-13}."
+felder:
+  system: KI-System
+  bereich: "Bereich nach Anhang III (z. B. 4a, 5b)"
+  ergebnis: Grundrechte-Folgenabschätzung nötig
+  begruendung: Begründung
+  geprueft: "Geprüft durch, am"
+  dsfa: "DSFA (Nummer, Abschnitte)"
+  behoerde: Zuständige Marktüberwachungsbehörde
+  mitgeteilt: Mitgeteilt am
+  referenz: Referenz der Mitteilung
+platzhalter_bereich: "Nr. und Buchstabe"
+fragen_kopf: [Nr., Frage, Antwort]
+fragen:
+  hochrisiko: "Setzen wir als Betreiber ein Hochrisiko-KI-System nach Art. 6(2) ein, also ein System nach {fs:Anhang III} (E-02)?"
+  infrastruktur: "Ist das System für kritische Infrastruktur bestimmt (Anhang III Nr. 2)? Diese Systeme sind von der Pflicht ausgenommen."
+  oeffentlich: "Sind wir eine Einrichtung des öffentlichen Rechts?"
+  dienste: "Sind wir eine private Einrichtung, die öffentliche Dienste erbringt, etwa im Auftrag oder anstelle der öffentlichen Hand?"
+  kredit: "Dient das System der Kreditwürdigkeitsprüfung natürlicher Personen (Anhang III Nr. 5 Bst. b) oder der Risiko- und Preisbewertung bei Lebens- und Krankenversicherungen (Anhang III Nr. 5 Bst. c)?"
+regel: "**Ergebnis:** Die Abschätzung ist nötig, wenn Frage 1 mit ja und Frage 2 mit nein beantwortet ist und mindestens eine der Fragen 3, 4 oder 5 mit ja."
+nicht_noetig: "Ist die Abschätzung nicht nötig, halten wir das Ergebnis mit Begründung fest; die folgenden Abschnitte entfallen. Die Folgenabschätzung nach ISO/IEC 42001 (D-09) bleibt in jedem Fall bestehen. Die Prüfung wiederholen wir, wenn sich Zweck, Kundenkreis oder Auftraggeber ändern."
+abschaetzung_text: "Die Abschätzung beschreibt, wie sich die Verwendung des Systems auf die Grundrechte der betroffenen Personen auswirken kann. Sie umfasst die Angaben nach {fs:27(1)} Bst. a bis f."
+hinweis_abschaetzung: "Viele Angaben stehen bereits in der Folgenabschätzung D-09 (Teil B). Verweisen Sie darauf und ergänzen Sie nur, was dort fehlt, besonders Zeitraum und Häufigkeit (b) und die Umsetzung der menschlichen Aufsicht nach Betriebsanleitung (e). Die Angaben des Anbieters nach Art. 13 sind einzubeziehen."
+aus_d09: " (aus D-09, {id})"
+inhalte:
+  a: "a) Prozesse, in denen das System gemäss seiner Zweckbestimmung verwendet wird"
+  b: "b) Zeitraum und Häufigkeit der Verwendung"
+  c: "c) Gruppen natürlicher Personen, die im konkreten Einsatz betroffen sein können"
+  d: "d) Besondere Risiken eines Schadens für diese Gruppen, unter Einbezug der Angaben des Anbieters"
+  e: "e) Umsetzung der menschlichen Aufsicht nach der Betriebsanleitung"
+  f: "f) Massnahmen, wenn Risiken eintreten, einschliesslich interner Steuerung und Beschwerdewegen"
+aktualisieren: "Die Pflicht gilt für die erste Verwendung. Für ähnliche Fälle dürfen wir uns auf frühere Abschätzungen oder solche des Anbieters stützen. Ändert sich eine der Angaben a bis f, aktualisieren wir die Abschätzung ({fs:27(2)})."
+dsfa_text: "Ist eine Pflicht bereits durch eine Datenschutz-Folgenabschätzung erfüllt (DSGVO Art. 35), dürfen wir auf die einschlägigen Abschnitte verweisen oder sie übernehmen ({fs:27(4)}). Für Schweizer Unternehmen ist die DSFA nach Art. 22 DSG geregelt; für den AI Act zählt die DSFA nach DSGVO, wenn diese anwendbar ist."
+mitteilung_text: "Nach Abschluss teilen wir das Ergebnis der Marktüberwachungsbehörde mit; dafür übermitteln wir das ausgefüllte Muster des Büros für Künstliche Intelligenz ({fs:27(3)}, Art. 27(5)). In den Ausnahmefällen nach Art. 46(1) kann die Mitteilung entfallen."
+unterschriften: ["Eigner/in des Systems", "Freigabe durch die Leitung"]

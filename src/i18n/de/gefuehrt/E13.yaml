@@ -1,0 +1,59 @@
+# Seitentexte Etappe E13 Zertifizierung vorbereiten. Format: src/gefuehrt/FORMAT.md
+E13-einfuehrung:
+  titel: Zertifizierung vorbereiten
+  frage: Was braucht es bis zum Zertifikat?
+  warum: Die Zertifizierung besteht aus zwei Teilen. Im [[g:stage-1]] prüft die [[g:zertifizierungsstelle]] Ihre Unterlagen und Ihre Bereitschaft, im [[g:stage-2]] die Umsetzung im Alltag. Danach folgen jährliche [[g:ueberwachungsaudit|Überwachungsaudits]].
+  fehler: Wer zu früh in Stage 1 geht, riskiert Feststellungen, die Stage 2 verschieben. Lassen Sie zwischen internem Audit, Managementbewertung und Stage 1 genug Zeit für Korrekturen.
+E13-stelle:
+  titel: Zertifizierungsstelle
+  frage: Welche [[g:zertifizierungsstelle]] haben Sie gewählt und ist sie für ISO/IEC 42001 akkreditiert?
+  warum: Nur eine akkreditierte Stelle stellt ein Zertifikat aus, das Kunden anerkennen. Zertifizierungsstellen werden nach ISO/IEC 17021-1 akkreditiert und erfüllen für ISO/IEC 42001 zusätzlich die Anforderungen von ISO/IEC 42006; in der Schweiz akkreditiert die Schweizerische Akkreditierungsstelle (SAS). Mit [[g:isms]] lohnt sich dieselbe Stelle für beide Normen. Haben Sie die Stelle schon in E1 gewählt, steht sie hier bereits.
+  fehler: Nicht jede Stelle, die ISO/IEC 27001 zertifiziert, ist bereits für ISO/IEC 42001 akkreditiert. Lassen Sie sich den Akkreditierungsumfang zeigen.
+  felder:
+    meta.gefuehrt.antworten.zertifizierung.stelle:
+      label: Zertifizierungsstelle
+      hilfe: Name der Stelle.
+    meta.gefuehrt.antworten.zertifizierung.akkreditiert:
+      label: Akkreditiert für ISO/IEC 42001
+      hilfe: Akkreditierungsnummer und Geltungsbereich im öffentlichen Verzeichnis prüfen.
+    meta.gefuehrt.antworten.zertifizierung.kombiniert:
+      label: Kombiniertes Audit mit dem ISMS
+      hilfe: Spart Audittage, wenn beide Systeme integriert sind.
+E13-termine:
+  titel: Audittermine
+  frage: Wann finden [[g:stage-1|Stage 1]] und [[g:stage-2|Stage 2]] statt?
+  warum: Zwischen Stage 1 und Stage 2 liegen meist einige Wochen, damit Sie Feststellungen beheben können. Planen Sie die Termine früh, denn Zertifizierungsstellen sind oft ausgebucht.
+  fehler: Ein Stage-1-Termin vor dem internen Audit oder der Managementbewertung führt zu Feststellungen. Die Prüfung meldet einen Fehler, solange internes Audit oder Managementbewertung fehlen.
+  felder:
+    art:
+      label: Audit
+      hilfe: Stage 1 oder Stage 2.
+    geplant:
+      label: Termin
+      hilfe: Erster Audittag.
+    auditor:
+      label: Leitende Auditorin oder leitender Auditor
+      hilfe: Falls bekannt.
+    umfang:
+      label: Umfang
+      hilfe: Standorte und Geltungsbereich gemäss Antrag.
+    kombiniertMitIsms:
+      label: Gemeinsam mit dem ISMS
+      hilfe: Kombiniertes Audit für das [[g:isms]] und das KI-Managementsystem.
+    zertifikatAm:
+      label: Zertifikat erteilt am
+      hilfe: Erst nach diesem Datum sprechen die Dokumente vom «zertifizierten [[g:aims|AIMS]]» (D-25).
+E13-unterlagen:
+  titel: Unterlagen für Stage 1
+  frage: Welche Unterlagen sind bereit für die [[g:zertifizierungsstelle]]?
+  warum: Für [[g:stage-1|Stage 1]] verlangt die Stelle die wichtigsten Dokumente vorab. Die Liste entspricht dem Zertifizierungsfahrplan D-25.
+  fehler: Fehlt ein Kerndokument wie die [[g:soa|Erklärung zur Anwendbarkeit]], kann Stage 1 nicht abgeschlossen werden. Senden Sie nur freigegebene Fassungen.
+  felder:
+    meta.gefuehrt.antworten.zertifizierung.unterlagen:
+      label: Bereit
+      hilfe: Haken Sie ab, was freigegeben und versandbereit ist.
+E13-pruefung:
+  titel: Prüfung vor Stage 1
+  frage: Ist Ihr Managementsystem bereit für [[g:stage-1|Stage 1]]?
+  warum: Das Werkzeug prüft alle Angaben mit den Prüfregeln, wie eine Steuersoftware vor dem Absenden. Fehler müssen Sie vor Stage 1 beheben, Hinweise sollten Sie prüfen. Danach erzeugen Sie den Stage-1-Bericht und alle Dokumente.
+  fehler: Eine grüne Ampel heisst, dass die Angaben vollständig und stimmig sind. Ob das System im Alltag gelebt wird, zeigt erst das Audit. Prüfen Sie stichprobenweise selbst, ob Nachweise wirklich auffindbar sind.

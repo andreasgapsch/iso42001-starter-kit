@@ -1,0 +1,102 @@
+# D-22 Nichtkonformitäten und Verbesserungen
+blaetter:
+  nk: Nichtkonformitäten
+  verbesserungen: Verbesserungen
+  zusatz: Zusatzfelder KI
+  meldungen: Meldungen
+titel_nk: "Nichtkonformitäten und Korrekturmassnahmen"
+titel_verbesserungen: "Verbesserungen"
+titel_zusatz: "Zusatzfelder für das bestehende ISMS-Register"
+titel_meldungen: "Meldungen, Rückmeldungen und Einsprüche"
+hinweise_meldungen:
+  - "Erfassen Sie jede Meldung von Mitarbeitenden (Meldeweg, D-04) und jede Rückmeldung oder jeden Einspruch von Kunden und Betroffenen (Meldekanal, D-14) mit Eingang, Eingangsbestätigung und Abschluss. So lassen sich Anzahl und Reaktionszeit messen (D-05)."
+  - "Ergibt eine Meldung eine Abweichung, einen Vorfall oder einen Beinahe-Vorfall, erfassen Sie sie zusätzlich im Blatt «Nichtkonformitäten» und nennen Sie die Feststellung im Ergebnis."
+spalten_meldungen: [ID, Eingang, Art, Herkunft, Kanal, KI-System, Beschreibung, Bearbeitung, Bestätigt am, Tage bis Bestätigung, Erledigt am, Ergebnis und Antwort, Status]
+hinweise_nk:
+  - "Eine Nichtkonformität ist eine nicht erfüllte Anforderung: aus der Norm, aus eigenen Regeln, aus Gesetz oder Vertrag. Quellen sind Audits, die Managementbewertung, Vorfälle, Prüfungen und Meldungen."
+  - "Gehen Sie in dieser Reihenfolge vor: sofort korrigieren und Folgen begrenzen, Ursache suchen (z. B. mit fünfmal «Warum?»), prüfen, ob es ähnliche Fälle gibt oder geben könnte, Korrekturmassnahme festlegen und umsetzen, nach einer festgelegten Frist die Wirksamkeit prüfen."
+  - "Schliessen Sie einen Eintrag erst, wenn die Wirksamkeit belegt ist. Prüfen Sie bei KI-Bezug, ob Risikobeurteilung (D-07), Folgenabschätzung (D-09) oder Nutzungsregeln (D-15) anzupassen sind."
+  - "Eigene «Vorbeugemassnahmen» führen Sie nicht. Mögliche künftige Abweichungen erfassen Sie als Risiko im Register D-07; dort werden sie bewertet und behandelt."
+  - "Vorfälle und Beinahe-Vorfälle (Ereignisse ohne Schaden, die nur dank Glück oder rechtzeitigem Eingreifen glimpflich ausgingen) gehören ebenfalls hierher, damit Fehler, Vorfälle und Beinahe-Vorfälle an einem Ort gezählt werden. Die Spalte «Schwere» nutzt die vier Stufen aus D-14."
+  - "Bei Vorfällen und Beinahe-Vorfällen halten Sie in «Entdeckt» und «Eingedämmt» Datum und Uhrzeit fest. Daraus rechnet die Kennzahl PR-19 die Stunden bis zur Eindämmung (D-05)."
+  - "Spalte «Bereich»: ohne ISMS «AIMS». Kommt später ein ISMS dazu, führen Sie dasselbe Register für beide weiter."
+hinweise_verbesserungen:
+  - "Erfassen Sie hier Vorschläge, die das AIMS besser machen, ohne dass eine Anforderung verletzt ist: aus Audits (Beobachtungen), Meldungen, Kennzahlen, Lieferantenprüfungen oder von Mitarbeitenden."
+  - "Geplante Änderungen am AIMS (ISO/IEC 42001, 6.3) führen Sie ebenfalls hier, mit Zweck, Folgen und Verantwortlichen (Regeln in D-26). Die Managementbewertung (D-21) priorisiert die Liste."
+hinweise_zusatz:
+  - "Mit ISMS führen Sie ein gemeinsames Register. Ergänzen Sie Ihr bestehendes Register um die folgenden Felder, damit KI-Themen auswertbar sind."
+  - "Führt Ihr ISMS noch kein Verbesserungsregister, nutzen Sie das Blatt «Verbesserungen» für beide Systeme."
+ausbau: "Werten Sie das Register jährlich für die Managementbewertung aus: Anzahl nach Einstufung, Schwere und Bereich, Beinahe-Vorfälle, Durchlaufzeit bis zur Schliessung, wiederkehrende Ursachen."
+spalten_nk:
+  - F-ID
+  - Datum
+  - Quelle
+  - Einstufung
+  - Bereich
+  - Beschreibung
+  - Normbezug
+  - KI-System
+  - Schwere (Vorfall)
+  - Sofortkorrektur
+  - Ursache
+  - Methode Ursachenanalyse
+  - Ursachenkategorie KI
+  - Ähnliche Fälle
+  - Korrekturmassnahme
+  - Massnahme-ID
+  - Verantwortlich
+  - Termin
+  - Wirksamkeitsprüfung geplant am
+  - Wirksamkeit geprüft am
+  - Ergebnis Wirksamkeit
+  - "Risiko oder Folgenabschätzung angepasst"
+  - Meldepflicht geprüft
+  - Status
+# Datenquelle der Kennzahl PR-19 (AF-104), im Blatt nach «Schwere (Vorfall)»
+spalten_vorfall: ["Entdeckt (Datum, Uhrzeit)", "Eingedämmt (Datum, Uhrzeit)"]
+spalten_verbesserungen:
+  - Nr.
+  - Datum
+  - Beschreibung
+  - Quelle
+  - Bereich
+  - Priorität
+  - Verantwortlich
+  - Start
+  - Abschluss
+  - Status
+  - Ergebnis
+spalten_zusatz: [Feld, Zweck, Werte oder Beispiel, Normbezug]
+zusatz_zeilen:
+  - [Bereich, "Zeigt, ob ISMS, AIMS oder beide betroffen sind; erlaubt Auswertungen je System.", "ISMS, AIMS, beide", "10.2"]
+  - [KI-System, "Verknüpft die Abweichung mit dem KI-Inventar.", "ID aus D-10, z. B. KI-003", "10.2, A.4.2"]
+  - [Normbezug 42001, "Abschnitt oder Control der ISO/IEC 42001, gegen den verstossen wurde.", "z. B. 6.1.4 oder A.6.2.6", "10.2"]
+  - [Ursachenkategorie KI, "Hilft, KI-typische Ursachen zu erkennen.", "Daten, Modell, Nutzung ausserhalb des Zwecks, Kompetenz, Lieferant, Prozess", "10.2"]
+  - [Ähnliche Fälle, "Hält fest, ob die Ursache auch bei anderen KI-Systemen oder Abläufen wirkt.", "ja (welche) oder nein", "10.2"]
+  - [Risiko oder Folgenabschätzung angepasst, "Stellt sicher, dass Erkenntnisse in D-07 und D-09 einfliessen.", "ja, nein, nicht nötig", "10.2, 8.2, 8.4"]
+  - [Schwere (Vorfall), "Macht Vorfälle und Beinahe-Vorfälle vergleichbar und steuert die Eskalation.", "1 gering, 2 mittel, 3 erheblich, 4 schwer (Stufen aus D-14)", "10.2, A.8.4"]
+  - [Meldepflicht geprüft, "Prüft, ob die Abweichung Dritten oder Behörden gemeldet werden muss.", "ja, nein, nicht nötig", "A.8.4, A.8.5"]
+  - ["Entdeckt (Datum, Uhrzeit)", "Zeitpunkt, an dem ein Vorfall oder Beinahe-Vorfall bemerkt wurde; Beginn der Messung PR-19.", "TT.MM.JJJJ hh:mm", "10.2, A.8.4"]
+  - ["Eingedämmt (Datum, Uhrzeit)", "Zeitpunkt, ab dem der Vorfall keinen weiteren Schaden anrichten kann; Ende der Messung PR-19.", "TT.MM.JJJJ hh:mm", "10.2, A.8.4"]
+listen:
+  quelle: [internes Audit, externes Audit, Managementbewertung, Vorfall, Beinahe-Vorfall, Prüfung oder Überwachung, Meldung, Kunde oder Lieferant, geplante Änderung am AIMS]
+  einstufung: [NK schwer, NK leicht, Beobachtung]
+  bereich: [AIMS, ISMS, beide]
+  methode: [5-Warum, Ursache-Wirkungs-Diagramm, Fehlerbaum, andere]
+  schwere: [gering, mittel, erheblich, schwer]
+  ursache_ki: [Daten, Modell, Nutzung ausserhalb des Zwecks, Kompetenz, Lieferant, Prozess]
+  ja_nein: [ja, nein, nicht nötig]
+  status: [offen, in Arbeit, Wirksamkeit offen, geschlossen]
+  prioritaet: [hoch, mittel, tief]
+  status_verbesserung: [vorgeschlagen, beschlossen, in Arbeit, abgeschlossen, verworfen]
+  meldung_art: [Bedenken, Rückmeldung, Einspruch, Beschwerde]
+  meldung_herkunft: [intern, extern]
+  meldung_status: [offen, in Arbeit, erledigt]
+titel_nk_auszug: "Auszug: Nichtkonformitäten und Korrekturmassnahmen mit Bezug zum AIMS"
+auszug_register: "Auszug aus dem führenden Register «{register}». Massgebend ist das Register; dieser Auszug zeigt die Einträge mit Bezug zum AIMS mit Ursache, Korrekturmassnahme und Wirksamkeit."
+auszug_ohne_register: "Auszug aus dem führenden Register der Nichtkonformitäten. Massgebend ist das Register; dieser Auszug zeigt die Einträge mit Bezug zum AIMS mit Ursache, Korrekturmassnahme und Wirksamkeit."
+erfasst_am: "Im Register erfasst am {datum}."
+kennung_nach_erfassung: "Die Kennungen F-xxx vergeben wir fortlaufend bei der Erfassung, für Auditfeststellungen, Vorfälle und Beinahe-Vorfälle gemeinsam. Ein nachgetragenes Ereignis trägt deshalb eine höhere Nummer als später entdeckte; das Datum der Erfassung steht in der Beschreibung."
+zusatz_firma_register: "Diese Felder ergänzen das Register «{register}» für Einträge mit Bezug zum AIMS."
+zusatz_firma: "Diese Felder ergänzen das Register der Nichtkonformitäten für Einträge mit Bezug zum AIMS."
+ergebnis_massnahme: "{id} erledigt am {datum}: {beschreibung}"

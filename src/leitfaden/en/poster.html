@@ -1,0 +1,69 @@
+<!-- Poster ‘AIMS on one page’ (A3 landscape). scripts/leitfaden.mts fills the {{…}} placeholders from the catalogues. -->
+<header class="p-kopf">
+  <div>
+    <h1>{{poster_titel}}</h1>
+    <p class="p-unter">{{poster_untertitel}}</p>
+  </div>
+  <p class="p-absender">{{absender}}</p>
+</header>
+
+<main class="p-raster">
+  <section class="p-feld p-kreis">
+    <h2>The management system: clauses 4 to 10</h2>
+    <p class="p-hinweis">One cycle: plan, do, check, improve. Below each clause, the components from the kit.</p>
+    {{kreislauf}}
+  </section>
+
+  <section class="p-feld p-schritte">
+    <h2>The 10 steps</h2>
+    <p class="p-hinweis">Weeks in the schedule with ISMS (90 days) and without ISMS (about 150 days) to stage 1 readiness</p>
+    {{schritte}}
+  </section>
+
+  <section class="p-feld p-controls">
+    <h2>Annex A: 38 controls in 9 groups</h2>
+    <p class="p-hinweis">A justified decision for every control in the statement of applicability (D-11)</p>
+    {{controlgruppen}}
+  </section>
+
+  <section class="p-feld p-pfad">
+    <h2>Path with or without an ISMS</h2>
+    <div class="p-zwei">
+      <div>
+        <h3>With ISMS (ISO/IEC 27001)</h3>
+        <ul>
+          <li>run jointly: document control, internal audit, management review, corrective action</li>
+          <li>adopt the risk scales, add impacts on people</li>
+          <li>13 supplementary sheets instead of new documents</li>
+          <li>integration matrix D-23</li>
+          <li>about 25 to 35 PD internally, 90 days to stage 1</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Without ISMS</h3>
+        <ul>
+          <li>build lean core processes alongside: D-26, D-20, D-21, D-22</li>
+          <li>own, simple risk method (D-06)</li>
+          <li>all core templates as separate documents</li>
+          <li>consider external help for the first internal audit</li>
+          <li>about 45 to 65 PD internally, about 150 days to stage 1</li>
+        </ul>
+      </div>
+    </div>
+    <p class="p-neu"><strong>New on both paths:</strong> AI policy D-03, role first D-24, impact assessment D-08 and D-09, statement of applicability D-11, life cycle D-12, data D-13</p>
+  </section>
+
+  <section class="p-feld p-modul">
+    <h2>EU AI Act module (optional)</h2>
+    <p><strong>Role first:</strong> provider or deployer? A change of role through your own name, a substantial modification or a new intended purpose.</p>
+    {{fristen}}
+    <p class="p-klein">E-01 to E-09: role, risk class, obligations, AI literacy, deployer, fundamental rights, transparency, provider, deadlines. ISO/IEC 42001 creates no presumption of conformity under the AI Act.</p>
+    <h3 class="p-zweitmodul">NIST AI RMF module (optional)</h3>
+    <p class="p-klein">Voluntary, NIST does not certify. N-01 profile, N-02 coverage, N-03 measurement plan, N-04 generative AI; additional controls RMF-xx; about 3 to 5 PD.</p>
+  </section>
+</main>
+
+<footer class="p-fuss">
+  <span>{{versprechen}}</span>
+  <span>{{stand}}. {{lizenzzeile}} No text from the standard: for the requirements see ISO/IEC 42001, available from SNV, DIN or ISO.</span>
+</footer>

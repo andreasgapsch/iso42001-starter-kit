@@ -1,0 +1,244 @@
+# Controls aus ISO/IEC 42001 Anhang A: eigene Kurzbezeichnungen und Erläuterungen.
+# Kein Normtext. Den Anforderungstext lesen Sie in Ihrer eigenen Normausgabe nach.
+gruppen:
+  A.2: KI-Leitlinien
+  A.3: Interne Organisation
+  A.4: Ressourcen von KI-Systemen
+  A.5: Folgen von KI-Systemen abschätzen
+  A.6: Lebenszyklus von KI-Systemen
+  A.6.1: Steuerung der Entwicklung
+  A.6.2: Phasen des Lebenszyklus
+  A.7: Daten für KI-Systeme
+  A.8: Information für interessierte Parteien
+  A.9: Nutzung von KI-Systemen
+  A.10: Dritte und Kunden
+
+controls:
+  A.2.2:
+    titel: KI-Leitlinie festlegen
+    zweck: Die Geschäftsleitung gibt verbindlich vor, wie das Unternehmen KI entwickelt, einkauft und nutzt.
+    umsetzung: Eine kurze Leitlinie mit Grundsätzen, Geltungsbereich, Zuständigkeiten und einem Weg für Ausnahmen genügt. Sie wird von der Geschäftsleitung freigegeben und allen Mitarbeitenden bekannt gemacht.
+    nachweis: Freigegebene KI-Leitlinie (D-03) mit Datum, Version und Verteilnachweis.
+    auditor: Freigabe durch die oberste Leitung, Bezug zu den KI-Zielen, Bekanntmachung im Unternehmen.
+  A.2.3:
+    titel: Abgleich mit anderen Leitlinien
+    zweck: KI berührt Informationssicherheit, Datenschutz, Qualität und Personalwesen. Widersprüche zwischen Leitlinien sollen gar nicht erst entstehen.
+    umsetzung: Prüfen Sie einmal, welche bestehenden Leitlinien KI betreffen, und halten Sie fest, ob Sie diese anpassen oder in der KI-Leitlinie darauf verweisen.
+    nachweis: Abschnitt «Bezug zu anderen Leitlinien» in D-03, angepasste Leitlinien mit neuer Version.
+    auditor: Eine nachvollziehbare Liste der betroffenen Leitlinien und was mit ihnen geschehen ist.
+  A.2.4:
+    titel: KI-Leitlinie regelmässig überprüfen
+    zweck: Technik, Recht und Geschäft ändern sich schnell. Die Leitlinie muss mithalten.
+    umsetzung: Legen Sie fest, wer die Leitlinie mindestens jährlich und bei grösseren Änderungen überprüft. Die Ergebnisse der Managementbewertung fliessen ein.
+    nachweis: Überprüfungsvermerk mit Datum, Änderungshistorie der Leitlinie, Traktandum in der Managementbewertung (D-21).
+    auditor: Eine benannte Rolle, ein Rhythmus und eine dokumentierte letzte Überprüfung.
+  A.3.2:
+    titel: KI-Rollen und Zuständigkeiten
+    zweck: Für jede Aufgabe rund um KI ist klar, wer handelt und wer entscheidet.
+    umsetzung: Ordnen Sie die wichtigen Bereiche (Risiko, Folgenabschätzung, Daten, Lieferanten, menschliche Aufsicht, Recht) Personen zu. Im KMU tragen wenige Personen mehrere Rollen; das ist zulässig, wenn es festgehalten ist.
+    nachweis: Rollenmatrix (D-04), Stellenbeschreibungen oder Ernennungen.
+    auditor: Befragte Personen kennen ihre Rolle und handeln danach.
+  A.3.3:
+    titel: Meldeweg für Bedenken
+    zweck: Wer intern ein Problem mit einem KI-System sieht, soll es ohne Nachteile melden können.
+    umsetzung: Nutzen Sie einen bestehenden Kanal (z. B. Whistleblowing-Stelle oder Vorgesetzte und eine Ausweichstelle), ergänzt um KI-Themen, mit Vertraulichkeit, Bearbeitungsfrist und Eskalation an die Geschäftsleitung.
+    nachweis: Beschreibung des Meldewegs in D-04, Bekanntmachung, Meldungsprotokoll.
+    auditor: Der Weg ist bekannt, vertraulich nutzbar und Meldungen werden bearbeitet.
+  A.4.2:
+    titel: Ressourcen je KI-System erfassen
+    zweck: Wer Risiken beurteilen will, muss wissen, woraus ein KI-System besteht und wovon es abhängt.
+    umsetzung: Erfassen Sie im KI-Inventar je System die Bestandteile, Daten, Werkzeuge, Rechenressourcen und beteiligten Personen. Bei eingekaufter KI genügen die Angaben, die Sie vom Lieferanten bekommen.
+    nachweis: KI-Inventar (D-10) mit Ressourcenblatt, gegebenenfalls Architektur- oder Datenflussskizze.
+    auditor: Vollständiges Inventar inklusive eingebetteter KI in eingekaufter Software.
+  A.4.3:
+    titel: Datenressourcen beschreiben
+    zweck: Daten bestimmen Qualität und Risiken eines KI-Systems wesentlich.
+    umsetzung: Halten Sie je System fest, welche Daten verwendet werden, woher sie stammen, wie aktuell sie sind und ob Personendaten oder vertrauliche Daten betroffen sind.
+    nachweis: Datenangaben im KI-Inventar (D-10) und in D-13.
+    auditor: Datenkategorien, Herkunft und Aufbewahrung sind je System nachvollziehbar.
+  A.4.4:
+    titel: Werkzeuge und Modelle beschreiben
+    zweck: Modelle, Bibliotheken und Plattformen bringen eigene Risiken und Abhängigkeiten mit.
+    umsetzung: Notieren Sie das eingesetzte Modell oder den Dienst, die Version, den Anbieter und wichtige Werkzeuge der Entwicklung oder des Betriebs.
+    nachweis: Werkzeugangaben im KI-Inventar (D-10).
+    auditor: Bekannte Modelle und Versionen, besonders bei Eigenentwicklung.
+  A.4.5:
+    titel: Rechen- und Systemressourcen beschreiben
+    zweck: Wo und auf welcher Infrastruktur ein System läuft, beeinflusst Sicherheit, Verfügbarkeit, Kosten und Umweltwirkung.
+    umsetzung: Halten Sie Betriebsort (eigenes Rechenzentrum, Cloud mit Region, Endgerät) und besondere Anforderungen fest.
+    nachweis: Infrastrukturangaben im KI-Inventar (D-10), bei bestehendem Assetinventar mit Verweis darauf.
+    auditor: Betriebsort und Abhängigkeiten sind bekannt, Cloud-Regionen geklärt.
+  A.4.6:
+    titel: Personal und Kompetenzen beschreiben
+    zweck: Für Entwicklung, Betrieb, Aufsicht und Ausserbetriebnahme braucht es Menschen mit passendem Wissen.
+    umsetzung: Nennen Sie je System die beteiligten Rollen und verknüpfen Sie diese mit dem Kompetenzbedarf in D-17.
+    nachweis: Rollenangaben im Inventar (D-10), Kompetenzmatrix (D-17).
+    auditor: Für jede kritische Aufgabe ist eine kompetente Person benannt.
+  A.5.2:
+    titel: Verfahren für Folgenabschätzungen
+    zweck: Bevor ein KI-System Menschen betrifft, sollen mögliche Folgen für Einzelne, Gruppen und die Gesellschaft geklärt sein.
+    umsetzung: Legen Sie fest, wann eine Folgenabschätzung nötig ist (Kurzprüfung mit Schwellen), wer sie durchführt, wer freigibt und wann sie wiederholt wird.
+    nachweis: Verfahren (D-08) mit Auslösern, Schwellen und Zuständigkeiten.
+    auditor: Klare Auslöser und Schwellen, nachvollziehbar angewendet auf alle Systeme im Inventar.
+  A.5.3:
+    titel: Ergebnisse der Folgenabschätzung aufbewahren
+    zweck: Ergebnisse dienen späteren Entscheiden, der Information Betroffener und dem Nachweis gegenüber Dritten.
+    umsetzung: Bewahren Sie jede Folgenabschätzung mit Version, Freigabe und Aufbewahrungsfrist auf.
+    nachweis: Folgenabschätzungen (D-09) im Dokumentenregister (D-26).
+    auditor: Je System eine aktuelle Abschätzung oder eine begründete Kurzprüfung.
+  A.5.4:
+    titel: Folgen für Personen und Gruppen beurteilen
+    zweck: KI kann Chancen, Rechte, Sicherheit oder Würde einzelner Menschen berühren.
+    umsetzung: Beurteilen Sie je System Nutzen und Schaden für die betroffenen Personengruppen, besonders für verletzliche Gruppen und Mitarbeitende.
+    nachweis: Abschnitt «Betroffene» und «Nutzen und Schaden» in D-09.
+    auditor: Betroffene Gruppen sind benannt, Wirkungen bewertet, Massnahmen abgeleitet.
+  A.5.5:
+    titel: Folgen für die Gesellschaft beurteilen
+    zweck: Manche Wirkungen zeigen sich erst in der Summe, etwa bei Umwelt, Arbeitsmarkt oder Information.
+    umsetzung: Ergänzen Sie die Folgenabschätzung um gesellschaftliche Aspekte. Bei kleinen, internen Systemen genügt eine kurze, begründete Einschätzung.
+    nachweis: Abschnitt «Gesellschaft und Umwelt» in D-09.
+    auditor: Die Frage wurde gestellt und begründet beantwortet.
+  A.6.1.2:
+    titel: Ziele für verantwortungsvolle Entwicklung
+    zweck: Wer KI selbst entwickelt, braucht Leitplanken, die schon im Entwurf wirken, etwa zu Fairness oder Erklärbarkeit.
+    umsetzung: Legen Sie Ziele fest und übersetzen Sie diese in Anforderungen, Tests und Freigabekriterien der Entwicklung.
+    nachweis: Ziele in D-05, Verankerung im Entwicklungsprozess (D-12).
+    auditor: Ziele lassen sich in Anforderungen und Testergebnissen wiederfinden.
+  A.6.1.3:
+    titel: Entwicklungsprozess festlegen
+    zweck: Eigene KI soll nach einem festen, nachvollziehbaren Ablauf entstehen.
+    umsetzung: Beschreiben Sie Phasen, Tests, Freigaben, Änderungssteuerung und den Zeitpunkt der Folgenabschätzung.
+    nachweis: Prozessbeschreibung in D-12 (Abschnitt Entwicklung).
+    auditor: Der beschriebene Ablauf wird in Projekten tatsächlich befolgt.
+  A.6.2.2:
+    titel: Anforderungen an das KI-System festhalten
+    zweck: Was ein System leisten soll und warum, muss vor der Entwicklung oder grösseren Änderung feststehen.
+    umsetzung: Halten Sie Zweck, Begründung, Leistungsanforderungen, Datenbedarf und Rahmenbedingungen fest.
+    nachweis: Anforderungsdokument je Vorhaben (D-12).
+    auditor: Dokumentierte Anforderungen zu neuen Systemen und wesentlichen Erweiterungen.
+  A.6.2.3:
+    titel: Entwurf und Entwicklung dokumentieren
+    zweck: Entscheidungen im Entwurf müssen später nachvollziehbar sein, etwa bei Fehlern oder Audits.
+    umsetzung: Dokumentieren Sie Lernverfahren, Modellwahl, Daten, Sicherheitsüberlegungen und Schnittstellen sowie die finale Architektur.
+    nachweis: Entwurfsdokumentation (D-12).
+    auditor: Eine aktuelle Architekturbeschreibung und begründete Designentscheide.
+  A.6.2.4:
+    titel: Prüfen und Validieren
+    zweck: Ein System geht erst in Betrieb, wenn belegt ist, dass es seine Aufgabe ausreichend gut erfüllt.
+    umsetzung: Legen Sie Testmethoden, Testdaten, Kennzahlen und Freigabekriterien fest. Bei eingekaufter KI prüfen Sie mit eigenen, typischen Fällen vor dem Einsatz.
+    nachweis: Testplan und Testbericht, Abnahmeprotokoll (D-12).
+    auditor: Festgelegte Kriterien und ein Test, der vor der Freigabe stattfand.
+  A.6.2.5:
+    titel: Einführung planen und freigeben
+    zweck: Die Einführung in den Betrieb geschieht kontrolliert und mit klarer Freigabe.
+    umsetzung: Planen Sie Einführung, Schulung, Kommunikation und Rückfallweg und lassen Sie die Einführung freigeben.
+    nachweis: Einführungs- oder Freigabeprotokoll (D-12).
+    auditor: Freigabe vor dem Betrieb, nicht nachträglich.
+  A.6.2.6:
+    titel: Betrieb und Überwachung
+    zweck: Leistung und Verhalten eines KI-Systems können sich im Betrieb verändern.
+    umsetzung: Legen Sie fest, wer das System überwacht, welche Kennzahlen gelten, wie Fehler gemeldet und Updates eingespielt werden.
+    nachweis: Betriebsabschnitt in D-12, Überwachungsprotokolle, Störungsmeldungen.
+    auditor: Belegte Überwachung im Betrieb, Reaktion auf Abweichungen.
+  A.6.2.7:
+    titel: Technische Dokumentation je Zielgruppe
+    zweck: Nutzende, Partner und Behörden brauchen unterschiedliche Informationen über ein System.
+    umsetzung: Bestimmen Sie je Zielgruppe, welche Unterlagen nötig sind, und stellen Sie diese aktuell bereit.
+    nachweis: Dokumentationsübersicht in D-12, Unterlagen je Zielgruppe.
+    auditor: Passende, aktuelle Dokumentation für die genannten Zielgruppen.
+  A.6.2.8:
+    titel: Ereignisprotokolle führen
+    zweck: Protokolle machen nachvollziehbar, was ein System wann getan hat.
+    umsetzung: Legen Sie fest, in welchen Phasen protokolliert wird (mindestens im Betrieb), was erfasst wird und wie lange Protokolle aufbewahrt werden.
+    nachweis: Protokollierungsvorgaben in D-12, Beispielprotokoll.
+    auditor: Protokolle sind eingeschaltet, werden aufbewahrt und bei Bedarf ausgewertet.
+  A.7.2:
+    titel: Datenmanagement für die Entwicklung
+    zweck: Daten für Training und Test müssen geordnet beschafft, geschützt und genutzt werden.
+    umsetzung: Beschreiben Sie, wie Daten für die Entwicklung ausgewählt, geschützt, dokumentiert und gelöscht werden.
+    nachweis: Datenverfahren (D-13).
+    auditor: Ein gelebter Ablauf, der Datenschutz und Vertraulichkeit einschliesst.
+  A.7.3:
+    titel: Datenbeschaffung festhalten
+    zweck: Herkunft und Rechte an Daten müssen geklärt sein, bevor sie in ein System einfliessen.
+    umsetzung: Halten Sie je Datensatz Quelle, Menge, Rechte und bekannte Verzerrungen fest.
+    nachweis: Datenblatt je Datensatz (D-13).
+    auditor: Rechtliche Grundlage und Herkunft je Datensatz.
+  A.7.4:
+    titel: Anforderungen an die Datenqualität
+    zweck: Schlechte Daten führen zu schlechten Ergebnissen.
+    umsetzung: Legen Sie fest, welche Qualität die Daten haben müssen, und prüfen Sie diese. Als Betreiber betrifft das vor allem die Eingabedaten, die Sie selbst in das System geben.
+    nachweis: Qualitätskriterien und Prüfergebnisse (D-13).
+    auditor: Messbare Kriterien und eine dokumentierte Prüfung.
+  A.7.5:
+    titel: Datenherkunft nachverfolgen
+    zweck: Bei Fehlern oder Anfragen muss man zurückverfolgen können, woher Daten kamen und was mit ihnen geschah.
+    umsetzung: Legen Sie fest, wie Erstellung, Änderung und Weitergabe von Daten nachvollziehbar festgehalten werden.
+    nachweis: Herkunftsprotokoll oder Versionsverwaltung der Datensätze (D-13).
+    auditor: Rückverfolgbarkeit an einem Beispiel.
+  A.7.6:
+    titel: Datenaufbereitung festlegen
+    zweck: Bereinigung und Umwandlung von Daten beeinflussen das Ergebnis und müssen begründet sein.
+    umsetzung: Dokumentieren Sie die verwendeten Aufbereitungsschritte und warum Sie diese gewählt haben.
+    nachweis: Aufbereitungsprotokoll (D-13).
+    auditor: Nachvollziehbare Schritte und Kriterien.
+  A.8.2:
+    titel: Information für Nutzende
+    zweck: Wer ein KI-System nutzt, muss wissen, dass es KI ist, was es kann und wo seine Grenzen liegen.
+    umsetzung: Legen Sie je System fest, welche Informationen Nutzende erhalten (Zweck, Grenzen, Aufsicht, Kontakt), und wo sie stehen.
+    nachweis: Informationstexte und Kriterien in D-14, Hinweise im System.
+    auditor: Nutzende werden passend informiert; die Kriterien dafür sind festgelegt.
+  A.8.3:
+    titel: Meldemöglichkeit für Externe
+    zweck: Kunden, Betroffene und Partner sollen nachteilige Wirkungen eines KI-Systems melden können.
+    umsetzung: Richten Sie einen erreichbaren Kanal ein (z. B. Adresse, Formular) und legen Sie fest, wer Meldungen bearbeitet.
+    nachweis: Beschreibung des Kanals in D-14, Bearbeitungsprotokoll.
+    auditor: Der Kanal ist öffentlich auffindbar und Meldungen werden bearbeitet.
+  A.8.4:
+    titel: Kommunikation bei Vorfällen
+    zweck: Bei einem Vorfall mit einem KI-System müssen Betroffene rasch und richtig informiert werden.
+    umsetzung: "Ergänzen Sie das bestehende Vorfallmanagement um KI-Vorfälle: was gilt als Vorfall, wer informiert wen, in welcher Frist."
+    nachweis: Kommunikationsplan für Vorfälle in D-14 oder Ergänzung eines bestehenden Vorfallverfahrens.
+    auditor: Ein Plan mit Fristen und Zuständigkeiten, idealerweise einmal geübt.
+  A.8.5:
+    titel: Informationspflichten gegenüber Dritten
+    zweck: Behörden, Kunden oder Partner können Anspruch auf Informationen über ein KI-System haben.
+    umsetzung: Halten Sie fest, wem gegenüber welche Informationspflichten bestehen (Gesetz, Vertrag), und wer sie erfüllt.
+    nachweis: Liste der Informationspflichten in D-14.
+    auditor: Vollständige Liste und Belege der Erfüllung.
+  A.9.2:
+    titel: Regeln für verantwortungsvolle Nutzung
+    zweck: Bevor ein KI-Werkzeug eingesetzt wird, ist geklärt, ob und wie es genutzt werden darf.
+    umsetzung: Eine Nutzungsrichtlinie für Mitarbeitende und ein schlanker Freigabeprozess für neue KI-Werkzeuge genügen.
+    nachweis: Richtlinie (D-15), Freigabeliste im KI-Inventar (D-10).
+    auditor: Neue Werkzeuge durchlaufen die Freigabe; Mitarbeitende kennen die Regeln.
+  A.9.3:
+    titel: Ziele für verantwortungsvolle Nutzung
+    zweck: Auch reine Nutzer von KI brauchen Ziele, etwa zu Vertraulichkeit, Genauigkeit oder menschlicher Kontrolle.
+    umsetzung: Leiten Sie aus der Leitlinie wenige, prüfbare Ziele für die Nutzung ab und legen Sie fest, wo Menschen Ergebnisse prüfen müssen.
+    nachweis: Ziele in D-05, Aufsichtsregeln in D-15.
+    auditor: Ziele, die zur tatsächlichen Nutzung passen, und gelebte menschliche Kontrolle.
+  A.9.4:
+    titel: Nutzung gemäss Zweckbestimmung
+    zweck: Ein KI-System soll nur für den Zweck eingesetzt werden, für den es vorgesehen und geprüft ist.
+    umsetzung: Halten Sie je System den vorgesehenen Zweck fest, schulen Sie die Nutzenden und prüfen Sie stichprobenweise die tatsächliche Nutzung.
+    nachweis: Zweck im KI-Inventar (D-10), Nutzungsregeln (D-15), Protokolle oder Stichproben.
+    auditor: Keine Nutzung ausserhalb des vorgesehenen Zwecks ohne neue Bewertung.
+  A.10.2:
+    titel: Verantwortung mit Dritten aufteilen
+    zweck: Wenn Lieferanten, Partner oder Kunden beteiligt sind, muss klar sein, wer wofür verantwortlich ist.
+    umsetzung: Halten Sie je System fest, welche Aufgaben beim Lieferanten, bei Ihnen und beim Kunden liegen, und regeln Sie dies vertraglich.
+    nachweis: Verantwortungsmatrix in D-16, Vertragsklauseln.
+    auditor: Klare Abgrenzung, besonders bei Daten und Personendaten.
+  A.10.3:
+    titel: Lieferanten steuern
+    zweck: Eingekaufte KI muss zu Ihren eigenen Grundsätzen passen.
+    umsetzung: Prüfen Sie KI-Lieferanten anhand weniger Fragen vor dem Einkauf und in einem festen Rhythmus danach. Fordern Sie Dokumentation und, wo nötig, Korrekturen ein.
+    nachweis: Lieferantenprüfung (D-16), Verträge, Prüfprotokolle.
+    auditor: Jede eingekaufte KI hat einen Prüfstatus und der Rhythmus wird eingehalten.
+  A.10.4:
+    titel: Erwartungen der Kunden berücksichtigen
+    zweck: Wer KI an Kunden liefert oder für sie einsetzt, muss deren Erwartungen und Grenzen der Nutzung kennen und kommunizieren.
+    umsetzung: Erfassen Sie Kundenanforderungen an KI (z. B. aus Verträgen oder Lieferantenaudits) und teilen Sie Kunden die Grenzen Ihrer KI-Leistungen mit.
+    nachweis: Anforderungen in D-01 und D-16, Kundeninformation in D-14.
+    auditor: Kundenanforderungen sind bekannt und berücksichtigt.

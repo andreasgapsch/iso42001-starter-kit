@@ -1,0 +1,59 @@
+# Page texts for phase E13 Preparing for certification. Format: src/gefuehrt/FORMAT.md
+E13-einfuehrung:
+  titel: Preparing for certification
+  frage: What does it take to get the certificate?
+  warum: Certification has two parts. In the [[g:stage-1]], the [[g:zertifizierungsstelle]] checks your documents and whether you are ready; in the [[g:stage-2]], it checks how things work in practice. After that come annual [[g:ueberwachungsaudit|surveillance audits]].
+  fehler: Going into stage 1 too early risks findings that delay stage 2. Leave enough time between the internal audit, the management review and stage 1 to make corrections.
+E13-stelle:
+  titel: Certification body
+  frage: Which [[g:zertifizierungsstelle|certification body]] have you chosen, and is it accredited for ISO/IEC 42001?
+  warum: Only an accredited body issues a certificate that customers recognize. Certification bodies are accredited to ISO/IEC 17021-1 and, for ISO/IEC 42001, also meet the requirements of ISO/IEC 42006; in Switzerland, accreditation is granted by the Swiss Accreditation Service (SAS). If you have an [[g:isms]], using the same body for both standards pays off. If you already chose the body in E1, it is shown here.
+  fehler: Not every body that certifies ISO/IEC 27001 is already accredited for ISO/IEC 42001. Ask to see the scope of accreditation.
+  felder:
+    meta.gefuehrt.antworten.zertifizierung.stelle:
+      label: Certification body
+      hilfe: Name of the body.
+    meta.gefuehrt.antworten.zertifizierung.akkreditiert:
+      label: Accredited for ISO/IEC 42001
+      hilfe: Check the accreditation number and scope in the public register.
+    meta.gefuehrt.antworten.zertifizierung.kombiniert:
+      label: Combined audit with the ISMS
+      hilfe: Saves audit days if both systems are integrated.
+E13-termine:
+  titel: Audit dates
+  frage: When will [[g:stage-1|stage 1]] and [[g:stage-2|stage 2]] take place?
+  warum: There are usually a few weeks between stage 1 and stage 2 so that you can address findings. Plan the dates early, as certification bodies are often fully booked.
+  fehler: A stage 1 date before the internal audit or the management review leads to findings. The check reports an error as long as the internal audit or the management review is missing.
+  felder:
+    art:
+      label: Audit
+      hilfe: Stage 1 or stage 2.
+    geplant:
+      label: Date
+      hilfe: First audit day.
+    auditor:
+      label: Lead auditor
+      hilfe: If known.
+    umfang:
+      label: Scope
+      hilfe: Sites and scope as stated in the application.
+    kombiniertMitIsms:
+      label: Together with the ISMS
+      hilfe: Combined audit for the [[g:isms]] and the AI management system.
+    zertifikatAm:
+      label: Certificate issued on
+      hilfe: Only after this date do the documents refer to the ‘certified [[g:aims|AIMS]]’ (D-25).
+E13-unterlagen:
+  titel: Documents for stage 1
+  frage: Which documents are ready for the [[g:zertifizierungsstelle|certification body]]?
+  warum: For stage 1, the certification body asks for the key documents in advance. The list matches the certification roadmap D-25.
+  fehler: If a core document such as the statement of applicability is missing, stage 1 cannot be completed. Send only approved versions.
+  felder:
+    meta.gefuehrt.antworten.zertifizierung.unterlagen:
+      label: Ready
+      hilfe: Tick what is approved and ready to send.
+E13-pruefung:
+  titel: Check before stage 1
+  frage: Is your management system ready for [[g:stage-1|stage 1]]?
+  warum: The tool checks all your entries against its rules, much like tax software before you submit. You must fix errors before stage 1; you should review notes. Then you generate the stage 1 report and all documents.
+  fehler: A green light means your entries are complete and consistent. Only the audit shows whether the system is actually lived day to day. Spot-check for yourself that the evidence can really be found.

@@ -1,0 +1,193 @@
+hinweis: "Eigene Kurzbezeichnungen von KMU-CIO, nicht die Titel der Norm. Anforderungstext siehe ISO/IEC 27001:2022, Anhang A. Die Norm ist bei SNV, DIN oder ISO zu beziehen."
+themen:
+  organisatorisch: "Organisation"
+  personen: "Personal"
+  physisch: "Physische Umgebung"
+  technologisch: "Technik"
+controls:
+  27001-5.1:
+    titel: "Leitlinien zur Sicherheit festlegen"
+  27001-5.2:
+    titel: "Sicherheitsaufgaben klar zuweisen"
+  27001-5.3:
+    titel: "Unvereinbare Aufgaben personell trennen"
+  27001-5.4:
+    titel: "Führung setzt Sicherheitsregeln durch"
+  27001-5.5:
+    titel: "Ansprechstellen bei Behörden pflegen"
+  27001-5.6:
+    titel: "Austausch mit Fachgremien pflegen"
+  27001-5.7:
+    titel: "Bedrohungslage beobachten und auswerten"
+  27001-5.8:
+    titel: "Sicherheit in Projekten verankern"
+  27001-5.9:
+    titel: "Verzeichnis der Informationswerte führen"
+  27001-5.10:
+    titel: "Regeln für den Umgang mit Werten"
+  27001-5.11:
+    titel: "Geräte und Daten beim Austritt einziehen"
+  27001-5.12:
+    titel: "Informationen nach Schutzbedarf einstufen"
+  27001-5.13:
+    titel: "Schutzstufe sichtbar kennzeichnen"
+  27001-5.14:
+    titel: "Sicherer Austausch von Informationen"
+  27001-5.15:
+    titel: "Zugriffe nach Bedarf regeln"
+  27001-5.16:
+    titel: "Identitäten über den Lebenszyklus verwalten"
+  27001-5.17:
+    titel: "Passwörter und Geheimnisse schützen"
+  27001-5.18:
+    titel: "Berechtigungen vergeben und überprüfen"
+  27001-5.19:
+    titel: "Sicherheitsvorgaben für Lieferanten festlegen"
+  27001-5.20:
+    titel: "Sicherheit in Lieferantenverträgen regeln"
+  27001-5.21:
+    titel: "Risiken der IT-Lieferkette steuern"
+  27001-5.22:
+    titel: "Lieferantenleistungen überwachen und anpassen"
+  27001-5.23:
+    titel: "Cloud-Dienste sicher beziehen und nutzen"
+  27001-5.24:
+    titel: "Bereitschaft für Sicherheitsvorfälle schaffen"
+  27001-5.25:
+    titel: "Ereignisse bewerten und einstufen"
+  27001-5.26:
+    titel: "Auf Vorfälle geregelt reagieren"
+  27001-5.27:
+    titel: "Aus Vorfällen Lehren ziehen"
+  27001-5.28:
+    titel: "Beweismittel gerichtsfest sichern"
+  27001-5.29:
+    titel: "Sicherheit auch im Krisenfall"
+  27001-5.30:
+    titel: "IT für den Notfall bereithalten"
+  27001-5.31:
+    titel: "Rechtliche und vertragliche Pflichten erfassen"
+  27001-5.32:
+    titel: "Geistiges Eigentum respektieren"
+  27001-5.33:
+    titel: "Aufzeichnungen vor Verlust schützen"
+  27001-5.34:
+    titel: "Personendaten und Privatsphäre schützen"
+  27001-5.35:
+    titel: "Sicherheit unabhängig überprüfen lassen"
+  27001-5.36:
+    titel: "Einhaltung der Sicherheitsregeln prüfen"
+  27001-5.37:
+    titel: "Betriebsabläufe schriftlich festhalten"
+  27001-6.1:
+    titel: "Bewerbende vor Anstellung überprüfen"
+  27001-6.2:
+    titel: "Sicherheitspflichten im Arbeitsvertrag"
+  27001-6.3:
+    titel: "Mitarbeitende sensibilisieren und schulen"
+  27001-6.4:
+    titel: "Folgen bei Regelverstössen festlegen"
+  27001-6.5:
+    titel: "Pflichten nach Austritt oder Wechsel"
+  27001-6.6:
+    titel: "Vertraulichkeit schriftlich vereinbaren"
+  27001-6.7:
+    titel: "Sicher arbeiten ausserhalb des Büros"
+  27001-6.8:
+    titel: "Sicherheitsereignisse rasch melden können"
+  27001-7.1:
+    titel: "Sicherheitszonen baulich abgrenzen"
+  27001-7.2:
+    titel: "Zutritt zu Gebäuden kontrollieren"
+  27001-7.3:
+    titel: "Büros und Räume absichern"
+  27001-7.4:
+    titel: "Gelände und Räume überwachen"
+  27001-7.5:
+    titel: "Schutz vor Feuer, Wasser und Naturgefahren"
+  27001-7.6:
+    titel: "Regeln für gesicherte Bereiche"
+  27001-7.7:
+    titel: "Leerer Tisch, gesperrter Bildschirm"
+  27001-7.8:
+    titel: "Geräte geschützt aufstellen"
+  27001-7.9:
+    titel: "Geräte unterwegs schützen"
+  27001-7.10:
+    titel: "Datenträger sicher handhaben"
+  27001-7.11:
+    titel: "Strom und Versorgung sicherstellen"
+  27001-7.12:
+    titel: "Kabel vor Zugriff schützen"
+  27001-7.13:
+    titel: "Geräte fachgerecht warten"
+  27001-7.14:
+    titel: "Geräte sicher entsorgen oder weitergeben"
+  27001-8.1:
+    titel: "Endgeräte der Mitarbeitenden absichern"
+  27001-8.2:
+    titel: "Administratorrechte eng begrenzen"
+  27001-8.3:
+    titel: "Daten nur für Berechtigte sichtbar"
+  27001-8.4:
+    titel: "Quellcode vor Zugriff schützen"
+  27001-8.5:
+    titel: "Anmeldung sicher gestalten"
+  27001-8.6:
+    titel: "Kapazitäten planen und überwachen"
+  27001-8.7:
+    titel: "Schadsoftware erkennen und abwehren"
+  27001-8.8:
+    titel: "Schwachstellen erkennen und beheben"
+  27001-8.9:
+    titel: "Konfigurationen festlegen und überwachen"
+  27001-8.10:
+    titel: "Nicht mehr benötigte Daten löschen"
+  27001-8.11:
+    titel: "Daten maskieren oder pseudonymisieren"
+  27001-8.12:
+    titel: "Abfluss von Daten verhindern"
+  27001-8.13:
+    titel: "Daten regelmässig sichern und testen"
+  27001-8.14:
+    titel: "Systeme redundant auslegen"
+  27001-8.15:
+    titel: "Ereignisse systematisch protokollieren"
+  27001-8.16:
+    titel: "Auffälliges Verhalten erkennen"
+  27001-8.17:
+    titel: "Systemzeiten einheitlich abgleichen"
+  27001-8.18:
+    titel: "Mächtige Hilfsprogramme kontrollieren"
+  27001-8.19:
+    titel: "Softwareinstallation auf Produktivsystemen regeln"
+  27001-8.20:
+    titel: "Netzwerke absichern und steuern"
+  27001-8.21:
+    titel: "Netzdienste sicher bereitstellen"
+  27001-8.22:
+    titel: "Netzwerke in Zonen aufteilen"
+  27001-8.23:
+    titel: "Riskante Webseiten sperren"
+  27001-8.24:
+    titel: "Verschlüsselung gezielt einsetzen"
+  27001-8.25:
+    titel: "Sicherheit im ganzen Entwicklungszyklus"
+  27001-8.26:
+    titel: "Sicherheitsanforderungen an Anwendungen festlegen"
+  27001-8.27:
+    titel: "Sichere Architekturgrundsätze anwenden"
+  27001-8.28:
+    titel: "Programmcode sicher schreiben"
+  27001-8.29:
+    titel: "Sicherheit vor der Abnahme testen"
+  27001-8.30:
+    titel: "Ausgelagerte Entwicklung steuern"
+  27001-8.31:
+    titel: "Getrennte Umgebungen für Entwicklung und Betrieb"
+  27001-8.32:
+    titel: "Änderungen geregelt einführen"
+  27001-8.33:
+    titel: "Testdaten sorgfältig auswählen und schützen"
+  27001-8.34:
+    titel: "Audits ohne Störung des Betriebs"

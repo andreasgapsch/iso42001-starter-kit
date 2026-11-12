@@ -1,0 +1,82 @@
+# D-15 Richtlinie zur verantwortungsvollen KI-Nutzung
+hinweis_umfang: "Höchstens zwei Seiten, verständlich für alle. Tragen Sie die Werkzeuge aus dem KI-Inventar (D-10) ein und verweisen Sie auf Ihre Datenklassen. Lassen Sie den Empfang bestätigen (D-17)."
+einleitung: "Diese Richtlinie gilt für alle Mitarbeitenden und alle, die für [[Firmenname]] arbeiten, wenn sie KI-Werkzeuge nutzen, z. B. Chatbots, Assistenten in Office-Programmen, Übersetzer sowie Bild- und Codegeneratoren."
+einleitung_firma: "Diese Richtlinie gilt für alle Mitarbeitenden und alle, die für {firma} arbeiten, wenn sie KI-Werkzeuge nutzen, z. B. Chatbots, Assistenten in Office-Programmen, Übersetzer sowie Bild- und Codegeneratoren."
+hinweis_eb: "Nehmen Sie die Abschnitte 1 bis 6 in Ihre bestehende Richtlinie zur akzeptablen Nutzung auf. Meldung, Schulung und Folgen bei Verstössen regelt diese bereits; ergänzen Sie dort nur KI als Thema."
+einleitung_eb: "Die folgenden Regeln ergänzen unsere Richtlinie zur akzeptablen Nutzung von Informatikmitteln um den Einsatz von KI-Werkzeugen."
+# Firmendokument: ergänztes Dokument mit Version (DokumentEintrag.aufgenommenIn)
+eb_aufgenommen: "Aufgenommen in (Dokument, Version)"
+eb_aufgenommen_platzhalter: "Richtlinie zur akzeptablen Nutzung, Version"
+# Ampel: nur Werkzeuge für Mitarbeitende; eigene Systeme und Produktfunktionen regelt D-12
+ampel_eigene: "Eigene KI-Systeme und KI-Funktionen unserer Produkte ({systeme}) sind keine Werkzeuge im Sinne dieser Ampel; für sie gelten Freigabe und Auflagen nach D-12 und dem KI-Inventar (D-10)."
+modul_kennzeichnung_leer: "**Nur mit Modul EU AI Act:** Für Chatbots, Deepfakes und veröffentlichte KI-Texte gelten besondere Pflichten (Art. 50, E-07)."
+modul_kennzeichnung: "Für Chatbots, Deepfakes und veröffentlichte KI-Texte gelten besondere Pflichten nach dem EU AI Act (Art. 50, E-07)."
+abschnitte:
+  ampel: Welche Werkzeuge mit welchen Daten
+  eingabe: Was nie in ein KI-Werkzeug gehört
+  verboten: Wofür wir KI nicht verwenden
+  pruefen: Ergebnisse prüfen
+  pruefen_eb: Ergebnisse prüfen und kennzeichnen
+  kennzeichnung: Kennzeichnung, Urheberrecht und Vertraulichkeit
+  assistenten: Sicher mit KI-Assistenten arbeiten
+  neu: Neues Werkzeug beantragen
+  melden: Probleme melden
+  schulung: Schulung und Folgen bei Verstössen
+ampel_text: "Mitarbeitende nutzen für die Arbeit nur freigegebene Werkzeuge mit dem Firmenkonto."
+ampel_text_ausnahme: "Mitarbeitende nutzen für die Arbeit nur freigegebene Werkzeuge mit dem Firmenkonto. Abweichungen davon gelten nur als befristete Ausnahme nach der KI-Leitlinie (D-03); sie stehen mit ihrer Frist unter der Ampel."
+ampel_fachanwendungen: "KI in Anlagen und Fachanwendungen ({systeme}) bedienen nur die dafür eingewiesenen Personen; sie sind keine Werkzeuge im Sinne dieser Ampel, es gelten die Auflagen im KI-Inventar (D-10)."
+ampel_auflagen: "Auflagen der Werkzeuge:"
+ampel_ausnahmen: "Befristete Ausnahmen nach der KI-Leitlinie (D-03), nur für den genannten Zweck:"
+datenklassen_isms: "Die Datenklassen sind die Klassen der Informationsklassifizierung unseres ISMS: **öffentlich** (für alle bestimmt), **intern** (nur für Mitarbeitende), **vertraulich** (nur für einen bestimmten Kreis, z. B. Kunden-, Personal- und Konstruktionsdaten) und **streng vertraulich** (grosser Schaden bei Bekanntwerden). Im Zweifel gilt die höhere Klasse."
+datenklassen: "Datenklassen: **öffentlich** (für alle bestimmt), **intern** (nur für Mitarbeitende), **vertraulich** (nur für einen bestimmten Kreis, z. B. Kunden-, Personal- und Konstruktionsdaten) und **streng vertraulich** (grosser Schaden bei Bekanntwerden). Im Zweifel gilt die höhere Klasse."
+ampel_kopf: [Ampel, Werkzeuge, Daten]
+ampel:
+  gruen: "**Grün:** erlaubt"
+  gruen_platzhalter: freigegebene Werkzeuge aus D-10
+  gruen_daten: "öffentliche und interne Informationen; vertrauliche Daten und Personendaten nur, wo das KI-Inventar es erlaubt"
+  gelb: "**Gelb:** mit Auflagen"
+  gelb_platzhalter: Werkzeuge mit Auflagen aus D-10
+  gelb_daten: "nur für den festgelegten Zweck und mit den Auflagen aus dem KI-Inventar"
+  rot: "**Rot:** verboten"
+  rot_platzhalter: untersagte Werkzeuge aus D-10
+  keine: "derzeit keine"
+  ausnahme: "{name}, befristet bis {bis}"
+  rot_werkzeuge: "{untersagt} sowie alle übrigen Werkzeuge, die nicht freigegeben sind: private Konten, Gratisdienste und Werkzeuge in Prüfung"
+  rot_werkzeuge_ohne: "alle Werkzeuge, die nicht freigegeben sind: private Konten, Gratisdienste und Werkzeuge in Prüfung"
+  rot_daten: "keine Firmen-, Kunden- oder Personendaten"
+  mit_klasse: "{name} (Daten bis «{klasse}»)"
+  rot_ausser_ausnahmen: "; ausgenommen sind nur die befristeten Ausnahmen unter der Ampel"
+eingabe_liste:
+  - "Passwörter, Zugangsdaten und Schlüssel"
+  - "Gesundheitsdaten und andere besonders schützenswerte Personendaten"
+  - "Unterlagen von Kunden und Partnern, deren Weitergabe ein Vertrag ausschliesst, z. B. Zeichnungen unter Geheimhaltung"
+  - "exportkontrollierte Daten und weitere Daten, die wir als streng vertraulich einstufen"
+verboten_liste:
+  - "Entscheide über Menschen ohne menschliche Prüfung, z. B. über Bewerbungen, Leistung oder Kredite"
+  - "Überwachung oder Bewertung von Leistung oder Verhalten einzelner Mitarbeitender"
+  - "Täuschung, z. B. gefälschte Bilder, Stimmen oder Aussagen echter Personen"
+  - "Umgehung von Sicherheitsvorgaben oder Zwecke ausserhalb der Freigabe"
+pruefen_liste:
+  - "Wer ein Ergebnis verwendet oder weitergibt, bleibt dafür verantwortlich."
+  - "Fakten, Zahlen, Zitate, Quellen, Übersetzungen und Code werden vor der Verwendung geprüft."
+  - "Bei Ergebnissen, die Kunden, Verträge, Sicherheit oder Personen betreffen, prüft immer ein Mensch mit dem nötigen Fachwissen."
+kennzeichnung_text: "Inhalte, die weitgehend von KI stammen, kennzeichnen wir, wenn andere sonst einen menschlichen Urheber annehmen würden, z. B. veröffentlichte Texte und Bilder."
+urheberrecht_text: "Fremde Werke laden wir nur hoch, wenn wir sie dafür nutzen dürfen. KI-Ergebnisse, die erkennbar fremde Texte, Bilder, Marken oder Code übernehmen, verwenden wir nicht. Geschäftsgeheimnisse bleiben auch in KI-Werkzeugen vertraulich."
+neu_text: "Ein neues Werkzeug oder eine neue Nutzung beantragen Mitarbeitende bei der {{fakt:freigabe.einfuehren}} ({verantwortlich}); sie entscheidet bei tiefem Risiko allein über die Freigabe, bei mittlerem Risiko zusammen mit der Eignerin oder dem Eigner des Systems; bei hohem Risiko oder nach voller Folgenabschätzung entscheidet die {{fakt:freigabe.einfuehren-hoch}} (D-12, Abschnitt 5). Freigegeben wird ein Werkzeug nur, wenn es die Freigabekriterien unten erfüllt, auch ohne vertiefte Prüfung. Bis zum Entscheid gilt Rot."
+# Firmendokument mit Entscheidungsrechten (D-04 Anlage A): Stellen je Stufe aus dem Projekt (N7)
+neu_text_firma: "Ein neues Werkzeug oder eine neue Nutzung beantragen Mitarbeitende bei der {{fakt:freigabe.einfuehren}} ({verantwortlich}). Über die Freigabe entscheidet nach D-12, Abschnitt 5, bei tiefem Risiko: {tief}; bei mittlerem Risiko: {mittel}; bei hohem Risiko oder nach voller Folgenabschätzung: {hoch}. Freigegeben wird ein Werkzeug nur, wenn es die Freigabekriterien unten erfüllt, auch ohne vertiefte Prüfung. Bis zum Entscheid gilt Rot."
+neu_schritte:
+  - "**Antrag:** Werkzeug, Zweck, Nutzende, Daten und Bezug zu den Grundsätzen der KI-Leitlinie (D-03) nennen, dazu die geprüfte Lösung ohne KI und warum sie nicht genügt."
+  - "**Freigabekriterien:** Lieferant und Vertrag geprüft (D-16), erlaubte Datenklassen festgelegt (D-13), Kurzprüfung der Folgen gemacht (D-08), Risiken im Register erfasst (D-07) und Test mit eigenen Fällen bestanden (D-12, Abschnitt 4). Ab der Schwelle nach D-08 folgt eine volle Folgenabschätzung (D-09)."
+  - "**Entscheid:** Grün, Gelb mit Auflagen oder Rot; Eintrag im KI-Inventar (D-10)."
+  - "**Einführung:** Information und Schulung der Nutzenden (D-12, D-17)."
+melden_text: "Falsche, unfaire oder auffällige Ergebnisse, versehentlich eingegebene vertrauliche Daten und vermutete Missbräuche melden Mitarbeitende sofort über den Meldeweg nach D-04 an die Meldestelle: {meldestelle}. Wer in guten Treuen meldet, hat keine Nachteile."
+schulung_text: "Vor der ersten Nutzung besuchen Mitarbeitende die Einführung, danach jährlich eine Auffrischung (D-17). Verstösse behandeln wir wie andere Verstösse gegen interne Regeln, bis hin zur Sperrung des Zugangs und arbeitsrechtlichen Massnahmen. Fragen beantwortet {verantwortlich}."
+schluss_eb: "Für Meldungen, Schulung und Folgen bei Verstössen gilt die bestehende Richtlinie. KI-Probleme melden Mitarbeitende über den Meldeweg nach D-04 an die Meldestelle: {meldestelle}. Fragen beantwortet {verantwortlich}."
+# Merksätze und Regeln für KI-Assistenten, Agenten und Erweiterungen
+assistenten_merksaetze: "**Merksätze:** Was heute eingegeben wird, kann morgen Trainingsmaterial sein. Dokumente, Webseiten und E-Mails können versteckte Anweisungen an die KI enthalten. KI handelt nur nach Bestätigung durch eine Person."
+assistenten_regeln:
+  - "Erweiterungen, Konnektoren, eigene Assistenten, Agenten und Browser-Erweiterungen nur nutzen, wenn sie im KI-Inventar (D-10) freigegeben sind."
+  - "KI-Assistenten senden, löschen, bestellen oder ändern nichts, bevor die Person die Aktion geprüft und bestätigt hat."
+  - "Fremde Inhalte (Webseiten, E-Mails unbekannter Absender, Anhänge) nicht von einem Assistenten verarbeiten lassen, der zugleich auf vertrauliche Daten zugreift, ausser das Werkzeug ist dafür freigegeben. Auffälliges Verhalten wie unerwartete Links, Fragen nach Zugangsdaten oder plötzliche Themenwechsel melden."
+  - "Von KI erzeugte Skripte, Makros, Formeln und erzeugten Code vor der Ausführung prüfen; vorgeschlagene Bibliotheken auf Existenz und Herkunft prüfen. Keine Passwörter oder internen Details in Anweisungen eigener Assistenten."

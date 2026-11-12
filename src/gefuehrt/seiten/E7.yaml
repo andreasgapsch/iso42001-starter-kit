@@ -1,0 +1,201 @@
+# Etappe E7 Folgenabschätzungen. Format: src/gefuehrt/FORMAT.md
+seiten:
+  - { id: E7-einfuehrung, typ: info, norm: "6.1.4, 8.4, A.5", vorlage: D-08, leitfaden: 6 }
+  - id: E7-verfahren
+    typ: formular
+    norm: "6.1.4, A.5.2"
+    vorlage: D-08
+    leitfaden: 6
+    beispiel: meta.gefuehrt.antworten.folgen
+    felder:
+      - { pfad: meta.gefuehrt.antworten.folgen.durchfuehrung, typ: person, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.folgen.freigabe, typ: person, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.folgen.rhythmus, typ: auswahl, optionen: rhythmus }
+      - { pfad: meta.gefuehrt.antworten.folgen.ausloeser, typ: mehrfach, optionen: neubeurteilung }
+      - { pfad: organisation.oeffentlicheDienste, typ: janein, wenn: { modul: true } }
+  - id: E7-triage
+    typ: folgenabschaetzung
+    norm: "6.1.4, A.5.2"
+    vorlage: D-09
+    leitfaden: 6
+    beispiel: folgenabschaetzungen[7]
+    felder:
+      - { pfad: triage.rechtspositionOderChancen, typ: janein, pflicht: true }
+      - { pfad: triage.gesundheitOderSicherheit, typ: janein, pflicht: true }
+      - { pfad: triage.verletzlicheGruppen, typ: janein, pflicht: true }
+      - { pfad: triage.besondereDaten, typ: janein, pflicht: true }
+      - { pfad: triage.automatisierteEntscheidung, typ: janein, pflicht: true }
+      - { pfad: triage.grosseReichweite, typ: janein, pflicht: true }
+  - id: E7-triage-ergebnis
+    typ: folgenabschaetzung
+    norm: "6.1.4, A.5.2"
+    vorlage: D-09
+    leitfaden: 6
+    beispiel: folgenabschaetzungen[7]
+    felder:
+      - { pfad: triage.ergebnis, typ: auswahl, optionen: triageErgebnis, pflicht: true }
+      - { pfad: triage.begruendung, typ: textarea, pflicht: true }
+      - { pfad: triage.durch, typ: person }
+      - { pfad: triage.am, typ: datum }
+  - id: E7-beschreibung
+    typ: folgenabschaetzung
+    norm: "A.5.4"
+    vorlage: D-09
+    leitfaden: 6
+    filter: { triage.ergebnis: [voll] }
+    beispiel: folgenabschaetzungen[7]
+    felder:
+      - { pfad: systembeschreibung, typ: textarea, pflicht: true }
+      - { pfad: verwendungen, typ: textarea, pflicht: true }
+      - { pfad: fehlanwendungen, typ: textarea, pflicht: true }
+  - id: E7-umfeld-betreiber
+    typ: folgenabschaetzung
+    norm: "A.5.4"
+    vorlage: D-09
+    leitfaden: 6
+    filter: { triage.ergebnis: [voll] }
+    filterSystem: { aiAct.rollen: [betreiber] }
+    beispiel: folgenabschaetzungen[7]
+    felder:
+      - { pfad: einsatzumfeld, typ: textarea, pflicht: true }
+      - { pfad: daten, typ: textarea, pflicht: true }
+  - id: E7-umfeld-anbieter
+    typ: folgenabschaetzung
+    norm: "A.5.4, A.10.4"
+    vorlage: D-09
+    leitfaden: 6
+    wenn: { rolle: anbieter }
+    filter: { triage.ergebnis: [voll] }
+    filterSystem: { aiAct.rollen: [anbieter] }
+    beispiel: folgenabschaetzungen[5]
+    felder:
+      - { pfad: einsatzumfeld, typ: textarea, pflicht: true }
+      - { pfad: daten, typ: textarea, pflicht: true }
+  - id: E7-betroffene
+    typ: folgenabschaetzung
+    norm: "A.5.4"
+    vorlage: D-09
+    leitfaden: 6
+    filter: { triage.ergebnis: [voll] }
+    beispiel: folgenabschaetzungen[7]
+    felder:
+      - pfad: betroffene
+        typ: tabelle
+        pflicht: true
+        spalten:
+          - { pfad: gruppe, typ: text, pflicht: true }
+          - { pfad: art, typ: auswahl, optionen: betroffenArt }
+          - { pfad: wirkung, typ: textarea, pflicht: true }
+          - { pfad: konsultiert, typ: janein }
+      - { pfad: gesellschaft, typ: textarea }
+  - id: E7-ziele-a
+    typ: folgenabschaetzung
+    norm: "A.5.4, A.5.5"
+    vorlage: D-09
+    leitfaden: 6
+    filter: { triage.ergebnis: [voll] }
+    beispiel: folgenabschaetzungen[7]
+    felder:
+      - { pfad: nutzenSchaden.rechenschaft.nutzen, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.rechenschaft.schaden, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.rechenschaft.ausmass, typ: zahl, pflicht: true }
+      - { pfad: nutzenSchaden.transparenz.nutzen, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.transparenz.schaden, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.transparenz.ausmass, typ: zahl, pflicht: true }
+      - { pfad: nutzenSchaden.fairness.nutzen, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.fairness.schaden, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.fairness.ausmass, typ: zahl, pflicht: true }
+      - { pfad: nutzenSchaden.datenschutz.nutzen, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.datenschutz.schaden, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.datenschutz.ausmass, typ: zahl, pflicht: true }
+  - id: E7-ziele-b
+    typ: folgenabschaetzung
+    norm: "A.5.4, A.5.5"
+    vorlage: D-09
+    leitfaden: 6
+    filter: { triage.ergebnis: [voll] }
+    beispiel: folgenabschaetzungen[7]
+    felder:
+      - { pfad: nutzenSchaden.zuverlaessigkeit.nutzen, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.zuverlaessigkeit.schaden, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.zuverlaessigkeit.ausmass, typ: zahl, pflicht: true }
+      - { pfad: nutzenSchaden.sicherheit.nutzen, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.sicherheit.schaden, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.sicherheit.ausmass, typ: zahl, pflicht: true }
+      - { pfad: nutzenSchaden.erklaerbarkeit.nutzen, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.erklaerbarkeit.schaden, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.erklaerbarkeit.ausmass, typ: zahl, pflicht: true }
+      - { pfad: nutzenSchaden.umwelt.nutzen, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.umwelt.schaden, typ: textarea, pflicht: true }
+      - { pfad: nutzenSchaden.umwelt.ausmass, typ: zahl, pflicht: true }
+  - id: E7-ausfaelle
+    typ: folgenabschaetzung
+    norm: "A.5.4, 6.1.4"
+    vorlage: D-09
+    leitfaden: 6
+    filter: { triage.ergebnis: [voll] }
+    beispiel: folgenabschaetzungen[7]
+    felder:
+      - { pfad: ausfaelle, typ: textarea, pflicht: true }
+      - { pfad: massnahmen, typ: textarea, pflicht: true }
+  - id: E7-dsfa
+    typ: folgenabschaetzung
+    norm: "A.5.2"
+    vorlage: E-06
+    leitfaden: 6
+    aiact: [art-26, art-27]
+    filter: { triage.ergebnis: [voll] }
+    beispiel: folgenabschaetzungen[7]
+    felder:
+      - { pfad: verknuepfteDsfa, typ: text }
+  - id: E7-fria
+    typ: folgenabschaetzung
+    norm: "A.5.2"
+    vorlage: E-06
+    leitfaden: 6
+    aiact: [art-27]
+    wenn: { modul: true, rolle: betreiber }
+    filterSystem: { aiAct.rollen: [betreiber], aiAct.risikoklasse: [hochrisiko-anhang-iii] }
+    beispiel: folgenabschaetzungen[7]
+    felder:
+      - { pfad: fria.erforderlich, typ: auswahl, optionen: jaNeinOffen, pflicht: true }
+      - { pfad: fria.begruendung, typ: textarea, pflicht: true }
+      - { pfad: fria.ref, typ: text, wenn: { eintrag: { fria.erforderlich: [ja] } } }
+      - { pfad: fria.zeitraumHaeufigkeit, typ: textarea, wenn: { eintrag: { fria.erforderlich: [ja] } } }
+      - { pfad: fria.aufsicht, typ: textarea, wenn: { eintrag: { fria.erforderlich: [ja] } } }
+      - { pfad: fria.durch, typ: person }
+      - { pfad: fria.am, typ: datum }
+      - { pfad: fria.behoerde, typ: text, wenn: { eintrag: { fria.erforderlich: [ja] } } }
+      - { pfad: fria.mitgeteiltAm, typ: datum, wenn: { eintrag: { fria.erforderlich: [ja] } } }
+  - id: E7-ergebnis
+    typ: folgenabschaetzung
+    norm: "6.1.4, A.5.3"
+    vorlage: D-09
+    leitfaden: 6
+    beispiel: folgenabschaetzungen[7]
+    felder:
+      - { pfad: sensibleNutzung, typ: janein }
+      - { pfad: eingeschraenkteNutzung, typ: janein }
+      - { pfad: ergebnis, typ: textarea, pflicht: true }
+      - { pfad: naechsteUeberpruefung, typ: datum, pflicht: true }
+      - { pfad: mitgewirkt, typ: liste-text, vorschlaege: mitwirkende }
+  - id: E7-einsatzentscheid
+    typ: auswahl-systeme
+    norm: "6.1.4, A.5.4, A.9.4"
+    vorlage: D-09
+    leitfaden: 6
+    filter: { typ: [eingekauft, saas, eigenbau] }
+    beispiel: kiSysteme[0]
+    felder:
+      - { pfad: einsatzentscheid.nutzen, typ: textarea }
+      - { pfad: einsatzentscheid.alternativeOhneKi, typ: textarea }
+      - { pfad: einsatzentscheid.wiedervorlage, typ: datum }
+  - id: E7-freigabe
+    typ: folgenabschaetzung
+    norm: "A.5.3"
+    vorlage: D-09
+    leitfaden: 6
+    beispiel: folgenabschaetzungen[7]
+    felder:
+      - { pfad: freigabe, typ: freigabe, pflicht: true }
+      - { pfad: neubeurteilungen, typ: tabelle, spalten: [{ pfad: am, typ: datum }, { pfad: durch, typ: person }, { pfad: anlass, typ: text }, { pfad: ergebnis, typ: text }, { pfad: freigabe, typ: freigabe }] }

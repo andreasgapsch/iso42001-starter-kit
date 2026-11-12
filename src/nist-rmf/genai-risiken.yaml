@@ -1,0 +1,32 @@
+# Risiken generativer KI nach NIST AI 600-1 (Generative AI Profile, Juli 2024), Abschnitt 2
+#
+# Struktur sprachneutral; eigene Kurztitel und typischer KMU-Fall in src/i18n/{de,en}/nist.yaml
+# unter genai_risiken.<id>. Originaltitel und Kurzbeschreibung von NIST (wörtlich, mit eigener Übersetzung) als
+# Zitat-Quelle in src/nist-rmf/original-600-1.yaml.
+# Geprüft gegen den PDF-Text (pdftotext, 21.10.2026): Abschnittsnummern und zugeordnete Vertrauensmerkmale.
+#
+# Felder
+#   nr, abschnitt_600_1  Reihenfolge und Abschnitt in NIST AI 600-1
+#   kmu_relevanz         hoch | mittel | gering (Einschätzung des Kits für KMU, meist Betreiber eingekaufter KI)
+#   merkmale             Vertrauensmerkmale, die 600-1 dem Risiko zuordnet (src/nist-rmf/merkmale.yaml)
+#   controls             Zusatz-Controls, die das Risiko behandeln (src/nist-rmf/rmf-controls.yaml);
+#                        jedes Control mit diesem Risiko in «risiken» steht hier
+#   subkategorien        betroffene Subkategorien (Vereinigung der Controls, ergänzt um eigene Zuordnung)
+#   praezisierung        true: kein Control, Hinweis in bestehender Vorlage genügt (Text in nist.yaml)
+
+schema: 1
+stand: ai-rmf-1.0
+
+risiken:
+  - {id: gai-cbrn, nr: 1, abschnitt_600_1: "2.1", kmu_relevanz: gering, merkmale: [sicher, erklaerbar], controls: [], subkategorien: [GV-1.3, MS-2.6], praezisierung: true}
+  - {id: gai-konfabulation, nr: 2, abschnitt_600_1: "2.2", kmu_relevanz: hoch, merkmale: [gueltig, sicher, erklaerbar, fair], controls: [RMF-G01, RMF-G07], subkategorien: [GV-3.2, MP-2.3, MS-2.3, MS-2.5, MS-3.3, MS-4.2, MG-4.3]}
+  - {id: gai-gefaehrlich, nr: 3, abschnitt_600_1: "2.3", kmu_relevanz: mittel, merkmale: [sicher, geschuetzt], controls: [RMF-G06], subkategorien: [GV-3.2, GV-4.2, MG-3.2]}
+  - {id: gai-datenschutz, nr: 4, abschnitt_600_1: "2.4", kmu_relevanz: hoch, merkmale: [sicher, geschuetzt, rechenschaft, datenschutz], controls: [RMF-G02], subkategorien: [GV-1.4, GV-3.2, GV-6.1, MP-4.1, MG-3.1]}
+  - {id: gai-umwelt, nr: 5, abschnitt_600_1: "2.5", kmu_relevanz: gering, merkmale: [sicher, rechenschaft], controls: [], subkategorien: [MS-2.12], praezisierung: true}
+  - {id: gai-verzerrung, nr: 6, abschnitt_600_1: "2.6", kmu_relevanz: mittel, merkmale: [gueltig, fair], controls: [RMF-13, RMF-G06], subkategorien: [GV-3.2, GV-4.2, MS-2.11, MG-3.2]}
+  - {id: gai-mensch-ki, nr: 7, abschnitt_600_1: "2.7", kmu_relevanz: hoch, merkmale: [gueltig, sicher, rechenschaft, erklaerbar, datenschutz, fair], controls: [RMF-G07, RMF-04, RMF-G01], subkategorien: [GV-3.2, MP-2.3, MP-3.5, MS-2.3, MS-2.5, MS-3.3, MS-4.2, MG-4.1, MG-4.3]}
+  - {id: gai-integritaet, nr: 8, abschnitt_600_1: "2.8", kmu_relevanz: mittel, merkmale: [gueltig, sicher, rechenschaft, erklaerbar], controls: [RMF-G03], subkategorien: [GV-1.2, GV-5.1, GV-6.1, MP-3.4, MP-5.1, MS-2.8]}
+  - {id: gai-sicherheit, nr: 9, abschnitt_600_1: "2.9", kmu_relevanz: hoch, merkmale: [gueltig, sicher, geschuetzt, datenschutz], controls: [RMF-G04, RMF-12, RMF-G02], subkategorien: [GV-1.4, GV-3.2, GV-6.1, MP-2.3, MP-4.1, MS-2.7, MS-4.2, MG-3.1]}
+  - {id: gai-schutzrechte, nr: 10, abschnitt_600_1: "2.10", kmu_relevanz: hoch, merkmale: [rechenschaft, datenschutz, fair], controls: [RMF-G05, RMF-06], subkategorien: [GV-6.1, MP-4.1]}
+  - {id: gai-anstoessig, nr: 11, abschnitt_600_1: "2.11", kmu_relevanz: gering, merkmale: [sicher, datenschutz, fair], controls: [RMF-G06], subkategorien: [GV-3.2, GV-4.2, MG-3.2]}
+  - {id: gai-lieferkette, nr: 12, abschnitt_600_1: "2.12", kmu_relevanz: hoch, merkmale: [gueltig, sicher, geschuetzt, rechenschaft, erklaerbar, datenschutz, fair], controls: [RMF-16, RMF-G04], subkategorien: [GV-3.2, MP-2.3, MS-2.7, MS-4.2, MG-3.2]}

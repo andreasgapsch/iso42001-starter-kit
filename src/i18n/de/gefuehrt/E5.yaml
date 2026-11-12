@@ -1,0 +1,134 @@
+# Seitentexte Etappe E5 Rolle zuerst und Einstufung. Format: src/gefuehrt/FORMAT.md
+E5-einfuehrung:
+  titel: Rolle zuerst
+  frage: Bieten Sie dieses KI-System an oder nutzen Sie es nur?
+  warum: Die Rolle bestimmt Ihre Pflichten. Als [[g:anbieter]] verantworten Sie Entwicklung, Dokumentation und Konformität; als [[g:betreiber]] die richtige Nutzung und Aufsicht. Deshalb klären Sie die Rolle vor allen anderen Pflichten.
+  fehler: Ein Zertifikat nach ISO/IEC 42001 beweist nicht, dass Sie den AI Act erfüllen. Es zeigt nur, dass Sie KI geordnet steuern. Auditoren und Kunden erwarten, dass Sie die Grenze kennen und benennen.
+E5-rolle:
+  titel: Rolle je KI-System
+  frage: Welche Rolle haben Sie bei diesem KI-System?
+  warum: Wer ein System entwickelt oder unter eigenem Namen anbietet, ist [[g:anbieter]]. Wer ein eingekauftes System beruflich nutzt, ist [[g:betreiber]]. Beides kann für dasselbe System zutreffen.
+  fehler: Ein Chatbot, den Sie einkaufen, aber unter eigenem Namen auf Ihrer Website betreiben, macht Sie oft zum Anbieter. Auditoren gleichen die Rolle mit Verträgen und Ihrem Auftritt nach aussen ab.
+  felder:
+    aiAct.rollen:
+      label: Rolle
+      hilfe: Mehrfachauswahl möglich. Der Entscheidungsbaum in D-24 hilft bei Grenzfällen.
+    aiAct.anwendungsbereich:
+      label: Räumlicher Anwendungsbereich (Art. 2(1))
+      hilfe: Welche Buchstaben von Art. 2(1) treffen für dieses System zu? Nichts wählen heisst kein EU-Bezug, etwa bei einem System, das nur an einem Schweizer Standort genutzt wird. Erscheint in E-01, Spalte M.
+    aiAct.geprueft:
+      label: Rolle geprüft durch, am
+      hilfe: Wer die Rolle nach dem Entscheidungsbaum geprüft hat, bei Grenzfällen die Rechtsberatung. Erscheint in E-01, Spalte «Geprüft durch, am».
+E5-rollenwechsel:
+  titel: Werden Sie zum Anbieter?
+  frage: Haben Sie das System unter eigenem Namen angeboten, wesentlich verändert oder für einen neuen Zweck eingesetzt?
+  warum: Nach dem AI Act wird ein [[g:betreiber]] in diesen Fällen selbst zum [[g:anbieter]], wenn es sich um ein Hochrisiko-System handelt ([[g:rollenwechsel]]). Auch ein Nachtrainieren mit eigenen Daten kann eine [[g:wesentliche-aenderung]] sein.
+  fehler: Der Rollenwechsel wird oft übersehen, weil das System ja «eingekauft» ist. Halten Sie die Prüfung mit Begründung fest, auch wenn das Ergebnis «kein Wechsel» lautet.
+  felder:
+    aiAct.rollenwechsel:
+      label: Ergebnis der Prüfung nach Art. 25(1)
+      hilfe: Kein Wechsel oder der zutreffende Buchstabe. Der Wechsel betrifft nur Hochrisiko-Systeme; bei anderen Systemen setzt E-01 «nicht relevant». Erscheint in E-01, Spalte «Rollenwechsel nach Art. 25(1)».
+    aiAct.rollen:
+      label: Rolle nach der Prüfung
+      hilfe: Ergänzen Sie «Anbieter», wenn ein Rollenwechsel vorliegt.
+    aiAct.begruendung:
+      label: Begründung
+      hilfe: z. B. «Nachtrainiert mit eigenen Bildern, aber kein Hochrisiko-System, da Qualitätskontrolle der eigenen Fertigung (Art. 6). Kein Rollenwechsel.»
+E5-verbote:
+  titel: Verbotene Praktiken
+  frage: Bevor Sie ein System einstufen, prüfen Sie es gegen die Verbote nach Art. 5. Das Ergebnis halten Sie auf der nächsten Seite je System fest; die vollständige Liste der Verbote steht dort in der Auswahl.
+  warum: Einige Anwendungen sind ganz untersagt, etwa manipulative Techniken, Bewertung von Menschen nach ihrem Sozialverhalten oder Emotionserkennung am Arbeitsplatz und in der Schule. Prüfen Sie jedes System dagegen, bevor Sie es einstufen ([[g:verbotene-praxis]]).
+  fehler: Emotionserkennung steckt manchmal in Werkzeugen für Videokonferenzen oder Callcenter. Ist ein System betroffen, stellen Sie die Nutzung ein und lassen Sie das juristisch prüfen. Haken Sie die Prüfung in der Checkliste ab.
+E5-risikoklasse:
+  titel: Risikoklasse
+  frage: In welche Risikoklasse nach AI Act fällt dieses System?
+  warum: Die Klasse bestimmt die Pflichten. [[g:hochrisiko|Hochrisiko-Systeme]] nach Anhang III betreffen Bereiche wie Personalauswahl oder Kreditprüfung; nach Anhang I sind es Sicherheitsbauteile in Produkten wie Maschinen. Die meisten KMU-Systeme haben ein minimales Risiko oder nur Transparenzpflichten.
+  fehler: KI zur Qualitätskontrolle oder Leistungsoptimierung gilt nach Art. 6 nicht als [[g:sicherheitsbauteil]], ausser ihr Ausfall gefährdet Menschen. Halten Sie Grenzfälle mit Begründung fest. Hochrisiko-Pflichten nach Anhang III gelten ab 02.12.2027, nach Anhang I ab 02.08.2028.
+  felder:
+    aiAct.risikoklasse:
+      label: Risikoklasse
+      hilfe: «Noch offen» meldet die Prüfung als Fehler.
+    aiAct.anhangIiiBereich:
+      label: Bereich nach Anhang III
+      hilfe: z. B. 4a für Systeme, die Bewerbungen filtern oder bewerten.
+    aiAct.ausnahmeArt63:
+      label: Ausnahme nach Art. 6(3)
+      hilfe: Nur wenn das System eine eng begrenzte Hilfsaufgabe hat und kein Profiling von Personen macht. Die Begründung müssen Sie dokumentieren.
+    aiAct.art5.ergebnis:
+      label: Prüfung auf verbotene Praktiken (Art. 5)
+      hilfe: Ergebnis der Prüfung gegen Art. 5(1). Jeder Treffer ausser «keine» stoppt den Einsatz bis zur juristischen Prüfung.
+    aiAct.art5.begruendung:
+      label: Begründung der Prüfung nach Art. 5
+      hilfe: Ein bis zwei Sätze, z. B. warum keine Emotionserkennung vorliegt.
+    aiAct.produkt.anhangI:
+      label: Produkt nach Anhang I
+      hilfe: Ist das System Teil eines Produkts nach Anhang I, z. B. einer Maschine (Abschnitt B)?
+    aiAct.produkt.sicherheitsbauteil:
+      label: Sicherheitsbauteil oder selbst Produkt (Art. 6(1) Bst. a)
+      hilfe: Ist das System ein Sicherheitsbauteil des Produkts oder selbst das Produkt?
+    aiAct.produkt.nurNichtSicherheitsrelevant:
+      label: Nur nicht sicherheitsrelevante Funktionen (Art. 6(1a))
+      hilfe: Nutzerunterstützung, Leistungsoptimierung, Effizienz, Automatisierung, Bedienbarkeit oder Qualitätskontrolle.
+    aiAct.produkt.ausfallGefaehrdet:
+      label: Ausfall gefährdet Gesundheit und Sicherheit (Art. 6(1b))
+      hilfe: Würde ein Ausfall oder eine Fehlfunktion Gesundheit und Sicherheit gefährden? Dann gilt es trotz Art. 6(1a) als Sicherheitsbauteil.
+    aiAct.produkt.drittpruefung:
+      label: Drittprüfung wegen Gesundheits- oder Sicherheitsrisiken (Art. 6(1) Bst. b, 6(1c))
+      hilfe: Braucht das Produkt eine Konformitätsbewertung durch Dritte wegen Gesundheits- oder Sicherheitsrisiken? Funk- oder EMV-Risiken allein genügen nicht.
+    aiAct.produkt.begruendung:
+      label: Begründung zu Art. 6(1a) und 6(1b)
+      hilfe: Warum das System ein Sicherheitsbauteil ist oder nicht; erscheint in E-02.
+    aiAct.profiling:
+      label: Profiling natürlicher Personen
+      hilfe: Mit Profiling ist ein Anhang-III-System immer hochriskant; die Ausnahme nach Art. 6(3) greift dann nicht.
+    aiAct.registrierung:
+      label: Registrierung in der EU-Datenbank (Art. 49(2))
+      hilfe: "Nur bei einer Ausnahme nach Art. 6(3): Der [[g:anbieter]] registriert das System vor dem Inverkehrbringen."
+    aiAct.eingestuft:
+      label: Eingestuft durch, am
+      hilfe: Wer die Risikoklasse festgelegt hat und wann. Erscheint in E-02, Spalte «Eingestuft durch, am».
+E5-transparenz:
+  titel: Transparenzpflichten
+  frage: Spricht das System mit Menschen oder erzeugt es Inhalte?
+  warum: Für Chatbots, KI-erzeugte Inhalte und [[g:deepfake|Deepfakes]] gelten seit 02.08.2026 Hinweis- und Kennzeichnungspflichten, unabhängig von der Risikoklasse ([[g:transparenzpflicht]]).
+  fehler: Ein Chatbot ohne Hinweis «Sie sprechen mit einer KI» ist ein klarer Verstoss. Auditoren schauen sich die Oberfläche an.
+  felder:
+    aiAct.transparenz:
+      label: Zutreffende Pflichten
+      hilfe: Leer lassen, wenn keine Pflicht zutrifft.
+    aiAct.kennzeichnung:
+      label: Verfahren der maschinenlesbaren Kennzeichnung
+      hilfe: Wie erzeugte Inhalte maschinenlesbar gekennzeichnet werden, z. B. Metadaten im Bild oder ein Wasserzeichen des [[g:anbieter|Anbieters]]. Leer lassen, wenn die Umsetzung in der [[g:soa|Erklärung zur Anwendbarkeit]] beim [[g:control]] EUAIA-06 steht. Erscheint in E-07.
+E5-gpai:
+  titel: Modell mit allgemeinem Verwendungszweck
+  frage: Bringt Ihre Organisation mit diesem System selbst ein KI-Modell mit allgemeinem Verwendungszweck in Verkehr?
+  warum: Viele Werkzeuge nutzen im Hintergrund grosse Sprachmodelle ([[g:gpai]]). Die besonderen Pflichten für diese Modelle tragen die [[g:anbieter]] der Modelle, nicht wer sie nutzt. Ja gilt nur, wenn Sie selbst ein solches Modell entwickeln oder wesentlich verändern und anderen bereitstellen.
+  fehler: Häufig wird «ja» angekreuzt, weil Copilot oder ChatGPT auf einem grossen Modell beruht. Das löst unnötige Pflichten und Vorschläge aus. Halten Sie stattdessen das genutzte Modell in der Beschreibung im Inventar fest.
+  felder:
+    aiAct.gpai:
+      label: Wir bringen selbst ein Modell mit allgemeinem Verwendungszweck in Verkehr
+      hilfe: Nein bei Nutzung von Copilot, ChatGPT und ähnlichen Diensten und bei eigenem Chatbot oder Assistenten auf einem fremden Modell über eine Schnittstelle.
+E5-begruendung:
+  titel: Begründung der Einstufung
+  frage: Wie begründen Sie Rolle und Risikoklasse dieses Systems und wurde die Einstufung juristisch geprüft?
+  warum: Eine nachvollziehbare Begründung schützt Sie bei Nachfragen von Kunden und Behörden. Wer als [[g:anbieter]] ein System nach Art. 6(3) nicht als Hochrisiko einstuft, muss das ohnehin dokumentieren.
+  fehler: «Kein Hochrisiko» ohne Begründung überzeugt niemanden. Bei Grenzfällen lohnt sich eine kurze juristische Prüfung; vermerken Sie diese hier.
+  felder:
+    aiAct.begruendung:
+      label: Begründung
+      hilfe: Zwei bis vier Sätze mit Bezug auf die Artikel.
+    aiAct.juristischGeprueft:
+      label: Juristisch geprüft
+      hilfe: Durch Rechtsdienst oder externe Fachperson.
+E5-vermerk:
+  titel: Vermerk zum AI Act
+  frage: Warum brauchen Sie das Modul AI Act im Moment nicht?
+  warum: Auch ohne Modul sollten Sie festhalten, warum der AI Act Sie nicht betrifft. So können Sie die Frage jederzeit beantworten und erkennen Änderungen, etwa einen neuen Kunden in der EU.
+  fehler: Der Vermerk veraltet, sobald sich Geschäft oder Systeme ändern. Prüfen Sie ihn mindestens jährlich. Auditoren fragen, wie Sie die rechtlichen Anforderungen an KI verfolgen.
+  felder:
+    meta.gefuehrt.antworten.aiActVermerk.text:
+      label: Vermerk
+      hilfe: z. B. «Keine KI in unseren Produkten, keine Hochrisiko-Fälle, Ergebnisse nur intern in der Schweiz genutzt. Einstufung ohne juristische Prüfung.»
+    meta.gefuehrt.antworten.aiActVermerk.naechstePruefung:
+      label: Nächste Prüfung
+      hilfe: Spätestens in einem Jahr.

@@ -1,0 +1,133 @@
+# Page texts for the annual calendar. Format: src/gefuehrt/FORMAT.md
+J-einfuehrung:
+  titel: Annual calendar
+  frage: What needs doing regularly after certification?
+  warum: A management system thrives on repetition. The inventory, risks, impact assessments and suppliers are reviewed regularly, objectives are measured, and every year there is an internal audit and a management review. The calendar shows what is due.
+  fehler: After certification, the system often goes to sleep until just before the [[g:ueberwachungsaudit]]. Auditors spot this when all the records were created in the same month.
+J-termine:
+  titel: Fixed dates in the year
+  frage: In which month do the internal audit, the management review and the surveillance audit take place?
+  warum: Fixed months make planning easy. A proven order is internal audit, then management review, then surveillance audit, a few weeks apart.
+  fehler: If the internal audit and the surveillance audit are too close together, there is no time left for corrections.
+  felder:
+    meta.gefuehrt.antworten.jahr.monatAudit:
+      label: Internal audit
+      hilfe: At least three months before the surveillance audit.
+    meta.gefuehrt.antworten.jahr.monatMb:
+      label: Management review
+      hilfe: After the internal audit.
+    meta.gefuehrt.antworten.jahr.monatUeberwachung:
+      label: Surveillance audit
+      hilfe: About one year after certification, then annually.
+J-kalender:
+  titel: Tasks due
+  frage: Which tasks are coming up in the next few weeks?
+  warum: The calendar combines fixed cycles with the review dates from your registers. Each task opens the matching page; marking it ‘done’ creates a record.
+  fehler: Tasks that are ticked off but not actually done stand out in the audit. Note the evidence for every completed task.
+J-inventar:
+  titel: Review the inventory
+  frage: Are the details for this AI system still correct?
+  warum: Updates, new features or a change in use alter a system. Each review sets a new date; significant changes trigger a new risk assessment and impact assessment.
+  fehler: The check flags a changed system with an old impact assessment as a note. Enter the date of change if something significant has changed.
+  felder:
+    status:
+      label: Status
+      hilfe: Is the system still approved and in use?
+    lebenszyklus:
+      label: Phase
+      hilfe: Current phase of the life cycle.
+    geaendertAm:
+      label: Significantly changed on
+      hilfe: Only for significant changes.
+    naechsteUeberpruefung:
+      label: Next review
+      hilfe: Set a new date.
+J-risiken:
+  titel: Reassess risks
+  frage: Has this risk changed?
+  warum: The standard requires reassessments at set intervals. Check whether likelihood and impact are still right and whether the actions have worked.
+  fehler: Values that stay the same for years look as if nobody checked. Record it even when nothing has changed.
+  felder:
+    w:
+      label: Likelihood before actions
+      hilfe: Level on your scale.
+    a:
+      label: Impact before actions
+      hilfe: Level on your scale.
+    wNach:
+      label: Likelihood after actions
+      hilfe: Current estimate.
+    aNach:
+      label: Impact after actions
+      hilfe: Current estimate.
+    status:
+      label: Status
+      hilfe: Closed once the risk no longer exists.
+J-folgen:
+  titel: Review the impact assessment
+  frage: Is this impact assessment still up to date?
+  warum: Impact assessments are repeated at set intervals and after significant changes. If the use has not changed, a short note and a new date are enough.
+  fehler: If the system has changed since the last approval, it needs a new approval. Auditors compare the dates.
+  felder:
+    ergebnis:
+      label: Result of the review
+      hilfe: e.g. ‘Use unchanged, result confirmed’.
+    naechsteUeberpruefung:
+      label: Next review
+      hilfe: Set a new date.
+J-lieferanten:
+  titel: Review suppliers again
+  frage: Does this supplier still meet your requirements?
+  warum: Suppliers change models, subcontractors and terms. An annual review shows whether the basis for your approval still holds.
+  fehler: Changed terms of use, for example on training with customer data, often go unnoticed. Read the current terms at every review.
+  felder:
+    pruefstatus:
+      label: Review status
+      hilfe: Result of the new review.
+    bemerkung:
+      label: Comment
+      hilfe: What has changed.
+    naechstePruefung:
+      label: Next review
+      hilfe: Set a new date.
+J-ziele:
+  titel: Measure objectives
+  frage: What is the value of the metric today?
+  warum: Regular measurements show whether you are on track and provide inputs for the management review.
+  fehler: Missing measurements between two audits show that the measurement plan is not being followed.
+  felder:
+    messungen:
+      label: Measurements
+      hilfe: New row with date and value.
+    messungen.datum:
+      label: Date
+      hilfe: Reference date of the measurement.
+    messungen.wert:
+      label: Value
+      hilfe: Measured value.
+    messungen.bemerkung:
+      label: Comment
+      hilfe: Anything unusual and actions taken.
+J-ueberwachungsaudit:
+  titel: Surveillance audit
+  frage: When is the next surveillance audit and what was the result?
+  warum: Every year the [[g:zertifizierungsstelle|certification body]] checks part of the system. You record its findings in the same way as internal findings.
+  fehler: The certification body looks first at findings from the last surveillance audit that are still open.
+  felder:
+    geplant:
+      label: Date
+      hilfe: First audit day.
+    auditor:
+      label: Lead auditor
+      hilfe: Name.
+    durchgefuehrt:
+      label: Carried out on
+      hilfe: Date of the closing meeting.
+    ergebnis:
+      label: Result
+      hilfe: Brief conclusion and number of findings.
+J-rmf:
+  titel: "NIST AI RMF status and profile"
+  frage: "Is there a new version of the NIST AI RMF, and is your profile still correct?"
+  warum: "NIST has announced a revision of the AI RMF. Check every six months whether a new version has been published, and update the profile so that information for customers and the management review is up to date."
+  fehler: "An outdated profile in a customer questionnaire does more harm than none at all. Record in the note when you last checked a subcategory."

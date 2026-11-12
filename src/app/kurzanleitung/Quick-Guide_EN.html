@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Andreas Gapsch, KMU-CIO, kmu-cio.ch">
+<title>AIMS Manager: Quick guide</title>
+<style>
+:root { --text:#1c2430; --text-2:#4a5566; --akzent:#1f5b8f; --rand:#cfd6df; --flaeche:#eef1f5; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 15px/1.45 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif; color: var(--text); background: #fff; }
+main { max-width: 820px; margin: 0 auto; padding: 28px 24px; }
+h1 { font-size: 1.55rem; margin: 0 0 4px; color: var(--akzent); }
+h2 { font-size: 1.05rem; margin: 18px 0 6px; }
+p, li { margin: 0 0 6px; }
+ol, ul { padding-left: 1.3em; margin: 0 0 6px; }
+.unter { color: var(--text-2); margin-bottom: 14px; }
+.kasten { background: var(--flaeche); border-left: 4px solid var(--akzent); padding: 10px 14px; border-radius: 6px; margin: 12px 0; }
+.spalten { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+kbd { font: 0.85em ui-monospace, Consolas, monospace; border: 1px solid var(--rand); border-radius: 4px; padding: 0 4px; }
+footer { margin-top: 18px; padding-top: 8px; border-top: 1px solid var(--rand); color: var(--text-2); font-size: 0.85rem; }
+@media (max-width: 700px) { .spalten { grid-template-columns: 1fr; } }
+@media print { @page { size: A4; margin: 12mm; } main { padding: 0; max-width: none; } body { font-size: 10.5pt; } h2 { margin-top: 10px; } }
+</style>
+</head>
+<body>
+<main>
+<h1>AIMS Manager: Quick guide</h1>
+<p class="unter">Tool of the ISO/IEC 42001 Starter Kit. One file that runs offline in your browser.</p>
+<div class="kasten"><strong>Your data does not leave this computer.</strong> Your information is kept in a project file with the extension <code>.aims.json</code>. Save it in a secure location, for example a folder that is backed up.</div>
+<div class="spalten">
+<section>
+<h2>1. Getting started</h2>
+<ol>
+<li>Open <code>aims-manager.html</code> with a double click (Edge, Chrome, Firefox or Safari).</li>
+<li>Choose <strong>New project</strong>, <strong>Open project file</strong> or an <strong>example</strong>.</li>
+<li>For a new project, choose the path (with or without an ISMS) and whether the EU AI Act module is included. You can change both in the settings.</li>
+</ol>
+<h2>2. Working</h2>
+<ul>
+<li><strong>Navigation:</strong> on the left you choose the area (Start, Overview, Guide, Registers, Processes, Library, Knowledge, Check), next to it the page in the sub-menu. Each page shows its title, the search (<kbd>/</kbd>) and its main action at the top, for example ‘Add AI system’. On a phone the areas are at the bottom, the others under ‘More’.</li>
+<li><strong>Guide:</strong> stage by stage, one question per page. On the right you find help, an example answer, typical mistakes and references to the standard, template and guide.</li>
+<li><strong>Later:</strong> put pages aside without an answer; they appear among the open items.</li>
+<li><strong>Registers:</strong> all information at a glance (inventory, risks, SoA, actions, AI Act, 27001 bridge and more).</li>
+<li><strong>Questionnaire:</strong> in the AI inventory, send it to business units as an Excel file and import the completed files.</li>
+</ul>
+</section>
+<section>
+<h2>3. Saving</h2>
+<ul>
+<li><strong>Save</strong> with <kbd>Ctrl</kbd>+<kbd>S</kbd> (Mac <kbd>Cmd</kbd>+<kbd>S</kbd>), with the save status next to the search or in the project menu at the bottom of the tool bar. Edge and Chrome write directly to the open file; Firefox and Safari download a new file to the downloads folder.</li>
+<li>‘Unsaved changes’ next to the search shows that the file is not up to date. The browser keeps an interim copy every two seconds; it does not replace the project file.</li>
+</ul>
+<h2>4. Checking and generating documents</h2>
+<ul>
+<li><strong>Check</strong> (<kbd>Alt</kbd>+<kbd>P</kbd>): traffic light ‘Ready for Stage 1’, errors and notes with a jump to the right place.</li>
+<li><strong>Library:</strong> documents with status, version and review date. In Edge and Chrome you connect a folder of your choice; in Firefox and Safari the library stays in browser storage.</li>
+<li><strong>Generate documents</strong> (Library, Generate): the complete set as Word and Excel files (ZIP), individually or as a print view for PDF. The documents belong to your organization.</li>
+</ul>
+<h2>5. AI assistant</h2>
+<p>‘Go deeper with AI’ creates a request to copy; you can deselect confidential information first. Use the assistant's project file on the start page with ‘Use the result of the AI assistant’.</p>
+</section>
+</div>
+<h2>Good to know</h2>
+<ul>
+<li>Keyboard: <kbd>Enter</kbd> next, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Left arrow</kbd> back, <kbd>Alt</kbd>+<kbd>P</kbd> check. Choose the language and appearance (dark, light, like system) under Settings.</li>
+<li>Windows: generated Word and Excel files first open in Protected View. Click ‘Enable Editing’.</li>
+<li>On shared computers, clear the interim storage in the settings.</li>
+<li>Printing: printouts show the organization, the date and, in Edge and Chrome, the page. In Firefox and Safari the print setting ‘Headers and footers’ adds page numbers, but also prints the address of the file.</li>
+</ul>
+<footer>ISO/IEC 42001 Starter Kit by Andreas Gapsch, KMU-CIO, kmu-cio.ch. The standard is available from SNV, DIN or ISO. The kit does not replace legal advice.</footer>
+</main>
+</body>
+</html>

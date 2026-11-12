@@ -1,0 +1,84 @@
+# D-23 Integration matrix ISO/IEC 27001 and 42001
+hinweis_einschaetzung: "The mappings in this document are a professional judgement, not a statement made by the standards. They show where ISMS evidence can be reused and do not replace a case-by-case review."
+normverweis_27001: "For the requirement text, see ISO/IEC 27001:2022, clauses 4 to 10 and Annex A. The standard is available from SNV, DIN or ISO."
+normverweis_27001_firma: "Reference: ISO/IEC 27001:2022, clauses 4 to 10 and Annex A."
+blaetter:
+  dokumente: Documents
+  kapitel: Clauses 4 to 10
+  mapping: Control mapping
+  katalog: Catalogue 27001
+titel_dokumente: "AIMS documents and their ISMS counterparts"
+titel_kapitel: "Clauses 4 to 10: running them jointly"
+titel_mapping: "Mapping of ISO/IEC 42001 Annex A to ISO/IEC 27001:2022 Annex A"
+titel_katalog: "ISO/IEC 27001:2022 Annex A with mapped 42001 controls"
+hinweise_dokumente:
+  - "‘reused’: the ISMS document also applies to the AIMS, extended by a supplementary sheet. ‘extended’: AI content is added to the ISMS document. ‘new’: the AIMS needs a document of its own."
+  - "With an ISMS, the sheet D-xx-EB applies instead of a separate document for documents marked ‘Supplementary sheet yes’."
+hinweise_kapitel:
+  - "Clauses 4 to 10 have the same structure in both standards. ‘yes’ means: one process and one set of evidence for both systems. ‘partly’ means: common framework, AI content must be added. ‘no’ means: AIMS only, with no ISMS counterpart."
+hinweise_mapping:
+  - "Strength ‘high’: the ISMS evidence largely covers the AI control. ‘medium’: process and format can be reused, AI content is missing. ‘low’: only a starting point."
+  - "For security threats against AI systems themselves, ISO/IEC 27090:2026 is an additional source of controls; the kit does not map it here."
+hinweise_mapping_firma:
+  - "The ‘Linked in the SoA’ column shows whether the statement of applicability (D-11) lists the 27001 control as reused evidence."
+hinweise_katalog:
+  - "Short names in our own words, not the titles used in the standard. The requirement text is in the edition of the standard."
+spalten_dokumente: [ID, Title, Format, Type, Relation to ISMS, ISMS counterpart, Supplementary sheet, Clause reference 42001]
+spalten_kapitel: [Clause, Title, Counterpart 27001, Shared, Note, AIMS documents]
+spalten_mapping: [Control 42001, Short name 42001, Control 27001, Short name 27001, Strength, Rationale]
+spalte_verknuepft: Linked in the SoA
+spalten_katalog: [Control 27001, Theme, Short name, Mapped 42001 controls]
+art:
+  pflicht: Mandatory document
+  leitfaden: Guide
+  modul: AI Act module
+  modul_nist: NIST AI RMF module
+isms:
+  neu: new
+  erweitert: extended
+  wiederverwendet: reused
+  leitfaden: guide
+gemeinsam:
+  ja: "yes"
+  teilweise: partly
+  nein: no (AIMS only)
+staerke:
+  hoch: high
+  mittel: medium
+  tief: low
+kein_gegenstueck: no counterpart
+# Company document: own implementation per clause
+spalte_umsetzung: Our implementation
+kapitel_aufgenommen: "{id}, incorporated into {dokument}"
+kapitel_erweitert: "{id}, extends {dokument}"
+ja: "yes"
+nein: "no"
+gegenstueck:
+  D-00: "Project charter or ISMS gap analysis, if available"
+  E-04: "Training and awareness concept of the ISMS"
+  D-01: "Context analysis and register of interested parties"
+  D-02: "ISMS scope"
+  D-03: "Information security policy (alignment, supplementary sheet D-03-EB)"
+  D-04: "Roles, responsibilities and organization chart"
+  D-05: "Security objectives and measurement plan"
+  D-06: "Information security risk procedure"
+  D-07: "Risk register and treatment plan"
+  D-08: "Data protection impact assessment procedure (as a model)"
+  D-09: "Data protection impact assessment (reference)"
+  D-10: "Information asset inventory"
+  D-11: "ISMS statement of applicability (separate list for each standard)"
+  D-12: "Secure development and change procedure"
+  D-13: "Classification and handling of information"
+  D-14: "Security incident procedure"
+  D-15: "Acceptable use policy"
+  D-16: "Supplier management"
+  D-17: "Training, awareness and communication"
+  D-20: "Internal audit programme"
+  D-21: "Management review"
+  D-22: "Nonconformities and corrective actions"
+  D-23: "Guide"
+  D-24: "Guide"
+  D-25: "Guide"
+  D-26: "Control of documented information"
+gegenstueck_firma:
+  D-00: "Project charter and gap analysis of the ISMS"

@@ -1,0 +1,29 @@
+# Die sieben Vertrauensmerkmale des AI RMF (NIST AI 100-1 Abschnitt 3) und ihre Zuordnung zu den
+# acht Zielen der Folgenabschätzung D-09 (Schlüssel aus NUTZEN_SCHADEN_ZIELE in src/model/typen.ts)
+#
+# Struktur sprachneutral; eigene Kurztitel, Erläuterung und Hinweis zu D-09 in src/i18n/{de,en}/nist.yaml
+# unter merkmale.<id> und ziele_ohne_merkmal.<ziel>.
+#
+# Felder
+#   abschnitt_100_1  Abschnitt in AI 100-1
+#   rolle            grundlage (Voraussetzung der übrigen) | querschnitt (betrifft alle übrigen) | merkmal
+#   ziele_d09        Ziele in D-09, die das Merkmal abdecken
+#   passung          gut | teilweise | vermischt (ein D-09-Ziel deckt zwei Merkmale in einer Frage ab)
+#   subkategorien    Subkategorien, in denen das Merkmal geprüft wird (MEASURE 2)
+# Die Zuordnung ist fest; solange die Ziele in D-09 gleich bleiben, braucht es keine Migration.
+
+schema: 1
+stand: ai-rmf-1.0
+
+merkmale:
+  - {id: gueltig, abschnitt_100_1: "3.1", rolle: grundlage, ziele_d09: [zuverlaessigkeit], passung: gut, subkategorien: [MS-2.3, MS-2.5]}
+  - {id: sicher, abschnitt_100_1: "3.2", rolle: merkmal, ziele_d09: [sicherheit], passung: vermischt, subkategorien: [MS-2.6]}
+  - {id: geschuetzt, abschnitt_100_1: "3.3", rolle: merkmal, ziele_d09: [sicherheit], passung: vermischt, subkategorien: [MS-2.7]}
+  - {id: rechenschaft, abschnitt_100_1: "3.4", rolle: querschnitt, ziele_d09: [rechenschaft, transparenz], passung: gut, subkategorien: [MS-2.8]}
+  - {id: erklaerbar, abschnitt_100_1: "3.5", rolle: merkmal, ziele_d09: [erklaerbarkeit], passung: teilweise, subkategorien: [MS-2.9]}
+  - {id: datenschutz, abschnitt_100_1: "3.6", rolle: merkmal, ziele_d09: [datenschutz], passung: gut, subkategorien: [MS-2.10]}
+  - {id: fair, abschnitt_100_1: "3.7", rolle: merkmal, ziele_d09: [fairness], passung: gut, subkategorien: [MS-2.11]}
+
+# Ziele in D-09 ohne eigenes NIST-Merkmal (Zusatz aus ISO/IEC 42001 Anhang C und Abschnitt 4.1)
+ziele_ohne_merkmal:
+  - {ziel: umwelt, subkategorien: [MS-2.12]}

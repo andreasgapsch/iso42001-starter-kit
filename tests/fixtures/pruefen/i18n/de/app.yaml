@@ -1,0 +1,7 @@
+titel: Starter-Kit
+gruss: Hallo {name}, willkommen
+leer: ""
+liste:
+  - eins
+  - zwei
+nur_de: Nur auf Deutsch

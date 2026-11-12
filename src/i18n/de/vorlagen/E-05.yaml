@@ -1,0 +1,62 @@
+# E-05 Betreiberpflichten bei Hochrisiko-KI
+blaetter:
+  checkliste: Checkliste Art. 26
+titel: "Pflichten der Betreiber von Hochrisiko-KI-Systemen (Art. 26)"
+geltung: "Geltung: Die Pflichten nach Art. 26 gelten für Hochrisiko-Systeme nach Anhang III ab {anhang_iii} und für Systeme nach Anhang I ab {anhang_i} (Art. 113(3)(c)). Die Nachweise bereiten wir vor dem Geltungsbeginn vor; vorher in Betrieb genommene Systeme fallen nur bei erheblicher Veränderung der Konzeption darunter (Art. 111(2))."
+hinweise:
+  - "Ein Block mit zwölf Zeilen je Hochrisiko-KI-System, für das Sie Betreiber sind (Rolle aus E-01, Klasse aus E-02). Kopieren Sie den Block für jedes weitere System."
+  - "Spalte E: Ist der Absatz für das System anwendbar? Vorgeschlagen ist «nicht anwendbar» für Abs. 8 (nur Organe und Stellen der EU) und Abs. 10 (nur Strafverfolgung); Abs. 3 enthält keine eigene Pflicht."
+  - "Spalte H: Halten Sie den konkreten Nachweis fest, etwa Dokumentname und Ablageort."
+  - "Melden Sie Risiken und schwerwiegende Vorfälle nach Abs. 5 über den Meldeweg aus D-14; die Fristen der Anbieter stehen in {fs:73}. Betroffene haben ein Recht auf Erläuterung nach {fs:86}."
+  - "Prüfen Sie zusätzlich, ob eine Grundrechte-Folgenabschätzung nötig ist ({fs:27}, E-06)."
+keine_systeme: "Wir sind für kein Hochrisiko-KI-System Betreiber. Die Checkliste dient als Vorlage für den Fall einer neuen Einstufung; die Einstufung prüfen wir jährlich (E-02)."
+spalten:
+  - KI-System
+  - Absatz
+  - Pflicht
+  - Was tun
+  - Anwendbar
+  - Gilt ab
+  - Erledigt
+  - Nachweis
+  - Datum
+  - Verantwortlich
+listen:
+  anwendbar: [ja, nein, nicht anwendbar, Hinweis]
+punkte:
+  betriebsanleitung:
+    pflicht: "Technische und organisatorische Massnahmen, damit das System gemäss der Betriebsanleitung des Anbieters verwendet wird."
+    tun: "Betriebsanleitung in aktueller Version einholen, wichtigste Vorgaben in eine Arbeitsanweisung übernehmen, bei jedem Update prüfen (D-15)."
+  aufsicht:
+    pflicht: "Die menschliche Aufsicht Personen übertragen, die dafür kompetent, ausgebildet und befugt sind, und sie dabei unterstützen."
+    tun: "Aufsichtspersonen benennen (D-04), Schulung nach Betriebsanleitung durchführen und nachweisen (D-17, E-04), Befugnis zum Eingreifen und Stoppen festhalten."
+  organisation:
+    pflicht: "Andere Pflichten aus EU- oder nationalem Recht bleiben bestehen; wie die Aufsicht organisiert wird, entscheidet der Betreiber selbst."
+    tun: "Keine eigene Pflicht. Festhalten, welche weiteren Pflichten gelten, etwa Datenschutz oder Arbeitsrecht."
+  eingabedaten:
+    pflicht: "Soweit wir die Eingabedaten kontrollieren, passen sie zur Zweckbestimmung und sind ausreichend repräsentativ."
+    tun: "Regeln für Eingabedaten festlegen und stichprobenweise prüfen (D-13); Abweichungen vom vorgesehenen Einsatz dokumentieren."
+  ueberwachung:
+    pflicht: "Betrieb nach Betriebsanleitung überwachen, Anbieter informieren; bei Risiko Anbieter oder Händler und Behörde unverzüglich informieren und die Nutzung aussetzen; schwerwiegende Vorfälle zuerst dem Anbieter, dann Einführer oder Händler und Behörde melden."
+    tun: "Überwachung im Betrieb festlegen (Kennzahlen, Zuständigkeit), Meldeweg und Kontakte von Anbieter und Behörde in D-14 eintragen, Aussetzen der Nutzung als Ablauf beschreiben."
+  protokolle:
+    pflicht: "Automatisch erzeugte Protokolle, soweit unter unserer Kontrolle, angemessen lange und mindestens sechs Monate aufbewahren, sofern anderes Recht nichts anderes bestimmt."
+    tun: "Aufbewahrungsort und Frist festlegen, mit Löschfristen aus dem Datenschutz abstimmen, beim Anbieter klären, welche Protokolle wir erhalten."
+  arbeitnehmende:
+    pflicht: "Als Arbeitgeber vor der Inbetriebnahme am Arbeitsplatz die Arbeitnehmervertretung und die betroffenen Arbeitnehmenden informieren, dass sie der Verwendung unterliegen."
+    tun: "Information schriftlich und vor dem Einsatz abgeben, Mitwirkungsrechte nach nationalem Recht beachten, Datum und Empfänger festhalten."
+  eu-stellen:
+    pflicht: "Nur für Organe, Einrichtungen und Stellen der EU: Registrierung nach Art. 49 und Verzicht auf nicht registrierte Systeme."
+    tun: "Für Unternehmen in der Regel nicht anwendbar; Einstufung kurz begründen."
+  dsfa:
+    pflicht: "Die Informationen des Anbieters nach Art. 13 für die Datenschutz-Folgenabschätzung verwenden, wo eine solche nötig ist."
+    tun: "Prüfen, ob eine DSFA nötig ist (DSGVO Art. 35, in der Schweiz Art. 22 DSG), Angaben des Anbieters einbeziehen, auf D-09 und E-06 verweisen."
+  biometrie:
+    pflicht: "Nur für Systeme zur nachträglichen biometrischen Fernidentifizierung in Strafermittlungen: Genehmigung, Dokumentation und Berichte."
+    tun: "Für Unternehmen in der Regel nicht anwendbar; Einstufung kurz begründen."
+  betroffene:
+    pflicht: "Bei Systemen nach Anhang III, die Entscheidungen über natürliche Personen treffen oder unterstützen: die Personen informieren, dass das System verwendet wird."
+    tun: "Information in Prozess und Unterlagen einbauen (z. B. Hinweis im Bewerbungsprozess), Textbaustein in D-14 ablegen, Ablauf für Anfragen nach Art. 86 festlegen."
+  behoerden:
+    pflicht: "Mit den zuständigen Behörden bei allen Massnahmen zum System zusammenarbeiten."
+    tun: "Ansprechperson für Behörden festlegen, Ablauf für Anfragen und Herausgabe von Unterlagen beschreiben (D-14)."

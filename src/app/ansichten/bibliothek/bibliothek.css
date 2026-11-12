@@ -1,0 +1,105 @@
+/* Bibliothek (R4): Gestaltung nach AIMS Nachtblau (docs/design-system/nachtblau/tokens.css, Mockup Bereich Bibliothek).
+   Vite bündelt diese Datei mit stil.css in den Stilblock der App; die CSP-Hashes setzt scripts/csp.mts. */
+main.inhalt > .inhalt.bib-seite, .druck-rahmen-inhalt > .inhalt.bib-seite, .bib-seite { max-width: 1280px; margin-inline: auto; }
+.bib-kopf { display: flex; align-items: center; gap: var(--abstand-4); flex-wrap: wrap; margin-bottom: var(--abstand-5); }
+.bib-kopf h1 { flex: 1 1 14rem; margin: 0; }
+.bib-suche { display: flex; align-items: center; gap: var(--abstand-2); width: min(280px, 100%); height: 38px; padding: 0 12px; border: 1px solid var(--eingabe-rand); background: var(--eingabe); border-radius: var(--radius-mittel); color: var(--text-3); }
+.bib-suche input[type='search'] { flex: 1; min-width: 0; border: 0; background: transparent; padding: 0; height: 100%; box-shadow: none; }
+.bib-suche input[type='search']:focus-visible { outline: none; }
+.bib-suche:focus-within { outline: 2px solid var(--fokus); outline-offset: 1px; }
+.bib-norm .auswahl-huelle { width: auto; max-width: 13rem; }
+.bib-hochladen-hinweis { flex-basis: 100%; text-align: right; margin-top: -8px; }
+.bib-kopf button svg, .bib-erzeugen button svg, #bib-ordner-verbinden svg { width: 17px; height: 17px; margin-right: 8px; vertical-align: -3px; }
+
+.bib-ordner { display: flex; align-items: center; flex-wrap: wrap; gap: var(--abstand-2) var(--abstand-3); font-size: .8125rem; color: var(--text-2); margin-bottom: var(--abstand-5); }
+.bib-ordner > svg { width: 18px; height: 18px; flex: none; }
+.bib-ordner b { color: var(--text); font-weight: 500; }
+.bib-ordner-knoepfe { display: inline-flex; gap: var(--abstand-2); margin-left: auto; }
+.bib-hinweis p { margin: 0 0 var(--abstand-3); color: var(--text-2); max-width: 75ch; }
+.bib-hinweis p b { color: var(--text); }
+.bib-arbeit { font-size: .8125rem; color: var(--akzent-text); margin: 0 0 var(--abstand-3); }
+
+.bib-abgleich h2 { font-size: .9375rem; }
+.bib-abgleich ul { list-style: none; margin: 0; padding: 0; }
+.bib-abgleich li { display: flex; flex-wrap: wrap; align-items: center; gap: var(--abstand-2) var(--abstand-3); padding: var(--abstand-2) 0; border-top: 1px solid var(--linie); }
+.bib-abgleich li:first-child { border-top: 0; }
+.bib-pfad { flex: 1 1 16rem; font-size: .8125rem; color: var(--text-2); overflow-wrap: anywhere; }
+
+.bib-erzeugen { margin: 0 0 var(--abstand-4); }
+
+.bib-raster { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--abstand-5); align-items: start; }
+.bib-raster.mit-detail { grid-template-columns: minmax(0, 1fr) minmax(300px, 360px); }
+/* A-09: mit offener Detailspalte nur Dokument und Status; Version, Gültigkeit und Prüfung stehen im Detail */
+.bib-raster.mit-detail .bib-schmal { display: none; }
+.bib-raster.mit-detail .bib-tabelle td { padding-block: 4px; }
+.bib-raster.mit-detail a.bib-titel { display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.bib-tabelle { padding: 0; overflow: hidden; }
+.bib-tabelle.ziehen { outline: 2px dashed var(--fokus); outline-offset: -6px; }
+.bib-tabelle table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+/* Feste Spaltenbreiten (U-24): beim Statuswechsel springen die Spalten nicht */
+.bib-tabelle th:nth-child(2) { width: 9.5rem; }
+.bib-tabelle th:nth-child(3) { width: 4.75rem; }
+.bib-tabelle th:nth-child(4) { width: 8.5rem; }
+.bib-tabelle th { text-align: left; font-weight: 500; color: var(--text-2); font-size: .8125rem; padding: 12px 16px; border-bottom: 1px solid var(--linie); background: transparent; }
+.bib-tabelle td { padding: 8px 16px; border-bottom: 1px solid var(--linie); vertical-align: middle; }
+.bib-tabelle tbody tr:last-child td { border-bottom: 0; }
+.bib-tabelle tbody tr { cursor: pointer; }
+.bib-tabelle tbody tr:hover td { background: var(--hover); }
+.bib-tabelle tbody tr.gewaehlt td { background: var(--aktiv); }
+.bib-sort { border: 0; background: transparent; padding: 0; min-height: 0; font: inherit; color: inherit; cursor: pointer; }
+.bib-sort:hover:not(:disabled) { background: transparent; text-decoration: underline; }
+.bib-zelle { display: flex; gap: var(--abstand-3); align-items: center; min-width: 0; }
+.bib-titel { font-weight: 500; color: var(--text); text-decoration: none; overflow-wrap: anywhere; }
+.bib-titel:hover { text-decoration: underline; }
+.bib-symbol { width: 32px; height: 32px; border-radius: var(--radius-mittel); display: grid; place-items: center; flex: none; background: var(--flaeche-hoch); color: var(--text-2); }
+.bib-symbol svg { width: 18px; height: 18px; }
+.bib-leer, .bib-ziehen-hinweis { margin: 0; padding: 12px 16px; color: var(--text-2); }
+.bib-ziehen-hinweis { border-top: 1px solid var(--linie); }
+
+.bib-detail { position: sticky; top: 12px; padding: 20px; max-height: calc(100vh - 24px); overflow-y: auto; }
+.bib-detail h2 { margin: 12px 0 4px; font-size: 1.0625rem; overflow-wrap: anywhere; }
+.bib-detail dl { display: grid; grid-template-columns: minmax(90px, 120px) 1fr; gap: 8px 12px; margin: 16px 0; font-size: .8125rem; }
+.bib-detail dt { color: var(--text-2); }
+.bib-detail dd { margin: 0; overflow-wrap: anywhere; }
+.bib-aktionen, .bib-wechsel { margin-bottom: var(--abstand-3); }
+.bib-haken { display: flex; align-items: center; gap: var(--abstand-2); font-size: .8125rem; color: var(--text-2); margin-bottom: var(--abstand-3); }
+.bib-versionen { border-top: 1px solid var(--linie); padding-top: var(--abstand-3); margin-top: var(--abstand-3); font-size: .8125rem; }
+.bib-versionen h3 { font-size: .8125rem; color: var(--text-2); font-weight: 500; margin: 0 0 var(--abstand-2); }
+.bib-versionen ul { list-style: none; margin: 0 0 var(--abstand-3); padding: 0; }
+.bib-versionen li { display: flex; align-items: center; gap: var(--abstand-2); padding: 4px 0; color: var(--text-2); }
+.bib-versionen li b { color: var(--text); font-weight: 500; min-width: 3.2em; }
+.bib-versionen li span { flex: 1; }
+.bib-versionen li button svg { width: 15px; height: 15px; transform: rotate(180deg); }
+.bib-regel { margin: var(--abstand-3) 0 0; font-size: .8125rem; color: var(--text-2); background: var(--flaeche-tief); border: 1px solid var(--linie); border-radius: var(--radius-mittel); padding: 8px 12px; }
+.bib-meta { border-top: 1px solid var(--linie); padding-top: var(--abstand-3); margin-top: var(--abstand-3); }
+.bib-meta summary { cursor: pointer; font-weight: 500; font-size: .8125rem; color: var(--akzent-text); }
+.bib-felder { display: grid; grid-template-columns: 1fr; gap: 4px; margin: var(--abstand-3) 0; font-size: .8125rem; }
+.bib-felder label { color: var(--text-2); margin-top: 8px; }
+.bib-felder input, .bib-felder .auswahl-huelle, .bib-felder textarea { width: 100%; }
+.bib-freigabe { border: 1px solid var(--linie-stark); border-radius: var(--radius-mittel); padding: var(--abstand-3) var(--abstand-4); margin: 0 0 var(--abstand-3); }
+.bib-freigabe legend { font-weight: 600; padding: 0 4px; }
+
+.bib-vorschau { border-top: 1px solid var(--linie); padding-top: var(--abstand-3); margin: var(--abstand-3) 0; }
+.bib-bild { display: block; max-width: 100%; height: auto; margin: var(--abstand-2) 0; border: 1px solid var(--linie); border-radius: var(--radius-klein); }
+.bib-blatt { overflow: auto; max-height: 360px; margin-top: var(--abstand-2); border: 1px solid var(--linie); border-radius: var(--radius-klein); }
+.bib-blatt table { border-collapse: collapse; font-size: .75rem; }
+.bib-blatt td { border: 1px solid var(--linie); padding: 4px 8px; white-space: nowrap; max-width: 18rem; overflow: hidden; text-overflow: ellipsis; }
+.bib-text { max-height: 360px; overflow: auto; font-size: .8125rem; margin-top: var(--abstand-2); white-space: pre-wrap; overflow-wrap: anywhere; }
+.bib-text p { margin: 0 0 8px; }
+.bib-text .bib-h1 { font-weight: 600; font-size: .9375rem; }
+.bib-text .bib-h2, .bib-text .bib-h3 { font-weight: 600; }
+.bib-text .bib-zellentext { color: var(--text-2); padding-left: var(--abstand-3); }
+.bib-ir { max-height: 480px; overflow: auto; margin-top: var(--abstand-2); }
+
+@media (max-width: 1100px) {
+  .bib-raster.mit-detail { grid-template-columns: minmax(0, 1fr); }
+  .bib-detail { position: static; max-height: none; }
+}
+@media (max-width: 700px) {
+  .bib-schmal { display: none; }
+  .bib-tabelle td, .bib-tabelle th { padding-inline: 12px; }
+  .bib-suche { width: 100%; order: 3; }
+}
+@media print {
+  .bib-kopf button, .bib-norm, .bib-ordner-knoepfe, .bib-hinweis .leiste, .bib-aktionen, .bib-wechsel { display: none; }
+}

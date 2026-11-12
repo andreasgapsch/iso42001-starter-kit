@@ -1,0 +1,70 @@
+# D-17 Kompetenz, Bewusstsein und Kommunikation
+modul_praefix_leer: "Nur mit Modul EU AI Act:"
+modul_praefix: "EU AI Act:"
+modul_hinweis: "Art. 4 verlangt, dass Anbieter und Betreiber Massnahmen ergreifen, um die KI-Kompetenz ihrer Mitarbeitenden und weiterer Personen zu unterstützen, die in ihrem Auftrag mit KI-Systemen arbeiten; ein garantiertes Niveau verlangt er nicht. Konzept und Nachweise stehen in E-04; die Blätter «Kompetenzbedarf» und «Schulungen» dienen als Nachweis."
+eb_titel: Ergänzungsblatt zu Kompetenz, Bewusstsein und Kommunikation
+eb_einleitung: "Diese Mappe ergänzt unser bestehendes Programm für Kompetenz, Sensibilisierung und Kommunikation aus dem ISMS um KI. Die folgenden Punkte kommen hinzu; alles Übrige gilt unverändert."
+eb_abschnitte:
+  - "**KI-Kompetenzen:** die Rollen aus dem Blatt «Kompetenzbedarf» in die bestehende Kompetenzmatrix übernehmen."
+  - "**Bewusstsein für KI:** die Themen aus dem Blatt «Bewusstsein» in das Bewusstseinsprogramm aufnehmen."
+  - "**Kommunikation zu KI:** die Einträge aus dem Blatt «Kommunikationsplan» in den bestehenden Kommunikationsplan aufnehmen, intern und extern."
+  - "**Nachweise:** KI-Schulungen im bestehenden Schulungsnachweis mit dem Thema «KI» erfassen und die Wirksamkeit gleich wie bei anderen Schulungen prüfen."
+blaetter:
+  kompetenz: Kompetenzbedarf
+  schulungen: Schulungen
+  bewusstsein: Bewusstsein
+  kommunikation: Kommunikationsplan
+titel_kompetenz: "Kompetenzbedarf je Rolle (7.2, A.4.6)"
+titel_schulungen: "Schulungen und Einweisungen (Nachweis)"
+titel_bewusstsein: "Bewusstsein aller Mitarbeitenden (7.3)"
+titel_kommunikation: "Kommunikationsplan (7.4)"
+hinweise_kompetenz:
+  - "Eine Zeile je Rolle mit KI-Aufgaben. Die Vorschläge sind ein Ausgangspunkt: streichen, ergänzen, Personen eintragen."
+  - "«Ist» zeigt, ob die Personen die Kompetenz heute haben. Wo nicht, planen Sie eine Massnahme und prüfen später, ob sie gewirkt hat, z. B. durch Gespräch, Test oder Stichprobe der Arbeit."
+hinweise_schulungen:
+  - "Eine Zeile je Schulung, Einweisung oder Information. Als Nachweis genügen Teilnahmeliste, Bestätigung im E-Learning oder Protokoll."
+hinweise_bewusstsein:
+  - "Alle Mitarbeitenden kennen diese Themen. Halten Sie fest, über welchen Kanal und wann Sie informiert haben."
+hinweise_kommunikation:
+  - "Was wird wann, durch wen, mit wem und wie kommuniziert, intern und extern. Mindestens ein externer Eintrag gehört dazu, z. B. Kundeninformation oder Meldekanal."
+spalten_kompetenz: [K-ID, Rolle, Nötige Kompetenz, Personen, Ist, Massnahme, Nachweis, Wirksamkeit geprüft]
+spalten_schulungen: [Datum, Thema, Zielgruppe, Teilnehmende, Nachweis]
+teilnehmende_nachweis: "gemäss Teilnahmeliste im Nachweis"
+spalten_bewusstsein: [Thema, Inhalt, Zielgruppe, Kanal, Datum, Nachweis]
+spalten_kommunikation: [KO-ID, Was, Wann, Wer, Mit wem, Wie, Richtung]
+listen:
+  ist: [erfüllt, teilweise, offen]
+  richtung: [intern, extern]
+kompetenz_vorschlag:
+  - ["Geschäftsleitung", "Aufgaben der Leitung im KI-Managementsystem, Chancen und Risiken von KI, Entscheid über Restrisiken", "Einführung von [[2]] Stunden", "Teilnahmeliste"]
+  - ["AIMS-Verantwortliche", "ISO/IEC 42001, Risikobeurteilung, Folgenabschätzung, Lieferantenprüfung", "Kurs oder begleitetes Selbststudium", "Kursbestätigung"]
+  - ["Verantwortliche für KI-Systeme", "Funktionsweise und Grenzen des Systems, Tests, Überwachung, Meldewege (D-12)", "Einweisung durch Lieferant und AIMS-Verantwortliche", "Protokoll der Einweisung"]
+  - ["Menschliche Aufsicht", "Ergebnisse beurteilen, Fehler erkennen, eingreifen und abschalten", "Schulung am System mit Fallbeispielen", "Teilnahme, Stichprobe der Prüfungen"]
+  - ["Alle Nutzenden von KI", "Nutzungsrichtlinie (D-15), sichere Eingaben, Ergebnisse prüfen, typische Fehler von KI und blindes Vertrauen", "Einführung oder E-Learning von [[1]] Stunde, jährliche Auffrischung", "Teilnahme, unterschriebene oder elektronische Bestätigung der Nutzungsrichtlinie D-15"]
+  - ["Einkauf und Verträge", "Prüffragen und Vertragsklauseln für KI (D-16)", "Einweisung", "Protokoll der Einweisung"]
+  - ["Interne Auditoren", "ISO/IEC 42001 und Auditmethodik", "Auditorenkurs", "Zertifikat"]
+  - ["Entwicklung (nur bei Eigenentwicklung)", "Datenqualität, Tests auf Fairness und Robustheit, sichere Entwicklung", "Fachkurs", "Zertifikat"]
+bewusstsein_vorschlag:
+  - ["KI-Leitlinie", "Unsere Grundsätze für KI und wo die Leitlinie steht (D-03)", "alle", "[[Intranet, Einführung]]"]
+  - ["Eigener Beitrag", "Wie jede Person zum Gelingen beiträgt: Regeln einhalten, Ergebnisse prüfen, Probleme melden", "alle", "[[Teamsitzung]]"]
+  - ["Folgen bei Abweichung", "Was geschieht, wenn Regeln nicht eingehalten werden: für Kunden, Betroffene und das Unternehmen sowie arbeitsrechtlich", "alle", "[[Einführung]]"]
+  - ["Nutzungsrichtlinie", "Ampel, was nie in KI-Werkzeuge gehört, neue Werkzeuge beantragen (D-15)", "alle", "[[E-Learning mit Bestätigung]]"]
+  - ["Typische Fehler und blindes Vertrauen", "Wie KI irrt (plausibel klingende, aber falsche Angaben, erfundene Quellen, veraltetes Wissen, versteckte Anweisungen in Dokumenten) und warum Ergebnisse auch bei guter Erfahrung zu prüfen sind", "alle Nutzenden", "[[Einführung, Beispiele aus dem Alltag]]"]
+  - ["Meldewege", "Wohin Bedenken, Fehler und Vorfälle gehen (D-04, D-14)", "alle", "[[Intranet, Aushang]]"]
+kommunikation_vorschlag:
+  - ["Leitungsbotschaft zum KI-Managementsystem: warum, Ziele, Erwartungen", "zum Start, danach jährlich", "Geschäftsleitung", "alle Mitarbeitenden", "[[Versammlung, Intranet]]", intern]
+  - ["KI-Leitlinie", "nach Freigabe und jeder Änderung", "AIMS-Verantwortliche", "alle Mitarbeitenden", "[[Intranet]]", intern]
+  - ["Änderungen am KI-Managementsystem: Regeln, Rollen, Werkzeuge", "bei Änderung", "AIMS-Verantwortliche", "betroffene Mitarbeitende", "[[E-Mail, Teamsitzung]]", intern]
+  - ["Vorfälle mit KI-Systemen", "nach D-14", "Eigner/in des Systems", "betroffene Nutzende", "[[E-Mail]]", intern]
+  - ["Änderungen an KI-Systemen: neue Funktionen, Modellwechsel, Abschaltung", "vor der Änderung", "Eigner/in des Systems", "Nutzende", "[[E-Mail, Intranet]]", intern]
+  - ["Information über KI in unseren Leistungen und ihre Grenzen", "bei Offerte, Vertrag und Änderung", "[[Verkauf]]", "Kunden", "[[Offerte, Vertrag, Website]]", extern]
+  - ["KI-Leitlinie und Meldekanal für Externe", "dauernd", "AIMS-Verantwortliche", "Kunden, Betroffene, Partner", "[[Website]]", extern]
+# Firmendokument: Übernahme als Nachweis statt Anweisung
+eb_einleitung_firma: "Diese Mappe ergänzt unser bestehendes Programm für Kompetenz, Sensibilisierung und Kommunikation aus dem ISMS um KI. Die folgenden Punkte sind umgesetzt; alles Übrige gilt unverändert."
+eb_abschnitte_firma:
+  - "**KI-Kompetenzen:** Die Rollen aus dem Blatt «Kompetenzbedarf» sind in der bestehenden Kompetenzmatrix geführt."
+  - "**Bewusstsein für KI:** Die Themen aus dem Blatt «Bewusstsein» sind Teil des Bewusstseinsprogramms."
+  - "**Kommunikation zu KI:** Die Einträge aus dem Blatt «Kommunikationsplan» stehen im bestehenden Kommunikationsplan, intern und extern."
+  - "**Nachweise:** KI-Schulungen stehen im bestehenden Schulungsnachweis mit dem Thema «KI»; die Wirksamkeit prüfen wir gleich wie bei anderen Schulungen."
+eb_aufgenommen: "Aufgenommen in: {dokument}."
+modul_hinweis_eb: "Art. 4 verlangt, dass Anbieter und Betreiber Massnahmen ergreifen, um die KI-Kompetenz ihrer Mitarbeitenden und weiterer Personen zu unterstützen, die in ihrem Auftrag mit KI-Systemen arbeiten; ein garantiertes Niveau verlangt er nicht. Konzept und Nachweise stehen in E-04; das Blatt «Kompetenzbedarf» und der bestehende Schulungsnachweis dienen als Nachweis."

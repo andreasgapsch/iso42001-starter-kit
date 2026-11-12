@@ -1,0 +1,50 @@
+# D-11 Erklärung zur Anwendbarkeit
+blaetter:
+  soa: SoA
+  auswertung: Auswertung
+titel_soa: "Erklärung zur Anwendbarkeit: Controls aus ISO/IEC 42001 Anhang A"
+titel_auswertung: "Auswertung der Erklärung zur Anwendbarkeit"
+hinweis_vorhanden: "«Bereits vorhanden» ist kein Grund für einen Ausschluss. Ein Control, das schon umgesetzt ist, tragen Sie als «anwendbar: ja» mit Status «umgesetzt» und dem Verweis auf die Umsetzung ein (z. B. «umgesetzt durch ISMS-Richtlinie Zugriffsschutz»)."
+hinweise_soa:
+  - "Entscheiden Sie für jedes Control, ob es anwendbar ist, und begründen Sie Aufnahme und Ausschluss. Gründe für die Aufnahme sind z. B. ein Risiko (Spalte «Risiken»), eine gesetzliche oder vertragliche Pflicht oder eine Erwartung interessierter Parteien."
+  - "Ein Ausschluss ist zulässig, wenn das Control in Ihrem Geltungsbereich nicht zutrifft, z. B. Controls nur für die Entwicklung (A.6.1.2, A.6.1.3, A.7.2), wenn Sie KI ausschliesslich einkaufen und nicht anpassen. Begründen Sie jeden Ausschluss konkret."
+  - "Status: offen, geplant, teilweise, umgesetzt oder wirksam (Wirksamkeit überprüft). Für jedes anwendbare Control braucht es einen Nachweis. Nicht anwendbare Controls erhalten keinen Status."
+  - "Spalte «Wirksamkeit geprüft»: wie die Wirkung geprüft wurde (z. B. Stichprobe, Test, Auswertung von Kennzahlen), wann und durch wen, dazu das Ergebnis. Den Massstab legt nicht allein die Person fest, die das Control betreibt. «Wirksam» setzen Sie erst, wenn diese Spalte ausgefüllt ist."
+  - "Die Spalte «Gruppe» wird berechnet und dient der Auswertung. Ändern Sie sie nicht."
+hinweise_auswertung:
+  - "Die Werte werden aus dem Blatt «SoA» berechnet. Spalte «Kennung» nicht ändern."
+spalten_soa:
+  - ID
+  - Kurzbezeichnung
+  - Anwendbar
+  - Begründung für Aufnahme oder Ausschluss
+  - Risiken
+  - Status
+  - Umsetzung, Verweis
+  - Nachweis
+  - "Wirksamkeit geprüft (wie, wann, wer; Ergebnis)"
+  - Verantwortlich
+  - Verwandte ISO/IEC 27001-Controls
+  - Gruppe
+spalten_auswertung: [Abschnitt, Kennung, Controls, Anwendbar, "Umgesetzt oder wirksam", "Anteil umgesetzt (%)"]
+status: [offen, geplant, teilweise, umgesetzt, wirksam]
+abschnitt_euaia: "Zusätzliche Controls (EU AI Act)"
+euaia_nicht_aufgenommen: "Nicht aufgenommen, weil für die Rollen und Risikoklassen unserer KI-Systeme nicht zutreffend: {ids}"
+abschnitt_eigene: "Eigene Controls"
+gesamt_anhang_a: "Gesamt Anhang A"
+euaia_kurz: "Zusätzliche Controls EU AI Act"
+eigene_kurz: Eigene Controls
+artikel: "Art. {artikel}"
+freigabe:
+  titel: "Freigabe der Erklärung zur Anwendbarkeit"
+  text: "Die {{fakt:freigabe.soa}} hat die Erklärung zur Anwendbarkeit geprüft und freigegeben. Sie wird bei jeder Änderung des Behandlungsplans (D-07) nachgeführt."
+  durch: Freigegeben durch
+  am: Freigegeben am
+  version: Fassung
+ausbau_systeme: "Bei vielen KI-Systemen können Sie die Anwendbarkeit je System festhalten: Ergänzen Sie dazu eine Spalte «gilt für KI-Systeme» mit den IDs aus dem Inventar (D-10). Leer bedeutet: gilt für alle."
+# Modul NIST AI RMF
+abschnitt_rmf: "Zusätzliche Controls (NIST AI RMF)"
+subkategorien: "AI RMF {ids}"
+rmf_offen: "Für unsere KI-Systeme vorgeschlagen, Entscheid offen: {ids}"
+rmf_nicht_aufgenommen: "Nicht aufgenommen, weil für Typ, Rolle und Einsatz unserer KI-Systeme nicht zutreffend: {ids}"
+rmf_kurz: "Zusätzliche Controls NIST AI RMF"

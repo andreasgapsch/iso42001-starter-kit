@@ -1,0 +1,237 @@
+# Seitentexte Etappe E3 Leitlinie, Rollen und Meldewege. Format: src/gefuehrt/FORMAT.md
+E3-einfuehrung:
+  titel: Leitlinie, Rollen und Meldewege
+  frage: Welche Grundsätze gelten für KI, wer ist wofür zuständig und wo melden Mitarbeitende Bedenken?
+  warum: Die Norm verlangt, dass die [[g:oberste-leitung]] Verantwortung übernimmt. Sichtbar wird das in einer freigegebenen [[g:ki-leitlinie]], in verteilten Rollen und in einem Meldeweg, der funktioniert.
+  fehler: Leitlinien, die niemand kennt, und Rollen, von denen die Betroffenen nichts wissen, sind typische Befunde. Auditoren fragen Mitarbeitende direkt, ob sie die Leitlinie kennen und wem sie ein Problem melden würden.
+E3-grundsaetze:
+  titel: Grundsätze der KI-Leitlinie
+  frage: Nach welchen Grundsätzen entwickelt, kauft und nutzt Ihr Unternehmen KI?
+  warum: Die Grundsätze sind der Kern der Leitlinie und der Massstab für alle weiteren Regeln. Fünf bis acht kurze, verständliche Sätze genügen. Die konkreten Regeln für Mitarbeitende stehen in der Nutzungsrichtlinie D-15 (Etappe E9, Seite «Regeln für Mitarbeitende»); beginnen Sie damit parallel zur Leitlinie, wie es Schritt 3 des Leitfadens vorsieht.
+  fehler: Leitlinien mit Produktnamen («Wir nutzen nur Copilot») veralten schnell. Werkzeuge gehören ins Inventar und in die Nutzungsrichtlinie. Auditoren erwarten Grundsätze, die zu Ihrem Zweck passen.
+  felder:
+    organisation.leitlinie.grundsaetze:
+      label: Grundsätze
+      hilfe: Je Zeile ein Grundsatz. Übernehmen Sie Textbausteine und passen Sie sie an.
+E3-elemente:
+  titel: Was die Leitlinie enthalten muss
+  frage: Enthält Ihre Leitlinie die Elemente, die die Norm erwartet?
+  warum: Die Norm verlangt vier Dinge von der Leitlinie, die Sie hier abhaken. Fehlt eines, meldet die Prüfung einen Fehler.
+  fehler: Am häufigsten fehlt die Verpflichtung zur laufenden Verbesserung oder der Bezug zu den KI-Zielen. Auditoren suchen die Stellen im Text.
+  felder:
+    meta.gefuehrt.antworten.leitlinie.elemente:
+      label: Enthaltene Elemente
+      hilfe: Die Vorlage D-03 enthält alle vier Elemente als Textbausteine.
+E3-andere-leitlinien:
+  titel: Bezug zu anderen Leitlinien
+  frage: Welche bestehenden Leitlinien berührt KI in Ihrem Unternehmen?
+  warum: KI betrifft Datenschutz, Informationssicherheit, Personal und Einkauf. Widersprüche zwischen Leitlinien verwirren Mitarbeitende. Sie halten fest, ob Sie eine Leitlinie anpassen oder darauf verweisen.
+  fehler: Oft widerspricht die neue KI-Leitlinie der bestehenden Regel zur Nutzung von Cloud-Diensten. Auditoren lassen sich die Liste der geprüften Leitlinien zeigen.
+  felder:
+    organisation.leitlinie.abgleich.informationssicherheit:
+      label: "Informationssicherheitsleitlinie"
+      hilfe: "Angepasst, mit Verweis auf die KI-Leitlinie oder unverändert, weil sie KI nicht berührt."
+    organisation.leitlinie.abgleich.datenschutz:
+      label: "Datenschutzerklärung und Datenschutzrichtlinie"
+      hilfe: "Personendaten in KI-Systemen und Rechte der Betroffenen."
+    organisation.leitlinie.abgleich.qualitaet:
+      label: "Qualitätspolitik"
+      hilfe: "Qualität von Ergebnissen und Produkten, die mit KI entstehen."
+    organisation.leitlinie.abgleich.personal:
+      label: "Personalreglement"
+      hilfe: "Nutzung von KI durch Mitarbeitende und Überwachung am Arbeitsplatz."
+    organisation.leitlinie.abgleichNotiz:
+      label: "Bemerkung zum Abgleich"
+      hilfe: "z. B. Datum des Abgleichs und wo die Verweise stehen."
+E3-ausnahmen:
+  titel: Ausnahmen und Überprüfung
+  frage: Wie gehen Sie mit Ausnahmen um und wann überprüfen Sie die Leitlinie?
+  warum: Es wird Fälle geben, in denen eine Regel nicht passt. Ein klarer Weg für Ausnahmen verhindert, dass Regeln stillschweigend umgangen werden. Eine feste Überprüfung hält die Leitlinie aktuell.
+  fehler: Leitlinien ohne Überprüfungsdatum veralten. Auditoren erwarten eine benannte Person, einen Rhythmus (meist jährlich) und einen Vermerk der letzten Überprüfung.
+  felder:
+    organisation.leitlinie.ausnahmeprozess:
+      label: Weg für Ausnahmen
+      hilfe: z. B. «Ausnahmen beantragt die Eignerin oder der Eigner des Systems schriftlich bei der [[g:aims|AIMS]]-Verantwortlichen; die Geschäftsleitung entscheidet; Ausnahmen gelten höchstens ein Jahr».
+    organisation.leitlinie.ausnahmeHoechstMonate:
+      label: Höchste Gültigkeit einer Ausnahme (Monate)
+      hilfe: z. B. «6». Die Prüfung meldet Ausnahmen, die länger gelten.
+    organisation.leitlinie.version:
+      label: Version
+      hilfe: z. B. «1.0».
+    organisation.leitlinie.naechsteUeberpruefung:
+      label: Nächste Überprüfung
+      hilfe: In der Regel ein Jahr nach der Freigabe.
+E3-leitlinie-freigabe:
+  titel: Freigabe und Bekanntmachung
+  frage: Hat die Geschäftsleitung die Leitlinie freigegeben und wann wurde sie bekannt gemacht?
+  warum: Erst mit der Freigabe gilt die Leitlinie. Die Norm verlangt zudem, dass sie im Unternehmen bekannt ist und interessierten Parteien bei Bedarf zur Verfügung steht.
+  fehler: Eine Leitlinie in einem Ordner, den niemand öffnet, gilt nicht als bekannt gemacht. Auditoren wollen einen Nachweis sehen, etwa eine Mitteilung im Intranet oder eine Bestätigung im E-Learning.
+  felder:
+    organisation.leitlinie.freigabe:
+      label: Freigabe
+      hilfe: Person der Geschäftsleitung und Datum.
+    organisation.leitlinie.kommuniziertAm:
+      label: Bekannt gemacht am
+      hilfe: Datum der Mitteilung an alle Mitarbeitenden.
+E3-isms:
+  titel: Rollen und Wege aus dem ISMS
+  frage: Welche Rollen und Abläufe aus dem [[g:isms]] wollen Sie für KI erweitern?
+  warum: Mit ISMS gibt es bereits Rollen, eine Sicherheitsleitlinie und einen Weg für Sicherheitsmeldungen. Diese ergänzen Sie in einem [[g:ergaenzungsblatt]], statt neue Dokumente zu schreiben.
+  fehler: Doppelte Meldewege für Sicherheit und KI verwirren. Auditoren sehen gern einen gemeinsamen Weg, in dem KI-Themen ausdrücklich genannt sind.
+  felder:
+    meta.gefuehrt.antworten.ismsFuehrung.rollenErgaenzen:
+      label: ISMS-Rollen um KI-Aufgaben ergänzen
+      hilfe: Ergänzungsblatt D-04-EB statt eigener Rollenbeschreibung.
+    meta.gefuehrt.antworten.ismsFuehrung.meldewegErgaenzen:
+      label: Bestehenden Meldeweg für Sicherheitsereignisse um KI erweitern
+      hilfe: Gilt auch für Bedenken zu KI-Systemen, nicht nur für Sicherheitsvorfälle.
+    meta.gefuehrt.antworten.ismsFuehrung.leitlinieVerweis:
+      label: Informationssicherheitsleitlinie verweist auf die KI-Leitlinie
+      hilfe: Ein Satz in der bestehenden Leitlinie genügt.
+E3-pflichtrollen:
+  titel: Zwei Pflichtrollen
+  frage: Wer sorgt dafür, dass das Managementsystem die Norm erfüllt, und wer berichtet der Geschäftsleitung über seine Leistung?
+  warum: Die Norm verlangt diese beiden Zuständigkeiten ausdrücklich. Im KMU übernimmt oft dieselbe Person beides; wichtig ist, dass es festgehalten ist.
+  fehler: Fehlen diese Rollen, meldet die Prüfung einen Fehler. Auditoren fragen die benannte Person, wann sie zuletzt berichtet hat.
+  felder:
+    bereich:
+      label: Zuständigkeit
+      hilfe: Die beiden Einträge sind vorbereitet.
+    verantwortlich:
+      label: Verantwortlich
+      hilfe: Die Person, die die Aufgabe ausführt.
+    rechenschaft:
+      label: Rechenschaftspflichtig
+      hilfe: Die Person, die dafür geradesteht, meist ein Mitglied der Geschäftsleitung.
+    stellvertretung:
+      label: "Stellvertretung"
+      hilfe: "Person, die einspringt, wenn die zuständige Person fehlt."
+E3-raci:
+  titel: Weitere Rollen
+  frage: Wer ist für Risiken, Folgenabschätzungen, Inventar, Lieferanten, Aufsicht und Vorfälle zuständig?
+  warum: Für jede wichtige Aufgabe rund um KI muss klar sein, wer handelt, wer entscheidet, wer gefragt und wer informiert wird. Die [[g:raci]] macht das auf einen Blick sichtbar.
+  fehler: Rollen ohne Stellvertretung führen bei Ferien oder Abgang zu Lücken. Auditoren prüfen, ob die Personen ihre Rolle kennen und danach handeln.
+  felder:
+    bereich:
+      label: Aufgabe
+      hilfe: Vorgeschlagene Aufgaben sind vorbereitet, weitere können Sie hinzufügen.
+    verantwortlich:
+      label: Führt aus (R)
+      hilfe: Die Person, die die Arbeit macht.
+    rechenschaft:
+      label: Steht gerade (A)
+      hilfe: Genau eine Person.
+    konsultiert:
+      label: Wird gefragt (C)
+      hilfe: Personen, deren Meinung vorher eingeholt wird.
+    informiert:
+      label: Wird informiert (I)
+      hilfe: Personen, die das Ergebnis erfahren.
+    stellvertretung:
+      label: "Stellvertretung"
+      hilfe: "Person, die einspringt, wenn die zuständige Person fehlt."
+E3-gremien:
+  titel: "Gremien"
+  frage: "In welchen bestehenden Sitzungen behandeln Sie KI-Themen?"
+  warum: "Entscheide zu KI brauchen einen festen Ort: Freigaben, Risiken, neue Werkzeuge. Meist genügt es, bestehende Sitzungen um diese Themen zu erweitern, statt ein neues Gremium zu schaffen."
+  fehler: "Oft ist nicht festgelegt, wer neue KI-Werkzeuge freigibt. Auditoren fragen nach Traktandenlisten und Protokollen, in denen KI-Themen vorkommen."
+  felder:
+    organisation.gremien:
+      label: "Gremien mit KI-Themen"
+      hilfe: "Eine Zeile je Gremium."
+    organisation.gremien.name:
+      label: "Gremium"
+      hilfe: "z. B. Geschäftsleitungssitzung, [[g:isms]]-Runde."
+    organisation.gremien.themen:
+      label: "Neue KI-Themen"
+      hilfe: "Was neu traktandiert wird."
+    organisation.gremien.rhythmus:
+      label: "Rhythmus"
+      hilfe: "z. B. monatlich, quartalsweise."
+    organisation.gremien.vorsitz:
+      label: "Vorsitz"
+      hilfe: "Person, die die Sitzung leitet."
+E3-meldeweg:
+  titel: Meldeweg für Bedenken
+  frage: Wie melden Mitarbeitende ein Problem mit einem KI-System?
+  warum: Wer im Alltag merkt, dass ein KI-System falsch liegt oder missbraucht wird, soll es ohne Nachteile melden können. Ein [[g:meldeweg]] mit Ausweichstelle und Frist sorgt dafür, dass Meldungen ankommen.
+  fehler: Ein Meldeweg, der nur über die direkte vorgesetzte Person läuft, schreckt ab. Auditoren fragen nach einer Ausweichstelle, nach Vertraulichkeit und nach einem Protokoll der Meldungen.
+  felder:
+    organisation.meldeweg.kanaele:
+      label: Kanäle
+      hilfe: Mindestens zwei Wege, damit niemand nur über die vorgesetzte Person melden muss.
+    organisation.meldeweg.ausweichstelle:
+      label: Ausweichstelle
+      hilfe: Eine Person ausserhalb der Linie, z. B. Mitglied der Geschäftsleitung oder Hinweisgeberstelle.
+    organisation.meldeweg.vertraulich:
+      label: Meldungen sind vertraulich möglich
+      hilfe: Die Identität wird nur mit Zustimmung weitergegeben.
+    organisation.meldeweg.fristTage:
+      label: Eingangsbestätigung innert Arbeitstagen
+      hilfe: z. B. 10 Arbeitstage bis zur ersten Antwort. Gleiche Einheit wie beim Meldekanal für Externe (D-14).
+    organisation.meldeweg.kanal:
+      label: "Kanal im Wortlaut"
+      hilfe: "z. B. Adresse des Postfachs oder Name der Hinweisgeberstelle, wie er im Dokument stehen soll."
+    organisation.meldestelle:
+      label: "Meldestelle in Richtlinien"
+      hilfe: "So nennen Richtlinien und Verfahren die Stelle für Meldungen, z. B. «[[g:aims|AIMS]]-Verantwortliche, ki-meldung@firma.example»."
+    organisation.meldeweg.fristErgebnisTage:
+      label: "Rückmeldung zum Ergebnis innert Tagen"
+      hilfe: "z. B. 30 Tage bis zur Antwort, was mit der Meldung geschehen ist."
+    organisation.meldeweg.eskalation:
+      label: "Eskalation"
+      hilfe: "Wohin eine Meldung geht, wenn die Frist verstreicht oder ein erhebliches Risiko besteht."
+    organisation.meldeweg.bekanntmachung:
+      label: "Bekanntmachung"
+      hilfe: "Wie Mitarbeitende vom Meldeweg erfahren, z. B. Schulung, Intranet."
+E3-risikobereitschaft:
+  titel: "Risikobereitschaft"
+  frage: "Was ist beim Einsatz von KI nie erlaubt, was nur mit Freigabe der Geschäftsleitung, und was darf die [[g:aims|AIMS]]-Verantwortung ohne die Geschäftsleitung entscheiden?"
+  warum: "Die Geschäftsleitung legt fest, wie viel Risiko sie mit KI eingehen will. Drei kurze Listen machen das greifbar und geben der AIMS-Verantwortung einen klaren Rahmen für Freigaben und Ausnahmen. Die Angaben erscheinen in der [[g:ki-leitlinie]] D-03 im Abschnitt Risikobereitschaft."
+  fehler: "Allgemeine Sätze wie «Wir gehen verantwortungsvoll mit KI um» helfen niemandem. Auditoren fragen, wer ein neues System mit Wirkung auf Kunden freigibt, und vergleichen die Antwort mit der Leitlinie. Ohne eigene Angaben übernimmt D-03 den Vorschlag des Kits."
+  felder:
+    organisation.risikobereitschaft.nie:
+      label: "Nie erlaubt"
+      hilfe: "Je Eintrag ein kurzer Satz. Die Textbausteine entsprechen dem Vorschlag in D-03."
+    organisation.risikobereitschaft.nurGl:
+      label: "Nur mit Freigabe der Geschäftsleitung"
+      hilfe: "Was erheblich auf Kunden, Mitarbeitende oder andere Betroffene wirkt oder über der Akzeptanzgrenze liegt."
+    organisation.risikobereitschaft.aimsAllein:
+      label: "AIMS-Verantwortliche/r entscheidet ohne Geschäftsleitung"
+      hilfe: "Bei tiefem Risiko entscheidet die AIMS-Verantwortung allein, bei mittlerem Risiko zusammen mit der Eignerin oder dem Eigner des Systems; über hohes Risiko entscheidet die Geschäftsleitung. Tief heisst bis zur Akzeptanzgrenze aus Etappe 6."
+E3-merkmale:
+  titel: "Vertrauensmerkmale und Zielkonflikte"
+  frage: "Welche drei bis vier Vertrauensmerkmale zählen je KI-System am meisten, und welche Zielkonflikte haben Sie entschieden?"
+  warum: "Das NIST AI RMF nennt sieben Merkmale vertrauenswürdiger KI, etwa gültig und zuverlässig, sicher oder datenschutzfördernd. Nicht alle sind bei jedem System gleich wichtig, und manche stehen sich im Weg, zum Beispiel Genauigkeit und Erklärbarkeit. Wer die wichtigsten festlegt und Konflikte bewusst entscheidet, misst später das Richtige (Zusatz-Control RMF-01, Mess- und Prüfkonzept N-03)."
+  fehler: "Alle sieben Merkmale anzukreuzen heisst, keine Wahl zu treffen. Ein Zielkonflikt ohne Entscheid und Begründung zeigt nur, dass er bekannt ist. Halten Sie fest, was gilt, wenn zwei Merkmale nicht zugleich erreichbar sind."
+  felder:
+    messkonzept.merkmale:
+      label: "Wichtigste Vertrauensmerkmale"
+      hilfe: "Drei bis vier wählen. Das wichtigste nennen Sie bei den Zielkonflikten zuerst; die Prüfungen dazu legen Sie in Etappe 9 fest."
+    messkonzept.zielkonflikte:
+      label: "Entschiedene Zielkonflikte"
+      hilfe: "Je Konflikt Entscheid und Grund, z. B. «Erklärbarkeit vor Genauigkeit, weil Kundinnen eine Ablehnung verstehen müssen»."
+E3-entscheidungsrechte:
+  titel: "Entscheidungsrechte nach Risiko"
+  frage: "Wer entscheidet bei tiefem, mittlerem und hohem Risiko über Einführung, Restrisiko, Ausnahmen, Stopp und Ausserbetriebnahme eines KI-Systems?"
+  warum: "Klare Entscheidungsrechte verhindern, dass Systeme ohne Freigabe in Betrieb gehen oder niemand ein laufendes System stoppen darf. Die Stufen richten sich nach den Risikokriterien aus Etappe 6: tief bis zur Akzeptanzgrenze, hoch ab der Grenze «unannehmbar», mittel dazwischen. Die Tabelle erscheint in D-04."
+  fehler: "Wer ein System beantragt oder betreibt, gibt es bei hohem Risiko nicht selbst frei. Auditoren prüfen an einem Beispiel, ob die Freigabe von der richtigen Stelle kam. Ohne eigene Angaben gilt der Vorschlag in D-04."
+  felder:
+    organisation.entscheidungsrechte:
+      label: "Entscheidungsrechte"
+      hilfe: "Eine Zeile je Entscheid. Tragen Sie eine Funktion oder eine Person ein; die Textbausteine entsprechen dem Vorschlag in D-04."
+    organisation.entscheidungsrechte.entscheid:
+      label: "Entscheid"
+      hilfe: "Welcher Entscheid geregelt wird."
+    organisation.entscheidungsrechte.wer.tief:
+      label: "Tiefes Risiko"
+      hilfe: "Wer bei tiefem Risiko entscheidet."
+    organisation.entscheidungsrechte.wer.mittel:
+      label: "Mittleres Risiko"
+      hilfe: "Wer bei mittlerem Risiko entscheidet."
+    organisation.entscheidungsrechte.wer.hoch:
+      label: "Hohes Risiko"
+      hilfe: "Bei hohem Risiko in der Regel die Geschäftsleitung."
+    organisation.naechsthoehereStelle:
+      label: "Nächsthöhere Stelle"
+      hilfe: "Wer entscheidet, wenn die Geschäftsleitung ein System selbst beantragt, betreibt oder ein Risiko selbst verantwortet, z. B. Verwaltungsrat oder Gesellschafterversammlung. Erscheint in D-04 bei «Keine Selbstfreigabe»."

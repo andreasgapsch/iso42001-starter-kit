@@ -1,0 +1,313 @@
+# Texts for src/ai-act/pflichten.yaml (English)
+# kurz: obligation in our own words; nachweis: typical evidence. Not legal advice.
+
+P-ALLE-01:
+  kurz: Take measures so that staff and other persons operating or using AI systems on our behalf build the AI literacy they need. A specific level does not have to be guaranteed.
+  nachweis: Training plan with target groups, attendance lists, onboarding material for new AI tools.
+
+P-ALLE-02:
+  kurz: Do not place on the market, put into service or use any AI system that applies a prohibited practice under Article 5(1), such as manipulation, social scoring or emotion recognition in the workplace.
+  nachweis: Documented check of each AI system against the prohibitions, result in the AI inventory, approval record.
+
+P-ALLE-03:
+  kurz: From 02/12/2026, additionally do not offer or use AI systems that generate non-consensual intimate imagery or child sexual abuse material (Article 5(1)(ba), (bb)).
+  nachweis: Updated prohibition check per AI system; for providers, a description of the technical safeguards.
+
+P-ALLE-04:
+  kurz: Where an AI system presents a risk, cooperate with the market surveillance authority and carry out the corrective actions requested for all affected systems.
+  nachweis: Named contact for authorities, procedure for authority requests, record of corrective actions taken.
+
+P-ANB-01:
+  kurz: Establish, document and maintain a risk management system for each high-risk AI system across its whole lifecycle, including testing before placing on the market.
+  nachweis: Risk management plan per system, risk register with residual risk evaluation, test reports using predefined metrics.
+
+P-ANB-02:
+  kurz: Select and examine training, validation and testing data under defined practices (provenance, preparation, representativeness, bias). Process special categories of personal data only under the conditions of Article 4a(1).
+  nachweis: Data sheets per data set, bias examination with results, record under Article 4a(1)(f) where special categories are processed.
+
+P-ANB-03:
+  kurz: Draw up technical documentation containing at least the elements of Annex IV before placing on the market and keep it up to date. SMEs and small mid-cap enterprises may use the Commission's simplified form.
+  nachweis: Technical documentation per system with version; for SMEs, the simplified form.
+
+P-ANB-04:
+  kurz: Build the high-risk AI system so that it automatically records events over its lifecycle and ensures traceability.
+  nachweis: Logging concept, sample log, test evidence of the logging function.
+
+P-ANB-05:
+  kurz: Design the system to be transparent and supply instructions for use containing at least the information in Article 13(3) (intended purpose, accuracy, limitations, human oversight, maintenance).
+  nachweis: Approved instructions for use per version, checklist against Article 13(3).
+
+P-ANB-06:
+  kurz: Design the system so that natural persons can oversee it effectively, including the ability to override outputs and to stop operation safely.
+  nachweis: Human oversight concept, description of intervention options, test record of the stop function.
+
+P-ANB-07:
+  kurz: Achieve and maintain an appropriate level of accuracy, robustness and cybersecurity throughout the lifecycle, including protection against AI-specific attacks.
+  nachweis: Test reports on accuracy and robustness, security tests, accuracy metrics stated in the instructions for use.
+
+P-ANB-08:
+  kurz: Indicate our name, registered trade name or trade mark and contact address on the system, its packaging or the accompanying documentation.
+  nachweis: Sample of the marking or accompanying documentation.
+
+P-ANB-09:
+  kurz: Put in place and document in writing a quality management system under Article 17. Its scope is proportionate to the size of the organization; SMEs without partner or linked enterprises may comply with certain elements in a simplified manner.
+  nachweis: QMS manual or AIMS documentation mapped against Article 17(1)(a) to (m).
+
+P-ANB-10:
+  kurz: Keep the technical documentation, QMS documentation, notified body decisions and EU declaration of conformity at the disposal of authorities for ten years after placing on the market.
+  nachweis: Retention rule in the document register, storage location, deletion lock.
+
+P-ANB-11:
+  kurz: Keep automatically generated logs under our control for at least six months, unless other law provides otherwise.
+  nachweis: Retention setting in the system, retention rule, sample of the oldest logs.
+
+P-ANB-12:
+  kurz: Carry out the relevant conformity assessment procedure before placing on the market (for Annex III points 2 to 8, internal control under Annex VI). SMEs benefit from reduced fees under Article 62(2).
+  nachweis: Conformity assessment report; for Annex VII, the notified body certificate.
+
+P-ANB-13:
+  kurz: Draw up an EU declaration of conformity with the content of Annex V for each high-risk AI system, keep it for ten years and keep it up to date.
+  nachweis: Signed EU declaration of conformity per system and version.
+
+P-ANB-14:
+  kurz: Affix the CE marking visibly; for digital systems, digitally and easily accessible.
+  nachweis: Photo or screenshot of the CE marking, reference to the declaration of conformity.
+
+P-ANB-15:
+  kurz: Register yourself and the system in the EU database before placing on the market (Annex III except point 2; point 2 is registered at national level).
+  nachweis: Registration confirmation with identifier from the EU database.
+
+P-ANB-16:
+  kurz: In case of non-conformity, take corrective action immediately (bring into conformity, withdraw, disable, recall) and inform distributors and, where applicable, deployers, the authorised representative and importers; where there is a risk, inform the market surveillance authority.
+  nachweis: Corrective action procedure, record with root cause analysis and notifications sent.
+
+P-ANB-17:
+  kurz: Upon a reasoned request from a competent authority, demonstrate conformity, provide documents in an easily understood official language and give access to logs.
+  nachweis: Procedure for authority requests, conformity evidence pack, contact person.
+
+P-ANB-18:
+  kurz: Ensure that the high-risk AI system complies with the accessibility requirements of Directives (EU) 2016/2102 and (EU) 2019/882.
+  nachweis: Accessibility test report or statement of conformity with the directives.
+
+P-ANB-19:
+  kurz: Providers established outside the EU, for example in Switzerland, appoint in writing an authorised representative established in the EU before making the system available and enable it to perform its tasks.
+  nachweis: Written mandate to the authorised representative listing the tasks under Article 22(3).
+
+P-ANB-20:
+  kurz: If another party turns our AI system into a high-risk AI system under Article 25(1), we are no longer its provider but must cooperate with the new provider (documents, known limitations, technical access), unless we have clearly excluded such a change.
+  nachweis: Contract clause on cooperation or documented exclusion of conversion into a high-risk AI system.
+
+P-ANB-21:
+  kurz: Agree in writing with third parties supplying AI systems, models, tools, services or components for the high-risk AI system which information, capabilities, technical access and support we will receive.
+  nachweis: Written agreement per supplier, supplier register marked Article 25(4).
+
+P-ANB-22:
+  kurz: Set up a post-market monitoring system based on a plan, collecting and analysing performance data over the lifetime. The plan is part of the technical documentation.
+  nachweis: Post-market monitoring plan, periodic analysis report.
+
+P-ANB-23:
+  kurz: Report serious incidents to the market surveillance authority of the Member State concerned, within 15 days at the latest, 10 days in case of death and 2 days for a widespread infringement or disruption of critical infrastructure; then investigate.
+  nachweis: Reporting procedure with deadlines, initial report template, incident record.
+
+P-ANB-24:
+  kurz: Where the authority finds that a compliant high-risk AI system still presents a risk, take corrective action for all affected systems within the period set.
+  nachweis: Record of the authority request and of the measures taken.
+
+P-ANB6-3-01:
+  kurz: If we consider an Annex III system not to be high-risk under Article 6(3), document this assessment before placing on the market and provide it on request. Systems that perform profiling of natural persons are always high-risk.
+  nachweis: Classification rationale per system with the condition met under Article 6(3)(a) to (d) and a profiling check.
+
+P-ANB6-3-02:
+  kurz: Register an Annex III system that is not high-risk under Article 6(3) in the EU database before placing it on the market.
+  nachweis: Registration confirmation from the EU database.
+
+P-ANB6-3-03:
+  kurz: If the market surveillance authority classifies the system as high-risk after all, bring it into conformity within the period set and take corrective action for all affected systems.
+  nachweis: Action plan following the authority decision, evidence of implementation.
+
+P-BETR-01:
+  kurz: Take technical and organizational measures to ensure that the high-risk AI system is used in accordance with the provider's instructions for use.
+  nachweis: Instructions for use available to users, internal work instruction, approval of use.
+
+P-BETR-02:
+  kurz: Assign human oversight to persons with the necessary competence, training and authority, and give them the support they need.
+  nachweis: Appointment of oversight persons, evidence of competence, defined authority.
+
+P-BETR-03:
+  kurz: To the extent we control the input data, ensure that it is relevant to the intended purpose and sufficiently representative.
+  nachweis: Rules for input data, sample checks, comparison with the intended purpose.
+
+P-BETR-04:
+  kurz: Monitor operation on the basis of the instructions for use, inform the provider where relevant and, where we have reason to consider that there is a risk, inform the provider or distributor and the market surveillance authority without undue delay and suspend use.
+  nachweis: Monitoring plan, reporting channel to the provider, documented suspension decision.
+
+P-BETR-05:
+  kurz: Report a serious incident immediately, first to the provider, then to the importer or distributor and to the market surveillance authority. If the provider cannot be reached, Article 73 applies mutatis mutandis.
+  nachweis: Reporting procedure with sequence and deadlines, contact list, incident record.
+
+P-BETR-06:
+  kurz: Keep automatically generated logs under our control for at least six months, unless other law, such as data protection law, provides otherwise.
+  nachweis: Retention setting, retention rule, check against data protection requirements.
+
+P-BETR-07:
+  kurz: As an employer, inform workers' representatives and the affected staff before putting into service or using the high-risk AI system at the workplace that they will be subject to its use.
+  nachweis: Dated information to staff and staff representatives, record of consultation.
+
+P-BETR-08:
+  kurz: Use the provider's information under Article 13 to carry out the data protection impact assessment under Article 35 GDPR where it is required.
+  nachweis: Data protection impact assessment referring to the provider information.
+
+P-BETR-09:
+  kurz: Inform natural persons that an Annex III high-risk AI system makes or assists in making decisions about them.
+  nachweis: Information notice, for example in the recruitment process or privacy notice, with publication date.
+
+P-BETR-10:
+  kurz: Cooperate with the competent authorities in any action they take in relation to the high-risk AI system.
+  nachweis: Contact person for authorities, procedure for requests.
+
+P-BETR-11:
+  kurz: Public bodies, private entities providing public services and deployers of systems for creditworthiness (Annex III point 5(b)) or life and health insurance (point 5(c)) carry out a fundamental rights impact assessment before first use and keep it up to date. Parts of a data protection impact assessment may be reused.
+  nachweis: Fundamental rights impact assessment with the elements of Article 27(1)(a) to (f), applicability check in E-06.
+
+P-BETR-12:
+  kurz: Notify the market surveillance authority of the results of the fundamental rights impact assessment using the completed template.
+  nachweis: Proof of submission with the completed template.
+
+P-BETR-13:
+  kurz: On request, give affected persons a clear and meaningful explanation of the role of the AI system and the main elements of the decision where it has legal or similarly significant effects. Systems under Annex III point 2 are excluded.
+  nachweis: Procedure for explanation requests, reply template, request log.
+
+P-BETR-14:
+  kurz: Assessment of whether the organization itself becomes the provider of a high-risk AI system by putting its name or trade mark on it, making a substantial modification or changing its intended purpose. The provider obligations under Article 16 then apply.
+  nachweis: Role check per AI system with date, trigger for a new check after changes.
+
+P-EINF-01:
+  kurz: Before placing on the market, verify that the provider has carried out the conformity assessment, drawn up the technical documentation and appointed an authorised representative, and that the CE marking, declaration of conformity and instructions for use are present.
+  nachweis: Incoming checklist per system with evidence.
+
+P-EINF-02:
+  kurz: Where we suspect non-conformity or falsification, place the system on the market only once conformity is established; where there is a risk, inform the provider, authorised representatives and the market surveillance authority.
+  nachweis: Hold record, notification to provider and authority.
+
+P-EINF-03:
+  kurz: Indicate our name, registered trade name or trade mark and contact address on the packaging or in the accompanying documentation.
+  nachweis: Sample of packaging or accompanying documentation.
+
+P-EINF-04:
+  kurz: Ensure that storage and transport do not jeopardize conformity while the system is under our responsibility.
+  nachweis: Storage and transport requirements, where relevant to the system.
+
+P-EINF-05:
+  kurz: Keep the notified body certificate, the instructions for use and the EU declaration of conformity for ten years.
+  nachweis: Filing with retention rule in the document register.
+
+P-EINF-06:
+  kurz: Upon reasoned request, provide authorities with all information on conformity in an understandable language, make the technical documentation available and cooperate in any action.
+  nachweis: Procedure for authority requests, provider commitment to supply the documentation.
+
+P-HAEN-01:
+  kurz: Before making the system available, verify that the CE marking, declaration of conformity and instructions for use are present and that the provider and importer have met their labelling obligations.
+  nachweis: Incoming checklist per system.
+
+P-HAEN-02:
+  kurz: Where we have reason to consider a system non-compliant, make it available only once conformity is established; where there is a risk, inform the provider or importer.
+  nachweis: Hold record, notification to provider or importer.
+
+P-HAEN-03:
+  kurz: Ensure that storage and transport do not jeopardize conformity while the system is under our responsibility.
+  nachweis: Storage and transport requirements, where relevant.
+
+P-HAEN-04:
+  kurz: Where a system we have made available is non-compliant, take or arrange corrective action (bring into conformity, withdraw, recall); where there is a risk, inform the provider or importer and the authorities immediately.
+  nachweis: Record of corrective actions and notifications.
+
+P-HAEN-05:
+  kurz: Upon reasoned request, provide authorities with information on our checks and cooperate in any action.
+  nachweis: Procedure for authority requests, filed incoming checks.
+
+P-BEV-01:
+  kurz: Perform the tasks in the provider's mandate, in particular verifying the declaration of conformity and technical documentation, keeping documents for ten years, informing authorities and cooperating with them.
+  nachweis: Provider mandate, verification record, document filing.
+
+P-BEV-02:
+  kurz: Terminate the mandate if the provider acts contrary to its obligations and inform the market surveillance authority and, where applicable, the notified body immediately, giving reasons.
+  nachweis: Termination letter and notification to the authority.
+
+P-PROD-01:
+  kurz: If we place on the market or put into service, under our name, a product covered by Annex I Section A with a high-risk AI system as a safety component, we are considered the provider and bear the obligations under Article 16.
+  nachweis: Role check per product, reference to the provider obligations in E-08.
+
+P-PROD-02:
+  kurz: For AI in products, check whether it is a safety component (Article 6(1)). AI used solely for user assistance, performance optimization, efficiency, automation, convenience or quality control is not a safety component unless its failure would endanger health and safety. For machinery (Annex I Section B), only Articles 6(1), 60a and 102 to 112 of the AI Act apply.
+  nachweis: Documented classification per product with reasoning on Article 6(1a) and 6(1b), reference to the Machinery Regulation.
+
+P-PROD-03:
+  kurz: For high-risk AI systems in products covered by Annex I Section A, follow the conformity assessment procedure of the relevant product legislation and include the requirements of Chapter III Section 2 and the QMS assessment.
+  nachweis: Conformity assessment under product legislation with a section on the AI requirements.
+
+P-TRANSP-ANB-01:
+  kurz: Design AI systems intended to interact directly with people, such as chatbots, so that people are informed they are interacting with an AI system, unless this is obvious.
+  nachweis: Screenshot of the notice, design requirement, approval before putting into service.
+
+P-TRANSP-ANB-02:
+  kurz: Mark synthetic audio, image, video or text output in a machine-readable format so that it is detectable as artificially generated or manipulated, as far as technically feasible.
+  nachweis: Description of the marking solution (for example watermark, metadata), test evidence.
+
+P-TRANSP-ANB-03:
+  kurz: For systems generating synthetic content placed on the market before 02/08/2026, retrofit the marking under Article 50(2) by 02/12/2026.
+  nachweis: Implementation plan with date, evidence of marking in the legacy system.
+
+P-TRANSP-ANB-04:
+  kurz: Give the notice under Article 50(1) clearly, distinguishably and accessibly, at the latest at the time of the first interaction.
+  nachweis: Screenshot showing when the notice appears, accessibility check.
+
+P-TRANSP-BETR-01:
+  kurz: Inform people when an emotion recognition system or a biometric categorization system is used on them, and comply with data protection law. Emotion recognition in the workplace is in principle prohibited under Article 5(1)(f).
+  nachweis: Information notice, data protection impact assessment, check against Article 5(1)(f).
+
+P-TRANSP-BETR-02:
+  kurz: Disclose that image, audio or video content has been artificially generated or manipulated where it is a deep fake. For evidently artistic or satirical works, an appropriate, unobtrusive disclosure is enough.
+  nachweis: Labelling rule in the responsible AI use policy, examples of labelled content.
+
+P-TRANSP-BETR-03:
+  kurz: Disclose that published text on matters of public interest has been artificially generated or manipulated, unless it has undergone editorial review and a person holds editorial responsibility.
+  nachweis: Editorial rule with review and approval step, or labelling rule.
+
+P-TRANSP-BETR-04:
+  kurz: Provide the information under Article 50(3) and (4) clearly, distinguishably and accessibly, at the latest at the time of the first interaction or exposure.
+  nachweis: Examples showing the placement of the notice, accessibility check.
+
+P-GPAI-01:
+  kurz: As a provider of a general-purpose AI model, draw up and keep up to date the technical documentation (Annex XI) and information for downstream providers (Annex XII). Certain open-source models without systemic risk are exempt.
+  nachweis: Model documentation under Annexes XI and XII.
+
+P-GPAI-02:
+  kurz: Put in place a policy to comply with Union copyright law, including respecting reservations of rights under Article 4(3) of Directive (EU) 2019/790.
+  nachweis: Copyright policy, procedure for identifying reservations of rights.
+
+P-GPAI-03:
+  kurz: Publish a sufficiently detailed summary of the training content using the AI Office template.
+  nachweis: Published summary with location.
+
+P-GPAI-04:
+  kurz: Providers from third countries, for example Switzerland, appoint in writing an authorised representative in the EU before placing a general-purpose AI model on the market.
+  nachweis: Written mandate to the authorised representative.
+
+P-GPAI-05:
+  kurz: "Only where there is systemic risk: notify the Commission within two weeks of meeting the threshold, evaluate the model including adversarial testing, mitigate systemic risks, report serious incidents and ensure cybersecurity."
+  nachweis: Notification to the Commission, evaluation and test reports, incident record.
+
+P-GPAI-06:
+  kurz: As authorised representative of a provider of a general-purpose AI model, perform the tasks in the mandate and terminate it in case of infringements.
+  nachweis: Mandate, verification record, where applicable notification to the AI Office.
+
+P-GPAI-07:
+  kurz: For general-purpose AI models placed on the market before 02/08/2025, comply with the obligations by 02/08/2027.
+  nachweis: Implementation plan with date.
+
+ausgeklammert:
+  erlaubnis: Permission subject to conditions, not an obligation. Mentioned in the implementation note for EUAIA-20.
+  behoerden: Addressed to public authorities, law enforcement or Union bodies, not to SMEs.
+  freiwillig: Applies only to voluntary participation in regulatory sandboxes or real-world testing.
+  verweis: Reference to other Union law (whistleblower protection), no separate obligation under the AI Act.
+  keine_pflicht: Penalties set by Member States; fine ranges and SME rules are in stand.yaml.

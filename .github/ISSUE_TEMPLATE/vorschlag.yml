@@ -1,0 +1,8 @@
+name: Verbesserung vorschlagen
+description: Idee für Vorlagen, Werkzeug oder Leitfaden
+labels: [vorschlag]
+body:
+  - type: textarea
+    id: vorschlag
+    attributes: { label: Vorschlag, description: "Was soll sich ändern und warum? Kein Normtext, keine vertraulichen Firmendaten." }
+    validations: { required: true }

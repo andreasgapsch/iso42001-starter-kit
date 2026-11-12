@@ -1,0 +1,69 @@
+<!-- Poster «AIMS auf einer Seite» (A3 quer). Platzhalter {{…}} füllt scripts/leitfaden.mts aus den Katalogen. -->
+<header class="p-kopf">
+  <div>
+    <h1>{{poster_titel}}</h1>
+    <p class="p-unter">{{poster_untertitel}}</p>
+  </div>
+  <p class="p-absender">{{absender}}</p>
+</header>
+
+<main class="p-raster">
+  <section class="p-feld p-kreis">
+    <h2>Das Managementsystem: Abschnitte 4 bis 10</h2>
+    <p class="p-hinweis">Ein Kreislauf: planen, umsetzen, prüfen, verbessern. Unter jedem Kapitel die Bausteine aus dem Kit.</p>
+    {{kreislauf}}
+  </section>
+
+  <section class="p-feld p-schritte">
+    <h2>Die 10 Schritte</h2>
+    <p class="p-hinweis">Wochen im Zeitplan mit ISMS (90 Tage) und ohne ISMS (rund 150 Tage) bis Stage-1-Bereitschaft</p>
+    {{schritte}}
+  </section>
+
+  <section class="p-feld p-controls">
+    <h2>Anhang A: 38 Controls in 9 Gruppen</h2>
+    <p class="p-hinweis">Für jedes Control ein begründeter Entscheid in der Erklärung zur Anwendbarkeit (D-11)</p>
+    {{controlgruppen}}
+  </section>
+
+  <section class="p-feld p-pfad">
+    <h2>Pfad mit oder ohne ISMS</h2>
+    <div class="p-zwei">
+      <div>
+        <h3>Mit ISMS (ISO/IEC 27001)</h3>
+        <ul>
+          <li>gemeinsam führen: Dokumentenlenkung, internes Audit, Managementbewertung, Korrekturen</li>
+          <li>Risikoskalen übernehmen, Folgen für Personen ergänzen</li>
+          <li>13 Ergänzungsblätter statt neuer Dokumente</li>
+          <li>Integrationsmatrix D-23</li>
+          <li>rund 25 bis 35 PT intern, 90 Tage bis Stage 1</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Ohne ISMS</h3>
+        <ul>
+          <li>Basisprozesse schlank mit aufbauen: D-26, D-20, D-21, D-22</li>
+          <li>eigene, einfache Risikomethode (D-06)</li>
+          <li>alle Kernvorlagen als eigene Dokumente</li>
+          <li>externe Hilfe für das erste interne Audit erwägen</li>
+          <li>rund 45 bis 65 PT intern, rund 150 Tage bis Stage 1</li>
+        </ul>
+      </div>
+    </div>
+    <p class="p-neu"><strong>In beiden Pfaden neu:</strong> KI-Leitlinie D-03, Rolle zuerst D-24, Folgenabschätzung D-08 und D-09, Erklärung zur Anwendbarkeit D-11, Lebenszyklus D-12, Daten D-13</p>
+  </section>
+
+  <section class="p-feld p-modul">
+    <h2>Modul EU AI Act (optional)</h2>
+    <p><strong>Rolle zuerst:</strong> Anbieter oder Betreiber? Rollenwechsel bei eigenem Namen, wesentlicher Änderung oder neuem Zweck.</p>
+    {{fristen}}
+    <p class="p-klein">E-01 bis E-09: Rolle, Risikoklasse, Pflichten, KI-Kompetenz, Betreiber, Grundrechte, Transparenz, Anbieter, Fristen. ISO/IEC 42001 begründet keine Konformitätsvermutung nach AI Act.</p>
+    <h3 class="p-zweitmodul">Modul NIST AI RMF (optional)</h3>
+    <p class="p-klein">Freiwillig, NIST zertifiziert nicht. N-01 Profil, N-02 Abdeckung, N-03 Messkonzept, N-04 generative KI; Zusatz-Controls RMF-xx; rund 3 bis 5 PT.</p>
+  </section>
+</main>
+
+<footer class="p-fuss">
+  <span>{{versprechen}}</span>
+  <span>{{stand}}. {{lizenzzeile}} Kein Normtext: Anforderungen siehe ISO/IEC 42001, bei SNV, DIN oder ISO zu beziehen.</span>
+</footer>

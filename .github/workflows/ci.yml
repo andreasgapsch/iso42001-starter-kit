@@ -1,0 +1,138 @@
+# Qualitätstore bei jedem Push. Ohne Quellordner (Normen, Vergleichstexte, AI-Act-PDFs): G6 und G14 laufen nur lokal.
+# Gehärtet (scripts/pruefen/workflow.mts, Tor G32): Actions auf SHA mit genauem Versionskommentar (# v7.0.1), permissions und concurrency,
+# Zeitlimit je Schritt. Neue Actions: SHA des Release-Tags eintragen, Dependabot hebt sie wöchentlich an.
+name: CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+jobs:
+  pruefen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        timeout-minutes: 5
+        with:
+          fetch-depth: 0 # Tor G33 vergleicht mit dem Vergleichs-Commit (Merge-Basis oder Stand vor dem Push)
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        timeout-minutes: 5
+        with:
+          node-version: 24
+          cache: npm
+      - name: Abhängigkeiten
+        timeout-minutes: 10
+        run: |
+          npm ci
+          npm rebuild esbuild
+      - name: Lockfile unverändert
+        timeout-minutes: 2
+        run: git diff --exit-code package-lock.json
+      - name: Abhängigkeitsprüfung (audit mit Ausnahmen, Signaturen)
+        timeout-minutes: 5
+        # entspricht npm audit --omit=dev --audit-level=high plus npm audit signatures, mit Ausnahmen aus audit-ausnahmen.json
+        run: npx tsx scripts/pruefen/audit.mts --signaturen
+      - name: LibreOffice und Werkzeuge
+        timeout-minutes: 10
+        # Aktuelles LibreOffice (PPA der Document Foundation): Die Dokumenttests prüfen Grafiken in Word-Dateien, die LibreOffice 24.2 aus Ubuntu 24.04 anders darstellt
+        run: sudo add-apt-repository -y ppa:libreoffice/ppa && sudo apt-get update && sudo apt-get install -y --no-install-recommends libreoffice-core-nogui libreoffice-writer-nogui libreoffice-calc-nogui poppler-utils fonts-crosextra-carlito
+      - name: Playwright-Browser
+        timeout-minutes: 10
+        run: npx playwright install --with-deps chromium firefox webkit
+      - name: Browser-Daten
+        timeout-minutes: 5
+        run: |
+          npx tsx scripts/kataloge.mts
+          npx tsx scripts/schema.mts
+      - name: Typprüfung
+        timeout-minutes: 5
+        run: npm run typecheck
+      - name: Einheiten- und Dokumententests mit Abdeckung
+        timeout-minutes: 30
+        run: npm run test:cov
+      - name: Abdeckungs-Ratsche
+        timeout-minutes: 2
+        run: npx tsx scripts/pruefen/ratsche.mts
+      - name: Fuzz Pflichtteil (50 Fälle je Ziel, Seed 77123)
+        timeout-minutes: 10
+        # Eigenes Vitest-Projekt; nicht npm run fuzz, weil begrenzt.sh systemd-run braucht (läuft auf GitHub-Runnern nicht).
+        # Die Heap-Grenze je Arbeiterprozess gilt trotzdem. Volllauf (500 Fälle) je Release: docs/entwicklung/ZAEHLWEISE-Q9.md
+        run: npx vitest run --config vitest.fuzz.config.ts
+      - name: Werkzeug bauen
+        timeout-minutes: 10
+        run: npm run build:app --if-present
+      - name: Kit bauen (ohne Rechtstexte)
+        timeout-minutes: 10
+        run: npx tsx scripts/build.mts
+      - name: Leitfaden prüfen (Schriften im gebauten PDF)
+        timeout-minutes: 5
+        # Der Test hängt am gebauten Leitfaden; KIT_GEBAUT macht das Fehlen der Datei zum Fehler.
+        run: npx vitest run --project unit tests/unit/runde2-rest.test.ts -t "Type-3"
+        env:
+          KIT_GEBAUT: '1'
+      - name: Qualitätstore
+        timeout-minutes: 10
+        run: npx tsx scripts/pruefen/alle.mts
+        env:
+          ERWARTUNGEN_BASIS: ${{ github.event.before }}
+      - name: Kit als Artefakt
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        timeout-minutes: 5
+        with:
+          name: kit-ci
+          path: dist/*.zip
+          retention-days: 7
+  e2e:
+    # E2E je Browser als eigener Job, parallel zum Job pruefen (ein Job für alle drei Browser überschritt das Zeitlimit)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        timeout-minutes: 5
+        with:
+          fetch-depth: 0 # Tor G33 vergleicht mit dem Vergleichs-Commit (Merge-Basis oder Stand vor dem Push)
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        timeout-minutes: 5
+        with:
+          node-version: 24
+          cache: npm
+      - name: Abhängigkeiten
+        timeout-minutes: 10
+        run: |
+          npm ci
+          npm rebuild esbuild
+      - name: LibreOffice und Werkzeuge
+        timeout-minutes: 10
+        # Aktuelles LibreOffice (PPA der Document Foundation): Die Dokumenttests prüfen Grafiken in Word-Dateien, die LibreOffice 24.2 aus Ubuntu 24.04 anders darstellt
+        run: sudo add-apt-repository -y ppa:libreoffice/ppa && sudo apt-get update && sudo apt-get install -y --no-install-recommends libreoffice-core-nogui libreoffice-writer-nogui libreoffice-calc-nogui poppler-utils fonts-crosextra-carlito
+      - name: Playwright-Browser
+        timeout-minutes: 10
+        # Chromium immer dazu: der Kitbau erzeugt den Leitfaden-PDF mit Chromium
+        run: npx playwright install --with-deps chromium ${{ matrix.browser }}
+      - name: Browser-Daten
+        timeout-minutes: 5
+        run: |
+          npx tsx scripts/kataloge.mts
+          npx tsx scripts/schema.mts
+      - name: Werkzeug bauen
+        timeout-minutes: 10
+        run: npm run build:app --if-present
+      - name: Kit bauen (ohne Rechtstexte)
+        timeout-minutes: 10
+        run: npx tsx scripts/build.mts
+      - name: E2E über file://
+        timeout-minutes: 45
+        run: npx playwright test --project=${{ matrix.browser }}

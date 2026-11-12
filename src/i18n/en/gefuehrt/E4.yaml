@@ -1,0 +1,258 @@
+# Page texts for phase E4 AI inventory. Format: src/gefuehrt/FORMAT.md
+E4-einfuehrung:
+  titel: AI inventory
+  frage: Which AI systems exist in your organization?
+  warum: The [[g:ki-inventar|AI inventory]] is the basis for risks, impact assessments and [[g:control|controls]]. It covers AI you develop yourself, purchased software with AI functions, cloud services and [[g:schatten-ki|shadow AI]].
+  fehler: The most common problem in audits is an incomplete inventory, above all AI inside purchased software and services that employees use privately. Auditors ask around in the business units and compare the answers with your list.
+E4-suche:
+  titel: Where to look
+  frage: Which sources do you use to identify the AI systems?
+  warum: No single source finds every system. Licence lists show purchased software, network analyses show which cloud services are used, and talks with business units show what is actually in use.
+  fehler: If you only ask IT, you will not find the [[g:schatten-ki|shadow AI]]. Auditors want to see that you used several sources, and they ask how you will spot new systems in future.
+  felder:
+    meta.gefuehrt.antworten.inventar.quellen:
+      label: Sources
+      hilfe: Choose at least three. A short survey of all employees often finds the most shadow AI.
+E4-fragebogen:
+  titel: Questionnaire for business units
+  frage: Which business units should fill in the survey questionnaire, and by when?
+  warum: The business units know best which tools they use. With the questionnaire, you collect the information in a consistent way and then import it into the inventory.
+  fehler: Questionnaires without a deadline do not come back. Set a deadline of two weeks and have the head of each business unit confirm the result; that is good evidence of completeness.
+  felder:
+    meta.gefuehrt.antworten.inventar.fragebogenBereiche:
+      label: Business units
+      hilfe: All units within the scope.
+    meta.gefuehrt.antworten.inventar.ruecklaufBis:
+      label: Return by
+      hilfe: Date by which the completed questionnaire is due back.
+E4-systeme:
+  titel: Record AI systems
+  frage: Which AI system do you use or develop, what for, and who is responsible for it?
+  warum: For each system, you need at least a name, type, purpose and a system owner. The purpose matters because a system should only be used for what it has been checked for ([[g:beabsichtigte-verwendung|intended use]]).
+  fehler: The check reports systems without a [[g:eigner|system owner]] as errors. Auditors ask the system owner what the system is used for and who approved it.
+  felder:
+    name:
+      label: Name
+      hilfe: What it is called in your organization, e.g. ‘Visual quality inspection line 3’.
+    typ:
+      label: Type
+      hilfe: Shadow AI means tools used without approval. They belong in the inventory too.
+    beschreibung:
+      label: Description
+      hilfe: What the system does, in two sentences.
+    zweck:
+      label: Purpose
+      hilfe: What it is used for and what not, e.g. "Detects surface defects on castings; does not decide on releasing whole batches".
+    fachbereich:
+      label: Business unit
+      hilfe: The unit that mainly uses the system.
+    eigner:
+      label: System owner
+      hilfe: The person who decides on use and changes, usually the head of the business unit.
+    lieferant:
+      label: Supplier
+      hilfe: You record suppliers in more detail in phase 9; here, choosing one or adding a new entry is enough.
+    lebenszyklus:
+      label: Phase
+      hilfe: Which phase of the [[g:lebenszyklus|life cycle]] the system is in.
+    status:
+      label: Status
+      hilfe: '‘Approved’ only after checking and approval according to your process.'
+E4-daten:
+  titel: Data and people affected
+  frage: What data does the system process, whom does it affect, and how far does it decide on its own?
+  warum: Personal data, the people affected and the degree of automation determine how sensitive a system is. This information later drives the screening for the impact assessment.
+  fehler: '‘The users are affected’ often falls short. Also think of customers, applicants or people the system says something about. Auditors pay particular attention to systems that judge people.'
+  felder:
+    personendaten:
+      label: Processes personal data
+      hilfe: Names in texts or drawings count too.
+    besondereDaten:
+      label: Processes sensitive personal data
+      hilfe: e.g. health, ethnic origin, religion, biometric data, criminal proceedings.
+    betroffene:
+      label: People affected
+      hilfe: Who is affected by the results, including people outside the organization.
+    automatisierung:
+      label: Degree of automation
+      hilfe: Who makes the final decision, a person or the system.
+    aufsicht:
+      label: Human oversight (who reviews)
+      hilfe: Who reviews the results of this system and may intervene, e.g. ‘QA specialists at the inspection station, shift supervisor’. Appears in the AI inventory (D-10).
+E4-ressourcen:
+  titel: Resources for each system
+  frage: What does the system consist of, and what does it depend on?
+  warum: The standard requires you to know the resources of an AI system, meaning data, tools and models, computing power and people. For purchased AI, the supplier's information is enough.
+  fehler: For cloud services, the region where data is processed is often missing. For in-house developments, auditors ask about the model and version; for cloud services, they ask where it is operated.
+  felder:
+    ressourcen.daten:
+      label: Data
+      hilfe: Which data is used in training, testing and operation, and where it comes from.
+    ressourcen.werkzeuge:
+      label: Tools and models
+      hilfe: Model, service, version, [[g:anbieter|provider]], e.g. "Image model from the camera manufacturer, version 4.2, retrained with our own images".
+    ressourcen.rechenressourcen:
+      label: Place of operation and computing power
+      hilfe: Own data centre, cloud with region, device on the shop floor.
+    ressourcen.personal:
+      label: People
+      hilfe: Which roles operate, oversee and maintain the system.
+    aenderungsregel:
+      label: Retraining and model changes
+      hilfe: Only if you retrain, fine-tune or change the model. Who changes it, what it is tested against, who approves it and when a change counts as significant. Appears in the life cycle procedure (D-12).
+E4-schatten:
+  titel: Decide on shadow AI
+  frage: What happens to this [[g:schatten-ki|shadow AI]]?
+  warum: Shadow AI is a sign of a real need. You decide whether to check and approve the tool, replace it with an approved one, or prohibit it.
+  fehler: 'The check flags shadow AI that stays ‘under review’ for months. Auditors expect a dated decision and a message to the users.'
+  felder:
+    status:
+      label: Decision
+      hilfe: '‘Replaced’ if an approved tool takes over the purpose.'
+    erfasstAm:
+      label: Recorded on
+      hilfe: The deadline for the decision runs from this date.
+E4-freigabeprozess:
+  titel: Approval of new AI tools
+  frage: Who checks and approves new AI tools, against which criteria, and how quickly?
+  warum: A lean, fast approval route prevents new [[g:schatten-ki|shadow AI]]. If people know a request will be decided within a few days, they would rather wait than use a tool on the quiet.
+  fehler: Approval processes that take weeks encourage shadow AI. Auditors ask to see how the most recent new tool was approved.
+  felder:
+    meta.gefuehrt.antworten.werkzeugFreigabe.wer:
+      label: Approved by
+      hilfe: Usually the [[g:aims|AIMS]] lead, together with data protection and information security for sensitive cases.
+    meta.gefuehrt.antworten.werkzeugFreigabe.kriterien:
+      label: Criteria
+      hilfe: The criteria appear as a checklist in the acceptable use policy D-15.
+    meta.gefuehrt.antworten.werkzeugFreigabe.fristTage:
+      label: Decision within working days
+      hilfe: e.g. 5 working days for standard cases.
+E4-ueberpruefung:
+  titel: Review of the inventory
+  frage: When will you next review the information on this system?
+  warum: AI systems change through updates, new functions or new uses. A review date for each system makes sure the inventory stays up to date.
+  fehler: The check flags overdue review dates. Auditors pick a system and ask when it was last reviewed.
+  felder:
+    naechsteUeberpruefung:
+      label: Next review
+      hilfe: After one year at the latest; every six months for sensitive systems.
+    antragAm:
+      label: Requested on
+      hilfe: "Date on which the request for use came in (PR-07). Leave empty if there was no request, e.g. when [[g:schatten-ki|shadow AI]] was found."
+    entscheidAm:
+      label: Decided on
+      hilfe: "Date of approval, approval with conditions or rejection. With ‘Requested on’, the PR-07 metric measures the days to the decision."
+    freigabe:
+      label: "Approval for use"
+      hilfe: "Who approved the system for use or deployment, and when."
+    datenklasse:
+      label: Highest permitted data class
+      hilfe: "Which data may be entered into the system, e.g. ‘internal’ for an approved chat tool without customer data."
+    auflagen:
+      label: Conditions of use
+      hilfe: "e.g. ‘only with human review of the results’ or ‘no personal data’."
+    freigabeBegruendung:
+      label: Reason for the decision
+      hilfe: Why the system is approved, restricted or prohibited; a reference to the risk or impact assessment is enough.
+    sensibleNutzung:
+      label: Sensitive use
+      hilfe: Take over the result of the impact assessment; if they differ, the button ‘Apply to the inventory’ on its page ‘Result’ is enough. The inventory and the assessment must agree.
+    ismsAsset:
+      label: Asset ID in the ISMS inventory
+      hilfe: Identifier in the existing inventory of information assets of the [[g:isms]], so that both inventories are linked.
+E4-handlung:
+  titel: "AI that acts"
+  frage: "What may the AI system do on its own, what does it access, and how is it stopped?"
+  warum: "An assistant that only drafts texts carries different risks from one that sends emails, triggers bookings or carries out several steps on its own with tools. The more a system acts by itself, the more important tight access rights, logs and a reliable way to stop it become. The entries appear in the inventory D-10 and in the [[g:lebenszyklus|life cycle]] rules D-12."
+  fehler: "Extensions, connectors and agents in office software are often overlooked because they are added through a setting. The check reports systems that act without a way to stop them, logs or oversight (H28). Auditors ask who switches a system off in an emergency and how quickly."
+  felder:
+    aufgabenart:
+      label: "Type of task"
+      hilfe: "What the system mainly does."
+    handlungsbefugnis:
+      label: "Authority to act"
+      hilfe: "‘Executes within limits’: individual actions without confirmation, e.g. entering an appointment. ‘Acts in several steps’: plans and carries out several steps with tools (agent)."
+    zugriffe:
+      label: "Access and tools"
+      hilfe: "Systems, file stores, mailboxes, interfaces and connectors that the system can read or operate."
+    gedaechtnis:
+      label: "Memory beyond sessions"
+      hilfe: "‘Yes’ if the system stores information from earlier sessions and uses it again."
+    stoppmoeglichkeit:
+      label: "Way to stop it"
+      hilfe: "How the system is stopped or its rights withdrawn, and who may do this, e.g. ‘deactivate the connector in the admin centre; IT or system owner’."
+E4-generativ:
+  titel: "Generative AI and model"
+  frage: "Does the system generate text, images, code or audio, and which model in which version is behind it?"
+  warum: "Generative AI brings its own risks, such as invented content or hidden instructions in emails and documents. With the model and version, you notice when the [[g:anbieter|provider]] switches and can reassess. If the system reads third-party content or is publicly accessible, abuse cases belong in the test before use."
+  fehler: "For purchased services, the model is often missing; then a model change goes unnoticed (H33). Record the provider's information with a date, even if it is imprecise."
+  felder:
+    generativ:
+      label: "Generative AI"
+      hilfe: "‘Yes’ if the system generates content. For these systems, phase 6 suggests typical security risks."
+    modell.anbieter:
+      label: "Model: provider"
+      hilfe: "Who develops the model, e.g. the maker of the foundation model."
+    modell.name:
+      label: "Model: name"
+      hilfe: "Name or family of the model according to the provider."
+    modell.version:
+      label: "Model: version"
+      hilfe: "Version or status with a date, e.g. ‘according to the provider, as of 10/2026’."
+    fremdeInhalte:
+      label: "Reads third-party content"
+      hilfe: "For example incoming emails, web pages or documents from customers. Such content can contain hidden instructions."
+    oeffentlich:
+      label: "Publicly accessible"
+      hilfe: "Accessible to people outside the organization, e.g. a chatbot on the website."
+E4-dienst:
+  titel: "Service, plan and functions"
+  frage: "Under which plan do you use the service, which functions are switched on, and where does the information come from?"
+  warum: "A [[g:anbieter|provider]]'s commitments on training, retention and contract depend on the offering: free and personal accounts have different terms from a business or enterprise contract. Functions such as web search, memory or connectors change the risks. With the retirement date you plan the change in good time. The information appears in the inventory D-10 and in the sheet ‘Services’ of D-16."
+  fehler: "Teams often use privately paid plans for company data. The review reports confidential data in a free or personal plan as an error (F30) and a near retirement date as a hint (H53). Functions not recorded count as unclarified, not as switched off. Auditors ask for the source of the information."
+  felder:
+    tarif:
+      label: "Plan or type of contract"
+      hilfe: "Free account, personal or individual plan, business or team, enterprise contract or own operation."
+    funktionen.websuche:
+      label: "Web search"
+      hilfe: "On or off, as set in the administration of the service."
+    funktionen.codeausfuehrung:
+      label: "Code execution"
+      hilfe: "The service runs code itself, e.g. for analyses."
+    funktionen.dateiupload:
+      label: "File upload"
+      hilfe: "Users can upload files."
+    funktionen.gedaechtnis:
+      label: "Memory"
+      hilfe: "The service remembers information beyond the session."
+    funktionen.konnektoren:
+      label: "Connectors and tool servers"
+      hilfe: "Connections to mail, file stores, calendars or third-party tools, including tool servers under the Model Context Protocol."
+    funktionen.agenten:
+      label: "Own assistants and agents"
+      hilfe: "Users can create their own assistants or agents."
+    funktionen.teilen:
+      label: "Sharing outside"
+      hilfe: "Chats, assistants or results can be shared with people outside the company."
+    abkuendigung:
+      label: "Retirement by the provider"
+      hilfe: "Announced date on which the model or service is discontinued."
+    quelleAngaben.fundstelle:
+      label: "Source of provider information"
+      hilfe: "Reference at the manufacturer or provider, e.g. terms of contract, system card or admin console; not from third-party collections."
+    quelleAngaben.abgerufen:
+      label: "Retrieved on"
+      hilfe: "Date on which you checked the information."
+E4-kritisch:
+  titel: "Critical systems and dependencies"
+  frage: "Does a failure of the system disrupt important processes, and which systems and processes are connected to it?"
+  warum: "If you know what an AI system depends on and what depends on it, you can plan for failures, model changes and replacement. For critical systems, you set a fallback in phase 9. The dependencies appear in the inventory D-10, sheet resources."
+  fehler: "Critical does not only mean safety-relevant: a quotation assistant without which sales come to a standstill is critical too. The check reports critical systems without a fallback (H29)."
+  felder:
+    kritisch:
+      label: "Critical for operations"
+      hilfe: "‘Yes’ if a failure disrupts important processes or affects customers."
+    abhaengigkeiten:
+      label: "Dependencies"
+      hilfe: "Systems and processes before and after the AI system, e.g. ‘reads from the ERP, writes drafts to the ticket system’."

@@ -1,0 +1,152 @@
+# Stand der AI-Act-Grundlage des Kits
+#
+# Struktur sprachneutral; Texte in src/i18n/de/stand.yaml und src/i18n/en/stand.yaml.
+# Vor jedem Release prüfen: neuere Konsolidierung auf EUR-Lex, Berichtigungen, Normenliste, Stand Schweiz.
+# Release-Tor G37 (scripts/pruefen/rechtsstand.mts, AF-116): geprueft_am oben und jedes geprueft_am bei den Hinweisen
+# höchstens 30 Tage vor dem Release; jeder Hinweis mit status zu_pruefen braucht ein eigenes geprueft_am (Sichtung).
+# Das Werkzeug warnt, wenn ein Prüfdatum älter als 6 Monate ist (AF-117, W10).
+# Art. 113 hat unnummerierte Absätze; das Kit zählt sie wie Art. 111 selbst («Artikel 113 Absatz 3 Buchstabe a»).
+
+schema: 1
+id: konsolidiert-2026-07-27
+geprueft_am: "2026-11-07"
+# Sichtung 07.11.2026 (R4): EUR-Lex nennt die Konsolidierungen 12.07.2024 und 27.07.2026, letztere aktuell; keine neuere.
+# https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:32024R1689
+quelle_fassung: https://eur-lex.europa.eu/legal-content/EN/AUTO/?uri=CELEX:32024R1689
+naechste_pruefung: vor jedem Release
+
+fassung:
+  bezeichnung: konsolidiert 27.07.2026
+  rechtsakt: Verordnung (EU) 2024/1689
+  dokument: 02024R1689
+  datum: "2026-07-27"
+  version: {de: "001.002", en: "001.001"}
+  quelle_seite: 1
+  amtsblatt_original: ABl. L 1689 vom 12.07.2024, S. 1
+  in_kraft: "2024-08-01"
+  aenderungen:
+    - id: M1
+      rechtsakt: Verordnung (EU) 2026/1744
+      kurzname: Digital-Omnibus-Verordnung zur KI
+      datum: "2026-07-08"
+      amtsblatt: ABl. L 1744 vom 24.07.2026, S. 1
+      veroeffentlicht: "2026-07-24"
+      in_kraft: "2026-07-27"
+      beleg_in_kraft: Art. 4 VO (EU) 2026/1744 (dritter Tag nach der Veröffentlichung)
+      aendert_auch: [Verordnung (EU) 2018/1139, Verordnung (EU) 2023/1230]
+      # Beigelegte PDF im Ordner Rechtstexte (Linkziel für Fristen mit dokument: M1)
+      datei: {de: Aenderungsverordnung_2026-1744_DE.pdf, en: Aenderungsverordnung_2026-1744_EN.pdf}
+  berichtigungen:
+    - id: C1
+      amtsblatt: ABl. L 90802 vom 09.10.2025, S. 1
+      datum: "2025-10-09"
+      betrifft: Verordnung (EU) 2024/1689
+      fundstelle_im_text: 3 Nr. 40
+      in_sprachfassung: [de]
+    - id: C2
+      amtsblatt: ABl. L 90810 vom 29.09.2026, S. 1
+      datum: "2026-09-29"
+      betrifft: Verordnung (EU) 2026/1744
+      fundstelle_im_text: 6(1b)
+      in_sprachfassung: [de]
+
+# art: geltung (Pflichten beginnen), uebergang (Altsysteme), kommission (Leitlinien, Rechtsakte, Termine der EU und der Mitgliedstaaten)
+fristen:
+  - {id: FRIST-01, datum: "2024-08-01", art: geltung, artikel: "113(1)"}
+  - {id: FRIST-02, datum: "2025-02-02", art: geltung, artikel: "113(3)(a)"}
+  - {id: FRIST-03, datum: "2025-08-02", art: geltung, artikel: "113(3)(b)"}
+  - {id: FRIST-04, datum: "2025-08-02", art: kommission, artikel: "73(7)"}
+  - {id: FRIST-05, datum: "2026-02-02", art: kommission, artikel: "6(5)"}
+  - {id: FRIST-06, datum: "2026-07-27", art: geltung, artikel: "113(3)(d)"}
+  - {id: FRIST-07, datum: "2026-08-02", art: geltung, artikel: "113(2)"}
+  - {id: FRIST-08, datum: "2026-12-02", art: geltung, artikel: "113(3)(a)"}
+  - {id: FRIST-09, datum: "2026-12-02", art: uebergang, artikel: "111(4)"}
+  - {id: FRIST-10, datum: "2027-08-02", art: uebergang, artikel: "111(3)"}
+  - {id: FRIST-11, datum: "2027-08-02", art: kommission, artikel: "2(13)"}
+  # Art. 57(1) in der Fassung M1: Reallabor je Mitgliedstaat (R18, geprüft 07.11.2026); ID nach FRIST-18 vergeben
+  - {id: FRIST-19, datum: "2027-08-02", art: kommission, artikel: "57(1)"}
+  - {id: FRIST-12, datum: "2027-09-02", art: kommission, artikel: "72(3)"}
+  - {id: FRIST-13, datum: "2027-12-02", art: geltung, artikel: "113(3)(c)(i)"}
+  - {id: FRIST-14, datum: "2028-01-28", art: kommission, artikel: "43(3)"}
+  - {id: FRIST-15, datum: "2028-08-02", art: geltung, artikel: "113(3)(c)(ii)"}
+  # dokument: Linkziel in einem anderen Rechtsakt (ID unter fassung.aenderungen) statt der konsolidierten Fassung; seite je Sprache
+  - {id: FRIST-16, datum: "2028-08-02", art: geltung, artikel: "Art. 8 VO (EU) 2023/1230 in der Fassung von Art. 3 Nr. 1 VO (EU) 2026/1744", dokument: M1, seite: {de: 40, en: 40}}
+  - {id: FRIST-17, datum: "2030-08-02", art: uebergang, artikel: "111(2)"}
+  - {id: FRIST-18, datum: "2030-12-31", art: uebergang, artikel: "111(1)"}
+
+# status: rechtstext (am Gesetzestext geprüft), auslegung (gekennzeichnete Auslegung des Kits),
+#         zu_pruefen (Angabe ausserhalb des Gesetzestexts, vor Release an der Quelle prüfen)
+hinweise:
+  - id: berichtigung-c2
+    status: rechtstext
+    artikel: ["6(1b)"]
+  - id: formell-praktisch
+    status: auslegung
+    artikel: ["43", "47", "48", "49", "72", "73", "86"]
+  - id: altsysteme
+    status: rechtstext
+    artikel: ["111(2)"]
+  - id: maschinen
+    status: rechtstext
+    artikel: ["Anhang I Abschnitt B Nr. 21", "2(2)", "6(1)", "6(1a) bis (1c)", "3 Nr. 14"]
+    weitere: ["Art. 8 VO (EU) 2023/1230 (angefügt durch Art. 3 Nr. 1 VO (EU) 2026/1744)", "Art. 20(10) VO (EU) 2023/1230 (angefügt durch Art. 3 Nr. 2 VO (EU) 2026/1744)"]
+    gilt_ab: "2028-08-02"
+  - id: normen-en-18286
+    status: zu_pruefen
+    artikel: ["17", "40(1)"]
+    norm: EN 18286:2026
+    norm_titel: "Künstliche Intelligenz, Qualitätsmanagementsystem zu Regulierungszwecken im Rahmen der KI-Verordnung der EU"
+    norm_titel_en: "Artificial intelligence, Quality management system for EU AI Act regulatory purposes"
+    quelle: "Durchführungsbeschluss (EU) 2026/2274 der Kommission vom 12.10.2026 über die harmonisierten Normen für Hochrisiko-KI-Systeme zur Unterstützung der Verordnung (EU) 2024/1689, ABl. L 2026/2274 vom 14.10.2026, in Kraft seit 14.10.2026"
+    celex: 32026D2274
+    eli: https://data.europa.eu/eli/dec_impl/2026/2274/oj
+    einschraenkung: keine
+    im_gesetzestext: false
+    # Sichtung R15: Beschluss 2026/2274 listet EN 18286:2026 ohne Einschränkung, in Kraft am Tag der Veröffentlichung.
+    # Status und Text bleiben bis zum Ergebnis der Fachperson (R5) unverändert.
+    geprueft_am: "2026-11-07"
+  - id: iso-42001-keine-vermutung
+    status: auslegung
+    artikel: ["40(1)"]
+  - id: leitlinien-kommission
+    status: zu_pruefen
+    artikel: ["6(5)", "96(1)(d)", "73(7)"]
+    stand: "2026-11-07"
+    geprueft_am: "2026-11-07"
+    quelle: digital-strategy.ec.europa.eu
+    # R2, R7 (Sichtung 07.11.2026): Art. 50 belegt; Art. 6(5) und 73 ohne Endfassung, gesetzliche Frist verstrichen
+    leitlinien:
+      - {artikel: "6(5)", status: entwurf, datum: "2026-05-19", seite_aktualisiert: "2026-07-23", endgueltig: zu_pruefen, url: "https://digital-strategy.ec.europa.eu/en/library/draft-commission-guidelines-classification-high-risk-ai-systems"}
+      - {artikel: "50", status: angenommen, datum: "2026-07-20", seite_aktualisiert: "2026-11-05", belegt: "2026-11-07", url: "https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems"}
+      - {artikel: "73(7)", status: entwurf, datum: "2025-09-26", seite_aktualisiert: "2025-11-04", endgueltig: zu_pruefen, url: "https://digital-strategy.ec.europa.eu/en/consultations/ai-act-commission-issues-draft-guidance-and-reporting-template-serious-ai-incidents-and-seeks"}
+  - id: uebergang-art-111-4
+    status: auslegung
+    artikel: ["111(4)", "50(2)", "3 Nr. 9", "3 Nr. 11"]
+  - id: kmu-erleichterungen
+    status: rechtstext
+    artikel: ["3 Nr. 14a", "3 Nr. 14b", "4(2)", "11(1)", "17(2)", "62(1)", "62(2)", "63(1)", "99(6)", "99(6a)"]
+  - id: sanktionen
+    status: rechtstext
+    artikel: ["99(1)", "99(3)", "99(4)", "99(5)"]
+  - id: schweiz-geltungsbereich
+    status: rechtstext
+    artikel: ["2(1)(a)", "2(1)(c)", "22(1)"]
+  - id: schweiz-regulierung
+    status: zu_pruefen
+    stand: "2026-11-07"
+    # R8, R9 (Sichtung 07.11.2026); bleibt zu_pruefen, bis die Vernehmlassung eröffnet ist
+    geprueft_am: "2026-11-07"
+    quelle: bj.admin.ch
+    quelle_weitere: kmu.admin.ch (23.09.2026)
+    interpellation:
+      nummer: "26.3414"
+      titel: Umsetzung der KI-Konvention des Europarates in der Schweiz
+      eingereicht: "2026-03-20"
+      stellungnahme: "2026-05-20"
+      url: https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20263414
+      abgerufen: "2026-11-07"
+
+# Sichtung Art. 41 (R10, 07.11.2026): AI Act Service Desk, Artikel 41, nennt keine erlassenen gemeinsamen Spezifikationen
+# (https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-41). EUR-Lex-Schnellsuche «common specifications» und
+# «2024/1689»: 5 Treffer, keiner ein Durchführungsrechtsakt nach Art. 41 (VO 2024/1689, 2024/2847, 2025/327, 2025/2509,
+# 2026/1744); Suche «Article 41 of Regulation (EU) 2024/1689»: keine Treffer. Texte: E-09, Leitfaden Kapitel 7.

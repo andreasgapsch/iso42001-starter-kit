@@ -1,0 +1,1265 @@
+# Texte zum Prozesskatalog (src/prozesse/katalog.yaml) und zur Reifeskala (src/prozesse/reifeskala.yaml).
+# Eigene Formulierungen von KMU-CIO. Bezug zur Norm nur über Nummern im Katalog, kein Normtext.
+titel: Prozesse
+hilfe: "Ein Prozess beschreibt, wer was in welcher Reihenfolge tut und welcher Nachweis dabei entsteht. Der Katalog schlägt schlanke Abläufe mit fünf bis acht Schritten vor. Passen Sie Rollen und Schritte an Ihre Firma an; wichtig ist, dass jeder Prozess einen Eigner hat und wirklich so gelebt wird."
+gruppen:
+  fuehrung: Führung
+  kern: Kernprozesse KI
+  unterstuetzung: Unterstützung
+  bewertung: Bewertung und Verbesserung
+arten:
+  gemeinsam: Gemeinsam mit dem ISMS
+  gemeinsam-ki: Gemeinsamer Rahmen, KI ergänzt
+  nur-aims: Nur AIMS
+  nur-isms: ISMS-Basisprozess
+arten_hilfe:
+  gemeinsam: "Ein Prozess für Informationssicherheit und KI. Mit ISMS führen Sie den bestehenden Prozess weiter und nehmen KI-Themen auf."
+  gemeinsam-ki: "Der Ablauf ist derselbe wie im ISMS, die Inhalte zur KI kommen dazu, z. B. eigene Kriterien oder zusätzliche Beteiligte."
+  nur-aims: "Diesen Prozess gibt es nur im KI-Managementsystem."
+  nur-isms: "Prozess aus der Informationssicherheit, auf den KI-Controls bauen. Mit ISMS genügt ein Verweis auf das ISMS. Ohne ISMS führen Sie nur die als Mindestumfang markierten Prozesse in schlanker Form."
+pflichtarten:
+  pflicht: Pflicht
+  control: Control, abwählbar
+  bedingt: Bedingt
+  eigen: Eigener Prozess
+pflichtarten_hilfe:
+  pflicht: "Folgt aus den Kapiteln 4 bis 10 und lässt sich nicht abwählen."
+  control: "Folgt aus einem Control des Anhangs A. Nicht anwendbar nur mit Begründung in der Erklärung zur Anwendbarkeit (D-11)."
+  bedingt: "Gilt nur, wenn die genannte Bedingung zutrifft, z. B. eigene Entwicklung von KI."
+  eigen: "Prozess Ihrer Firma ausserhalb des Katalogs. Sie legen Titel, Zweck, Gruppe, Art und Ablauf selbst fest; die Prüfung behandelt ihn wie einen abwählbaren Prozess."
+schrittarten:
+  start: Start
+  aufgabe: Aufgabe
+  entscheidung: Entscheidung
+  ende: Ende
+raci:
+  R: führt aus
+  A: verantwortet
+  C: wirkt mit
+  I: wird informiert
+raci_hilfe: "Je Aufgabe genau eine Rolle mit A. R erledigt die Arbeit, C wird vorher angehört, I erfährt das Ergebnis. Die Rollen entsprechen den Bereichen in D-04."
+einheiten:
+  prozent: Prozent
+  anzahl: Anzahl
+  monate: Monate
+  tage: Tage
+  stunden: Stunden
+soll:
+  prozent: "{zahl} %"
+  keiner: "0 (kein Fall)"
+richtungen:
+  mindestens: mindestens
+  hoechstens: höchstens
+rollen:
+  ki-eigner: Eigner/in des Systems
+  berichterstattung: Berichterstattung an die Geschäftsleitung
+  konformitaet: Normkonformität des AIMS
+  mitarbeitende: Mitarbeitende
+felder:
+  zweck: Zweck
+  ausloeser: Auslöser
+  eingaben: Eingaben
+  schritte: Ablauf
+  ausgaben: Ausgaben und Nachweise
+  kennzahl: Kennzahl (Vorschlag)
+  normbezug: Normbezug
+  dokumente: Dokumente
+  verbunden: Verbundene Prozesse
+  eigner: Eigner (Vorschlag)
+  rhythmus: Rhythmus
+  ereignis: bei Anlass
+  bedingung: Bedingung
+  ohne_isms: Ohne ISMS
+ohne_isms:
+  titel: Mindestumfang ohne ISMS
+  hilfe: "Ohne ISMS braucht das AIMS nur wenige Grundprozesse der Informationssicherheit, nämlich die, auf denen KI-Controls direkt aufbauen. Das Kit markiert sie als Mindestumfang. Lieferanten sind dabei schon abgedeckt: PR-20 regelt die Prüfung der KI-Anbieter auch für Firmen ohne ISMS. Die übrigen Basisprozesse sind Empfehlungen; ihr Status ist freiwillig."
+  minimal: Mindestumfang
+  empfohlen: empfohlen
+reifeskala:
+  titel: Reife der Prozesse
+  hilfe: "Die Reife zeigt, wie weit ein Prozess im Alltag angekommen ist. Sie ist eine Selbsteinschätzung für die Steuerung, kein Kriterium der Zertifizierung. Die App schlägt eine Stufe aus Nachweisen, Messwerten und Audits vor; Sie entscheiden."
+  gap_titel: Bezug zur Gap-Analyse (D-00)
+  gap_hilfe: "Die Gap-Analyse D-00 nutzt Reifegrade 0 bis 5 je Anforderung. Die Zuordnung hilft beim Übertragen, ist aber keine Umrechnung: D-00 bewertet Anforderungen, diese Skala Abläufe."
+  nicht-begonnen:
+    titel: nicht begonnen
+    erklaerung: "Für den Prozess ist noch nichts festgelegt. Es gibt keinen Eigner und keinen beschriebenen Ablauf."
+    kriterium: "Kein Eigner, kein freigegebener Ablauf."
+    gap: "Entspricht in D-00 den Stufen 0 (nicht vorhanden) und 1 (ansatzweise)."
+  definiert:
+    titel: definiert
+    erklaerung: "Ablauf, Rollen und Nachweise sind beschrieben, der Eigner ist benannt. Gearbeitet wird noch nicht durchgehend danach."
+    kriterium: "Eigner benannt, Ablauf beschrieben, zugehöriges Dokument mindestens im Entwurf."
+    gap: "Entspricht in D-00 am ehesten Stufe 2 (wiederholbar): beschrieben, aber noch ohne Nachweis aus der Anwendung."
+  eingefuehrt:
+    titel: eingeführt
+    erklaerung: "Der Prozess wurde mindestens einmal wie beschrieben durchgeführt. Ein Nachweis aus der Durchführung liegt vor."
+    kriterium: "Mindestens eine Durchführung mit Aufzeichnung, Dokument freigegeben. Prozesse, die nur bei Anlass laufen und noch keinen Anlass hatten: Übung oder Probelauf mit Aufzeichnung."
+    gap: "Entspricht in D-00 Stufe 3 (festgelegt und angewendet), dem üblichen Soll für die Zertifizierung."
+  wirksam:
+    titel: wirksam
+    erklaerung: "Die Kennzahl des Prozesses wird gemessen und erreicht ihr Soll, oder die Wirksamkeit ist auf andere Weise belegt."
+    kriterium: "Messwert der letzten zwölf Monate vorhanden, Soll erreicht oder Abweichung mit Massnahme."
+    gap: "Entspricht in D-00 Stufe 4 (gemessen und gesteuert)."
+  ueberprueft:
+    titel: überprüft
+    erklaerung: "Der Prozess wurde im internen Audit ohne offene Nichtkonformität geprüft und in der Managementbewertung behandelt. Erkenntnisse fliessen in Verbesserungen."
+    kriterium: "Internes Audit und Managementbewertung der letzten zwölf Monate, keine offene Nichtkonformität."
+    gap: "Entspricht in D-00 Stufe 5 (laufend verbessert)."
+
+prozesse:
+  # ---------------------------------------------------------------- Führung
+  PR-01:
+    titel: Kontext, interessierte Parteien und Geltungsbereich
+    zweck: "Klären, in welchem Umfeld die Firma KI nutzt, wer Erwartungen an sie hat und was das AIMS umfasst."
+    ausloeser:
+      - Start des AIMS-Projekts
+      - jährlich vor der Managementbewertung
+      - neuer Standort, neues Geschäftsfeld oder neue Rolle zur KI, z. B. erstmals Anbieter
+    eingaben:
+      - Strategie und Organigramm
+      - KI-Inventar (D-10)
+      - Anforderungen von Kunden, Behörden und Partnern
+      - bestehender Geltungsbereich des ISMS, falls vorhanden
+    schritte:
+      PR-01.00: Anlass zur Überprüfung
+      PR-01.01: Interne und externe Themen mit KI-Bezug sammeln
+      PR-01.02: Eigene Rolle je KI-System bestimmen, z. B. Anbieter oder Betreiber
+      PR-01.03: Parteien und ihre Anforderungen erfassen
+      PR-01.04: Anforderungen auswählen, die das AIMS aufnimmt
+      PR-01.05: Grenzen festlegen und Ausschlüsse begründen
+      PR-01.06: Gibt die Geschäftsleitung den Geltungsbereich frei?
+      PR-01.07: Geltungsbereich bekannt machen und Änderungen beobachten
+      PR-01.90: Kontext und Geltungsbereich aktuell
+    zweige:
+      PR-01.06: { PR-01.07: ja, PR-01.05: "nein, Grenzen überarbeiten" }
+    ausgaben:
+      - Kontext mit Themen und Parteien (D-01)
+      - freigegebener Geltungsbereich (D-02)
+      - Rollenbestimmung (D-24, E-01)
+    kennzahl: "Monate seit der letzten Überprüfung von D-01 und D-02"
+    kennzahl_methode: "Register D-26, Spalte «Freigegeben am» für D-01 und D-02; massgebend ist die ältere der beiden Freigaben."
+    hilfe: "Im KMU reicht oft ein halber Tag mit Geschäftsleitung und AIMS-Verantwortlichen. Mit ISMS übernehmen Sie Kontext und Parteien und ergänzen nur die KI-Themen."
+
+  PR-02:
+    titel: KI-Leitlinie und Führung
+    zweck: "Grundsätze für den Umgang mit KI vorgeben, mit den übrigen Leitlinien abstimmen und die Rolle der Geschäftsleitung sichtbar machen."
+    ausloeser:
+      - Start des AIMS-Projekts
+      - jährliche Überprüfung
+      - wesentliche Änderung bei Strategie, Recht oder nach einem Vorfall
+    eingaben:
+      - Kontext und Geltungsbereich (PR-01)
+      - Risikobereitschaft der Geschäftsleitung
+      - bestehende Leitlinien zu Informationssicherheit, Datenschutz und Verhalten
+    schritte:
+      PR-02.00: Anlass zur Erstellung oder Überprüfung
+      PR-02.01: Entwurf mit Grundsätzen und Zielrahmen schreiben
+      PR-02.02: Mit bestehenden Leitlinien abgleichen und Widersprüche klären
+      PR-02.03: Gibt die Geschäftsleitung die Leitlinie frei?
+      PR-02.04: Leitlinie an alle Mitarbeitenden verteilen
+      PR-02.05: Kenntnisnahme bestätigen
+      PR-02.06: Jährlich überprüfen und in der Managementbewertung berichten
+      PR-02.90: Leitlinie gültig und bekannt
+    zweige:
+      PR-02.03: { PR-02.04: ja, PR-02.01: "nein, Entwurf anpassen" }
+    ausgaben:
+      - freigegebene KI-Leitlinie (D-03)
+      - Bekanntmachung und Bestätigungen (D-17)
+      - Überprüfung im Protokoll der Managementbewertung (D-21)
+    kennzahl: "Anteil der Mitarbeitenden mit bestätigter Kenntnisnahme"
+    kennzahl_methode: "D-17, Blatt Schulungen, Spalten «Teilnehmende» und «Nachweis» (Unterschriften, Lernplattform) gegen die Personalliste; Zähler: Personen mit Bestätigung, Nenner: alle Mitarbeitenden."
+    hilfe: "Eine Leitlinie von zwei Seiten, die alle kennen, nützt mehr als ein langes Dokument. Die Geschäftsleitung zeigt Führung, indem sie freigibt, Mittel bereitstellt und das Thema in ihren Sitzungen aufnimmt."
+
+  PR-03:
+    titel: Rollen, Verantwortung und Meldewege
+    zweck: "Zuständigkeiten für KI eindeutig vergeben und einen Weg schaffen, auf dem Bedenken ohne Nachteile gemeldet werden können."
+    ausloeser:
+      - Start des AIMS-Projekts
+      - Personalwechsel in einer Rolle
+      - neues KI-System ohne Eigner/in
+    eingaben:
+      - Organigramm und Stellenbeschreibungen
+      - Rollenbereiche aus D-04
+      - bestehende Entscheidungsrechte und Gremien
+    schritte:
+      PR-03.00: Anlass zur Festlegung oder Anpassung
+      PR-03.01: Rollenbereiche und Gremien festlegen
+      PR-03.02: Personen und Stellvertretungen benennen
+      PR-03.03: Entscheidungsrechte je Risikostufe festlegen
+      PR-03.04: Meldeweg mit Fristen und Ausweichstelle festlegen
+      PR-03.05: Gibt die Geschäftsleitung die Rollen frei?
+      PR-03.06: Rollen und Meldeweg bekannt machen
+      PR-03.07: Bei Ein- und Austritten nachführen
+      PR-03.90: Rollen besetzt und bekannt
+    zweige:
+      PR-03.05: { PR-03.06: ja, PR-03.02: "nein, Besetzung anpassen" }
+    ausgaben:
+      - Rollen, Zuständigkeiten und Meldeweg (D-04)
+      - Ernennungen oder Protokolle der Geschäftsleitung
+    kennzahl: "Anteil der Rollenbereiche mit benannter Person und Stellvertretung"
+    kennzahl_methode: "Rollen D-04, Spalten «Bereich», «A» und «Stellvertretung»; Zähler: Bereiche mit benannter Person und Stellvertretung, Nenner: alle Bereiche."
+    hilfe: "Mehrere Rollen in einer Person sind im KMU normal. Achten Sie darauf, dass niemand die eigene Arbeit prüft, besonders im internen Audit."
+
+  PR-04:
+    titel: Ziele, Messung und Bericht
+    zweck: "Messbare Ziele für die KI setzen, im geplanten Rhythmus messen, auswerten und der Geschäftsleitung berichten."
+    ausloeser:
+      - jährliche Planung
+      - Rhythmus der Kennzahlen
+      - Abweichung vom Sollwert
+    eingaben:
+      - KI-Leitlinie (D-03)
+      - Risikoregister (D-07)
+      - Entscheide der letzten Managementbewertung (D-21)
+    schritte:
+      PR-04.00: Planungstermin oder Messzeitpunkt
+      PR-04.01: Ziele aus Leitlinie und Risiken ableiten
+      PR-04.02: Kennzahl, Sollwert, Methode und Rhythmus festlegen
+      PR-04.03: Messen und Wert erfassen
+      PR-04.04: Messwerte auswerten
+      PR-04.05: Ist das Soll erreicht?
+      PR-04.06: Massnahme erfassen
+      PR-04.07: Ergebnis der Geschäftsleitung berichten
+      PR-04.90: Bericht abgegeben
+    zweige:
+      PR-04.05: { PR-04.07: ja, PR-04.06: nein }
+    ausgaben:
+      - Ziele, Messplan und Messwerte (D-05)
+      - Bericht an die Geschäftsleitung
+      - Massnahmen bei Abweichungen (D-22)
+    kennzahl: "Anteil der Ziele, die im geplanten Rhythmus gemessen wurden"
+    kennzahl_methode: "D-05, Blatt Messwerte, Spalten «Ziel oder Kennzahl» und «Datum» gegen die Spalte «Häufigkeit» im Messplan; Zähler: Ziele mit fälliger Messung erfolgt, Nenner: Ziele mit fälliger Messung."
+    hilfe: "Drei bis fünf Ziele genügen für den Anfang. Wählen Sie Kennzahlen, die Sie ohne grossen Aufwand erheben können, z. B. aus dem Inventar oder dem Register der Feststellungen."
+
+  PR-05:
+    titel: Änderungen am Managementsystem planen
+    zweck: "Änderungen am AIMS, etwa am Geltungsbereich, an Rollen oder Verfahren, geplant umsetzen statt nebenbei."
+    ausloeser:
+      - Entscheid aus der Managementbewertung
+      - Reorganisation oder neuer Standort
+      - neue rechtliche Pflichten
+    eingaben:
+      - Änderungsantrag mit Begründung
+      - betroffene Dokumente und Rollen
+    schritte:
+      PR-05.00: Änderungsbedarf erkannt
+      PR-05.01: Änderung und Ziel beschreiben
+      PR-05.02: Folgen für Risiken, Rollen und Dokumente beurteilen
+      PR-05.03: Mittel, Termin und Zuständigkeit klären
+      PR-05.04: Gibt die Geschäftsleitung die Änderung frei?
+      PR-05.05: Betroffene Dokumente nachführen
+      PR-05.06: Änderung umsetzen und mitteilen
+      PR-05.07: Wirkung nach der Umsetzung prüfen
+      PR-05.90: Änderung umgesetzt
+      PR-05.91: Änderung verworfen
+    zweige:
+      PR-05.04: { PR-05.05: ja, PR-05.91: nein }
+    ausgaben:
+      - Änderungshistorie im Dokumentenregister (D-26)
+      - "Massnahmen mit Herkunft «Änderung» im {{fakt:register.massnahmen}}"
+    kennzahl: "Anteil der Änderungen mit dokumentierter Freigabe"
+    kennzahl_methode: "Massnahmen mit Quelle «Änderung» im {{fakt:register.massnahmen}}, Spalten «Quelle» und «Status», gegen die Spalte «Freigabe durch» im Änderungsverlauf von D-26; Zähler: erledigte Änderungen mit Freigabe, Nenner: erledigte Änderungen."
+    hilfe: "Kleine Anpassungen eines Dokuments laufen über die Dokumentenlenkung (PR-23). Dieser Prozess ist für Änderungen gedacht, die das ganze AIMS betreffen."
+
+  # ---------------------------------------------------------------- Kern
+  PR-06:
+    titel: KI-Inventar und Ressourcen
+    zweck: "Alle KI-Systeme mit Zweck, Eigner/in, Daten, Werkzeugen, Rechenleistung und beteiligten Personen kennen."
+    ausloeser:
+      - Start des AIMS-Projekts
+      - neues KI-Werkzeug (PR-07)
+      - Fund von Schatten-KI
+      - halbjährliche Abfrage in den Fachbereichen
+    eingaben:
+      - Softwareliste, Lizenzen und Einkaufsbelege
+      - Auswertung von Netzwerk und Spesen
+      - Rückmeldungen der Fachbereiche
+    schritte:
+      PR-06.00: Erhebung geplant oder Hinweis auf ein System
+      PR-06.01: Quellen wie Softwareliste, Lizenzen und Einkauf auswerten
+      PR-06.02: Fachbereiche mit dem Fragebogen befragen
+      PR-06.03: KI-System im Inventar erfassen
+      PR-06.04: Eigner/in des Systems benennen
+      PR-06.05: Daten, Werkzeuge, Rechenleistung und Personal beschreiben
+      PR-06.06: Status setzen und mit dem Verzeichnis der Werte verknüpfen
+      PR-06.07: Inventar regelmässig mit den Quellen abgleichen
+      PR-06.90: Inventar vollständig und aktuell
+    ausgaben:
+      - KI-Inventar (D-10)
+      - Rückläufe der Fragebogen
+    kennzahl: "Anteil der KI-Systeme mit Eigner/in und vollständig beschriebenen Ressourcen"
+    kennzahl_methode: "KI-Inventar D-10, Spalte «Eigner/in», und Blatt Ressourcen, Spalten «Daten» bis «Personal und Kompetenzen»; Zähler: Systeme mit Eigner/in und beschriebenen Ressourcen, Nenner: alle Systeme im Inventar."
+    hilfe: "Fragen Sie nicht nur die IT. Viele KI-Funktionen stecken in Software, die Fachbereiche selbst abonniert haben, oder in neuen Funktionen bestehender Programme."
+
+  PR-07:
+    titel: Freigabe neuer KI-Werkzeuge und Nutzungsregeln
+    zweck: "Neue KI-Werkzeuge kurz und nachvollziehbar prüfen, bevor Mitarbeitende sie nutzen, und die Regeln für die Nutzung festlegen."
+    ausloeser:
+      - Antrag eines Fachbereichs
+      - neue KI-Funktion in bestehender Software
+      - Fund von Schatten-KI
+    eingaben:
+      - Antrag mit Zweck, Daten, Tarif und Anbieter
+      - Freigabekriterien für KI-Werkzeuge (D-15, Abschnitt «Neues Werkzeug beantragen»)
+      - Richtlinie zur KI-Nutzung (D-15)
+    schritte:
+      PR-07.00: Antrag oder Hinweis auf ein neues Werkzeug
+      PR-07.01: Antrag mit Zweck, Daten, Tarif und Anbieter erfassen
+      PR-07.02: "Nach den Freigabekriterien prüfen: Lieferant und Datenklassen, Kurzprüfung der Folgen nach D-08, Risiken im Register D-07"
+      PR-07.11: Mit eigenen Fällen testen (D-12)
+      PR-07.03: Braucht es eine vertiefte Prüfung (Schwelle nach D-08 oder Risiko über der Akzeptanzgrenze)?
+      PR-07.04: Risiken behandeln, volle Folgenabschätzung ab der Schwelle
+      PR-07.09: Hohes Risiko oder erhebliche Wirkung auf Kunden, Mitarbeitende oder Bewerbende?
+      PR-07.05: Gibt die AIMS-Verantwortung das Werkzeug frei, bei tiefem Risiko allein, bei mittlerem Risiko mit der Eignerin oder dem Eigner des Systems, allenfalls mit Auflagen?
+      PR-07.10: Gibt die Geschäftsleitung das Werkzeug frei, allenfalls mit Auflagen?
+      PR-07.06: Entscheid, Auflagen und Wiedervorlage im Inventar eintragen
+      PR-07.07: Nutzende über Regeln und Auflagen informieren
+      PR-07.90: Werkzeug freigegeben
+      PR-07.91: Antrag abgelehnt, Antragsteller informiert
+    zweige:
+      PR-07.03: { PR-07.04: ja, PR-07.05: nein }
+      PR-07.09: { PR-07.10: "ja, Geschäftsleitung entscheidet", PR-07.05: nein }
+      PR-07.05: { PR-07.06: "ja, mit oder ohne Auflagen", PR-07.91: nein }
+      PR-07.10: { PR-07.06: "ja, mit oder ohne Auflagen", PR-07.91: nein }
+    ausgaben:
+      - Inventareintrag mit Entscheid und Begründung (D-10)
+      - Regeln für die Nutzung (D-15)
+      - Freigabeprüfung im Lebenszyklus (D-12)
+    kennzahl: "Tage vom Antrag bis zum Entscheid"
+    kennzahl_methode: "Freigabeliste im Inventar D-10: Tage von «Antrag am» bis «Entscheid am», je Antrag; Mittel und längster Fall."
+    hilfe: "Eine schnelle Prüfung verhindert Schatten-KI besser als ein strenges Verbot. Auch ohne vertiefte Prüfung gehören Kurzprüfung der Folgen, Risikoeintrag und Test mit eigenen Fällen dazu; bei einfachen Werkzeugen dürfen sie kurz sein. Legen Sie fest, ab welcher Schwelle die vertiefte Prüfung nötig ist, z. B. bei Personendaten oder Entscheiden über Menschen. Liegt ein Restrisiko über der Akzeptanzgrenze, nimmt es zuerst die {{fakt:freigabe.restrisiko}} nach PR-08 an (ab «unannehmbar» nur als Ausnahme nach D-04); erst danach folgt die Freigabe des Werkzeugs (PR-07.05 oder PR-07.10)."
+
+  PR-08:
+    titel: KI-Risiken beurteilen und behandeln
+    zweck: "Risiken und Chancen der KI nach festen Kriterien erkennen, bewerten und behandeln."
+    ausloeser:
+      - neues KI-System oder wesentliche Änderung
+      - Vorfall oder Hinweis aus einem Audit
+      - neue Rechtslage oder Wechsel des Anbieters
+      - jährliche Überprüfung
+    eingaben:
+      - KI-Inventar (D-10)
+      - Ergebnisse der Folgenabschätzung (D-09)
+      - Risikokriterien und Akzeptanzgrenze (D-06)
+      - Vorschlagslisten zu KI-Risiken, z. B. zu generativer KI
+    schritte:
+      PR-08.00: Anlass zur Beurteilung
+      PR-08.01: Kriterien und Akzeptanzgrenze festlegen oder bestätigen
+      PR-08.02: Risiken und Chancen je KI-System erkennen
+      PR-08.03: Wahrscheinlichkeit und Ausmass bewerten
+      PR-08.04: Behandlung wählen und Controls zuordnen
+      PR-08.05: Restrisiko nach der Behandlung bewerten
+      PR-08.07: Die {{fakt:freigabe.behandlungsplan}} gibt den Behandlungsplan frei und nimmt Restrisiken über der Akzeptanzgrenze an (D-04, Anlage A)
+      PR-08.08: Register nachführen, Restrisiken bis zur Akzeptanzgrenze durch die Risikoeignerschaft annehmen lassen, nächste Beurteilung terminieren
+      PR-08.90: Risiken beurteilt und behandelt
+    ausgaben:
+      - Verfahren und Kriterien (D-06)
+      - Risikoregister mit Werten vor und nach der Behandlung (D-07)
+      - Annahmen der Restrisiken
+      - Controls für die Erklärung zur Anwendbarkeit (D-11)
+    kennzahl: "Anzahl der Risiken über der Akzeptanzgrenze ohne Entscheid"
+    kennzahl_methode: "Risikoregister D-07, Spalten «Wert» und «Behandlung»: Risiken mit Wert über der Akzeptanzgrenze ohne Behandlungsentscheid auszählen."
+    hilfe: "Mit ISMS nutzen Sie dasselbe Verfahren und kennzeichnen KI-Risiken im bestehenden Register. Wichtig ist, dass die Eignerin oder der Eigner des Systems mitwirkt; sie oder er kennt den Einsatz am besten."
+
+  PR-09:
+    titel: KI-Folgenabschätzung
+    zweck: "Abschätzen, wie ein KI-System auf Personen, Gruppen und die Gesellschaft wirken kann, bevor es eingesetzt wird."
+    ausloeser:
+      - neues KI-System oder neue Verwendung
+      - wesentliche Änderung, Vorfall oder berechtigte Meldung von Betroffenen
+      - "Rückprüfung nach der Risikobeurteilung: Auswirkung ab der Schwelle aus D-06, auch wenn die Kurzprüfung genügte"
+      - geplante Wiedervorlage
+    eingaben:
+      - Beschreibung des Systems und seiner Verwendung
+      - mögliche Fehlanwendungen
+      - betroffene Personen und Gruppen
+      - Datenschutz-Folgenabschätzung, falls vorhanden
+    schritte:
+      PR-09.00: Neues oder geändertes System, neue Verwendung, Vorfall, Meldung oder Rückprüfung
+      PR-09.01: Kurzprüfung mit den Fragen der Triage
+      PR-09.02: Ist eine volle Abschätzung nötig?
+      PR-09.03: Betroffene und mögliche Wirkungen beschreiben
+      PR-09.04: Nutzen und Schaden abwägen
+      PR-09.05: Massnahmen festlegen und in die Risikobeurteilung übernehmen
+      PR-09.10: Massnahmen festlegen, in die Risikobeurteilung übernehmen, Auswirkung gegen die Schwelle aus D-06 zurückprüfen
+      PR-09.08: Schwelle aus D-06 erreicht oder eingeschränkte Nutzung nötig?
+      PR-09.06: Kurzprüfung freigeben (nicht durch die Person, die sie durchgeführt hat)
+      PR-09.09: "Volle Abschätzung durch die {{fakt:freigabe.abschaetzung}} freigeben"
+      PR-09.07: Nächste Überprüfung terminieren
+      PR-09.90: Abschätzung gültig
+    zweige:
+      PR-09.02: { PR-09.03: "ja, volle Abschätzung", PR-09.10: "nein, Kurzfassung genügt" }
+      PR-09.08: { PR-09.03: "ja, volle Abschätzung nachholen", PR-09.06: "nein, Kurzprüfung genügt" }
+    ausgaben:
+      - Verfahren mit Ablaufgrafik (D-08)
+      - Folgenabschätzung je System (D-09)
+      - bei Hochrisiko nach AI Act die Grundrechte-Folgenabschätzung (E-06)
+    kennzahl: "Anteil der KI-Systeme mit gültiger Folgenabschätzung"
+    kennzahl_methode: "Inventar D-10, Spalte «ID», gegen D-09 (Freigabe im Dokumentkopf, Neubeurteilungen mit den Spalten «Datum» und «Freigabe»); Zähler: Systeme mit freigegebener und nicht abgelaufener Abschätzung, Nenner: alle Systeme im Inventar."
+    hilfe: "Die meisten Werkzeuge im Büro bestehen die Kurzprüfung schnell. Gründlich wird es, wenn KI über Menschen mitentscheidet, z. B. bei Bewerbungen, Krediten oder Bewertungen."
+
+  PR-10:
+    titel: Controls auswählen und Erklärung zur Anwendbarkeit
+    zweck: "Die nötigen Controls aus der Risikobehandlung ableiten, mit Anhang A abgleichen und Umsetzung und Wirksamkeit verfolgen."
+    ausloeser:
+      - nach jeder Risikobehandlung
+      - vor einem Audit
+      - jährliche Überprüfung
+    eingaben:
+      - Risikoregister (D-07)
+      - Liste der Controls aus Anhang A
+      - mit ISMS die bestehende Erklärung zur Anwendbarkeit nach ISO/IEC 27001
+    schritte:
+      PR-10.00: Risikobehandlung abgeschlossen oder Termin
+      PR-10.01: Controls je Risiko bestimmen
+      PR-10.02: Mit Anhang A abgleichen und Ausschlüsse begründen
+      PR-10.03: Verantwortliche und Nachweise zuordnen
+      PR-10.04: Stand der Umsetzung pflegen
+      PR-10.05: Wirksamkeit prüfen, z. B. mit Stichprobe oder Test
+      PR-10.06: Gibt die {{fakt:freigabe.soa}} die Erklärung frei?
+      PR-10.90: Erklärung zur Anwendbarkeit freigegeben
+    zweige:
+      PR-10.06: { PR-10.90: ja, PR-10.03: "nein, Lücken schliessen" }
+    ausgaben:
+      - Erklärung zur Anwendbarkeit (D-11)
+      - Nachweise je Control
+      - Integrationsmatrix mit ISO/IEC 27001 (D-23)
+    kennzahl: "Anteil der anwendbaren Controls mit Status «wirksam»"
+    kennzahl_methode: "Erklärung zur Anwendbarkeit D-11, Spalten «Anwendbar» und «Status»; Zähler: Controls mit Status «wirksam», Nenner: anwendbare Controls."
+    hilfe: "Begründen Sie Ausschlüsse kurz und konkret, z. B. «keine eigene Entwicklung». Auditoren prüfen besonders, ob ausgeschlossene Controls wirklich nicht nötig sind."
+
+  PR-11:
+    titel: KI-System einführen
+    zweck: "Ein neues oder eingekauftes KI-System geordnet prüfen, testen und zum Einsatz freigeben."
+    ausloeser:
+      - Entscheid «vertiefte Prüfung» aus PR-07
+      - Beschaffungsprojekt
+      - Abschluss einer eigenen Entwicklung (PR-15)
+    eingaben:
+      - Anforderungen und Zweck
+      - Ergebnis der Lieferantenprüfung (D-16)
+      - Risiko- und Folgenabschätzung
+      - Testfälle aus dem eigenen Einsatz
+    schritte:
+      PR-11.00: Einführung beschlossen
+      PR-11.01: Zweck und Anforderungen festhalten
+      PR-11.02: Anbieter prüfen
+      PR-11.03: Abnahmekriterien und Messkonzept festlegen
+      PR-11.04: Vor dem Einsatz mit eigenen Fällen testen
+      PR-11.05: Einführung mit Aufsicht und Rückfallweg planen
+      PR-11.08: Hohes Risiko nach den Entscheidungsrechten (D-04)?
+      PR-11.06: Gibt die AIMS-Verantwortung das System frei, bei tiefem Risiko allein, bei mittlerem Risiko mit der Eignerin oder dem Eigner des Systems?
+      PR-11.09: Gibt die Geschäftsleitung das System frei?
+      PR-11.07: Nutzende informieren und Inventar auf «freigegeben» setzen
+      PR-11.90: System im Einsatz
+    zweige:
+      PR-11.08: { PR-11.09: "ja, Geschäftsleitung entscheidet", PR-11.06: nein }
+      PR-11.06: { PR-11.07: ja, PR-11.03: "nein, nachbessern und erneut testen" }
+      PR-11.09: { PR-11.07: ja, PR-11.03: "nein, nachbessern und erneut testen" }
+    ausgaben:
+      - Einführung, Prüfung und Freigabe im Lebenszyklus (D-12)
+      - Testbericht (D-12) und Messkonzept (N-03)
+      - Freigabe im Inventar (D-10)
+    kennzahl: "Anteil der Systeme im Betrieb mit dokumentierter Freigabe"
+    kennzahl_methode: "Inventar D-10, Spalte «Lebenszyklus», gegen die Freigabeliste, Spalte «Freigegeben am»; Zähler: Systeme im Betrieb mit dokumentierter Freigabe, Nenner: Systeme im Betrieb."
+    hilfe: "Ab hohem Risiko gibt die Geschäftsleitung frei, nicht der Eigner selbst (Entscheidungsrechte in D-04). Testen Sie mit Fällen aus Ihrem Alltag, nicht nur mit den Beispielen des Anbieters."
+
+  PR-12:
+    titel: KI-Systeme betreiben und überwachen
+    zweck: "Im Betrieb sicherstellen, dass das System seinen Zweck erfüllt, beaufsichtigt wird und Abweichungen auffallen."
+    ausloeser:
+      - laufender Betrieb
+      - Rhythmus der Stichproben
+      - Warnung aus der Überwachung
+    eingaben:
+      - Messkonzept und Auflagen aus der Freigabe
+      - Vorgaben zur Protokollierung
+      - Rückmeldungen der Nutzenden
+    schritte:
+      PR-12.00: Termin der Stichprobe oder Warnung
+      PR-12.01: Aufsicht nach Plan ausüben
+      PR-12.02: Stichproben und Messungen durchführen
+      PR-12.03: Protokolle auswerten
+      PR-12.04: Gibt es eine Abweichung?
+      PR-12.05: Abweichung melden und System bei Bedarf einschränken
+      PR-12.06: Leistung dem Eigner berichten
+      PR-12.07: Bei der Wiedervorlage Nutzen und Eignung überprüfen
+      PR-12.90: Betrieb überprüft
+    zweige:
+      PR-12.04: { PR-12.05: ja, PR-12.06: nein }
+    ausgaben:
+      - Betrieb und Protokolle im Lebenszyklus (D-12)
+      - Messwerte und Stichproben
+      - Meldungen an den Vorfallprozess (PR-19)
+    kennzahl: "Anteil der Systeme mit Stichprobe im geplanten Rhythmus"
+    kennzahl_methode: "D-05, Blatt Messwerte, Spalten «Ziel oder Kennzahl» und «Datum», mit den Systemen aus der Spalte «KI-Systeme» der Ziele, gegen das Inventar D-10, Spalte «Lebenszyklus»; Zähler: Systeme, die eine Stichprobe im Rhythmus am Messdatum tatsächlich umfasst, Nenner: Systeme im Betrieb."
+    hilfe: "Wer ein System beaufsichtigt, darf es ohne Rückfrage aussetzen. Halten Sie Stichproben kurz fest, z. B. Datum, Anzahl geprüfter Fälle und Auffälligkeiten."
+
+  PR-13:
+    titel: Änderungen an KI-Systemen
+    zweck: "Änderungen an Modell, Zweck, Daten, Anbieter oder Einstellungen erkennen und vor dem Einsatz beurteilen."
+    ausloeser:
+      - Modellwechsel beim Anbieter
+      - Nachtraining, Modell- oder Versionswechsel (immer mit Neubeurteilung der Risiken, D-12)
+      - neue Funktion oder neuer Zweck
+      - neue Datenquelle
+      - Abkündigung durch den Anbieter
+    eingaben:
+      - Ankündigung des Anbieters oder Änderungsantrag
+      - Änderungsregel im Inventar
+    schritte:
+      PR-13.00: Änderung angekündigt oder geplant
+      PR-13.01: Änderung melden und beschreiben
+      PR-13.02: Nachtraining, Modell- oder Versionswechsel oder wesentliche Änderung?
+      PR-13.03: Risiken neu beurteilen, bei wesentlicher Änderung auch die Folgen
+      PR-13.04: Geänderte Fassung testen
+      PR-13.07: Hohes Risiko oder vollständige Folgenabschätzung?
+      PR-13.05: Gibt die AIMS-Verantwortung die Änderung frei, bei tiefem Risiko allein, bei mittlerem Risiko mit der Eignerin oder dem Eigner des Systems (Stelle nach D-12)?
+      PR-13.08: Gibt die Geschäftsleitung die Änderung frei (Stelle nach D-12)?
+      PR-13.06: Inventar und Dokumentation nachführen, Nutzende informieren
+      PR-13.90: Änderung im Einsatz
+      PR-13.91: Änderung nicht eingesetzt, bisheriger Stand bleibt
+    zweige:
+      PR-13.02: { PR-13.03: ja, PR-13.04: nein }
+      PR-13.07: { PR-13.08: "ja, Geschäftsleitung entscheidet", PR-13.05: nein }
+      PR-13.05: { PR-13.06: ja, PR-13.91: nein }
+      PR-13.08: { PR-13.06: ja, PR-13.91: nein }
+    ausgaben:
+      - Änderungen im Lebenszyklus (D-12)
+      - Neubeurteilung in der Folgenabschätzung (D-09)
+      - Änderungsdatum im Inventar (D-10)
+    kennzahl: "Anteil der wesentlichen Änderungen mit Neubeurteilung vor dem Einsatz"
+    kennzahl_methode: "Inventar D-10, Spalte «Geändert am», gegen die Neubeurteilungen in D-09, Spalten «Datum» und «Freigabe»; Zähler: mit Neubeurteilung vor dem Einsatz, Nenner: wesentliche Änderungen."
+    hilfe: "Bei Cloud-Diensten ändert der Anbieter oft ohne Ihr Zutun. Abonnieren Sie die Änderungsmitteilungen und legen Sie im Inventar fest, was als wesentlich gilt."
+
+  PR-14:
+    titel: KI-System ausser Betrieb nehmen
+    zweck: "Ein KI-System geordnet beenden, Daten und Zugänge aufräumen und die Nachweise aufbewahren."
+    ausloeser:
+      - Ablösung durch ein anderes System
+      - Abkündigung durch den Anbieter
+      - Untersagung nach Prüfung oder Vorfall
+      - kein Nutzen mehr bei der Wiedervorlage
+    eingaben:
+      - Inventareintrag mit Abhängigkeiten
+      - Rückfallweg oder Nachfolgesystem
+      - Aufbewahrungsfristen
+    schritte:
+      PR-14.00: Entscheid zur Ausserbetriebnahme
+      PR-14.01: Termin und Zuständigkeiten festlegen
+      PR-14.02: Nutzende und Betroffene informieren
+      PR-14.03: Rückfallweg oder Nachfolger aktivieren
+      PR-14.04: Zugänge, Schlüssel und Schnittstellen entfernen
+      PR-14.05: Daten löschen oder übergeben
+      PR-14.06: Nachweise archivieren
+      PR-14.07: Inventar auf «abgelöst» setzen
+      PR-14.90: System ausser Betrieb
+    ausgaben:
+      - Ausserbetriebnahme im Lebenszyklus (D-12)
+      - Löschnachweis (D-13)
+      - Datum der Ausserbetriebnahme im Inventar (D-10)
+    kennzahl: "Anteil der abgelösten Systeme mit allen Schritten erledigt"
+    kennzahl_methode: "Inventar D-10, Spalte «Status», gegen die Checklisten der Ausserbetriebnahme; Zähler: abgelöste Systeme mit allen Schritten erledigt, Nenner: abgelöste Systeme."
+    hilfe: "Vergessene API-Schlüssel und laufende Abonnemente sind die häufigsten Reste. Fragen Sie beim Anbieter nach, wie er Ihre Daten löscht, und bewahren Sie die Bestätigung auf."
+
+  PR-15:
+    titel: KI-Systeme selbst entwickeln
+    zweck: "Eigene KI-Systeme mit festen Prüfpunkten von der Idee bis zur Übergabe in den Betrieb entwickeln."
+    ausloeser:
+      - neues Entwicklungsvorhaben
+      - neue Version eines eigenen Systems
+    eingaben:
+      - Ziele für verantwortungsvolle Entwicklung
+      - Anforderungen der Nutzenden
+      - Daten nach PR-16
+    schritte:
+      PR-15.00: Vorhaben beschlossen
+      PR-15.01: Ziele für verantwortungsvolle Entwicklung festlegen
+      PR-15.02: Anforderungen und Entwurf erstellen
+      PR-15.03: Daten aufbereiten
+      PR-15.04: Entwickeln und verifizieren
+      PR-15.05: Gegen den Zweck validieren
+      PR-15.06: Ist die Validierung bestanden?
+      PR-15.07: Technische Dokumentation je Zielgruppe erstellen
+      PR-15.08: An die Einführung übergeben
+      PR-15.90: Bereit zur Einführung
+    zweige:
+      PR-15.06: { PR-15.07: ja, PR-15.02: "nein, Entwurf überarbeiten" }
+    ausgaben:
+      - Abschnitt Entwicklung im Lebenszyklus (D-12)
+      - Testberichte und technische Dokumentation
+      - Datennachweise (D-13)
+      - bei Anbieterrolle nach AI Act die Übersicht E-08
+    kennzahl: "Anteil der Versionen mit dokumentierter Verifikation und Validierung"
+    kennzahl_methode: "Verifikations- und Validierungsberichte je Version; Zähler: Versionen mit Bericht, Nenner: freigegebene Versionen."
+    hilfe: "Auch ein interner Assistent mit eigenen Dokumenten als Wissensquelle kann als Eigenentwicklung gelten. Verifikation prüft, ob richtig gebaut wurde; Validierung, ob das Richtige gebaut wurde."
+    bedingung: "Gilt nur, wenn die Firma KI-Systeme selbst entwickelt oder wesentlich anpasst (Angabe im Projekt: Organisation entwickelt KI)."
+    bedingung_firma: "die Firma KI-Systeme selbst entwickelt oder wesentlich anpasst"
+
+  PR-16:
+    titel: Daten für KI steuern
+    zweck: "Herkunft, Qualität, Aufbereitung und Schutz der Daten für KI-Systeme festlegen und regelmässig prüfen."
+    ausloeser:
+      - neues KI-System oder neue Datenquelle
+      - eigenes Training oder eigene Wissensquelle
+      - Anfrage zum Datenschutz
+    eingaben:
+      - Datenklassen und Schutzbedarf
+      - Verträge und Nutzungsrechte
+      - Vorgaben des Datenschutzes
+    schritte:
+      PR-16.00: Datenbedarf entsteht
+      PR-16.01: Datenbedarf und Datenklasse bestimmen
+      PR-16.02: Herkunft und Nutzungsrechte klären
+      PR-16.03: Sind Personendaten betroffen?
+      PR-16.04: Datenschutz prüfen, bei Bedarf mit Folgenabschätzung
+      PR-16.05: Qualitätskriterien und Aufbereitung festlegen
+      PR-16.06: Schutz, Zugriff, Aufbewahrung und Löschung regeln
+      PR-16.07: Qualität periodisch prüfen
+      PR-16.90: Daten freigegeben und beschrieben
+    zweige:
+      PR-16.03: { PR-16.04: ja, PR-16.05: nein }
+    ausgaben:
+      - Datendokumentation (D-13)
+      - Datenklassen im Inventar (D-10)
+    kennzahl: "Anteil der KI-Systeme mit Datenklasse und geklärter Herkunft"
+    kennzahl_methode: "Inventar D-10, Freigabeliste, Spalte «Höchste erlaubte Datenklasse», gegen D-13, Spalte «Eingabedaten»; Zähler: Systeme mit Datenklasse und geklärter Herkunft, Nenner: alle Systeme im Inventar."
+    hilfe: "Für eingekaufte Werkzeuge genügt oft die Frage, welche eigenen Daten hineingehen dürfen. Ausführlich wird es bei eigenem Training oder eigenen Wissensquellen."
+
+  PR-17:
+    titel: Information der Nutzenden und Transparenz
+    zweck: "Nutzende und Betroffene verständlich über die KI, ihre Grenzen und ihre Rechte informieren."
+    ausloeser:
+      - Freigabe eines Systems
+      - Änderung mit Folgen für Nutzende
+      - Pflicht aus dem EU AI Act
+    eingaben:
+      - Inventareintrag und Freigabe
+      - Ergebnis der Folgenabschätzung
+      - Vorgaben zur Kennzeichnung
+    schritte:
+      PR-17.00: System freigegeben oder geändert
+      PR-17.01: Zielgruppen bestimmen
+      PR-17.02: Inhalte je System festlegen, z. B. Zweck, Grenzen und Rechte
+      PR-17.03: Ergebnisse der KI kennzeichnen
+      PR-17.04: Kanal wählen und Information veröffentlichen
+      PR-17.05: Rückmeldungen zur Verständlichkeit aufnehmen
+      PR-17.06: Information bei Änderungen nachführen
+      PR-17.90: Information verfügbar
+    ausgaben:
+      - Information und Transparenz (D-14)
+      - Nutzerinformation im Inventar (D-10)
+      - Transparenzpflichten nach EU AI Act (E-07)
+    kennzahl: "Anteil der Systeme mit aktueller Nutzerinformation"
+    kennzahl_methode: "Inventar D-10 gegen D-14, Spalten «KI-System» und «Information»; Zähler: Systeme im Betrieb mit aktueller Nutzerinformation, Nenner: Systeme im Betrieb."
+    hilfe: "Kurze Hinweise direkt im Werkzeug wirken besser als ein langes Merkblatt. Sagen Sie, was die KI tut, was sie nicht kann und an wen man sich wendet."
+
+  PR-18:
+    titel: Meldungen, Bedenken und Einsprüche
+    zweck: "Rückmeldungen von Mitarbeitenden, Kunden und Betroffenen annehmen, fristgerecht beantworten und auswerten."
+    ausloeser:
+      - Eingang einer Meldung über einen Kanal
+    eingaben:
+      - Meldung mit Inhalt und Absender
+      - Meldeweg (D-04) und Kanal für Externe (D-14)
+    schritte:
+      PR-18.00: Meldung geht ein
+      PR-18.01: Eingang erfassen und bestätigen
+      PR-18.02: Art einstufen, z. B. Bedenken, Rückmeldung, Einspruch oder Beschwerde
+      PR-18.03: Deutet die Meldung auf einen Vorfall hin?
+      PR-18.04: Sachverhalt mit dem Eigner klären
+      PR-18.05: Innert Frist antworten
+      PR-18.06: Bei Bedarf Feststellung oder Risiko erfassen
+      PR-18.07: Abschliessen und quartalsweise auswerten
+      PR-18.90: Meldung erledigt
+      PR-18.91: An den Vorfallprozess übergeben
+    zweige:
+      PR-18.03: { PR-18.91: ja, PR-18.04: nein }
+    ausgaben:
+      - Register der Meldungen (D-22)
+      - Meldeweg (D-04) und Kanal (D-14)
+      - Auswertung für die Managementbewertung
+    kennzahl: "Anteil der Meldungen, die innert Frist beantwortet wurden"
+    kennzahl_methode: "Meldungsregister D-22, Spalten «Eingang», «Bestätigt am» und «Erledigt am»; Zähler: innert Frist beantwortet, Nenner: abgeschlossene Meldungen."
+    hilfe: "Eine Eingangsbestätigung innert weniger Tage schafft Vertrauen. Wer meldet, darf keine Nachteile haben; das gehört in die Bekanntmachung."
+
+  PR-19:
+    titel: KI-Vorfälle behandeln und melden
+    zweck: "Fehlverhalten oder Schaden durch KI rasch eindämmen, Betroffene und Stellen informieren und daraus lernen."
+    ausloeser:
+      - Meldung von Nutzenden oder Betroffenen
+      - Warnung aus der Überwachung (PR-12)
+      - Hinweis eines Anbieters
+      - "Abgleich der Meldungen mit dem Register D-22, {{fakt:vorfall.abgleich}}"
+    eingaben:
+      - Meldung mit Beschreibung
+      - Inventareintrag mit Rückfallweg
+      - Meldepflichten aus Verträgen und Recht
+    schritte:
+      PR-19.00: Vorfall gemeldet
+      PR-19.01: "{{fakt:vorfall.erfassung|gross}} im Register erfassen, Schwere einstufen"
+      PR-19.02: Eindämmen, z. B. System einschränken oder Rückfallweg nutzen
+      PR-19.03: Ist die Informationssicherheit betroffen?
+      PR-19.04: Sicherheitsvorfall gemeinsam mit PS-04 behandeln
+      PR-19.05: Meldepflichten prüfen und informieren
+      PR-19.06: Ursache klären
+      PR-19.07: Korrektur und Neubeurteilung veranlassen
+      PR-19.08: Abschliessen und Lehren festhalten
+      PR-19.90: Vorfall abgeschlossen
+    zweige:
+      PR-19.03: { PR-19.04: ja, PR-19.05: nein }
+    ausgaben:
+      - Feststellung mit Quelle «Vorfall» (D-22)
+      - Kommunikation an Betroffene (D-14)
+      - Betreiber- und Anbieterpflichten nach EU AI Act (E-05, E-08)
+    kennzahl: "Stunden bis zur Eindämmung"
+    kennzahl_methode: "Feststellungen mit Quelle Vorfall oder Beinahe-Vorfall in D-22: Stunden von «Entdeckt» bis «Eingedämmt»; massgebend ist der längste Fall."
+    hilfe: "Eskalation nach D-14: ab Schwere 2 die AIMS-Verantwortliche innert {{fakt:vorfall.stufe2}}, ab Schwere 3 die Geschäftsleitung innert {{fakt:vorfall.stufe3}}, bei Schwere 4 {{fakt:vorfall.stufe4}}. Prüfen Sie früh, ob Fristen laufen, z. B. für Meldungen an Kunden oder Behörden."
+
+  PR-20:
+    titel: Lieferanten und Kunden
+    zweck: "Anbieter von KI prüfen, die Verantwortung vertraglich aufteilen und die Leistung überwachen; Pflichten gegenüber Kunden klären."
+    ausloeser:
+      - neuer Anbieter
+      - Verlängerung eines Vertrags
+      - Änderung beim Anbieter
+      - jährliche Überprüfung
+    eingaben:
+      - Anbieterfragen und Vertragsklauseln (D-16)
+      - Angebote und Vertragsentwürfe
+      - Anforderungen von Kunden
+    schritte:
+      PR-20.00: Neuer oder geänderter Anbieter
+      PR-20.01: Anbieter erfassen
+      PR-20.02: Antworten auf die Anbieterfragen auswerten
+      PR-20.03: Vertragsklauseln vereinbaren
+      PR-20.04: Kann der Anbieter eingesetzt werden?
+      PR-20.05: Aufteilung der Verantwortung festhalten, auch gegenüber Kunden
+      PR-20.06: Leistung und Änderungen des Anbieters überwachen
+      PR-20.07: Nächste Prüfung terminieren
+      PR-20.90: Anbieter geprüft
+      PR-20.91: Anbieter abgelehnt
+    zweige:
+      PR-20.04: { PR-20.05: "ja, mit oder ohne Auflagen", PR-20.91: nein }
+    ausgaben:
+      - Lieferantenprüfung mit Ergebnis (D-16)
+      - Verträge und Auftragsbearbeitung
+    kennzahl: "Anteil der Anbieter mit gültiger Prüfung"
+    kennzahl_methode: "Lieferantenliste D-16, Spalten «Prüfstatus» und «Nächste Prüfung»; Zähler: Anbieter mit gültiger Prüfung, Nenner: alle Anbieter."
+    hilfe: "Bei grossen Cloud-Anbietern verhandeln Sie selten; prüfen Sie dann Tarif und Einstellungen, z. B. ob Eingaben zum Training verwendet werden. Dieser Prozess deckt auch ohne ISMS die Lieferantensteuerung ab."
+
+  # ---------------------------------------------------------------- Unterstützung
+  PR-21:
+    titel: Kompetenz und Bewusstsein
+    zweck: "Die nötige KI-Kompetenz je Rolle bestimmen, Lücken schliessen und die Wirkung prüfen."
+    ausloeser:
+      - Jahresplanung
+      - Eintritt oder Rollenwechsel
+      - neues KI-System
+      - Vorfall mit Bezug zur Bedienung
+    eingaben:
+      - Rollen (D-04) und Inventar (D-10)
+      - Ergebnisse aus Audits und Vorfällen
+    schritte:
+      PR-21.00: Planung oder Anlass
+      PR-21.01: Anforderungen je Rolle festlegen
+      PR-21.02: Lücken erheben
+      PR-21.03: Massnahme wählen, z. B. Schulung, E-Learning oder Merkblatt
+      PR-21.04: Massnahme durchführen
+      PR-21.05: Nachweis ablegen
+      PR-21.06: Hat die Massnahme gewirkt?
+      PR-21.07: Alle Mitarbeitenden sensibilisieren und Plan nachführen
+      PR-21.90: Kompetenz nachgewiesen
+    zweige:
+      PR-21.06: { PR-21.07: ja, PR-21.03: "nein, andere Massnahme wählen" }
+    ausgaben:
+      - Kompetenzen und Bewusstsein (D-17)
+      - KI-Kompetenz nach EU AI Act (E-04)
+    kennzahl: "Anteil der Zielgruppen mit Status «erfüllt»"
+    kennzahl_methode: "Kompetenzen D-17, Spalten «Rolle» und «Ist»; Zähler: Zielgruppen mit Stand «erfüllt», Nenner: alle Zielgruppen."
+    hilfe: "Wirkung lässt sich einfach prüfen, z. B. mit drei Fragen nach der Schulung oder einer Stichprobe in der Anwendung."
+
+  PR-22:
+    titel: Kommunikation
+    zweck: "Planen, wer wann mit wem über das AIMS spricht, intern und extern."
+    ausloeser:
+      - Jahresplanung
+      - Freigaben, Änderungen oder Vorfälle mit Informationsbedarf
+    eingaben:
+      - Kommunikationsplan (D-17)
+      - Anforderungen der Parteien (D-01)
+    schritte:
+      PR-22.00: Planung oder Anlass
+      PR-22.01: Themen und Empfänger bestimmen
+      PR-22.02: Zeitpunkt, Kanal und Zuständige festlegen
+      PR-22.03: Richtet sich die Mitteilung nach aussen?
+      PR-22.04: Freigabe der Geschäftsleitung einholen
+      PR-22.05: Kommunikation durchführen
+      PR-22.06: Rückmeldungen aufnehmen
+      PR-22.07: Plan jährlich überprüfen
+      PR-22.90: Kommunikation erfolgt
+    zweige:
+      PR-22.03: { PR-22.04: ja, PR-22.05: nein }
+    ausgaben:
+      - Blatt Kommunikation (D-17)
+    kennzahl: "Anteil der geplanten Mitteilungen, die durchgeführt wurden"
+    kennzahl_methode: "Kommunikationsplan D-17, Spalte «Wann», gegen die Protokolle; Zähler: durchgeführte Mitteilungen, Nenner: fällige Mitteilungen."
+    hilfe: "Nutzen Sie bestehende Kanäle wie Teamsitzungen oder Intranet. Für Mitteilungen nach aussen, z. B. auf der Website, gibt die Geschäftsleitung frei."
+
+  PR-23:
+    titel: Dokumentenlenkung
+    zweck: "Dokumente und Aufzeichnungen erstellen, prüfen, freigeben, verteilen, überprüfen und aufbewahren."
+    ausloeser:
+      - neues Dokument
+      - Änderung eines Dokuments
+      - Fälligkeit der Überprüfung
+    eingaben:
+      - Regeln der Dokumentenlenkung (D-26)
+      - Dokumentenregister
+    schritte:
+      PR-23.00: Neues oder geändertes Dokument
+      PR-23.01: Entwurf nach Namensregel erstellen
+      PR-23.02: Durch eine zweite Person prüfen
+      PR-23.03: Handelt es sich um ein Grundlagendokument?
+      PR-23.04: Durch die Geschäftsleitung freigeben
+      PR-23.05: Durch den Eigner freigeben
+      PR-23.06: Ablegen und verteilen
+      PR-23.07: Im Rhythmus überprüfen, Veraltetes kennzeichnen
+      PR-23.90: Dokument gültig
+    zweige:
+      PR-23.03: { PR-23.04: "ja, z. B. Leitlinie oder Geltungsbereich", PR-23.05: nein }
+    ausgaben:
+      - Dokumentenregister mit Version, Status und Freigabe (D-26)
+      - Lenkungsangaben in jedem Dokument
+    kennzahl: "Anteil der Dokumente, deren Überprüfung nicht überfällig ist"
+    kennzahl_methode: "Register D-26, Spalten «Freigegeben am» und «Nächste Überprüfung»; Zähler: Dokumente mit Überprüfung innert zwölf Monaten, Nenner: Dokumente im Register."
+    hilfe: "Mit ISMS gilt dieselbe Dokumentenlenkung für beide Systeme. Externe Dokumente wie Verträge oder Herstellerangaben gehören ebenfalls ins Register."
+
+  PR-24:
+    titel: Rechtliche und vertragliche Pflichten verfolgen
+    zweck: "Gesetze, Verordnungen und Verträge mit Bezug zur KI erkennen, Fristen verfolgen und die Umsetzung prüfen."
+    ausloeser:
+      - neue Rechtslage, z. B. Fristen des AI Act
+      - neuer Kundenvertrag mit Vorgaben zur KI
+      - halbjährliche Überprüfung
+    eingaben:
+      - Rollenbestimmung (D-24)
+      - Verträge mit Kunden und Anbietern
+      - Pflichtenmatrix EU AI Act (E-03)
+    schritte:
+      PR-24.00: Termin oder Hinweis auf neue Pflicht
+      PR-24.01: Quellen beobachten
+      PR-24.02: Pflichten der eigenen Rolle zuordnen
+      PR-24.03: Gibt es neue oder geänderte Pflichten?
+      PR-24.04: Betroffene KI-Systeme bestimmen
+      PR-24.05: Massnahme mit Frist erfassen
+      PR-24.06: Frist verfolgen und Einhaltung prüfen
+      PR-24.90: Pflichten erfasst und verfolgt
+    zweige:
+      PR-24.03: { PR-24.04: ja, PR-24.90: "nein, kein Handlungsbedarf" }
+    ausgaben:
+      - Anforderungen der Parteien (D-01)
+      - Pflichtenmatrix und Fristen EU AI Act (E-03, E-09)
+    kennzahl: "Anteil der Anforderungen und Pflichten mit Entscheid und Begründung"
+    kennzahl_methode: "Parteienregister D-01, Spalten «Durch AIMS behandelt» und «Begründung»; Zähler: Anforderungen mit Entscheid und Begründung, Nenner: alle Anforderungen."
+    hilfe: "Im KMU genügt oft ein Newsletter eines Verbands oder einer Kanzlei als Quelle. Halten Sie fest, wer ihn liest und wann die Pflichten zuletzt abgeglichen wurden."
+
+  # ---------------------------------------------------------------- Bewertung und Verbesserung
+  PR-25:
+    titel: Internes Audit
+    zweck: "Unabhängig prüfen, ob das AIMS die eigenen Vorgaben und die Norm erfüllt und ob es wirkt."
+    ausloeser:
+      - Auditprogramm, mindestens jährlich
+      - vor dem ersten Zertifizierungsaudit
+    eingaben:
+      - Auditprogramm und Ergebnisse früherer Audits (D-20)
+      - Stand der Prozesse und Controls
+    schritte:
+      PR-25.00: Termin aus dem Auditprogramm
+      PR-25.01: Auditprogramm planen
+      PR-25.02: Unabhängige Auditorin oder unabhängigen Auditor bestimmen
+      PR-25.03: Umfang, Kriterien und Checkliste festlegen
+      PR-25.04: Audit mit Gesprächen, Dokumenten und Stichproben durchführen
+      PR-25.05: Feststellungen einstufen
+      PR-25.06: Bericht an die Geschäftsleitung abgeben
+      PR-25.07: Feststellungen an die Korrektur übergeben
+      PR-25.90: Audit abgeschlossen
+    ausgaben:
+      - Auditprogramm, Checkliste und Bericht (D-20)
+      - Feststellungen im Register (D-22)
+    kennzahl: "Erfüllung des Auditprogramms in Prozent"
+    kennzahl_methode: "Auditprogramm D-20, Spalten «Zeitraum» und «Status»; Zähler: durchgeführte Audits, Nenner: bis zum Stichtag geplante Audits."
+    hilfe: "Im KMU kann eine Person aus einem anderen Bereich oder eine externe Fachperson auditieren. Wer das AIMS führt, prüft es nicht selbst."
+
+  PR-26:
+    titel: Managementbewertung
+    zweck: "Die Geschäftsleitung beurteilt, ob das AIMS geeignet, angemessen und wirksam ist, und entscheidet über Verbesserungen."
+    ausloeser:
+      - jährlicher Termin
+      - vor der Zertifizierung
+      - wesentliches Ereignis, z. B. schwerer Vorfall
+    eingaben:
+      - Stand der Massnahmen und Änderungen
+      - Kennzahlen, Ziele und Stand der Prozesse
+      - Ergebnisse der Audits und Meldungen
+    schritte:
+      PR-26.00: Jährlicher Termin oder Anlass
+      PR-26.01: Termin und Teilnehmende festlegen
+      PR-26.02: Eingaben zusammenstellen
+      PR-26.03: Sitzung durchführen
+      PR-26.04: Gesamturteil zum AIMS fällen
+      PR-26.05: Entscheide mit Verantwortung und Termin festhalten
+      PR-26.06: Protokoll freigeben
+      PR-26.07: Umsetzung der Entscheide verfolgen
+      PR-26.90: Bewertung abgeschlossen
+    ausgaben:
+      - Protokoll der Managementbewertung (D-21)
+      - "Massnahmen aus den Entscheiden ({{fakt:register.massnahmen}})"
+    kennzahl: "Anteil der Entscheide, die bis zur nächsten Bewertung umgesetzt sind"
+    kennzahl_methode: "Entscheide im Protokoll D-21, Spalten «Entscheid» und «Verantwortlich, Termin, Massnahme», gegen die Massnahmen im {{fakt:register.massnahmen}}, Spalte «Status»; erst mit der nächsten Bewertung messbar, bis dahin nur Zwischenstand."
+    hilfe: "Mit ISMS lässt sich die Bewertung in einer Sitzung zusammenlegen, wenn die KI-Themen eigene Traktanden erhalten."
+
+  PR-27:
+    titel: Nichtkonformität, Korrektur und Verbesserung
+    zweck: "Abweichungen beheben, ihre Ursachen beseitigen, die Wirkung prüfen und Verbesserungen umsetzen."
+    ausloeser:
+      - Feststellung aus Audit oder Managementbewertung
+      - Vorfall oder Beinahe-Vorfall
+      - Meldung oder eigene Prüfung
+    eingaben:
+      - Feststellung mit Beschreibung
+      - betroffene Prozesse, Systeme und Risiken
+    schritte:
+      PR-27.00: Feststellung liegt vor
+      PR-27.01: Feststellung erfassen und einstufen
+      PR-27.02: Sofort korrigieren
+      PR-27.03: Ursache analysieren
+      PR-27.04: Ähnliche Fälle prüfen
+      PR-27.05: Korrekturmassnahme planen und umsetzen
+      PR-27.06: Hat die Massnahme gewirkt?
+      PR-27.07: Schliessen und Risiko anpassen
+      PR-27.90: Feststellung geschlossen
+    zweige:
+      PR-27.06: { PR-27.07: ja, PR-27.03: "nein, Ursache erneut analysieren" }
+    ausgaben:
+      - Register der Feststellungen und Massnahmen mit Wirksamkeit (D-22)
+    kennzahl: "Anteil der Feststellungen, die fristgerecht geschlossen wurden"
+    kennzahl_methode: "Register D-22, Blatt Nichtkonformitäten, Spalten «Termin» und «Status»; Zähler: fristgerecht geschlossene Feststellungen, Nenner: geschlossene und überfällige Feststellungen."
+    hilfe: "Die Korrektur behebt das Symptom, die Korrekturmassnahme die Ursache. Prüfen Sie die Wirkung mit etwas Abstand, z. B. nach drei Monaten."
+
+  # ---------------------------------------------------------------- ISMS-Basisprozesse
+  PS-01:
+    titel: Werte verzeichnen und einstufen
+    zweck: "Informationen und Systeme erfassen, Eigner und Schutzbedarf festlegen und Regeln für den Umgang vorgeben."
+    ausloeser:
+      - Start des Managementsystems
+      - neues System oder neue Informationsart
+      - jährlicher Abgleich
+    eingaben:
+      - Softwareliste, Geräteliste, Ablagen
+      - KI-Inventar (D-10)
+    schritte:
+      PS-01.00: Abgleich geplant oder neuer Wert
+      PS-01.01: Werte erfassen
+      PS-01.02: Eigner benennen
+      PS-01.03: Schutzbedarf einstufen
+      PS-01.04: Regeln für den Umgang festlegen
+      PS-01.05: Rückgabe beim Austritt sicherstellen
+      PS-01.06: Verzeichnis regelmässig abgleichen
+      PS-01.90: Verzeichnis aktuell
+    ausgaben:
+      - Werteverzeichnis mit Schutzbedarf
+      - Verknüpfung mit dem KI-Inventar (D-10) und den Datenklassen (D-13)
+    kennzahl: "Anteil der Werte mit Eigner und Schutzbedarf"
+    kennzahl_methode: "Verzeichnis der Werte; Zähler: Werte mit Eigner/in und Schutzbedarf, Nenner: alle Werte."
+    hilfe: "Ohne ISMS ersetzen KI-Inventar und Datenklassen dieses Verzeichnis für den Geltungsbereich des AIMS."
+    ohne_isms: "Nicht im Mindestumfang. Für das AIMS genügen das KI-Inventar (PR-06) mit Eigner/in und Ressourcen und die Datenklassen aus PR-16."
+
+  PS-02:
+    titel: Zugänge und Berechtigungen
+    zweck: "Zugänge beantragen, genehmigen, einrichten, regelmässig überprüfen und entziehen; das gilt auch für KI-Konten und API-Schlüssel."
+    ausloeser:
+      - Antrag auf Zugang
+      - Freigabe oder Einführung eines KI-Systems (PR-07, PR-11)
+      - Austritt oder Rollenwechsel
+      - halbjährliche Überprüfung
+    eingaben:
+      - Antrag mit Begründung
+      - Rollen und Auflagen aus der Freigabe
+    schritte:
+      PS-02.00: Antrag auf Zugang
+      PS-02.01: Zugang mit Begründung beantragen
+      PS-02.02: Genehmigt der Eigner den Zugang?
+      PS-02.03: Mit geringsten Rechten und sicherer Anmeldung einrichten
+      PS-02.04: Administratorrechte und Schlüssel eng führen
+      PS-02.05: Berechtigungen periodisch überprüfen
+      PS-02.06: Beim Austritt oder Wechsel entziehen
+      PS-02.90: Zugang gültig und überprüft
+      PS-02.91: Antrag abgelehnt
+    zweige:
+      PS-02.02: { PS-02.03: ja, PS-02.91: nein }
+    ausgaben:
+      - Liste der Konten je KI-System
+      - Nachweis der periodischen Überprüfung
+    kennzahl: "Anteil der Überprüfungen, die fristgerecht erledigt wurden"
+    kennzahl_methode: "Protokolle der Berechtigungsprüfung; Zähler: fristgerecht erledigte Überprüfungen, Nenner: fällige Überprüfungen."
+    hilfe: "Für KI-Dienste genügt eine Liste je System: wer hat ein Konto, wer verwaltet Schlüssel, ist eine Mehrfaktor-Anmeldung aktiv."
+    ohne_isms: "Im Mindestumfang. Freigabe, Einführung und Ausserbetriebnahme von KI-Systemen (PR-07, PR-11, PR-14) setzen voraus, dass Konten und API-Schlüssel kontrolliert vergeben und wieder entzogen werden. Sonst nutzen ausgetretene Personen oder fremde Werkzeuge die KI mit Firmendaten weiter."
+
+  PS-03:
+    titel: Personalsicherheit
+    zweck: "Sicherheit beim Eintritt, während der Anstellung und beim Austritt von Mitarbeitenden gewährleisten."
+    ausloeser:
+      - Eintritt
+      - Rollenwechsel
+      - Austritt
+    eingaben:
+      - Arbeitsvertrag und Stellenbeschreibung
+      - Checklisten für Ein- und Austritt
+    schritte:
+      PS-03.00: Personalereignis
+      PS-03.01: Vor dem Eintritt prüfen, soweit zulässig
+      PS-03.02: Vereinbarung zu Vertraulichkeit und Nutzung unterzeichnen
+      PS-03.03: Einführung und Schulung planen
+      PS-03.04: Beim Rollenwechsel Rechte anpassen
+      PS-03.05: Beim Austritt Rechte entziehen und Geräte zurücknehmen
+      PS-03.06: Pflichten nach dem Austritt in Erinnerung rufen
+      PS-03.90: Personalereignis abgeschlossen
+    ausgaben:
+      - Checklisten für Ein- und Austritt
+      - unterzeichnete Vereinbarungen
+    kennzahl: "Anteil der Austritte mit Entzug der Rechte am letzten Arbeitstag"
+    kennzahl_methode: "Austrittsliste gegen die Kontenliste; Zähler: Austritte mit Entzug am letzten Arbeitstag, Nenner: alle Austritte."
+    hilfe: "Die Nutzungsrichtlinie für KI (D-15) lässt sich beim Eintritt zusammen mit der Vertraulichkeitsvereinbarung bestätigen."
+    ohne_isms: "Nicht im Mindestumfang. Die Schulung deckt PR-21 ab, den Entzug der KI-Konten beim Austritt PS-02."
+
+  PS-04:
+    titel: Sicherheitsvorfälle
+    zweck: "Sicherheitsereignisse melden, bewerten, eindämmen, Beweise sichern und daraus lernen."
+    ausloeser:
+      - Meldung von Mitarbeitenden
+      - Warnung aus Überwachung oder Protokollen
+      - Hinweis eines Anbieters
+    eingaben:
+      - Meldung mit Beschreibung
+      - Kontakte für Notfälle und Meldepflichten
+    schritte:
+      PS-04.00: Ereignis bemerkt
+      PS-04.01: Ereignis melden
+      PS-04.02: Bewerten und einstufen
+      PS-04.03: Handelt es sich um einen Vorfall?
+      PS-04.04: Reagieren und eindämmen
+      PS-04.05: Beweise sichern
+      PS-04.06: Meldepflichten prüfen und informieren
+      PS-04.07: Lehren ziehen und Massnahmen erfassen
+      PS-04.90: Vorfall abgeschlossen
+      PS-04.91: Ereignis ohne Vorfall abgeschlossen
+    zweige:
+      PS-04.03: { PS-04.04: ja, PS-04.91: nein }
+    ausgaben:
+      - Register der Vorfälle (D-22, Quelle «Vorfall»)
+      - Mitteilungen an Betroffene und Stellen (D-14)
+    kennzahl: "Stunden von der Meldung bis zur ersten Reaktion"
+    kennzahl_methode: "Vorfallprotokolle: Stunden von der Meldung bis zur ersten Reaktion; massgebend ist der längste Fall."
+    hilfe: "Ohne ISMS genügt ein gemeinsamer Ablauf mit dem KI-Vorfallprozess PR-19: eine Meldestelle, eine Einstufung, ein Register."
+    ohne_isms: "Im Mindestumfang. KI-Vorfälle sind oft zugleich Sicherheitsvorfälle, z. B. abgeflossene Daten über ein KI-Werkzeug oder ein manipuliertes Modell. PR-19 braucht dafür einen Weg zum Eindämmen, Beweise sichern und Melden; ohne ISMS bilden PR-19 und PS-04 zusammen einen Ablauf."
+
+  PS-05:
+    titel: IT-Änderungen
+    zweck: "Änderungen an IT-Systemen beantragen, beurteilen, testen, freigeben und mit Rückfallweg umsetzen."
+    ausloeser:
+      - Änderungsantrag
+      - Update oder neue Konfiguration
+    eingaben:
+      - Änderungsantrag mit Begründung
+      - aktuelle Konfiguration
+    schritte:
+      PS-05.00: Änderung geplant
+      PS-05.01: Änderung beantragen
+      PS-05.02: Risiko und Rückfallweg beurteilen
+      PS-05.03: Testen
+      PS-05.04: Wird die Änderung freigegeben?
+      PS-05.05: Umsetzen
+      PS-05.06: Konfiguration und Protokoll nachführen
+      PS-05.90: Änderung umgesetzt
+      PS-05.91: Änderung zurückgewiesen
+    zweige:
+      PS-05.04: { PS-05.05: ja, PS-05.91: nein }
+    ausgaben:
+      - Änderungsprotokoll
+      - dokumentierte Konfiguration
+    kennzahl: "Anteil der Notfalländerungen an allen Änderungen"
+    kennzahl_methode: "Änderungsprotokolle der IT; Zähler: Notfalländerungen, Nenner: alle Änderungen."
+    hilfe: "Änderungen an KI-Systemen laufen über PR-13; dieser Prozess deckt die übrige IT ab."
+    ohne_isms: "Nicht im Mindestumfang. Änderungen an KI-Systemen regelt PR-13 selbst."
+
+  PS-06:
+    titel: Datensicherung und Wiederherstellung
+    zweck: "Festlegen, was wie oft gesichert wird, wie lange Sicherungen aufbewahrt werden, und die Wiederherstellung regelmässig testen."
+    ausloeser:
+      - neues System oder neue Datenquelle
+      - quartalsweiser Test der Wiederherstellung
+    eingaben:
+      - Liste der Systeme und Daten
+      - Aufbewahrungsfristen
+    schritte:
+      PS-06.00: Termin oder neues System
+      PS-06.01: Umfang festlegen, auch Daten für KI wie Wissensquellen, Vorlagen und Einstellungen
+      PS-06.02: Rhythmus und Aufbewahrung festlegen
+      PS-06.03: Sicherung durchführen und überwachen
+      PS-06.04: Wiederherstellung testen
+      PS-06.05: War der Test erfolgreich?
+      PS-06.06: Ergebnis protokollieren
+      PS-06.90: Sicherung geprüft
+    zweige:
+      PS-06.05: { PS-06.06: ja, PS-06.02: "nein, Sicherung anpassen" }
+    ausgaben:
+      - Sicherungskonzept
+      - Protokolle der Wiederherstellungstests
+    kennzahl: "Anteil der erfolgreichen Wiederherstellungstests"
+    kennzahl_methode: "Protokolle der Wiederherstellungstests; Zähler: erfolgreiche Tests, Nenner: alle Tests."
+    hilfe: "Bei reinen Cloud-Diensten sichert der Anbieter. Prüfen Sie dann in PR-20, ob Sie Ihre Daten exportieren können."
+    bedingung: "Gilt, wenn die Firma eigene KI-Daten oder KI-Systeme selbst betreibt: eigene Entwicklung, eingekaufte Software im eigenen Betrieb oder eigenes Training. Nutzt die Firma nur Cloud-Dienste, entfällt der Prozess."
+    bedingung_firma: "die Firma KI-Systeme oder KI-Daten selbst betreibt und sie nach einem Ausfall wiederherstellen können muss"
+    ohne_isms: "Im Mindestumfang, falls relevant. Wer eigene Wissensquellen, Vorlagen, Trainingsdaten oder selbst betriebene Modelle hat, muss sie nach einem Ausfall wiederherstellen können; davon hängen Betrieb (PR-12) und Datensteuerung (PR-16) ab. Bei reinen Cloud-Diensten entfällt der Prozess."
+
+  PS-07:
+    titel: Notfall und Kontinuität
+    zweck: "Kritische Prozesse kennen, auch solche, die von KI abhängen, Notfallpläne festlegen und üben."
+    ausloeser:
+      - jährliche Überprüfung
+      - neues kritisches System
+      - nach einem grösseren Ausfall
+    eingaben:
+      - Liste der Prozesse und Systeme
+      - Rückfallwege aus dem Inventar (D-10)
+    schritte:
+      PS-07.00: Termin oder Anlass
+      PS-07.01: Kritische Prozesse bestimmen, auch KI-abhängige
+      PS-07.02: Folgen eines Ausfalls abschätzen
+      PS-07.03: Notfallpläne und Rückfallwege festlegen
+      PS-07.04: Pläne durch die Geschäftsleitung freigeben
+      PS-07.05: Notfall üben
+      PS-07.06: Pläne nach der Übung nachführen
+      PS-07.90: Notfallvorsorge aktuell
+    ausgaben:
+      - Analyse der Ausfallfolgen
+      - Notfallpläne und Übungsbericht
+    kennzahl: "Anzahl der Notfallübungen pro Jahr"
+    kennzahl_methode: "Protokolle der Notfallübungen im Kalenderjahr auszählen."
+    hilfe: "Fragen Sie je kritischem Prozess: Was tun wir, wenn das KI-Werkzeug einen Tag lang nicht verfügbar ist?"
+    ohne_isms: "Nicht im Mindestumfang. Den Rückfallweg je KI-System legen Einführung und Betrieb fest (PR-11, PR-12)."
+
+  PS-08:
+    titel: Schwachstellen und Schadsoftware
+    zweck: "Hinweise auf Schwachstellen verfolgen, innert Frist beheben und vor Schadsoftware schützen."
+    ausloeser:
+      - Hinweis des Herstellers oder einer Behörde
+      - monatlicher Patchtermin
+    eingaben:
+      - Liste der Systeme und Versionen
+      - Hinweise von Herstellern und Behörden
+    schritte:
+      PS-08.00: Hinweis oder Termin
+      PS-08.01: Hinweise beobachten
+      PS-08.02: Bewerten und Frist bestimmen
+      PS-08.03: Ist die Schwachstelle kritisch?
+      PS-08.04: Sofort beheben oder abschirmen
+      PS-08.05: Im regulären Rhythmus beheben
+      PS-08.06: Schutz vor Schadsoftware überwachen
+      PS-08.07: Stand der Behebung berichten
+      PS-08.90: Systeme auf aktuellem Stand
+    zweige:
+      PS-08.03: { PS-08.04: ja, PS-08.05: nein }
+    ausgaben:
+      - Patchstand je System
+      - Berichte des Virenschutzes
+    kennzahl: "Anteil der kritischen Schwachstellen, die innert Frist behoben wurden"
+    kennzahl_methode: "Schwachstellenliste und Update-Protokolle; Zähler: kritische Schwachstellen innert Frist behoben, Nenner: alle kritischen Schwachstellen."
+    hilfe: "Auch Erweiterungen im Browser und lokale KI-Werkzeuge brauchen Updates."
+    ohne_isms: "Nicht im Mindestumfang. Bei Cloud-Diensten trägt der Anbieter diese Pflicht, geprüft in PR-20; Änderungen an selbst betriebenen KI-Systemen laufen über PR-13."
+
+  PS-09:
+    titel: Protokollierung und Überwachung
+    zweck: "Festlegen, was protokolliert wird, die Protokolle schützen, auswerten und die Zeit synchron halten."
+    ausloeser:
+      - neues System
+      - monatliche Auswertung
+      - Warnung aus der Überwachung
+    eingaben:
+      - Vorgaben zur Protokollierung
+      - Anforderungen des Datenschutzes
+    schritte:
+      PS-09.00: Termin oder Warnung
+      PS-09.01: Festlegen, was protokolliert wird
+      PS-09.02: Zeit der Systeme synchronisieren
+      PS-09.03: Protokolle schützen und aufbewahren
+      PS-09.04: Protokolle auswerten
+      PS-09.05: Gibt es eine Auffälligkeit?
+      PS-09.06: Auffälligkeit als Ereignis melden
+      PS-09.07: Regeln jährlich überprüfen
+      PS-09.90: Protokolle ausgewertet
+    zweige:
+      PS-09.05: { PS-09.06: ja, PS-09.07: nein }
+    ausgaben:
+      - Vorgaben zur Protokollierung
+      - Nachweise der Auswertung
+    kennzahl: "Anteil der Auswertungen im geplanten Rhythmus"
+    kennzahl_methode: "Protokolle der Auswertungen; Zähler: im Rhythmus erfolgte Auswertungen, Nenner: fällige Auswertungen."
+    hilfe: "Für KI-Systeme regelt der Lebenszyklus (D-12), welche Ereignisse protokolliert werden; dieser Prozess sorgt für Schutz und Auswertung."
+    ohne_isms: "Nicht im Mindestumfang. Die Protokolle der KI-Systeme legt PR-12 mit dem Lebenszyklus (D-12) fest; das genügt ohne ISMS."
+
+  PS-10:
+    titel: Sichere Entwicklung
+    zweck: "Sicherheitsvorgaben für die Entwicklung festlegen, Code prüfen, testen, Umgebungen trennen und ausgelagerte Entwicklung überwachen."
+    ausloeser:
+      - neues Entwicklungsvorhaben
+      - neue Version
+    eingaben:
+      - Sicherheitsvorgaben
+      - Ergebnisse der Tests
+    schritte:
+      PS-10.00: Entwicklung beginnt
+      PS-10.01: Sicherheitsvorgaben festlegen
+      PS-10.02: Umgebungen für Entwicklung, Test und Betrieb trennen
+      PS-10.03: Code prüfen
+      PS-10.04: Sicherheit testen
+      PS-10.05: Sind alle Befunde behoben?
+      PS-10.06: Version freigeben, auch bei ausgelagerter Entwicklung
+      PS-10.90: Version sicher freigegeben
+    zweige:
+      PS-10.05: { PS-10.06: ja, PS-10.03: nein }
+    ausgaben:
+      - Testberichte
+      - Befundliste vor der Freigabe
+    kennzahl: "Anzahl offener kritischer Befunde bei der Freigabe"
+    kennzahl_methode: "Freigabeprotokolle: offene kritische Befunde je Freigabe auszählen."
+    hilfe: "Wer KI selbst entwickelt, prüft auch Risiken wie manipulierte Eingaben oder abfliessende Daten aus Wissensquellen."
+    bedingung: "Gilt nur, wenn die Firma Software oder KI-Systeme selbst entwickelt (Angabe im Projekt: Organisation entwickelt KI)."
+    bedingung_firma: "die Firma Software oder KI-Systeme selbst entwickelt"
+    ohne_isms: "Nicht im Mindestumfang. Bei eigener Entwicklung deckt PR-15 die Prüfpunkte ab; die Sicherheitstests sind dort ein Teil der Verifikation."
+
+  PS-11:
+    titel: Physische Sicherheit
+    zweck: "Räume, Geräte und Datenträger vor unbefugtem Zugang, Verlust und Schaden schützen."
+    ausloeser:
+      - jährliche Überprüfung
+      - Umzug oder neuer Standort
+    eingaben:
+      - Pläne der Räume
+      - Liste der Geräte
+    schritte:
+      PS-11.00: Termin oder Anlass
+      PS-11.01: Zonen festlegen
+      PS-11.02: Zutritt regeln und überprüfen
+      PS-11.03: Geräte schützen, auch mobile
+      PS-11.04: Aufgeräumte Arbeitsplätze und gesperrte Bildschirme durchsetzen
+      PS-11.05: Datenträger und Geräte sicher entsorgen
+      PS-11.90: Physischer Schutz überprüft
+    ausgaben:
+      - Überprüfung der Zutrittsrechte
+      - Nachweise der Entsorgung
+    kennzahl: "Anteil der Entsorgungen mit Nachweis"
+    kennzahl_methode: "Entsorgungsnachweise; Zähler: Entsorgungen mit Nachweis, Nenner: alle Entsorgungen."
+    hilfe: "Für KI wichtig ist vor allem die Entsorgung: Geräte mit lokalen Modellen oder Daten gelten wie jeder Datenträger."
+    ohne_isms: "Nicht im Mindestumfang. Die sichere Entsorgung bei der Ausserbetriebnahme regelt PR-14."

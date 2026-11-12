@@ -1,0 +1,85 @@
+# D-08 Verfahren Folgenabschätzung für KI-Systeme
+hinweis_umfang: "Die Gliederung folgt ISO/IEC 42005 (Leitfaden zur Folgenabschätzung von KI-Systemen), Kapitel 5, in eigenen Worten. Die Abschätzung je System führen Sie mit D-09 durch."
+einleitung: "Dieses Verfahren legt fest, wann, wie und durch wen [[Firmenname]] die Folgen von KI-Systemen für Menschen und Gesellschaft abschätzt."
+einleitung_firma: "Dieses Verfahren legt fest, wann, wie und durch wen {firma} die Folgen von KI-Systemen für Menschen und Gesellschaft abschätzt."
+abschnitte:
+  zweck: Zweck
+  einbettung: Einbettung in andere Abschätzungen
+  ausloeser: Auslöser und Zeitpunkt
+  triage: Kurzprüfung und Schwellen
+  umfang: Umfang
+  zustaendigkeiten: Zuständigkeiten
+  durchfuehrung: Durchführung
+  auswertung: Auswertung und Entscheid
+  bericht: Bericht und Information
+  freigabe: Freigabe der Abschätzungen
+  ueberwachung: Überwachung und Wiederholung
+  aufbewahrung: Aufbewahrung
+  freigabe_verfahren: Freigabe des Verfahrens
+zweck_text: "Die Risikobeurteilung (D-06) fragt vor allem, was für das Unternehmen auf dem Spiel steht. Die Folgenabschätzung fragt, was ein KI-System für die Menschen bedeutet, die es nutzen oder von seinen Ergebnissen betroffen sind, und für die Gesellschaft. Sie betrachtet Nutzen und Schaden."
+einbettung_punkte:
+  - "**Risikomanagement (D-06):** Festgestellte Schäden fliessen als Risiken in das Register D-07 ein. Beide Verfahren verwenden dieselbe Auswirkungsskala."
+  - "**Datenschutz-Folgenabschätzung:** Verarbeitet das System Personendaten mit hohem Risiko (Schweiz: DSG Art. 22, EU: DSGVO Art. 35), nutzen wir dieselben Angaben und verweisen gegenseitig. Wir erheben jede Tatsache nur einmal."
+  - "**Grundrechte-Folgenabschätzung:** Wo der EU AI Act sie verlangt (Art. 27), ergänzt E-06 diese Abschätzung."
+  - "**Weitere Prüfungen:** Sicherheits-, Ethik- oder Branchenprüfungen verknüpfen wir im Feld «verknüpfte Abschätzungen» in D-09."
+ausloeser_text: "Für jedes KI-System im Inventar (D-10) machen wir eine Kurzprüfung, und zwar:"
+ausloeser_punkte:
+  - "vor der Freigabe eines neuen Systems oder einer neuen Verwendung (D-12, D-15);"
+  - "bei wesentlichen Änderungen an System, Modell, Daten, Anbieter oder Einsatzumfeld;"
+  - "nach einem Vorfall oder einer berechtigten Meldung von Betroffenen;"
+  - "bei bestehenden Systemen spätestens bei der nächsten Überprüfung;"
+  - "nach der Risikobeurteilung (Rückprüfung): Hat das System ein {{fakt:folgen.schwelle}} (Schwelle nach D-06), genügt die Kurzprüfung nicht mehr, auch wenn die sechs Fragen sie zulassen."
+ausloeser_entwicklung: "Bei Eigenentwicklungen beginnt die Abschätzung schon im Entwurf und wird vor der Inbetriebnahme abgeschlossen."
+triage_text: "Die Kurzprüfung besteht aus sechs Fragen zum KI-System und seinem geplanten Einsatz. Sie steht auf Seite 1 von D-09 und dauert meist weniger als eine Stunde."
+triage_kopf: [Nr., Frage]
+triage:
+  fragen:
+    rechtspositionOderChancen: "Prägt das System Entscheide über Rechte oder Chancen (Stelle, Kredit, Leistungen)?"
+    gesundheitOderSicherheit: "Kann ein Fehler oder Ausfall die Gesundheit oder Sicherheit von Menschen gefährden?"
+    verletzlicheGruppen: "Betrifft es verletzliche Gruppen (Kinder, Kranke, Bewerbende, abhängige Mitarbeitende)?"
+    besondereDaten: "Verarbeitet es besonders schützenswerte Daten (Gesundheit, Herkunft, Religion, Biometrie)?"
+    automatisierteEntscheidung: "Wirkt es ohne menschliche Prüfung, oder werden Ergebnisse meist unverändert übernommen?"
+    grosseReichweite: "Betrifft es viele Menschen oder Aussenstehende, oder sind die Folgen schwer umkehrbar?"
+schwellen_titel: "Schwellen für sensible und eingeschränkte Nutzung"
+ausmass_titel: "Ausmass eines Schadens"
+schwellen:
+  - "**Sensible Nutzung, vollständige Abschätzung nötig:** Frage 1 oder 2 ist mit «ja» beantwortet, oder mindestens zwei der Fragen 3 bis 6."
+  - "**Grenzfall:** Genau eine der Fragen 3 bis 6 ist mit «ja» beantwortet. Die AIMS-Verantwortung ({verantwortlich}) entscheidet und begründet, ob eine vollständige Abschätzung nötig ist."
+  - "**Keine Schwelle erreicht:** Die Kurzprüfung genügt. Ergebnis und Begründung werden in D-09 festgehalten."
+  - "**Eingeschränkte Nutzung:** Hat ein Schaden vor Massnahmen das Ausmass {hoch}, erlauben wir das System nur mit Auflagen (z. B. nur mit menschlicher Prüfung, nur für bestimmte Zwecke oder Daten) oder gar nicht. Die Auflagen stehen in der Freigabeliste (D-10) und in der Nutzungsrichtlinie (D-15)."
+schwellen_aiact: "**EU AI Act:** Systeme mit einer verbotenen Praktik (Art. 5) sind untersagt. Hochrisiko-Systeme erhalten immer eine vollständige Abschätzung."
+ausmass_text: "Das Ausmass eines Schadens stufen wir vor Massnahmen mit der Auswirkungsskala aus D-06 ein ({bereich}), wie A vor der Behandlung in D-07. Wir berücksichtigen dabei drei Gesichtspunkte:"
+ausmass_punkte:
+  - "**Schwere:** Wie stark trifft der Schaden eine einzelne Person?"
+  - "**Reichweite:** Wie viele Menschen sind betroffen, und wie verletzlich sind sie?"
+  - "**Umkehrbarkeit:** Lässt sich der Schaden rasch und vollständig beheben?"
+umfang_text: "Zu Beginn halten wir fest, was die Abschätzung umfasst: das System und seine Version, die beabsichtigten Verwendungen, die Einsatzorte, Länder und Sprachen, die Phasen des Lebenszyklus und die betroffenen Gruppen. Bei eingekauften Systemen beurteilen wir unseren Einsatz und stützen uns für Modell und Trainingsdaten auf die Angaben des Lieferanten."
+zustaendigkeiten_kopf: [Rolle, Aufgaben]
+zustaendigkeiten:
+  - [Eigner/in KI-System, "führt Kurzprüfung und Abschätzung durch, holt Angaben beim Lieferanten ein"]
+  - ["AIMS-Verantwortliche/r ({verantwortlich})", "stellt Methode und Vorlage bereit, prüft die Qualität, entscheidet Grenzfälle"]
+  - [Fachbereich und Nutzende, "beschreiben Einsatz, Verwendungen und mögliche Fehlanwendungen"]
+  - [Datenschutzberatung, "verknüpft die Datenschutz-Folgenabschätzung, prüft Personendaten"]
+  - [Vertretung der Betroffenen, "wird angehört, wo dies möglich und sinnvoll ist, z. B. Personalkommission"]
+  - ["{{fakt:freigabe.abschaetzung|gross}}", "gibt vollständige Abschätzungen frei und entscheidet über eingeschränkte Nutzung"]
+zustaendigkeiten_unabhaengig: "Wer eine Abschätzung durchführt, gibt sie nicht selbst frei."
+durchfuehrung:
+  - "Unterlagen sammeln: Systembeschreibung, Angaben des Lieferanten, Verträge, Testergebnisse."
+  - "Zweck, beabsichtigte Verwendungen und vorhersehbare Fehlanwendungen beschreiben."
+  - "Betroffene Gruppen bestimmen (direkt und indirekt) und, wo möglich, anhören."
+  - "Nutzen und Schaden für die acht Ziele in D-09 beurteilen, Ausmass einstufen."
+  - "Ausfälle und Missbrauch durchspielen: Was geschieht, wenn das System falsch liegt, ausfällt oder missbraucht wird?"
+  - "Massnahmen festlegen und in den Behandlungsplan (D-07) übernehmen."
+auswertung_text: "Aus der Abschätzung folgt einer von drei Entscheiden: einsetzen wie geplant, einsetzen mit Auflagen (eingeschränkte Nutzung) oder nicht einsetzen. Festgestellte Schäden nehmen wir mit ihrem Ausmass als Risiken in D-07 auf."
+bericht_intern: "**Intern** erhalten Eigner/in, Geschäftsleitung und Nutzende das Ergebnis mit allen Auflagen. Die Managementbewertung (D-21) erhält eine Übersicht."
+bericht_extern: "**Extern** geben wir auf Anfrage eine Zusammenfassung an Kundschaft, Betroffene oder Behörden ab. Geschäftsgeheimnisse, Sicherheitsdetails und Personendaten lassen wir weg. Den Kanal für Rückmeldungen beschreibt D-14."
+bericht_aiact: "Ist eine Grundrechte-Folgenabschätzung nach Art. 27 EU AI Act nötig, melden wir deren Ergebnis der zuständigen Marktüberwachungsbehörde (E-06)."
+freigabe_text: "Kurzprüfungen ohne erreichte Schwelle gibt die {{fakt:freigabe.kurzpruefung}} ({verantwortlich}) frei, nie die Person, die die Kurzprüfung durchgeführt hat. Vollständige Abschätzungen und jede eingeschränkte Nutzung gibt die {{fakt:freigabe.abschaetzung}} frei. Erst danach darf das System in Betrieb gehen oder weiter genutzt werden."
+ueberwachung_text: "Die Eignerin oder der Eigner des Systems beobachtet im Betrieb, ob die Massnahmen wirken und ob Meldungen eingehen. Wir wiederholen die Abschätzung bei den Auslösern in Abschnitt 3, sonst mindestens {intervall}."
+ueberwachung_intervall: "jährlich bei sensibler Nutzung, alle zwei Jahre bei den übrigen Systemen"
+aufbewahrung_text: "Jede Kurzprüfung und Abschätzung bewahren wir mit Version, Datum und Freigabe auf, solange das System in Betrieb ist, und danach während [[3 Jahren]]. Ablage: [[Ablageort]], gemäss Dokumentenlenkung (D-26)."
+aufbewahrung_text_firma: "Jede Kurzprüfung und Abschätzung bewahren wir mit Version, Datum und Freigabe auf. Aufbewahrung: {aufbewahrung}. Ablage: {ablage}, gemäss Dokumentenlenkung (D-26)."
+platzhalter_aufbewahrung: "solange das System in Betrieb ist und danach 3 Jahre"
+aufbewahrung_jahre: "solange das System in Betrieb ist und danach {jahre} Jahre"
+ausbau_entwicklung: "Für Anbieter und Eigenentwicklung: Abschätzung schon im Entwurf beginnen, Fairness- und Robustheitstests als Nachweis beilegen und die Abschätzung bei jedem Nachtraining prüfen."
+freigabe_verfahren_text: "Die Geschäftsleitung hat dieses Verfahren am {datum} freigegeben."

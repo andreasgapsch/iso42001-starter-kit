@@ -1,0 +1,98 @@
+# E-02 Risk classification under the EU AI Act
+blaetter:
+  klassen: Classification
+  hilfe: Check aid
+titel_klassen: "Risk class per AI system under the EU AI Act"
+titel_hilfe: "Check aid: prohibitions, high risk, exceptions, transparency"
+juristisch: "The classification is a professional assessment, not legal advice. Have every classification as high-risk, every exception under Art. 6(3) or 6(1a) and every suspected prohibited AI practice reviewed by a lawyer."
+juristisch_firma: "The classification is a professional assessment, not legal advice. We have every classification as high-risk, every exception under Art. 6(3) or 6(1a) and every suspected prohibited AI practice reviewed by a lawyer."
+hinweise_klassen:
+  - "One row per AI system from the inventory (D-10). Determine the role first (E-01). Work through the columns from left to right; the ‘Check aid’ sheet explains each check point."
+  - "Step 1, prohibited AI practices ({fs:5(1)}): column D. Any entry other than ‘none’ stops the use until the legal review is available."
+  - "For deployers of generative image and video tools: from {frist:FRIST-08} the prohibitions in Art. 5(1) points (ba) and (bb) also apply (realistic intimate or sexually explicit depictions of an identifiable person without that person's explicit consent, child sexual abuse material). Check whether the tool and its settings exclude such content and record this in column D."
+  - "Step 2, high risk through products ({fs:6(1)}, {fs:Annex I}): columns E to I. AI used only for user assistance, performance optimization, efficiency, automation, convenience or quality control is not a safety component (Art. 6(1a)), unless its failure endangers health and safety (Art. 6(1b)). The Machinery Regulation is now listed in Annex I Section B point 21."
+  - "Step 3, high risk under {fs:Annex III}: columns J to O. Select the area 1 to 8 and give the use case (for example 4a). As a provider, you can rely on an exception under Art. 6(3); you then document the assessment before placing on the market (Art. 6(4)) and register the system ({fs:49(2)}). Profiling of natural persons is always high-risk."
+  - "Step 4, transparency ({fs:50}): columns P to S. These obligations apply in addition to any other class."
+  - "For Art. 6(5), there is so far a draft of Commission guidelines (19/05/2026, status see E-09). Check the current status before you rely on it."
+  - "Column T suggests a class. The responsible person sets the result in column U, with the reasoning in column V. Transfer the result to the inventory (D-10) and derive the obligations in E-03."
+hinweis_firma: "Result and reasoning per system as in the AI inventory (D-10). ‘Not relevant’: the check point does not apply to this system, for example without a product under Annex I or without an exception under Art. 6(3). Empty check points have not yet been assessed."
+nicht_relevant: not relevant
+begruendung_art5: "Art. 5: {text}"
+begruendung_produkt: "Art. 6(1), Annex I: {text}"
+spalten:
+  - ID
+  - AI system
+  - Intended purpose
+  - "Prohibited practice Art. 5(1)"
+  - "Product under Annex I"
+  - "Safety component or itself a product (Art. 6(1)(a))?"
+  - "Only user assistance, performance, efficiency, automation, convenience or quality control (Art. 6(1a))?"
+  - "Failure endangers health and safety (Art. 6(1b))?"
+  - "Third-party assessment because of health or safety risks (Art. 6(1)(b), 6(1c))?"
+  - "Annex III area"
+  - "Use case (for example 4a)"
+  - "Profiling of natural persons?"
+  - "Exception Art. 6(3)"
+  - "Assessment documented (Art. 6(4))?"
+  - "Registration (Art. 49(2))"
+  - "Art. 50(1) interaction with persons?"
+  - "Art. 50(2) generates synthetic content?"
+  - "Art. 50(3) emotion recognition or biometric categorization?"
+  - "Art. 50(4) deep fake or text on matters of public interest?"
+  - Suggestion (calculated)
+  - Resulting class
+  - Reasoning
+  - Reviewed by a lawyer
+  - "Classified by, on"
+listen:
+  verbot: [none, "a: manipulative techniques", "b: exploiting vulnerabilities", "ba: intimate imagery without consent", "bb: child sexual abuse material", "c: social scoring", "d: crime prediction based solely on profiling", "e: facial recognition databases through untargeted scraping", "f: emotion recognition in the workplace or in education", "g: biometric categorization by sensitive characteristics", "h: real-time remote biometric identification for law enforcement", unclear]
+  anhang_i: ["no", "Section A", "Section B (for example machinery, point 21)", open]
+  anhang_iii:
+    - no area
+    - "1 Biometrics"
+    - "2 Critical infrastructure"
+    - "3 Education and vocational training"
+    - "4 Employment and workers' management"
+    - "5 Essential private and public services"
+    - "6 Law enforcement"
+    - "7 Migration, asylum, border control"
+    - "8 Administration of justice and democratic processes"
+    - open
+  ausnahme: ["no", "yes, point (a): narrow procedural task", "yes, point (b): improves the result of human work", "yes, point (c): detects decision-making patterns, does not replace human assessment", "yes, point (d): preparatory task", "yes, condition still to be stated"]
+  registrierung: ["yes", "no", not required]
+hinweise_hilfe:
+  - "The explanations are our own summaries. The wording of the AI Act is authoritative; the page numbers refer to the {rechtsstand}."
+  - "The obligations for general-purpose AI models ({fs:51} et seq.) only apply to those that place such a model on the market themselves. Merely using a language model through a product is not covered."
+spalten_hilfe: [Area, Check point, Explanation, Reference, Applies from]
+hilfe:
+  - ["Prohibitions", "Point (a)", "Subliminal, manipulative or deceptive techniques that materially distort people's decisions and can cause significant harm.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Prohibitions", "Point (b)", "Exploiting age, disability or a social or economic situation to distort behaviour in a harmful way.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Prohibitions", "Point (ba)", "Realistic images, videos or audio showing the intimate parts or sexual acts of an identifiable person without that person's explicit consent. For providers, only prohibited where this is the purpose or is likely without effective safeguards (Art. 5(1a)).", "{fs:5(1)}", "{frist:FRIST-08}"]
+  - ["Prohibitions", "Point (bb)", "Generating or altering child sexual abuse material. The same restriction for providers as for point (ba) (Art. 5(1a)).", "{fs:5(1)}", "{frist:FRIST-08}"]
+  - ["Prohibitions", "Point (c)", "Social scoring of people over a period of time that leads to unjustified detrimental treatment.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Prohibitions", "Point (d)", "Predicting whether a person will commit a criminal offence based solely on profiling or personality traits.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Prohibitions", "Point (e)", "Building facial recognition databases through untargeted scraping of images from the internet or from CCTV footage.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Prohibitions", "Point (f)", "Inferring emotions in the workplace or in education institutions, except for medical or safety reasons. To be checked, for example, when analysing customer calls or employees.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Prohibitions", "Point (g)", "Biometric categorization to infer race, political opinions, trade union membership, religion or sex life.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Prohibitions", "Point (h)", "Real-time remote biometric identification in publicly accessible spaces for law enforcement, with narrow exceptions. Hardly relevant for companies.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Products", "Art. 6(1)", "AI is high-risk if it is a safety component of a product under Annex I or is itself such a product, where the product requires a third-party conformity assessment.", "{fs:6(1)}", "{frist:FRIST-15}"]
+  - ["Products", "Art. 6(1a)", "AI used solely for non-safety related user assistance, performance optimization, efficiency, automation, convenience or quality control does not qualify as a safety component.", "{fs:6(1a)}", "{frist:FRIST-15}"]
+  - ["Products", "Art. 6(1b)", "Where a failure or malfunction endangers health and safety, the AI still qualifies as a safety component (corrigendum C2 of 29/09/2026).", "{fs:6(1b)}", "{frist:FRIST-15}"]
+  - ["Products", "Art. 6(1c)", "A third-party assessment required only because of radio or EMC risks with no bearing on health and safety does not meet the condition of Art. 6(1)(b).", "{fs:6(1c)}", "{frist:FRIST-15}"]
+  - ["Products", "Annex I Sections A and B", "Section A: for example toys, lifts, radio equipment, pressure equipment, medical devices. Section B: for example vehicles, aviation, rail and now the Machinery Regulation (EU) 2023/1230 under point 21. For products under Section B, only Art. 6(1), 60a and 102 to 112 of the AI Act apply (Art. 2(2)); the AI requirements for machinery come through delegated acts under the Machinery Regulation from {frist:FRIST-16}.", "{fs:Annex I}", "{frist:FRIST-15}"]
+  - ["Annex III", "Area 1", "Biometrics: remote identification (not mere verification), categorization by sensitive characteristics, emotion recognition.", "{fs:Annex III}", "{frist:FRIST-13}"]
+  - ["Annex III", "Area 2", "Safety components in critical digital infrastructure, road traffic or the supply of water, gas, heating or electricity.", "{fs:Annex III}", "{frist:FRIST-13}"]
+  - ["Annex III", "Area 3", "Education: access and admission, evaluation of learning outcomes, assessment of the level of education, monitoring during tests.", "{fs:Annex III}", "{frist:FRIST-13}"]
+  - ["Annex III", "Area 4", "Employment: (a) placing targeted job advertisements, screening or evaluating applications; (b) decisions on terms of work, promotion, termination, task allocation, monitoring and evaluation of performance and behaviour. Functions in recruitment and HR software are often affected.", "{fs:Annex III}", "{frist:FRIST-13}"]
+  - ["Annex III", "Area 5", "Services: (a) eligibility for public benefits; (b) creditworthiness of natural persons (except fraud detection); (c) risk assessment and pricing for life and health insurance; (d) emergency calls and triage.", "{fs:Annex III}", "{frist:FRIST-13}"]
+  - ["Annex III", "Area 6", "Law enforcement by or on behalf of authorities.", "{fs:Annex III}", "{frist:FRIST-13}"]
+  - ["Annex III", "Area 7", "Migration, asylum and border control by or on behalf of authorities.", "{fs:Annex III}", "{frist:FRIST-13}"]
+  - ["Annex III", "Area 8", "Assisting courts and alternative dispute resolution; influencing elections and referendums.", "{fs:Annex III}", "{frist:FRIST-13}"]
+  - ["Exception", "Art. 6(3)", "An Annex III system is not high-risk if it poses no significant risk to health, safety or fundamental rights and meets one of the conditions (a) to (d): narrow procedural task, improving the result of a completed human activity, detecting decision-making patterns without replacing the human assessment, preparatory task.", "{fs:6(3)}", "{frist:FRIST-13}"]
+  - ["Exception", "Profiling", "If the system performs profiling of natural persons, it is always high-risk; the exception does not apply.", "{fs:6(3)}", "{frist:FRIST-13}"]
+  - ["Exception", "Art. 6(4)", "A provider that relies on an exception documents the assessment before placing on the market or putting into service and provides it to authorities on request.", "{fs:6(4)}", "{frist:FRIST-13}"]
+  - ["Exception", "Art. 49(2)", "The provider registers a system classified in this way in the EU database before placing it on the market.", "{fs:49(2)}", "{frist:FRIST-07} formally, {frist:FRIST-13} in practice"]
+  - ["Transparency", "Art. 50(1)", "Providers: people must be told that they are dealing with AI, unless this is obvious (for example a chatbot).", "{fs:50(1)}", "{frist:FRIST-07}"]
+  - ["Transparency", "Art. 50(2)", "Providers: mark generated images, videos, audio and text in a machine-readable format as artificially generated. Older systems by {frist:FRIST-09} ({fs:111(4)}).", "{fs:50(2)}", "{frist:FRIST-07}"]
+  - ["Transparency", "Art. 50(3)", "Deployers: inform the persons concerned about emotion recognition or biometric categorization.", "{fs:50(3)}", "{frist:FRIST-07}"]
+  - ["Transparency", "Art. 50(4)", "Deployers: disclose deep fakes; disclose AI-generated text on matters of public interest, unless it has undergone editorial review and someone holds editorial responsibility.", "{fs:50(4)}", "{frist:FRIST-07}"]

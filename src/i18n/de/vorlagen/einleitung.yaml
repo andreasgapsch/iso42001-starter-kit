@@ -1,0 +1,162 @@
+# Einleitung jeder leeren Vorlage: Wozu, Was tun, Nachweis
+titel: Kurz gesagt
+wozu: Wozu
+was: Was tun
+nachweis: Nachweis
+texte:
+  D-00:
+    wozu: "Sie sehen, wo das Unternehmen gegenüber ISO/IEC 42001 steht, und holen den Auftrag für den Aufbau ein."
+    was: "Reifegrad je Abschnitt und Control schätzen, Lücken priorisieren, Projektauftrag freigeben lassen."
+    nachweis: "Freigegebener Projektauftrag und Gap-Analyse mit Datum."
+  D-01:
+    wozu: "Das Managementsystem richtet sich nach Umfeld, Parteien und Rolle des Unternehmens aus."
+    was: "Themen, Klimawandel, Parteien mit Anforderungen und die eigene Rolle erfassen."
+    nachweis: "Freigegebenes Dokument, jährlich überprüft."
+  D-02:
+    wozu: "Sie legen fest, was das Managementsystem umfasst und was nicht."
+    was: "Grenzen, Ausschlüsse und Prozesse eintragen."
+    nachweis: "Freigegebener Geltungsbereich mit Prozessliste."
+  D-03:
+    wozu: "Die Geschäftsleitung setzt verbindliche Grundsätze für KI."
+    was: "Grundsätze, Ziele und Ausnahmen anpassen, freigeben und bekannt machen."
+    nachweis: "Unterschriebene Leitlinie und Nachweis der Bekanntmachung."
+  D-04:
+    wozu: "Jede Aufgabe hat eine zuständige Person, und Bedenken finden einen Weg."
+    was: "Rollen benennen, Entscheidungsrechte und Meldeweg festlegen."
+    nachweis: "Freigegebene Rollenmatrix und bekannter Meldeweg."
+  D-05:
+    wozu: "Ziele und Messungen zeigen, ob das Managementsystem wirkt."
+    was: "Ziele setzen, Messplan mit den Kennzahlen der Prozesse pflegen, Werte eintragen."
+    nachweis: "Messwerte mit Datum und Auswertung für die Managementbewertung."
+  D-06:
+    wozu: "Risiken werden nach einer einheitlichen, wiederholbaren Methode beurteilt."
+    was: "Skalen, Akzeptanzgrenze und Ablauf an das Unternehmen anpassen und freigeben."
+    nachweis: "Freigegebenes Verfahren, das im Register D-07 angewendet wird."
+  D-07:
+    wozu: "Das Register führt jedes Risiko bis zur Massnahme und zum Nachweis."
+    was: "Risiken beurteilen, Controls und Massnahmen zuordnen, Restrisiken annehmen lassen."
+    nachweis: "Beurteilung mit Datum, angenommene Restrisiken, Nachweis je erledigter Massnahme."
+  D-08:
+    wozu: "Folgen für Menschen und Gesellschaft werden nach festen Regeln geprüft."
+    was: "Auslöser, Schwellen, Beteiligte und Freigabe festlegen."
+    nachweis: "Freigegebenes Verfahren, angewendet in D-09."
+  D-09:
+    wozu: "Sie klären je KI-System, welche Folgen es für Menschen haben kann."
+    was: "Kurzprüfung ausfüllen; bei erreichter Schwelle die vollständige Abschätzung vor dem Betrieb."
+    nachweis: "Freigegebene Abschätzung je System, mit Neubeurteilung bei Änderungen."
+  D-10:
+    wozu: "Alle KI-Systeme sind bekannt, auch KI in eingekaufter Software."
+    was: "Systeme erheben, Eigner/in und Daten eintragen, Freigabeliste nachführen."
+    nachweis: "Aktuelles Inventar mit Freigabe je System."
+  D-11:
+    wozu: "Sie begründen für jedes Control, ob es gilt und wie es umgesetzt ist."
+    was: "Entscheid, Begründung, Status und Nachweis je Control eintragen."
+    nachweis: "Freigegebene Erklärung mit Nachweisen und Wirksamkeitsprüfung."
+  D-12:
+    wozu: "KI-Systeme laufen von der Einführung bis zur Ablösung nach klaren Regeln."
+    was: "Passende Teile übernehmen."
+    nachweis: "Freigegebenes Dokument, Test- und Betriebsaufzeichnungen je System."
+  D-13:
+    wozu: "Daten für KI sind nach Herkunft, Qualität und Schutz geklärt."
+    was: "Quellen, Qualitätsregeln und Umgang mit Personendaten festlegen."
+    nachweis: "Freigegebenes Dokument und Datenangaben je System."
+  D-14:
+    wozu: "Nutzende und Betroffene werden informiert und können sich melden."
+    was: "Informationen, Meldekanal und Kommunikation bei Vorfällen festlegen."
+    nachweis: "Veröffentlichte Information, Meldungen und deren Bearbeitung."
+  D-15:
+    wozu: "Mitarbeitende wissen, was sie mit KI dürfen und was nicht."
+    was: "Regeln anpassen, freigegebene Werkzeuge eintragen, bekannt machen."
+    nachweis: "Freigegebene Richtlinie und Bestätigung der Kenntnisnahme."
+  D-16:
+    wozu: "Eingekaufte KI wird vor dem Kauf geprüft und danach gesteuert."
+    was: "Prüffragen je Lieferant beantworten, Aufgaben teilen, Auflagen festhalten."
+    nachweis: "Geprüfte Lieferanten mit Datum und Auflagen."
+  D-17:
+    wozu: "Wer mit KI arbeitet, kann es und weiss Bescheid."
+    was: "Bedarf je Rolle bestimmen, Schulungen und Kommunikation planen, Teilnahme erfassen."
+    nachweis: "Schulungslisten und Prüfung der Wirksamkeit."
+  D-20:
+    wozu: "Das interne Audit zeigt, ob das Managementsystem wirkt, bevor es eine Stelle prüft."
+    was: "Programm mit Normabschnitten, Controls und Prozessen planen, Checkliste führen, berichten."
+    nachweis: "Auditbericht, ausgefüllte Checkliste, Feststellungen in D-22."
+  D-21:
+    wozu: "Die Geschäftsleitung beurteilt das Managementsystem und entscheidet."
+    was: "Traktanden vorbereiten, Bewertung abhalten, Entscheide und Massnahmen protokollieren."
+    nachweis: "Protokoll mit allen Eingaben und Entscheiden."
+  D-22:
+    wozu: "Abweichungen werden behoben, und ihre Ursache verschwindet."
+    was: "Feststellung erfassen, Ursache klären, Massnahme planen, Wirksamkeit prüfen."
+    nachweis: "Register mit Ursache, Massnahme und Wirksamkeitsprüfung."
+  D-23:
+    wozu: "Mit ISMS nutzen Sie Bestehendes und ergänzen nur, was fehlt."
+    was: "Je Abschnitt festhalten: wiederverwenden, erweitern oder neu."
+    nachweis: "Freigegebene Matrix mit Verweis auf die ISMS-Dokumente."
+  D-24:
+    wozu: "Sie klären, ob Sie Anbieter oder Betreiber sind und was ein Zertifikat aussagt."
+    was: "Entscheidungsbaum je System durchgehen, Ergebnis festhalten."
+    nachweis: "Festgehaltene Rolle je KI-System."
+  D-25:
+    wozu: "Sie sehen den Weg zum Zertifikat und was vor Stage 1 erfüllt sein muss."
+    was: "Stand der Voraussetzungen eintragen, Stelle wählen, ein Ergänzungsaudit einplanen."
+    nachweis: "Erfüllte Voraussetzungen und Zeitplan."
+  D-26:
+    wozu: "Dokumente sind aktuell, geprüft, freigegeben und auffindbar."
+    was: "Regeln festlegen, jedes Dokument im Register führen, Prüfvermerk und Version nachführen."
+    nachweis: "Register, Prüfvermerke im Dokumentkopf, Änderungshistorie."
+  D-27:
+    wozu: "Prozesse beschreiben, wer was in welcher Reihenfolge tut und was dabei entsteht."
+    was: "Abläufe, Eigner, Reife und Kennzahl anpassen; ohne ISMS auch die Basisprozesse, mit ISMS dort einen Verweis."
+    nachweis: "Freigegebenes Handbuch, Aufzeichnungen und Messwerte je Prozess."
+  E-01:
+    wozu: "Die Pflichten nach AI Act hängen von Ihrer Rolle ab."
+    was: "Rolle je KI-System bestimmen, auch einen möglichen Wechsel zum Anbieter."
+    nachweis: "Rolle je System mit Begründung und Datum."
+  E-02:
+    wozu: "Die Risikoklasse bestimmt, welche Pflichten gelten."
+    was: "Prüfpunkte je System von links nach rechts durchgehen, Ergebnis begründen."
+    nachweis: "Klasse je System mit Begründung; Grenzfälle juristisch geprüft."
+  E-03:
+    wozu: "Sie sehen, welche Pflichten für Sie gelten und was das AIMS schon abdeckt."
+    was: "Zutreffende Pflichten markieren, Stand und Verantwortung eintragen."
+    nachweis: "Matrix mit Stand je Pflicht."
+  E-04:
+    wozu: "Art. 4 verlangt Massnahmen zur Unterstützung der KI-Kompetenz, kein garantiertes Niveau."
+    was: "Zielgruppen und Formate festlegen, Teilnahme erfassen."
+    nachweis: "Konzept und Teilnahmelisten."
+  E-05:
+    wozu: "Betreiber von Hochrisiko-KI haben eigene Pflichten."
+    was: "Checkliste je System durchgehen, Offenes als Massnahme führen."
+    nachweis: "Ausgefüllte Checkliste mit Belegen."
+  E-06:
+    wozu: "Die Grundrechte-Folgenabschätzung ergänzt die Folgenabschätzung, wo der AI Act sie verlangt."
+    was: "Prüfen, ob sie nötig ist; dann die Abschnitte vor der ersten Nutzung ausfüllen."
+    nachweis: "Freigegebene Abschätzung oder begründetes «nicht nötig»."
+  E-07:
+    wozu: "Menschen sollen erkennen, wann sie mit KI zu tun haben."
+    was: "Checkliste je System prüfen, passende Textbausteine in Oberflächen und Unterlagen übernehmen."
+    nachweis: "Hinweise in den Oberflächen, geprüfte Checkliste."
+  E-08:
+    wozu: "Anbieter von Hochrisiko-KI sehen, was sie erfüllen müssen und wo das AIMS hilft."
+    was: "Pflichten abgleichen, Lücken als Massnahmen führen, Rechtliches prüfen lassen."
+    nachweis: "Abgleich mit Stand und Massnahmen."
+  E-09:
+    wozu: "Sie halten fest, auf welchem Rechtsstand Ihre Einstufungen beruhen."
+    was: "Stand auf EUR-Lex prüfen, Fristen je System ableiten, offene Auslegungen klären."
+    nachweis: "Datierter Stand, halbjährlich überprüft."
+  N-01:
+    wozu: "Das Profil zeigt Ist und Ziel gegenüber dem NIST AI RMF."
+    was: "Ist-Stufe prüfen, Ziel setzen, Lücken priorisieren."
+    nachweis: "Datiertes Profil mit Zielen."
+  N-02:
+    wozu: "Sie sehen, was ISO/IEC 42001 je Subkategorie abdeckt und was fehlt."
+    was: "Abdeckung prüfen, Zusatz-Controls für Lücken entscheiden."
+    nachweis: "Matrix mit Entscheiden zu den Lücken."
+  N-03:
+    wozu: "Vertrauensmerkmale werden je KI-System messbar."
+    was: "Merkmale wählen, Prüffälle, Schwellen und Rhythmus festlegen."
+    nachweis: "Messkonzept und Prüfergebnisse je System."
+  N-04:
+    wozu: "Risiken generativer KI werden je System gezielt geprüft."
+    was: "Relevanz der zwölf Risiken beurteilen, Massnahmen zuordnen."
+    nachweis: "Beurteilung je System mit Massnahmen."

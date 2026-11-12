@@ -1,0 +1,645 @@
+# Seitentexte Etappe E9 Umsetzen im Betrieb. Format: src/gefuehrt/FORMAT.md
+E9-einfuehrung:
+  titel: Umsetzen im Betrieb
+  frage: Wie leben Sie die Regeln im Alltag, von der Einführung eines Systems bis zum Lieferanten?
+  warum: Die Norm verlangt, dass Sie die geplanten [[g:control|Controls]] im Betrieb umsetzen und steuern. Hier beschreiben Sie je Themenbereich, wie das geschieht und womit Sie es belegen. Für selbst entwickelte KI kommen Seiten zum Entwurf und zu Trainingsdaten dazu.
+  fehler: Die grösste Lücke im Audit liegt oft zwischen Richtlinie und Praxis. Auditoren wollen Test-, Freigabe-, Protokoll- und Aufsichtsnachweise sehen, nicht nur Regeln.
+E9-lebenszyklus:
+  titel: Testen, einführen, überwachen
+  frage: Wie prüfen Sie ein KI-System vor dem Einsatz, wie geben Sie es frei und wie überwachen Sie es im Betrieb?
+  warum: Ein System geht erst live, wenn es mit typischen eigenen Fällen geprüft und freigegeben ist. Im Betrieb überwachen Sie, ob es weiterhin gut genug arbeitet, auch bei Updates des Lieferanten.
+  fehler: Freigaben, die nach dem Start nachgereicht werden, fallen auf. Auditoren lassen sich für ein System den Test, die Freigabe und ein Überwachungsprotokoll zeigen.
+  felder:
+    umsetzung:
+      label: Umsetzung
+      hilfe: z. B. «Abnahmetest mit 50 eigenen Fällen, Freigabe durch Eigner/in und [[g:aims|AIMS]]-Verantwortliche, monatliche Stichprobe von 20 Ergebnissen».
+    status:
+      label: Stand
+      hilfe: Stand der Umsetzung des [[g:control|Controls]].
+    verantwortlich:
+      label: Verantwortlich
+      hilfe: Die Person, die für den Ablauf sorgt.
+    nachweise:
+      label: Nachweise
+      hilfe: z. B. Testbericht, Freigabeprotokoll, Überwachungsprotokoll.
+E9-dokumentation:
+  titel: Dokumentation und Protokolle
+  frage: Welche Unterlagen erhalten Nutzende und Partner, und was protokollieren Ihre Systeme?
+  warum: Nutzende brauchen eine verständliche Anleitung, Partner und Behörden technische Angaben. [[g:ereignisprotokoll|Ereignisprotokolle]] machen nachvollziehbar, was ein System wann getan hat.
+  fehler: Bei Cloud-Diensten ist die Protokollierung oft ausgeschaltet oder wird nach wenigen Tagen gelöscht. Auditoren fragen, wo Protokolle liegen und wie lange.
+  felder:
+    umsetzung:
+      label: Umsetzung
+      hilfe: z. B. «Kurzanleitung je System im Intranet; Protokolle der Chatbot-Gespräche 6 Monate im Admin-Center».
+    status:
+      label: Stand
+      hilfe: Stand der Umsetzung des [[g:control|Controls]].
+    nachweise:
+      label: Nachweise
+      hilfe: z. B. Anleitung, Einstellungen der Protokollierung, Beispielprotokoll.
+E9-protokolle:
+  titel: Was protokolliert wird
+  frage: Was halten Ihre KI-Systeme in Protokollen fest, wie lange bewahren Sie diese auf und wie oft werten Sie sie aus?
+  warum: Die Angaben fliessen in die Lebenszyklus-Vorlage D-12. Mit dem Modul AI Act gilt für [[g:betreiber]] von Hochrisiko-KI eine Aufbewahrung von mindestens sechs Monaten, soweit die Protokolle unter ihrer Kontrolle sind.
+  fehler: Protokolle, die nie ausgewertet werden, helfen erst im Schadenfall. Auditoren fragen nach der letzten Auswertung.
+  felder:
+    organisation.protokollierung.inhalt:
+      label: Inhalte
+      hilfe: Was mindestens protokolliert wird.
+    organisation.protokollierung.aufbewahrungMonate:
+      label: Aufbewahrung in Monaten
+      hilfe: z. B. 6 Monate. Beachten Sie Datenschutz und Löschfristen.
+    organisation.protokollierung.auswertung:
+      label: Auswertung
+      hilfe: Wie oft Protokolle stichprobenweise durchgesehen werden.
+E9-protokolle-systeme:
+  titel: "Protokolle je System"
+  frage: "Was zeichnet jedes KI-System auf, wo und wie lange?"
+  warum: "Die allgemeinen Regeln für Protokolle gelten für alle Systeme. Je System halten Sie fest, was tatsächlich aufgezeichnet wird, damit Vorfälle und Änderungen nachvollziehbar bleiben."
+  fehler: "Oft verlässt man sich auf Protokolle beim [[g:anbieter]], ohne zu wissen, wie lange sie aufbewahrt werden. Auditoren fragen bei einem konkreten System nach den Aufzeichnungen."
+  felder:
+    protokollierung:
+      label: "Protokollierung"
+      hilfe: "Was aufgezeichnet wird, wo es liegt und wie lange es aufbewahrt wird, z. B. «Audit-Log im Admin-Center 12 Monate»."
+E9-entwicklung:
+  titel: Entwicklung eigener KI
+  frage: Wie legen Sie Anforderungen fest, wie dokumentieren Sie Entwurf und Entwicklung und welche Ziele gelten für die Entwicklung?
+  warum: Wer KI selbst entwickelt oder nachtrainiert, braucht einen festen Ablauf mit Anforderungen, Entwurf, Tests und Freigabe. Ziele wie Fairness oder Erklärbarkeit werden darin zu prüfbaren Anforderungen.
+  fehler: Eigenentwicklungen ohne Nachweise zu Anforderungen, Entwurf und Test meldet die Prüfung als Hinweis. Auditoren lassen sich ein Projekt von der Anforderung bis zur Freigabe zeigen.
+  felder:
+    umsetzung:
+      label: Umsetzung
+      hilfe: z. B. «Anforderungsblatt je Vorhaben, Entwurfsentscheide im Wiki, Freigabe nach Testbericht durch Leitung Entwicklung».
+    status:
+      label: Stand
+      hilfe: Stand der Umsetzung des [[g:control|Controls]].
+    verantwortlich:
+      label: Verantwortlich
+      hilfe: Meist die Leitung der Entwicklung.
+    nachweise:
+      label: Nachweise
+      hilfe: Anforderungsdokument, Architekturbeschreibung, Testbericht.
+E9-daten-betrieb:
+  titel: Daten im Betrieb
+  frage: Wie stellen Sie die Qualität der Daten sicher, die Sie in Ihre KI-Systeme eingeben, und wie verfolgen Sie ihre Herkunft?
+  warum: Auch als reiner Nutzer bestimmen Sie die Eingabedaten. Schlechte oder unpassende Eingaben führen zu falschen Ergebnissen ([[g:datenqualitaet]]). Die [[g:datenherkunft]] hilft bei Fehlern und Anfragen.
+  fehler: Viele halten Daten für ein Thema nur der Entwicklung. Auditoren fragen auch [[g:betreiber]], wie sie Eingabedaten prüfen, etwa die Bildqualität einer Kamera.
+  felder:
+    umsetzung:
+      label: Umsetzung
+      hilfe: z. B. «Kamera wird wöchentlich kalibriert; Eingabedaten der Planung stammen nur aus dem ERP, Stand im Protokoll».
+    status:
+      label: Stand
+      hilfe: Stand der Umsetzung des [[g:control|Controls]].
+    nachweise:
+      label: Nachweise
+      hilfe: Prüfprotokolle, Datenblatt.
+E9-daten-entwicklung:
+  titel: Daten für Training und Test
+  frage: Wie beschaffen, dokumentieren und bereiten Sie Daten für die Entwicklung auf?
+  warum: Für eigene Modelle müssen Herkunft, Rechte, Menge, bekannte Verzerrungen und Aufbereitung je Datensatz geklärt sein. Das ist auch Grundlage für spätere Erklärungen.
+  fehler: Trainingsdaten ohne geklärte Rechte sind ein rechtliches Risiko. Auditoren lassen sich ein Datenblatt zu einem Datensatz zeigen.
+  felder:
+    umsetzung:
+      label: Umsetzung
+      hilfe: z. B. «Datenblatt je Datensatz mit Quelle, Rechten, Menge und Aufbereitungsschritten in D-13».
+    status:
+      label: Stand
+      hilfe: Stand der Umsetzung des [[g:control|Controls]].
+    nachweise:
+      label: Nachweise
+      hilfe: Datenblätter, Aufbereitungsprotokoll.
+E9-information:
+  titel: Information für Nutzende und Dritte
+  frage: Was erfahren Nutzende über Ihre KI-Systeme und welche Informationspflichten haben Sie gegenüber Dritten?
+  warum: Wer ein KI-System nutzt oder von ihm betroffen ist, soll wissen, dass KI beteiligt ist, was sie kann und wo ihre Grenzen liegen. Kunden, Behörden oder Partner können zudem vertraglich oder gesetzlich Informationen verlangen.
+  fehler: Allgemeine Hinweise wie «Wir nutzen KI» genügen selten. Auditoren erwarten Kriterien, wann wer welche Information erhält, und eine Liste der Informationspflichten.
+  felder:
+    umsetzung:
+      label: Umsetzung
+      hilfe: z. B. «Hinweis im Chatbot, Merkblatt für Nutzende je System, Liste der Informationspflichten in D-14».
+    status:
+      label: Stand
+      hilfe: Stand der Umsetzung des [[g:control|Controls]].
+    nachweise:
+      label: Nachweise
+      hilfe: Bildschirmfoto des Hinweises, Merkblatt, Liste.
+E9-nutzerinformation:
+  titel: "Information je System"
+  frage: "Wie erfahren Nutzende und Betroffene von diesem KI-System?"
+  warum: "Wer mit einem KI-System arbeitet oder davon betroffen ist, soll Zweck und Grenzen kennen. Halten Sie je System fest, wo und wie Sie informieren, bei Chatbots auch den Hinweistext."
+  fehler: "Die Information steht oft nur in einem internen Dokument, das Nutzende nie sehen. Auditoren lassen sich die Stelle zeigen, an der die Information tatsächlich erscheint."
+  felder:
+    nutzerinformation:
+      label: "Information der Nutzenden und Betroffenen"
+      hilfe: "z. B. Hinweis zu Beginn jedes Gesprächs, Kapitel in der Betriebsanleitung, Hinweis in der Stellenausschreibung."
+E9-meldekanal:
+  titel: Meldekanal und Vorfälle
+  frage: Wie können Externe nachteilige Wirkungen Ihrer KI melden, und wer kümmert sich bei einem Vorfall?
+  warum: Kunden und Betroffene sollen Probleme mit Ihrer KI melden können. Für Vorfälle legen Sie fest, wer wen in welcher Frist informiert, am besten als Ergänzung Ihres bestehenden Vorfallverfahrens.
+  fehler: Fehlt ein externer Kanal, meldet die Prüfung einen Hinweis. Auditoren suchen die Adresse auf Ihrer Website und fragen nach der letzten Meldung.
+  felder:
+    organisation.meldekanalExtern.adresse:
+      label: Adresse für Meldungen
+      hilfe: z. B. eine E-Mail-Adresse oder ein Formular auf der Website.
+    organisation.meldekanalExtern.bearbeitung:
+      label: Bearbeitung durch
+      hilfe: Die Person, die Meldungen entgegennimmt und weiterleitet.
+    organisation.meldekanalExtern.fristTage:
+      label: Antwort innert Arbeitstagen
+      hilfe: z. B. 5 Arbeitstage.
+    organisation.meldekanalExtern.vorfallVerfahren:
+      label: Vorfallverfahren
+      hilfe: Dokument, in dem KI-Vorfälle geregelt sind, z. B. «VM-08 Vorfallmanagement, Abschnitt KI».
+    organisation.meldekanalExtern.ort:
+      label: "Wo der Kanal veröffentlicht ist"
+      hilfe: "z. B. Website, Seite Kontakt; Kundenportal; Betriebsanleitung."
+    organisation.meldekanalExtern.fristAntwortTage:
+      label: "Antwort zum Ergebnis innert Tagen"
+      hilfe: "z. B. 30 Tage bis zur inhaltlichen Antwort."
+    organisation.meldekanalExtern.fristKundenStunden:
+      label: "Betroffene Kunden bei einem KI-Vorfall informieren spätestens innert Stunden"
+      hilfe: "Nur ausfüllen, wenn eine feste Frist gilt, z. B. 72 Stunden aus Qualitätssicherungsvereinbarungen. Leer: «so rasch wie möglich»."
+E9-meldekanal-soa:
+  titel: Meldekanal und Vorfälle umsetzen
+  frage: Wie sind Meldekanal und Vorfallkommunikation umgesetzt?
+  warum: Hier halten Sie den Stand der beiden [[g:control|Controls]] fest und verknüpfen die Nachweise. Mit dem Modul gilt für [[g:anbieter]] von Hochrisiko-KI eine Meldepflicht für [[g:schwerwiegender-vorfall|schwerwiegende Vorfälle]].
+  fehler: Ein Vorfallplan, der nie geübt wurde, funktioniert im Ernstfall oft nicht. Auditoren fragen, ob der Ablauf einmal durchgespielt wurde.
+  felder:
+    umsetzung:
+      label: Umsetzung
+      hilfe: z. B. «Adresse ki-meldung@ auf der Website; KI-Vorfälle im [[g:isms]]-Vorfallverfahren; Übung im März».
+    status:
+      label: Stand
+      hilfe: Stand der Umsetzung des Controls.
+    nachweise:
+      label: Nachweise
+      hilfe: Website, Verfahren, Übungsprotokoll, Meldungsprotokoll.
+E9-nutzungsregeln:
+  titel: Regeln für Mitarbeitende
+  frage: Welche Regeln gelten für Mitarbeitende, die KI-Werkzeuge nutzen?
+  warum: Die Nutzungsrichtlinie D-15 fasst auf zwei Seiten zusammen, was erlaubt ist und was nicht. Wenige klare Regeln wirken besser als lange Verbotslisten.
+  fehler: Regeln, die niemand bestätigt hat, sind schwer durchzusetzen. Auditoren fragen Mitarbeitende nach den wichtigsten Regeln und nach einem Nachweis der Kenntnisnahme.
+  felder:
+    meta.gefuehrt.antworten.nutzung.regeln:
+      label: Regeln
+      hilfe: Die gewählten Regeln erscheinen als Textbausteine in D-15.
+    meta.gefuehrt.antworten.nutzung.bestaetigung:
+      label: Mitarbeitende bestätigen die Regeln schriftlich oder im E-Learning
+      hilfe: Empfohlen, ein einfacher Nachweis für das Audit.
+E9-nutzung:
+  titel: Verantwortungsvolle Nutzung umsetzen
+  frage: Wie stellen Sie sicher, dass KI nur nach Ihren Regeln und für den vorgesehenen Zweck genutzt wird?
+  warum: Nutzungsrichtlinie, Freigabe neuer Werkzeuge, Ziele für die Nutzung und [[g:menschliche-aufsicht]] gehören zusammen. Stichproben zeigen, ob die Nutzung zum Zweck im Inventar passt.
+  fehler: Ohne Stichproben bleibt unklar, ob Regeln eingehalten werden. Auditoren fragen, wann die letzte Stichprobe war und was sie ergeben hat.
+  felder:
+    umsetzung:
+      label: Umsetzung
+      hilfe: z. B. «D-15 veröffentlicht, Freigabeliste im Inventar, halbjährliche Stichprobe der Copilot-Nutzung».
+    status:
+      label: Stand
+      hilfe: Stand der Umsetzung des [[g:control|Controls]].
+    nachweise:
+      label: Nachweise
+      hilfe: Richtlinie, Bestätigungen, Freigabeliste, Stichprobenprotokoll.
+E9-lieferanten:
+  titel: KI-Lieferanten prüfen
+  frage: Erfüllt dieser Lieferant Ihre Anforderungen an KI?
+  warum: Eingekaufte KI muss zu Ihren Grundsätzen passen. Wenige Prüfpunkte vor dem Einkauf und in einem festen Rhythmus danach genügen. Verknüpfen Sie Lieferanten mit den Systemen im Inventar.
+  fehler: Jede eingekaufte KI braucht einen Prüfstatus. Häufig fehlt die Klärung, ob der Lieferant Ihre Daten für eigenes Training nutzt. Auditoren lassen sich die Prüfung und den Vertrag zeigen.
+  felder:
+    name:
+      label: Lieferant
+      hilfe: Firmenname.
+    leistung:
+      label: Leistung
+      hilfe: Welche KI-Systeme oder Dienste der Lieferant erbringt.
+    pruefstatus:
+      label: Prüfstatus
+      hilfe: Ergebnis der Prüfung.
+    bemerkung:
+      label: Bemerkung und Auflagen
+      hilfe: z. B. «Nur Firmenkonten, Training ausgeschaltet».
+    naechstePruefung:
+      label: Nächste Prüfung
+      hilfe: Mindestens jährlich.
+    pruefpunkte.PF-01:
+      label: "PF-01 Keine Nutzung unserer Daten für das Training"
+      hilfe: "Der [[g:anbieter]] verwendet Eingaben, Dateien und Ergebnisse nicht für seine Modelle, oder es lässt sich abschalten."
+    pruefpunkte.PF-02:
+      label: "PF-02 Speicherort und Region bekannt"
+      hilfe: "Länder der Speicherung und Verarbeitung; Wahl einer Region wie Schweiz oder EU möglich."
+    pruefpunkte.PF-03:
+      label: "PF-03 Aufbewahrung und Löschung geregelt"
+      hilfe: "Fristen für Eingaben, Ergebnisse und Protokolle; nachweisbare Löschung auf Verlangen."
+    pruefpunkte.PF-04:
+      label: "PF-04 Unterauftragnehmer bekannt"
+      hilfe: "Liste inklusive Anbieter der Modelle; Änderungen werden vorher angekündigt."
+    pruefpunkte.PF-05:
+      label: "PF-05 Dokumentation des Systems liegt vor"
+      hilfe: "Zweck, Fähigkeiten, Grenzen und bekannte Risiken, damit Sie Ihre Nutzenden informieren können."
+    pruefpunkte.PF-06:
+      label: "PF-06 Änderungen werden angekündigt"
+      hilfe: "Modellwechsel und wesentliche Funktionsänderungen rechtzeitig vorher."
+    pruefpunkte.PF-07:
+      label: "PF-07 Vorfälle werden gemeldet"
+      hilfe: "Sicherheits- und KI-Vorfälle innert fester Frist an eine benannte Stelle."
+    pruefpunkte.PF-08:
+      label: "PF-08 Sicherheitsnachweise vorhanden"
+      hilfe: "Aktuelle Zertifikate oder Prüfberichte, die den genutzten Dienst abdecken."
+    pruefpunkte.PF-09:
+      label: "PF-09 Datenschutz vertraglich geregelt"
+      hilfe: "Vertrag zur Auftragsbearbeitung, abgesicherte Übermittlung ins Ausland."
+    pruefpunkte.PF-10:
+      label: "PF-10 Rolle nach EU AI Act geklärt"
+      hilfe: "Der Anbieter kennt seine Rolle und liefert die Unterlagen, die Sie als [[g:betreiber]] brauchen."
+    pruefpunkte.PF-11:
+      label: "PF-11 Protokolle verfügbar"
+      hilfe: "Nutzungs- und Ereignisprotokolle im nötigen Umfang und für die nötige Dauer."
+    pruefpunkte.PF-12:
+      label: "PF-12 Zentrale Steuerung möglich"
+      hilfe: "Funktionen, Nutzerkreis und Datenzugriffe zentral einstellbar, z. B. Verwaltungskonsole und Single Sign-on."
+    pruefpunkte.PF-13:
+      label: "PF-13 Rechte an Ergebnissen geregelt"
+      hilfe: "Wem die Ergebnisse gehören und wer haftet, wenn sie Rechte Dritter verletzen."
+    pruefpunkte.PF-14:
+      label: "PF-14 Test vor dem Kauf möglich"
+      hilfe: "Testzugang mit eigenen, typischen Fällen vor dem Entscheid."
+    pruefpunkte.PF-15:
+      label: "PF-15 Ausstieg geregelt"
+      hilfe: "Export der Daten in gängigem Format, Ende ohne grossen Aufwand, Löschung nach Vertragsende."
+    geprueft:
+      label: "Geprüft durch, am"
+      hilfe: "Wer die Prüfung durchgeführt hat und wann; erscheint in D-16 beim Prüfstatus."
+    pruefpunkte.PF-16:
+      label: "PF-16 Schutz vor manipulierten Eingaben"
+      hilfe: "Umgang mit manipulierten Eingaben in Chats, Dokumenten und E-Mails beschrieben, regelmässig getestet, Meldungen im Programm für Schwachstellen."
+    pruefpunkte.PF-17:
+      label: "PF-17 Berechtigungen bei der Suche"
+      hilfe: "Das System sieht nur Inhalte, auf die die Person Zugriff hat; geprüft schon bei der Suche, nicht erst bei der Anzeige."
+    pruefpunkte.PF-18:
+      label: "PF-18 Erweiterungen und Aktionen steuerbar"
+      hilfe: "Erweiterungen, Konnektoren und Agenten einzeln sperrbar, Aktionen mit Aussenwirkung nur nach Bestätigung, Protokolle der Aktionen verfügbar."
+    pruefpunkte.PF-19:
+      label: "PF-19 Kosten und Verbrauch begrenzbar"
+      hilfe: "Hartes Kostendach je Konto oder Anwendung, nicht nur eine Warnung."
+    pruefpunkte.PF-20:
+      label: "PF-20 Darstellung von Antworten einschränkbar"
+      hilfe: "Externe Bilder, Links und Vorschauen in Antworten werden nicht automatisch geladen oder lassen sich sperren."
+    pruefpunkte.PF-21:
+      label: "PF-21 Modell, Version und Komponenten genannt"
+      hilfe: "Modell, Version und wesentliche Komponenten bekannt, Schwachstellen innert Frist behoben, Lizenz und Herkunft offener Modelle geklärt."
+    pruefpunkte.PF-22:
+      label: "PF-22 Werkzeugserver und Konnektoren geprüft"
+      hilfe: "Herkunft, Prüfung und feste Version von Werkzeugservern, Konnektoren und Erweiterungen Dritter bekannt; Berechtigungen von Assistenten in Browser und Desktop festgelegt."
+    pruefpunkte.PF-23:
+      label: "PF-23 Eigene Identität von Agenten"
+      hilfe: "Agenten handeln mit eigener Identität oder den Rechten der auslösenden Person, mit kurzlebigen Zugängen; nachvollziehbar, welcher Agent was tat."
+    pruefpunkte.PF-24:
+      label: "PF-24 Einsicht des Anbieters in Inhalte offengelegt"
+      hilfe: "Wer beim Anbieter oder seinen Dienstleistern Inhalte einsehen kann, wozu und wie das protokolliert wird."
+    pruefpunkte.PF-25:
+      label: "PF-25 Zwischenspeicher und Gedächtnis getrennt"
+      hilfe: "Zwischen Kunden und Personen getrennt; gespeicherte Einträge einsehbar und löschbar."
+    pruefpunkte.PF-26:
+      label: "PF-26 Notstopp und Entzug der Rechte"
+      hilfe: "Agenten und Automationen zentral pausieren und Rechte sofort entziehen, auch ausserhalb der Bürozeiten."
+    pruefpunkte.PF-27:
+      label: "PF-27 Nutzungsbedingungen und Lizenz erlauben den Einsatz"
+      hilfe: "Kein Verbot unseres Einsatzes in den Bedingungen; bei offenen Modellen keine Schranken nach Gebiet, Gewerbe oder Nutzerzahl, die uns ausschliessen."
+E9-vertragsklauseln:
+  titel: "Vertragsklauseln"
+  frage: "Welche KI-Klauseln stehen im Vertrag mit diesem Lieferanten?"
+  warum: "Die Prüffragen zeigen, was Sie brauchen; der Vertrag sichert es ab. Halten Sie je Klausel fest, ob sie vereinbart ist, fehlt oder für diesen Dienst nicht nötig ist."
+  fehler: "Oft decken Standardbedingungen das Training mit Kundendaten oder die Ankündigung von Modellwechseln nicht ab. Auditoren vergleichen die Klauseln mit den Antworten auf die Prüffragen."
+  felder:
+    vertragsklauseln.VK-01:
+      label: "VK-01 Keine Trainingsnutzung ohne schriftliche Zustimmung"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-02:
+      label: "VK-02 Speicherort und Region festgelegt"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-03:
+      label: "VK-03 Aufbewahrung, Löschung und Rückgabe bei Vertragsende"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-04:
+      label: "VK-04 Unterauftragnehmer mit Ankündigung und Widerspruchsrecht"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-05:
+      label: "VK-05 Ankündigung von Modellwechseln mit Frist"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-06:
+      label: "VK-06 Meldung von Vorfällen innert Frist"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-07:
+      label: "VK-07 Auftragsbearbeitung nach DSG und DSGVO"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-08:
+      label: "VK-08 Vertraulichkeit auch für Personal und Unterauftragnehmer"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-09:
+      label: "VK-09 Dokumentation, Protokolle und Unterstützung bei Anfragen"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-10:
+      label: "VK-10 Prüfberichte, Zertifikate oder Auditrecht"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-11:
+      label: "VK-11 Rechte an Ergebnissen und Freistellung"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-12:
+      label: "VK-12 Verfügbarkeit, Support, Export und Ausstieg"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    verantwortung:
+      label: "Abweichende Aufteilung der Verantwortung"
+      hilfe: "Nur wenn die Aufteilung vom Vorschlag in D-16 abweicht, z. B. «Modellwahl und Systemprompt bei uns»."
+    vertragsklauseln.VK-13:
+      label: "VK-13 Schutz vor manipulierten Eingaben, Behebung von Schwachstellen"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-14:
+      label: "VK-14 Zugriffsrechte bei Suche und Antworten"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-15:
+      label: "VK-15 Verbrauchsgrenzen oder Kostendach"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-16:
+      label: "VK-16 Einsicht in Inhalte nur zweckgebunden und protokolliert"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-17:
+      label: "VK-17 Trennung auch in Zwischenspeichern und Gedächtnis"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-18:
+      label: "VK-18 Pausieren von Agenten und sofortiger Entzug der Rechte"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+    vertragsklauseln.VK-19:
+      label: "VK-19 Ankündigung einschränkender Änderungen der Nutzungsbedingungen"
+      hilfe: "Vereinbart, fehlt, offen oder für diesen Dienst nicht nötig."
+E9-dritte:
+  titel: Verantwortung mit Lieferanten und Kunden
+  frage: Wie teilen Sie Verantwortung mit Lieferanten und Kunden auf, und wie berücksichtigen Sie Kundenerwartungen?
+  warum: Bei eingekaufter oder gelieferter KI muss klar sein, wer welche Aufgabe trägt, etwa Aktualisierung, Datenschutz oder Aufsicht. Kunden teilen Sie die Grenzen Ihrer KI-Leistungen mit.
+  fehler: Verantwortungsaufteilungen, die nur mündlich bestehen, halten im Streitfall nicht. Auditoren suchen Vertragsklauseln und eine Verantwortungsmatrix.
+  felder:
+    umsetzung:
+      label: Umsetzung
+      hilfe: z. B. «Verantwortungsmatrix je System in D-16; Standardklauseln für Kundenverträge; Kundeninformation zur Wartungsprognose».
+    status:
+      label: Stand
+      hilfe: Stand der Umsetzung des [[g:control|Controls]].
+    nachweise:
+      label: Nachweise
+      hilfe: Verträge, Matrix, Prüfprotokolle.
+E9-betreiber-hr:
+  titel: Betreiberpflichten bei Hochrisiko-KI, Teil 1
+  frage: Erfüllen Sie die Pflichten als [[g:betreiber]] dieses Hochrisiko-Systems?
+  warum: Als [[g:betreiber]] eines Hochrisiko-Systems nutzen Sie es nach der [[g:gebrauchsanweisung]], setzen befähigte Personen für die Aufsicht ein, achten auf passende Eingabedaten, überwachen den Betrieb und bewahren Protokolle auf. Bei einem Risiko setzen Sie die Nutzung aus und informieren [[g:anbieter]] und Behörde. Die Pflichten gelten für Anhang III ab 02.12.2027.
+  fehler: Oft fehlt die Gebrauchsanweisung des Lieferanten. Fordern Sie sie an. Auditoren und Behörden fragen, wer die Aufsicht führt und wie diese Person geschult wurde.
+  felder:
+    E-05.betriebsanleitung:
+      label: Nutzung gemäss Gebrauchsanweisung sichergestellt
+      hilfe: Gebrauchsanweisung liegt vor und ist den Nutzenden bekannt.
+    E-05.aufsicht:
+      label: Aufsicht durch befähigte Person eingerichtet
+      hilfe: Person benannt, geschult und mit Befugnis, einzugreifen.
+    E-05.eingabedaten:
+      label: Eingabedaten sind relevant und ausreichend repräsentativ
+      hilfe: Soweit Sie die Eingabedaten kontrollieren.
+    E-05.ueberwachung:
+      label: Betrieb überwacht, Meldeweg an Anbieter und Behörde festgelegt
+      hilfe: Kennzahlen und Zuständigkeit für die Überwachung, Kontakte von Anbieter und Behörde in D-14, Ablauf zum Aussetzen der Nutzung.
+    E-05.protokolle:
+      label: Protokolle mindestens sechs Monate aufbewahrt
+      hilfe: Soweit sie unter Ihrer Kontrolle sind.
+E9-betreiber-info:
+  titel: Betreiberpflichten bei Hochrisiko-KI, Teil 2
+  frage: Haben Sie Mitarbeitende, Betroffene, Datenschutz und Behörden berücksichtigt?
+  warum: Vor dem Einsatz am Arbeitsplatz informieren Sie Mitarbeitende und ihre Vertretung. Menschen, über die das System mitentscheidet, erfahren das, und sie können eine Erläuterung des Entscheids verlangen. Für eine Datenschutz-Folgenabschätzung nutzen Sie die Angaben des [[g:anbieter|Anbieters]], und Sie arbeiten bei Anfragen mit den Behörden zusammen.
+  fehler: Die Information der Mitarbeitenden wird oft erst nach dem Start nachgeholt. Fehlt sie, meldet die Prüfung einen Hinweis. Halten Sie Datum und Weg der Information als Nachweis fest.
+  felder:
+    E-05.arbeitnehmende:
+      label: Mitarbeitende und ihre Vertretung vorab informiert
+      hilfe: z. B. Mitteilung an die Personalkommission mit Datum.
+    E-05.dsfa:
+      label: Angaben des Anbieters für die Datenschutz-Folgenabschätzung genutzt
+      hilfe: Prüfen, ob eine DSFA nötig ist (DSGVO Art. 35, Art. 22 DSG), und auf D-09 und E-06 verweisen.
+    E-05.betroffene:
+      label: Betroffene über den KI-Einsatz informiert
+      hilfe: "z. B. Hinweis in der Stellenausschreibung oder Eingangsbestätigung. Dazu gehört ein Weg für Erläuterungen nach Art. 86: wer Betroffenen auf Anfrage erklärt, welche Rolle das System beim Entscheid hatte."
+    E-05.behoerden:
+      label: Ansprechperson und Ablauf für Anfragen von Behörden festgelegt
+      hilfe: Wer Unterlagen herausgibt und Auskunft erteilt (D-14).
+E9-transparenz:
+  titel: Transparenz umsetzen
+  frage: Haben Sie die Hinweis- und Kennzeichnungspflichten für dieses System umgesetzt?
+  warum: Menschen sollen erkennen, dass sie mit einer KI sprechen oder dass ein Inhalt künstlich erzeugt ist. Die Vorlage E-07 enthält Textbausteine für Hinweise.
+  fehler: Der Hinweis steht oft nur in den Nutzungsbedingungen. Er muss spätestens bei der ersten Interaktion klar erkennbar sein.
+  felder:
+    E-07.hinweis:
+      label: Hinweis auf KI eingerichtet
+      hilfe: z. B. «Sie chatten mit einem KI-Assistenten» zu Beginn des Gesprächs.
+    E-07.kennzeichnung:
+      label: Erzeugte Inhalte gekennzeichnet
+      hilfe: Maschinenlesbar ([[g:anbieter]]) oder sichtbar offengelegt ([[g:betreiber]] bei Deepfakes und öffentlichen Texten).
+E9-anbieter:
+  titel: Anbieterpflichten
+  frage: Haben Sie als [[g:anbieter]] dieses Systems die nötigen Schritte erledigt?
+  warum: Als [[g:anbieter]] dokumentieren Sie die Einstufung, liefern Kunden eine Anleitung und brauchen bei Hochrisiko-Systemen ohne Sitz in der EU einen [[g:bevollmaechtigter|Bevollmächtigten]]. Die Vorlage E-08 gibt den Überblick über weitere Pflichten wie die [[g:konformitaetsbewertung]].
+  fehler: Schweizer Anbieter übersehen oft den Bevollmächtigten in der EU. Fehlt er bei einem Hochrisiko-System, meldet die Prüfung einen Hinweis.
+  felder:
+    E-08.einstufung:
+      label: Einstufung dokumentiert
+      hilfe: Bei Nicht-Hochrisiko nach Art. 6(3) mit Begründung, vor dem Inverkehrbringen.
+    E-08.anleitung:
+      label: Anleitung für Kunden liegt vor
+      hilfe: Zweck, Grenzen, Aufsicht, Kontakt.
+    E-08.bevollmaechtigter:
+      label: Bevollmächtigter in der EU beauftragt
+      hilfe: Nur bei Hochrisiko-Systemen und ohne Niederlassung in der EU.
+E9-missbrauch:
+  titel: "Missbrauchsfälle prüfen"
+  frage: "Mit welchen Missbrauchsfällen haben Sie das System vor dem Einsatz geprüft, und mit welchem Ergebnis?"
+  warum: "Systeme, die fremde Inhalte lesen oder öffentlich erreichbar sind, lassen sich mit versteckten Anweisungen, Fragen nach vertraulichen Daten oder provozierenden Eingaben angreifen. Eine kleine Sammlung solcher Fälle zeigt vor dem Einsatz und nach jedem Modellwechsel, ob die Schutzmassnahmen halten (D-12). Die Seite zeigt Systeme, die in Etappe 4 Inhalte Dritter lesen oder öffentlich erreichbar sind."
+  fehler: "Ein einzelner Versuch ist keine Prüfung. Halten Sie Anzahl, Beispiele, Ergebnis und Datum fest. Die Prüfung meldet generative Systeme mit fremden Inhalten oder öffentlichem Zugang ohne Missbrauchsfälle (H32)."
+  felder:
+    missbrauchsfaelle:
+      label: "Missbrauchsfälle in der Prüfung"
+      hilfe: "Anzahl, Beispiele, Ergebnis und Datum, z. B. «12 Fälle, darunter eine versteckte Anweisung in einer E-Mail, bestanden am 01.10.2026»."
+E9-rueckfall:
+  titel: "Rückfallweg"
+  frage: "Wie geht die Arbeit weiter, wenn das KI-System ausfällt oder abgeschaltet wird?"
+  warum: "Ein Rückfallweg verhindert, dass ein Ausfall des Systems oder des [[g:anbieter|Anbieters]] die Arbeit stoppt. Er legt fest, wer was von Hand oder mit einem anderen Werkzeug erledigt. Für kritische Systeme ist er Pflicht, für die übrigen genügt ein Satz (D-12)."
+  fehler: "«Dann machen wir es wieder von Hand» reicht nur, wenn die Leute das noch können und die Unterlagen dafür vorhanden sind. Die Prüfung meldet kritische Systeme ohne Rückfallweg (H29). Erproben Sie den Rückfallweg einmal im Jahr."
+  felder:
+    rueckfallweg:
+      label: "Rückfallweg"
+      hilfe: "Was bei Ausfall oder Abschaltung gilt, z. B. «manuelle Bearbeitung nach Checkliste, Verantwortung Teamleitung»."
+E9-ausserbetrieb:
+  titel: "Ausserbetriebnahme"
+  frage: "Was hat die Ausserbetriebnahme ausgelöst, sind alle Schritte erledigt, und bis wann bewahren Sie die Unterlagen auf?"
+  warum: "Wird ein KI-System abgelöst, sollen keine Zugänge, Daten oder Abhängigkeiten zurückbleiben, und die Arbeit soll ohne Unterbruch weitergehen. Die Schritte stehen in D-12: abhängige Abläufe, Nachfolger, Information, Aufbewahrung und Löschung. Die Seite zeigt Systeme in der Phase «ausser Betrieb» oder mit Status «abgelöst»."
+  fehler: "Häufig bleiben Konten, Konnektoren oder Daten beim [[g:anbieter]] zurück. Die Prüfung meldet Systeme ausser Betrieb ohne Aufbewahrungsdatum oder abgeschlossene Ausserbetriebnahme (H30). Bewahren Sie Protokolle und Abschätzungen so lange auf, wie Sie Ergebnisse des Systems belegen müssen."
+  felder:
+    ausserbetrieb.ausloeser:
+      label: "Auslöser"
+      hilfe: "Zum Beispiel Ablösung durch ein neues System, Vertragsende oder ein nicht beherrschbares Risiko."
+    ausserbetrieb.schritteErledigt:
+      label: "Alle Schritte erledigt"
+      hilfe: "Abhängige Abläufe angepasst, Nachfolger bereit, Nutzende informiert, Zugänge gesperrt, Daten beim Anbieter gelöscht."
+    ausserbetrieb.am:
+      label: "Ausser Betrieb seit"
+      hilfe: "Datum der Abschaltung."
+    aufbewahrenBis:
+      label: "Unterlagen aufbewahren bis"
+      hilfe: "Bis wann Protokolle, Einstellungen und Abschätzungen aufbewahrt werden; danach löschen."
+E9-messkonzept:
+  titel: "Mess- und Prüfkonzept"
+  frage: "Wie prüfen Sie je KI-System die wichtigsten Vertrauensmerkmale, mit welchen Fällen, Messgrössen und Schwellen?"
+  warum: "Die Stärke des NIST AI RMF ist das Messen: Prüffälle aus dem echten Einsatz, eine Messgrösse mit Schwelle und eine feste Häufigkeit zeigen, ob ein System so arbeitet wie geprüft. Was sich nicht messen lässt, begründen Sie und beobachten es anders. Einmal im Jahr prüft jemand ausserhalb des Teams, ob Messgrössen und Tests noch passen (Zusatz-Controls RMF-09 bis RMF-13, Vorlage N-03)."
+  fehler: "Einzelne Beispiele aus der Vorführung des Anbieters sind keine Prüffälle. Nehmen Sie 10 bis 20 typische und schwierige Fälle aus dem Alltag. Eine Messgrösse ohne Schwelle löst nie eine Massnahme aus."
+  felder:
+    messkonzept.pruefungen:
+      label: "Prüfungen je Merkmal"
+      hilfe: "Eine Zeile je Merkmal, das Sie in Etappe 3 gewählt haben. Leere Felder bleiben im Konzept als offen stehen."
+    messkonzept.pruefungen.merkmal:
+      label: "Merkmal"
+      hilfe: "Vertrauensmerkmal, das die Prüfung belegt."
+    messkonzept.pruefungen.prueffaelle:
+      label: "Prüffälle"
+      hilfe: "Zum Beispiel «15 typische und 5 schwierige Anfragen aus dem Kundendienst»."
+    messkonzept.pruefungen.messgroesse:
+      label: "Messgrösse"
+      hilfe: "Zum Beispiel Anteil korrekter Antworten oder Korrekturquote."
+    messkonzept.pruefungen.schwelle:
+      label: "Schwelle"
+      hilfe: "Ab welchem Wert Sie handeln."
+    messkonzept.pruefungen.haeufigkeit:
+      label: "Häufigkeit"
+      hilfe: "Zum Beispiel quartalsweise und nach jedem Modellwechsel."
+    messkonzept.pruefungen.nichtMessbar:
+      label: "Nicht messbar"
+      hilfe: "Begründung und wie Sie stattdessen beobachten."
+    messkonzept.pruefungen.ergebnis:
+      label: "Letztes Ergebnis"
+      hilfe: "Ergebnis mit Datum."
+    messkonzept.unabhaengig.wer:
+      label: "Unabhängige Überprüfung: wer"
+      hilfe: "Person oder Funktion ausserhalb des Teams, das das System betreut."
+    messkonzept.unabhaengig.wann:
+      label: "Unabhängige Überprüfung: wann"
+      hilfe: "Datum der letzten oder der nächsten Überprüfung."
+    messkonzept.unabhaengig.ergebnis:
+      label: "Unabhängige Überprüfung: Ergebnis"
+      hilfe: "Passen Messgrössen und Tests noch, und was wird angepasst?"
+E9-genai:
+  titel: "Generative KI nach NIST AI 600-1"
+  frage: "Welche der zwölf Risiken generativer KI nach NIST AI 600-1 sind für das System relevant, und wie begegnen Sie ihnen?"
+  warum: "Das GenAI-Profil des NIST nennt zwölf Risiken, die generative KI neu bringt oder verstärkt, etwa erfundene Inhalte, Abfluss von Personendaten oder undurchsichtige Bausteine in der Lieferkette. Die Bewertung je System zeigt, welche zutreffen und mit welcher Massnahme oder welchem [[g:control]] RMF-Gxx Sie sie behandeln (Vorlage N-04)."
+  fehler: "«Nicht relevant» braucht eine kurze Begründung. Für eingekaufte Assistenten sind erfundene Inhalte, Personendaten, Angriffe, Schutzrechte und die Lieferkette fast immer relevant. Relevante Risiken mit grösserer Wirkung gehören zusätzlich ins Risikoregister."
+  felder:
+    genaiBewertung.gai-cbrn.relevant:
+      label: "Hilfe zu Massenvernichtungswaffen"
+      hilfe: "Kaum relevant; allenfalls in Chemie, Labor oder Pharma, wenn ein Chatbot Fachfragen zu gefährlichen Stoffen beantwortet."
+    genaiBewertung.gai-cbrn.massnahme:
+      label: "Hilfe zu Massenvernichtungswaffen: Massnahme"
+      hilfe: "Massnahme, Verweis auf M-xxx oder Control, z. B. RMF-G01."
+    genaiBewertung.gai-cbrn.begruendung:
+      label: "Hilfe zu Massenvernichtungswaffen: Begründung"
+      hilfe: "Warum das Risiko für dieses System nicht zutrifft."
+    genaiBewertung.gai-konfabulation.relevant:
+      label: "Erfundene, aber überzeugend wirkende Inhalte"
+      hilfe: "Eine Offerte, eine übersetzte Sicherheitsanweisung oder eine Rechtsauskunft im Chat enthält erfundene Angaben, die niemand nachprüft."
+    genaiBewertung.gai-konfabulation.massnahme:
+      label: "Erfundene, aber überzeugend wirkende Inhalte: Massnahme"
+      hilfe: "Massnahme, Verweis auf M-xxx oder Control, z. B. RMF-G01."
+    genaiBewertung.gai-konfabulation.begruendung:
+      label: "Erfundene, aber überzeugend wirkende Inhalte: Begründung"
+      hilfe: "Warum das Risiko für dieses System nicht zutrifft."
+    genaiBewertung.gai-gefaehrlich.relevant:
+      label: "Gefährliche, gewaltbezogene oder hetzerische Inhalte"
+      hilfe: "Ein Kunden-Chatbot gibt auf provozierende Fragen gewaltbezogene oder hetzerische Antworten."
+    genaiBewertung.gai-gefaehrlich.massnahme:
+      label: "Gefährliche, gewaltbezogene oder hetzerische Inhalte: Massnahme"
+      hilfe: "Massnahme, Verweis auf M-xxx oder Control, z. B. RMF-G01."
+    genaiBewertung.gai-gefaehrlich.begruendung:
+      label: "Gefährliche, gewaltbezogene oder hetzerische Inhalte: Begründung"
+      hilfe: "Warum das Risiko für dieses System nicht zutrifft."
+    genaiBewertung.gai-datenschutz.relevant:
+      label: "Abfluss und Rückschluss auf Personendaten"
+      hilfe: "Mitarbeitende kopieren Personendaten in einen Gratis-Chatbot; ein Assistent zieht Rückschlüsse über Mitarbeitende."
+    genaiBewertung.gai-datenschutz.massnahme:
+      label: "Abfluss und Rückschluss auf Personendaten: Massnahme"
+      hilfe: "Massnahme, Verweis auf M-xxx oder Control, z. B. RMF-G01."
+    genaiBewertung.gai-datenschutz.begruendung:
+      label: "Abfluss und Rückschluss auf Personendaten: Begründung"
+      hilfe: "Warum das Risiko für dieses System nicht zutrifft."
+    genaiBewertung.gai-umwelt.relevant:
+      label: "Hoher Energie- und Ressourcenverbrauch"
+      hilfe: "Ein grosses Modell erledigt eine einfache Aufgabe, für die ein kleineres genügt hätte."
+    genaiBewertung.gai-umwelt.massnahme:
+      label: "Hoher Energie- und Ressourcenverbrauch: Massnahme"
+      hilfe: "Massnahme, Verweis auf M-xxx oder Control, z. B. RMF-G01."
+    genaiBewertung.gai-umwelt.begruendung:
+      label: "Hoher Energie- und Ressourcenverbrauch: Begründung"
+      hilfe: "Warum das Risiko für dieses System nicht zutrifft."
+    genaiBewertung.gai-verzerrung.relevant:
+      label: "Verzerrte oder gleichförmige Ausgaben"
+      hilfe: "Stelleninserate mit einseitiger Sprache, Vorauswahl von Bewerbungen, schlechtere Antworten in Dialekt oder Fremdsprache."
+    genaiBewertung.gai-verzerrung.massnahme:
+      label: "Verzerrte oder gleichförmige Ausgaben: Massnahme"
+      hilfe: "Massnahme, Verweis auf M-xxx oder Control, z. B. RMF-G01."
+    genaiBewertung.gai-verzerrung.begruendung:
+      label: "Verzerrte oder gleichförmige Ausgaben: Begründung"
+      hilfe: "Warum das Risiko für dieses System nicht zutrifft."
+    genaiBewertung.gai-mensch-ki.relevant:
+      label: "Übervertrauen, Ablehnung, Vermenschlichung"
+      hilfe: "Ergebnisse werden ungeprüft übernommen, oder ein Chatbot mit Personennamen wirkt wie ein Mensch."
+    genaiBewertung.gai-mensch-ki.massnahme:
+      label: "Übervertrauen, Ablehnung, Vermenschlichung: Massnahme"
+      hilfe: "Massnahme, Verweis auf M-xxx oder Control, z. B. RMF-G01."
+    genaiBewertung.gai-mensch-ki.begruendung:
+      label: "Übervertrauen, Ablehnung, Vermenschlichung: Begründung"
+      hilfe: "Warum das Risiko für dieses System nicht zutrifft."
+    genaiBewertung.gai-integritaet.relevant:
+      label: "Falschinformation und Fälschungen"
+      hilfe: "Marketingbilder ohne Kennzeichnung, geklonte Stimmen, gefälschte Anrufe der Chefin oder des Chefs."
+    genaiBewertung.gai-integritaet.massnahme:
+      label: "Falschinformation und Fälschungen: Massnahme"
+      hilfe: "Massnahme, Verweis auf M-xxx oder Control, z. B. RMF-G01."
+    genaiBewertung.gai-integritaet.begruendung:
+      label: "Falschinformation und Fälschungen: Begründung"
+      hilfe: "Warum das Risiko für dieses System nicht zutrifft."
+    genaiBewertung.gai-sicherheit.relevant:
+      label: "Angriffe mit und auf generative KI"
+      hilfe: "Phishing-Mails, die mit KI geschrieben sind, versteckte Anweisungen in E-Mails oder Dokumenten, die den Assistenten steuern, vergiftete Wissensquellen."
+    genaiBewertung.gai-sicherheit.massnahme:
+      label: "Angriffe mit und auf generative KI: Massnahme"
+      hilfe: "Massnahme, Verweis auf M-xxx oder Control, z. B. RMF-G01."
+    genaiBewertung.gai-sicherheit.begruendung:
+      label: "Angriffe mit und auf generative KI: Begründung"
+      hilfe: "Warum das Risiko für dieses System nicht zutrifft."
+    genaiBewertung.gai-schutzrechte.relevant:
+      label: "Verletzung von Urheber- und Schutzrechten"
+      hilfe: "Kundenzeichnungen im Gratis-Chatbot, generierte Bilder oder Stimmen, die Rechte Dritter verletzen."
+    genaiBewertung.gai-schutzrechte.massnahme:
+      label: "Verletzung von Urheber- und Schutzrechten: Massnahme"
+      hilfe: "Massnahme, Verweis auf M-xxx oder Control, z. B. RMF-G01."
+    genaiBewertung.gai-schutzrechte.begruendung:
+      label: "Verletzung von Urheber- und Schutzrechten: Begründung"
+      hilfe: "Warum das Risiko für dieses System nicht zutrifft."
+    genaiBewertung.gai-anstoessig.relevant:
+      label: "Anstössige und missbräuchliche Bildinhalte"
+      hilfe: "Ein öffentlich zugänglicher Bildgenerator der Firma erzeugt anstössige oder missbräuchliche Bilder."
+    genaiBewertung.gai-anstoessig.massnahme:
+      label: "Anstössige und missbräuchliche Bildinhalte: Massnahme"
+      hilfe: "Massnahme, Verweis auf M-xxx oder Control, z. B. RMF-G01."
+    genaiBewertung.gai-anstoessig.begruendung:
+      label: "Anstössige und missbräuchliche Bildinhalte: Begründung"
+      hilfe: "Warum das Risiko für dieses System nicht zutrifft."
+    genaiBewertung.gai-lieferkette.relevant:
+      label: "Undurchsichtige Bausteine in der Lieferkette"
+      hilfe: "Copilot, Erweiterungen und Plug-ins mit unklaren Bausteinen; der [[g:anbieter]] wechselt das Modell ohne Ankündigung."
+    genaiBewertung.gai-lieferkette.massnahme:
+      label: "Undurchsichtige Bausteine in der Lieferkette: Massnahme"
+      hilfe: "Massnahme, Verweis auf M-xxx oder Control, z. B. RMF-G01."
+    genaiBewertung.gai-lieferkette.begruendung:
+      label: "Undurchsichtige Bausteine in der Lieferkette: Begründung"
+      hilfe: "Warum das Risiko für dieses System nicht zutrifft."

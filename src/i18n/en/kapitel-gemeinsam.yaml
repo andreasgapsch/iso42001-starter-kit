@@ -1,0 +1,114 @@
+hinweis: "Professional judgement by KMU-CIO on what to consider when running an ISMS and an AIMS together. For the requirement text, see ISO/IEC 42001 and ISO/IEC 27001, clauses 4 to 10. The standards are available from SNV, DIN or ISO."
+gemeinsam:
+  ja: "Shared: one process and one set of evidence for both systems."
+  teilweise: "Partly shared: common framework, AI content must be added."
+abschnitte:
+  K-4.1:
+    titel: "Setting and role of the organization"
+  K-4.2:
+    titel: "Interested parties and their expectations"
+  K-4.3:
+    titel: "Defining the scope"
+  K-4.4:
+    titel: "Building the management system"
+  K-5.1:
+    titel: "Top management commitment"
+  K-5.2:
+    titel: "Top-level policy"
+  K-5.3:
+    titel: "Roles and authority"
+  K-6.1.1:
+    titel: "Planning for risks and opportunities"
+  K-6.1.2:
+    titel: "Assessing risks"
+  K-6.1.3:
+    titel: "Treating risks"
+  K-6.1.4:
+    titel: "AI system impact assessment"
+  K-6.2:
+    titel: "Objectives and how to reach them"
+  K-6.3:
+    titel: "Planning changes"
+  K-7.1:
+    titel: "Providing resources"
+  K-7.2:
+    titel: "Ensuring competence"
+  K-7.3:
+    titel: "Building awareness"
+  K-7.4:
+    titel: "Planning communication"
+  K-7.5:
+    titel: "Controlling documents and records"
+  K-8.1:
+    titel: "Planning and running operations"
+  K-8.2:
+    titel: "Performing risk assessments"
+  K-8.3:
+    titel: "Implementing risk treatment"
+  K-8.4:
+    titel: "Performing impact assessments"
+  K-9.1:
+    titel: "Measuring and evaluating"
+  K-9.2:
+    titel: "Internal audits"
+  K-9.3:
+    titel: "Review by top management"
+  K-10.1:
+    titel: "Improving continually"
+  K-10.2:
+    titel: "Correcting nonconformities"
+hinweise:
+  kontext-klima: |
+    One shared context analysis is enough if it has its own AI section. New for the AIMS are the organization's role (such as AI provider, producer or customer) and the purpose of its AI systems. ISO/IEC 42001:2023 (clauses 4.1 and 4.2) and ISO/IEC 27001 since Amd 1:2024 both expect a documented decision on whether climate change matters for the organization. One justified decision serves both systems.
+  parteien-ki: |
+    The register of interested parties is kept jointly. For AI, people affected by AI decisions, supervisory authorities under the AI Act and model providers are usually added. For each requirement, the register records whether it is addressed through the ISMS, the AIMS or both. Both standards also expect possible requirements related to climate change to be considered (ISO/IEC 27001 since Amd 1:2024).
+  geltung-getrennt: |
+    The ISMS and the AIMS may have different scopes, for example where only one business unit uses AI. Both scopes are described in the same document, with overlaps and interfaces. For the AIMS, the description includes the AI systems covered and the organization's role.
+  ein-system: |
+    One integrated management system with a single process map is enough. AI processes such as impact assessment or approval of new tools are added as extra processes. This avoids duplicate processes for audits, reviews or document control.
+  fuehrung-gemeinsam: |
+    Top management commits once to both systems, for example in the project mandate and in the management review. It is important that AI objectives fit the strategy and that resources for the AIMS are explicitly approved.
+  leitlinie-abgleich: |
+    A separate AI policy is usually clearer than an extra chapter in the security policy. Both policies refer to each other and are reviewed together (A.2.3). Where the existing policy is extended instead, supplementary sheet D-03-EB applies.
+  rollen-erweitern: |
+    The existing role model is extended, not replaced. New elements are the AIMS lead, a system owner per AI system and the channel for raising concerns. If the person responsible for information security also leads the AIMS, the time budget and the deputy are recorded.
+  risiken-chancen: |
+    The planning step for risks and opportunities can be run jointly. For the AIMS, the purpose, domain of use and role of the AI systems must also be considered. Opportunities from AI are recorded in the same register as the risks.
+  eine-methode: |
+    Both systems use a single method with the same likelihood and impact scales. The impact categories are extended with effects on individuals and society, which must be considered for AI risks. Information security risks stay in the ISMS register; AI risks sit in the AI register and are linked where they overlap.
+  behandlung-soa: |
+    Treatment follows the same process, with a treatment plan and acceptance of residual risks. The statement of applicability is kept per standard against its own Annex A, either as one document with a framework column or as two lists. Mapped 27001 controls show where evidence can be reused.
+  folgenabschaetzung-neu: |
+    The AI system impact assessment has no counterpart in the ISMS and must be built from scratch. Only the framework is shared: triggers, approval and filing can follow the risk procedure and any existing data protection impact assessment. The results feed into the AI risk assessment.
+  ziele-getrennt: |
+    Objectives use the same format and the same tracking, but are shown per system. AI objectives cover topics such as transparency, training coverage or the share of reviewed outputs. One joint list with an "ISMS, AIMS or both" column is enough.
+  aenderungen-gemeinsam: |
+    Changes to the management system are planned through one shared process. Each change is checked for whether it affects the ISMS, the AIMS or both.
+  ressourcen-gemeinsam: |
+    Resources for both systems are planned together and confirmed in the management review. For the AIMS, time for impact assessments and for monitoring AI systems must be explicitly planned.
+  kompetenz-erweitern: |
+    The process for ensuring competence stays the same. AI competences per role are added, for example for evaluating outputs or handling data. Where there is a link to the EU, the AI Act also requires actions to support the AI literacy of the people involved, but no specific level (Art. 4).
+  bewusstsein-modul: |
+    One shared awareness programme with a learning unit on AI is enough. Staff must know the AI policy, their own contribution and the consequences of breaking the rules.
+  kommunikation-gemeinsam: |
+    One communication plan for both systems avoids duplication. Rows are added for AI topics, such as information for users, affected people and authorities.
+  dokumente-gemeinsam: |
+    Documented information is controlled under the same rules and kept in one register. A field shows whether a document applies to the ISMS, the AIMS or both. AI adds new document types such as impact assessments and technical documentation.
+  betrieb-lebenszyklus: |
+    Operational control can be described jointly. New for the AIMS are the processes along the AI system lifecycle and the control of purchased AI services. Changes to AI systems go through the existing change process.
+  beurteilung-zyklus: |
+    Risk assessments follow the same schedule and the same triggers. Additional triggers for AI are new systems, model changes and new results from impact assessments.
+  behandlung-umsetzen: |
+    Implementation of actions is tracked in the same plan. AI actions are linked to the relevant AI system so that residual risks remain visible per system.
+  folgenabschaetzung-durchfuehren: |
+    Performing impact assessments also has no counterpart in the ISMS. They are scheduled in the shared annual plan so that they are aligned with risk assessment and management review.
+  messplan-gemeinsam: |
+    One measurement plan with indicators for both systems is easier to manage than two. For the AIMS, indicators on the performance and behaviour of AI systems are added, often taken from operational monitoring.
+  audit-gemeinsam: |
+    One shared audit programme covers both standards, usually with clauses 4 to 10 handled in the same interviews. The controls in Annex A of ISO/IEC 42001 need their own audit questions. Auditors need basic AI knowledge and must not audit their own work.
+  bewertung-gemeinsam: |
+    One management review for both systems saves time if the agenda covers both standards for each topic. AI-specific inputs include results of impact assessments, reported concerns and changes in AI legislation.
+  verbesserung-gemeinsam: |
+    Improvements are kept in one shared register. A field shows which system is affected.
+  abweichung-gemeinsam: |
+    Nonconformities and corrective actions follow the same process. For deviations involving AI, also check whether the risk assessment or the impact assessment needs updating.

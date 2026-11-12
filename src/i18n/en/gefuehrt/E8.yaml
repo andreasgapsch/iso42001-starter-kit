@@ -1,0 +1,246 @@
+# Page texts for phase E8 Controls and statement of applicability. Format: src/gefuehrt/FORMAT.md
+E8-einfuehrung:
+  titel: Controls and statement of applicability
+  frage: How do you treat your risks, and which [[g:control|controls]] do you use to do so?
+  warum: For every risk above the acceptance threshold, you choose a [[g:risikobehandlung]]. You then compare your actions with the 38 [[g:control|controls]] in [[g:anhang-a|Annex A]] and, in the [[g:soa]], justify for each one whether it applies. The tool suggests controls based on your risks.
+  fehler: Exclusions without reasoning, and controls marked as implemented without evidence, are typical findings. Auditors take samples and ask to see the evidence for each control.
+E8-behandlung:
+  titel: Treatment per risk
+  frage: How do you deal with this risk, and how high is it afterwards?
+  warum: You decide whether to avoid, reduce, share or knowingly retain the risk. When you reduce it, you link [[g:control|controls]] and actions and then rate the risk again.
+  fehler: The check reports ‘reduce’ without a linked control as an error. Auditors ask why the risk is lower after the actions.
+  felder:
+    behandlung:
+      label: Treatment
+      hilfe: For risks above the upper threshold, ‘retain’ is only an option with a decision by management.
+    controls:
+      label: Controls
+      hilfe: Controls from [[g:anhang-a|Annex A]], additional AI Act controls or your own.
+    massnahmen:
+      label: Actions
+      hilfe: Specific tasks with a deadline, recorded in the action list.
+    wNach:
+      label: Likelihood afterwards
+      hilfe: After the actions are implemented.
+    aNach:
+      label: Impact afterwards
+      hilfe: After the actions are implemented.
+E8-soa:
+  titel: Statement of applicability
+  frage: Does this [[g:control|control]] apply to your company, and why?
+  warum: In the [[g:soa|statement of applicability]], you record for each of the 38 controls whether it applies, with reasoning. It applies if a risk, a requirement or your policy calls for it. Suggestions based on your risks are marked.
+  fehler: '‘Already in place’ is not a reason to exclude a control; it means the control is applicable and implemented. You may exclude the development controls (A.6.1, A.6.2.2, A.6.2.3) if you do not develop AI; say so in your reasoning.'
+  felder:
+    anwendbar:
+      label: Applicable
+      hilfe: The check reports ‘still open’ as an error.
+    begruendung:
+      label: Reasoning
+      hilfe: For inclusion and exclusion, e.g. ‘Risks R-003 and R-011; requirement from automotive customer’.
+    status:
+      label: Implementation status
+      hilfe: Only choose ‘effective’ once you have checked that it works.
+    verantwortlich:
+      label: Responsible
+      hilfe: The person who makes sure it is implemented.
+    kiSysteme:
+      label: Applies to
+      hilfe: Leave empty if the control applies to all AI systems.
+    iso27001:
+      label: Related controls from ISO/IEC 27001
+      hilfe: You can reuse evidence from the [[g:isms]].
+E8-euaia:
+  titel: Additional AI Act controls
+  frage: Do you adopt this additional [[g:control|control]] for an AI Act obligation?
+  warum: ISO/IEC 42001 does not cover every AI Act obligation. For each gap, the kit suggests an additional control that matches your roles and risk classes. You adopt it or justify why you decline it.
+  fehler: The check reports an additional control without a decision as an error. Customers and authorities ask specifically about these obligations for high-risk systems.
+  felder:
+    anwendbar:
+      label: Adopted
+      hilfe: Suggestions follow from the role and risk class of your systems.
+    begruendung:
+      label: Reasoning
+      hilfe: e.g. ‘KI-008 is high-risk under Annex III point 4; we are the [[g:betreiber|deployer]]’.
+    status:
+      label: Implementation status
+      hilfe: Implementation status.
+    verantwortlich:
+      label: Responsible
+      hilfe: The person who makes sure it is implemented.
+    kiSysteme:
+      label: Applies to
+      hilfe: The systems concerned.
+E8-eigene:
+  titel: Your own controls
+  frage: Do you need controls that are neither in [[g:anhang-a|Annex A]] nor in the module?
+  warum: Some risks call for rules of your own, for example export controls for design data. Your own controls appear in the [[g:soa|statement of applicability]] like all the others.
+  fehler: Own controls that merely rename an Annex A control cause confusion. Auditors want to see which gap your own control closes.
+  felder:
+    titel:
+      label: Title
+      hilfe: e.g. ‘Export controls for AI services’.
+    beschreibung:
+      label: Description
+      hilfe: What the control requires.
+    quelle:
+      label: Source
+      hilfe: Where the requirement comes from, e.g. ‘Swiss Goods Control Ordinance, customer contract’.
+E8-massnahmen:
+  titel: Actions
+  frage: Which specific tasks follow from the treatment, who carries them out, and by when?
+  warum: "[[g:control|Controls]] describe what should be in place; actions describe what still needs to be done to get there. Every action needs a responsible person and a deadline."
+  fehler: The check reports actions without a deadline or responsible person as errors. Auditors follow individual actions through to completion.
+  felder:
+    titel:
+      label: Action
+      hilfe: e.g. ‘Block private ChatGPT accounts and introduce a company licence’.
+    beschreibung:
+      label: Description
+      hilfe: What exactly will be done.
+    verantwortlich:
+      label: Responsible
+      hilfe: One person, not a department.
+    termin:
+      label: Deadline
+      hilfe: Realistic, but binding.
+    prioritaet:
+      label: Priority
+      hilfe: High for risks above the upper threshold.
+    herkunft.art:
+      label: Origin
+      hilfe: Where the action comes from.
+    herkunft.ref:
+      label: Reference
+      hilfe: ID, e.g. ‘R-007’ or ‘F-002’.
+    status:
+      label: Status
+      hilfe: Implementation status.
+    nachweise:
+      label: Evidence
+      hilfe: What shows implementation and effectiveness of the completed action?
+    erfasstAm:
+      label: "Recorded on"
+      hilfe: "Date on which the action was recorded. IDs are assigned in this order; documents approved before this date do not mention the action."
+E8-nachweise:
+  titel: Evidence
+  frage: Which documents and records prove the implementation, and where are they stored?
+  warum: The evidence list tells auditors where to find what. It saves long searches during the audit and shows that your system leaves traces in daily work.
+  fehler: Evidence without a storage location cannot be found during the audit. Give a path or link that a deputy can also find.
+  felder:
+    titel:
+      label: Evidence
+      hilfe: e.g. ‘Approval record for M365 Copilot’.
+    art:
+      label: Type
+      hilfe: Document, record, minutes, contract, training record.
+    ablageort:
+      label: Storage location
+      hilfe: Path or link.
+    datum:
+      label: Date
+      hilfe: Date of the evidence.
+E8-umsetzung:
+  titel: Implementation and evidence
+  frage: How is this [[g:control|control]] implemented, and how can you prove it?
+  warum: For every applicable control, briefly describe how it is implemented and link at least one piece of evidence. This turns the [[g:soa|statement of applicability]] into a signpost for the audit.
+  fehler: A reference to a policy alone does not show that it is followed. Auditors also want to see records, such as approval logs, training lists or test reports.
+  felder:
+    umsetzung:
+      label: How it is implemented
+      hilfe: One to three sentences, e.g. "New tools approved as per D-15, section 4; approval list in the AI inventory".
+    nachweise:
+      label: Evidence
+      hilfe: Select the evidence from the list in the previous step. If an item is missing, add it under ‘Evidence’ (form view) or in the previous step.
+    status:
+      label: Implementation status
+      hilfe: As long as the status is ‘open’, the check reports the control as an error. If the description and evidence are correct, choose ‘implemented’.
+E8-restrisiko:
+  titel: Accept the residual risk
+  frage: Does the responsible person accept the remaining risk?
+  warum: After treatment, a [[g:restrisiko]] remains. The standard requires the responsible manager to accept it explicitly, with name and date.
+  fehler: The check reports treated risks without acceptance as errors. Auditors check that residual risks above the acceptance threshold were accepted by management.
+  felder:
+    restrisikoAkzeptiert:
+      label: Residual risk accepted
+      hilfe: Person and date. For high residual risks, a member of management.
+    restrisikoBegruendung:
+      label: Reason for acceptance
+      hilfe: Needed if the residual risk is above the acceptance threshold, e.g. why it is carried until an action is completed and until when.
+    ausnahme.von:
+      label: Exception granted by
+      hilfe: Only for a risk that is not acceptable and is carried for a limited time. Who grants the exception follows the decision rights (D-04).
+    ausnahme.am:
+      label: Exception granted on
+      hilfe: Date of the decision.
+    ausnahme.bis:
+      label: Exception valid until
+      hilfe: At most as long as the AI policy allows exceptions.
+    ausnahme.begruendung:
+      label: Reason and conditions of the exception
+      hilfe: e.g. "until the approved service is introduced, only with a specialist check of every translation".
+    status:
+      label: Status
+      hilfe: Set to ‘residual risk accepted’ once it has been accepted.
+E8-plan-freigabe:
+  titel: Approve the treatment plan
+  frage: Has management approved the treatment plan?
+  warum: The treatment plan brings together risks, treatments, [[g:control|controls]] and actions. The approval shows that management provides the resources and knows the residual risks.
+  fehler: A plan that has not been approved is an error in the check. Auditors compare the approval date with the state of the register.
+  felder:
+    version:
+      label: Version
+      hilfe: Version of the risk register with treatment plan (D-07).
+    freigabe:
+      label: Approval
+      hilfe: Member of management and date.
+E8-plan-freigabe-eb:
+  titel: Approve the treatment plan (with an ISMS)
+  frage: Has management approved the treatment plan?
+  warum: The treatment plan brings together risks, treatments, [[g:control|controls]] and actions. The approval shows that management provides the resources and knows the residual risks.
+  fehler: A plan that has not been approved is an error in the check. Auditors compare the approval date with the state of the register.
+  felder:
+    version:
+      label: Version
+      hilfe: Version of supplementary sheet D-07-EB, through which the [[g:isms]] risk register holds the treatment plan for AI.
+    freigabe:
+      label: Approval
+      hilfe: Member of management and date.
+E8-rmf:
+  titel: "NIST AI RMF additional controls"
+  frage: "Do you include this additional [[g:control|control]] from the NIST AI RMF in the [[g:soa|statement of applicability]]?"
+  warum: "With the additional controls RMF-01 to RMF-16 and RMF-G01 to RMF-G07, the module closes the parts of the NIST AI RMF that ISO/IEC 42001 does not cover or covers only in part. The tool suggests what fits each AI system; the G controls apply only to generative AI. The decisions appear in D-11 like the controls from [[g:anhang-a|Annex A]]."
+  fehler: "A rejected control needs a reason that fits your systems. The NIST AI RMF is voluntary, and nobody certifies conformity with it. In customer questionnaires, therefore, only state what is evidenced in the profile N-01."
+  felder:
+    anwendbar:
+      label: "Adopted"
+      hilfe: "Suggestions follow from the type, role and screening of your systems and from the ‘generative AI’ flag."
+    begruendung:
+      label: "Reasoning"
+      hilfe: "e.g. \"KI-004 is an assistant with generative AI; we check for invented content before every quotation\"."
+    status:
+      label: "Implementation"
+      hilfe: "Implementation status."
+    verantwortlich:
+      label: "Responsible"
+      hilfe: "The person who makes sure it is implemented."
+    kiSysteme:
+      label: "Applies to"
+      hilfe: "The systems concerned."
+E8-wirksamkeit:
+  titel: "Effectiveness of controls"
+  frage: "How, when and by whom did you check whether the implemented controls are effective?"
+  warum: "An implemented control only becomes good evidence once someone has checked that it works in day-to-day practice. A sample, a test or an analysis is enough; what matters are the date, the person and the result. The entries appear in the [[g:soa|statement of applicability]] D-11, column ‘effectiveness checked’."
+  fehler: "Start with the most important controls; not every control needs its own check in the first year. The check reports implemented controls without information on effectiveness (H35). Auditors ask for the evidence of the last check."
+  felder:
+    wirksamkeit.wie:
+      label: "Effectiveness: how checked"
+      hilfe: "Method, e.g. a sample of 10 cases, a test or an analysis of the logs."
+    wirksamkeit.wann:
+      label: "Effectiveness: when checked"
+      hilfe: "Date of the check or planned date."
+    wirksamkeit.wer:
+      label: "Effectiveness: checked by"
+      hilfe: "Preferably not the person who implements the control."
+    wirksamkeit.ergebnis:
+      label: "Effectiveness: result"
+      hilfe: "The result in brief and any actions."

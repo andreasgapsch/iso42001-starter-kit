@@ -1,0 +1,216 @@
+# D-20 Internal audit
+blaetter:
+  programm: Audit programme
+  plan: Audit plan
+  checkliste: Checklist 42001
+  stichproben: Samples
+  feststellungen: Findings
+titel_programm: "Audit programme across the certification cycle"
+titel_plan: "Audit plan for a single audit"
+titel_checkliste: "ISO/IEC 42001 checklist: clauses 4 to 10 and Annex A controls"
+titel_feststellungen: "Findings from internal audits"
+hinweise_programm:
+  - "Plan the audits so that every clause of the standard and every applicable control is covered at least once within three years. In the first year, audit the whole AIMS, and do so before the stage 1 audit so that you still have time to deal with findings. Also name the processes from D-27 in the scope."
+  - "First year: 9.3 and A.2.4 can only be checked after the first management review, and the review in turn needs the audit. So plan a short supplementary audit before stage 1, after the management review, to check these points and anything new since then (such as D-27)."
+  - "Audit clauses 9.2, 9.3 and 10.2 every year, as well as AI systems with high risk or major changes. The suggested rows show one possible distribution; adapt them to your risks."
+  - "Auditors do not audit their own work. In SMEs, an external auditor or a reciprocal audit with a partner company works well. Record in the ‘Independence’ column how you ensured this."
+  - "The audit report consists of the checklist, samples and findings sheets together with the ‘Result and report’ column in the programme; a separate report document, for example in the ISMS format, names objective, scope, criteria, findings and recipients and is linked in the programme."
+  - "With an ISMS: run one joint programme. Cover clauses 4 to 10 for both standards in the same interviews, and the Annex A controls of ISO/IEC 42001 with the checklist in this document."
+hinweise_programm_eb:
+  - "Extend your existing ISMS audit programme with rows or columns for the AIMS. One joint programme for both standards is sufficient."
+  - "Within the three-year cycle, every clause and applicable control of ISO/IEC 42001 is audited at least once. Before the first certification, the AIMS is audited in full once."
+  - "Anyone auditing the AIMS needs basic knowledge of AI and of ISO/IEC 42001 and does not audit their own work."
+hinweise_programm_firma:
+  - "Internal audits take place every year. Within the three-year certification cycle, all clauses and all applicable controls are audited at least once; 9.2, 9.3 and 10.2 every year."
+hinweise_programm_firma_leer:
+  - "No audit has been planned yet. The rows below are a suggestion for the three-year cycle."
+hinweise_plan:
+  - "One plan per audit. Send it to those involved in good time so that they can have their evidence ready."
+  - "For the practical part, choose one or two AI systems as a sample, ideally including one with high risk. Clause 9.2 is audited by someone other than the person who runs the audit programme."
+hinweise_checkliste:
+  - "The review questions are prompts in our own words. Read the requirement text in your copy of the standard."
+  - "Under ‘Evidence seen’, note the document, version or record, and under ‘Sample’, the example checked (for example AI system, date, person). Without evidence seen, there is no ‘conforming’."
+  - "Result: ‘NC major’ if a requirement is not implemented at all or the effectiveness of the system is in doubt. ‘NC minor’ for a single gap in an otherwise effective process. ‘Observation’ if there is no deviation yet, but one is likely."
+  - "Every nonconformity and observation receives a finding ID and is described in the ‘Findings’ sheet."
+hinweise_checkliste_firma:
+  - "The ‘SoA’ column shows the status of the statement of applicability (D-11). For controls that are not applicable, the justification is reviewed."
+hinweis_checkliste_audit: "Evidence, samples and results of internal audit {audit}; the findings are in the sheet ‘Findings’. ‘Not auditable yet, planned’ means: not yet carried out at the time of the audit."
+hinweis_soa_stand: "The column ‘SoA’ shows the status in the statement of applicability at the time of audit {audit}, not the current one."
+# Additional controls of the statement of applicability (EU AI Act, own controls) in the checklist
+frage_zusatz: "Is the control implemented and evidenced as described in the statement of applicability?"
+dokumente_zusatz: D-11
+spalte_dokumente: Documents
+ablauf: Agenda
+hinweise_feststellungen:
+  - "Describe each finding so that it can be understood without the auditor: what was required, what was seen, where the deviation lies."
+  - "Transfer every finding to the register D-22: nonconformities and observations to the sheet ‘Nonconformities’, improvements to the sheet ‘Improvements’. Root cause analysis, corrective action and the effectiveness check follow there."
+ausbau: "With many AI systems or sites: set the audit frequency for each AI system according to risk (for example high risk every year, the rest within the cycle) and add a separate column for it in the audit programme."
+spalten_programm:
+  - Year
+  - Audit
+  - Clauses in scope
+  - Controls in scope
+  - Criteria
+  - Method
+  - Period
+  - Auditor
+  - Independence
+  - Report to
+  - Combined with ISMS
+  - Status
+  - Result and report
+umfang_controls_alle: "all applicable"
+umfang_prozesse: "processes in scope: {liste}"
+umfang_prozesse_alle: "processes in scope: all processes of the management system"
+spalten_plan: [Time, Item, Content and clause reference, Participants, Remarks]
+spalten_checkliste:
+  - Reference
+  - Title
+  - Review question
+  - Where in the kit
+  - SoA
+  - Evidence seen
+  - Sample
+  - Result
+  - Finding ID
+spalten_feststellungen:
+  - Finding ID
+  - Audit
+  - Date
+  - Grading
+  - Clause reference
+  - Finding
+  - Objective evidence
+  - Owner
+  - Transferred to D-22
+listen:
+  unabhaengigkeit: [external contractor, reciprocal audit with partner company, internal from another department]
+  status: [planned, conducted, report completed, postponed]
+  ergebnis: [conforming, observation, NC minor, NC major, not audited, "not auditable yet, planned"]
+  einstufung: [NC major, NC minor, observation, improvement]
+  art:
+    intern: internal audit
+    extern-stage1: stage 1 audit
+    extern-stage2: stage 2 audit
+    ueberwachung: surveillance audit
+soa:
+  ja: applicable
+  nein: not applicable
+  offen: decision pending
+  fehlt: not in the SoA
+  status:
+    offen: open
+    geplant: planned
+    teilweise: partly implemented
+    umgesetzt: implemented
+    wirksam: effective
+programm_vorschlag:
+  - ["Year 1", "AU-001 full audit before stage 1, then a supplementary audit on 9.3 and A.2.4", "4.1 to 10.2 (all); processes in scope: all from D-27", "A.2 to A.10 (all applicable)", "ISO/IEC 42001, own rules (D-03, D-15), laws and contracts", "Document review, interviews, samples for each AI system", "[[MM/YYYY, well before stage 1]]", "[[Name]]", "", "Top management", "", "planned"]
+  - ["Year 2", "AU-002 partial audit", "4.1 to 5.3, 6.1.1 to 6.3, 8.2 to 8.4, 9.1 to 10.2; processes in scope: [[PR-xx]]", "A.2, A.3, A.4, A.5, A.9", "ISO/IEC 42001, own rules", "Interviews, samples, effectiveness of corrections from AU-001", "[[MM/YYYY, before surveillance audit]]", "[[Name]]", "", "Top management", "", "planned"]
+  - ["Year 3", "AU-003 partial audit", "6.1.2 to 6.1.4, 7.1 to 8.4, 9.1 to 10.2; processes in scope: [[PR-xx]]", "A.6, A.7, A.8, A.10", "ISO/IEC 42001, own rules", "Interviews, samples, effectiveness of corrections from AU-002", "[[MM/YYYY, before recertification]]", "[[Name]]", "", "Top management", "", "planned"]
+plan_rahmen:
+  - [Audit, "[[AU-001, title]]"]
+  - [Objective, "[[for example check readiness for stage 1, confirm effectiveness of the AIMS]]"]
+  - [Scope, "[[Clauses, controls, sites, AI systems]]"]
+  - [Criteria, "[[ISO/IEC 42001, own rules, laws, contracts]]"]
+  - [Date and place, "[[DD/MM/YYYY, place or remote]]"]
+  - [Auditor, "[[Name, independence]]"]
+  - [Auditees, "[[Names and roles]]"]
+  - [Method and samples, "[[Interviews, documents, demonstration on the system; AI systems in the sample]]"]
+  - [Report to, "[[Top management, AIMS lead]]"]
+plan_ablauf:
+  - ["08:30", Opening meeting, "Objective, scope, schedule, confidentiality", "Top management, AIMS lead"]
+  - ["08:45", "Context, scope, leadership", "4.1 to 5.3, A.2, A.3", "Top management, AIMS lead"]
+  - ["09:45", "Risks, impact assessments, objectives", "6.1.1 to 6.3, A.5", "AIMS lead, risk owners"]
+  - ["11:00", "Resources, competence, communication, documents", "7.1 to 7.5, A.4.6", "Human resources, AIMS lead"]
+  - ["12:00", Break, "", ""]
+  - ["13:00", "AI systems in practice (sample)", "8.1 to 8.4, A.4, A.6, A.7, A.9", "System owners, users"]
+  - ["14:30", "Information, reporting, suppliers", "A.8, A.10", "Purchasing, communications, customer service"]
+  - ["15:15", "Measurement, evaluation, improvement", "9.1, 9.3, 10.1, 10.2 (9.2 by another person)", "AIMS lead"]
+  - ["16:00", Auditor preparation, "Sort results, write up findings", ""]
+  - ["16:30", Closing meeting, "Results, findings, next steps", "Top management, AIMS lead"]
+fragen:
+  K-4.1: "Which internal and external topics affect the AIMS, and has climate change been considered? Has the role of the organization been determined and justified for each AI system?"
+  K-4.2: "Have the interested parties and their requirements been recorded? Has a decision been made for each requirement on whether the AIMS takes it up?"
+  K-4.3: "Is the scope approved and available? Do boundaries, interfaces and exclusions fit the context, the interested parties and the AI inventory?"
+  K-4.4: "Are the AIMS processes and how they interact described, and do they run that way in practice? Sample: one process from trigger to result."
+  K-5.1: "What shows that top management stands behind the AIMS? Look for approvals, resource decisions, participation in the management review and its own communication."
+  K-5.2: "Is the AI policy approved, suited to the organization, with a framework for objectives and the necessary commitments? Has it been communicated and is it available?"
+  K-5.3: "Who makes sure the AIMS conforms to the standard, and who reports to top management on performance? Do the people interviewed know their role?"
+  K-6.1.1: "Were risks and opportunities derived from the context and the requirements? Are there criteria for acceptable risks, and planned actions with an effectiveness check?"
+  K-6.1.2: "Is there a fixed method that gives comparable results when repeated? Were consequences for the organization, for individuals and for society considered?"
+  K-6.1.3: "Does every risk above the acceptance threshold have a treatment with controls? Is the statement of applicability fully justified, and are the plan and the residual risks approved?"
+  K-6.1.4: "Is it defined when and how impact assessments are carried out? Do they exist for the AI systems concerned, and have the results fed into the risk assessment?"
+  K-6.2: "Are the AI objectives measurable and aligned with the policy? Is it planned what will be done, with which resources, by whom and by when, and how success is measured?"
+  K-6.3: "How were changes to the AIMS planned and carried out since the last audit? Sample: one change with purpose, consequences and approval."
+  K-7.1: "Have staff, time, budget and tools for the AIMS been determined and provided? Were there bottlenecks, and how were they resolved?"
+  K-7.2: "Have competence needs been determined for each role? Is there evidence, and has the effect of training been evaluated?"
+  K-7.3: "Do the staff interviewed know the AI policy, their own contribution and the consequences if rules are not followed?"
+  K-7.4: "Is it defined what is communicated about the AIMS internally and externally, when, to whom and how? Is there evidence that communication took place?"
+  K-7.5: "Are documents and records identified, reviewed, approved, protected and retrievable in their valid version? Are external documents controlled?"
+  K-8.1: "Are planned processes and controls applied in daily work? How are changes and outsourced services managed?"
+  K-8.2: "Were risk assessments repeated at the defined intervals and after significant changes? Are the results filed with a date?"
+  K-8.3: "Has the treatment plan been implemented, and is there evidence that the actions work?"
+  K-8.4: "Were impact assessments repeated after changes and at the defined intervals? Are the results retained?"
+  K-9.1: "Is it defined what is measured and evaluated, how and when? Are there results, and has the performance of the AIMS been evaluated?"
+  K-9.2: "Is there an audit programme with scope, criteria and frequency? Are the auditors objective, and were the results reported to management?"
+  K-9.3: "Has top management reviewed the AIMS at planned intervals? Were all required inputs covered, and were decisions on improvements and changes recorded?"
+  K-10.1: "How is the AIMS improved on an ongoing basis? Look for an improvement register and suggestions that have been implemented."
+  K-10.2: "Are nonconformities corrected promptly, investigated for their cause and resolved for good? Was the effectiveness of the correction checked?"
+  A.2.2: "Is there an approved AI policy, and do the staff interviewed know it?"
+  A.2.3: "Is it recorded which other policies touch on AI and how conflicts were resolved?"
+  A.2.4: "Who reviews the AI policy, and how often? Is there a record of the last review?"
+  A.3.2: "Have AI roles and responsibilities been assigned and made known? Sample: interview one role holder."
+  A.3.3: "Is there a known channel that can be used confidentially to raise concerns about AI? How were the reports received handled?"
+  A.4.2: "Are the resources of each AI system recorded, including for purchased and embedded AI?"
+  A.4.3: "Is the data for each system described with its origin, type and protection needs?"
+  A.4.4: "Are the models, services, versions and important tools known for each system?"
+  A.4.5: "Are the operating location, infrastructure and dependencies described for each system?"
+  A.4.6: "Are the roles involved in each system described with the knowledge they need?"
+  A.5.2: "Is there a procedure with triggers, responsibilities, approval and repetition of impact assessments?"
+  A.5.3: "Are the results of impact assessments documented, approved and retained?"
+  A.5.4: "Were impacts on individuals and groups assessed, including vulnerable groups?"
+  A.5.5: "Were impacts on society, such as on the environment or public opinion, assessed or excluded with a justification?"
+  A.6.1.2: "Development only: have objectives for responsible development been set and built into the development process?"
+  A.6.1.3: "Development only: is the development process defined with phases, checkpoints and approvals?"
+  A.6.2.2: "Are the requirements for every new or changed AI system recorded, including for purchased systems?"
+  A.6.2.3: "Are design and development documented so that decisions can be traced?"
+  A.6.2.4: "Are there test and acceptance criteria, and are test results available before deployment?"
+  A.6.2.5: "Was deployment planned and approved before production use? Sample: the most recent deployment."
+  A.6.2.6: "How are the operation and performance of AI systems monitored, and who responds to deviations?"
+  A.6.2.7: "Is the technical documentation needed by each audience available, for example for users, operations or customers?"
+  A.6.2.8: "Is it defined which events are logged and how long logs are kept? Do the logs actually exist?"
+  A.7.2: "Are there rules for handling data for the development and improvement of AI systems?"
+  A.7.3: "Is it recorded where data comes from, how it was obtained and whether the rights to use it exist?"
+  A.7.4: "Are data quality requirements defined and checked?"
+  A.7.5: "Can the provenance of the data be traced along its entire path?"
+  A.7.6: "Are the criteria and steps for data preparation defined and documented?"
+  A.8.2: "Do users receive the information they need on the purpose, limits and correct use of the AI system?"
+  A.8.3: "Can external parties report problems or concerns about an AI system, and are the reports handled?"
+  A.8.4: "Is it defined who informs whom through which channel in an AI incident?"
+  A.8.5: "Are information obligations towards customers, authorities and other third parties known and met?"
+  A.9.2: "Are there rules for the responsible use of AI systems, and are they followed? Sample: approval of a tool."
+  A.9.3: "Have objectives for responsible use been set and are they monitored?"
+  A.9.4: "Are AI systems used only for their intended use and in line with the provider's instructions?"
+  A.10.2: "Has it been agreed for each AI system what the organization, suppliers, partners and customers are responsible for?"
+  A.10.3: "Are AI suppliers assessed before selection and monitored during operation?"
+  A.10.4: "How are customer expectations and needs taken into account when AI is used?"
+titel_stichproben: "Samples: one AI system through every step and audit tests"
+hinweise_stichproben:
+  - "Choose one AI system, preferably with high risk or many users, and trace it through steps 1 to 7. External auditors often work exactly like this: they ask to be shown a system that has passed every stage."
+  - "Tests 8 to 13 uncover typical weaknesses that a document review misses. The column ‘Warning sign’ shows what to look out for. Ask for the last concrete case (‘Show me the last time that …’), not for the procedure."
+spalten_stichproben: [No., Step, Audit question, Warning sign, Evidence seen, Result]
+stichproben:
+  - ["Inventory (D-10)", "Is the selected system recorded with system owner, purpose, scope of action, model and version?", "System missing from the inventory, or details do not match the demonstration"]
+  - ["Risk (D-07)", "Are there dated risks for this system, with treatment and accepted residual risk?", "Only low risks; assessment older than the last significant change"]
+  - ["Impact assessment (D-09)", "Is the screening or the assessment available, and is it dated before the approval?", "Assessment dated after introduction; fairness section empty"]
+  - ["Statement of applicability (D-11)", "Are the controls referred to by the system's risks applicable, implemented and checked for effectiveness?", "Control excluded although a risk refers to it"]
+  - ["Approval (D-10, D-12)", "Who approved the system, when and with which conditions? Does this match the decision rights (D-04)?", "Self-approval at high risk; conditions not implemented"]
+  - ["Operation (D-12, D-05)", "Are samples, correction rate, logs and the review at the defined interval available?", "No measurement since introduction; review overdue"]
+  - ["Incidents and reports (D-14, D-22)", "Were reports on this system handled and lessons carried over into risks, rules or training?", "Report not closed; same cause several times"]
+  - ["Inventory complete", "Ask two departments which AI tools they use and compare with the inventory.", "Tool mentioned is missing from the inventory (shadow AI)"]
+  - ["Correction rate plausible", "Look at the correction or override rate of a system with human review.", "0% across many decisions (rubber-stamping) or a very high rate (system not fit for purpose)"]
+  - ["Training effect", "Ask a person a test question, e.g. ‘May customer data be entered into a freely available chatbot?’.", "Training rate 100%, but wrong answer"]
+  - ["Reporting channel in practice", "Trace one report or alert from receipt to closure.", "No documented response; deadline missed"]
+  - ["Earlier findings", "Sample closed findings: is effectiveness evidenced and has the problem not recurred?", "Closed without effectiveness check; deviation repeated"]
+  - ["Management review", "Do the minutes contain decisions with owners and deadlines?", "Only noted, no decisions"]

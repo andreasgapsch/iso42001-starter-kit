@@ -1,0 +1,229 @@
+# D-16 Suppliers and purchased AI
+modul_praefix_leer: "Only with the EU AI Act module:"
+modul_praefix: "EU AI Act:"
+modul_hinweis: "With review question PF-10 we clarify whether the supplier is the provider of an AI system or of a general-purpose AI model. E-03 and E-05 show the supplier's obligations and our obligations as deployer."
+eb_titel: Supplementary sheet to supplier management
+eb_einleitung: "This workbook extends our existing supplier procedure to cover purchased AI. The following points apply in addition in the procedure and in the supplier register; everything else remains unchanged."
+eb_abschnitte:
+  - "**Flag AI suppliers:** add the columns ‘AI systems’, ‘Review status’ and ‘Next review’ from the ‘Suppliers’ sheet to the supplier register."
+  - "**Review items:** add the review questions to the pre-purchase assessment."
+  - "**Contract clauses:** add the checklist to the contract review."
+  - "**Allocate responsibilities:** for each AI system, record what lies with the supplier, with us and with the customer (A.10.2)."
+  - "**Monitoring:** review AI suppliers at least once a year and whenever there is cause (rule in the ‘Suppliers’ sheet)."
+blaetter:
+  lieferanten: Suppliers
+  fragen: Review questions
+  klauseln: Contract clauses
+  verantwortung: Responsibilities
+  dienste: Services
+titel_lieferanten: "Suppliers of AI systems and AI services"
+titel_lieferanten_eb: "AI suppliers (supplement to the supplier register)"
+titel_fragen: "Review questions before purchase and at reassessment"
+titel_klauseln: "Contract clause checklist"
+titel_verantwortung: "Allocation of responsibilities (A.10.2)"
+titel_dienste: "Services, plans and functions"
+hinweise_dienste:
+  - "One row per purchased service or tool from the AI inventory (D-10). Commitments on training, retention and contract depend on the plan, not on the provider: the same provider has free, personal, business and enterprise offerings with different terms. If a company uses two plans of the same provider, it keeps two rows and answers the review questions for the plan it approves."
+  - "Confidential or stricter data do not belong in a free or personal plan; it lacks a data processing agreement and commitments on training."
+  - "Functions: record for each function whether it is switched on or off, e.g. web search, code execution, file upload, memory, connectors, own assistants and agents, sharing outside. Functions not recorded count as unclarified, not as switched off."
+  - "Source of the information: reference at the manufacturer or provider (terms of contract, system card, admin console) with the date retrieved. Information from third-party collections does not replace the manufacturer's source."
+spalten_dienste: [ID, Service or tool, Supplier, Plan or type of contract, Highest permitted data class, "Functions (on, off)", Retirement by the provider, "Source of information, retrieved on"]
+hinweise_lieferanten:
+  - "‘Supplier’ means whoever supplies the system to you; ‘provider’ is the role under the AI Act. Both can be the same company."
+  - "One row per supplier that supplies AI or uses AI in its service, including AI embedded in software. The AI systems are listed in the AI inventory (D-10)."
+regel_ueberwachung: "Rule: we review AI suppliers before purchase, then at least once a year, and also after an incident, a model change, new subcontractors or changed contract terms."
+hinweise_fragen:
+  - "Answer the questions from the supplier's documentation or by asking the supplier. ‘yes’ means: met. A ‘no’ leads to a condition, a risk in D-07 or rejection."
+  - "PF-16 to PF-21 mainly concern generative AI (assistants, chatbots, platforms billed by usage). For a public chatbot on a cloud platform, PF-16, PF-19 and PF-21 are the most important."
+  - "PF-22, PF-23, PF-25 and PF-26 concern AI that acts (agents, connectors, memory); without such functions, ‘yes’ with the remark ‘not used’ is enough. PF-24 and PF-27 apply to every service."
+  - "Warning signs during the review: thin or outdated documentation, changes without notice, no information on security, unclear or changing subcontractors. Record such observations in the remarks and consider a risk in D-07."
+hinweise_klauseln:
+  - "For each supplier, check whether the contract contains the clause. For standard contracts of large providers, the reference in the terms and conditions is sufficient."
+hinweise_verantwortung:
+  - "The suggestions fit a typical SaaS service. Adapt the allocation for each AI system; copy the sheet if it differs a lot. The ‘Customer’ column applies only to AI in services for customers."
+spalten_lieferanten: [L-ID, Name, Service, AI systems, Review status, "Reviewed by, on", Next review, Remarks]
+spalten_fragen: [No., Topic, Review question, Why it matters, Remarks]
+spalten_klauseln: [No., Clause, Review question, "Reference, remarks"]
+spalten_verantwortung: [Task, Supplier, Us, Customer, Remarks]
+spalte_antwort: Met
+spalte_im_vertrag: In contract
+listen:
+  pruefstatus: [open, under review, reviewed, with conditions, rejected]
+  antwort: ["yes", "no", open]
+  klausel: ["yes", "no", open, not needed]
+  verantwortung: [responsible, contributing, informed, none]
+fragen:
+  PF-01:
+    thema: Training on our data
+    frage: "Is it ruled out that the provider uses our inputs, files and outputs to train or improve its models, or can this be switched off?"
+    warum: "Otherwise confidential content can turn up in outputs for others."
+  PF-02:
+    thema: Storage location and region
+    frage: "Do we know in which countries data is stored and processed, and can we choose a region, for example Switzerland or the EU?"
+    warum: "Data protection, customer contracts and confidentiality depend on the location."
+  PF-03:
+    thema: Retention and deletion
+    frage: "Are retention periods defined for inputs, outputs and logs, and does the provider delete data on request with proof?"
+    warum: "Data should not be kept longer than necessary."
+  PF-04:
+    thema: Subcontractors
+    frage: "Is there a list of subcontractors, including the providers of the models used, and are changes announced in advance?"
+    warum: "Many services pass data on to the developer of the model."
+  PF-05:
+    thema: Documentation
+    frage: "Does the provider describe the purpose, capabilities, limits and known risks of the system well enough for us to inform our users? For AI that contributes to decisions about people: does the provider disclose the results of its tests for quality and bias?"
+    warum: "Basis for tests, risks and information for users (D-12, D-14)."
+  PF-06:
+    thema: Notice of changes
+    frage: "Does the provider announce model changes and significant changes in functionality at least [[30]] days in advance, and can we keep a tested model version for a transition period?"
+    frage_firma: "Does the provider announce model changes and significant changes in functionality with reasonable notice, and can we keep a tested model version for a transition period?"
+    warum: "After changes, we have to test again (D-12)."
+  PF-07:
+    thema: Incident reporting
+    frage: "Does the provider report security and AI incidents that affect us to a named contact within a defined deadline?"
+    warum: "We ourselves have to meet deadlines towards customers and authorities (D-14)."
+  PF-08:
+    thema: Security evidence
+    frage: "Are current certificates or audit reports available, for example ISO/IEC 27001, ISO/IEC 42001 or SOC 2, and do they cover the service we use?"
+    warum: "Saves our own audits if the scope fits."
+  PF-09:
+    thema: Data protection
+    frage: "Is there a data processing agreement, and are transfers to other countries legally safeguarded?"
+    warum: "Mandatory as soon as personal data enters the service."
+  PF-10:
+    thema: Role under the EU AI Act
+    frage: "Has the provider clarified its role under the EU AI Act, and does it supply the documents we need as deployer?"
+    warum: "Determines which obligations lie with the provider and which with us."
+  PF-11:
+    thema: Logs
+    frage: "Do we receive usage and event logs to the extent and for the period needed (D-12)?"
+    warum: "Without logs, incidents and misuse cannot be investigated."
+  PF-12:
+    thema: Central administration
+    frage: "Can we control features, users and data access centrally, for example through an admin console and single sign-on?"
+    warum: "This is the only way to enforce the rules from D-15 technically."
+  PF-13:
+    thema: Rights to outputs
+    frage: "Is it settled who owns the outputs and who is liable if outputs infringe third-party rights?"
+    warum: "Protects against claims under copyright or trademark law."
+  PF-14:
+    thema: Test before purchase
+    frage: "Can we test the system with our own typical cases before purchase?"
+    warum: "Testing before use (D-12) requires test access."
+  PF-15:
+    thema: Exit and emergencies
+    frage: "Can we export our data in a common format and end the service without great effort, with deletion after the contract ends? For critical services, are there commitments on availability and support in an emergency?"
+    warum: "Prevents lock-in and leftover data at the provider; critical services need a fallback (D-12)."
+  PF-16:
+    thema: Protection against manipulated inputs
+    frage: "Does the provider describe how the service deals with manipulated inputs in chats, documents and emails, does it test this regularly (for example penetration tests) and does it accept reports on this in its vulnerability programme?"
+    warum: "Hidden instructions cannot be prevented entirely; what matters is how the provider limits the damage."
+  PF-17:
+    thema: Permissions in search
+    frage: "Does the system only see content that the person concerned has access to, and is this checked during the search, not only when results are displayed?"
+    warum: "Otherwise, other people's or confidential data appears in answers."
+  PF-18:
+    thema: Extensions and actions
+    frage: "Can we block or approve extensions, connectors, agents and actions individually, make actions with external effect subject to confirmation, and do we receive logs of the actions carried out?"
+    warum: "Limits the scope of AI that acts; supplements PF-11 and PF-12."
+  PF-19:
+    thema: Costs and usage
+    frage: "Can usage and costs be limited per account or application, with a hard cost cap rather than just a warning?"
+    warum: "Protects against cost explosions through abuse, especially with usage-based billing."
+  PF-20:
+    thema: Display of answers
+    frage: "Are external images, links and previews in answers loaded automatically, and can this be restricted?"
+    warum: "Automatically loaded content is a known path for data leakage."
+  PF-21:
+    thema: Model, version and components
+    frage: "Does the provider name the model, version and main components, does it fix known vulnerabilities within a set period, and are the licence and origin of open models and datasets clarified?"
+    warum: "Basis for reassessment when the model changes (D-12) and for the rights to use it."
+  PF-22:
+    thema: Tool servers and connectors
+    frage: "Are the origin, review and version of third-party tool servers, connectors and extensions used by the service known, can we restrict them to approved entries with a fixed version, and are the permissions of assistants in the browser or on the desktop defined?"
+    warum: "Descriptions and updates of third-party tools can contain instructions that an agent follows."
+  PF-23:
+    thema: Identity of agents
+    frage: "Do agents act with their own identity or with the permissions of the triggering person, with short-lived access instead of a service account with full permissions, and can we trace which agent did what?"
+    warum: "Otherwise an agent reaches further than the person using it, and actions cannot be attributed to anyone."
+  PF-24:
+    thema: Provider access to content
+    frage: "Is it disclosed who at the provider or its service providers can view inputs, files and results (e.g. for abuse review, labelling or troubleshooting), under which conditions and how this is logged?"
+    warum: "Human access is a separate way for confidential data to leave the company."
+  PF-25:
+    thema: Caches and memory
+    frage: "Are caches, memory and shared workspaces separated between customers and between people, and can stored entries be viewed and deleted?"
+    warum: "Otherwise content of one person or another customer appears in someone else's answers."
+  PF-26:
+    thema: Emergency stop and withdrawal of permissions
+    frage: "Can we pause agents and automations centrally and withdraw their access and permissions immediately, also outside office hours?"
+    warum: "After a wrong action, what counts is how quickly further actions can be stopped (D-12)."
+  PF-27:
+    thema: Terms of use and licence restrictions
+    frage: "Do the provider's terms of use allow our use, e.g. without a ban on automated decisions about people or for our industry, and do open models have no restrictions by territory, business or number of users that exclude us?"
+    warum: "Use against the terms or the licence can cost access and give rise to claims."
+klauseln:
+  VK-01: { klausel: "No use of our data to train or improve models without written consent", bezug: PF-01 }
+  VK-02: { klausel: "Location and region of storage and processing defined; changes only after notice", bezug: PF-02 }
+  VK-03: { klausel: "Retention periods, deletion on request, and return or deletion at the end of the contract with confirmation", bezug: "PF-03, PF-15" }
+  VK-04: { klausel: "List of subcontractors, notice of changes and right to object", bezug: PF-04 }
+  VK-05: { klausel: "Notice of model changes and significant changes with reasonable lead time", bezug: PF-06 }
+  VK-06: { klausel: "Reporting of security and AI incidents within an agreed deadline to a named contact", bezug: PF-07 }
+  VK-07: { klausel: "Data processing agreement under the DSG (Swiss Federal Act on Data Protection) and, if applicable, the GDPR; safeguards for transfers abroad", bezug: PF-09 }
+  VK-08: { klausel: "Confidentiality, including for the provider's staff and subcontractors", bezug: PF-01 }
+  VK-09: { klausel: "Provision of documentation, logs and support with requests from authorities or customers", bezug: "PF-05, PF-10, PF-11" }
+  VK-10: { klausel: "Right to current audit reports or certificates, or alternatively a right to information or audit", bezug: PF-08 }
+  VK-11: { klausel: "Rights to outputs and indemnity against third-party claims", bezug: PF-13 }
+  VK-12: { klausel: "Availability, support and emergency support, data export and exit without disproportionate costs", bezug: PF-15 }
+  VK-13: { klausel: "Appropriate security actions against abusive and manipulated inputs, evidenced by regular security tests; known vulnerabilities fixed within an agreed period", bezug: "PF-16, PF-21" }
+  VK-14: { klausel: "Enforcement of our users' access rights in search and answers", bezug: PF-17 }
+  VK-15: { klausel: "Usage limits or a cost cap and notification when they are exceeded", bezug: PF-19 }
+  VK-16: { klausel: "Access by the provider and its service providers to our content only for a defined purpose, logged and under confidentiality", bezug: PF-24 }
+  VK-17: { klausel: "Separation of our data from other customers also in caches, memory and shared workspaces", bezug: PF-25 }
+  VK-18: { klausel: "Pausing of agents and immediate withdrawal of their access and permissions at our request", bezug: "PF-23, PF-26" }
+  VK-19: { klausel: "Notice of changes to the terms of use that restrict our use, with a reasonable period", bezug: PF-27 }
+verantwortung_vorschlag:
+  - ["Develop, train and test the model", responsible, none, none]
+  - ["Provide documentation on purpose, limits and risks", responsible, informed, none]
+  - ["Test the system with our own cases before use (D-12)", contributing, responsible, none]
+  - ["Define settings, access rights and users", contributing, responsible, none]
+  - ["Lawfulness and quality of input data (D-13)", none, responsible, contributing]
+  - ["Inform and train users (D-14, D-17)", contributing, responsible, none]
+  - ["Human review of outputs", none, responsible, contributing]
+  - ["Monitor operation and report malfunctions", contributing, responsible, informed]
+  - ["Availability, security and updates of the service", responsible, informed, none]
+  - ["Protection against manipulated inputs and abuse", responsible, contributing, none]
+  - ["Pause agents and withdraw their permissions", contributing, responsible, none]
+  - ["Generate and provide logs", responsible, informed, none]
+  - ["Retain and analyse logs", contributing, responsible, none]
+  - ["Report, resolve and analyse incidents", responsible, contributing, informed]
+  - ["Data protection: controller and processor", contributing, responsible, none]
+  - ["Deletion and return at the end of the contract", responsible, contributing, none]
+  - ["Inform customers about AI in our services (D-14)", none, responsible, informed]
+# Company document: responsibility matrix per group of AI systems by role (N-22)
+hinweis_verantwortung_firma: "The split applies to all systems in the group concerned. Deviations for individual suppliers are given in the ‘Remarks’ column."
+gruppe_betreiber: "Purchased AI systems and services (we as deployer): {systeme}"
+gruppe_anbieter: "Our own AI systems and products (we as provider): {systeme}"
+abweichung: "Different split agreed with {lieferant}"
+verantwortung_anbieter:
+  - ["Develop, train and test the model", none, responsible, none]
+  - ["Provide the foundation model or platform, if purchased (D-16)", responsible, informed, none]
+  - ["Prepare technical documentation and instructions for use for customers (D-12)", none, responsible, informed]
+  - ["Test the system before every version is approved (D-12)", contributing, responsible, none]
+  - ["Lawfulness and quality of training and test data (D-13)", contributing, responsible, none]
+  - ["Inform users about the AI (D-14)", none, responsible, contributing]
+  - ["Intended use and human oversight at the customer", none, informed, responsible]
+  - ["Input data in operation at the customer", none, informed, responsible]
+  - ["Analyse feedback and malfunctions, monitor performance", contributing, responsible, contributing]
+  - ["Report, resolve and analyse incidents", contributing, responsible, contributing]
+  - ["Provide updates and new model versions", contributing, responsible, informed]
+  - ["Protection against manipulated inputs and abuse in our own application", contributing, responsible, informed]
+# Company document: record of adoption instead of instructions
+eb_einleitung_firma: "This workbook extends our existing supplier procedure to cover purchased AI. The following points are implemented in the procedure and in the supplier register; everything else remains unchanged."
+eb_abschnitte_firma:
+  - "**AI suppliers flagged:** the supplier register contains the columns ‘AI systems’, ‘Review status’ and ‘Next review’ from the ‘Suppliers’ sheet."
+  - "**Review items:** the review questions are part of the pre-purchase assessment."
+  - "**Contract clauses:** the checklist is part of the contract review."
+  - "**Responsibilities allocated:** for each AI system, we have recorded what lies with the supplier, with us and with the customer (A.10.2)."
+  - "**Monitoring:** we review AI suppliers at least once a year and whenever there is cause (rule in the ‘Suppliers’ sheet)."
+eb_aufgenommen: "Incorporated into: {dokument}."

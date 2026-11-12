@@ -1,0 +1,17 @@
+# Landkarte der Regelwerke (Leitfaden Kapitel 7, Abbildung): Einordnung sprachneutral, Namen in
+# src/leitfaden/<sprache>/leitfaden.yaml (abbildungen.landkarte). Jeder Eintrag steht auch in der Tabelle des Kapitels.
+# spalte  0 Recht, 1 Norm (zertifizierbar), 2 Leitfaden oder Rahmenwerk (freiwillig)
+# zeile   0 Pflichten und Grundrechte, 1 Management von KI, 2 Sicherheit von Information und KI
+# im_kit  true: im Kit abgebildet (Vorlage, Modul oder Vorschläge); false: nicht abgebildet oder nur beobachtet
+regelwerke:
+  - { id: ai-act, spalte: 0, zeile: 0, im_kit: true }
+  - { id: datenschutz, spalte: 0, zeile: 0, im_kit: true }
+  - { id: ki-konvention, spalte: 0, zeile: 0, im_kit: false }
+  - { id: iso42001, spalte: 1, zeile: 1, im_kit: true }
+  - { id: nist-ai-rmf, spalte: 2, zeile: 1, im_kit: true }
+  - { id: iso27001, spalte: 1, zeile: 2, im_kit: true }
+  - { id: iso27090, spalte: 2, zeile: 2, im_kit: true }
+  - { id: owasp, spalte: 2, zeile: 2, im_kit: true }
+  - { id: mitre-atlas, spalte: 2, zeile: 2, im_kit: false }
+  - { id: enisa, spalte: 2, zeile: 2, im_kit: false }
+  - { id: csa, spalte: 2, zeile: 2, im_kit: false }

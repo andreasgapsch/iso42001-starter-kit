@@ -1,0 +1,290 @@
+# Katalog ISO/IEC 27001:2022 Anhang A (93 Controls).
+# Nur Nummern und Gliederung. Eigene Kurzbezeichnungen: src/i18n/{de,en}/iso27001.yaml.
+# Die Originaltitel der Norm werden bewusst nicht wiedergegeben.
+rahmenwerk: ISO27001
+ausgabe: "2022"
+themen:
+  - organisatorisch
+  - personen
+  - physisch
+  - technologisch
+controls:
+  - id: 27001-5.1
+    nummer: "5.1"
+    thema: organisatorisch
+  - id: 27001-5.2
+    nummer: "5.2"
+    thema: organisatorisch
+  - id: 27001-5.3
+    nummer: "5.3"
+    thema: organisatorisch
+  - id: 27001-5.4
+    nummer: "5.4"
+    thema: organisatorisch
+  - id: 27001-5.5
+    nummer: "5.5"
+    thema: organisatorisch
+  - id: 27001-5.6
+    nummer: "5.6"
+    thema: organisatorisch
+  - id: 27001-5.7
+    nummer: "5.7"
+    thema: organisatorisch
+  - id: 27001-5.8
+    nummer: "5.8"
+    thema: organisatorisch
+  - id: 27001-5.9
+    nummer: "5.9"
+    thema: organisatorisch
+  - id: 27001-5.10
+    nummer: "5.10"
+    thema: organisatorisch
+  - id: 27001-5.11
+    nummer: "5.11"
+    thema: organisatorisch
+  - id: 27001-5.12
+    nummer: "5.12"
+    thema: organisatorisch
+  - id: 27001-5.13
+    nummer: "5.13"
+    thema: organisatorisch
+  - id: 27001-5.14
+    nummer: "5.14"
+    thema: organisatorisch
+  - id: 27001-5.15
+    nummer: "5.15"
+    thema: organisatorisch
+  - id: 27001-5.16
+    nummer: "5.16"
+    thema: organisatorisch
+  - id: 27001-5.17
+    nummer: "5.17"
+    thema: organisatorisch
+  - id: 27001-5.18
+    nummer: "5.18"
+    thema: organisatorisch
+  - id: 27001-5.19
+    nummer: "5.19"
+    thema: organisatorisch
+  - id: 27001-5.20
+    nummer: "5.20"
+    thema: organisatorisch
+  - id: 27001-5.21
+    nummer: "5.21"
+    thema: organisatorisch
+  - id: 27001-5.22
+    nummer: "5.22"
+    thema: organisatorisch
+  - id: 27001-5.23
+    nummer: "5.23"
+    thema: organisatorisch
+  - id: 27001-5.24
+    nummer: "5.24"
+    thema: organisatorisch
+  - id: 27001-5.25
+    nummer: "5.25"
+    thema: organisatorisch
+  - id: 27001-5.26
+    nummer: "5.26"
+    thema: organisatorisch
+  - id: 27001-5.27
+    nummer: "5.27"
+    thema: organisatorisch
+  - id: 27001-5.28
+    nummer: "5.28"
+    thema: organisatorisch
+  - id: 27001-5.29
+    nummer: "5.29"
+    thema: organisatorisch
+  - id: 27001-5.30
+    nummer: "5.30"
+    thema: organisatorisch
+  - id: 27001-5.31
+    nummer: "5.31"
+    thema: organisatorisch
+  - id: 27001-5.32
+    nummer: "5.32"
+    thema: organisatorisch
+  - id: 27001-5.33
+    nummer: "5.33"
+    thema: organisatorisch
+  - id: 27001-5.34
+    nummer: "5.34"
+    thema: organisatorisch
+  - id: 27001-5.35
+    nummer: "5.35"
+    thema: organisatorisch
+  - id: 27001-5.36
+    nummer: "5.36"
+    thema: organisatorisch
+  - id: 27001-5.37
+    nummer: "5.37"
+    thema: organisatorisch
+  - id: 27001-6.1
+    nummer: "6.1"
+    thema: personen
+  - id: 27001-6.2
+    nummer: "6.2"
+    thema: personen
+  - id: 27001-6.3
+    nummer: "6.3"
+    thema: personen
+  - id: 27001-6.4
+    nummer: "6.4"
+    thema: personen
+  - id: 27001-6.5
+    nummer: "6.5"
+    thema: personen
+  - id: 27001-6.6
+    nummer: "6.6"
+    thema: personen
+  - id: 27001-6.7
+    nummer: "6.7"
+    thema: personen
+  - id: 27001-6.8
+    nummer: "6.8"
+    thema: personen
+  - id: 27001-7.1
+    nummer: "7.1"
+    thema: physisch
+  - id: 27001-7.2
+    nummer: "7.2"
+    thema: physisch
+  - id: 27001-7.3
+    nummer: "7.3"
+    thema: physisch
+  - id: 27001-7.4
+    nummer: "7.4"
+    thema: physisch
+  - id: 27001-7.5
+    nummer: "7.5"
+    thema: physisch
+  - id: 27001-7.6
+    nummer: "7.6"
+    thema: physisch
+  - id: 27001-7.7
+    nummer: "7.7"
+    thema: physisch
+  - id: 27001-7.8
+    nummer: "7.8"
+    thema: physisch
+  - id: 27001-7.9
+    nummer: "7.9"
+    thema: physisch
+  - id: 27001-7.10
+    nummer: "7.10"
+    thema: physisch
+  - id: 27001-7.11
+    nummer: "7.11"
+    thema: physisch
+  - id: 27001-7.12
+    nummer: "7.12"
+    thema: physisch
+  - id: 27001-7.13
+    nummer: "7.13"
+    thema: physisch
+  - id: 27001-7.14
+    nummer: "7.14"
+    thema: physisch
+  - id: 27001-8.1
+    nummer: "8.1"
+    thema: technologisch
+  - id: 27001-8.2
+    nummer: "8.2"
+    thema: technologisch
+  - id: 27001-8.3
+    nummer: "8.3"
+    thema: technologisch
+  - id: 27001-8.4
+    nummer: "8.4"
+    thema: technologisch
+  - id: 27001-8.5
+    nummer: "8.5"
+    thema: technologisch
+  - id: 27001-8.6
+    nummer: "8.6"
+    thema: technologisch
+  - id: 27001-8.7
+    nummer: "8.7"
+    thema: technologisch
+  - id: 27001-8.8
+    nummer: "8.8"
+    thema: technologisch
+  - id: 27001-8.9
+    nummer: "8.9"
+    thema: technologisch
+  - id: 27001-8.10
+    nummer: "8.10"
+    thema: technologisch
+  - id: 27001-8.11
+    nummer: "8.11"
+    thema: technologisch
+  - id: 27001-8.12
+    nummer: "8.12"
+    thema: technologisch
+  - id: 27001-8.13
+    nummer: "8.13"
+    thema: technologisch
+  - id: 27001-8.14
+    nummer: "8.14"
+    thema: technologisch
+  - id: 27001-8.15
+    nummer: "8.15"
+    thema: technologisch
+  - id: 27001-8.16
+    nummer: "8.16"
+    thema: technologisch
+  - id: 27001-8.17
+    nummer: "8.17"
+    thema: technologisch
+  - id: 27001-8.18
+    nummer: "8.18"
+    thema: technologisch
+  - id: 27001-8.19
+    nummer: "8.19"
+    thema: technologisch
+  - id: 27001-8.20
+    nummer: "8.20"
+    thema: technologisch
+  - id: 27001-8.21
+    nummer: "8.21"
+    thema: technologisch
+  - id: 27001-8.22
+    nummer: "8.22"
+    thema: technologisch
+  - id: 27001-8.23
+    nummer: "8.23"
+    thema: technologisch
+  - id: 27001-8.24
+    nummer: "8.24"
+    thema: technologisch
+  - id: 27001-8.25
+    nummer: "8.25"
+    thema: technologisch
+  - id: 27001-8.26
+    nummer: "8.26"
+    thema: technologisch
+  - id: 27001-8.27
+    nummer: "8.27"
+    thema: technologisch
+  - id: 27001-8.28
+    nummer: "8.28"
+    thema: technologisch
+  - id: 27001-8.29
+    nummer: "8.29"
+    thema: technologisch
+  - id: 27001-8.30
+    nummer: "8.30"
+    thema: technologisch
+  - id: 27001-8.31
+    nummer: "8.31"
+    thema: technologisch
+  - id: 27001-8.32
+    nummer: "8.32"
+    thema: technologisch
+  - id: 27001-8.33
+    nummer: "8.33"
+    thema: technologisch
+  - id: 27001-8.34
+    nummer: "8.34"
+    thema: technologisch

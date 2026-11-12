@@ -1,0 +1,1013 @@
+# Prozesskatalog des Kits: 27 AIMS-Prozesse (PR-01 bis PR-27) und 11 ISMS-Basisprozesse (PS-01 bis PS-11).
+# Sprachneutral: nur IDs, Schlüssel und Nummern. Titel, Zweck, Auslöser, Eingaben, Schritttexte, Ausgaben, Kennzahl
+# und Hilfe stehen in src/i18n/<sprache>/prozesse.yaml. Eigene Prozesse von KMU-CIO; Bezug zur Norm nur über
+# Abschnitts- und Control-Nummern (geprüft gegen src/kataloge/iso42001-*.yaml, kapitel-gemeinsam.yaml und
+# iso27001-controls.yaml in tests/unit/prozesse-katalog.test.ts).
+#
+# gruppe: fuehrung | kern | unterstuetzung | bewertung (Bewertung und Verbesserung)
+# art: gemeinsam (ein Prozess für ISMS und AIMS) | gemeinsam-ki (gemeinsamer Rahmen, KI-Inhalt ergänzt)
+#      | nur-aims | nur-isms (Basisprozess aus ISO/IEC 27001, im Pfad mit ISMS nur Verweis)
+# pflicht: pflicht (Kapitel 4 bis 10, nicht abwählbar) | control (aus Anhang A, abwählbar mit Begründung in D-11)
+#          | bedingt (nur wenn eine der Bedingungen zutrifft; Pfade im Projekt, [feld=wert] filtert Listen)
+# minimal_ohne_isms: nur bei nur-isms; true = Empfehlung des Kits (keine Normpflicht): auch ohne ISMS führen, weil KI-Controls darauf bauen
+#                    (Begründung je Prozess in i18n prozesse.<id>.ohne_isms)
+# eigner_rolle: Vorschlag für den Prozesseigner (Rollenbereich aus D-04)
+# rhythmus: Optionsgruppe rhythmus; null = ereignisgesteuert
+# normbezug_42001: Abschnitte (4.1) und Controls (A.6.2.6) von ISO/IEC 42001
+# normbezug_27001: Abschnitte (6.1.2) und Controls aus Anhang A (A.5.24) von ISO/IEC 27001
+# kit_dokumente: Vorlagen des Kits (src/kataloge/dokumente.yaml), in denen der Prozess umgesetzt und belegt wird
+# verbunden: Prozesse auf der anderen Seite (AIMS-Prozess zu ISMS-Basisprozess und umgekehrt)
+# gefuehrt_option: Wert der Optionsgruppe aimsProzesse (Geführter Modus E2), der diesem Prozess entspricht
+# kennzahl_vorschlag: einheit (prozent | anzahl | monate | tage | stunden), richtung (mindestens | hoechstens), soll
+# datenquelle: woher der Messwert der Kennzahl kommt (AF-098, Tor G44 scripts/pruefen/messplan.mts): vorlage (Kit-Vorlage) und
+#              spalte (Schlüssel des Spaltenkopfs in i18n vorlagen.<vorlage>, Listenindex als Zahl); die Methode in
+#              i18n prozesse.<id>.kennzahl_methode nennt Vorlage und Spaltenkopf. aufzeichnung: true = Aufzeichnung
+#              ausserhalb der Kit-Vorlagen (z. B. Protokolle), die Methode nennt sie
+#              feld: Pfad im Datenmodell (src/generiert/projekt.schema.json), aus dem der AIMS-Manager die Spalte füllt
+# ableitung: Felder im Projekt, aus denen die App die letzte Durchführung ableiten kann (jüngstes Datum gewinnt);
+#            leer = nur von Hand; [feld] ohne Wert filtert Einträge mit nicht leerem Feld; bei Dokumenten zählt auch die
+#            Bestätigung ohne Änderung (bestaetigt.am)
+# faellig_aus: Felder mit dem nächsten Termin (z. B. nächste Überprüfung der Leitlinie); sonst letzte Durchführung + Rhythmus
+# schritte: id, art (start | aufgabe | entscheidung | ende), bahn (Rolle), naechste (Nachfolger; bei Entscheidung
+#           zwei oder mehr, beschriftet in i18n prozesse.<id>.zweige), raci (R führt aus, A verantwortet, genau eine
+#           A je Aufgabe und Entscheidung, C wirkt mit, I wird informiert), verweis (anderer Prozess), entscheid (Freigabe
+#           nach Entscheidungsrechten D-04: einfuehren, restrisiko, ausnahme, ausserbetrieb; nach D-08: kurzpruefung durch
+#           die AIMS-Verantwortung, abschaetzung durch die Geschäftsleitung; Prüfregel H73)
+#
+# Rollen (Bahnen und RACI): Schlüssel der Optionsgruppe rollenBereich (D-04, Rolle.bereich); dazu Funktionen aus der
+# Optionsgruppe aimsRolle, die kein Rollenbereich abdeckt, und zwei Zusatzrollen mit Texten in i18n prozesse.rollen.
+rollen:
+  aus_aims_rolle: [gl, aims, it, hr, fachbereich, einkauf, kommunikation]
+  zusatz: [ki-eigner, mitarbeitende]
+gruppen: [fuehrung, kern, unterstuetzung, bewertung]
+arten: [gemeinsam, gemeinsam-ki, nur-aims, nur-isms]
+pflichtarten: [pflicht, control, bedingt]
+einheiten: [prozent, anzahl, monate, tage, stunden]
+
+prozesse:
+  # ---------------------------------------------------------------- Führung
+  - id: PR-01
+    gruppe: fuehrung
+    art: gemeinsam-ki
+    pflicht: pflicht
+    eigner_rolle: aims
+    rhythmus: jaehrlich
+    normbezug_42001: ["4.1", "4.2", "4.3", "4.4"]
+    normbezug_27001: ["4.1", "4.2", "4.3", "4.4"]
+    kit_dokumente: [D-01, D-02, D-24, E-01]
+    verbunden: []
+    kennzahl_vorschlag: { einheit: monate, richtung: hoechstens, soll: 12 }
+    datenquelle: [{ vorlage: D-26, spalte: register.spalten_dokumente.8, feld: dokumente.freigabe.am }]
+    ableitung: [organisation.geltungsbereich.freigabe.am, "dokumente[id=D-01].freigabe.am", "dokumente[id=D-02].freigabe.am"]
+    schritte:
+      - { id: PR-01.00, art: start, bahn: aims, naechste: [PR-01.01] }
+      - { id: PR-01.01, art: aufgabe, bahn: aims, naechste: [PR-01.02], raci: { aims: A, fachbereich: C, informationssicherheit: C } }
+      - { id: PR-01.02, art: aufgabe, bahn: aims, naechste: [PR-01.03], raci: { aims: A, recht: C } }
+      - { id: PR-01.03, art: aufgabe, bahn: aims, naechste: [PR-01.04], raci: { aims: A, fachbereich: C, recht: C } }
+      - { id: PR-01.04, art: aufgabe, bahn: aims, naechste: [PR-01.05], raci: { aims: A, gl: C } }
+      - { id: PR-01.05, art: aufgabe, bahn: aims, naechste: [PR-01.06], raci: { aims: A, it: C, informationssicherheit: C } }
+      - { id: PR-01.06, art: entscheidung, bahn: gl, naechste: [PR-01.07, PR-01.05], raci: { gl: A, aims: R } }
+      - { id: PR-01.07, art: aufgabe, bahn: aims, naechste: [PR-01.90], raci: { aims: A, mitarbeitende: I } }
+      - { id: PR-01.90, art: ende, bahn: aims }
+
+  - id: PR-02
+    gruppe: fuehrung
+    art: gemeinsam-ki
+    pflicht: pflicht
+    eigner_rolle: aims
+    rhythmus: jaehrlich
+    normbezug_42001: ["5.1", "5.2", A.2.2, A.2.3, A.2.4]
+    normbezug_27001: ["5.1", "5.2", A.5.1]
+    kit_dokumente: [D-03, D-17, D-21]
+    verbunden: []
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 95 }
+    datenquelle: [{ vorlage: D-17, spalte: spalten_schulungen.3 }, { vorlage: D-17, spalte: spalten_schulungen.4 }, { aufzeichnung: true }]
+    ableitung: [organisation.leitlinie.freigabe.am, organisation.leitlinie.kommuniziertAm, "dokumente[id=D-03].freigabe.am"]
+    faellig_aus: [organisation.leitlinie.naechsteUeberpruefung, "dokumente[id=D-03].naechsteUeberpruefung"]
+    schritte:
+      - { id: PR-02.00, art: start, bahn: aims, naechste: [PR-02.01] }
+      - { id: PR-02.01, art: aufgabe, bahn: aims, naechste: [PR-02.02], raci: { aims: A, gl: C } }
+      - { id: PR-02.02, art: aufgabe, bahn: aims, naechste: [PR-02.03], raci: { aims: A, informationssicherheit: C, datenschutz: C, recht: C } }
+      - { id: PR-02.03, art: entscheidung, bahn: gl, naechste: [PR-02.04, PR-02.01], raci: { gl: A, aims: R } }
+      - { id: PR-02.04, art: aufgabe, bahn: aims, naechste: [PR-02.05], raci: { aims: A, kommunikation: R, mitarbeitende: I } }
+      - { id: PR-02.05, art: aufgabe, bahn: mitarbeitende, naechste: [PR-02.06], raci: { aims: A, mitarbeitende: R } }
+      - { id: PR-02.06, art: aufgabe, bahn: aims, naechste: [PR-02.90], raci: { aims: A, gl: I } }
+      - { id: PR-02.90, art: ende, bahn: aims }
+
+  - id: PR-03
+    gruppe: fuehrung
+    art: gemeinsam
+    pflicht: pflicht
+    eigner_rolle: aims
+    rhythmus: jaehrlich
+    normbezug_42001: ["5.3", A.3.2, A.3.3]
+    normbezug_27001: ["5.3", A.5.2, A.5.3, A.5.4, A.6.8]
+    kit_dokumente: [D-04]
+    verbunden: []
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    # Spalte «Stellvertretung» in D-04 seit P14 (AF-102)
+    datenquelle: [{ vorlage: D-04, spalte: raci_kopf.0 }, { vorlage: D-04, spalte: raci_kopf.3 }, { vorlage: D-04, spalte: raci_kopf.4, feld: rollen.stellvertretung }]
+    ableitung: ["dokumente[id=D-04].freigabe.am"]
+    schritte:
+      - { id: PR-03.00, art: start, bahn: aims, naechste: [PR-03.01] }
+      - { id: PR-03.01, art: aufgabe, bahn: aims, naechste: [PR-03.02], raci: { aims: A, gl: C } }
+      - { id: PR-03.02, art: aufgabe, bahn: aims, naechste: [PR-03.03], raci: { aims: R, gl: A, hr: C } }
+      - { id: PR-03.03, art: aufgabe, bahn: aims, naechste: [PR-03.04], raci: { aims: A, risikomanagement: C, gl: C } }
+      - { id: PR-03.04, art: aufgabe, bahn: vorfall, naechste: [PR-03.05], raci: { vorfall: R, aims: A, hr: C } }
+      - { id: PR-03.05, art: entscheidung, bahn: gl, naechste: [PR-03.06, PR-03.02], raci: { gl: A, aims: R } }
+      - { id: PR-03.06, art: aufgabe, bahn: aims, naechste: [PR-03.07], raci: { aims: A, mitarbeitende: I } }
+      - { id: PR-03.07, art: aufgabe, bahn: hr, naechste: [PR-03.90], raci: { hr: R, aims: A } }
+      - { id: PR-03.90, art: ende, bahn: aims }
+
+  - id: PR-04
+    gruppe: fuehrung
+    art: gemeinsam-ki
+    pflicht: pflicht
+    eigner_rolle: berichterstattung
+    rhythmus: quartalsweise
+    normbezug_42001: ["6.2", "9.1"]
+    normbezug_27001: ["6.2", "9.1"]
+    kit_dokumente: [D-05]
+    verbunden: []
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 90 }
+    datenquelle: [{ vorlage: D-05, spalte: spalten_messwerte.0 }, { vorlage: D-05, spalte: spalten_messwerte.1, feld: ziele.messungen.datum }, { vorlage: D-05, spalte: spalten_messplan.3, feld: ziele.haeufigkeit }]
+    ableitung: [ziele.messungen.datum, kennzahlMessungen.datum]
+    schritte:
+      - { id: PR-04.00, art: start, bahn: aims, naechste: [PR-04.01] }
+      - { id: PR-04.01, art: aufgabe, bahn: aims, naechste: [PR-04.02], raci: { aims: A, gl: C, risikomanagement: C } }
+      - { id: PR-04.02, art: aufgabe, bahn: aims, naechste: [PR-04.03], raci: { aims: A, berichterstattung: C } }
+      - { id: PR-04.03, art: aufgabe, bahn: fachbereich, naechste: [PR-04.04], raci: { fachbereich: R, berichterstattung: A } }
+      - { id: PR-04.04, art: aufgabe, bahn: berichterstattung, naechste: [PR-04.05], raci: { berichterstattung: A, aims: C } }
+      - { id: PR-04.05, art: entscheidung, bahn: berichterstattung, naechste: [PR-04.07, PR-04.06], raci: { berichterstattung: A } }
+      - { id: PR-04.06, art: aufgabe, bahn: aims, naechste: [PR-04.07], raci: { aims: A, berichterstattung: R } }
+      - { id: PR-04.07, art: aufgabe, bahn: berichterstattung, naechste: [PR-04.90], raci: { berichterstattung: A, gl: I } }
+      - { id: PR-04.90, art: ende, bahn: berichterstattung }
+
+  - id: PR-05
+    gruppe: fuehrung
+    art: gemeinsam
+    pflicht: pflicht
+    eigner_rolle: aims
+    rhythmus: null
+    normbezug_42001: ["6.3"]
+    normbezug_27001: ["6.3"]
+    kit_dokumente: [D-26, D-02]
+    verbunden: []
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ vorlage: D-22, spalte: spalten_verbesserungen.3, feld: massnahmen.herkunft }, { vorlage: D-22, spalte: spalten_verbesserungen.9, feld: massnahmen.status }, { vorlage: D-26, spalte: register.spalten_aenderungen.5 }]
+    ableitung: [dokumente.aenderungen.datum, "massnahmen[herkunft.art=aenderung].erledigtAm"]
+    schritte:
+      - { id: PR-05.00, art: start, bahn: aims, naechste: [PR-05.01] }
+      - { id: PR-05.01, art: aufgabe, bahn: aims, naechste: [PR-05.02], raci: { aims: A } }
+      - { id: PR-05.02, art: aufgabe, bahn: aims, naechste: [PR-05.03], raci: { aims: A, risikomanagement: C, informationssicherheit: C } }
+      - { id: PR-05.03, art: aufgabe, bahn: aims, naechste: [PR-05.04], raci: { aims: A, gl: C } }
+      - { id: PR-05.04, art: entscheidung, bahn: gl, naechste: [PR-05.05, PR-05.91], raci: { gl: A, aims: R } }
+      - { id: PR-05.05, art: aufgabe, bahn: dokumentenlenkung, naechste: [PR-05.06], raci: { dokumentenlenkung: R, aims: A } }
+      - { id: PR-05.06, art: aufgabe, bahn: aims, naechste: [PR-05.07], raci: { aims: A, mitarbeitende: I } }
+      - { id: PR-05.07, art: aufgabe, bahn: aims, naechste: [PR-05.90], raci: { aims: A, gl: I } }
+      - { id: PR-05.90, art: ende, bahn: aims }
+      - { id: PR-05.91, art: ende, bahn: gl }
+
+  # ---------------------------------------------------------------- Kern
+  - id: PR-06
+    gruppe: kern
+    art: nur-aims
+    pflicht: control
+    eigner_rolle: inventar
+    rhythmus: halbjaehrlich
+    normbezug_42001: ["7.1", A.4.2, A.4.3, A.4.4, A.4.5, A.4.6]
+    normbezug_27001: [A.5.9]
+    kit_dokumente: [D-10]
+    verbunden: [PS-01]
+    gefuehrt_option: inventar
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 95 }
+    datenquelle: [{ vorlage: D-10, spalte: spalten_inventar.6, feld: kiSysteme.eigner }, { vorlage: D-10, spalte: spalten_ressourcen.2, feld: kiSysteme.ressourcen }, { vorlage: D-10, spalte: spalten_ressourcen.5 }]
+    ableitung: [kiSysteme.geaendertAm, kiSysteme.erfasstAm]
+    schritte:
+      - { id: PR-06.00, art: start, bahn: inventar, naechste: [PR-06.01] }
+      - { id: PR-06.01, art: aufgabe, bahn: inventar, naechste: [PR-06.02], raci: { inventar: A, it: C, einkauf: C } }
+      - { id: PR-06.02, art: aufgabe, bahn: fachbereich, naechste: [PR-06.03], raci: { inventar: A, fachbereich: R } }
+      - { id: PR-06.03, art: aufgabe, bahn: inventar, naechste: [PR-06.04], raci: { inventar: A } }
+      - { id: PR-06.04, art: aufgabe, bahn: inventar, naechste: [PR-06.05], raci: { inventar: A, fachbereich: C, ki-eigner: I } }
+      - { id: PR-06.05, art: aufgabe, bahn: ki-eigner, naechste: [PR-06.06], raci: { ki-eigner: R, inventar: A, it: C } }
+      - { id: PR-06.06, art: aufgabe, bahn: inventar, naechste: [PR-06.07], raci: { inventar: A, informationssicherheit: C } }
+      - { id: PR-06.07, art: aufgabe, bahn: inventar, naechste: [PR-06.90], raci: { inventar: A, fachbereich: C } }
+      - { id: PR-06.90, art: ende, bahn: inventar }
+
+  - id: PR-07
+    gruppe: kern
+    art: nur-aims
+    pflicht: control
+    eigner_rolle: aims
+    rhythmus: null
+    normbezug_42001: ["8.1", A.9.2, A.9.3, A.9.4]
+    normbezug_27001: [A.5.10, A.5.23]
+    kit_dokumente: [D-15, D-12, D-10]
+    verbunden: [PS-02]
+    gefuehrt_option: freigabe-werkzeuge
+    kennzahl_vorschlag: { einheit: tage, richtung: hoechstens, soll: 10 }
+    # Antrag und Entscheid in der Freigabeliste D-10 (Schemaversion 3, AF-104)
+    datenquelle: [{ vorlage: D-10, spalte: spalten_antrag.0, feld: kiSysteme.antragAm }, { vorlage: D-10, spalte: spalten_antrag.1, feld: kiSysteme.entscheidAm }]
+    ableitung: [kiSysteme.entscheidAm, kiSysteme.freigabe.am]
+    # Jeder Antrag durchläuft die Freigabekriterien aus D-15 Abschnitt 7, auch im Zweig ohne vertiefte Prüfung (Graphregel
+    # GR-06, M4-33): Lieferant und Daten, Kurzprüfung der Folgen nach D-08 und Eintrag der Risiken im Register D-07 (PR-07.02),
+    # Test mit eigenen Fällen nach D-12 (PR-07.11). Ohne vertiefte Prüfung entscheidet die AIMS-Verantwortung, bei tiefem
+    # Risiko allein, bei mittlerem mit der Eignerin oder dem Eigner des Systems (PR-07.05, Fakt freigabe.einfuehren, N7); der Zweig zur Geschäftsleitung (PR-07.09, PR-07.10) liegt
+    # nur hinter der vertieften Beurteilung PR-07.04 (Graphregel GR-05, gleiche Klasse wie A3-11).
+    schritte:
+      - { id: PR-07.00, art: start, bahn: fachbereich, naechste: [PR-07.01] }
+      - { id: PR-07.01, art: aufgabe, bahn: fachbereich, naechste: [PR-07.02], raci: { fachbereich: R, aims: A } }
+      - { id: PR-07.02, art: aufgabe, bahn: aims, naechste: [PR-07.11], raci: { aims: A, risikomanagement: R, folgenabschaetzung: R, informationssicherheit: C, datenschutz: C, einkauf: C }, verweis: [PR-08, PR-09] }
+      - { id: PR-07.11, art: aufgabe, bahn: fachbereich, naechste: [PR-07.03], raci: { fachbereich: R, aims: A } }
+      - { id: PR-07.03, art: entscheidung, bahn: aims, naechste: [PR-07.04, PR-07.05], raci: { aims: A } }
+      - { id: PR-07.04, art: aufgabe, bahn: risikomanagement, naechste: [PR-07.09], raci: { risikomanagement: R, aims: A, folgenabschaetzung: C }, verweis: [PR-08, PR-09] }
+      - { id: PR-07.09, art: entscheidung, bahn: aims, naechste: [PR-07.10, PR-07.05], raci: { aims: A, risikomanagement: C } }
+      - { id: PR-07.05, art: entscheidung, bahn: aims, naechste: [PR-07.06, PR-07.91], raci: { aims: A, ki-eigner: R }, entscheid: einfuehren }
+      - { id: PR-07.10, art: entscheidung, bahn: gl, naechste: [PR-07.06, PR-07.91], raci: { gl: A, aims: R, ki-eigner: C }, entscheid: einfuehren }
+      - { id: PR-07.06, art: aufgabe, bahn: inventar, naechste: [PR-07.07], raci: { inventar: R, aims: A } }
+      - { id: PR-07.07, art: aufgabe, bahn: aims, naechste: [PR-07.90], raci: { aims: A, fachbereich: I, mitarbeitende: I } }
+      - { id: PR-07.90, art: ende, bahn: inventar }
+      - { id: PR-07.91, art: ende, bahn: aims }
+
+  - id: PR-08
+    gruppe: kern
+    art: gemeinsam-ki
+    pflicht: pflicht
+    eigner_rolle: risikomanagement
+    rhythmus: jaehrlich
+    normbezug_42001: ["6.1.1", "6.1.2", "6.1.3", "8.2", "8.3"]
+    normbezug_27001: ["6.1.1", "6.1.2", "6.1.3", "8.2", "8.3"]
+    kit_dokumente: [D-06, D-07, D-11]
+    verbunden: []
+    gefuehrt_option: risiko
+    kennzahl_vorschlag: { einheit: anzahl, richtung: hoechstens, soll: 0 }
+    datenquelle: [{ vorlage: D-07, spalte: spalten_register.12 }, { vorlage: D-07, spalte: spalten_register.13, feld: risiken.behandlung }]
+    ableitung: [risiken.beurteiltAm]
+    schritte:
+      - { id: PR-08.00, art: start, bahn: risikomanagement, naechste: [PR-08.01] }
+      - { id: PR-08.01, art: aufgabe, bahn: aims, naechste: [PR-08.02], raci: { aims: A, risikomanagement: R, gl: C } }
+      - { id: PR-08.02, art: aufgabe, bahn: risikomanagement, naechste: [PR-08.03], raci: { risikomanagement: A, ki-eigner: C, informationssicherheit: C, datenschutz: C } }
+      - { id: PR-08.03, art: aufgabe, bahn: risikomanagement, naechste: [PR-08.04], raci: { risikomanagement: A, ki-eigner: C } }
+      - { id: PR-08.04, art: aufgabe, bahn: risikomanagement, naechste: [PR-08.05], raci: { risikomanagement: A, aims: C } }
+      - { id: PR-08.05, art: aufgabe, bahn: risikomanagement, naechste: [PR-08.07], raci: { risikomanagement: A } }
+      # Die Geschäftsleitung gibt den Behandlungsplan frei und nimmt Restrisiken über der Akzeptanzgrenze an (D-06 Abschnitt 3.5,
+      # D-04 Anlage A; Fakten freigabe.behandlungsplan und freigabe.restrisiko; M4-32). Restrisiken bis zur Grenze nimmt die
+      # Risikoeignerschaft im Register an (PR-08.08).
+      - { id: PR-08.07, art: aufgabe, bahn: gl, naechste: [PR-08.08], raci: { gl: A, risikomanagement: R }, entscheid: restrisiko }
+      - { id: PR-08.08, art: aufgabe, bahn: risikomanagement, naechste: [PR-08.90], raci: { risikomanagement: A, aims: I } }
+      - { id: PR-08.90, art: ende, bahn: risikomanagement }
+
+  - id: PR-09
+    gruppe: kern
+    art: nur-aims
+    pflicht: pflicht
+    eigner_rolle: folgenabschaetzung
+    rhythmus: null
+    normbezug_42001: ["6.1.4", "8.4", A.5.2, A.5.3, A.5.4, A.5.5]
+    normbezug_27001: [A.5.34]
+    kit_dokumente: [D-08, D-09, E-06]
+    verbunden: []
+    gefuehrt_option: folgen
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ vorlage: D-10, spalte: spalten_inventar.0 }, { vorlage: D-09, spalte: neubeurteilung.kopf.0, feld: folgenabschaetzungen.neubeurteilungen.am }, { vorlage: D-09, spalte: neubeurteilung.kopf.4, feld: folgenabschaetzungen.neubeurteilungen.freigabe }]
+    ableitung: [folgenabschaetzungen.freigabe.am, folgenabschaetzungen.neubeurteilungen.am, folgenabschaetzungen.triage.am]
+    schritte:
+      - { id: PR-09.00, art: start, bahn: ki-eigner, naechste: [PR-09.01] }
+      - { id: PR-09.01, art: aufgabe, bahn: folgenabschaetzung, naechste: [PR-09.02], raci: { folgenabschaetzung: A, ki-eigner: C } }
+      # Voller Weg: PR-09.03 bis PR-09.05, dann Freigabe durch die Geschäftsleitung (PR-09.09). Kurzfassung: Massnahmen und
+      # Rückprüfung gegen die Schwelle aus D-06 (PR-09.10, PR-09.08); ist sie erreicht, Rücksprung zu PR-09.03 (A3-11, AF-096).
+      # Die Freigabe der vollen Abschätzung ist nur über PR-09.03 bis PR-09.05 erreichbar (src/prozesse/graphregeln.yaml).
+      - { id: PR-09.02, art: entscheidung, bahn: folgenabschaetzung, naechste: [PR-09.03, PR-09.10], raci: { folgenabschaetzung: A } }
+      - { id: PR-09.03, art: aufgabe, bahn: folgenabschaetzung, naechste: [PR-09.04], raci: { folgenabschaetzung: A, ki-eigner: C, datenschutz: C, hr: C } }
+      - { id: PR-09.04, art: aufgabe, bahn: folgenabschaetzung, naechste: [PR-09.05], raci: { folgenabschaetzung: A, fachbereich: C, recht: C } }
+      - { id: PR-09.05, art: aufgabe, bahn: folgenabschaetzung, naechste: [PR-09.09], raci: { folgenabschaetzung: A, risikomanagement: I }, verweis: [PR-08] }
+      - { id: PR-09.10, art: aufgabe, bahn: folgenabschaetzung, naechste: [PR-09.08], raci: { folgenabschaetzung: A, risikomanagement: I }, verweis: [PR-08] }
+      - { id: PR-09.08, art: entscheidung, bahn: folgenabschaetzung, naechste: [PR-09.03, PR-09.06], raci: { folgenabschaetzung: A } }
+      - { id: PR-09.06, art: aufgabe, bahn: aims, naechste: [PR-09.07], raci: { aims: A, folgenabschaetzung: C }, entscheid: kurzpruefung }
+      - { id: PR-09.09, art: aufgabe, bahn: gl, naechste: [PR-09.07], raci: { gl: A, aims: R, folgenabschaetzung: C }, entscheid: abschaetzung }
+      - { id: PR-09.07, art: aufgabe, bahn: folgenabschaetzung, naechste: [PR-09.90], raci: { folgenabschaetzung: A, ki-eigner: I } }
+      - { id: PR-09.90, art: ende, bahn: folgenabschaetzung }
+
+  - id: PR-10
+    gruppe: kern
+    art: gemeinsam-ki
+    pflicht: pflicht
+    eigner_rolle: aims
+    rhythmus: jaehrlich
+    normbezug_42001: ["6.1.3", "8.1"]
+    normbezug_27001: ["6.1.3", "8.1"]
+    kit_dokumente: [D-11, D-23]
+    verbunden: []
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 80 }
+    datenquelle: [{ vorlage: D-11, spalte: spalten_soa.2, feld: controls.anwendbar }, { vorlage: D-11, spalte: spalten_soa.5, feld: controls.status }]
+    ableitung: ["dokumente[id=D-11].freigabe.am"]
+    schritte:
+      - { id: PR-10.00, art: start, bahn: risikomanagement, naechste: [PR-10.01] }
+      - { id: PR-10.01, art: aufgabe, bahn: risikomanagement, naechste: [PR-10.02], raci: { risikomanagement: R, aims: A } }
+      - { id: PR-10.02, art: aufgabe, bahn: aims, naechste: [PR-10.03], raci: { aims: A, informationssicherheit: C } }
+      - { id: PR-10.03, art: aufgabe, bahn: aims, naechste: [PR-10.04], raci: { aims: A } }
+      - { id: PR-10.04, art: aufgabe, bahn: aims, naechste: [PR-10.05], raci: { aims: A, ki-eigner: C } }
+      - { id: PR-10.05, art: aufgabe, bahn: aims, naechste: [PR-10.06], raci: { aims: A, risikomanagement: C } }
+      - { id: PR-10.06, art: entscheidung, bahn: gl, naechste: [PR-10.90, PR-10.03], raci: { gl: A, aims: R } }
+      - { id: PR-10.90, art: ende, bahn: aims }
+
+  - id: PR-11
+    gruppe: kern
+    art: nur-aims
+    pflicht: control
+    eigner_rolle: entwicklung
+    rhythmus: null
+    normbezug_42001: ["8.1", A.6.2.2, A.6.2.4, A.6.2.5, A.10.3]
+    normbezug_27001: [A.5.20, A.8.29]
+    kit_dokumente: [D-12, D-16, N-03]
+    verbunden: [PS-02]
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ vorlage: D-10, spalte: spalten_inventar.12, feld: kiSysteme.lebenszyklus }, { vorlage: D-10, spalte: spalten_freigabe.8, feld: kiSysteme.freigabe.am }]
+    ableitung: [kiSysteme.freigabe.am]
+    schritte:
+      - { id: PR-11.00, art: start, bahn: ki-eigner, naechste: [PR-11.01] }
+      - { id: PR-11.01, art: aufgabe, bahn: ki-eigner, naechste: [PR-11.02], raci: { ki-eigner: A, fachbereich: C } }
+      - { id: PR-11.02, art: aufgabe, bahn: lieferanten, naechste: [PR-11.03], raci: { lieferanten: R, aims: A }, verweis: [PR-20] }
+      - { id: PR-11.03, art: aufgabe, bahn: ki-eigner, naechste: [PR-11.04], raci: { ki-eigner: A, aims: C, it: C } }
+      - { id: PR-11.04, art: aufgabe, bahn: it, naechste: [PR-11.05], raci: { it: R, ki-eigner: A, fachbereich: C } }
+      - { id: PR-11.05, art: aufgabe, bahn: ki-eigner, naechste: [PR-11.08], raci: { ki-eigner: A, menschliche-aufsicht: C, it: C } }
+      - { id: PR-11.08, art: entscheidung, bahn: aims, naechste: [PR-11.09, PR-11.06], raci: { aims: A, risikomanagement: C } }
+      - { id: PR-11.06, art: entscheidung, bahn: aims, naechste: [PR-11.07, PR-11.03], raci: { aims: A, ki-eigner: R }, entscheid: einfuehren }
+      - { id: PR-11.09, art: entscheidung, bahn: gl, naechste: [PR-11.07, PR-11.03], raci: { gl: A, aims: R, ki-eigner: C }, entscheid: einfuehren }
+      - { id: PR-11.07, art: aufgabe, bahn: ki-eigner, naechste: [PR-11.90], raci: { ki-eigner: A, inventar: R, mitarbeitende: I } }
+      - { id: PR-11.90, art: ende, bahn: ki-eigner }
+
+  - id: PR-12
+    gruppe: kern
+    art: nur-aims
+    pflicht: control
+    eigner_rolle: menschliche-aufsicht
+    rhythmus: monatlich
+    normbezug_42001: ["8.1", A.6.2.6, A.6.2.8, A.9.4]
+    normbezug_27001: [A.8.15, A.8.16]
+    kit_dokumente: [D-12, N-03]
+    verbunden: [PS-06, PS-07, PS-09]
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 90 }
+    datenquelle: [{ vorlage: D-05, spalte: spalten_messwerte.0 }, { vorlage: D-05, spalte: spalten_messwerte.1, feld: ziele.messungen.datum }, { vorlage: D-05, spalte: spalten_ziele.11, feld: ziele.kiSysteme }, { vorlage: D-10, spalte: spalten_inventar.12, feld: kiSysteme.lebenszyklus }]
+    ableitung: ["ziele[kiSysteme].messungen.datum", "kennzahlMessungen[kennzahl=KZ-05].datum"]
+    schritte:
+      - { id: PR-12.00, art: start, bahn: menschliche-aufsicht, naechste: [PR-12.01] }
+      - { id: PR-12.01, art: aufgabe, bahn: menschliche-aufsicht, naechste: [PR-12.02], raci: { menschliche-aufsicht: R, ki-eigner: A } }
+      - { id: PR-12.02, art: aufgabe, bahn: menschliche-aufsicht, naechste: [PR-12.03], raci: { menschliche-aufsicht: R, ki-eigner: A } }
+      - { id: PR-12.03, art: aufgabe, bahn: it, naechste: [PR-12.04], raci: { it: R, ki-eigner: A, informationssicherheit: C } }
+      - { id: PR-12.04, art: entscheidung, bahn: menschliche-aufsicht, naechste: [PR-12.05, PR-12.06], raci: { menschliche-aufsicht: R, ki-eigner: A } }
+      - { id: PR-12.05, art: aufgabe, bahn: menschliche-aufsicht, naechste: [PR-12.06], raci: { menschliche-aufsicht: R, ki-eigner: A, vorfall: I }, verweis: [PR-19] }
+      - { id: PR-12.06, art: aufgabe, bahn: menschliche-aufsicht, naechste: [PR-12.07], raci: { menschliche-aufsicht: R, ki-eigner: A, aims: I } }
+      - { id: PR-12.07, art: aufgabe, bahn: ki-eigner, naechste: [PR-12.90], raci: { ki-eigner: A, aims: C } }
+      - { id: PR-12.90, art: ende, bahn: ki-eigner }
+
+  - id: PR-13
+    gruppe: kern
+    art: nur-aims
+    pflicht: control
+    eigner_rolle: aims
+    rhythmus: null
+    normbezug_42001: ["8.1", A.6.2.5, A.6.2.6]
+    normbezug_27001: [A.8.32]
+    kit_dokumente: [D-12, D-09, D-10]
+    verbunden: [PS-05, PS-08]
+    gefuehrt_option: aenderung
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ vorlage: D-10, spalte: spalten_inventar.17, feld: kiSysteme.geaendertAm }, { vorlage: D-09, spalte: neubeurteilung.kopf.0, feld: folgenabschaetzungen.neubeurteilungen.am }, { vorlage: D-09, spalte: neubeurteilung.kopf.4 }]
+    ableitung: [kiSysteme.geaendertAm]
+    # Freigabe der Änderung wie die Einführung nach D-12 (AF-088, A3-08): AIMS-Verantwortung, bei tiefem Risiko allein, bei
+    # mittlerem mit der Eignerin oder dem Eigner des Systems (PR-13.05, N7), bei hohem Risiko oder nach voller Folgenabschätzung die
+    # Geschäftsleitung (PR-13.07, PR-13.08). In PR-07.05, PR-11.06 und PR-13.05 steht ki-eigner als R: die verantwortliche
+    # Person (Eigner/in des Systems) bereitet Antrag und Umsetzung vor; mitentscheiden tut sie nur bei mittlerem Risiko.
+    schritte:
+      - { id: PR-13.00, art: start, bahn: ki-eigner, naechste: [PR-13.01] }
+      - { id: PR-13.01, art: aufgabe, bahn: ki-eigner, naechste: [PR-13.02], raci: { ki-eigner: A, it: C } }
+      - { id: PR-13.02, art: entscheidung, bahn: aims, naechste: [PR-13.03, PR-13.04], raci: { aims: A, ki-eigner: R } }
+      - { id: PR-13.03, art: aufgabe, bahn: risikomanagement, naechste: [PR-13.04], raci: { risikomanagement: R, aims: A, folgenabschaetzung: C }, verweis: [PR-08, PR-09] }
+      - { id: PR-13.04, art: aufgabe, bahn: it, naechste: [PR-13.07], raci: { it: R, ki-eigner: A } }
+      - { id: PR-13.07, art: entscheidung, bahn: aims, naechste: [PR-13.08, PR-13.05], raci: { aims: A, risikomanagement: C } }
+      - { id: PR-13.05, art: entscheidung, bahn: aims, naechste: [PR-13.06, PR-13.91], raci: { aims: A, ki-eigner: R }, entscheid: einfuehren }
+      - { id: PR-13.08, art: entscheidung, bahn: gl, naechste: [PR-13.06, PR-13.91], raci: { gl: A, aims: R, ki-eigner: C }, entscheid: einfuehren }
+      - { id: PR-13.06, art: aufgabe, bahn: ki-eigner, naechste: [PR-13.90], raci: { ki-eigner: A, inventar: R, mitarbeitende: I } }
+      - { id: PR-13.90, art: ende, bahn: ki-eigner }
+      - { id: PR-13.91, art: ende, bahn: ki-eigner }
+
+  - id: PR-14
+    gruppe: kern
+    art: nur-aims
+    pflicht: control
+    eigner_rolle: aims
+    rhythmus: null
+    # Einschätzung des Kits: Kein Control behandelt die Ausserbetriebnahme für sich; ausdrücklich steht sie nur in A.4.6, A.6.2.6 passt mittelbar
+    normbezug_42001: ["8.1", A.4.6, A.6.2.6]
+    normbezug_27001: [A.5.11, A.7.14, A.8.10]
+    kit_dokumente: [D-12, D-13, D-10]
+    verbunden: [PS-02, PS-11]
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ vorlage: D-10, spalte: spalten_inventar.13, feld: kiSysteme.status }, { aufzeichnung: true }]
+    ableitung: ["kiSysteme[lebenszyklus=ausserbetrieb].ausserbetrieb.am", "kiSysteme[status=abgeloest].ausserbetrieb.am"]
+    schritte:
+      - { id: PR-14.00, art: start, bahn: ki-eigner, naechste: [PR-14.01] }
+      - { id: PR-14.01, art: aufgabe, bahn: ki-eigner, naechste: [PR-14.02], raci: { ki-eigner: A, aims: C } }
+      - { id: PR-14.02, art: aufgabe, bahn: ki-eigner, naechste: [PR-14.03], raci: { ki-eigner: A, kommunikation: C, mitarbeitende: I } }
+      - { id: PR-14.03, art: aufgabe, bahn: ki-eigner, naechste: [PR-14.04], raci: { ki-eigner: A, fachbereich: R } }
+      - { id: PR-14.04, art: aufgabe, bahn: it, naechste: [PR-14.05], raci: { it: R, ki-eigner: A, informationssicherheit: C } }
+      - { id: PR-14.05, art: aufgabe, bahn: it, naechste: [PR-14.06], raci: { it: R, ki-eigner: A, datenschutz: C } }
+      - { id: PR-14.06, art: aufgabe, bahn: dokumentenlenkung, naechste: [PR-14.07], raci: { dokumentenlenkung: R, ki-eigner: A } }
+      - { id: PR-14.07, art: aufgabe, bahn: inventar, naechste: [PR-14.90], raci: { inventar: R, ki-eigner: A } }
+      - { id: PR-14.90, art: ende, bahn: ki-eigner }
+
+  - id: PR-15
+    gruppe: kern
+    art: nur-aims
+    pflicht: bedingt
+    bedingung: [organisation.entwickeltKi]
+    eigner_rolle: entwicklung
+    rhythmus: null
+    normbezug_42001: [A.6.1.2, A.6.1.3, A.6.2.2, A.6.2.3, A.6.2.4, A.6.2.5, A.6.2.7]
+    normbezug_27001: [A.8.25, A.8.26, A.8.27, A.8.28, A.8.29, A.8.30, A.8.31]
+    kit_dokumente: [D-12, D-13, E-08]
+    verbunden: [PS-10]
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ aufzeichnung: true }]
+    ableitung: []
+    schritte:
+      - { id: PR-15.00, art: start, bahn: ki-eigner, naechste: [PR-15.01] }
+      - { id: PR-15.01, art: aufgabe, bahn: ki-eigner, naechste: [PR-15.02], raci: { ki-eigner: A, aims: C, entwicklung: C } }
+      - { id: PR-15.02, art: aufgabe, bahn: entwicklung, naechste: [PR-15.03], raci: { entwicklung: R, ki-eigner: A } }
+      - { id: PR-15.03, art: aufgabe, bahn: entwicklung, naechste: [PR-15.04], raci: { entwicklung: R, ki-eigner: A, daten: C }, verweis: [PR-16] }
+      - { id: PR-15.04, art: aufgabe, bahn: entwicklung, naechste: [PR-15.05], raci: { entwicklung: R, ki-eigner: A, informationssicherheit: C } }
+      - { id: PR-15.05, art: aufgabe, bahn: ki-eigner, naechste: [PR-15.06], raci: { ki-eigner: A, entwicklung: R, fachbereich: C } }
+      - { id: PR-15.06, art: entscheidung, bahn: ki-eigner, naechste: [PR-15.07, PR-15.02], raci: { ki-eigner: A } }
+      - { id: PR-15.07, art: aufgabe, bahn: entwicklung, naechste: [PR-15.08], raci: { entwicklung: R, ki-eigner: A } }
+      - { id: PR-15.08, art: aufgabe, bahn: ki-eigner, naechste: [PR-15.90], raci: { ki-eigner: A, aims: I }, verweis: [PR-11] }
+      - { id: PR-15.90, art: ende, bahn: ki-eigner }
+
+  - id: PR-16
+    gruppe: kern
+    art: nur-aims
+    pflicht: control
+    eigner_rolle: daten
+    rhythmus: jaehrlich
+    normbezug_42001: [A.4.3, A.7.2, A.7.3, A.7.4, A.7.5, A.7.6]
+    normbezug_27001: [A.5.12, A.5.33, A.5.34, A.8.10, A.8.11]
+    kit_dokumente: [D-13, D-10]
+    verbunden: [PS-01, PS-06]
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ vorlage: D-10, spalte: spalten_freigabe.5, feld: kiSysteme.datenklasse }, { vorlage: D-13, spalte: systeme_kopf.1 }]
+    ableitung: ["dokumente[id=D-13].freigabe.am"]
+    schritte:
+      - { id: PR-16.00, art: start, bahn: ki-eigner, naechste: [PR-16.01] }
+      - { id: PR-16.01, art: aufgabe, bahn: ki-eigner, naechste: [PR-16.02], raci: { ki-eigner: R, daten: A } }
+      - { id: PR-16.02, art: aufgabe, bahn: daten, naechste: [PR-16.03], raci: { daten: A, recht: C, datenschutz: C } }
+      - { id: PR-16.03, art: entscheidung, bahn: daten, naechste: [PR-16.04, PR-16.05], raci: { daten: A } }
+      - { id: PR-16.04, art: aufgabe, bahn: datenschutz, naechste: [PR-16.05], raci: { datenschutz: R, daten: A } }
+      - { id: PR-16.05, art: aufgabe, bahn: daten, naechste: [PR-16.06], raci: { daten: A, ki-eigner: C } }
+      - { id: PR-16.06, art: aufgabe, bahn: daten, naechste: [PR-16.07], raci: { daten: A, informationssicherheit: C, it: C } }
+      - { id: PR-16.07, art: aufgabe, bahn: ki-eigner, naechste: [PR-16.90], raci: { ki-eigner: R, daten: A } }
+      - { id: PR-16.90, art: ende, bahn: daten }
+
+  - id: PR-17
+    gruppe: kern
+    art: nur-aims
+    pflicht: control
+    eigner_rolle: aims
+    rhythmus: null
+    normbezug_42001: ["7.4", A.8.2, A.8.5]
+    normbezug_27001: []
+    kit_dokumente: [D-14, E-07]
+    verbunden: []
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ vorlage: D-14, spalte: info_kopf.0 }, { vorlage: D-14, spalte: info_kopf.2, feld: kiSysteme.nutzerinformation }]
+    ableitung: ["dokumente[id=D-14].freigabe.am"]
+    schritte:
+      - { id: PR-17.00, art: start, bahn: ki-eigner, naechste: [PR-17.01] }
+      - { id: PR-17.01, art: aufgabe, bahn: ki-eigner, naechste: [PR-17.02], raci: { ki-eigner: A, aims: C } }
+      - { id: PR-17.02, art: aufgabe, bahn: ki-eigner, naechste: [PR-17.03], raci: { ki-eigner: A, recht: C } }
+      - { id: PR-17.03, art: aufgabe, bahn: ki-eigner, naechste: [PR-17.04], raci: { ki-eigner: A, it: R } }
+      - { id: PR-17.04, art: aufgabe, bahn: kommunikation, naechste: [PR-17.05], raci: { kommunikation: R, ki-eigner: A } }
+      - { id: PR-17.05, art: aufgabe, bahn: kommunikation, naechste: [PR-17.06], raci: { kommunikation: R, ki-eigner: A } }
+      - { id: PR-17.06, art: aufgabe, bahn: ki-eigner, naechste: [PR-17.90], raci: { ki-eigner: A, aims: I } }
+      - { id: PR-17.90, art: ende, bahn: ki-eigner }
+
+  - id: PR-18
+    gruppe: kern
+    art: gemeinsam-ki
+    pflicht: control
+    eigner_rolle: vorfall
+    rhythmus: quartalsweise
+    normbezug_42001: [A.3.3, A.8.3]
+    normbezug_27001: [A.6.8]
+    kit_dokumente: [D-04, D-14, D-22]
+    verbunden: []
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 90 }
+    datenquelle: [{ vorlage: D-22, spalte: spalten_meldungen.1, feld: meldungen.datum }, { vorlage: D-22, spalte: spalten_meldungen.8, feld: meldungen.bestaetigtAm }, { vorlage: D-22, spalte: spalten_meldungen.10, feld: meldungen.erledigtAm }]
+    ableitung: [meldungen.erledigtAm, meldungen.datum]
+    schritte:
+      - { id: PR-18.00, art: start, bahn: vorfall, naechste: [PR-18.01] }
+      - { id: PR-18.01, art: aufgabe, bahn: vorfall, naechste: [PR-18.02], raci: { vorfall: A } }
+      - { id: PR-18.02, art: aufgabe, bahn: vorfall, naechste: [PR-18.03], raci: { vorfall: A, aims: C } }
+      - { id: PR-18.03, art: entscheidung, bahn: vorfall, naechste: [PR-18.91, PR-18.04], raci: { vorfall: A } }
+      - { id: PR-18.04, art: aufgabe, bahn: ki-eigner, naechste: [PR-18.05], raci: { vorfall: A, ki-eigner: R } }
+      - { id: PR-18.05, art: aufgabe, bahn: vorfall, naechste: [PR-18.06], raci: { vorfall: A, ki-eigner: C } }
+      - { id: PR-18.06, art: aufgabe, bahn: vorfall, naechste: [PR-18.07], raci: { vorfall: R, aims: A }, verweis: [PR-27, PR-08] }
+      - { id: PR-18.07, art: aufgabe, bahn: aims, naechste: [PR-18.90], raci: { aims: A, vorfall: R } }
+      - { id: PR-18.90, art: ende, bahn: aims }
+      - { id: PR-18.91, art: ende, bahn: vorfall, verweis: [PR-19] }
+
+  - id: PR-19
+    gruppe: kern
+    art: gemeinsam-ki
+    pflicht: control
+    eigner_rolle: vorfall
+    rhythmus: null
+    normbezug_42001: ["10.2", A.8.4]
+    normbezug_27001: [A.5.24, A.5.25, A.5.26, A.5.27, A.5.28, A.6.8]
+    kit_dokumente: [D-14, D-22, E-05, E-08]
+    verbunden: [PS-04]
+    gefuehrt_option: vorfall
+    kennzahl_vorschlag: { einheit: stunden, richtung: hoechstens, soll: 24 }
+    # Entdeckung und Eindämmung mit Uhrzeit im Register D-22 (Schemaversion 3, AF-104)
+    datenquelle: [{ vorlage: D-22, spalte: spalten_vorfall.0, feld: feststellungen.entdecktAm }, { vorlage: D-22, spalte: spalten_vorfall.1, feld: feststellungen.eingedaemmtAm }]
+    ableitung: ["feststellungen[quelle=vorfall].datum", "feststellungen[quelle=vorfall].erfasstAm"]
+    schritte:
+      - { id: PR-19.00, art: start, bahn: vorfall, naechste: [PR-19.01] }
+      - { id: PR-19.01, art: aufgabe, bahn: vorfall, naechste: [PR-19.02], raci: { vorfall: A, ki-eigner: C } }
+      - { id: PR-19.02, art: aufgabe, bahn: ki-eigner, naechste: [PR-19.03], raci: { ki-eigner: A, menschliche-aufsicht: R, it: C } }
+      - { id: PR-19.03, art: entscheidung, bahn: vorfall, naechste: [PR-19.04, PR-19.05], raci: { vorfall: A, informationssicherheit: C } }
+      - { id: PR-19.04, art: aufgabe, bahn: informationssicherheit, naechste: [PR-19.05], raci: { informationssicherheit: R, vorfall: A }, verweis: [PS-04] }
+      - { id: PR-19.05, art: aufgabe, bahn: vorfall, naechste: [PR-19.06], raci: { vorfall: A, recht: C, datenschutz: C, gl: I } }
+      - { id: PR-19.06, art: aufgabe, bahn: ki-eigner, naechste: [PR-19.07], raci: { ki-eigner: A, vorfall: R } }
+      - { id: PR-19.07, art: aufgabe, bahn: vorfall, naechste: [PR-19.08], raci: { vorfall: A, aims: C, risikomanagement: C }, verweis: [PR-27, PR-08] }
+      - { id: PR-19.08, art: aufgabe, bahn: vorfall, naechste: [PR-19.90], raci: { vorfall: A, aims: I, gl: I } }
+      - { id: PR-19.90, art: ende, bahn: vorfall }
+
+  - id: PR-20
+    gruppe: kern
+    art: gemeinsam-ki
+    pflicht: control
+    eigner_rolle: lieferanten
+    rhythmus: jaehrlich
+    normbezug_42001: ["8.1", A.10.2, A.10.3, A.10.4]
+    normbezug_27001: ["8.1", A.5.19, A.5.20, A.5.21, A.5.22, A.5.23]
+    kit_dokumente: [D-16]
+    verbunden: [PS-08]
+    gefuehrt_option: lieferanten
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ vorlage: D-16, spalte: spalten_lieferanten.4, feld: lieferanten.pruefstatus }, { vorlage: D-16, spalte: spalten_lieferanten.6, feld: lieferanten.naechstePruefung }]
+    ableitung: [lieferanten.geprueft.am]
+    schritte:
+      - { id: PR-20.00, art: start, bahn: lieferanten, naechste: [PR-20.01] }
+      - { id: PR-20.01, art: aufgabe, bahn: lieferanten, naechste: [PR-20.02], raci: { lieferanten: A, einkauf: R } }
+      - { id: PR-20.02, art: aufgabe, bahn: lieferanten, naechste: [PR-20.03], raci: { lieferanten: A, informationssicherheit: C, datenschutz: C, ki-eigner: C } }
+      - { id: PR-20.03, art: aufgabe, bahn: lieferanten, naechste: [PR-20.04], raci: { lieferanten: A, einkauf: R, recht: C } }
+      - { id: PR-20.04, art: entscheidung, bahn: lieferanten, naechste: [PR-20.05, PR-20.91], raci: { lieferanten: A, aims: C } }
+      - { id: PR-20.05, art: aufgabe, bahn: lieferanten, naechste: [PR-20.06], raci: { lieferanten: A, ki-eigner: C, recht: C } }
+      - { id: PR-20.06, art: aufgabe, bahn: ki-eigner, naechste: [PR-20.07], raci: { ki-eigner: R, lieferanten: A } }
+      - { id: PR-20.07, art: aufgabe, bahn: lieferanten, naechste: [PR-20.90], raci: { lieferanten: A } }
+      - { id: PR-20.90, art: ende, bahn: lieferanten }
+      - { id: PR-20.91, art: ende, bahn: lieferanten }
+
+  # ---------------------------------------------------------------- Unterstützung
+  - id: PR-21
+    gruppe: unterstuetzung
+    art: gemeinsam-ki
+    pflicht: pflicht
+    eigner_rolle: schulung
+    rhythmus: jaehrlich
+    normbezug_42001: ["7.2", "7.3", A.4.6]
+    normbezug_27001: ["7.2", "7.3", A.6.3]
+    kit_dokumente: [D-17, E-04]
+    verbunden: [PS-03]
+    gefuehrt_option: schulung
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 90 }
+    datenquelle: [{ vorlage: D-17, spalte: spalten_kompetenz.1 }, { vorlage: D-17, spalte: spalten_kompetenz.4, feld: kompetenzen.status }]
+    ableitung: [organisation.bewusstsein.datum]
+    schritte:
+      - { id: PR-21.00, art: start, bahn: schulung, naechste: [PR-21.01] }
+      - { id: PR-21.01, art: aufgabe, bahn: schulung, naechste: [PR-21.02], raci: { schulung: A, aims: C, hr: C } }
+      - { id: PR-21.02, art: aufgabe, bahn: schulung, naechste: [PR-21.03], raci: { schulung: A, fachbereich: C } }
+      - { id: PR-21.03, art: aufgabe, bahn: schulung, naechste: [PR-21.04], raci: { schulung: A } }
+      - { id: PR-21.04, art: aufgabe, bahn: mitarbeitende, naechste: [PR-21.05], raci: { schulung: A, mitarbeitende: R } }
+      - { id: PR-21.05, art: aufgabe, bahn: hr, naechste: [PR-21.06], raci: { hr: R, schulung: A } }
+      - { id: PR-21.06, art: entscheidung, bahn: schulung, naechste: [PR-21.07, PR-21.03], raci: { schulung: A } }
+      - { id: PR-21.07, art: aufgabe, bahn: schulung, naechste: [PR-21.90], raci: { schulung: A, kommunikation: C, mitarbeitende: I } }
+      - { id: PR-21.90, art: ende, bahn: schulung }
+
+  - id: PR-22
+    gruppe: unterstuetzung
+    art: gemeinsam
+    pflicht: pflicht
+    eigner_rolle: aims
+    rhythmus: jaehrlich
+    normbezug_42001: ["7.4"]
+    normbezug_27001: ["7.4"]
+    kit_dokumente: [D-17]
+    verbunden: []
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 90 }
+    datenquelle: [{ vorlage: D-17, spalte: spalten_kommunikation.2, feld: kommunikation.wann }, { aufzeichnung: true }]
+    ableitung: ["dokumente[id=D-17].freigabe.am"]
+    schritte:
+      - { id: PR-22.00, art: start, bahn: aims, naechste: [PR-22.01] }
+      - { id: PR-22.01, art: aufgabe, bahn: aims, naechste: [PR-22.02], raci: { aims: A, gl: C } }
+      - { id: PR-22.02, art: aufgabe, bahn: aims, naechste: [PR-22.03], raci: { aims: A, kommunikation: C } }
+      - { id: PR-22.03, art: entscheidung, bahn: aims, naechste: [PR-22.04, PR-22.05], raci: { aims: A } }
+      - { id: PR-22.04, art: aufgabe, bahn: gl, naechste: [PR-22.05], raci: { gl: A, aims: R } }
+      - { id: PR-22.05, art: aufgabe, bahn: kommunikation, naechste: [PR-22.06], raci: { kommunikation: R, aims: A } }
+      - { id: PR-22.06, art: aufgabe, bahn: kommunikation, naechste: [PR-22.07], raci: { kommunikation: R, aims: A } }
+      - { id: PR-22.07, art: aufgabe, bahn: aims, naechste: [PR-22.90], raci: { aims: A } }
+      - { id: PR-22.90, art: ende, bahn: aims }
+
+  - id: PR-23
+    gruppe: unterstuetzung
+    art: gemeinsam
+    pflicht: pflicht
+    eigner_rolle: dokumentenlenkung
+    rhythmus: jaehrlich
+    normbezug_42001: ["7.5"]
+    normbezug_27001: ["7.5", A.5.37]
+    kit_dokumente: [D-26]
+    verbunden: []
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 95 }
+    datenquelle: [{ vorlage: D-26, spalte: register.spalten_dokumente.8, feld: dokumente.freigabe.am }, { vorlage: D-26, spalte: register.spalten_dokumente.9, feld: dokumente.naechsteUeberpruefung }]
+    ableitung: [dokumente.freigabe.am, dokumente.bestaetigt.am]
+    schritte:
+      - { id: PR-23.00, art: start, bahn: dokumentenlenkung, naechste: [PR-23.01] }
+      - { id: PR-23.01, art: aufgabe, bahn: dokumentenlenkung, naechste: [PR-23.02], raci: { dokumentenlenkung: A, aims: C } }
+      - { id: PR-23.02, art: aufgabe, bahn: aims, naechste: [PR-23.03], raci: { aims: R, dokumentenlenkung: A } }
+      - { id: PR-23.03, art: entscheidung, bahn: dokumentenlenkung, naechste: [PR-23.04, PR-23.05], raci: { dokumentenlenkung: A } }
+      - { id: PR-23.04, art: aufgabe, bahn: gl, naechste: [PR-23.06], raci: { gl: A, aims: R } }
+      - { id: PR-23.05, art: aufgabe, bahn: aims, naechste: [PR-23.06], raci: { aims: A, dokumentenlenkung: R } }
+      - { id: PR-23.06, art: aufgabe, bahn: dokumentenlenkung, naechste: [PR-23.07], raci: { dokumentenlenkung: A, mitarbeitende: I } }
+      - { id: PR-23.07, art: aufgabe, bahn: dokumentenlenkung, naechste: [PR-23.90], raci: { dokumentenlenkung: A, aims: I } }
+      - { id: PR-23.90, art: ende, bahn: dokumentenlenkung }
+
+  - id: PR-24
+    gruppe: unterstuetzung
+    art: gemeinsam-ki
+    pflicht: pflicht
+    eigner_rolle: recht
+    rhythmus: halbjaehrlich
+    normbezug_42001: ["4.2"]
+    normbezug_27001: ["4.2", A.5.31, A.5.32, A.5.34]
+    kit_dokumente: [D-01, E-03, E-09]
+    verbunden: []
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ vorlage: D-01, spalte: parteien_kopf.3 }, { vorlage: D-01, spalte: parteien_kopf.4 }]
+    ableitung: ["dokumente[id=D-01].freigabe.am"]
+    schritte:
+      - { id: PR-24.00, art: start, bahn: recht, naechste: [PR-24.01] }
+      - { id: PR-24.01, art: aufgabe, bahn: recht, naechste: [PR-24.02], raci: { recht: A } }
+      - { id: PR-24.02, art: aufgabe, bahn: recht, naechste: [PR-24.03], raci: { recht: A, aims: C } }
+      - { id: PR-24.03, art: entscheidung, bahn: recht, naechste: [PR-24.04, PR-24.90], raci: { recht: A } }
+      - { id: PR-24.04, art: aufgabe, bahn: recht, naechste: [PR-24.05], raci: { recht: A, inventar: C, ki-eigner: C } }
+      - { id: PR-24.05, art: aufgabe, bahn: aims, naechste: [PR-24.06], raci: { aims: A, recht: R } }
+      - { id: PR-24.06, art: aufgabe, bahn: recht, naechste: [PR-24.90], raci: { recht: A, aims: I } }
+      - { id: PR-24.90, art: ende, bahn: recht }
+
+  # ---------------------------------------------------------------- Bewertung und Verbesserung
+  - id: PR-25
+    gruppe: bewertung
+    art: gemeinsam
+    pflicht: pflicht
+    eigner_rolle: internes-audit
+    rhythmus: jaehrlich
+    normbezug_42001: ["9.2"]
+    normbezug_27001: ["9.2", A.5.35]
+    kit_dokumente: [D-20]
+    verbunden: []
+    gefuehrt_option: audit
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ vorlage: D-20, spalte: spalten_programm.6, feld: audits.geplant }, { vorlage: D-20, spalte: spalten_programm.11 }]
+    ableitung: ["audits[art=intern].durchgefuehrt"]
+    schritte:
+      - { id: PR-25.00, art: start, bahn: aims, naechste: [PR-25.01] }
+      - { id: PR-25.01, art: aufgabe, bahn: aims, naechste: [PR-25.02], raci: { aims: A, gl: C } }
+      - { id: PR-25.02, art: aufgabe, bahn: aims, naechste: [PR-25.03], raci: { aims: A, gl: C } }
+      - { id: PR-25.03, art: aufgabe, bahn: internes-audit, naechste: [PR-25.04], raci: { internes-audit: A, aims: C } }
+      - { id: PR-25.04, art: aufgabe, bahn: internes-audit, naechste: [PR-25.05], raci: { internes-audit: A, fachbereich: C } }
+      - { id: PR-25.05, art: aufgabe, bahn: internes-audit, naechste: [PR-25.06], raci: { internes-audit: A } }
+      - { id: PR-25.06, art: aufgabe, bahn: internes-audit, naechste: [PR-25.07], raci: { internes-audit: A, gl: I, aims: I } }
+      - { id: PR-25.07, art: aufgabe, bahn: aims, naechste: [PR-25.90], raci: { aims: A }, verweis: [PR-27] }
+      - { id: PR-25.90, art: ende, bahn: aims }
+
+  - id: PR-26
+    gruppe: bewertung
+    art: gemeinsam
+    pflicht: pflicht
+    eigner_rolle: berichterstattung
+    rhythmus: jaehrlich
+    normbezug_42001: ["9.3", "5.1"]
+    normbezug_27001: ["9.3"]
+    kit_dokumente: [D-21]
+    verbunden: []
+    gefuehrt_option: managementbewertung
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 80 }
+    datenquelle: [{ vorlage: D-21, spalte: entscheide_kopf.1 }, { vorlage: D-21, spalte: entscheide_kopf.3 }, { vorlage: D-22, spalte: spalten_verbesserungen.9, feld: massnahmen.status }]
+    ableitung: [managementbewertungen.datum]
+    schritte:
+      - { id: PR-26.00, art: start, bahn: aims, naechste: [PR-26.01] }
+      - { id: PR-26.01, art: aufgabe, bahn: aims, naechste: [PR-26.02], raci: { aims: R, gl: A } }
+      - { id: PR-26.02, art: aufgabe, bahn: aims, naechste: [PR-26.03], raci: { aims: A, berichterstattung: R, informationssicherheit: C } }
+      - { id: PR-26.03, art: aufgabe, bahn: gl, naechste: [PR-26.04], raci: { gl: A, aims: R } }
+      - { id: PR-26.04, art: aufgabe, bahn: gl, naechste: [PR-26.05], raci: { gl: A, aims: C } }
+      - { id: PR-26.05, art: aufgabe, bahn: gl, naechste: [PR-26.06], raci: { gl: A, aims: R } }
+      - { id: PR-26.06, art: aufgabe, bahn: gl, naechste: [PR-26.07], raci: { gl: A } }
+      - { id: PR-26.07, art: aufgabe, bahn: aims, naechste: [PR-26.90], raci: { aims: A, gl: I } }
+      - { id: PR-26.90, art: ende, bahn: aims }
+
+  - id: PR-27
+    gruppe: bewertung
+    art: gemeinsam
+    pflicht: pflicht
+    eigner_rolle: konformitaet
+    rhythmus: null
+    normbezug_42001: ["10.1", "10.2"]
+    normbezug_27001: ["10.1", "10.2"]
+    kit_dokumente: [D-22]
+    verbunden: []
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 90 }
+    datenquelle: [{ vorlage: D-22, spalte: spalten_nk.17 }, { vorlage: D-22, spalte: spalten_nk.23, feld: feststellungen.status }]
+    ableitung: [feststellungen.datum, feststellungen.erfasstAm, feststellungen.wirksamkeit.am, "massnahmen[herkunft.art=audit].erledigtAm"]
+    schritte:
+      - { id: PR-27.00, art: start, bahn: aims, naechste: [PR-27.01] }
+      - { id: PR-27.01, art: aufgabe, bahn: aims, naechste: [PR-27.02], raci: { aims: A } }
+      - { id: PR-27.02, art: aufgabe, bahn: fachbereich, naechste: [PR-27.03], raci: { fachbereich: R, aims: A } }
+      - { id: PR-27.03, art: aufgabe, bahn: aims, naechste: [PR-27.04], raci: { aims: A, fachbereich: C } }
+      - { id: PR-27.04, art: aufgabe, bahn: aims, naechste: [PR-27.05], raci: { aims: A } }
+      - { id: PR-27.05, art: aufgabe, bahn: fachbereich, naechste: [PR-27.06], raci: { fachbereich: R, aims: A } }
+      - { id: PR-27.06, art: entscheidung, bahn: aims, naechste: [PR-27.07, PR-27.03], raci: { aims: A } }
+      - { id: PR-27.07, art: aufgabe, bahn: aims, naechste: [PR-27.90], raci: { aims: A, risikomanagement: C, gl: I } }
+      - { id: PR-27.90, art: ende, bahn: aims }
+
+  # ---------------------------------------------------------------- ISMS-Basisprozesse (ISO/IEC 27001)
+  - id: PS-01
+    gruppe: unterstuetzung
+    art: nur-isms
+    pflicht: control
+    minimal_ohne_isms: false
+    eigner_rolle: informationssicherheit
+    rhythmus: jaehrlich
+    normbezug_42001: [A.4.2]
+    normbezug_27001: [A.5.9, A.5.10, A.5.11, A.5.12, A.5.13, A.5.14]
+    kit_dokumente: [D-10, D-13]
+    verbunden: [PR-06, PR-16]
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 95 }
+    datenquelle: [{ aufzeichnung: true }]
+    ableitung: []
+    schritte:
+      - { id: PS-01.00, art: start, bahn: informationssicherheit, naechste: [PS-01.01] }
+      - { id: PS-01.01, art: aufgabe, bahn: informationssicherheit, naechste: [PS-01.02], raci: { informationssicherheit: A, it: R } }
+      - { id: PS-01.02, art: aufgabe, bahn: informationssicherheit, naechste: [PS-01.03], raci: { informationssicherheit: A, fachbereich: C } }
+      - { id: PS-01.03, art: aufgabe, bahn: fachbereich, naechste: [PS-01.04], raci: { fachbereich: R, informationssicherheit: A } }
+      - { id: PS-01.04, art: aufgabe, bahn: informationssicherheit, naechste: [PS-01.05], raci: { informationssicherheit: A, datenschutz: C } }
+      - { id: PS-01.05, art: aufgabe, bahn: hr, naechste: [PS-01.06], raci: { hr: R, informationssicherheit: A } }
+      - { id: PS-01.06, art: aufgabe, bahn: informationssicherheit, naechste: [PS-01.90], raci: { informationssicherheit: A, inventar: C } }
+      - { id: PS-01.90, art: ende, bahn: informationssicherheit }
+
+  - id: PS-02
+    gruppe: unterstuetzung
+    art: nur-isms
+    pflicht: control
+    minimal_ohne_isms: true
+    eigner_rolle: informationssicherheit
+    rhythmus: halbjaehrlich
+    normbezug_42001: []
+    normbezug_27001: [A.5.15, A.5.16, A.5.17, A.5.18, A.8.2, A.8.3, A.8.5]
+    kit_dokumente: [D-12, D-10, D-15]
+    verbunden: [PR-07, PR-11, PR-14]
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ aufzeichnung: true }]
+    ableitung: []
+    schritte:
+      - { id: PS-02.00, art: start, bahn: fachbereich, naechste: [PS-02.01] }
+      - { id: PS-02.01, art: aufgabe, bahn: fachbereich, naechste: [PS-02.02], raci: { fachbereich: A } }
+      - { id: PS-02.02, art: entscheidung, bahn: ki-eigner, naechste: [PS-02.03, PS-02.91], raci: { ki-eigner: A, informationssicherheit: C } }
+      - { id: PS-02.03, art: aufgabe, bahn: it, naechste: [PS-02.04], raci: { it: R, informationssicherheit: A } }
+      - { id: PS-02.04, art: aufgabe, bahn: it, naechste: [PS-02.05], raci: { it: R, informationssicherheit: A } }
+      - { id: PS-02.05, art: aufgabe, bahn: ki-eigner, naechste: [PS-02.06], raci: { ki-eigner: R, informationssicherheit: A } }
+      - { id: PS-02.06, art: aufgabe, bahn: it, naechste: [PS-02.90], raci: { it: R, hr: C, informationssicherheit: A } }
+      - { id: PS-02.90, art: ende, bahn: it }
+      - { id: PS-02.91, art: ende, bahn: ki-eigner }
+
+  - id: PS-03
+    gruppe: unterstuetzung
+    art: nur-isms
+    pflicht: control
+    minimal_ohne_isms: false
+    eigner_rolle: hr
+    rhythmus: null
+    normbezug_42001: []
+    normbezug_27001: [A.6.1, A.6.2, A.6.4, A.6.5, A.6.6]
+    kit_dokumente: [D-17]
+    verbunden: [PR-21]
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ aufzeichnung: true }]
+    ableitung: []
+    schritte:
+      - { id: PS-03.00, art: start, bahn: hr, naechste: [PS-03.01] }
+      - { id: PS-03.01, art: aufgabe, bahn: hr, naechste: [PS-03.02], raci: { hr: A } }
+      - { id: PS-03.02, art: aufgabe, bahn: hr, naechste: [PS-03.03], raci: { hr: A, mitarbeitende: R } }
+      - { id: PS-03.03, art: aufgabe, bahn: hr, naechste: [PS-03.04], raci: { hr: A, schulung: C, mitarbeitende: I }, verweis: [PR-21] }
+      - { id: PS-03.04, art: aufgabe, bahn: it, naechste: [PS-03.05], raci: { hr: A, it: R } }
+      - { id: PS-03.05, art: aufgabe, bahn: it, naechste: [PS-03.06], raci: { hr: A, it: R } }
+      - { id: PS-03.06, art: aufgabe, bahn: hr, naechste: [PS-03.90], raci: { hr: A, recht: C } }
+      - { id: PS-03.90, art: ende, bahn: hr }
+
+  - id: PS-04
+    gruppe: unterstuetzung
+    art: nur-isms
+    pflicht: control
+    minimal_ohne_isms: true
+    eigner_rolle: informationssicherheit
+    rhythmus: null
+    normbezug_42001: [A.8.4]
+    normbezug_27001: [A.5.24, A.5.25, A.5.26, A.5.27, A.5.28, A.6.8]
+    kit_dokumente: [D-22, D-14]
+    verbunden: [PR-19]
+    kennzahl_vorschlag: { einheit: stunden, richtung: hoechstens, soll: 24 }
+    datenquelle: [{ aufzeichnung: true }]
+    ableitung: []
+    schritte:
+      - { id: PS-04.00, art: start, bahn: mitarbeitende, naechste: [PS-04.01] }
+      - { id: PS-04.01, art: aufgabe, bahn: mitarbeitende, naechste: [PS-04.02], raci: { mitarbeitende: R, informationssicherheit: A } }
+      - { id: PS-04.02, art: aufgabe, bahn: informationssicherheit, naechste: [PS-04.03], raci: { informationssicherheit: A, it: C } }
+      - { id: PS-04.03, art: entscheidung, bahn: informationssicherheit, naechste: [PS-04.04, PS-04.91], raci: { informationssicherheit: A } }
+      - { id: PS-04.04, art: aufgabe, bahn: it, naechste: [PS-04.05], raci: { it: R, informationssicherheit: A } }
+      - { id: PS-04.05, art: aufgabe, bahn: it, naechste: [PS-04.06], raci: { it: R, informationssicherheit: A } }
+      - { id: PS-04.06, art: aufgabe, bahn: informationssicherheit, naechste: [PS-04.07], raci: { informationssicherheit: A, datenschutz: C, recht: C, gl: I } }
+      - { id: PS-04.07, art: aufgabe, bahn: informationssicherheit, naechste: [PS-04.90], raci: { informationssicherheit: A, aims: I }, verweis: [PR-27] }
+      - { id: PS-04.90, art: ende, bahn: informationssicherheit }
+      - { id: PS-04.91, art: ende, bahn: informationssicherheit }
+
+  - id: PS-05
+    gruppe: unterstuetzung
+    art: nur-isms
+    pflicht: control
+    minimal_ohne_isms: false
+    eigner_rolle: it
+    rhythmus: null
+    normbezug_42001: []
+    normbezug_27001: [A.8.9, A.8.32]
+    kit_dokumente: [D-12]
+    verbunden: [PR-13]
+    kennzahl_vorschlag: { einheit: prozent, richtung: hoechstens, soll: 10 }
+    datenquelle: [{ aufzeichnung: true }]
+    ableitung: []
+    schritte:
+      - { id: PS-05.00, art: start, bahn: it, naechste: [PS-05.01] }
+      - { id: PS-05.01, art: aufgabe, bahn: it, naechste: [PS-05.02], raci: { it: A, fachbereich: C } }
+      - { id: PS-05.02, art: aufgabe, bahn: it, naechste: [PS-05.03], raci: { it: A, informationssicherheit: C } }
+      - { id: PS-05.03, art: aufgabe, bahn: it, naechste: [PS-05.04], raci: { it: A, fachbereich: C } }
+      - { id: PS-05.04, art: entscheidung, bahn: informationssicherheit, naechste: [PS-05.05, PS-05.91], raci: { informationssicherheit: A, it: R } }
+      - { id: PS-05.05, art: aufgabe, bahn: it, naechste: [PS-05.06], raci: { it: A } }
+      - { id: PS-05.06, art: aufgabe, bahn: it, naechste: [PS-05.90], raci: { it: A } }
+      - { id: PS-05.90, art: ende, bahn: it }
+      - { id: PS-05.91, art: ende, bahn: it }
+
+  - id: PS-06
+    gruppe: unterstuetzung
+    art: nur-isms
+    pflicht: bedingt
+    bedingung: ["kiSysteme[typ=eigenbau]", "kiSysteme[typ=eingekauft]", "kiSysteme[eigenesTraining=true]"]
+    minimal_ohne_isms: true
+    eigner_rolle: it
+    rhythmus: quartalsweise
+    normbezug_42001: []
+    normbezug_27001: [A.8.13]
+    kit_dokumente: [D-12]
+    verbunden: [PR-12, PR-16]
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ aufzeichnung: true }]
+    ableitung: []
+    schritte:
+      - { id: PS-06.00, art: start, bahn: it, naechste: [PS-06.01] }
+      - { id: PS-06.01, art: aufgabe, bahn: it, naechste: [PS-06.02], raci: { it: A, ki-eigner: C } }
+      - { id: PS-06.02, art: aufgabe, bahn: it, naechste: [PS-06.03], raci: { it: A, informationssicherheit: C } }
+      - { id: PS-06.03, art: aufgabe, bahn: it, naechste: [PS-06.04], raci: { it: A } }
+      - { id: PS-06.04, art: aufgabe, bahn: it, naechste: [PS-06.05], raci: { it: A, ki-eigner: C } }
+      - { id: PS-06.05, art: entscheidung, bahn: it, naechste: [PS-06.06, PS-06.02], raci: { it: A, ki-eigner: C } }
+      - { id: PS-06.06, art: aufgabe, bahn: it, naechste: [PS-06.90], raci: { it: A, informationssicherheit: I } }
+      - { id: PS-06.90, art: ende, bahn: it }
+
+  - id: PS-07
+    gruppe: unterstuetzung
+    art: nur-isms
+    pflicht: control
+    minimal_ohne_isms: false
+    eigner_rolle: informationssicherheit
+    rhythmus: jaehrlich
+    normbezug_42001: []
+    normbezug_27001: [A.5.29, A.5.30, A.8.14]
+    kit_dokumente: [D-12, D-10]
+    verbunden: [PR-12]
+    kennzahl_vorschlag: { einheit: anzahl, richtung: mindestens, soll: 1 }
+    datenquelle: [{ aufzeichnung: true }]
+    ableitung: []
+    schritte:
+      - { id: PS-07.00, art: start, bahn: informationssicherheit, naechste: [PS-07.01] }
+      - { id: PS-07.01, art: aufgabe, bahn: informationssicherheit, naechste: [PS-07.02], raci: { informationssicherheit: A, fachbereich: C, ki-eigner: C } }
+      - { id: PS-07.02, art: aufgabe, bahn: informationssicherheit, naechste: [PS-07.03], raci: { informationssicherheit: A, fachbereich: C } }
+      - { id: PS-07.03, art: aufgabe, bahn: ki-eigner, naechste: [PS-07.04], raci: { ki-eigner: R, informationssicherheit: A } }
+      - { id: PS-07.04, art: aufgabe, bahn: gl, naechste: [PS-07.05], raci: { gl: A, informationssicherheit: R } }
+      - { id: PS-07.05, art: aufgabe, bahn: informationssicherheit, naechste: [PS-07.06], raci: { informationssicherheit: A, it: R } }
+      - { id: PS-07.06, art: aufgabe, bahn: informationssicherheit, naechste: [PS-07.90], raci: { informationssicherheit: A } }
+      - { id: PS-07.90, art: ende, bahn: informationssicherheit }
+
+  - id: PS-08
+    gruppe: unterstuetzung
+    art: nur-isms
+    pflicht: control
+    minimal_ohne_isms: false
+    eigner_rolle: it
+    rhythmus: monatlich
+    normbezug_42001: []
+    normbezug_27001: [A.8.7, A.8.8]
+    kit_dokumente: [D-12, D-16]
+    verbunden: [PR-13, PR-20]
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 95 }
+    datenquelle: [{ aufzeichnung: true }]
+    ableitung: []
+    schritte:
+      - { id: PS-08.00, art: start, bahn: it, naechste: [PS-08.01] }
+      - { id: PS-08.01, art: aufgabe, bahn: it, naechste: [PS-08.02], raci: { it: A } }
+      - { id: PS-08.02, art: aufgabe, bahn: informationssicherheit, naechste: [PS-08.03], raci: { informationssicherheit: A, it: R } }
+      - { id: PS-08.03, art: entscheidung, bahn: informationssicherheit, naechste: [PS-08.04, PS-08.05], raci: { informationssicherheit: A } }
+      - { id: PS-08.04, art: aufgabe, bahn: it, naechste: [PS-08.06], raci: { it: A } }
+      - { id: PS-08.05, art: aufgabe, bahn: it, naechste: [PS-08.06], raci: { it: A } }
+      - { id: PS-08.06, art: aufgabe, bahn: it, naechste: [PS-08.07], raci: { it: A, informationssicherheit: C } }
+      - { id: PS-08.07, art: aufgabe, bahn: it, naechste: [PS-08.90], raci: { it: R, informationssicherheit: A } }
+      - { id: PS-08.90, art: ende, bahn: it }
+
+  - id: PS-09
+    gruppe: unterstuetzung
+    art: nur-isms
+    pflicht: control
+    minimal_ohne_isms: false
+    eigner_rolle: informationssicherheit
+    rhythmus: monatlich
+    normbezug_42001: [A.6.2.8]
+    normbezug_27001: [A.8.15, A.8.16, A.8.17]
+    kit_dokumente: [D-12]
+    verbunden: [PR-12]
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ aufzeichnung: true }]
+    ableitung: []
+    schritte:
+      - { id: PS-09.00, art: start, bahn: informationssicherheit, naechste: [PS-09.01] }
+      - { id: PS-09.01, art: aufgabe, bahn: informationssicherheit, naechste: [PS-09.02], raci: { informationssicherheit: A, ki-eigner: C, datenschutz: C } }
+      - { id: PS-09.02, art: aufgabe, bahn: it, naechste: [PS-09.03], raci: { it: A } }
+      - { id: PS-09.03, art: aufgabe, bahn: it, naechste: [PS-09.04], raci: { it: A, informationssicherheit: C } }
+      - { id: PS-09.04, art: aufgabe, bahn: it, naechste: [PS-09.05], raci: { it: R, informationssicherheit: A } }
+      - { id: PS-09.05, art: entscheidung, bahn: it, naechste: [PS-09.06, PS-09.07], raci: { it: R, informationssicherheit: A } }
+      - { id: PS-09.06, art: aufgabe, bahn: it, naechste: [PS-09.07], raci: { it: R, informationssicherheit: A }, verweis: [PS-04] }
+      - { id: PS-09.07, art: aufgabe, bahn: informationssicherheit, naechste: [PS-09.90], raci: { informationssicherheit: A } }
+      - { id: PS-09.90, art: ende, bahn: informationssicherheit }
+
+  - id: PS-10
+    gruppe: unterstuetzung
+    art: nur-isms
+    pflicht: bedingt
+    bedingung: [organisation.entwickeltKi]
+    minimal_ohne_isms: false
+    eigner_rolle: entwicklung
+    rhythmus: null
+    normbezug_42001: [A.6.1.3]
+    normbezug_27001: [A.8.25, A.8.26, A.8.27, A.8.28, A.8.29, A.8.30, A.8.31]
+    kit_dokumente: [D-12]
+    verbunden: [PR-15]
+    kennzahl_vorschlag: { einheit: anzahl, richtung: hoechstens, soll: 0 }
+    datenquelle: [{ aufzeichnung: true }]
+    ableitung: []
+    schritte:
+      - { id: PS-10.00, art: start, bahn: entwicklung, naechste: [PS-10.01] }
+      - { id: PS-10.01, art: aufgabe, bahn: informationssicherheit, naechste: [PS-10.02], raci: { informationssicherheit: A, entwicklung: C } }
+      - { id: PS-10.02, art: aufgabe, bahn: it, naechste: [PS-10.03], raci: { it: R, informationssicherheit: A } }
+      - { id: PS-10.03, art: aufgabe, bahn: entwicklung, naechste: [PS-10.04], raci: { entwicklung: A } }
+      - { id: PS-10.04, art: aufgabe, bahn: entwicklung, naechste: [PS-10.05], raci: { entwicklung: R, informationssicherheit: A } }
+      - { id: PS-10.05, art: entscheidung, bahn: informationssicherheit, naechste: [PS-10.06, PS-10.03], raci: { informationssicherheit: A, entwicklung: R } }
+      - { id: PS-10.06, art: aufgabe, bahn: informationssicherheit, naechste: [PS-10.90], raci: { informationssicherheit: A, entwicklung: R, lieferanten: C } }
+      - { id: PS-10.90, art: ende, bahn: entwicklung }
+
+  - id: PS-11
+    gruppe: unterstuetzung
+    art: nur-isms
+    pflicht: control
+    minimal_ohne_isms: false
+    eigner_rolle: informationssicherheit
+    rhythmus: jaehrlich
+    normbezug_42001: []
+    normbezug_27001: [A.7.1, A.7.2, A.7.3, A.7.4, A.7.5, A.7.6, A.7.7, A.7.8, A.7.9, A.7.10, A.7.11, A.7.12, A.7.13, A.7.14]
+    kit_dokumente: [D-12]
+    verbunden: [PR-14]
+    kennzahl_vorschlag: { einheit: prozent, richtung: mindestens, soll: 100 }
+    datenquelle: [{ aufzeichnung: true }]
+    ableitung: []
+    schritte:
+      - { id: PS-11.00, art: start, bahn: informationssicherheit, naechste: [PS-11.01] }
+      - { id: PS-11.01, art: aufgabe, bahn: informationssicherheit, naechste: [PS-11.02], raci: { informationssicherheit: A } }
+      - { id: PS-11.02, art: aufgabe, bahn: informationssicherheit, naechste: [PS-11.03], raci: { informationssicherheit: A, hr: C } }
+      - { id: PS-11.03, art: aufgabe, bahn: it, naechste: [PS-11.04], raci: { it: R, informationssicherheit: A } }
+      - { id: PS-11.04, art: aufgabe, bahn: informationssicherheit, naechste: [PS-11.05], raci: { informationssicherheit: A, mitarbeitende: I } }
+      - { id: PS-11.05, art: aufgabe, bahn: it, naechste: [PS-11.90], raci: { it: R, informationssicherheit: A } }
+      - { id: PS-11.90, art: ende, bahn: informationssicherheit }

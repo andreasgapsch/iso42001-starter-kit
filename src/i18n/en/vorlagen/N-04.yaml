@@ -1,0 +1,23 @@
+# N-04 Generative AI: risks and measures
+blaetter:
+  bewertung: Assessment
+  risiken: Risks
+titel_bewertung: "Risks of generative AI per AI system under NIST AI 600-1"
+titel_risiken: "The twelve risks of generative AI under NIST AI 600-1 (own short titles)"
+abschnitt: "Section {abschnitt}"
+keine_systeme: "No active AI system in the AI inventory is flagged as generative."
+hinweise_bewertung:
+  - "Only for AI systems flagged ‘Generative’ in the AI inventory (D-10), e.g. assistants, chatbots, image and text generators, including those embedded in standard software. Copy the twelve rows for each system and enter ID and name."
+  - "Decide for each risk whether it is relevant to the system and give a short reason, also for ‘no’. Column E shows the kit's assessment for SMEs that mostly deploy purchased AI; it does not replace your own decision."
+  - "Measure: reference to the risk register (D-07, sheet ‘GenAI security suggestions’), to actions (M-xxx) or to rules in the acceptable use policy (D-15). Column I lists the additional controls RMF-xx; include them in the statement of applicability (D-11)."
+hinweise_bewertung_firma:
+  - "Assessment of the twelve risks of generative AI for each system flagged ‘Generative’ in the AI inventory (D-10): relevance, reasons and measure. Column E shows the general relevance for purchased AI, column I the additional controls that apply to the system, with their status in the statement of applicability (D-11)."
+hinweise_risiken:
+  - "Short titles and examples are our own wording. Original title and original description (last columns) quote NIST AI 600-1 section 2 verbatim. The additional controls summarize the actions usable for SMEs in our own words; their original texts are in N-02, sheet ‘Additional controls’."
+spalten_bewertung: [ID, AI system, No., Risk, SME relevance, Relevant, Reasons, Measure, "Additional controls, status", Reference NIST AI 600-1]
+spalten_bewertung_firma: [ID, AI system, No., Risk, General relevance, Relevant, Reasons, Measure, "Additional controls for the system, status", Reference NIST AI 600-1]
+spalten_risiken_firma: [No., Risk, Reference NIST AI 600-1, General relevance, Trustworthiness characteristics affected, Additional controls, Subcategories, Typical case]
+kein_control_system: "none for this system"
+spalten_risiken: [No., Risk, Reference NIST AI 600-1, SME relevance, Trustworthiness characteristics affected, Additional controls, Subcategories, Typical SME case, Refinement]
+spalte_originaltitel: "Original NIST title"
+spalte_originaltext: "Original NIST description"

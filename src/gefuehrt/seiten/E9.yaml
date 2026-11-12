@@ -1,0 +1,379 @@
+# Etappe E9 Betrieb: Lebenszyklus, Daten, Information, Nutzung, Lieferanten. Format: src/gefuehrt/FORMAT.md
+seiten:
+  - { id: E9-einfuehrung, typ: info, norm: "8.1, A.6 bis A.10", vorlage: D-12, leitfaden: 8 }
+  - id: E9-lebenszyklus
+    typ: soa
+    controls: [A.6.2.4, A.6.2.5, A.6.2.6]
+    norm: "8.1, A.6.2.4 bis A.6.2.6"
+    vorlage: D-12
+    leitfaden: 8
+    beispiel: controls[18]
+    felder:
+      - { pfad: umsetzung, typ: textarea, pflicht: true }
+      - { pfad: status, typ: auswahl, optionen: controlStatus, pflicht: true }
+      - { pfad: verantwortlich, typ: person }
+      - { pfad: nachweise, typ: verweis, quelle: nachweise }
+  - id: E9-dokumentation
+    typ: soa
+    controls: [A.6.2.7, A.6.2.8]
+    norm: "A.6.2.7, A.6.2.8"
+    vorlage: D-12
+    leitfaden: 8
+    beispiel: controls[22]
+    felder:
+      - { pfad: umsetzung, typ: textarea, pflicht: true }
+      - { pfad: status, typ: auswahl, optionen: controlStatus, pflicht: true }
+      - { pfad: nachweise, typ: verweis, quelle: nachweise }
+  - id: E9-protokolle
+    typ: formular
+    norm: "A.6.2.8"
+    vorlage: D-12
+    leitfaden: 8
+    aiact: [art-12, art-26]
+    beispiel: organisation.protokollierung
+    felder:
+      - { pfad: organisation.protokollierung.inhalt, typ: mehrfach, optionen: protokollInhalt, pflicht: true }
+      - { pfad: organisation.protokollierung.aufbewahrungMonate, typ: zahl, pflicht: true }
+      - { pfad: organisation.protokollierung.auswertung, typ: auswahl, optionen: rhythmus }
+  - id: E9-protokolle-systeme
+    typ: auswahl-systeme
+    norm: "A.6.2.8"
+    vorlage: D-12
+    leitfaden: 8
+    aiact: [art-12, art-26]
+    beispiel: kiSysteme[0]
+    felder:
+      - { pfad: protokollierung, typ: textarea }
+  - id: E9-missbrauch
+    typ: auswahl-systeme
+    norm: "A.6.2.4"
+    vorlage: D-12
+    leitfaden: 8
+    filterEines: { fremdeInhalte: [true], oeffentlich: [true] }
+    beispiel: kiSysteme[5]
+    felder:
+      - { pfad: missbrauchsfaelle, typ: textarea }
+  - id: E9-rueckfall
+    typ: auswahl-systeme
+    norm: "A.6.2.6, A.9.4"
+    vorlage: D-12
+    leitfaden: 8
+    beispiel: kiSysteme[0]
+    felder:
+      - { pfad: rueckfallweg, typ: textarea }
+  - id: E9-ausserbetrieb
+    typ: auswahl-systeme
+    norm: "A.6.2.6, 7.5.3"
+    vorlage: D-12
+    leitfaden: 8
+    filterEines: { lebenszyklus: [ausserbetrieb], status: [abgeloest] }
+    beispiel: kiSysteme[7]
+    felder:
+      - { pfad: ausserbetrieb.ausloeser, typ: textarea }
+      - { pfad: ausserbetrieb.schritteErledigt, typ: janein }
+      - { pfad: ausserbetrieb.am, typ: datum }
+      - { pfad: aufbewahrenBis, typ: datum, pflicht: true }
+  - id: E9-messkonzept
+    typ: auswahl-systeme
+    norm: "9.1, A.6.2.4"
+    nist: [merkmale, messen]
+    vorlage: N-03
+    leitfaden: 8
+    wenn: { modulNistRmf: true }
+    filter: { typ: [eingekauft, saas, eigenbau] }
+    beispiel: kiSysteme[0]
+    felder:
+      - pfad: messkonzept.pruefungen
+        typ: tabelle
+        spalten:
+          - { pfad: merkmal, typ: auswahl, optionen: vertrauensmerkmal, pflicht: true }
+          - { pfad: prueffaelle, typ: text }
+          - { pfad: messgroesse, typ: text }
+          - { pfad: schwelle, typ: text }
+          - { pfad: haeufigkeit, typ: text }
+          - { pfad: nichtMessbar, typ: text }
+          - { pfad: ergebnis, typ: text }
+      - { pfad: messkonzept.unabhaengig.wer, typ: text }
+      - { pfad: messkonzept.unabhaengig.wann, typ: datum }
+      - { pfad: messkonzept.unabhaengig.ergebnis, typ: textarea }
+  - id: E9-genai
+    typ: auswahl-systeme
+    norm: "6.1.2, A.6.2.4"
+    nist: [risiken, massnahmen]
+    vorlage: N-04
+    leitfaden: 8
+    wenn: { modulNistRmf: true, generativ: true }
+    filter: { generativ: [true] }
+    beispiel: kiSysteme[5]
+    felder:
+      - { pfad: genaiBewertung.gai-cbrn.relevant, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: genaiBewertung.gai-cbrn.massnahme, typ: text, wenn: { eintrag: { genaiBewertung.gai-cbrn.relevant: [ja] } } }
+      - { pfad: genaiBewertung.gai-cbrn.begruendung, typ: text, wenn: { eintrag: { genaiBewertung.gai-cbrn.relevant: [nein] } } }
+      - { pfad: genaiBewertung.gai-konfabulation.relevant, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: genaiBewertung.gai-konfabulation.massnahme, typ: text, wenn: { eintrag: { genaiBewertung.gai-konfabulation.relevant: [ja] } } }
+      - { pfad: genaiBewertung.gai-konfabulation.begruendung, typ: text, wenn: { eintrag: { genaiBewertung.gai-konfabulation.relevant: [nein] } } }
+      - { pfad: genaiBewertung.gai-gefaehrlich.relevant, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: genaiBewertung.gai-gefaehrlich.massnahme, typ: text, wenn: { eintrag: { genaiBewertung.gai-gefaehrlich.relevant: [ja] } } }
+      - { pfad: genaiBewertung.gai-gefaehrlich.begruendung, typ: text, wenn: { eintrag: { genaiBewertung.gai-gefaehrlich.relevant: [nein] } } }
+      - { pfad: genaiBewertung.gai-datenschutz.relevant, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: genaiBewertung.gai-datenschutz.massnahme, typ: text, wenn: { eintrag: { genaiBewertung.gai-datenschutz.relevant: [ja] } } }
+      - { pfad: genaiBewertung.gai-datenschutz.begruendung, typ: text, wenn: { eintrag: { genaiBewertung.gai-datenschutz.relevant: [nein] } } }
+      - { pfad: genaiBewertung.gai-umwelt.relevant, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: genaiBewertung.gai-umwelt.massnahme, typ: text, wenn: { eintrag: { genaiBewertung.gai-umwelt.relevant: [ja] } } }
+      - { pfad: genaiBewertung.gai-umwelt.begruendung, typ: text, wenn: { eintrag: { genaiBewertung.gai-umwelt.relevant: [nein] } } }
+      - { pfad: genaiBewertung.gai-verzerrung.relevant, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: genaiBewertung.gai-verzerrung.massnahme, typ: text, wenn: { eintrag: { genaiBewertung.gai-verzerrung.relevant: [ja] } } }
+      - { pfad: genaiBewertung.gai-verzerrung.begruendung, typ: text, wenn: { eintrag: { genaiBewertung.gai-verzerrung.relevant: [nein] } } }
+      - { pfad: genaiBewertung.gai-mensch-ki.relevant, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: genaiBewertung.gai-mensch-ki.massnahme, typ: text, wenn: { eintrag: { genaiBewertung.gai-mensch-ki.relevant: [ja] } } }
+      - { pfad: genaiBewertung.gai-mensch-ki.begruendung, typ: text, wenn: { eintrag: { genaiBewertung.gai-mensch-ki.relevant: [nein] } } }
+      - { pfad: genaiBewertung.gai-integritaet.relevant, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: genaiBewertung.gai-integritaet.massnahme, typ: text, wenn: { eintrag: { genaiBewertung.gai-integritaet.relevant: [ja] } } }
+      - { pfad: genaiBewertung.gai-integritaet.begruendung, typ: text, wenn: { eintrag: { genaiBewertung.gai-integritaet.relevant: [nein] } } }
+      - { pfad: genaiBewertung.gai-sicherheit.relevant, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: genaiBewertung.gai-sicherheit.massnahme, typ: text, wenn: { eintrag: { genaiBewertung.gai-sicherheit.relevant: [ja] } } }
+      - { pfad: genaiBewertung.gai-sicherheit.begruendung, typ: text, wenn: { eintrag: { genaiBewertung.gai-sicherheit.relevant: [nein] } } }
+      - { pfad: genaiBewertung.gai-schutzrechte.relevant, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: genaiBewertung.gai-schutzrechte.massnahme, typ: text, wenn: { eintrag: { genaiBewertung.gai-schutzrechte.relevant: [ja] } } }
+      - { pfad: genaiBewertung.gai-schutzrechte.begruendung, typ: text, wenn: { eintrag: { genaiBewertung.gai-schutzrechte.relevant: [nein] } } }
+      - { pfad: genaiBewertung.gai-anstoessig.relevant, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: genaiBewertung.gai-anstoessig.massnahme, typ: text, wenn: { eintrag: { genaiBewertung.gai-anstoessig.relevant: [ja] } } }
+      - { pfad: genaiBewertung.gai-anstoessig.begruendung, typ: text, wenn: { eintrag: { genaiBewertung.gai-anstoessig.relevant: [nein] } } }
+      - { pfad: genaiBewertung.gai-lieferkette.relevant, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: genaiBewertung.gai-lieferkette.massnahme, typ: text, wenn: { eintrag: { genaiBewertung.gai-lieferkette.relevant: [ja] } } }
+      - { pfad: genaiBewertung.gai-lieferkette.begruendung, typ: text, wenn: { eintrag: { genaiBewertung.gai-lieferkette.relevant: [nein] } } }
+  - id: E9-entwicklung
+    typ: soa
+    controls: [A.6.1.2, A.6.1.3, A.6.2.2, A.6.2.3]
+    norm: "A.6.1, A.6.2.2, A.6.2.3"
+    vorlage: D-12
+    leitfaden: 8
+    wenn: { typ: eigenbau }
+    beispiel: controls[16]
+    felder:
+      - { pfad: umsetzung, typ: textarea, pflicht: true }
+      - { pfad: status, typ: auswahl, optionen: controlStatus, pflicht: true }
+      - { pfad: verantwortlich, typ: person }
+      - { pfad: nachweise, typ: verweis, quelle: nachweise }
+  - id: E9-daten-betrieb
+    typ: soa
+    controls: [A.7.4, A.7.5]
+    norm: "A.7.4, A.7.5"
+    vorlage: D-13
+    leitfaden: 8
+    beispiel: controls[25]
+    felder:
+      - { pfad: umsetzung, typ: textarea, pflicht: true }
+      - { pfad: status, typ: auswahl, optionen: controlStatus, pflicht: true }
+      - { pfad: nachweise, typ: verweis, quelle: nachweise }
+  - id: E9-daten-entwicklung
+    typ: soa
+    controls: [A.7.2, A.7.3, A.7.6]
+    norm: "A.7.2, A.7.3, A.7.6"
+    vorlage: D-13
+    leitfaden: 8
+    wenn: { typ: eigenbau }
+    beispiel: controls[23]
+    felder:
+      - { pfad: umsetzung, typ: textarea, pflicht: true }
+      - { pfad: status, typ: auswahl, optionen: controlStatus, pflicht: true }
+      - { pfad: nachweise, typ: verweis, quelle: nachweise }
+  - id: E9-information
+    typ: soa
+    controls: [A.8.2, A.8.5]
+    norm: "A.8.2, A.8.5"
+    vorlage: D-14
+    leitfaden: 8
+    beispiel: controls[28]
+    felder:
+      - { pfad: umsetzung, typ: textarea, pflicht: true }
+      - { pfad: status, typ: auswahl, optionen: controlStatus, pflicht: true }
+      - { pfad: nachweise, typ: verweis, quelle: nachweise }
+  - id: E9-nutzerinformation
+    typ: auswahl-systeme
+    norm: "A.8.2"
+    vorlage: D-14
+    leitfaden: 8
+    beispiel: kiSysteme[5]
+    felder:
+      - { pfad: nutzerinformation, typ: textarea }
+  - id: E9-meldekanal
+    typ: formular
+    norm: "A.8.3, A.8.4"
+    vorlage: D-14
+    leitfaden: 8
+    beispiel: organisation.meldekanalExtern
+    felder:
+      - { pfad: organisation.meldekanalExtern.adresse, typ: text, pflicht: true }
+      - { pfad: organisation.meldekanalExtern.ort, typ: text }
+      - { pfad: organisation.meldekanalExtern.bearbeitung, typ: person, pflicht: true }
+      - { pfad: organisation.meldekanalExtern.fristTage, typ: zahl }
+      - { pfad: organisation.meldekanalExtern.fristAntwortTage, typ: zahl }
+      - { pfad: organisation.meldekanalExtern.vorfallVerfahren, typ: text }
+      - { pfad: organisation.meldekanalExtern.fristKundenStunden, typ: zahl }
+  - id: E9-meldekanal-soa
+    typ: soa
+    controls: [A.8.3, A.8.4]
+    norm: "A.8.3, A.8.4"
+    vorlage: D-14
+    leitfaden: 8
+    beispiel: controls[29]
+    felder:
+      - { pfad: umsetzung, typ: textarea, pflicht: true }
+      - { pfad: status, typ: auswahl, optionen: controlStatus, pflicht: true }
+      - { pfad: nachweise, typ: verweis, quelle: nachweise }
+  - id: E9-nutzungsregeln
+    typ: formular
+    norm: "A.9.2, A.9.3, 7.3"
+    vorlage: D-15
+    leitfaden: 8
+    beispiel: meta.gefuehrt.antworten.nutzung
+    felder:
+      - { pfad: meta.gefuehrt.antworten.nutzung.regeln, typ: mehrfach, optionen: nutzungsregeln, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.nutzung.bestaetigung, typ: janein }
+  - id: E9-nutzung
+    typ: soa
+    controls: [A.9.2, A.9.3, A.9.4]
+    norm: "A.9.2 bis A.9.4"
+    vorlage: D-15
+    leitfaden: 8
+    beispiel: controls[32]
+    felder:
+      - { pfad: umsetzung, typ: textarea, pflicht: true }
+      - { pfad: status, typ: auswahl, optionen: controlStatus, pflicht: true }
+      - { pfad: nachweise, typ: verweis, quelle: nachweise }
+  - id: E9-lieferanten
+    typ: liste
+    liste: lieferanten
+    norm: "8.1, A.10.3"
+    vorlage: D-16
+    leitfaden: 8
+    beispiel: lieferanten[0]
+    felder:
+      - { pfad: name, typ: text, pflicht: true }
+      - { pfad: leistung, typ: textarea, pflicht: true }
+      - { pfad: pruefpunkte.PF-01, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-02, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-03, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-04, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-05, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-06, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-07, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-08, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-09, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-10, typ: auswahl, optionen: jaNeinOffen, wenn: { modul: true } }
+      - { pfad: pruefpunkte.PF-11, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-12, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-13, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-14, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-15, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-16, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-17, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-18, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-19, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-20, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-21, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-22, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-23, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-24, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-25, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-26, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefpunkte.PF-27, typ: auswahl, optionen: jaNeinOffen }
+      - { pfad: pruefstatus, typ: auswahl, optionen: pruefstatus, pflicht: true }
+      - { pfad: geprueft, typ: freigabe }
+      - { pfad: bemerkung, typ: textarea }
+      - { pfad: naechstePruefung, typ: datum, pflicht: true }
+  - id: E9-vertragsklauseln
+    typ: liste
+    liste: lieferanten
+    anlegen: false
+    norm: "A.10.2, A.10.3"
+    vorlage: D-16
+    leitfaden: 8
+    beispiel: lieferanten[0]
+    felder:
+      - { pfad: vertragsklauseln.VK-01, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-02, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-03, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-04, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-05, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-06, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-07, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-08, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-09, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-10, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-11, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-12, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-13, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-14, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-15, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-16, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-17, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-18, typ: auswahl, optionen: klauselStand }
+      - { pfad: vertragsklauseln.VK-19, typ: auswahl, optionen: klauselStand }
+      - { pfad: verantwortung, typ: textarea }
+  - id: E9-dritte
+    typ: soa
+    controls: [A.10.2, A.10.3, A.10.4]
+    norm: "A.10.2 bis A.10.4"
+    vorlage: D-16
+    leitfaden: 8
+    beispiel: controls[35]
+    felder:
+      - { pfad: umsetzung, typ: textarea, pflicht: true }
+      - { pfad: status, typ: auswahl, optionen: controlStatus, pflicht: true }
+      - { pfad: nachweise, typ: verweis, quelle: nachweise }
+  - id: E9-betreiber-hr
+    typ: auswahl-systeme
+    norm: "A.9.4, A.6.2.6"
+    vorlage: E-05
+    leitfaden: 8
+    aiact: [art-26]
+    wenn: { modul: true, rolle: betreiber }
+    filter: { aiAct.rollen: [betreiber], aiAct.risikoklasse: [hochrisiko-anhang-iii, hochrisiko-anhang-i] }
+    beispiel: kiSysteme[7]
+    felder:
+      - { typ: checkliste, schluessel: "E-05.betriebsanleitung.{id}" }
+      - { typ: checkliste, schluessel: "E-05.aufsicht.{id}" }
+      - { typ: checkliste, schluessel: "E-05.eingabedaten.{id}" }
+      - { typ: checkliste, schluessel: "E-05.ueberwachung.{id}" }
+      - { typ: checkliste, schluessel: "E-05.protokolle.{id}" }
+  - id: E9-betreiber-info
+    typ: auswahl-systeme
+    norm: "A.8.2, A.8.3, A.8.5"
+    vorlage: E-05
+    leitfaden: 8
+    aiact: [art-26, art-86]
+    wenn: { modul: true, rolle: betreiber }
+    filter: { aiAct.rollen: [betreiber], aiAct.risikoklasse: [hochrisiko-anhang-iii, hochrisiko-anhang-i] }
+    beispiel: kiSysteme[7]
+    felder:
+      - { typ: checkliste, schluessel: "E-05.arbeitnehmende.{id}" }
+      - { typ: checkliste, schluessel: "E-05.dsfa.{id}" }
+      - { typ: checkliste, schluessel: "E-05.betroffene.{id}" }
+      - { typ: checkliste, schluessel: "E-05.behoerden.{id}" }
+  - id: E9-transparenz
+    typ: auswahl-systeme
+    norm: "A.8.2"
+    vorlage: E-07
+    leitfaden: 8
+    aiact: [art-50]
+    wenn: { modul: true }
+    filter: { aiAct.transparenz: ["50-1", "50-2", "50-3", "50-4"] }
+    beispiel: kiSysteme[5]
+    felder:
+      - { typ: checkliste, schluessel: "E-07.hinweis.{id}" }
+      - { typ: checkliste, schluessel: "E-07.kennzeichnung.{id}", wenn: { eintrag: { aiAct.transparenz: ["50-2", "50-4"] } } }
+  - id: E9-anbieter
+    typ: auswahl-systeme
+    norm: "8.1"
+    vorlage: E-08
+    leitfaden: 8
+    aiact: [art-6, art-16, art-22, art-49]
+    wenn: { modul: true, rolle: anbieter }
+    filter: { aiAct.rollen: [anbieter] }
+    beispiel: kiSysteme[1]
+    felder:
+      - { typ: checkliste, schluessel: "E-08.einstufung.{id}" }
+      - { typ: checkliste, schluessel: "E-08.anleitung.{id}" }
+      - { typ: checkliste, schluessel: "E-08.bevollmaechtigter.{id}", wenn: { eintrag: { aiAct.risikoklasse: [hochrisiko-anhang-iii, hochrisiko-anhang-i] } } }

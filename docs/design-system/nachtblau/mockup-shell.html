@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIMS-Manager Redesign Mockup</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--grund); color: var(--text); font: 400 14px/1.5 var(--schrift-ui); -webkit-font-smoothing: antialiased; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--fokus); outline-offset: 2px; }
+.app { display: grid; grid-template-columns: var(--masse-leiste) var(--masse-untermenue) 1fr; height: 100vh; }
+.app.zu { grid-template-columns: var(--masse-leiste) 0 1fr; }
+.app.zu .untermenue { visibility: hidden; }
+
+/* Ebene 1: Symbolleiste */
+.leiste { background: var(--leiste); border-right: 1px solid var(--linie); display: flex; flex-direction: column; align-items: center; padding: 12px 0; gap: 6px; }
+.logo { width: 32px; height: 32px; border-radius: 8px; background: var(--primaer); display: grid; place-items: center; font-weight: 600; font-size: 12px; color: #fff; margin-bottom: 10px; }
+.lknopf { width: 36px; height: 36px; border: 0; background: transparent; border-radius: 8px; display: grid; place-items: center; color: var(--text-2); cursor: pointer; position: relative; }
+.lknopf:hover { background: var(--hover); color: var(--text); }
+.lknopf[aria-current="true"] { background: var(--aktiv); color: var(--text); }
+.lknopf[aria-current="true"]::before { content: ""; position: absolute; left: -10px; top: 8px; bottom: 8px; width: 3px; border-radius: 0 3px 3px 0; background: var(--primaer); }
+.lknopf .punkt { position: absolute; top: 6px; right: 6px; width: 7px; height: 7px; border-radius: 50%; background: var(--status-warnung); }
+.leiste .unten { margin-top: auto; display: flex; flex-direction: column; gap: 6px; align-items: center; }
+.avatar { width: 32px; height: 32px; border-radius: 8px; background: var(--flaeche-hoch); display: grid; place-items: center; font-size: 11px; font-weight: 600; position: relative; margin-top: 8px; }
+.avatar::after { content: ""; position: absolute; right: -3px; bottom: -3px; width: 10px; height: 10px; border-radius: 50%; background: var(--status-gut); border: 2px solid var(--leiste); }
+svg.i { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Ebene 2: Untermenü */
+.untermenue { background: var(--untermenue); border-right: 1px solid var(--linie); padding: 16px 10px; overflow-y: auto; }
+.ukopf { display: flex; align-items: center; justify-content: space-between; padding: 4px 8px 14px; }
+.ukopf h2 { font-size: 17px; font-weight: 600; margin: 0; }
+.einklappen { border: 0; background: transparent; color: var(--text-3); cursor: pointer; width: 28px; height: 28px; border-radius: 6px; display: grid; place-items: center; }
+.einklappen:hover { background: var(--hover); color: var(--text); }
+.ugruppe { font-size: 12px; color: var(--text-3); text-transform: none; padding: 14px 10px 6px; font-weight: 500; }
+.upunkt { display: flex; align-items: center; gap: 10px; width: 100%; border: 0; background: transparent; padding: 7px 10px; border-radius: 8px; cursor: pointer; text-align: left; color: var(--text); font-size: 14px; }
+.upunkt:hover { background: var(--hover); }
+.upunkt[aria-current="page"] { background: var(--aktiv); }
+.upunkt svg.i { color: var(--text-2); width: 17px; height: 17px; flex: none; }
+.upunkt .zahl { margin-left: auto; font-size: 12px; color: var(--text-2); background: var(--flaeche-hoch); border-radius: 6px; padding: 0 7px; line-height: 20px; }
+.upunkt .zahl.warn { color: var(--status-warnung); background: var(--status-warnung-grund); }
+.schritt { width: 17px; height: 17px; border-radius: 50%; border: 1.6px dashed var(--text-3); flex: none; display: grid; place-items: center; }
+.schritt.fertig { border: 0; background: var(--primaer); }
+.schritt.fertig::after { content: ""; width: 7px; height: 4px; border-left: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(-45deg) translate(1px, -1px); }
+.schritt.laeuft { border: 2px solid var(--primaer); border-right-color: transparent; }
+
+/* Inhalt */
+.inhalt { overflow-y: auto; }
+.seite { max-width: var(--masse-inhalt-max); margin: 0 auto; padding: 40px 48px 64px; }
+.kopf { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+.kopf h1 { font-size: 30px; font-weight: 600; margin: 0; letter-spacing: -0.01em; flex: 1; }
+.suche { display: flex; align-items: center; gap: 8px; width: 280px; height: 38px; padding: 0 10px; border: 1px solid var(--eingabe-rand); background: var(--eingabe); border-radius: 8px; color: var(--text-3); }
+.suche input { flex: 1; border: 0; background: transparent; color: var(--text); font: inherit; outline: none; }
+.suche input::placeholder { color: var(--text-3); }
+.taste { font-size: 11px; border: 1px solid var(--linie-stark); border-radius: 4px; padding: 0 5px; color: var(--text-2); }
+.knopf { height: 38px; padding: 0 14px; border-radius: 8px; border: 1px solid var(--linie-stark); background: var(--flaeche); cursor: pointer; display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.knopf:hover { background: var(--hover); }
+.knopf.primaer { background: var(--primaer); border-color: var(--primaer); color: var(--primaer-text); font-weight: 500; }
+.knopf.primaer:hover { background: var(--primaer-hover); }
+.reiter { display: flex; gap: 22px; margin: -8px 0 18px; color: var(--text-2); }
+.reiter span { display: inline-flex; gap: 8px; align-items: center; padding-bottom: 8px; cursor: pointer; }
+.reiter span.an { color: var(--text); border-bottom: 2px solid var(--primaer); }
+.karte { background: var(--flaeche); border: 1px solid var(--linie); border-radius: 12px; }
+.karte + .karte { margin-top: 28px; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-weight: 500; color: var(--text-2); font-size: 13px; padding: 12px 18px; border-bottom: 1px solid var(--linie); }
+td { padding: 12px 18px; border-bottom: 1px solid var(--linie); vertical-align: middle; }
+tr:last-child td { border-bottom: 0; }
+tbody tr:hover td { background: var(--hover); cursor: pointer; }
+tbody tr.gewaehlt td { background: var(--aktiv); }
+.titel { font-weight: 500; }
+.unter { font-size: 13px; color: var(--text-2); }
+.symbol { width: 32px; height: 32px; border-radius: 8px; display: grid; place-items: center; flex: none; }
+.symbol.rot { background: var(--status-kritisch-grund); color: var(--status-kritisch); }
+.symbol.blau { background: var(--status-info-grund); color: var(--status-info); }
+.symbol.gruen { background: var(--status-gut-grund); color: var(--status-gut); }
+.symbol.grau { background: var(--flaeche-hoch); color: var(--text-2); }
+.zelle { display: flex; gap: 12px; align-items: center; }
+.chip { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-2); white-space: nowrap; }
+.chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.chip.gut { color: var(--status-gut); } .chip.warn { color: var(--status-warnung); } .chip.krit { color: var(--status-kritisch); } .chip.info { color: var(--status-info); } .chip.neutral { color: var(--text-2); }
+.chip span { color: var(--text-2); }
+.mehr { color: var(--text-3); text-align: right; letter-spacing: 1px; }
+.ckopf { display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; border-bottom: 1px solid var(--linie); font-weight: 600; }
+.ckopf .stand { font-weight: 400; color: var(--text-2); display: flex; gap: 8px; align-items: center; }
+.ring { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--linie-stark); border-top-color: var(--primaer); border-right-color: var(--primaer); }
+.liste { padding: 6px 18px; }
+.eintrag { display: flex; align-items: center; gap: 14px; padding: 14px 8px; border-bottom: 1px solid var(--linie); cursor: pointer; }
+.eintrag:last-child { border-bottom: 0; }
+.eintrag .name { flex: 1; font-weight: 500; }
+.eintrag.erledigt .name { color: var(--akzent-text); }
+.eintrag.offen { background: var(--flaeche-tief); border: 1px solid var(--linie); border-radius: 10px; padding: 18px; align-items: flex-start; margin: 6px 0; }
+.eintrag.offen p { color: var(--text-2); margin: 8px 0 14px; max-width: 46ch; }
+.pfeil { color: var(--text-3); }
+.raster { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+.kennzahl { padding: 16px 18px; }
+.kennzahl .wert { font-size: 26px; font-weight: 600; margin-top: 4px; }
+.kennzahl .unter { display: flex; gap: 6px; align-items: center; }
+.filter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.filter button { border: 1px solid var(--linie-stark); background: transparent; border-radius: 999px; padding: 4px 12px; cursor: pointer; color: var(--text-2); font-size: 13px; }
+.filter button[aria-pressed="true"] { background: var(--aktiv); color: var(--text); border-color: var(--fokus); }
+.bib { display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: start; }
+.detail { padding: 20px; position: sticky; top: 20px; }
+.detail h3 { margin: 10px 0 4px; font-size: 17px; }
+.detail dl { display: grid; grid-template-columns: 110px 1fr; gap: 8px 10px; margin: 18px 0; font-size: 13px; }
+.detail dt { color: var(--text-2); }
+.detail dd { margin: 0; }
+.versionen { border-top: 1px solid var(--linie); padding-top: 14px; font-size: 13px; }
+.versionen div { display: flex; justify-content: space-between; padding: 5px 0; color: var(--text-2); }
+.versionen div b { color: var(--text); font-weight: 500; }
+.hinweis { margin-top: 16px; font-size: 13px; color: var(--text-2); background: var(--flaeche-tief); border: 1px solid var(--linie); border-radius: 8px; padding: 10px 12px; }
+.ordner { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--text-2); margin-bottom: 20px; }
+.ordner b { color: var(--text); font-weight: 500; }
+.etappe .frage { padding: 22px 24px; border-bottom: 1px solid var(--linie); }
+.etappe label { display: block; font-weight: 500; margin-bottom: 8px; }
+.etappe .feld { width: 100%; height: 38px; border: 1px solid var(--eingabe-rand); background: var(--eingabe); border-radius: 8px; color: var(--text); padding: 0 10px; font: inherit; }
+.etappe .optionen { display: flex; gap: 10px; flex-wrap: wrap; }
+.etappe .optionen span { border: 1px solid var(--linie-stark); border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+.etappe .optionen span.an { border-color: var(--primaer); background: rgba(90,99,212,0.18); }
+.fuss { display: flex; justify-content: space-between; padding: 18px 24px; }
+.platzhalter { color: var(--text-2); }
+.themawahl { position: fixed; right: 16px; bottom: 16px; }
+@media (max-width: 900px) {
+  .app { grid-template-columns: var(--masse-leiste) 1fr; }
+  .untermenue { position: fixed; left: var(--masse-leiste); top: 0; bottom: 0; width: 260px; z-index: 5; box-shadow: var(--schatten-schwebend, 0 8px 24px rgba(0,0,0,.35)); }
+  .app.zu .untermenue { display: none; }
+  .seite { padding: 24px 16px 48px; }
+  .kopf { flex-wrap: wrap; } .suche { width: 100%; order: 3; }
+  .raster { grid-template-columns: 1fr 1fr; }
+  .bib { grid-template-columns: 1fr; }
+  .verst { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <nav class="leiste" aria-label="Hauptbereiche">
+    <div class="logo" title="Muster Maschinenbau AG">AI</div>
+    <div id="leiste-oben" style="display:flex;flex-direction:column;gap:6px"></div>
+    <div class="unten" id="leiste-unten"></div>
+  </nav>
+  <nav class="untermenue" id="untermenue" aria-label="Unterbereiche"></nav>
+  <main class="inhalt" id="inhalt"></main>
+</div>
+<button class="knopf themawahl" id="thema">Hell / Dunkel</button>
+<script>
+const I = {
+  start: '<path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',
+  uebersicht: '<path d="M4 20a8 8 0 1 1 16 0"/><path d="M12 20l4-6"/><path d="M4 20h16"/>',
+  guide: '<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
+  register: '<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h16M4 14h16M9 4v16"/>',
+  prozesse: '<rect x="3" y="4" width="6" height="5" rx="1"/><rect x="15" y="4" width="6" height="5" rx="1"/><rect x="9" y="15" width="6" height="5" rx="1"/><path d="M6 9v3h12V9M12 12v3"/>',
+  bibliothek: '<path d="M4 4h4v16H4zM10 4h4v16h-4z"/><path d="M16 5l3.5-1 3 15-3.5 1z"/>',
+  wissen: '<path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h6"/>',
+  pruefung: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',
+  glocke: '<path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 20a2 2 0 0 0 4 0"/>',
+  hilfe: '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/>',
+  einstellungen: '<circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 0 0-2-1.2L14 3h-4l-.5 2.6a7 7 0 0 0-2 1.2l-2.4-1-2 3.4 2 1.6a7 7 0 0 0 0 2.4l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 2 1.2L10 21h4l.5-2.6a7 7 0 0 0 2-1.2l2.4 1 2-3.4-2-1.6A7 7 0 0 0 19 12z"/>',
+  doc: '<path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/>',
+  tabelle: '<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 10v10"/>',
+  pdf: '<path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 15h1.5a1.5 1.5 0 0 0 0-3H9v5"/>',
+  ordner: '<path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/>',
+  hoch: '<path d="M12 16V4M7 9l5-5 5 5M4 20h16"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  suche: '<circle cx="11" cy="11" r="6"/><path d="M20 20l-4-4"/>',
+  links: '<path d="M15 6l-6 6 6 6"/>',
+  rechts: '<path d="M9 6l6 6-6 6"/>',
+  ki: '<rect x="5" y="7" width="14" height="11" rx="2"/><path d="M12 3v4M9 12h.01M15 12h.01M9 15h6"/>',
+  risiko: '<path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/>',
+  haken: '<path d="M5 12l4 4 10-10"/>',
+  liste: '<path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/>',
+  landkarte: '<path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v14M15 6v14"/>',
+  person: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+  kalender: '<rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>',
+};
+const svg = (n) => `<svg class="i" viewBox="0 0 24 24" aria-hidden="true">${I[n] || I.doc}</svg>`;
+
+const ETAPPEN = ['Startinterview', 'Ausgangslage', 'Kontext und Geltungsbereich', 'Führung', 'KI-Inventar', 'Rolle zuerst', 'Risiken', 'Folgenabschätzungen', 'Controls und SoA', 'Betrieb', 'Kompetenz und Kommunikation', 'Ziele und Dokumentenlenkung', 'Audit und Managementbewertung', 'Zertifizierung vorbereiten'];
+const BEREICHE = {
+  start: { titel: 'Start', icon: 'start', gruppen: [{ punkte: [['willkommen', 'Willkommen', 'start'], ['projekte', 'Projekte und Beispiele', 'ordner'], ['aktivitaet', 'Letzte Änderungen', 'kalender']] }] },
+  uebersicht: { titel: 'Übersicht', icon: 'uebersicht', gruppen: [{ punkte: [['lagebild', 'Lagebild', 'uebersicht'], ['faellig', 'Fällig', 'kalender', '4', 'warn'], ['bereit', 'Stage-1-Bereitschaft', 'pruefung']] }] },
+  guide: { titel: 'Guide', icon: 'guide', gruppen: [{ punkte: [['ueberblick', 'Überblick', 'guide']] }, { name: 'Etappen', etappen: true }, { name: 'Danach', punkte: [['jahr', 'Jahreskalender', 'kalender']] }] },
+  register: { titel: 'Register', icon: 'register', gruppen: [
+    { name: 'Grundlagen', punkte: [['org', 'Organisation und Kontext', 'person'], ['ki', 'KI-Systeme', 'ki', '8'], ['risiken', 'Risiken', 'risiko', '22'], ['folgen', 'Folgenabschätzungen', 'doc', '3'], ['soa', 'Controls (SoA)', 'haken', '52']] },
+    { name: 'Umsetzung', punkte: [['massnahmen', 'Massnahmen', 'liste', '18'], ['lieferanten', 'Lieferanten', 'ordner', '6'], ['ziele', 'Ziele und Kennzahlen', 'uebersicht'], ['kompetenz', 'Kompetenz', 'person'], ['nachweise', 'Nachweise', 'doc']] },
+    { name: 'Bewertung', punkte: [['audits', 'Audits', 'pruefung'], ['feststellungen', 'Feststellungen', 'risiko', '4'], ['meldungen', 'Meldungen', 'glocke']] },
+    { name: 'Module', punkte: [['aiact', 'EU AI Act', 'doc'], ['nist', 'NIST AI RMF', 'doc'], ['brucke', 'Brücke ISO/IEC 27001', 'doc']] }] },
+  prozesse: { titel: 'Prozesse', icon: 'prozesse', gruppen: [{ punkte: [['landkarte', 'Landkarte', 'landkarte'], ['pliste', 'Alle Prozesse', 'liste', '38'], ['status', 'Status', 'uebersicht'], ['eigene', 'Eigene Prozesse', 'plus', '1']] }, { name: 'Gruppen', punkte: [['fuehrung', 'Führung', 'prozesse', '5'], ['kern', 'Kern', 'prozesse', '15'], ['unterst', 'Unterstützung', 'prozesse', '15'], ['bewertung', 'Bewertung und Verbesserung', 'prozesse', '3']] }] },
+  bibliothek: { titel: 'Bibliothek', icon: 'bibliothek', gruppen: [{ punkte: [['alle', 'Alle Dokumente', 'bibliothek', '64'], ['firma', 'Firmendokumente', 'doc', '29'], ['eigene', 'Eigene Dateien', 'hoch', '11'], ['nachw', 'Nachweise', 'haken', '17'], ['vorlagen', 'Vorlagen des Kits', 'tabelle'], ['recht', 'Rechtstexte', 'pdf', '7']] }, { name: 'Arbeitsliste', punkte: [['pruefen', 'Zu prüfen', 'kalender', '3', 'warn'], ['entwurf', 'Entwürfe', 'doc', '5'], ['ersetzt', 'Ersetzt und archiviert', 'ordner']] }] },
+  wissen: { titel: 'Wissen', icon: 'wissen', gruppen: [{ name: 'Leitfaden', punkte: [['lf1', 'Minimal Viable AIMS', 'wissen'], ['lf2', 'Die 10 Schritte', 'wissen'], ['lf3', 'Zeitpläne und Aufwand', 'kalender'], ['lf4', 'Häufige Auditfeststellungen', 'risiko']] }, { name: 'Regelwerke', punkte: [['n42001', 'ISO/IEC 42001', 'doc'], ['n27001', 'ISO/IEC 27001', 'doc'], ['aiact2', 'EU AI Act', 'pdf'], ['nist2', 'NIST AI RMF', 'pdf']] }, { name: 'Mehr', punkte: [['glossar', 'Glossar', 'liste'], ['skill', 'KI-Assistent', 'ki']] }] },
+  pruefung: { titel: 'Prüfung', icon: 'pruefung', gruppen: [{ punkte: [['regeln', 'Prüfregeln', 'pruefung', '7', 'warn'], ['stage1', 'Stage-1-Bericht', 'doc']] }] },
+  glocke: { titel: 'Hinweise', icon: 'glocke', unten: true, punkt: true, gruppen: [{ punkte: [['h1', 'Fällige Überprüfungen', 'kalender', '4', 'warn'], ['h2', 'Neue Rechtsstände', 'doc']] }] },
+  hilfe: { titel: 'Hilfe', icon: 'hilfe', unten: true, gruppen: [{ punkte: [['kurz', 'Kurzanleitung', 'hilfe'], ['tasten', 'Tastenkürzel', 'liste'], ['ueber', 'Über', 'doc']] }] },
+  einstellungen: { titel: 'Einstellungen', icon: 'einstellungen', unten: true, gruppen: [{ punkte: [['projekt', 'Projekt und Module', 'einstellungen'], ['darst', 'Sprache und Darstellung', 'einstellungen'], ['gestaltung', 'Gestaltung der Dokumente', 'einstellungen'], ['normtexte', 'Normtexte', 'doc'], ['speicher', 'Speicher und Bibliotheksordner', 'ordner']] }] },
+};
+const STATUS_ETAPPE = (i) => (i < 4 ? 'fertig' : i === 4 ? 'laeuft' : '');
+let bereich = 'start', punkt = 'willkommen', etappe = 4, gewaehlt = 1;
+
+function leiste() {
+  const knopf = (k, b) => `<button class="lknopf" data-b="${k}" aria-label="${b.titel}" title="${b.titel}" aria-current="${bereich === k}">${svg(b.icon)}${b.punkt ? '<span class="punkt"></span>' : ''}</button>`;
+  document.getElementById('leiste-oben').innerHTML = Object.entries(BEREICHE).filter(([, b]) => !b.unten).map(([k, b]) => knopf(k, b)).join('');
+  document.getElementById('leiste-unten').innerHTML = Object.entries(BEREICHE).filter(([, b]) => b.unten).map(([k, b]) => knopf(k, b)).join('') + '<div class="avatar" title="Muster Maschinenbau AG, gespeichert">MMB</div>';
+}
+function untermenue() {
+  const b = BEREICHE[bereich];
+  let h = `<div class="ukopf"><h2>${b.titel}</h2><button class="einklappen" id="zu" aria-label="Untermenü einklappen">${svg('links')}</button></div>`;
+  for (const g of b.gruppen) {
+    if (g.name) h += `<div class="ugruppe">${g.name}</div>`;
+    if (g.etappen) h += ETAPPEN.map((e, i) => `<button class="upunkt" data-e="${i}" aria-current="${bereich === 'guide' && punkt === 'etappe' && etappe === i ? 'page' : 'false'}"><span class="schritt ${STATUS_ETAPPE(i)}"></span>${i} ${e}</button>`).join('');
+    for (const [id, name, ic, zahl, art] of g.punkte || []) h += `<button class="upunkt" data-p="${id}" aria-current="${punkt === id ? 'page' : 'false'}">${svg(ic)}${name}${zahl ? `<span class="zahl ${art || ''}">${zahl}</span>` : ''}</button>`;
+  }
+  document.getElementById('untermenue').innerHTML = h;
+}
+const kopf = (titel, aktion) => `<div class="kopf"><h1>${titel}</h1><label class="suche">${svg('suche')}<input placeholder="Suchen" aria-label="Suchen"><span class="taste">/</span></label>${aktion ? `<button class="knopf primaer">${aktion}</button>` : ''}</div>`;
+
+function seiteStart() {
+  return `<div class="seite">${kopf('Guten Tag, Muster Maschinenbau AG', 'Neues KI-System erfassen')}
+  <div class="reiter"><span class="an">${svg('kalender')}Fällig</span><span>${svg('doc')}Zuletzt geändert</span></div>
+  <div class="karte"><table><thead><tr><th>Aufgabe</th><th class="verst">Bereich</th><th>Fällig</th><th>Stand</th><th></th></tr></thead><tbody>
+  <tr><td><div class="zelle"><span class="symbol rot">${svg('risiko')}</span><div><div class="titel">R-014 Bewerbungsvorselektion: Restrisiko annehmen</div><div class="unter">Risiko über Kriterium, Behandlung beschlossen</div></div></div></td><td class="verst unter">Risiken</td><td class="unter">seit 3 Tagen</td><td><span class="chip krit"><span>Überfällig</span></span></td><td class="mehr">···</td></tr>
+  <tr><td><div class="zelle"><span class="symbol blau">${svg('doc')}</span><div><div class="titel">D-03 KI-Leitlinie: jährliche Überprüfung</div><div class="unter">Freigegeben am 14.11.2025 durch Geschäftsleitung</div></div></div></td><td class="verst unter">Bibliothek</td><td class="unter">in 9 Tagen</td><td><span class="chip warn"><span>Bald fällig</span></span></td><td class="mehr">···</td></tr>
+  <tr><td><div class="zelle"><span class="symbol grau">${svg('prozesse')}</span><div><div class="titel">PR-08 Folgenabschätzung: Kennzahl erfassen</div><div class="unter">Quartalswert 3. Quartal fehlt</div></div></div></td><td class="verst unter">Prozesse</td><td class="unter">in 21 Tagen</td><td><span class="chip neutral"><span>Geplant</span></span></td><td class="mehr">···</td></tr>
+  </tbody></table></div>
+  <div class="karte"><div class="ckopf">Erste Schritte mit dem AIMS-Manager<span class="stand"><span class="ring"></span>4 von 6 erledigt</span></div><div class="liste">
+  <div class="eintrag erledigt"><span class="schritt fertig"></span><span class="name">Projekt anlegen und speichern</span><span class="pfeil">${svg('rechts')}</span></div>
+  <div class="eintrag erledigt"><span class="schritt fertig"></span><span class="name">Startinterview im Guide beantworten</span><span class="pfeil">${svg('rechts')}</span></div>
+  <div class="eintrag offen"><span class="schritt"></span><div style="flex:1"><div class="name">Bibliotheksordner verbinden</div><p>Dokumente, Versionen und Nachweise liegen dann als echte Dateien in einem Ordner Ihrer Wahl, zum Beispiel einem OneDrive- oder Netzlaufwerk-Ordner.</p><button class="knopf">${svg('ordner')}Ordner wählen</button></div></div>
+  <div class="eintrag erledigt"><span class="schritt fertig"></span><span class="name">KI-Inventar erfassen</span><span class="pfeil">${svg('rechts')}</span></div>
+  <div class="eintrag"><span class="schritt"></span><span class="name">Gestaltung der Dokumente festlegen</span><span class="pfeil">${svg('rechts')}</span></div>
+  <div class="eintrag erledigt"><span class="schritt fertig"></span><span class="name">Erste Dokumente erzeugen</span><span class="pfeil">${svg('rechts')}</span></div>
+  </div></div></div>`;
+}
+const DOKS = [
+  ['D-03', 'KI-Leitlinie', 'doc', 'gut', 'Freigegeben', '2.0', 'Geschäftsleitung', '14.11.2026', 'Firmendokument'],
+  ['D-07', 'KI-Risikoregister', 'tabelle', 'warn', 'In Prüfung', '1.4', 'AIMS-Verantwortliche', '30.11.2026', 'Firmendokument'],
+  ['D-11', 'Erklärung zur Anwendbarkeit', 'tabelle', 'gut', 'Freigegeben', '1.2', 'AIMS-Verantwortliche', '31.03.2027', 'Firmendokument'],
+  ['N-017', 'Schulungsnachweis Copilot', 'pdf', 'gut', 'Abgelegt', '1', 'Personal', '', 'Nachweis'],
+  ['D-27', 'Prozessbeschreibungen', 'doc', 'neutral', 'Entwurf', '0.3', 'AIMS-Verantwortliche', '', 'Firmendokument'],
+  ['X-004', 'Vertrag HR-SaaS mit KI-Anhang', 'pdf', 'info', 'Extern', '1', 'Einkauf', '01.06.2027', 'Eigene Datei'],
+  ['RT-01', 'EU AI Act, konsolidiert 27.07.2026', 'pdf', 'neutral', 'Rechtstext', '', '', '', 'Rechtstext'],
+];
+function seiteBibliothek() {
+  const d = DOKS[gewaehlt];
+  const zeilen = DOKS.map((x, i) => `<tr data-d="${i}" class="${i === gewaehlt ? 'gewaehlt' : ''}"><td><div class="zelle"><span class="symbol ${x[2] === 'pdf' ? 'rot' : x[2] === 'tabelle' ? 'gruen' : 'blau'}">${svg(x[2])}</span><div><div class="titel">${x[1]}</div><div class="unter">${x[0]} · ${x[8]}</div></div></div></td><td><span class="chip ${x[3]}"><span>${x[4]}</span></span></td><td class="unter verst">${x[5] ? 'v' + x[5] : ''}</td><td class="unter verst">${x[7]}</td></tr>`).join('');
+  return `<div class="seite" style="max-width:1280px">${kopf('Bibliothek', 'Datei hochladen')}
+  <div class="ordner">${svg('ordner')}Verbunden mit <b>OneDrive › AIMS › Bibliothek</b> · 64 Dokumente · zuletzt abgeglichen vor 2 Minuten</div>
+  <div class="filter" role="group" aria-label="Filter"><button aria-pressed="true">Alle</button><button aria-pressed="false">Firmendokumente</button><button aria-pressed="false">Nachweise</button><button aria-pressed="false">Eigene Dateien</button><button aria-pressed="false">Rechtstexte</button><button aria-pressed="false">Status: zu prüfen</button><button aria-pressed="false">Norm: 6.1</button></div>
+  <div class="bib"><div class="karte"><table><thead><tr><th>Dokument</th><th>Status</th><th class="verst">Version</th><th class="verst">Nächste Prüfung</th></tr></thead><tbody>${zeilen}</tbody></table></div>
+  <aside class="karte detail" aria-label="Details"><span class="symbol ${d[2] === 'pdf' ? 'rot' : d[2] === 'tabelle' ? 'gruen' : 'blau'}">${svg(d[2])}</span><h3>${d[1]}</h3><div class="unter">${d[0]} · ${d[8]}</div>
+  <dl><dt>Status</dt><dd><span class="chip ${d[3]}"><span>${d[4]}</span></span></dd><dt>Version</dt><dd>${d[5] || 'nicht versioniert'}</dd><dt>Eigner</dt><dd>${d[6] || 'keiner'}</dd><dt>Nächste Prüfung</dt><dd>${d[7] || 'keine'}</dd><dt>Normbezug</dt><dd>6.1.2, 8.2, A.5.4</dd><dt>Verknüpft</dt><dd>KI-001, KI-008, PR-06</dd></dl>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px"><button class="knopf primaer">Neue Version einchecken</button><button class="knopf">Herunterladen</button><button class="knopf">Vorschau</button></div>
+  <div class="versionen"><div><b>v1.4</b><span>Entwurf, 21.10.2026</span></div><div><b>v1.3</b><span>Freigegeben, 02.09.2026</span></div><div><b>v1.2</b><span>Freigegeben, 15.05.2026</span></div></div>
+  <div class="hinweis">Freigabe nach Regel D-26: Prüfung durch AIMS-Verantwortliche, Freigabe durch Geschäftsleitung. Die Versionen liegen als Dateien im Bibliotheksordner.</div></aside></div></div>`;
+}
+function seiteEtappe() {
+  return `<div class="seite" style="max-width:860px">${kopf(`Etappe ${etappe}: ${ETAPPEN[etappe]}`)}
+  <div class="karte etappe"><div class="frage"><label for="f1">Wie heisst das KI-System?</label><input id="f1" class="feld" value="Bewerbungsvorselektion im HR-SaaS"></div>
+  <div class="frage"><label>Wie wird es beschafft?</label><div class="optionen"><span>Eigenentwicklung</span><span class="an">Eingekauft (SaaS)</span><span>Im Produkt eingebettet</span><span>Schatten-KI</span></div></div>
+  <div class="frage"><label for="f2">Wer ist Eignerin oder Eigner?</label><input id="f2" class="feld" value="Leiterin Personal"></div>
+  <div class="fuss"><button class="knopf">${svg('links')}Zurück</button><button class="knopf primaer">Weiter${svg('rechts')}</button></div></div></div>`;
+}
+function seiteAndere() {
+  const b = BEREICHE[bereich];
+  const p = b.gruppen.flatMap((g) => g.punkte || []).find((x) => x[0] === punkt);
+  return `<div class="seite">${kopf(p ? p[1] : b.titel)}<div class="karte" style="padding:24px"><p class="platzhalter">Im Mockup nur angedeutet. Diese Ansicht übernimmt den bestehenden Inhalt des AIMS-Managers im neuen Rahmen.</p></div></div>`;
+}
+function inhalt() {
+  const el = document.getElementById('inhalt');
+  el.innerHTML = bereich === 'start' && punkt === 'willkommen' ? seiteStart() : bereich === 'bibliothek' ? seiteBibliothek() : bereich === 'guide' && punkt === 'etappe' ? seiteEtappe() : seiteAndere();
+  el.scrollTop = 0;
+}
+function alles() { leiste(); untermenue(); inhalt(); }
+document.addEventListener('click', (e) => {
+  const t = e.target.closest('button, tr[data-d]');
+  if (!t) return;
+  if (t.dataset.b) { bereich = t.dataset.b; const g = BEREICHE[bereich].gruppen; punkt = bereich === 'guide' ? 'etappe' : (g.find((x) => x.punkte)?.punkte[0][0]); document.getElementById('app').classList.remove('zu'); alles(); }
+  else if (t.dataset.p) { punkt = t.dataset.p; untermenue(); inhalt(); }
+  else if (t.dataset.e) { punkt = 'etappe'; etappe = +t.dataset.e; untermenue(); inhalt(); }
+  else if (t.dataset.d) { gewaehlt = +t.dataset.d; inhalt(); }
+  else if (t.id === 'zu') document.getElementById('app').classList.add('zu');
+  else if (t.id === 'thema') { const r = document.documentElement; r.dataset.theme = r.dataset.theme === 'hell' ? 'dunkel' : 'hell'; }
+});
+document.addEventListener('keydown', (e) => { if (e.key === '/' && document.activeElement.tagName !== 'INPUT') { e.preventDefault(); document.querySelector('.suche input')?.focus(); } });
+document.documentElement.dataset.theme = 'dunkel';
+alles();
+</script>
+</body>
+</html>

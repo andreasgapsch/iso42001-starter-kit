@@ -1,0 +1,1999 @@
+# Oberflächentexte des AIMS-Managers (Werkzeug). Schlüssel app.*; gleiche Struktur in src/i18n/en/app.yaml.
+allgemein:
+  abbrechen: Abbrechen
+
+bestaetigen:
+  # V-18 (A-12): Titel jeder Rückfrage als Frage mit Handlung und Gegenstand
+  titel_wechseln: "Projekt «{name}» wechseln?"
+  titel_zwischenstand_uebernehmen: Neueren Zwischenstand übernehmen?
+  titel_zwischenstand_verwerfen: Zwischenstand verwerfen?
+  titel_sicherung_speichern: Sicherung vor dem Speichern ablegen?
+  titel_neuer_name: Unter neuem Namen speichern?
+  titel_geaendert_speichern: Geänderte Angaben speichern?
+  titel_ohne_speichern_beenden: Ohne Speichern beenden?
+  titel_speicher_leeren: Zwischenspeicher leeren?
+  titel_projekt_ersetzen: Offenes Projekt ersetzen?
+  titel_ablauf_zuruecksetzen: Eigenen Ablauf zurücksetzen?
+  titel_gestaltung_entfernen: Gestaltung entfernen?
+  titel_felder_ersetzen: Ausgefüllte Felder ersetzen?
+  titel_normtexte_entfernen: "Normtexte {bezeichnung} ({sprache}) entfernen?"
+  titel_normtexte_exportieren: Normtexte exportieren?
+  titel_normtexte_loeschen: Alle Normtexte löschen?
+  titel_register_uebernehmen: Einträge der Bibliothek übernehmen?
+  titel_sicherung_laden: Sicherung laden?
+  titel_entwuerfe_erzeugen: "{anzahl} neue Entwürfe erzeugen?"
+  titel_entwuerfe_erzeugen_eins: 1 neuen Entwurf erzeugen?
+  wechseln: Projekt wechseln
+  zwischenstand_uebernehmen: Neueren Stand übernehmen
+  datei_behalten: Stand der Datei behalten
+  zwischenstand_verwerfen: Zwischenstand verwerfen
+  sicherung_speichern: Sicherung ablegen und speichern
+  neuer_name: Unter neuem Namen speichern
+  geaendert_speichern: Geändert speichern
+  ohne_speichern_beenden: Ohne Speichern beenden
+  speicher_leeren: Zwischenspeicher leeren
+  nicht_leeren: Nicht leeren
+  projekt_ersetzen: Projekt ersetzen
+  ablauf_zuruecksetzen: Ablauf zurücksetzen
+  gestaltung_entfernen: Gestaltung entfernen
+  felder_ersetzen: Ausgefüllte Felder ersetzen
+  nur_leere: Nur leere Felder füllen
+  normtexte_entfernen: Normtexte entfernen
+  normtexte_exportieren: Exportieren
+  normtexte_loeschen: Normtexte löschen
+  register_uebernehmen: Einträge übernehmen
+  sicherung_laden: Sicherung laden
+  entwuerfe_erzeugen: Neue Entwürfe erzeugen
+
+kopf:
+  schreibfehler_allgemein: "Die Datei liess sich nicht schreiben. Ihre Eingaben bleiben erhalten; speichern Sie über «Speichern unter» an einem anderen Ort."
+  schreibfehler_voll: "Auf dem Datenträger ist nicht genug Platz. Ihre Eingaben bleiben erhalten; speichern Sie über «Speichern unter» an einem anderen Ort."
+  schreibfehler_recht: "Die Datei darf nicht beschrieben werden, etwa weil das Recht fehlt oder die Datei geschützt ist. Ihre Eingaben bleiben erhalten; speichern Sie über «Speichern unter» an einem anderen Ort."
+  extern_abbruch: "Nicht gespeichert: «{name}» wurde ausserhalb geändert. Ihre Eingaben bleiben im Browser. Speichern Sie über «Speichern unter» unter einem neuen Namen."
+  extern_frage: "Die Datei «{name}» wurde ausserhalb dieser App geändert, etwa von einer zweiten Person oder in einem zweiten Tab. «Unter neuem Namen speichern» sichert Ihren Stand in einer neuen Datei; beide Fassungen bleiben erhalten. Mit Abbrechen wird nichts geschrieben."
+  repariert_abbruch: "Nicht gespeichert. Ihre Eingaben sind unverändert. Korrigieren Sie diese Stellen und speichern Sie erneut:"
+  repariert_frage: "Diese Angaben lassen sich so nicht speichern. «Geändert speichern» ändert sie wie folgt und speichert unter einem neuen Dateinamen, die bisherige Datei bleibt unberührt. Mit Abbrechen bleibt alles, wie es ist:"
+  rettung: "Die Projektdatei wurde nicht geschrieben, weil sie sich danach nicht mehr öffnen liesse. Ihre Daten liegen vollständig als Rettungsdatei {name} im Download-Ordner. Bewahren Sie sie auf: Über «Projektdatei öffnen» und «Datei reparieren und öffnen» arbeiten Sie damit weiter. Die betroffenen Stellen:"
+  repariert: "Gespeichert unter neuem Namen. Vor dem Speichern wurde geändert:"
+  namensnennung: ISO/IEC 42001 Starter-Kit von Andreas Gapsch, KMU-CIO, kmu-cio.ch
+  ohne_name: Projekt ohne Namen
+  ungespeichert: Ungespeicherte Änderungen
+  gespeichert: Gespeichert
+  nur_lesen: Nur lesend
+  zeit_gespeichert: "gespeichert um {zeit}"
+  zeit_zwischenstand: "Zwischenstand um {zeit}"
+  beispiel_unveraendert: Beispiel, unverändert
+  speichern: Speichern
+  gespeichert_datei: "Gespeichert in «{name}»."
+  gespeichert_download: "«{name}» wurde heruntergeladen. Legen Sie die Datei an einem gesicherten Ort ab."
+  speichern_fehler: Speichern fehlgeschlagen
+  pruefung: Prüfung
+  sprache: Sprache der Oberfläche
+  theme: Darstellung
+
+theme:
+  system: wie System
+  hell: hell
+  dunkel: dunkel
+
+navi:
+  prozesse: Prozesse
+  mitarbeitende: Für Mitarbeitende
+  menue: Menü
+  titel: Hauptnavigation
+  sprung: Zum Inhalt springen
+  start: Start
+  gefuehrt: Guide
+  formular: Formularansicht
+  abschluss: Abschluss
+  pruefung: Prüfung
+  dokumente: Dokumente erzeugen
+  mehr: Weiteres
+  einstellungen: Einstellungen
+  ueber: Über
+
+pfad:
+  mit_isms: Pfad mit ISMS
+  ohne_isms: Pfad ohne ISMS
+
+modul:
+  ein: Modul EU AI Act eingeschaltet
+  aus: Modul EU AI Act ausgeschaltet
+  nist_ein: Modul NIST AI RMF eingeschaltet
+
+start:
+  wechsel_frage: "«{name}» hat ungespeicherte Änderungen. Der Stand bleibt als Zwischenstand auf der Startseite erhalten. Trotzdem wechseln?"
+  titel: AIMS-Manager
+  datenschutz: "Ihre Daten verlassen diesen Rechner nicht. Speichern Sie die Projektdatei an einem gesicherten Ort. Andere lokal geöffnete HTML-Dateien könnten den Zwischenspeicher im selben Browser lesen. Auf gemeinsam genutzten Rechnern leeren Sie ihn danach (Einstellungen, Speicher)."
+  einleitung: Der AIMS-Manager führt Sie Schritt für Schritt zu einem KI-Managementsystem nach ISO/IEC 42001 und erzeugt die Dokumente für die Zertifizierung. Ihre Angaben stehen in einer Projektdatei (Endung .aims.json), die Sie selbst ablegen.
+  zurueck_projekt: "Zurück zu «{name}»"
+  neu: Neues Projekt
+  neu_text: Beginnen Sie mit einem kurzen Startinterview. Der Guide begleitet Sie danach durch alle Etappen.
+  neu_titel: Neues Projekt anlegen
+  pfad_frage: Hat Ihr Unternehmen bereits ein Informationssicherheits-Managementsystem (ISMS)?
+  pfad_hilfe: Mit ISMS ergänzen Sie bestehende Dokumente mit Ergänzungsblättern statt neue zu schreiben. Sie können das später in den Einstellungen ändern.
+  isms_zertifiziert: Ja, nach ISO/IEC 27001 zertifiziert
+  isms_vorhanden: Ja, aber nicht zertifiziert
+  isms_nein: Nein
+  modul_frage: Soll das Modul EU AI Act einbezogen werden?
+  modul_hilfe: Sinnvoll, wenn Sie in die EU liefern, KI-Ergebnisse dort genutzt werden oder Sie KI-Produkte anbieten. Ausgeschaltet bleiben alle Angaben erhalten.
+  modul_ja: Ja, Modul EU AI Act einbeziehen
+  modul_nein: Nein, vorerst ohne Modul
+  dokumentsprache: Sprache der erzeugten Dokumente
+  anlegen: Projekt anlegen
+  oeffnen: Projektdatei öffnen
+  oeffnen_text: Öffnen Sie eine gespeicherte Projektdatei (.aims.json), um weiterzuarbeiten.
+  geoeffnet: "Projekt «{name}» geöffnet."
+  neuerer_zwischenstand: "Im Browser liegt ein neuerer, nicht gespeicherter Stand dieses Projekts vom {datum}. Möchten Sie diesen Stand übernehmen?"
+  beispiele: Beispiele öffnen
+  beispiele_text: Sehen Sie sich ein vollständig ausgefülltes Beispiel eines fiktiven Unternehmens an. Änderungen betreffen nur Ihre Kopie.
+  beispiele_fehlen: Die Beispielprojekte sind in dieser Fassung noch nicht enthalten.
+  wiederherstellen_titel: Nicht gespeicherte Arbeit gefunden
+  wiederherstellen_text: Der Browser hat diese Stände zwischengespeichert. Speichern Sie danach die Projektdatei, damit nichts verloren geht.
+  stand: "Stand {datum}"
+  weitermachen: Weitermachen
+  verwerfen: Verwerfen
+  verwerfen_frage: Diesen Zwischenstand endgültig verwerfen?
+
+laden:
+  nur_lesen_titel: "Nur lesend geöffnet."
+  nur_lesen_text: "Die Datei stammt aus einer neueren Version (Dateiformat {version}, dieser AIMS-Manager kennt {bekannt}). Angaben, die er nicht kennt, fehlen in der Ansicht. Änderungen und Speichern sind gesperrt, damit die Datei nicht beschädigt wird. Für Änderungen öffnen Sie sie mit der neueren Version."
+  nur_lesen_gesperrt: "Nichts gespeichert: Die Datei ist nur lesend geöffnet, weil sie aus einer neueren Version stammt."
+  migriert_titel: "Projekt auf eine neuere Version gehoben."
+  migriert_text: "Das Projekt war im Dateiformat Version {von} und wird auf Version {nach} gehoben. Die Sicherung der ursprünglichen Datei heisst «{name}». Legen Sie sie ab, bevor Sie die Datei überschreiben."
+  sicherung_nicht_gespeichert: "Nichts gespeichert. Die Originaldatei ist unverändert; die Sicherung steht weiter zur Verfügung."
+  nur_lesen_bibliothek: "Nichts abgelegt: Die Datei ist nur lesend geöffnet, weil sie aus einer neueren Version stammt. Die Bibliothek bleibt unverändert."
+  nur_lesen_ki_import: "Nichts übernommen: Die Datei ist nur lesend geöffnet, weil sie aus einer neueren Version stammt. Das Projekt bleibt unverändert."
+  sicherung_ablegen: "Sicherung ablegen"
+  sicherung_verwerfen: "Ohne Sicherung weiterarbeiten"
+  sicherung_abgelegt: "Sicherung abgelegt: «{name}»."
+  sicherung_vor_speichern: "Die Datei wurde beim Öffnen auf eine neuere Version gehoben, und Speichern überschreibt das Original. «Sicherung ablegen und speichern» legt zuerst die Sicherung «{name}» ab und speichert danach. Mit Abbrechen wird nichts gespeichert. Wollen Sie ohne Sicherung speichern, wählen Sie im Hinweis «Ohne Sicherung weiterarbeiten»."
+  liste_eigeneProzesse: "Eigener Prozess"
+  liste_prozesse: "Prozess"
+  liste_managementbewertungen: "Managementbewertung"
+  liste_feststellungen: "Feststellung"
+  liste_audits: "Audit"
+  liste_kommunikation: "Kommunikation"
+  liste_kompetenzen: "Kompetenz"
+  liste_ziele: "Ziel"
+  liste_lieferanten: "Lieferant"
+  liste_massnahmen: "Massnahme"
+  liste_dokumente: "Dokument"
+  liste_nachweise: "Nachweis"
+  liste_eigeneControls: "Eigenes Control"
+  liste_controls: "Control"
+  liste_folgenabschaetzungen: "Folgenabschätzung"
+  liste_risiken: "Risiko"
+  liste_kiSysteme: "KI-System"
+  liste_rollen: "Rolle"
+  liste_parteien: "Partei"
+  liste_personen: "Person"
+  s_entfernt: "Eintrag entfernt"
+  s_gesetzt: "neu «{wert}»"
+  s_war: "bisher «{wert}»"
+  s_schluessel: "{ort}: Feldname zu lang (höchstens {max} Zeichen)"
+  s_zeichen: "{ort}: ungültiges Zeichen"
+  reparatur_aenderungen: "Die Reparatur ändert diese Stellen ({anzahl}). Die Originaldatei bleibt unverändert:"
+  repariert_zusatz: "repariert"
+  repariert_eins: "Datei repariert, 1 Stelle geändert. Speichern Sie sie unter dem vorgeschlagenen neuen Namen."
+  reparatur_fehlgeschlagen: "Diese Datei lässt sich nicht automatisch reparieren. Die Originaldatei ist unverändert. Prüfen Sie, ob es wirklich eine Projektdatei ist, oder öffnen Sie eine frühere Kopie."
+  repariert: "Datei repariert, {anzahl} Stellen geändert. Speichern Sie sie unter dem vorgeschlagenen neuen Namen."
+  reparieren: "Datei reparieren und öffnen"
+  s_doppelt: "{ort}: Kennung «{wert}» mehrfach vergeben"
+  s_datum: "{ort}: kein gültiges Datum"
+  feld_personen: Personen
+  feld_schemaVersion: Version des Dateiformats
+  feld_meta: Projektangaben
+  feld_organisation: Organisation
+  feld_eigner: Eigner/in
+  feld_von: Person
+  feld_am: Datum
+  feld_freigabe: Freigabe
+  feld_funktion: Funktion
+  feld_art: Art
+  feld_risiken: Risiken
+  feld_massnahmen: Massnahmen
+  feld_kiSysteme: KI-Systeme
+  feld_controls: Controls
+  feld_dokumente: Dokumente
+  feld_termin: Termin
+  feld_datum: Datum
+  feld_titel: Titel
+  feld_name: Name
+  feld_status: Status
+  feld_wert: Wert
+  feld_version: Version
+  feld_beschreibung: Beschreibung
+  feld_verantwortlich: Verantwortlich
+  s_muster: "{ort}: Format nicht zulässig"
+  s_zu_lang: "{ort}: Text zu lang (höchstens {max} Zeichen)"
+  s_wurzel: (oberste Ebene)
+  s_fehlt: "{ort}: Angabe «{feld}» fehlt"
+  s_unbekannt: "{ort}: unbekanntes Feld «{feld}»"
+  s_wert: "{ort}: unzulässiger Wert (erlaubt: {werte})"
+  s_typ: "{ort}: falscher Datentyp (erwartet {typ})"
+  s_sonst: "{ort}: {feld}"
+  s_weitere: "und {anzahl} weitere Stellen"
+  s_weitere_eins: "und 1 weitere Stelle"
+  titel: Die Datei konnte nicht geöffnet werden
+  leer: Die Datei ist leer.
+  zu-gross: Die Datei ist zu gross für eine Projektdatei (höchstens {grenze_projektdatei}).
+  kein-json: Die Datei ist keine gültige Projektdatei (kein lesbares JSON). Wurde sie in einem anderen Programm verändert?
+  kein-projekt: Die Datei ist keine Projektdatei des AIMS-Managers.
+  keine-version: In der Datei fehlt die Versionsangabe (schemaVersion).
+  zu-neu: Die Datei stammt aus einer neueren Version des Starter-Kits. Bitte verwenden Sie den AIMS-Manager dieser Version.
+  luecke: Die Datei hat eine Version, die dieser AIMS-Manager nicht umwandeln kann.
+  schema: "Die Datei enthält Angaben, die nicht zum Format passen:"
+  unbekannt: Beim Öffnen ist ein unerwarteter Fehler aufgetreten.
+
+gefuehrt:
+  pflicht_eintrag: "Mindestens ein Eintrag ist Pflicht. Erfassen Sie ihn oder wählen Sie «Später»."
+  pflicht_eintrag_haken: "Mindestens ein Eintrag ist Pflicht. Erfassen Sie ihn, setzen Sie den Haken «Für diese Seite ist kein Eintrag nötig» oder wählen Sie «Später»."
+  pflicht_zukunft: "Das Freigabedatum liegt in der Zukunft. Erledigt ist die Seite ab diesem Tag. Bis dahin können Sie mit «Später» weitergehen."
+  pflicht_fehlt_eins: "Bitte füllen Sie die markierte Pflichtangabe aus oder wählen Sie «Später»."
+  eintraege_titel: "Einträge"
+  skala_warnung: "Mit Ihrer Skala ist der höchste Risikowert {hoechst}. Die Schwelle {grenze} kann nie erreicht werden. Passen Sie die Schwellen oder die Skala an."
+  triage_vorschlag_kurz: "Vorschlag aus Ihren Antworten: Kurzprüfung genügt, weil alle Fragen mit Nein beantwortet sind."
+  triage_vorschlag_voll: "Vorschlag aus Ihren Antworten: volle Folgenabschätzung, weil mindestens eine Frage mit Ja beantwortet ist."
+  vorschlag_inventar: "Vorschlag aus dem KI-Inventar: {wert}"
+  sensibel_widerspruch: "Im KI-Inventar steht für {id} «Sensible Nutzung: {inventar}», diese Abschätzung sagt «{hier}». Inventar und Abschätzung müssen übereinstimmen."
+  sensibel_uebernehmen: "Ins Inventar übernehmen"
+  sensibel_uebernommen: "Sensible Nutzung von {id} im KI-Inventar nachgeführt."
+  controls_27001: "Mit ISMS: passende Controls der ISO/IEC 27001 zu den verknüpften Controls (Zuordnung 42001 zu 27001). Ein Klick hält die Verknüpfung in der Erklärung zur Anwendbarkeit fest:"
+  control27001_verknuepfen: "ISO/IEC 27001 {id} verknüpfen"
+  sensibel_widerspruch_juengste: "Im KI-Inventar steht für {id} «Sensible Nutzung: {inventar}», die jüngste Abschätzung {ia} sagt «{hier}». Inventar und Abschätzung müssen übereinstimmen."
+  vorschlag_gesetzt: "«{feld}»: {wert} übernommen."
+  control27001_verknuepft: "ISO/IEC 27001 {id} mit {fuer} verknüpft."
+  massnahme_angelegt: "{id} erfasst und mit {risiko} verknüpft. Verantwortung und Termin ergänzen Sie auf der Seite «Massnahmen»."
+  massnahme_neu_label: "Neue Massnahme zu {id}"
+  massnahme_neu: "Massnahme erfassen"
+  etappen: Etappen
+  fortschritt: "{erledigt} von {gesamt} Seiten erledigt"
+  fortschritt_gesamt: Fortschritt im Guide
+  keine_etappen: Für dieses Projekt sind keine Etappen verfügbar.
+  seite_von: "Seite {nummer} von {gesamt}"
+  zum_feld: "Zum Feld {feld}"
+  grund:
+    vermindern_ohne_control: "«Vermindern» braucht mindestens ein verknüpftes Control."
+    zukunft: Das Datum liegt in der Zukunft.
+  bewertung_vorher: "Vorher (E6):"
+  bewertung_danach: "Danach:"
+  bewertung_wa: "Wahrscheinlichkeit {w} · Auswirkung {a}"
+  bewertung_fehlt: noch nicht bewertet (E6)
+  bewertung_offen: unten einschätzen
+  controls_vermindern: "«Vermindern» braucht mindestens ein Control. Vorschläge aus diesem Risiko:"
+  controls_vorschlaege: "Vorschläge aus diesem Risiko:"
+  controls_weitere: "Weitere Vorschläge aus diesem Risiko:"
+  control_verknuepfen: "{id} verknüpfen"
+  risiko_von: "Risiko {nummer} von {gesamt}"
+  risiko_vorher: Vorheriges Risiko
+  risiko_naechstes: "Weiter zu {id}"
+  etappe_von: "Etappe {nummer} von {gesamt}"
+  seite_fehlt_titel: Seite in Vorbereitung
+  seite_fehlt: Diese Seite wird gerade erstellt und erscheint mit der nächsten Fassung. Sie können weitergehen.
+  sie_sind_hier: Sie sind hier
+  seitenpunkte: "Seiten der Etappe {etappe}"
+  ort_abschluss: Abschluss der Etappe
+  hilfe_auf: Hilfe zeigen
+  hilfe_zu: Hilfe einklappen
+  hilfe_auf_kurz: Hilfe
+  hilfe_zu_kurz: Hilfe einklappen
+  hilfe_breite: Breite der Hilfe
+  hilfe_breite_tipp: Ziehen oder mit den Pfeiltasten ändern; Doppelklick stellt die Standardbreite wieder her.
+  status:
+    offen: offen
+    in-arbeit: teilweise erledigt
+    erledigt: erledigt
+  status_spaeter: auf später verschoben
+  seitenstatus:
+    offen: offen
+    erledigt: erledigt
+    spaeter: später
+    unvollstaendig: Pflichtangaben fehlen
+    befund: Prüfung meldet einen Befund
+  befund_titel: Die Prüfung meldet zu dieser Seite
+  befund_text: Alle Pflichtangaben sind da, die Prüfregeln beanstanden aber etwas. Beheben Sie es hier; erst dann gilt die Seite als erledigt.
+  befund_text_luecken: Es fehlen Pflichtangaben, und die Prüfregeln beanstanden zusätzlich etwas. Ergänzen Sie die Angaben und beheben Sie den Befund hier; erst dann gilt die Seite als erledigt.
+  befund_springen: Zur Stelle
+  weiter: Weiter
+  weiter_taste: Enter
+  zurueck: Zurück
+  zurueck_taste: Alt+Shift+Pfeil links
+  spaeter: Später
+  spaeter_hinweis: Auf später verschoben. Die Seite erscheint bei den offenen Punkten der Etappe.
+  pflicht_fehlt: "Bitte füllen Sie die markierten Pflichtangaben aus ({anzahl}) oder wählen Sie «Später»."
+  pflicht_fehlt_start: "Bitte beantworten Sie die markierten Fragen ({anzahl})."
+  ziel: Ziel
+  warum: Warum die Norm das verlangt
+  ergebnis: Was am Ende vorliegt
+  eckdaten: Eckdaten
+  dauer: "Richtwert: ungefähr {stunden} Stunden"
+  beteiligte: Beteiligte
+  seiten_der_etappe: Seiten dieser Etappe
+  seiten_anzahl: "Seiten zum Bearbeiten in dieser Etappe: {anzahl}. Die Punkte oben führen zu jeder Seite, die Etappen stehen im Menü links."
+  vorschlag: "Vorschlag: {wert}"
+  vorschlag_uebernehmen: Vorschlag übernehmen
+  eintrag_neu: Eintrag erfassen
+  eintrag_entfernen: Eintrag entfernen
+  eintrag_entfernen_frage: Wollen Sie diesen Eintrag wirklich entfernen?
+  eintrag_waehlen: Wählen Sie oben einen Eintrag zum Bearbeiten.
+  keine_eintraege: Noch keine Einträge.
+  keine_passenden: Auf diese Seite trifft im Moment kein Eintrag zu. Sie können weitergehen.
+  ohne_titel: (noch ohne Bezeichnung)
+  startwerte: Vorgeschlagene Einträge erfassen
+  bekannte_werkzeuge: "Im Startinterview genannt: {namen}. Übernehmen Sie diese Werkzeuge als Einträge und ergänzen Sie die Angaben."
+  bekannte_uebernehmen: "Ins Inventar übernehmen ({anzahl})"
+  nicht_noetig: Für diese Seite ist kein Eintrag nötig.
+  nicht_noetig_hilfe: Die Seite gilt dann ohne Eintrag als erledigt, solange die Liste leer bleibt. Halten Sie den Grund bei Bedarf in der Checkliste der Etappe fest.
+  nicht_zutreffend: Diese Seite gilt für Ihr Projekt nicht. Sie erscheint im Ablauf nur, wenn ihre Bedingung zutrifft.
+  nicht_zutreffend_grund: "Die Seite gilt nur unter dieser Bedingung:"
+  nicht_zutreffend_aendern: Ändern sich Ihre Angaben, etwa der Pfad im Startinterview oder die Rolle eines KI-Systems, erscheint die Seite wieder im Ablauf.
+  zur_etappe: Zur ersten Seite der Etappe
+  rueckweg_text: Sie sind von der Prüfung hierher gesprungen.
+  rueckweg: Zurück zur Prüfung
+  bedingung:
+    mitIsms:
+      "true": im Pfad mit ISMS (Startinterview, Frage Informationssicherheit)
+      "false": im Pfad ohne ISMS (Startinterview, Frage Informationssicherheit)
+    modul:
+      "true": mit eingeschaltetem Modul AI Act
+      "false": ohne Modul AI Act
+    entwickeltKi:
+      "true": wenn Sie KI selbst entwickeln oder trainieren
+      "false": wenn Sie KI nicht selbst entwickeln
+    verkauftKiProdukte:
+      "true": wenn Sie Produkte oder Dienste mit KI verkaufen
+      "false": wenn Sie keine Produkte mit KI verkaufen
+    rolle:
+      anbieter: wenn mindestens ein KI-System die Rolle Anbieter hat (E5)
+      betreiber: wenn mindestens ein KI-System die Rolle Betreiber hat (E5)
+    typ:
+      eigenbau: wenn mindestens ein KI-System eine Eigenentwicklung ist (E4)
+    modulNistRmf:
+      "true": mit eingeschaltetem Modul NIST AI RMF (Startinterview oder Einstellungen)
+      "false": ohne Modul NIST AI RMF
+    generativ:
+      "true": wenn mindestens ein KI-System generative KI ist (E4)
+      "false": wenn kein KI-System generative KI ist
+
+
+ueberblick:
+  kurz: Überblick
+  titel: Überblick über den Guide
+  einleitung: "Stand am {datum}: wo Sie im Guide stehen, was als Nächstes kommt und ob Sie im Plan sind."
+  hier_weiter: Hier geht es weiter
+  weitermachen: Weitermachen
+  weitermachen_ziel: "{etappe} {titel}, Seite {nummer} von {anzahl}"
+  drucken: Überblick drucken
+  kennzahlen: Kennzahlen zum Guide
+  gesamt: Gesamtfortschritt
+  gesamt_text: "{erledigt} von {gesamt} Seiten erledigt"
+  etappen_zahlen: "Etappen: {vollstaendig} vollständig, {teilweise} teilweise, {offen} offen"
+  aktuell: Aktuelle Etappe
+  aktuell_text: "{titel}, Seite {nummer} von {anzahl}"
+  zeit: Kalenderwoche heute
+  zeit_plan: "Nach Plan jetzt Schritt {nr} ({etappen}), {von} bis {bis}."
+  zeit_vor: "Der Plan beginnt in {kw}."
+  zeit_nach: "Der Zieltermin vom {datum} ist erreicht."
+  zeit_ziel: "Ziel Stage-1-Bereitschaft: {datum} ({kw}), Plan über {wochen} Wochen."
+  im_plan: im Plan
+  im_verzug: im Verzug
+  verzug_text: "Nach Plan bereits fällig, aber nicht vollständig: {etappen}."
+  ohne_termin: ohne Zieltermin
+  ohne_termin_text: Mit einem Zieltermin im Startinterview vergleicht der Überblick Ihren Stand mit dem Fahrplan.
+  zum_termin: Zieltermin setzen
+  etappen: Etappen und Stand
+  etappen_text: Je Etappe die Seiten nach Stand; rechts der Anteil erledigter Seiten. Ein Haken heisst vollständig, ein Teilkreis teilweise.
+  kategorie:
+    erledigt: erledigt
+    unvollstaendig: Pflichtangaben fehlen
+    spaeter: später
+    offen: offen
+  naechste: Nächste offene Seiten
+  naechste_leer: Keine offenen Seiten. Alle Seiten sind erledigt oder auf später verschoben.
+  spaeter: Auf später verschoben
+  spaeter_leer: Keine Seiten auf später verschoben.
+  fahrplan: Fahrplan und heute
+  zum_fahrplan: Zum Fahrplan
+  fehler: Offene Fehler der Prüfregeln
+  keine_fehler: Die Prüfregeln melden keine Fehler.
+  fehler_jetzt: Fehler bis zur aktuellen Etappe
+  fehler_spaeter: "Dazu {anzahl} aus Etappen, die noch kommen. Sie erledigen sich meist im Lauf des Guides."
+  zur_pruefung: Zur Prüfung
+  weitere_fehler: "{anzahl} weitere Fehler in der Prüfung"
+  weitere_fehler_eins: "1 weiterer Fehler in der Prüfung"
+  module: Module
+  modul_aiact: EU AI Act
+  modul_nist: NIST AI RMF
+  modul_ein: eingeschaltet
+  modul_aus: ausgeschaltet
+  zu_einstellungen: Module in den Einstellungen
+
+abschluss:
+  titel: Etappe abschliessen
+  text: Haken Sie die Punkte der Checkliste ab und halten Sie fest, wo der Nachweis liegt. Offene Punkte können Sie als Massnahme übernehmen.
+  checkliste: Checkliste
+  offen: Offene Punkte
+  alles_erledigt: Alle Seiten und Punkte dieser Etappe sind erledigt.
+  als_massnahme: Als Massnahme übernehmen
+  ist_massnahme: Bereits als Massnahme erfasst
+  massnahme_angelegt: "Massnahme {id} erfasst."
+  weiter: "Weiter zu: {etappe}"
+  zur_pruefung: Zur Prüfung
+  stand: Stand der Etappe
+  hinweis: Sie können eine Etappe auch mit offenen Punkten verlassen und später zurückkehren.
+
+hilfe:
+  nichts_uebernommen: "Nichts übernommen: Ihre Angaben bleiben unverändert."
+  ersetzen_frage_eins: "1 Feld ist schon ausgefüllt. Mit dem Beispiel ersetzen?"
+  ersetzen_frage: "{anzahl} Felder sind schon ausgefüllt. Mit dem Beispiel ersetzen?"
+  titel: Hilfe
+  warum: Warum fragen wir das?
+  beispiel: Beispielantwort
+  beispiel_quelle: "Aus dem Beispielprojekt {firma} (fiktiv)."
+  beispiel_fehlt: Die Beispielantwort folgt mit dem Beispielprojekt.
+  als_vorlage: Als Vorlage übernehmen
+  uebernommen: Beispiel übernommen. Passen Sie die Angaben an Ihr Unternehmen an; Personen wählen Sie selbst.
+  fehler: Typische Fehler und was Auditoren sehen wollen
+  begriffe: Begriffe
+  nachlesen: Zum Nachlesen
+  norm: "ISO/IEC 42001, Abschnitt {abschnitt}"
+  norm_hinweis: Die Norm ist bei SNV, DIN oder ISO zu beziehen.
+  vorlage: "Kit-Vorlage {id} {titel}"
+  leitfaden: "Leitfaden, Schritt {nummer}"
+  artikel: "Art. {nummer}"
+  anhang: "Anhang {nummer}"
+  aiact_link: "EU AI Act, {artikel} (Seite {seite} im beigelegten PDF)"
+  weitere: "{anzahl} weitere"
+  weitere_eins: "1 weitere"
+
+ki:
+  titel: Mit KI vertiefen
+  hinweis: Erstellt eine Anfrage mit dem Stand dieser Seite für den KI-Assistenten des Kits. Sie kopieren sie selbst; es werden keine Daten versendet.
+  knopf: Anfrage erstellen
+  dialog_hinweis: Wählen Sie ab, was nicht in die Anfrage gehört. Vertrauliche Angaben wie Namen sind bereits abgewählt.
+  mitsenden: In die Anfrage aufnehmen
+  vorschau: Anfrage
+  kopieren: In die Zwischenablage kopieren
+  kopiert: Anfrage kopiert. Fügen Sie sie im KI-Assistenten ein.
+  kopieren_fehler: Kopieren nicht möglich. Markieren Sie den Text und kopieren Sie ihn von Hand.
+  einleitung: Ich arbeite mit dem ISO/IEC 42001 Starter-Kit an unserem KI-Managementsystem. Bitte hilf mir bei der folgenden Seite des Guides.
+  auftrag: Prüfe meine Angaben auf Vollständigkeit und Plausibilität, schlage Verbesserungen in eigenen Worten vor und nenne, was ein Auditor zusätzlich sehen möchte.
+  firma_name: Firma
+  firma_branche: Branche
+  firma_groesse: Mitarbeitende
+  firma_pfad: Pfad
+  firma_modul: Modul
+  l_seite: Seite
+  l_frage: Frage
+  l_norm: Normabschnitt
+  l_vorlage: Kit-Vorlage
+  l_firma: Unternehmen
+  l_angaben: Meine bisherigen Angaben
+  l_leer: (noch leer)
+  l_auftrag: Auftrag
+
+feld:
+  version_format: Bitte nur die Versionsnummer eintragen, zum Beispiel 1.0.
+  jahr_pruefen: "Bitte prüfen Sie das Jahr: Es hat vier Stellen, zum Beispiel 2026."
+  stufen_wahrscheinlichkeit: [selten, möglich, wahrscheinlich, häufig]
+  stufen_auswirkung: [gering, spürbar, erheblich, schwer]
+  skala_vorgabe: Vorgabe 1 bis 4, bis Sie im Guide (Etappe 6) eine eigene Skala festlegen.
+  ja: Ja
+  nein: Nein
+  pflicht: Pflichtangabe
+  noch_keine: Noch nichts verknüpft
+  verweis_entfernen: "{wert} aus {feld} entfernen"
+  verweis_hinzufuegen: Hinzufügen …
+  pflicht_wort: Pflicht
+  norm: "ISO/IEC 42001 {abschnitt}"
+  fehlt: Diese Angabe fehlt noch.
+  bitte_waehlen: Bitte wählen
+  ausserhalb_skala: "Der Wert {wert} liegt ausserhalb Ihrer Skala. Wählen Sie eine Stufe."
+  keine_optionen: Noch keine Einträge zur Auswahl
+  filtern: Filtern
+  gewaehlt: "{anzahl} gewählt"
+  person_waehlen: Person wählen
+  person_neu: Person erfassen
+  person_name: Name
+  person_funktion: Funktion
+  person_anlegen: Person erfassen und wählen
+  lieferant_neu: Lieferant erfassen
+  lieferant_name: Name des Lieferanten
+  lieferant_leistung: Leistung, z. B. Cloud-Dienst für Texterstellung
+  lieferant_anlegen: Lieferant erfassen und wählen
+  lieferant_hinweis: Die Prüfung des Lieferanten erfassen Sie später unter «Lieferanten».
+  freigabe_von: Freigegeben von
+  freigabe_am: Freigegeben am
+  geprueft_von: Geprüft von
+  geprueft_am: Geprüft am
+  eingestuft_von: Eingestuft von
+  eingestuft_am: Eingestuft am
+  bestaetigt_von: Bestätigt von
+  bestaetigt_am: Bestätigt am
+  angenommen_von: Angenommen von
+  angenommen_am: Angenommen am
+  zeile_neu: Zeile erfassen
+  zeile_entfernen: Zeile entfernen
+  entfernen: Entfernen
+  textbausteine: Textbausteine
+  uebernehmen: Übernehmen
+  aktionen: Aktionen
+  erledigt: erledigt
+  noch_offen: noch offen
+  nachweis: Nachweis oder Ablageort
+  datum: Datum
+  unbekannt: Dieses Feld kann noch nicht angezeigt werden.
+  pruefpunkt: Prüfpunkt
+  pruefpunkte_erfasst: "{anzahl} von {gesamt} erfasst"
+  pruef_nachweis: Nachweis gesehen
+  pruef_stichprobe: Stichprobe
+  pruef_ergebnis: Ergebnis
+  pruef_ergebnis_leer: automatisch
+  pruef_soa: SoA zum Audit
+  pruef_soa_leer: aktueller Stand
+
+risiken:
+  filter_status: Status
+  gruppe_grenze: Akzeptanzgrenze
+  lage_ueber: über der Akzeptanzgrenze
+  lage_annahme-offen: Annahme des Restrisikos offen
+  filter_hinweis: "Gefiltert: {status}."
+  wert_vor: Wert vor
+  wert_nach: Wert nach
+  wert_vor_nach: "Wert vor und nach"
+  restrisiko: Restrisiko
+  angenommen_von: "angenommen von {name}, {datum}"
+  angenommen_durch: "von {name}, {datum}"
+
+liste:
+  leer_erfassen: "Noch keine Einträge. Erfassen Sie den ersten mit dem Knopf oben."
+  leer_filter: "Keine Treffer für diesen Filter."
+  anzahl_eins: "1 Eintrag"
+  bereich: Bereich
+  verantwortlich: Verantwortlich
+  funktion: Funktion
+  ziel: Ziel
+  messungen: Messungen
+  was: Was
+  richtung: Richtung
+  rolle: Rolle
+  suchen: Suchen
+  filtern_liste: "{titel} filtern"
+  anzahl: "{anzahl} Einträge"
+  neu: Eintrag erfassen
+  leer: "Noch keine Einträge."
+  waehlen: Wählen Sie links einen Eintrag.
+  bearbeiten: Eintrag bearbeiten
+  entfernen: Eintrag entfernen
+  entfernen_frage: Wollen Sie diesen Eintrag wirklich entfernen?
+  filter_ki: "Gefiltert auf {ki}."
+  filter_aus: Filter aufheben
+  id: ID
+  name: Name
+  titel: Bezeichnung
+  typ: Art
+  status: Status
+  system: KI-System
+  wert: Wert
+  termin: Termin
+  ergebnis: Ergebnis
+  anwendbar: Anwendbar
+  ohne_angabe: ohne Angabe
+  umsetzung: Umsetzung
+  wirksamkeit: Wirksamkeit
+  vorschlag: Vorschlag
+  stand: Stand
+  vollstaendig: vollständig
+  offen: offen
+
+module:
+  nachweise: Nachweise
+  feststellungen: Feststellungen und Vorfälle
+  meldungen: Meldungen und Einsprüche
+  mitarbeitende: Für Mitarbeitende
+  nachweise_text: Nachweisregister mit Art, Ablageort und Datum; Controls und Dokumente verweisen darauf.
+  feststellungen_text: Feststellungen aus Audits und Managementbewertung, Vorfälle und Beinahe-Vorfälle mit Korrektur und Wirksamkeit.
+  meldungen_text: Meldungen, Rückmeldungen und Einsprüche von Mitarbeitenden, Kunden und Betroffenen.
+  audits_text: Auditprogramm, interne Audits und Audits der Zertifizierungsstelle (Stage 1, Stage 2, Überwachung).
+  ziele: Ziele und Kennzahlen
+  kompetenz: Kompetenz und Kommunikation
+  organisation_text: Eckdaten, Kontext, interessierte Parteien, Geltungsbereich, KI-Leitlinie, Rollen und Risikokriterien.
+  ziele_text: Messbare KI-Ziele mit Kennzahl, Sollwert, Verantwortlichen, Termin und Messungen.
+  kompetenz_text: Wer welches Wissen braucht, wie Mitarbeitende informiert werden und was Sie wann mit wem kommunizieren.
+  aiact_text: Rolle und Risikoklasse je KI-System, Pflichten nach AI Act, Zusatz-Controls und Fristen. Die Einstufung ersetzt keine Rechtsberatung.
+  nistrmf_text: Profil Ist und Ziel je Subkategorie des NIST AI RMF, Zusatz-Controls RMF-xx und Stand der Fassung. Das NIST AI RMF ist freiwillig und nicht zertifizierbar.
+  brucke27001_text: Wo Sie Nachweise aus Ihrem ISMS nach ISO/IEC 27001 wiederverwenden und welche ISMS-Dokumente ein Ergänzungsblatt erhalten.
+  uebersicht: Übersicht
+  organisation: Organisation
+  inventar: KI-Inventar
+  risiken: Risiken
+  folgen: Folgenabschätzungen
+  soa: Erklärung zur Anwendbarkeit
+  dokumente: Dokumentenregister
+  massnahmen: Massnahmen
+  lieferanten: Lieferanten
+  audits: Audits
+  generator: Dokumentengenerator
+  aiact: EU AI Act
+  nistrmf: NIST AI RMF
+  brucke27001: ISO 27001-Brücke
+  folgt: Die Formularansicht für dieses Modul folgt mit der nächsten Fassung. Die Angaben erfassen Sie bis dahin im Guide.
+  im_gefuehrten: "Im Guide bearbeiten: {etappe}"
+  inventar_text: Alle KI-Systeme im Unternehmen, auch KI in eingekaufter Software und Schatten-KI.
+  risiken_text: Risiken und Chancen mit Bewertung, Behandlung und verknüpften Controls.
+  folgen_text: Kurzprüfung und Folgenabschätzung je aktivem KI-System.
+  soa_text: Entscheid und Begründung für jedes Control, mit Vorschlägen aus Risiken und Pflichten nach AI Act.
+  dokumente_text: Version, Status, Freigabe und Ablage jedes Dokuments.
+
+soa:
+  stand_alle: "Stand auf «umgesetzt» setzen für alle {anzahl} Controls mit Beschreibung und Nachweis"
+  stand_alle_eins: "Stand auf «umgesetzt» setzen für das eine Control mit Beschreibung und Nachweis"
+  vorschlaege_alle_eins: "Den einen Vorschlag übernehmen"
+  standard_nicht_text: "Nicht anwendbar: Wir entwickeln keine eigenen KI-Modelle; das Control betrifft keine unserer Tätigkeiten."
+  standard_anwendbar_text: "Anwendbar: Das Control ist für den Betrieb unserer KI-Systeme nötig. Umsetzung und Nachweis stehen im Control."
+  standard_nicht: "Standardtext einsetzen: keine eigene KI-Entwicklung"
+  standard_anwendbar: "Standardtext einsetzen: anwendbar"
+  vorschlaege_spalte: "Vorschlag"
+  vorschlaege_alle: "Alle {anzahl} Vorschläge übernehmen"
+  nicht_anwendbar: nicht anwendbar
+  filter_status: Umsetzung
+  filter_wirksamkeit: Wirksamkeit
+  filter_ki: KI-System
+  filter_alle: alle
+  filter_geprueft: geprüft
+  filter_ungeprueft: noch nicht geprüft
+  filter_aktiv: "Gefiltert: {anzahl} von {gesamt} Controls."
+  vorschlag_risiko: "Vorgeschlagen wegen {quellen}"
+  vorschlag_aiact: "Vorgeschlagen wegen AI-Act-Pflicht ({quellen})"
+  vorschlag_uebernehmen: Vorschlag übernehmen
+  begruendung_risiko: "Behandelt die Risiken {quellen}."
+  begruendung_aiact: "Erforderlich für Pflichten nach AI Act bei {quellen}."
+  kurz_risiko: Risiko
+  kurz_aiact: AI Act
+  vorschlag_nistrmf: "Vorgeschlagen wegen NIST AI RMF ({quellen})"
+  begruendung_nistrmf: "Zusatz-Control aus dem NIST AI RMF für {quellen}."
+  kurz_nistrmf: NIST
+
+uebersicht:
+  titel: Übersicht
+  stage1: Bereit für Stage 1?
+  zur_pruefung: Zur Prüfung
+  gefuehrt: Guide
+  gesamt: Gesamt
+  weitermachen: Weitermachen
+  offen: Offen und fällig
+  massnahmen: "{anzahl} offene Massnahmen"
+  massnahmen_eins: "1 offene Massnahme"
+  faellig: Fällige Überprüfungen (nächste 30 Tage)
+  nichts_faellig: Keine Überprüfung fällig.
+  kapitel: Fortschritt je Normkapitel
+  kapitel_kurz: "Kap. "
+  gruppen: Fortschritt je Control-Gruppe
+
+pruefung:
+  bereitschaft_titel: Stage-1-Bereitschaft
+  spur: "{erledigt} von {gesamt} Seiten im Guide erledigt"
+  bereitschaft_regel: "Bereit heisst: keine Fehler und keine Lücken. Hinweise erlauben «Bereit mit Hinweisen», ausser {ausnahmen}: Diese zählen als Lücke."
+  bindend_H88: einer Freigabe, die nicht die Leitung erteilt hat oder die die Eignerschaft sich selbst erteilt (H88)
+  bindend_H89: einem Datum in der Zukunft (H89)
+  warum: "Warum: {text}"
+  zahl_luecken_eins: "1 Lücke"
+  luecke_dokumente_eins: "1 Pflichtdokument noch nicht freigegeben"
+  fehlt_triage: "Kurzprüfung mit Ergebnis «vollständig»"
+  fehlt_verweis_personen: "Person"
+  fehlt_verweis_kiSysteme: "KI-System"
+  fehlt_verweis_risiken: "Risiko"
+  fehlt_verweis_massnahmen: "Massnahme"
+  fehlt_verweis_nachweise: "Nachweis"
+  fehlt_verweis_lieferanten: "Lieferant"
+  fehlt_verweis_ziele: "Ziel"
+  fehlt_verweis_audits: "Audit"
+  fehlt_verweis_feststellungen: "Feststellung"
+  fehlt_verweis_managementbewertungen: "Managementbewertung"
+  fehlt_verweis_controls: "Control"
+  fehlt_verweis_prozesse: "Prozess"
+  fehlt_verweis_kennzahlen: "Kennzahl"
+  fehlt_betroffene: "Betroffene"
+  fehlt_nutzen_schaden: "Nutzen, Schaden und Ausmass je Ziel"
+  fehlt_stand: "Stand der Umsetzung (noch «offen»)"
+  fehlt_nachweis: "Beschreibung oder Nachweis"
+  luecke_regel_H88: "Freigabe nicht durch die Leitung oder durch die Eignerschaft selbst: {anzahl}"
+  luecke_regel_H89: "Datum in der Zukunft: {anzahl} Freigaben, Audits oder Managementbewertungen gelten noch nicht als erledigt"
+  luecke_regel_H89_eins: "Datum in der Zukunft: 1 Freigabe, Audit oder Managementbewertung gilt noch nicht als erledigt"
+  keine_befunde_luecken: "Die Prüfregeln melden nichts. Es fehlen aber noch die oben genannten Teile."
+  luecke_dokumente: "{anzahl} Pflichtdokumente noch nicht freigegeben"
+  luecke_register: "Register leer: {register}"
+  luecke_etappe: "Etappe {etappe}: {erledigt} von {gesamt} Seiten erledigt"
+  luecken_text: "«Bereit» erscheint erst, wenn alle Etappen bearbeitet, die Pflichtregister gefüllt und die Pflichtdokumente freigegeben sind."
+  luecken_titel: "Was vor Stage 1 noch fehlt"
+  zahl_luecken: "{anzahl} Lücken"
+  zahl_fehler: "{anzahl} Fehler"
+  zahl_fehler_eins: "1 Fehler"
+  zahl_hinweise: "{anzahl} Hinweise"
+  zahl_hinweise_eins: "1 Hinweis"
+  zahl_offen: "{anzahl} offen aus Etappen, die noch kommen"
+  zahl_offen_eins: "1 offen aus einer Etappe, die noch kommt"
+  stellen: "{anzahl} Stellen"
+  stellen_eins: "1 Stelle"
+  einheit_fehler: Fehler
+  einheit_fehler_eins: Fehler
+  titel: Prüfung vor Stage 1
+  einleitung: Die Prüfung zeigt, was vor dem Zertifizierungsaudit noch fehlt. Fehler müssen behoben sein, Hinweise sollten Sie prüfen.
+  ampel:
+    aufbau: Im Aufbau
+    gruen: Bereit für Stage 1
+    gelb: Bereit mit Hinweisen
+    rot: Noch nicht bereit
+  zahlen: "{fehler} Fehler, {hinweise} Hinweise"
+  schwere:
+    offen: offen
+    fehler: Fehler
+    hinweis: Hinweis
+  liste: Befunde der Prüfung
+  springen: Zur Stelle
+  keine_befunde: Keine Befunde. Ihr Projekt ist bereit für Stage 1.
+  bericht: Stage-1-Bericht drucken
+  dokumente: Dokumente erzeugen
+
+  register:
+    kommunikation: "Kommunikation"
+    kompetenzen: "Kompetenzen"
+    ziele: "KI-Ziele und Kennzahlen"
+    risiken: "Risikoregister"
+    kiSysteme: "KI-Inventar"
+# Kopf und Fuss jedes Ausdrucks (A-06)
+druck:
+  stand: "Stand {datum}"
+stage1:
+  fuss: "{firma} · Stand {datum}"
+  seite: Seite
+  vor_audit: "Vor dem Audit müssen alle Fehler und Lücken geschlossen sein. Hinweise sind Empfehlungen; prüfen Sie sie und halten Sie fest, warum Sie davon abweichen."
+  ergebnis_zahlen: "Fehler: {fehler}, Lücken: {luecken}"
+  titel: Stage-1-Bericht
+  untertitel: Stand der Vorbereitung auf das Stage-1-Audit nach ISO/IEC 42001
+  firma: Organisation
+  datum: Datum
+  pfad: Pfad
+  pfad_zertifiziert: mit zertifiziertem ISMS (ISO/IEC 27001)
+  pfad_mit_isms: mit ISMS
+  pfad_ohne_isms: ohne ISMS
+  module: Module
+  module_keine: keine
+  modul_aiact: EU AI Act
+  modul_nist: NIST AI RMF
+  termin: Stage-1-Audit
+  termin_offen: noch nicht geplant
+  bis: bis
+  ziel: Ziel Stage-1-Bereitschaft
+  ergebnis: Ergebnis der Prüfung
+  regeln_titel: Geprüfte Regeln
+  regeln_text: "{geprueft} Regeln geprüft: {fehler}, {hinweise}."
+  regeln_fehler: "{anzahl} Fehler"
+  regeln_fehler_eins: "1 Fehler"
+  regeln_hinweise: "{anzahl} Hinweise"
+  regeln_hinweise_eins: "1 Hinweis"
+  regel: Regel
+  art: Art
+  norm: Normbezug
+  befunde: Befunde
+  ohne_befund: "Ohne Befund: {anzahl} Regeln"
+  ohne_befund_eins: "Ohne Befund: 1 Regel"
+  etappen_titel: Stand je Etappe
+  etappe: Etappe
+  stand: Stand
+  seiten: Seiten
+  seiten_wert: "{erledigt} von {gesamt}"
+  zustand:
+    erledigt: vollständig
+    teilweise: teilweise
+    offen: offen
+  dokumente_titel: Pflichtdokumente
+  prozesse_titel: Prozesse des Managementsystems (4.4)
+  id: ID
+  dokument: Dokument
+  version: Version
+  status: Status
+  freigabe: Freigabe
+  nicht_im_register: nicht im Register
+  offen_titel: Offene Punkte
+  offen_keine: Keine offenen Punkte.
+  offen_etappen: "Etappen nicht vollständig: {etappen}"
+  offen_dokumente: "Pflichtdokumente ohne Freigabe: {ids}"
+  offen_massnahme: "Massnahme {id} (Priorität hoch): {titel}, Termin {termin}"
+  ohne_termin: ohne Termin
+
+fahrplan:
+  ziel_puffer: "Ziel Stage-1-Bereitschaft: {datum}. Der Plan des Leitfadens umfasst {wochen} Wochen; ab heute gerechnet beginnt er in der Woche vom {start} ({kw}) und lässt Ihnen {puffer} Wochen Puffer."
+  titel_schritte: Die 10 Schritte mit Kalenderwochen
+  schritt: Schritt
+  etappen: Etappen im Werkzeug
+  plan: Woche im Plan
+  kalender: Kalenderwoche
+  pt: Personentage
+  bis: bis
+  woche: "Woche {woche}"
+  wochen_bereich: "Wochen {von} bis {bis}"
+  kw: "KW {woche}/{jahr}"
+  kw_bereich: "{von} bis {bis}"
+  ziel: "Ziel Stage-1-Bereitschaft: {datum}. Der Plan des Leitfadens umfasst {wochen} Wochen; rückwärts gerechnet beginnt er in der Woche vom {start} ({kw})."
+  kein_termin: "Ohne Ziel Stage-1-Bereitschaft zeigt der Fahrplan nur die Wochen des Plans (insgesamt {wochen} Wochen). Tragen Sie das Ziel ein, dann rechnet er rückwärts und zeigt Kalenderwochen."
+  zum_termin: Ziel eintragen
+  grund:
+    eigenbau: mehrere Eigenentwicklungen
+    produkt: KI im eigenen Produkt
+    hochrisiko: Hochrisiko-System nach EU AI Act
+  gestreckt: "Erweiterter Umfang ({gruende}): Mit ISMS rechnet der Leitfaden mit rund 6 Monaten bis zur Stage-1-Bereitschaft und {von} bis {bis} Personentagen. Der Plan ist entsprechend gestreckt."
+  erweitert_ohne_isms: "Erweiterter Umfang ({gruende}): Ohne ISMS dauert ein solcher Umfang länger als der Plan mit 22 Wochen. Planen Sie Reserve ein und prüfen Sie den Zieltermin."
+  start_vorbei: "Nach dem Plan des Leitfadens hätte das Projekt in der Woche vom {start} beginnen müssen. Der Zieltermin ist zu knapp; verschieben Sie ihn oder planen Sie mehr Pensum und Unterstützung ein."
+  puffer: "Ihr Zieltermin lässt rund {wochen} Wochen Puffer. Der Plan beginnt in der Woche vom {start} und erreicht die Stage-1-Bereitschaft vor dem Zieltermin. Den Puffer können Sie für Ferien, Engpässe oder eine langsamere Gangart nutzen."
+  pt_summe: "Interner Aufwand nach Leitfaden Kapitel 5: {von} bis {bis} Personentage aller Beteiligten, davon rund {aimsVon} bis {aimsBis} bei der AIMS-Verantwortlichen."
+  modul_nist: "Modul NIST AI RMF: Die Summe enthält einen Richtwert von {von} bis {bis} zusätzlichen Personentagen für Profil, Zusatz-Controls, Mess- und Prüfkonzept und die Bewertung generativer KI. Mit einer Eigenentwicklung oder vielen Systemen rechnen Sie mit dem oberen Wert."
+  stunden: "Die Etappen im Werkzeug selbst brauchen rund {stunden} Stunden; die Personentage enthalten zusätzlich Workshops, Abklärungen, Schulungen und Freigaben."
+  ohne_pensum: Tragen Sie das Pensum der AIMS-Verantwortlichen ein (Seite Zieltermin oder Projektauftrag). Dann prüft der Fahrplan, ob die Personentage bis zum Ziel reichen.
+  ab_auftrag: "gerechnet ab der Freigabe des Projektauftrags am {datum}"
+  ab_heute: gerechnet ab heute
+  pt_ok: "Bei {pensum} % Pensum hat die AIMS-Verantwortung bis zum Ziel rund {kapazitaet} Personentage ({ab}). Das reicht nach den Richtwerten ({von} bis {bis} Personentage)."
+  pt_knapp: "Bei {pensum} % Pensum hat die AIMS-Verantwortung bis zum Ziel rund {kapazitaet} Personentage ({ab}). Das ist knapp, denn nach den Richtwerten braucht sie {von} bis {bis} Personentage. Erhöhen Sie das Pensum, verschieben Sie das Ziel oder planen Sie Unterstützung ein."
+  pt_reicht_nicht: "Bei {pensum} % Pensum hat die AIMS-Verantwortung bis zum Ziel nur rund {kapazitaet} Personentage ({ab}). Das reicht nicht, denn nach den Richtwerten braucht sie mindestens {von} Personentage. Erhöhen Sie das Pensum, verschieben Sie das Ziel oder planen Sie externe Unterstützung ein."
+  meilensteine_titel: Meilensteine
+  meilenstein: Meilenstein
+  meilensteine_uebernehmen: "{anzahl} Meilensteine in den Projektauftrag übernehmen"
+  meilensteine_uebernehmen_eins: "1 Meilenstein in den Projektauftrag übernehmen"
+  meilensteine_uebernommen: "{anzahl} Meilensteine in den Projektauftrag übernommen (E1)."
+  meilensteine_uebernommen_eins: "1 Meilenstein in den Projektauftrag übernommen (E1)."
+  meilensteine_vorhanden: Alle Meilensteine stehen im Projektauftrag.
+  meilensteine:
+    auftrag: Projektauftrag freigegeben
+    lenkung: Kurzfassung der Dokumentenlenkung gilt (D-26)
+    leitlinie: KI-Leitlinie und Geltungsbereich freigegeben
+    inventar: KI-Inventar vollständig
+    offerten: Offerten von 2 bis 3 akkreditierten Zertifizierungsstellen angefragt
+    triage: Kurzprüfung für alle Systeme vollständig, Verfahren D-08 freigegeben
+    stelle: Zertifizierungsstelle gewählt
+    auditperson: Interne Auditperson bestimmt
+    folgen: Folgenabschätzungen freigegeben
+    einarbeitung: Einarbeitung der Auditperson in ISO/IEC 42001 abgeschlossen oder externe Fachauditorin gebucht
+    soa: Erklärung zur Anwendbarkeit freigegeben
+    schulung: Schulung der Mitarbeitenden durchgeführt
+    dokumente: Alle Dokumente freigegeben
+    audit: Internes Audit durchgeführt, Auditbericht liegt vor
+    mb: Managementbewertung protokolliert
+    stage1: Stage-1-Bereitschaft
+  freigaben_titel: Freigabekalender der Geschäftsleitung
+  freigabe: Was die Geschäftsleitung freigibt
+  vorlagen: Vorlagen
+  freigaben_text: Die Geschäftsleitung gibt im Projekt sieben Mal frei. Legen Sie die Sitzungen in der ersten Woche fest und bündeln Sie die Freigaben darauf. Während des Projekts sollte die Geschäftsleitung alle 14 Tage tagen oder im Umlauf freigeben; mit einem monatlichen Traktandum dauert das Projekt deutlich länger als geplant.
+  freigaben_text_ohne_isms: Die Geschäftsleitung gibt im Projekt sieben Mal frei. Legen Sie die Sitzungen in der ersten Woche fest und bündeln Sie die Freigaben darauf. Während des Projekts sollte die Geschäftsleitung alle 14 Tage tagen oder im Umlauf freigeben; mit einem monatlichen Traktandum rechnen Sie mit 7 bis 9 Monaten statt rund 150 Tagen.
+  stand: Stand
+  stand_erledigt: freigegeben
+  stand_offen: offen
+  takt_langsam: "Im Projektauftrag ist der Statusbericht an die Geschäftsleitung {takt} vorgesehen. Für diesen Plan braucht es Freigaben innert einer Woche: Vereinbaren Sie während des Projekts einen Rhythmus von 14 Tagen oder Freigaben im Umlauf."
+  freigaben:
+    auftrag: Projektauftrag
+    leitlinie: KI-Leitlinie, Geltungsbereich, Rollen
+    kriterien: Risikokriterien und Verfahren der Folgenabschätzung
+    folgen: Vollständige Folgenabschätzungen und eingeschränkte Nutzung
+    soa: Behandlungsplan, Restrisiken, Erklärung zur Anwendbarkeit
+    richtlinien: Richtlinien, Verfahren, Ziele
+    mb: Protokoll der Managementbewertung
+  freigaben_ohne_isms:
+    auftrag: Projektauftrag und Kurzfassung der Dokumentenlenkung
+
+
+kalender:
+  anzahl_ueberfaellig: "{anzahl} überfällig"
+  anzahl_bald: "{anzahl} in den nächsten 30 Tagen"
+  anzahl_erledigt: "{anzahl} erledigt {jahr}"
+  betroffen: "{anzahl} Einträge überfällig"
+  betroffen_eins: "1 Eintrag überfällig"
+  stand:
+    ueberfaellig: überfällig
+    bald: bald fällig
+    geplant: geplant
+    offen: ohne festes Datum
+    erledigt: erledigt
+  faellig: "fällig am {datum}"
+  ueberfaellig: "überfällig seit {datum}"
+  alle: "alle {monate} Monate"
+  oeffnen: Aufgabe öffnen
+  erledigt: "erledigt {jahr}"
+
+vorschau:
+  titel: "Live-Vorschau: {id} {titel}"
+  hinweis: So erscheinen Ihre Angaben im Dokument. Gelb markierte Stellen fehlen noch.
+  laedt: Vorschau wird erstellt …
+  nicht_verfuegbar: Für dieses Dokument ist noch keine Vorschau verfügbar.
+  version: Version
+  eigner: Eigner/in
+  freigabe: Freigabe durch
+  datum: Datum
+  gekuerzt: "Vorschau gekürzt, insgesamt {anzahl} Zeilen."
+
+  gekuerzt_eins: "Vorschau gekürzt, insgesamt 1 Zeile."
+dokumente:
+  fertig_eins: "1 Datei erzeugt in {sekunden} s."
+  teilweise_eins: "1 Datei konnte nicht erzeugt werden:"
+  titel: Dokumente erzeugen
+  einleitung: Der Generator erstellt aus Ihrer Projektdatei das komplette Dokumentenset als Word- und Excel-Dateien. Mit ISMS entstehen Ergänzungsblätter, mit Modul EU AI Act zusätzlich die Dokumente E-01 bis E-09. Die Dokumente gehören Ihrem Unternehmen und enthalten keine Hinweise auf das Kit.
+  eb_erklaerung: "EB steht für Ergänzungsblatt: Es enthält nur die Abschnitte, die Sie in ein bestehendes Dokument Ihres ISMS aufnehmen, statt ein eigenes Dokument zu führen. Das ZIP beginnt mit einem Inhaltsverzeichnis (00_Inhalt.xlsx), das jedem Ergänzungsblatt sein ISMS-Dokument zuordnet."
+  sprache: Dokumentsprache
+  set: Set herunterladen
+  startet: Der Generator startet …
+  fortschritt: "{fertig} von {gesamt} Dateien: {datei}"
+  fertig: "{anzahl} Dateien erzeugt in {sekunden} s."
+  nichts: Es wurde keine Datei erzeugt.
+  teilweise: "{anzahl} Dateien konnten nicht erzeugt werden:"
+  ohne_vorlage: "Noch ohne Vorlage in dieser Fassung: {ids}"
+  fehler: Die Erzeugung ist fehlgeschlagen
+  einzeln: Einzelne Dokumente
+  herunterladen: "{format} herunterladen"
+  druckansicht: Druckansicht
+  drucken: Drucken oder als PDF sichern
+  zurueck: Zurück zur Liste
+
+einstellungen:
+  modul_an: "Modul eingeschaltet. Etappe 5 hat neue Seiten: Stufen Sie dort Ihre KI-Systeme ein. Auch die Etappen 7 bis 10 erhalten neue Angaben; die Prüfung nennt sie als Lücken."
+  zwischenspeicher_aus_hinweis: "Ohne Zwischenstände schützt nur noch die gespeicherte Projektdatei vor Verlust. Speichern Sie regelmässig. Bestehende Stände löschen Sie mit dem Knopf unten."
+  zwischenspeicher_aus: "Keine Zwischenstände im Browser ablegen"
+  titel: Einstellungen
+  projekt: Projekt
+  pfad: Pfad
+  pfad_hilfe: Mit ISMS erzeugt der Generator Ergänzungsblätter für bestehende ISMS-Dokumente.
+  modul: Modul EU AI Act
+  modul_hilfe: Ausgeschaltet verschwinden alle Felder, Ansichten und Dokumente zum AI Act. Ihre Angaben bleiben in der Projektdatei erhalten.
+  modul_label: EU AI Act einbeziehen
+  modul_nist: Modul NIST AI RMF
+  modul_nist_label: NIST AI RMF einbeziehen
+  modul_nist_hilfe: Freiwilliges US-Rahmenwerk für den Umgang mit KI-Risiken, sinnvoll bei US-Kundschaft oder Kundenfragebögen dazu. Ausgeschaltet verschwinden Seiten, Ansichten und Dokumente des Moduls; Profil, Zusatz-Controls und Angaben bleiben in der Projektdatei erhalten.
+  dokumentsprache: Sprache der erzeugten Dokumente
+  darstellung: Darstellung
+  uisprache: Sprache der Oberfläche
+  theme: Hell oder dunkel
+  zwischenspeicher: Zwischenspeicher im Browser
+  zwischenspeicher_text: "Der AIMS-Manager legt alle zwei Sekunden einen Zwischenstand ab ({art}). Er schützt vor Verlust, ersetzt aber nicht die Projektdatei."
+  zwischenspeicher_datenschutz: "Der Zwischenspeicher ist nicht verschlüsselt; andere lokal geöffnete HTML-Dateien und andere Personen am selben Browserprofil können ihn lesen, auch nach dem Schliessen. Gesicherte Stände werden nach {tage} Tagen gelöscht. Auf gemeinsam genutzten Rechnern schalten Sie die Zwischenstände aus oder leeren den Speicher, wenn Sie beenden («Beenden» im Projektmenü schlägt das vor)."
+  ablage_indexeddb: IndexedDB
+  ablage_localstorage: localStorage
+  ablage_speicher: nur im Arbeitsspeicher, geht beim Schliessen verloren
+  leeren: Zwischenspeicher leeren
+  leeren_frage: "Zwischenspeicher leeren? Alle Zwischenstände (mit Projekt und Logo) und die eigenen Normtexte werden aus dem Browser gelöscht. Das geöffnete Projekt bleibt in dieser Sitzung offen; speichern Sie es vorher als Datei. Projektdateien und die Dateien der Bibliothek bleiben."
+  geleert: "Zwischenspeicher geleert: {anzahl} Zwischenstände und {normpaket} Normpaket gelöscht."
+
+  geleert_eins: "Zwischenspeicher geleert: 1 Zwischenstand und {normpaket} Normpaket gelöscht."
+ueber:
+  titel: Über den AIMS-Manager
+  version: "Version {version}, erstellt am {gebaut}"
+  text: Der AIMS-Manager ist Teil des Starter-Kits und läuft vollständig offline in Ihrem Browser.
+  lizenz_titel: Lizenzen
+  lizenz: "Das Starter-Kit steht unter den Bedingungen in LIZENZ.txt im Ordner LIZENZ_LICENCE. Der AIMS-Manager enthält diese Bibliotheken (Lizenztexte in DRITTLIZENZEN_THIRD-PARTY.txt):"
+  schriften_titel: Schriften
+  schriften: "Der AIMS-Manager setzt die Schrift Inter (The Inter Project Authors) unter der SIL Open Font License 1.1 ein, eingebettet in die Datei (Teilmengen latin und latin-ext, Gewichte 400 bis 700) und nicht nachgeladen. Die Symbole sind eigene Zeichnungen des Kits."
+  schriften_lizenz: "Lizenztext {schrift} speichern"
+  haftung_titel: Haftungsausschluss
+  haftung: Das Kit unterstützt Sie bei der Einführung, ersetzt aber weder die Norm noch eine Rechtsberatung. Prüfen Sie Einstufungen nach AI Act im Zweifel juristisch. Eine Zertifizierung entscheidet allein die Zertifizierungsstelle.
+  norm: Anforderungstexte der ISO/IEC 42001 sind nicht enthalten. Die Norm ist bei SNV, DIN oder ISO zu beziehen. Haben Sie eine eigene Normausgabe, laden Sie sie unter «Einstellungen, Normtexte aus Ihrer Normausgabe» und sehen die Originaltexte im Werkzeug; sie bleiben auf diesem Rechner.
+
+fehler:
+  datei_pfad: "Die Datei enthält unzulässige Dateinamen oder Pfade und wurde nicht übernommen."
+  start_link: "Zur Startseite"
+  start_text: "Die Adresse führt zu einer Ansicht, die es nicht gibt, oder die Daten im Browser sind beschädigt. Zwischenstände bleiben erhalten."
+  start_titel: "Der AIMS-Manager konnte diese Seite nicht zeichnen"
+  text_ohne_speicher: "Achtung: Der Zwischenspeicher schreibt gerade nicht. Speichern Sie die Projektdatei jetzt und laden Sie die Seite danach neu. Wenn der Fehler bleibt, senden Sie uns den Fehlerbericht; er enthält keine Projektdaten."
+  speicher_voll: "Der Speicherplatz reicht nicht für diese Datei. Es wurde nichts geändert. Geben Sie Platz frei oder legen Sie die Datei ausserhalb ab und verweisen Sie in einem Nachweis darauf."
+  datei_aufwand: "Die Datei ist zu umfangreich oder zu tief verschachtelt und wird nicht verarbeitet."
+  datei_defekt: "Die Datei ist beschädigt oder hat nicht das erwartete Format."
+  zeitgrenze: "Die Verarbeitung dauerte zu lange und wurde abgebrochen. Die Datei ist vermutlich beschädigt oder zu umfangreich; Ihr Projekt ist nicht betroffen."
+  schritt_datei: "Ihr Projekt ist nicht verändert. Prüfen Sie die Datei oder wählen Sie eine andere."
+  schreibrecht: "Auf die Datei oder den Ordner darf nicht geschrieben werden. Ihre Eingaben bleiben erhalten; speichern Sie über «Speichern unter» an einem anderen Ort."
+  nicht_gefunden: "Die Datei oder der Ordner wurde nicht gefunden, etwa weil er verschoben oder gelöscht wurde. Ihre Eingaben bleiben erhalten; wählen Sie die Datei oder den Ordner erneut."
+  unbekannt: "Der Vorgang konnte nicht abgeschlossen werden. Ihre Daten sind nicht verändert. Versuchen Sie es noch einmal; bleibt der Fehler, laden Sie die Seite neu (der Zwischenstand bleibt erhalten) und speichern Sie die Projektdatei."
+  ursache: "Ursache"
+  technik: "Technische Angaben für den Fehlerbericht"
+  titel: Ein unerwarteter Fehler ist aufgetreten
+  text: Ihre Daten sind im Zwischenspeicher gesichert. Speichern Sie die Projektdatei und laden Sie die Seite neu. Wenn der Fehler bleibt, senden Sie uns den Fehlerbericht; er enthält keine Projektdaten.
+  kopieren: Fehlerbericht kopieren
+  schliessen: Schliessen
+  ansicht: Diese Ansicht konnte nicht angezeigt werden. Wählen Sie eine andere Ansicht; Ihre Daten sind nicht betroffen.
+
+reiter:
+  titel: "Bereiche: {modul}"
+  im_gefuehrten: "Im Guide öffnen: {etappe}"
+  organisation:
+    kontext: Unternehmen und Kontext
+    parteien: Interessierte Parteien
+    geltungsbereich: Geltungsbereich
+    leitlinie: KI-Leitlinie
+    rollen: Rollen und Personen
+    risikokriterien: Risikokriterien
+  kompetenz:
+    kompetenzen: Kompetenz und Bewusstsein
+    kommunikation: Kommunikationsplan
+  aiact:
+    systeme: Rolle und Risikoklasse
+    pflichten: Pflichten je System
+    vorschlaege: Zusatz-Controls
+    fristen: Fristen und Stand
+  nistrmf:
+    profil: Profil Ist und Ziel
+    controls: Zusatz-Controls
+    stand: Stand der Fassung
+  brucke27001:
+    mapping: Zuordnung zu ISO/IEC 27001
+    dokumente: ISMS-Dokumente mit Ergänzungsblatt
+
+organisation:
+  rollen: Rollen (RACI)
+  personen: Personen
+
+aiact:
+  modul_aus: Das Modul EU AI Act ist ausgeschaltet. Schalten Sie es in den Einstellungen ein; bereits erfasste Angaben sind erhalten geblieben.
+  art: Art.
+  seite: "S. {seite}"
+  rolle: Rolle
+  klasse: Risikoklasse
+  keine_systeme: Erfassen Sie zuerst aktive KI-Systeme im Inventar.
+  pflichten_text: Je KI-System die Pflichten, die sich aus Rolle und Risikoklasse ergeben. «Ganz» deckt das AIMS ab; bei «teilweise» und «nicht» braucht es das Zusatz-Control.
+  offen_anzahl: "{anzahl} offene Pflichten ohne Massnahme"
+  offen_anzahl_eins: "1 offene Pflicht ohne Massnahme"
+  alle_als_massnahmen: Alle offenen Pflichten als Massnahmen übernehmen
+  als_massnahme: Als Massnahme
+  massnahmen_angelegt: "{anzahl} Massnahmen erfasst."
+  massnahmen_angelegt_eins: "1 Massnahme erfasst."
+  pflichten_anzahl: "{anzahl} Pflichten, davon {offen} offen"
+  pflichten_anzahl_eins: "1 Pflicht, davon {offen} offen"
+  pflichten_von: "Pflichten für {name}"
+  keine_pflichten: Für Rolle und Risikoklasse dieses Systems ergeben sich keine Pflichten aus dem Katalog.
+  art50_anbieter: "Art. {absaetze} verpflichtet den Anbieter, nicht Sie als Betreiber: Der Anbieter sorgt dafür, dass Personen erkennen, dass sie mit einer KI sprechen, bzw. dass synthetische Inhalte gekennzeichnet sind. Fordern Sie diesen Hinweis vertraglich ein und prüfen Sie im Betrieb, dass er erscheint (D-16, E-07). Bieten Sie das System unter eigenem Namen an, werden Sie selbst Anbieter (Art. 25)."
+  rolle_fehlt: Bestimmen Sie zuerst die Rolle nach AI Act (Reiter «Rolle und Risikoklasse»).
+  pflicht: Pflicht
+  abdeckung: Abdeckung durch das AIMS
+  zusatz: Zusatz-Control
+  gilt_ab: Gilt ab
+  stand: Stand
+  grad:
+    ganz: ganz
+    teilweise: teilweise
+    nicht: nicht
+  pflichtstand:
+    abgedeckt: durch das AIMS abgedeckt
+    umgesetzt: umgesetzt
+    offen: offen
+    abgelehnt: begründet abgelehnt
+  keine_vorschlaege: Für die erfassten KI-Systeme ergeben sich noch keine Zusatz-Controls. Bestimmen Sie Rolle und Risikoklasse.
+  vorschlaege_text: Diese Zusatz-Controls ergeben sich aus Rollen und Risikoklassen Ihrer KI-Systeme. Übernehmen Sie sie in die Erklärung zur Anwendbarkeit oder lehnen Sie sie mit Begründung ab.
+  ausgeloest: "Ausgelöst durch {systeme}"
+  entscheid:
+    offen: noch nicht entschieden
+    ja: in der SoA als anwendbar
+    nein: abgelehnt
+  in_soa: In die SoA übernehmen
+  uebernommen: "{id} ist in die Erklärung zur Anwendbarkeit übernommen."
+  ablehnen: Begründet ablehnen
+  ablehnen_grund: Begründung der Ablehnung
+  ablehnen_bestaetigen: Ablehnung speichern
+  in_soa_oeffnen: In der SoA öffnen
+  fassung: Fassung des AI Act
+  stand_text: "Grundlage: konsolidierte Fassung vom {fassung}, im Kit geprüft am {geprueft}."
+  datum: Datum
+  art_frist: Art
+  artikel: Fundstelle
+  inhalt: Was gilt
+  naechste: nächste Frist
+  fristart:
+    geltung: Geltungsbeginn
+    uebergang: Übergang
+    kommission: Termin der EU
+
+bruecke:
+  kapitel27001: "ISO/IEC 27001 Abschnitt {abschnitt}"
+  ohne_isms: Ihr Projekt folgt dem Pfad ohne ISMS. Die Zuordnung zeigt trotzdem, wo ein späteres ISMS anknüpft.
+  grad: Wiederverwendungsgrad (Katalog)
+  hoch: Controls mit starker Entsprechung
+  mittel: Controls mit mindestens mittlerer Entsprechung
+  projekt: "Ihr Projekt: {verknuepft} von {anwendbar} anwendbaren Controls mit 27001 verknüpft"
+  grad_erklaerung: Der Wiederverwendungsgrad gewichtet je 42001-Control die stärkste Entsprechung (stark ganz, mittel halb, tief nicht). Er ist eine Richtgrösse für den Aufwand, keine Prüfaussage.
+  verknuepfen: Starke und mittlere Entsprechungen bei anwendbaren Controls ohne Verknüpfung eintragen
+  verknuepft_meldung: "Bei {anzahl} Controls 27001-Verknüpfungen eingetragen."
+  verknuepft_meldung_eins: "Bei 1 Control 27001-Verknüpfungen eingetragen."
+  filter: Entsprechung
+  alle: alle
+  staerke:
+    hoch: stark
+    mittel: mittel
+    tief: tief
+  control42001: ISO/IEC 42001 Anhang A
+  control27001: Verwandte Controls ISO/IEC 27001 Anhang A
+  im_projekt: In Ihrer SoA
+  keine: keine Entsprechung
+  dokumente_text: Mit ISMS erweitern Sie diese bestehenden Dokumente mit einem Ergänzungsblatt, statt neue zu schreiben. Der Generator erzeugt die Blätter im Pfad mit ISMS.
+  isms_dokument: ISMS-Dokument
+  blatt: Ergänzungsblatt
+  normbezug: Normbezug ISO/IEC 42001
+  zu: "zu {id} {titel}"
+  erfassen: im Register erfassen
+
+fragebogen:
+  titel: Fragebogen für Fachbereiche
+  text: Exportieren Sie den Erhebungsfragebogen (Blatt aus D-10) für jeden Fachbereich und importieren Sie die ausgefüllten Dateien. Vor der Übernahme ins Inventar prüfen Sie jede Zeile.
+  fachbereich: Fachbereich
+  alle_bereiche: alle Fachbereiche
+  geplant: Für die Erhebung vorgesehen
+  weitere: Weitere Fachbereiche
+  export: Fragebogen exportieren
+  import: Ausgefüllten Fragebogen importieren
+  exportiert: "«{name}» wurde heruntergeladen."
+  fehler_export: Der Fragebogen konnte nicht erstellt werden
+  zu_gross: Die Datei ist zu gross für einen Fragebogen (höchstens {grenze_fragebogen}).
+  kein_xlsx: Die Datei ist keine lesbare Excel-Arbeitsmappe (.xlsx).
+  kein_fragebogen: In der Datei wurde kein Fragebogen gefunden. Verwenden Sie den exportierten Fragebogen und ändern Sie die Spaltenköpfe nicht.
+  leer: Der Fragebogen enthält keine ausgefüllten Zeilen.
+  bestaetigen_titel: Zeilen aus dem Fragebogen übernehmen
+  bestaetigen_text: Wählen Sie die Zeilen, die als neue KI-Systeme ins Inventar kommen. Zeilen mit einem bereits erfassten Namen sind abgewählt. Eigner/in, Status und Einstufung ergänzen Sie danach im Inventar.
+  ergebnis: "{anzahl} Zeilen gelesen, {neu} neu, {doppelt} bereits vorhanden"
+  ergebnis_eins: "1 Zeile gelesen, {neu} neu, {doppelt} bereits vorhanden"
+  uebernehmen_spalte: Übernehmen
+  zeile_uebernehmen: "«{name}» übernehmen"
+  zeile: "Zeile {nr}"
+  zweck: Zweck
+  hinweise: Hinweise
+  doppelt: "bereits erfasst ({id})"
+  hinweis:
+    personendaten-unklar: Personendaten unklar, vorsichtig mit «ja» übernommen.
+    besondere-unklar: Heikle Daten unklar, vorsichtig mit «ja» übernommen.
+    schatten: Selbst beschafft, als Schatten-KI in Prüfung übernommen.
+    fachbereich-frei: Fachbereich als freier Text übernommen.
+    handelnd: Kann selbst handeln, als «führt begrenzt aus» übernommen; Stoppmöglichkeit erfassen.
+    handlung-unklar: Unklar, ob das Werkzeug selbst handelt; vorsichtig als «führt begrenzt aus» übernommen.
+  uebernehmen: "{anzahl} Zeilen übernehmen"
+  uebernehmen_eins: "1 Zeile übernehmen"
+  uebernommen: "{anzahl} KI-Systeme ins Inventar übernommen."
+  uebernommen_eins: "1 KI-System ins Inventar übernommen."
+  b_ausgefuellt: Ausgefüllt von
+  b_personen: Anzahl Nutzende
+  b_haeufigkeit: Nutzung
+  b_anbieter: Anbieter
+  b_bemerkungen: Bemerkungen
+  b_unklar: Angaben zu Personendaten im Fragebogen unklar; bitte prüfen.
+
+ki_import:
+  oeffnen: Antwort einfügen
+  titel: Ergebnis des KI-Assistenten übernehmen
+  text: Der KI-Assistent des Kits gibt eine Projektdatei aus. Fügen Sie die Antwort hier ein oder wählen Sie die gespeicherte Datei. Erklärender Text um den JSON-Block stört nicht.
+  einfuegen: Antwort des KI-Assistenten (JSON)
+  uebernehmen: Übernehmen
+  datei: Datei wählen
+  kein_json: In der Antwort wurde keine lesbare Projektdatei gefunden. Bitten Sie den Assistenten, die ganze Projektdatei als einen JSON-Block auszugeben.
+  schema: Die Projektdatei des Assistenten passt nicht ganz zum Format. Bitten Sie ihn, diese Stellen zu korrigieren und die ganze Datei erneut auszugeben.
+  allgemein: Das Ergebnis konnte nicht übernommen werden.
+  keine_version: Die Antwort enthält keine Schemaversion. Bitten Sie den KI-Assistenten, die Antwort nach dem Format im Skill (schemaVersion und meta.projektId) neu auszugeben.
+  ersetzen: "Diese Datei gehört zu einem anderen Projekt als das geöffnete «{name}». Das geöffnete Projekt schliessen und mit der Antwort weiterarbeiten? Sein Stand bleibt als Zwischenstand auf der Startseite erhalten."
+  uebernommen: "Projekt «{name}» aus dem KI-Ergebnis übernommen. Prüfen Sie die Angaben und speichern Sie die Projektdatei."
+  ergaenzt: "Ergänzt wurden leere Angaben: {felder}."
+  migriert: Die Datei wurde ins aktuelle Format umgewandelt.
+  teil_titel: Auswahl übernehmen
+  teil_text: "Die Antwort gehört zum geöffneten Projekt «{name}». Wählen Sie, was Sie übernehmen. Einträge mit gleicher ID werden ersetzt, neue angehängt; alle anderen Angaben bleiben, wie sie sind. Die Antwort darf ein Auszug mit den geänderten Listen sein."
+  teil_keine: Die Antwort enthält keine Änderungen gegenüber dem offenen Stand.
+  teil_anzahl: "{neu} neu, {geaendert} geändert, {gleich} unverändert"
+  teil_bereiche: Weitere Angaben
+  teil_uebernehmen: "Auswahl übernehmen ({anzahl})"
+  teil_uebernommen: "{anzahl} Einträge und Bereiche aus dem KI-Ergebnis übernommen. Prüfen Sie die Angaben und speichern Sie die Projektdatei."
+  teil_uebernommen_eins: "1 Eintrag oder Bereich aus dem KI-Ergebnis übernommen. Prüfen Sie die Angaben und speichern Sie die Projektdatei."
+  teil_schema: "Nach dem Zusammenführen passt die Projektdatei nicht ganz zum Format. Wählen Sie die betroffenen Einträge ab oder bitten Sie den Assistenten, sie zu korrigieren:"
+  ganz_ersetzen: Ganzen Stand ersetzen
+  art:
+    neu: neu
+    geaendert: geändert
+  listen:
+    personen: Personen
+    parteien: Interessierte Parteien
+    rollen: Rollen
+    kiSysteme: KI-Systeme
+    risiken: Risiken und Chancen
+    folgenabschaetzungen: Folgenabschätzungen
+    controls: Erklärung zur Anwendbarkeit
+    eigeneControls: Eigene Controls
+    nachweise: Nachweise
+    dokumente: Dokumentenregister
+    massnahmen: Massnahmen
+    lieferanten: Lieferanten
+    ziele: Ziele
+    kompetenzen: Kompetenzen
+    kommunikation: Kommunikation
+    audits: Audits
+    feststellungen: Feststellungen
+    managementbewertungen: Managementbewertungen
+    prozesse: Prozesse
+    eigeneProzesse: Eigene Prozesse
+  bereiche:
+    organisation.name: Firmenname
+    organisation.kontext: Kontext und Themen
+    organisation.rollenIso: Rollen der Organisation
+    organisation.geltungsbereich: Geltungsbereich
+    organisation.leitlinie: KI-Leitlinie
+    organisation.risikokriterien: Risikokriterien
+    organisation.projektauftrag: Projektauftrag
+    organisation.dokumentenlenkung: Dokumentenlenkung
+    organisation.meldeweg: Meldeweg intern
+    organisation.meldekanalExtern: Meldekanal für Externe
+    organisation.gremien: Gremien
+    organisation.bewusstsein: Bewusstseinsbildung
+    gapAnalyse: Gap-Analyse
+    meta.checklisten: Checklisten
+
+vorschlaege:
+  controls_uebernommen: "Vorgeschlagene Controls eingetragen: {controls}."
+  genai_titel: Vorschläge GenAI-Sicherheit für Systeme mit generativer KI
+  keine_systeme: Kein aktives KI-System ist als generative KI markiert. Markieren Sie Systeme im Inventar (Etappe 4, Seite «Generative KI und Modell»).
+  system: Vorschläge für das KI-System
+  stand: "{offen} von {gesamt} Vorschlägen noch nicht übernommen"
+  ursache: Ursache
+  folge: Folge
+  massnahmen: Typische Massnahmen
+  quelle_text: "Risikoquelle: {quelle}"
+  controls: "Vorgeschlagene Controls: {controls}"
+  als_risiko: Als Risiko übernehmen
+  angelegt: "Risiko {id} für {system} erfasst, Eigner/in vom KI-System übernommen. Die Bewertung folgt auf der nächsten Seite. Eigner/in ändern Sie unter «Risiken erfassen»."
+  uebernommen: "Übernommen als {id}."
+  oeffnen: Im Register öffnen
+  kennzeichen: "Vorschlag {id} ({verweis})"
+  nist: "Bezug NIST AI 600-1: {risiken}"
+
+nist:
+  modul_aus: Das Modul NIST AI RMF ist ausgeschaltet. Schalten Sie es in den Einstellungen ein; Profil, Zusatz-Controls und Angaben sind erhalten geblieben.
+  katalog_fehlt: Die Kataloge des Moduls NIST AI RMF fehlen in dieser Fassung des Werkzeugs.
+  profil_text: Ist und Ziel je Subkategorie, von 0 nicht erreicht bis 3 wirksam. Der Vorschlag für die Ist-Stufe stammt aus Ihren Dokumenten, Controls und Angaben im Projekt. Bei einer Lücke (Ziel über Ist) hinterlegen Sie eine Massnahme.
+  vorschlaege_uebernehmen: "Ist-Vorschlag für {anzahl} Subkategorien ohne Ist übernehmen"
+  vorschlaege_uebernehmen_eins: "Ist-Vorschlag für 1 Subkategorie ohne Ist übernehmen"
+  vorschlaege_uebernommen: "Ist-Vorschlag für {anzahl} Subkategorien übernommen."
+  vorschlaege_uebernommen_eins: "Ist-Vorschlag für 1 Subkategorie übernommen."
+  alle_mit_ist: Alle Subkategorien haben eine Ist-Stufe.
+  funktion_stand: "{bewertet} von {gesamt} mit Ist und Ziel, {luecken} Lücken, davon {ohne} ohne Massnahme"
+  stufe_leer: keine Angabe
+  stufe:
+    "0": 0 nicht erreicht
+    "1": 1 teilweise
+    "2": 2 erreicht
+    "3": 3 wirksam
+  spalte:
+    subkategorie: Subkategorie
+    ist: Ist
+    ziel: Ziel
+    prioritaet: Priorität
+    massnahmen: Massnahmen
+    notiz: Notiz
+  abdeckung: "Abdeckung im Kit: {abdeckung}"
+  vorschlag: "Vorschlag {stufe}"
+  vorschlag_ohne: Keine Angaben im Projekt
+  angaben_fehlen: Angaben fehlen
+  luecke_kit: Zusatz-Control nicht umgesetzt
+  massnahme_wahl: Massnahme erfassen
+  massnahme_entfernen: "{id} bei {subkategorie} entfernen"
+  zu_massnahmen: Massnahmen bearbeiten
+  stand_text: "Stand des Moduls zuletzt geprüft am {geprueft}, nächste Prüfung {naechste}."
+  keine_vorschlaege: Für Ihre KI-Systeme gibt es keine Vorschläge. Erfassen Sie Systeme im Inventar.
+  vorschlaege_text: Zusatz-Controls aus dem Modul NIST AI RMF, vorgeschlagen je KI-System. Übernehmen Sie sie in die Erklärung zur Anwendbarkeit oder lehnen Sie sie begründet ab.
+
+kopf_marke:
+  zusatz: AIMS-Manager
+
+lagebild:
+  prozesse: Prozesse
+  zu_prozesse: Zu den Prozessen
+  prozesse_leer: Noch kein Prozessstand erfasst. Legen Sie im Bereich Prozesse Eigner und Reife fest.
+  gl_titel: Für die Geschäftsleitung
+  gl_entscheidungsrechte: Entscheidungsrechte
+  gl_offen: offen
+  gl_stage1: Stage-1-Audit der Zertifizierungsstelle
+  gl_stage1_fehlt: Termin des Stage-1-Audits noch nicht vereinbart.
+  gl_ziel: "Zieltermin der Bereitschaft: {datum}."
+  gl_keine_freigaben: Keine offenen Freigaben aus dem Freigabekalender.
+  gl_freigeben: freigeben
+  gl_annehmen: annehmen
+  gl_restrisiken: "Restrisiken über der Akzeptanzgrenze ohne Annahme: {ids}"
+  titel: Lagebild AIMS
+  einleitung: "Stand am {datum}: Risiken, Erklärung zur Anwendbarkeit, Massnahmen, KI-Inventar und Prüfung auf einen Blick."
+  einleitung_bildschirm: Jede Karte führt zum Modul.
+  drucken: Lagebild drucken
+  kennzahlen: Kennzahlen
+  pruefung: Prüfung vor Stage 1
+  gefuehrt: Guide
+  gefuehrt_wert: "{erledigt} von {gesamt}"
+  gefuehrt_text: Seiten erledigt
+  ueberfaellig: Massnahmen überfällig
+  ueberfaellig_text: "{bald} in den nächsten 30 Tagen fällig"
+  ueber_akzeptanz: Risiken über der Akzeptanzgrenze
+  ueber_akzeptanz_text: "heutiger Stand (nach Behandlung, wo bewertet); vor Behandlung: {vor}"
+  ueber_akzeptanz_offen: "davon {anzahl} noch ohne Bewertung nach Behandlung"
+  ueber_akzeptanz_offen_eins: "davon 1 noch ohne Bewertung nach Behandlung"
+  etappen: Etappen des Guides
+  risiken: Risikomatrix vor und nach Behandlung
+  zu_risiken: Zum Risikoregister
+  soa: Umsetzung der Controls je Gruppe
+  zu_soa: Zur Erklärung zur Anwendbarkeit
+  soa_leer: Noch keine Controls im Katalog.
+  massnahmen: Massnahmen nach Fälligkeit
+  zu_massnahmen: Zu den Massnahmen
+  massnahmen_zeile: Massnahmen
+  massnahmen_leer: Noch keine Massnahmen erfasst.
+  ueberfaellige: Überfällige Massnahmen
+  inventar: KI-Inventar nach Risikoklasse und Handlungsbefugnis
+  zu_inventar: Zum Inventar
+  inventar_leer: Noch keine KI-Systeme im Inventar.
+  inventar_ecke: Risikoklasse
+  inventar_ohne: ohne Angabe
+  summe: zusammen
+  ziele: Ziele mit Messwerten
+  zu_ziele: Zu den Zielen
+  ziele_leer: Noch keine Ziele mit zwei oder mehr Messwerten als Zahl. Sobald Messwerte vorliegen, zeigt das Lagebild den Verlauf.
+  ziel_verlauf: "Verlauf {kennzahl}: {werte}"
+  ziel_soll: "Soll {soll}"
+  kapitel: Fortschritt je Normkapitel
+  faellig: Fällige Überprüfungen (nächste 30 Tage)
+
+grafik:
+  achse_w: Wahrscheinlichkeit
+  achse_a: Auswirkung
+  kurz_w: W
+  kurz_a: A
+  ecke: Auswirkung in den Zeilen, Wahrscheinlichkeit in den Spalten
+  matrix_vor: Vor Behandlung
+  matrix_nach: Nach Behandlung
+  matrix_vorschau: Vorschau der Risikomatrix mit Ihren Grenzen
+  matrix_vorschau_text: Die Vorschau folgt Ihren Eingaben sofort. Jede Zelle zeigt den Risikowert W×A und seine Stufe.
+  matrix_e6: Ihre Risiken in der Matrix
+  stufe:
+    tief: tief
+    mittel: mittel
+    hoch: hoch
+  legende_tief: "tief: bis {bis}, angenommen"
+  legende_mittel: "mittel: {von} bis {bis}, behandeln"
+  legende_mittel_leer: "mittel: kein Wert zwischen den Grenzen"
+  legende_hoch: "hoch: ab {ab}, unannehmbar (schraffiert)"
+  zelle_vor: "{kurzW} {w}, {kurzA} {a}, Wert"
+  zelle_mitte: ", Stufe {stufe}, Risiken: "
+  zelle_link: ". Gefilterte Liste öffnen"
+  unbewertet: "ohne Bewertung: {anzahl}"
+  ausserhalb: "ausserhalb der Skalen: {anzahl}"
+  bewertet: "bewertet: {anzahl}"
+  ueber: "über der Akzeptanzgrenze: {anzahl}"
+  liste: "Risiken als Tabelle ({anzahl})"
+  spalte_id: Kennung
+  spalte_titel: Risiko
+  spalte_wert: Wert
+  spalte_stufe: Stufe
+  filter_zelle: "Gefiltert auf {kurzW} {w} und {kurzA} {a} ({stand})."
+  stand_vor: vor Behandlung
+  stand_nach: nach Behandlung
+  stufe_spalte: "{wert} {stufe}"
+  soa:
+    umgesetzt: umgesetzt oder wirksam
+    teilweise: teilweise
+    offen: geplant oder offen
+    unentschieden: nicht entschieden
+    ausgeschlossen: nicht anwendbar
+  faelligkeit:
+    ueberfaellig: überfällig
+    bald: bis 30 Tage
+    spaeter: später
+    ohneTermin: ohne Termin
+    erledigt: erledigt
+  zusammen: "zusammen {anzahl}"
+  werte_tabelle: Werte als Tabelle
+  heute: heute
+  stichtag: Stichtag
+  kurz_kw: KW
+  gantt_titel: Fahrplan als Zeitleiste
+  gantt_beschreibung: "Die 10 Schritte über {wochen} Wochen. {schritte}"
+  gantt_schritt: "Schritt {nr}"
+  gantt_zeile: "Schritt {nr}, {zustand}, Woche {von} bis {bis}"
+  gantt_marke_meilenstein: Meilenstein
+  gantt_marke_freigabe: Freigabe der Geschäftsleitung
+  gantt_freigaben: Freigaben GL
+  gantt_legende: "Balken: Schritt (voll erledigt, mittel in Arbeit, hell offen). Rauten: Meilensteine und Freigaben der Geschäftsleitung am Ende ihrer Woche, die Zahl daneben nennt mehrere in derselben Woche; die Tabellen unten nennen sie einzeln. Gestrichelt: heute."
+  zustand:
+    erledigt: erledigt
+    aktiv: in Arbeit
+    offen: offen
+  hantel_titel: Ist und Ziel je Funktion
+  hantel_beschreibung: "Mittelwerte der Stufen 0 bis 3 je Funktion. {zeilen}"
+  hantel_wert: "Ist {ist} · Ziel {ziel}"
+  hantel_zeile: "{funktion}: Ist {ist}, Ziel {ziel}"
+  hantel_leer: keine Angabe
+  hantel_kopf_funktion: Funktion
+  hantel_legende: "Voller Knoten: Ist. Ring: Ziel. Linie: Lücke bis zum Ziel."
+  fristen_titel: Fristen des EU AI Act
+  fristen_vorbei: in Kraft
+  fristen_naechste: nächste Frist
+  fristen_offen: kommt
+
+# Normtexte aus der eigenen Normausgabe der Firma (src/normtexte, src/app/normtexte, Einstellungen)
+normtexte:
+  titel: Normtexte aus Ihrer Normausgabe
+  text: "Laden Sie Ihre gekaufte PDF-Ausgabe von ISO/IEC 42001 oder ISO/IEC 27001 (auch SN EN oder DIN EN, deutsch oder englisch). Der AIMS-Manager liest den Text in diesem Browser und zeigt danach die Titel und Anforderungstexte der Norm statt der eigenen Kurztitel des Kits."
+  datenschutz: "Der Text verlässt diesen Rechner nicht. Er liegt getrennt vom Projekt im Browser und kommt nie in die Projektdatei. Andere lokal geöffnete HTML-Dateien könnten ihn dort lesen: Laden Sie lizenzierte Texte nicht auf gemeinsam genutzten Rechnern."
+  ablage_dauerhaft: "Gespeichert im Browser (eigener Speicher «Normpaket», IndexedDB), getrennt vom Projekt."
+  ablage_sitzung: "Dieser Browser erlaubt keinen dauerhaften Speicher für diese Datei: Die Normtexte gelten nur bis zum Schliessen. Exportieren Sie das Normpaket, um es wieder zu laden."
+  leer: Noch keine Normtexte geladen. Die App zeigt die eigenen Kurztitel und Erläuterungen des Kits.
+  teil: "{bezeichnung} ({sprache}), {gefunden} von {pflicht} Einträgen, geladen am {datum} aus {datei}"
+  teil_amd: "mit {amd}"
+  bearbeiten: Einträge prüfen und korrigieren
+  entfernen: Entfernen
+  entfernen_frage: "Normtexte {bezeichnung} ({sprache}) aus diesem Browser entfernen?"
+  lizenz_titel: Lizenz
+  lizenz_hinweis: "Normen sind urheberrechtlich geschützt. Laden Sie nur eine Ausgabe, für die Ihre Organisation eine gültige Lizenz besitzt, und nutzen Sie die Texte nur im Rahmen dieser Lizenz."
+  lizenz_bestaetigen: "Wir besitzen eine gültige Lizenz für die Normausgabe, die wir laden, und nutzen die Texte nur innerhalb unserer Organisation."
+  pdf_laden: Norm-PDF laden
+  paket_laden: Normpaket-Datei laden
+  lesen: "PDF wird gelesen: Seite {fertig} von {gesamt}"
+  lesen_start: PDF wird gelesen …
+  passwort: "Die PDF ist mit einem Kennwort geschützt. Kennwort zum Öffnen:"
+  fehler_pdf: "Die Datei liess sich nicht lesen. {meldung}"
+  fehler_norm: "In der Datei wurde keine ISO/IEC 42001 oder ISO/IEC 27001 erkannt."
+  fehler_nicht_unterstuetzt: "Die Datei ist {norm}. Diese Norm wird nicht unterstützt: Laden Sie ISO/IEC 42001 oder ISO/IEC 27001."
+  fehler_paket: "Die Datei ist kein Normpaket des AIMS-Managers."
+  geladen: "Normtexte {bezeichnung} übernommen."
+  geloescht: Normtexte gelöscht.
+  vorschau_titel: Vorschau der Normtexte
+  vorschau_text: "Erkannt: {bezeichnung}, Ausgabe {ausgabe}, Sprache {sprache}. Gefunden: {gefunden} von {pflicht} Pflichteinträgen ({art})."
+  vorschau_art_42001: Abschnitte der Abschnitte 4 bis 10 und 38 Controls aus Anhang A
+  vorschau_art_27001: 93 Controls aus Anhang A
+  vorschau_amd: "Änderung erkannt: {amd}. Die Ergänzungen zum Klimawandel stehen bei den Abschnitten 4.1 und 4.2."
+  vorschau_nur_amd: "Die Datei enthält nur die Änderung {amd}. Sie ergänzt die bereits geladene ISO/IEC 27001 in derselben Sprache."
+  vorschau_ohne_amd: "Keine Änderung Amd 1:2024 in dieser Datei. Sie können die Änderung später als eigene Datei laden."
+  vorschau_unvollstaendig: "Nicht alle Einträge wurden gefunden. Ergänzen Sie fehlende Einträge von Hand aus Ihrer Normausgabe oder übernehmen Sie die gefundenen; für die übrigen bleibt der Kurztitel des Kits."
+  sprache_label: Sprache der Ausgabe
+  spalte_id: Nummer
+  spalte_status: Abgleich
+  spalte_titel: Titel
+  spalte_text: Text
+  gefunden: gefunden
+  nicht_gefunden: nicht gefunden
+  manuell: von Hand
+  zeile_bearbeiten: "Eintrag {id} bearbeiten"
+  fertig: Fertig
+  zeile_knopf: Bearbeiten
+  uebernehmen: Übernehmen
+  nur_titel: nur Titel
+  dokumente_titel: Normtexte in erzeugten Dokumenten
+  dokumente_text: "Ohne diese Bestätigung zeigt der AIMS-Manager die Normtexte nur in der App. Mit Bestätigung übernimmt der Generator Titel und Texte in die Firmendokumente (Erklärung zur Anwendbarkeit, Audit-Checkliste, Gap-Analyse, Integrationsmatrix, Auszug am Ende der Dokumente) mit Quellenvermerk."
+  dokumente_bestaetigen: Unsere Lizenz erlaubt die Übernahme in interne Dokumente.
+  lizenzgeber: "Lizenzgeber (für den Quellenvermerk, z. B. SNV)"
+  lizenznummer: Lizenznummer (optional)
+  vermerk_vorschau: "Quellenvermerk in den Dokumenten: {vermerk}"
+  export: Normpaket exportieren
+  export_hinweis: "Die Datei enthält Normtexte. Nutzen Sie sie nur auf Rechnern Ihrer Organisation im Rahmen Ihrer Lizenz und geben Sie sie nicht weiter. Die Bestätigung für Dokumente reist nicht mit."
+  export_frage: "Die Datei enthält Normtexte aus Ihrer lizenzierten Ausgabe. Nur innerhalb Ihrer Organisation verwenden. Exportieren?"
+  loeschen: Normtexte löschen
+  loeschen_frage: Alle Normtexte und Lizenzangaben aus diesem Browser löschen? Das Projekt bleibt unverändert.
+  hilfe_normtext: Normtext anzeigen
+  quelle_app: "Aus Ihrer Normausgabe {bezeichnung}"
+  kennzeichen: Normtext
+  sprache_marke_de: Normtext Deutsch
+  sprache_marke_en: Normtext Englisch
+  rueckfall_de: "Für {bezeichnung} ist nur die deutsche Ausgabe geladen: Die App zeigt diesen Normtext und kennzeichnet ihn mit «Normtext Deutsch»."
+  rueckfall_en: "Für {bezeichnung} ist nur die englische Ausgabe geladen: Die App zeigt diesen Normtext und kennzeichnet ihn mit «Normtext Englisch»."
+lieferant:
+  gruppe_allgemein: "Prüffragen allgemein (PF-01 bis PF-15)"
+  gruppe_genai: "Sicherheit generativer KI (PF-16 bis PF-27)"
+  gruppe_klauseln: Vertragsklauseln
+mitarbeitende:
+  titel: Für Mitarbeitende
+  einleitung: Was Sie mit KI im Unternehmen dürfen, wie Sie ein neues Werkzeug beantragen und wo Sie etwas melden. Diese Seite können Sie ausdrucken oder ins Intranet stellen.
+  drucken: Seite drucken
+  erlaubt_titel: Welche KI-Werkzeuge darf ich nutzen?
+  erlaubt_leer: Noch kein Werkzeug freigegeben. Fragen Sie die zuständige Person, bevor Sie ein KI-Werkzeug nutzen.
+  werkzeug: Werkzeug
+  stand: Stand
+  datenklasse: Höchstens diese Daten
+  auflagen: Was gilt
+  verboten: "Nicht erlaubt:"
+  datenklassen: "«Öffentlich» heisst: darf jeder sehen. «Intern»: nur für Mitarbeitende, z. B. interne Anleitungen. «Vertraulich»: Kunden-, Personal- und Vertragsdaten, Konstruktionsdaten. «Streng vertraulich»: nur für wenige Personen. Im Zweifel gilt die Klassifizierung Ihrer Informationssicherheit."
+  beantragen_titel: Wie beantrage ich ein neues KI-Werkzeug?
+  beantragen_bei: "Melden Sie das Werkzeug bei {wer}, bevor Sie es nutzen. Beschreiben Sie, wofür Sie es brauchen und welche Daten Sie eingeben möchten."
+  beantragen_offen: Melden Sie das Werkzeug der AIMS-Verantwortlichen, bevor Sie es nutzen.
+  beantragen_frist: "Sie erhalten innert {tage} Tagen einen Entscheid."
+  beantragen_kriterien: "Geprüft werden:"
+  beantragen_bis: Bis zum Entscheid nutzen Sie das Werkzeug nicht für Firmendaten. Gratis- und Privatkonten sind für Firmendaten nicht erlaubt.
+  melden_titel: Wo melde ich einen Vorfall oder Bedenken?
+  melden_text: "Melden Sie es, wenn eine KI falsche oder unfaire Ergebnisse liefert, wenn Daten an der falschen Stelle gelandet sind oder wenn Ihnen etwas komisch vorkommt. Eine Meldung ist immer richtig, auch wenn sich der Verdacht nicht bestätigt."
+  melden_offen: Der Meldeweg ist noch nicht festgelegt. Wenden Sie sich an Ihre vorgesetzte Person.
+  ausweich: "Betrifft die Meldung die zuständige Person: {wer}"
+  vertraulich: Sie können vertraulich melden.
+  mehr_titel: Mehr dazu
+  fragebogen: Fragebogen für Fachbereiche (welche KI Sie schon nutzen)
+  richtlinie: Richtlinie zur verantwortungsvollen KI-Nutzung (D-15) ansehen oder herunterladen
+verknuepft:
+  titel: Verknüpft mit diesem KI-System
+  risiken: Risiken
+  folgen: "Folgenabschätzung {id}"
+  folgen_offen: Folgenabschätzung (noch nicht erfasst)
+  controls: Controls mit Bezug zu diesem System
+  massnahmen: "Massnahmen:"
+  feststellungen: Feststellungen und Vorfälle
+  meldungen: Meldungen und Einsprüche
+  lieferant: "Lieferant {id}"
+
+gestaltung:
+  titel: Dokumentgestaltung
+  einleitung: Logo, Farben und Schrift Ihres Unternehmens für alle erzeugten Firmendokumente (Word, Excel, PDF über die Druckansicht). Leere Vorlagen und Beispiele des Kits bleiben im Kit-Design. Alles bleibt auf diesem Rechner und in Ihrer Projektdatei.
+  karte_text: Logo, CI-Farben, Schrift, Fusszeile, Titelseite und Wasserzeichen der erzeugten Dokumente.
+  oeffnen: Dokumentgestaltung öffnen
+  zurueck: Zurück zu den Einstellungen
+  ohne_projekt: Die Dokumentgestaltung gehört zum Projekt. Öffnen oder beginnen Sie zuerst ein Projekt.
+  stand_keine: "Gestaltung: Kit-Design (kein Logo, keine CI-Farben)"
+  stand: "Gestaltung: {teile}"
+  stand_logo: Logo
+  stand_farben: "Farben {farbe}"
+  stand_schrift: "Schrift {schrift}"
+  aendern: ändern
+  logo:
+    titel: Logo
+    hilfe: "PNG, JPEG, SVG, WebP oder GIF bis {grenze_bild}, ein Logo für hellen Grund. Das Werkzeug schneidet leere Ränder ab, verkleinert auf höchstens {grenze_logo_kante} und speichert ein PNG ohne Metadaten (höchstens {grenze_logo_png}). Eine Word-Vorlage (.dotx, .docx) liefert Vorschläge für Logo, Farben und Schrift."
+    waehlen: Datei wählen
+    ablegen: Logo oder Word-Vorlage hier ablegen
+    entfernen: Logo entfernen
+    vorschau_alt: "Vorschau des Logos auf weissem Grund"
+    info: "{breite} x {hoehe} px, {kb} KB, Form: {form}"
+    form_quer: quer
+    form_breit: breit
+    form_quadratisch: quadratisch
+    form_hoch: hoch
+    quelle: "Quelle: {datei}"
+    position: Platz in der Kopfzeile
+    links: links
+    rechts: rechts
+    name_zeigen: Firmenname neben dem Logo zeigen
+    name_zeigen_hilfe: Bei einer Wortmarke steht der Name schon im Logo; ohne eigene Wahl blendet der AIMS-Manager ihn darum aus, wenn das Logo eine Wortmarke trägt. Ausgeblendet bleibt er im Alternativtext und in den Dateieigenschaften.
+    hoehe: "Höhe in der Kopfzeile: {mm} mm"
+    hoehe_auto: nach Form
+    hoehe_hilfe: Ohne Angabe nach Form des Logos (quer 9 mm, breit 10 mm, quadratisch und hoch 12 mm), höchstens 53 mm breit.
+    alt: Alternativtext
+    alt_hilfe: "Beschreibt das Logo für Screenreader; leer: «Logo {firma}»."
+    laedt: Logo wird umgerechnet …
+    uebernommen: Logo übernommen.
+    hinweis:
+      raender: Leere Ränder wurden abgeschnitten.
+      verkleinert: Das Logo wurde verkleinert.
+      farben-reduziert: Das Logo wurde auf 256 Farben reduziert, damit es unter {grenze_logo_png} bleibt.
+      klein: Das Logo ist kleiner als 120 px hoch und kann im Druck unscharf wirken. Wenn möglich eine grössere Datei oder ein SVG wählen.
+      dunkler-grund: Dieses Logo ist für dunklen Grund gedacht (hell auf transparentem Grund). Bitte die Variante für hellen Grund wählen.
+      svg-bereinigt: Aus dem SVG wurden Skripte, externe Verweise oder unbekannte Elemente entfernt.
+      svg-zu-gross: Das SVG ist grösser als {grenze_logo_svg} und wird nur als PNG verwendet.
+      erstes-bild: Von einem animierten GIF wird das erste Bild verwendet.
+    svg_code:
+      aufbau: "Der Aufbau der Datei ist fehlerhaft (nicht geschlossene oder unpassende Elemente)"
+      entitaeten: "Die Datei enthält Entitäten (DOCTYPE)"
+      aufwand: "Die Datei ist zu gross oder zu tief verschachtelt"
+      verweis: "Die Datei enthält mehrdeutige oder zirkuläre Verweise"
+    fehler:
+      zu-gross: Die Datei ist grösser als {grenze_bild}.
+      leer: Das Bild ist leer oder ganz transparent.
+      format-pdf: PDF wird nicht unterstützt. Bitte das Logo als SVG oder PNG exportieren.
+      format-eps: EPS und AI werden nicht unterstützt. Bitte das Logo als SVG oder PNG exportieren.
+      format-unbekannt: Dieses Format wird nicht unterstützt. Möglich sind PNG, JPEG, SVG, WebP, GIF sowie Word-Vorlagen (.dotx, .docx).
+      nicht-lesbar: Das Bild konnte in diesem Browser nicht gelesen werden.
+      zu-viele-pixel: Das Bild hat mehr als 50 Megapixel.
+      svg-ungueltig: "Das SVG ist ungültig oder enthält nicht erlaubte Teile (z. B. Entitäten): {detail}"
+      svg-aufwand: "Das SVG ist zu aufwendig zum Zeichnen, der Import wurde abgebrochen. Vereinfachen Sie die Datei oder laden Sie das Logo als PNG hoch."
+      logo-zu-gross: Das Logo lässt sich nicht unter {grenze_logo_png} bringen.
+      vorlage-ohne-logo: Die Word-Vorlage enthält kein lesbares Logo in der Kopfzeile.
+      paket: "Die Datei ist kein Gestaltungspaket: {grund}"
+  vorlage:
+    titel: Vorschlag aus Ihrer Word-Vorlage
+    text: "Aus «{datei}» gelesen. Übernommen wird nur, was Sie bestätigen; Layout und Formatvorlagen der Vorlage übernimmt das Werkzeug nicht."
+    farben: "Designfarben: {farben}"
+    schriften: "Design-Schriften: Titel {titel}, Text {text}"
+    logo_nicht_lesbar: "Das Kopfzeilenbild hat das Format {format} und kann nicht übernommen werden."
+    uebernehmen: Vorschlag übernehmen
+    verwerfen: Verwerfen
+    uebernommen: Vorschlag aus der Word-Vorlage übernommen.
+  farben:
+    titel: Farben
+    hilfe: "Hex-Wert aus Ihrem CI-Handbuch (z. B. #1C5D94). Office kennt nur RGB: Bei Pantone oder HKS den RGB-Wert aus dem Handbuch nehmen."
+    primaer: Primärfarbe
+    sekundaer: Sekundärfarbe
+    akzent: Akzentfarbe
+    waehler: "Farbwähler {farbe}"
+    ungueltig: "Bitte eine Farbe als Hex-Wert angeben, z. B. #1C5D94."
+    leeren: Farbe entfernen
+    vorschlagen: Farben aus dem Logo vorschlagen
+    vorschlaege: "Vorschläge aus dem Logo:"
+    vorschlag_setzen: "{farbe} als Primärfarbe übernehmen"
+    keine_vorschlaege: Im Logo sind keine bunten Farben zu finden.
+    semantisch: Risikostufen, Status und Hinweise behalten ihre Farben, damit sie in allen Dokumenten dasselbe bedeuten.
+    kontrast: "Kontrast gegen Weiss {wert}:1"
+    korrigiert_text: "Ihre {quelle} {original} ist auf Weiss zu hell für Text. Für Überschriften wird {ersatz} verwendet (Kontrast {kontrast}:1)."
+    korrigiert_grafik: "Ihre {quelle} {original} ist für Linien und Balken zu hell. In Diagrammen wird {ersatz} verwendet (Kontrast {kontrast}:1)."
+    korrigiert_flaeche: "Für den kräftigen Tabellenkopf mit weisser Schrift wird {ersatz} statt {original} verwendet (Kontrast {kontrast}:1)."
+    nahe_status: "Ihre {quelle} liegt nahe an der Statusfarbe «{status}»{sicht}. Sie wird nur für Überschriften, Kopfzeile und Tabellenkopf verwendet, nicht in Diagrammen."
+    nahe_sicht: " (bei {sicht})"
+    reihe_ersetzt: "Die Diagrammreihe {reihe} wäre bei {sicht} kaum von der vorherigen zu unterscheiden und erhält eine Farbe des Kits."
+    sicht:
+      normal: Normalsicht
+      protanopie: Rotschwäche (Protanopie)
+      deuteranopie: Grünschwäche (Deuteranopie)
+      tritanopie: Blauschwäche (Tritanopie)
+    status:
+      status-kritisch: kritisch
+      status-gut: gut
+      status-warnung: Warnung
+      risiko-hoch: Risiko hoch
+      risiko-mittel: Risiko mittel
+      status-neutral: neutral
+    quelle_primaer: Primärfarbe
+    quelle_sekundaer: Sekundärfarbe
+    quelle_akzent: Akzentfarbe
+    wo: Wo die CI-Farben wirken
+    ueberschriften: "Titel und Überschriften in der Primärfarbe (aus: schwarz)"
+    tabellenkopf: Tabellenkopf und Feldbeschriftung in einem Hauch der Primärfarbe
+    kraeftig: Tabellenkopf kräftig (Primärfarbe mit weisser Schrift)
+    diagramme: Neutrale Diagrammreihen in den CI-Farben
+  schrift:
+    titel: Schrift
+    hilfe: Schriften werden nicht eingebettet (Lizenzen, Dateigrösse). Sichere Paare sind mit Office auf Windows und macOS vorhanden.
+    paar: Schriftpaar
+    paare:
+      arial-cambria: "Arial und Cambria (Standard)"
+      arial: Arial
+      calibri: Calibri
+      aptos: "Aptos (nur Microsoft 365 ab 2024)"
+      georgia: Georgia
+      verdana: Verdana
+      eigen: Eigene CI-Schrift
+    eigen_titel: Schrift für Titel und Tabellen
+    eigen_text: Schrift für den Lesetext
+    bestaetigung: Diese Schrift ist auf allen Rechnern installiert, auf denen die Dokumente bearbeitet werden.
+    ohne_bestaetigung: Ohne Bestätigung verwenden die Dokumente Arial und Cambria.
+    vorhanden: "«{schrift}» ist auf diesem Rechner vorhanden (Hinweis, kein Beweis für andere Rechner)."
+    fehlt: "«{schrift}» ist auf diesem Rechner nicht zu finden. Word ersetzt sie durch eine andere Schrift; Seitenumbrüche können sich verschieben."
+  weitere:
+    titel: Weitere Angaben
+    kurzname: Kurzname
+    kurzname_hilfe: "Für Kopfzeile und Dateinamen, z. B. «MMB», höchstens 30 Zeichen."
+    zusatz: Zusatzzeile in der Fusszeile
+    zusatz_hilfe: Adresse, Handelsregister oder Website, eine Zeile, höchstens 160 Zeichen. Die Klassifikation bleibt in der ersten Zeile.
+    titelseite: Titelseite
+    titelseite_keine: keine
+    titelseite_grundlagen: "nur Geltungsbereich, KI-Leitlinie und Erklärung zur Anwendbarkeit"
+    titelseite_alle: alle Word-Dokumente
+    wasserzeichen: Wasserzeichen «Entwurf» in nicht freigegebenen Dokumenten
+    wasserzeichen_hilfe: Word zeigt es diagonal auf jeder Seite und kann es über «Wasserzeichen entfernen» löschen. Excel kennt keine Wasserzeichen; dort steht der Vermerk in der Kopfzeile und im Blatt «Dokument».
+    praefix: Präfix der Dokumentkennung
+    praefix_hilfe: "Nur für die Anzeige im Dokumentkopf, z. B. «AIMS-» ergibt «AIMS-D-07». Intern, im Register und in Verweisen bleibt D-07. Erlaubt: Buchstaben, Ziffern, Punkt, Bindestrich, Unterstrich, höchstens 12 Zeichen."
+    praefix_ungueltig: Nur Buchstaben, Ziffern, Punkt, Bindestrich und Unterstrich, höchstens 12 Zeichen.
+    praefix_dateien: Präfix auch vor die Dateinamen setzen
+    praefix_dateien_hilfe: "Die erzeugten Dateien heissen dann z. B. «AIMS-D-07_Risikoregister.xlsx». Das Inhaltsverzeichnis des Satzes nennt die neuen Namen; Kennungen in den Dokumenten, im Register und in Verweisen bleiben D-07."
+  vorschau:
+    titel: Vorschau
+    hilfe: Musterdokument mit den Werten, die auch Word und Excel erhalten. Massgebend ist das echte Office-Ergebnis.
+    fehlsicht: Ansicht bei Farbfehlsichtigkeit
+    fehlsicht_keine: Normalsicht
+    word: Muster als Word herunterladen
+    excel: Muster als Excel herunterladen
+    pdf: Muster drucken oder als PDF sichern
+    semantisch: "Diese Farben bleiben fest:"
+  muster:
+    titel: Leitlinie für den Einsatz von KI (Muster)
+    absatz: Dieses Musterdokument zeigt, wie Ihre Firmendokumente aussehen. Titel, Kopfzeile, Tabellenkopf und neutrale Diagrammreihen folgen Ihrer Gestaltung, Risikostufen und Status behalten ihre Farben.
+    h_grundsaetze: Grundsätze
+    h_risiken: Risiken und Fortschritt
+    tabelle_kopf: [Grundsatz, Verantwortlich, Stand]
+    zeilen:
+      - ["Menschen entscheiden, KI unterstützt", Geschäftsleitung, umgesetzt]
+      - [Transparenz gegenüber Betroffenen, AIMS-Verantwortliche, in Arbeit]
+      - [Daten nur nach Freigabe, IT-Leitung, geplant]
+    liste:
+      - Jedes KI-System ist im Inventar erfasst.
+      - Risiken werden vor dem Einsatz beurteilt.
+    hinweis: ISO/IEC 42001, Abschnitt 5.2
+    matrix_titel: Risikomatrix
+    matrix_ecke: "A \\ W"
+    matrix_alt: "Musterwerte: zwei Risiken tief, eines mittel, eines hoch."
+    tief: tief
+    mittel: mittel
+    hoch: hoch
+    diagramm_titel: Umsetzung der Massnahmen
+    diagramm_kat: [Q1, Q2, Q3, Q4]
+    reihe_ist: Ist
+    reihe_plan: Plan
+    reihe_ueberfaellig: überfällig
+    diagramm_alt: "Musterwerte: Ist 2, 4, 6, 8; Plan 3, 5, 7, 9."
+    blatt: Register
+    spalten: [ID, Titel, Stand, Wert]
+    klassifikation: Intern
+    version: "1.0"
+    eigner: AIMS-Verantwortliche
+  paket:
+    logo_bereinigt: "Das Logo wurde dabei bereinigt."
+    titel: Gestaltungspaket
+    hilfe: Die Gestaltung als JSON-Datei für weitere Projekte derselben Firma. Massgebend ist immer die Kopie in der Projektdatei.
+    exportieren: Gestaltung exportieren
+    importieren: Gestaltung importieren
+    zuruecksetzen: Auf Standard zurücksetzen
+    zuruecksetzen_frage: Logo, Farben und alle Angaben der Dokumentgestaltung entfernen?
+    importiert: Gestaltung übernommen.
+    zurueckgesetzt: Gestaltung entfernt, die Dokumente nutzen das Kit-Design.
+    grund:
+      kein-json: keine JSON-Datei
+      kein-paket: keine Datei «aims-gestaltung»
+      version: unbekannte Version
+      schema: ungültige Angaben
+      zu-gross: grösser als {grenze_gestaltungspaket} oder zu tief verschachtelt
+  kurz:
+    hilfe: Optional. Logo und Primärfarbe genügen für den Anfang; alles Weitere finden Sie später in den Einstellungen.
+    alle: Alle Einstellungen der Dokumentgestaltung
+
+prozesse:
+  raci_waehlen: "Wählen"
+  titel: Prozesse
+  start_text: "Für dieses Projekt ist noch kein Prozessstand erfasst. Mit der ersten Angabe (z. B. Eigner oder Reife) führt das Projekt seine Prozesse: Die Prüfung meldet dann fehlende Eigner und überfällige Durchführungen, und die Dokumente erhalten die Prozessbeschreibungen (D-27)."
+  vorschlaege_text: "Im Guide haben Sie {anzahl} Prozesse als schon gelebt angegeben ({liste}). Übernehmen Sie für sie die Reife «definiert» als Vorschlag."
+  vorschlaege_text_eins: "Im Guide haben Sie 1 Prozess als schon gelebt angegeben ({liste}). Übernehmen Sie für ihn die Reife «definiert» als Vorschlag."
+  vorschlaege_uebernehmen: Vorschläge übernehmen
+  dashboard: Stand der Prozesse
+  rollen_offen: "Rollen in diesem Ablauf ohne Besetzung: {rollen}. Sie sind weder ein Bereich der Zuständigkeiten mit verantwortlicher Person noch die Rolle einer Person; D-04 nennt sie «noch nicht zugewiesen», und die Prüfung meldet F37."
+  rollen_offen_link: "Zu den Zuständigkeiten: Rolle erfassen"
+  dashboard_text: "Stand am {datum}: anwendbare AIMS-Prozesse, ohne ISMS auch der Mindestumfang der Basisprozesse. Reife, Eigner, fällige Durchführungen, Kennzahlen und offene Massnahmen."
+  reife_verteilung: Prozesse nach Reife
+  reife_zeile: Anwendbare Prozesse
+  kennzahlen: Kennzahlen der Prozesse
+  ohne_eigner: Ohne Eigner
+  alle_mit_eigner: Alle Prozesse haben einen Eigner.
+  ueberfaellig: Überfällig
+  ueberfaellig_text: Durchführung nach Rhythmus überfällig
+  ueberfaellig_wort: überfällig
+  kennzahlen_aktuell: Kennzahl gemessen
+  kennzahlen_text: Messwert in den letzten zwölf Monaten
+  massnahmen_offen: Offene Massnahmen
+  massnahmen_ueberfaellig: "davon {anzahl} überfällig"
+  kurz: "Ohne Eigner: {ohne}. Überfällig: {ueberfaellig}. Offene Massnahmen: {massnahmen}."
+  faellig_titel: Fällige Durchführungen (nächste 30 Tage)
+  nichts_faellig: Keine Durchführung in den nächsten 30 Tagen fällig.
+  filter_art: Art
+  filter_pflicht: Verbindlichkeit
+  drawio_alle: Alle Prozesse als draw.io-Datei
+  drawio_dieser: Diesen Prozess als draw.io-Datei
+  drawio_import: draw.io-Datei übernehmen
+  drawio_exportiert: "Datei {name} erstellt."
+  drawio_fehler: draw.io-Datei konnte nicht verarbeitet werden
+  drawio_hinweis: "Öffnen Sie die Datei in draw.io Desktop oder app.diagrams.net und speichern Sie sie unkomprimiert oder komprimiert. Beim Übernehmen bleiben Ihre Formen, Ebenen und Notizen erhalten; die Daten bleiben auf Ihrem Rechner."
+  drawio_stand: "Ablauf aus draw.io übernommen am {datum} ({datei})."
+  prozess: Prozess
+  art: Art
+  verbindlichkeit: Verbindlichkeit
+  eigner: Eigner/in
+  kein_eigner: kein Eigner
+  vorschlag: Vorschlag
+  reife: Reife
+  naechste: Nächste Durchführung
+  offen: offen
+  massnahmen: Massnahmen
+  nicht_anwendbar: nicht anwendbar
+  isms_titel: Basisprozesse im ISMS
+  isms_text: "Diese Prozesse der Informationssicherheit führt Ihr ISMS. Halten Sie je Prozess den Verweis auf das ISMS fest; einen eigenen Ablauf braucht es im AIMS nicht."
+  isms_verweis: Verweis auf das ISMS
+  kein_verweis: kein Verweis
+  empfohlen_titel: "Weitere Basisprozesse der Informationssicherheit (empfohlen, {anzahl})"
+  unbekannt: "Prozess {id} ist weder im Katalog noch unter den eigenen Prozessen."
+  zur_liste: Zur Prozessliste
+  stand_titel: Stand
+  anwendbar: Anwendbar
+  anwendbar_ja: anwendbar
+  anwendbar_nein: nicht anwendbar
+  anwendbar_offen: offen
+  vorschlag_wert: "Vorschlag: {wert}"
+  begruendung: Begründung
+  eigner_aus_rolle: "Vorschlag: {person} (Rolle {rolle} aus D-04). Wählen Sie eine Person, um den Eigner festzulegen."
+  eigner_rolle: "Vorgeschlagene Rolle: {rolle}. In D-04 ist dafür noch keine Person benannt."
+  stellvertretung: Stellvertretung
+  reife_vorschlag: "Vorschlag aus den Projektdaten: {stufe}."
+  vorschlag_uebernehmen: Vorschlag übernehmen
+  rhythmus: Rhythmus
+  letzte: Letzte Durchführung (von Hand)
+  abgeleitet: "Aus den Projektdaten: zuletzt am {datum}."
+  nicht_abgeleitet: Aus den Projektdaten noch keine Durchführung erkennbar.
+  nur_hand: Die Durchführung lässt sich nicht aus den Projektdaten ableiten; tragen Sie das Datum von Hand ein.
+  faellig_berechnet: "Nächste Durchführung nach Rhythmus: {datum}."
+  kennzahl: Kennzahl
+  kennzahl_vorschlag: "Vorschlag: {kennzahl}; Soll {soll}. Wählen Sie ein Ziel oder eine Kennzahl aus D-05."
+  keine_kennzahlen: Noch keine Ziele oder Kennzahlen erfasst
+  kennzahl_wert: "Letzter Messwert: {wert} am {datum}."
+  kennzahl_ohne_wert: Noch kein Messwert.
+  nachweise: Nachweise
+  notiz: Notiz
+  ablauf_titel: Ablauf
+  ablauf_katalog: Ablauf aus dem Katalog. Passen Sie ihn in der Tabelle an oder übernehmen Sie eine Datei aus draw.io.
+  ablauf_eigen: Eigener Ablauf der Firma (bearbeitet oder aus draw.io übernommen).
+  ablauf_svg: "Ablauf {prozess}"
+  ablauf_svg_text: "Ablauf mit {anzahl} Schritten in den Bahnen {bahnen}. Die Tabelle darunter nennt jeden Schritt."
+  ablauf_svg_text_eins: "Ablauf mit 1 Schritt in den Bahnen {bahnen}. Die Tabelle darunter nennt den Schritt."
+  schritte_titel: Schritte
+  nr: Nr.
+  schritt: Schritt
+  schrittart: Art
+  rolle: Rolle
+  wirkt_mit: Wirkt mit
+  informiert: Wird informiert
+  weiter: Weiter mit
+  bearbeiten: Ablauf bearbeiten
+  bearbeiten_fertig: Bearbeiten beenden
+  zuruecksetzen: Auf Katalog zurücksetzen
+  zuruecksetzen_frage: Eigenen Ablauf und Daten aus draw.io verwerfen und den Ablauf des Katalogs verwenden?
+  beschreibung_titel: Beschreibung
+  massnahmen_titel: Massnahmen zum Prozess
+  keine_massnahmen: Keine Massnahmen mit Bezug auf diesen Prozess.
+  massnahme_neu: Massnahme erfassen
+  massnahme_titel: "Verbesserung {prozess}"
+  dateien_titel: Dokumente und Dateien
+  beschreibung_docx: Prozessbeschreibung (Word)
+  beschreibung_erzeugt: "Prozessbeschreibung {name} erstellt."
+  beschreibung_fehler: Prozessbeschreibung konnte nicht erzeugt werden
+  import_titel: draw.io-Datei übernehmen
+  import_text: "Prüfen Sie den Unterschied zum heutigen Stand. Erst «Übernehmen» ändert das Projekt."
+  import_ohne_prozess: keinem Prozess zugeordnet
+  import_neu: "Neue Schritte: {anzahl}"
+  import_geaendert: "Geänderte Schritte: {anzahl}"
+  import_entfernt: "Nicht mehr enthalten: {anzahl}"
+  import_bahnen_offen: Bahnen ohne Rolle
+  import_formen_offen: Formen ohne Zuordnung
+  import_nichts_geloescht: Formen, die das Werkzeug nicht kennt, bleiben in der Datei erhalten und erscheinen beim nächsten Export wieder.
+  import_uebernehmen: Übernehmen
+  import_uebernommen: "{anzahl} Abläufe übernommen."
+  import_uebernommen_eins: "1 Ablauf übernommen."
+  import_zu_gross: Die Datei ist grösser als {grenze_drawio}.
+  import_leer: Die Datei enthält keinen Ablauf, der sich übernehmen lässt.
+  fehler:
+    zu-gross: Die Datei ist grösser als {grenze_drawio}.
+    kein-xml: Die Datei ist kein lesbares XML.
+    kein-drawio: Die Datei enthält kein Diagramm aus draw.io.
+    dtd: Die Datei enthält eine Dokumenttypdefinition; aus Sicherheitsgründen wird sie nicht gelesen.
+    entitaet: Die Datei enthält unbekannte Entitäten; aus Sicherheitsgründen wird sie nicht gelesen.
+    tiefe: Die Datei ist zu tief verschachtelt.
+    kompression: Eine komprimierte Seite liess sich nicht entpacken.
+  landkarte_titel: Prozesslandkarte
+  landkarte_text: "Prozesse nach Gruppen, eingefärbt nach Reife. Die Farben folgen einer festen Skala, nicht den Farben Ihrer Firma; die Stufe steht in jeder Kachel auch als Wort. Ein Klick öffnet den Prozess."
+  landkarte_legende: Reifestufen
+  ansicht: Darstellung
+  ansicht_liste: Liste
+  ansicht_karte: Landkarte
+  eigen_neu: Eigenen Prozess erfassen
+  eigen_neu_titel: Eigenen Prozess erfassen
+  eigen_neu_text: "Für Abläufe Ihrer Firma, die der Katalog nicht abdeckt. Die Kennung (PE-01 ff.) vergibt das Werkzeug. Den Ablauf bauen Sie danach in der Schritt-Tabelle aus oder übernehmen ihn aus draw.io."
+  eigen_titel: Titel
+  eigen_titel_fehlt: Bitte einen Titel angeben.
+  eigen_zweck: Zweck
+  eigen_gruppe: Gruppe
+  eigen_bahnen: Beteiligte Rollen (Bahnen)
+  eigen_bahnen_hilfe: "Jede gewählte Rolle erhält eine Bahn im Ablauf. Ohne Wahl beginnt der Ablauf in der Bahn der AIMS-Verantwortlichen."
+  eigen_anlegen: Erfassen
+  eigen_angelegt: "Prozess {id} erfasst."
+  eigen_start: Anlass tritt ein
+  eigen_schritt: Ersten Schritt beschreiben
+  eigen_ende: Ergebnis liegt vor
+  eigen_angaben: Angaben zum eigenen Prozess
+  eigen_normbezug: Normbezug ISO/IEC 42001
+  eigen_normbezug_hilfe: "Nur Nummern, durch Komma getrennt, z. B. 8.1, A.6.2.6."
+  eigen_ausloeser: Auslöser
+  eigen_eingaben: Eingaben
+  eigen_ausgaben: Ausgaben und Nachweise
+  eigen_zeilen_hilfe: "Je Zeile ein Eintrag. Die Angaben erscheinen in der Prozessbeschreibung (D-27)."
+  eigen_dokumente: Dokumente
+  eigen_dokumente_hilfe: "Kennungen der Dokumente, in denen der Prozess geregelt und belegt ist, z. B. D-22, D-14."
+  eigen_kennzahl: Kennzahl mit Sollwert
+  eigen_kennzahl_text: Was gemessen wird
+  eigen_kennzahl_soll: Sollwert
+  eigen_kennzahl_wert: Zahl des Sollwerts
+  eigen_kennzahl_einheit: Einheit
+  eigen_schnittstellen: Verbundene Prozesse
+  eigen_schnittstellen_hilfe: "Kennungen anderer Prozesse, z. B. PR-18, PR-12."
+  eigen_schnittstellen_text: Festlegung der Schnittstellen
+  extern: Ausgeführt durch
+  extern_nein: die Firma selbst
+  extern_ohne_register: Dienstleister ohne Eintrag im Lieferantenregister
+  extern_hilfe: "Führt ein Dienstleister den Prozess aus, bleibt die Firma verantwortlich. Erfassen Sie ihn im Lieferantenregister (D-16) und beschreiben Sie, wie Sie ihn steuern."
+  extern_name: Name des Dienstleisters
+  extern_steuerung: Steuerung durch die Firma (Vertrag, Auftrag, Bericht, Kontrolle)
+  eigen_beschreibung: Eigener Prozess der Firma. Zweck und Ablauf stehen oben; Kennzahl und Nachweise ordnen Sie im Stand zu.
+  eigen_loeschen: Prozess löschen
+  eigen_loeschen_frage: "Prozess {id} «{titel}» mit Stand und Ablauf löschen? Er verschwindet auch aus dem Umfang der Audits."
+  eigen_geloescht: "Prozess {id} gelöscht."
+  eigen_loeschen_massnahmen: "{anzahl} Massnahmen verweisen auf diesen Prozess; sie bleiben erhalten."
+  eigen_loeschen_massnahmen_eins: "1 Massnahme verweist auf diesen Prozess; sie bleibt erhalten."
+  kennzahl_eigen: Wählen Sie ein Ziel oder eine Kennzahl aus D-05, an der sich die Wirksamkeit zeigt.
+  keine_angabe: keine Angabe
+  neuer_schritt: Neuer Schritt
+  schritt_aktionen: Schritt einfügen oder entfernen
+  schritt_einfuegen: Einfügen
+  nach_schritt: "nach Schritt {nr}"
+  schritt_entfernen: Entfernen
+  schritt_nr: "Schritt {nr}"
+  bahnen_offen_titel: Zuordnung nach draw.io offen
+  bahnen_offen_text: "Diese Bahnen aus draw.io haben noch keine Rolle. Wählen Sie die passende Rolle; danach entfällt der Hinweis in der Prüfung."
+  bahn_rolle: "Rolle für die Bahn «{bahn}»"
+  formen_offen_text: "Formen ohne Zuordnung (z. B. Bilder): {liste}. Sie bleiben in der Datei erhalten und erscheinen beim nächsten Export wieder."
+  formen_geprueft: Zur Kenntnis genommen
+  import_als_eigen: "neu als eigener Prozess {id}"
+  import_eigen_titel: "Titel des Prozesses {id}"
+  import_eigen_hilfe: Leer übernimmt den Namen der Seite. Gruppe und Art passen Sie danach auf der Detailseite an.
+  import_uebernommen_eigen: "{anzahl} Abläufe übernommen, neu erfasst: {liste}."
+  import_uebernommen_eigen_eins: "1 Ablauf übernommen, neu erfasst: {liste}."
+
+beenden:
+  ungespeichert: "Das Projekt hat ungespeicherte Änderungen. «Ohne Speichern beenden» schliesst es trotzdem; mit Abbrechen bleiben Sie im Projekt und speichern zuerst."
+  leeren_frage: "Zwischenspeicher dieses Browsers leeren? Das empfiehlt sich auf gemeinsam genutzten Rechnern. «Zwischenspeicher leeren» löscht alle Zwischenstände (mit Projekt und Logo) und die eigenen Normtexte aus dem Browser; Projektdateien auf dem Datenträger und die Dateien der Bibliothek im Browser (Einstellungen, Bibliothek) bleiben. Mit «Nicht leeren» bleibt ein Zwischenstand für das nächste Mal."
+  geleert: "Beendet. Der Zwischenspeicher ist geleert."
+  beendet: "Beendet. Ein Zwischenstand bleibt im Browser."
+
+speicher_hinweis:
+  titel: "Zwischenstände liegen unverschlüsselt in diesem Browser."
+  # V-19: Hinweisleiste in einer Zeile; der ausführliche Text mit der Frist steht in den Einstellungen (zwischenspeicher_datenschutz)
+  kurz: "Mehr in den Einstellungen."
+  text: "Der AIMS-Manager legt Ihr Projekt als Zwischenstand im Speicher dieses Browsers ab ({art}). Er ist nicht verschlüsselt und für andere Personen am selben Browserprofil lesbar. Gesicherte Stände werden nach {tage} Tagen gelöscht. Auf gemeinsam genutzten Rechnern schalten Sie die Zwischenstände in den Einstellungen aus oder leeren den Zwischenspeicher, wenn Sie beenden."
+  ok: "Verstanden"
+  einstellungen: "Zu den Einstellungen"
+
+warnung:
+  tabs_text: "Beide Tabs schreiben auf denselben Zwischenstand, der letzte gewinnt. Arbeiten Sie nur in einem Tab und schliessen Sie den anderen."
+  tabs_titel: "Dieses Projekt ist noch in einem anderen Tab offen."
+  zwischenspeicher_text: "Der Browser speichert keine Zwischenstände mehr, etwa weil der Speicher voll oder gesperrt ist. Speichern Sie die Projektdatei jetzt und danach regelmässig."
+  zwischenspeicher_titel: "Zwischenspeicher nicht verfügbar."
+sprung:
+  schliessen: "Leiste schliessen"
+  leiste: "Stellen aus der Prüfung"
+  naechste: "Nächste Stelle ({nr} von {anzahl})"
+  zurueck: "Zurück zur Prüfung"
+# Hinweis im Rahmen, wenn der Rechtsstand alt ist oder eine offene Angabe nicht frisch gesichtet wurde (AF-117, W10)
+rechtsstand_hinweis:
+  titel: "Rechtsstand prüfen."
+  alt: "Die Rechtsangaben dieses Kits wurden zuletzt am {datum} geprüft, vor mehr als sechs Monaten."
+  alt_ohne_datum: "Für die Rechtsangaben dieses Kits ist kein Prüfdatum hinterlegt."
+  zu_pruefen: "Ohne Sichtung in den letzten sechs Monaten: {liste}."
+  tun: "Laden Sie die neueste Version des Kits (kmu-cio.ch/42001) und prüfen Sie Einstufungen und Fristen an der Quelle, bevor Sie sich darauf stützen. Keine Rechtsberatung."
+# Löschen mit Abhängigkeiten (AF-009, ui/Loeschen.tsx)
+loeschen:
+  titel: "{eintrag} löschen?"
+  titel_name: "{eintrag} «{name}» löschen?"
+  abhaengig: "Auf diesen Eintrag verweisen {anzahl} andere Einträge. Beim Löschen werden diese Verweise entfernt; die Einträge selbst bleiben bestehen, ausser wo es dabeisteht."
+  abhaengig_eins: "Auf diesen Eintrag verweist ein anderer Eintrag. Beim Löschen wird der Verweis entfernt; der Eintrag selbst bleibt bestehen, ausser wo es dabeisteht."
+  verweise: "{anzahl} Verweise"
+  verweise_eins: "1 Verweis"
+  weitere: "und {anzahl} weitere Einträge"
+  weitere_eins: "und 1 weiterer Eintrag"
+  mitgeloescht: "wird mitgelöscht, weil die Angabe zum gelöschten Eintrag gehört"
+  endstatus: "schon abgeschlossen (freigegeben, erledigt oder wirksam), bitte nach dem Löschen prüfen"
+  verweise_entfernen: Verweise entfernen und löschen
+  bereich_organisation: Organisation
+  bereich_nistProfil: Profil NIST AI RMF
+  bereich_kennzahlMessungen: Messungen der Kennzahlen
+eingang:
+  zwischenstand-gross: "Der Zwischenstand ist mit {wert} grösser als eine Projektdatei (höchstens {grenze}) und lässt sich darum nicht öffnen. Er bleibt im Browser erhalten und wird nicht gelöscht."
+  schritt_zwischenstand: "Öffnen Sie die zuletzt gespeicherte Projektdatei. Ist das Projekt noch in einem anderen Tab offen, speichern Sie es dort als Datei und kürzen Sie grosse Inhalte (Logo, eingefügte Texte), bevor Sie den Zwischenstand verwerfen."
+  zu-gross: "Die Datei ist zu gross für {art} (höchstens {grenze}) und wurde nicht gelesen."
+  zu-viele: "Die Datei enthält zu viele Einträge für {art} (höchstens {grenze}) und wurde nicht übernommen."
+  zu-tief: "Die Daten sind zu tief verschachtelt für {art} (höchstens {grenze} Ebenen) und wurden nicht übernommen."
+  zeit: "Das Lesen der Datei ({art}) dauerte länger als {grenze} und wurde abgebrochen."
+  zu-viele-seiten: "Die PDF hat mit {wert} mehr Seiten als für {art} zulässig sind (höchstens {grenze}) und wurde nicht gelesen."
+  herzschlag: "Das Lesen der Datei ({art}) kam {grenze} lang nicht voran und wurde abgebrochen."
+  art:
+    projektdatei: eine Projektdatei
+    ki-ergebnis: ein KI-Ergebnis
+    sicherung: eine Bibliothekssicherung
+    gestaltungspaket: ein Gestaltungspaket
+    svg-logo: ein SVG-Logo
+    word-vorlage: eine Word-Vorlage
+    drawio: eine draw.io-Datei
+    normpaket: ein Normpaket
+    norm-pdf: eine Norm-PDF
+    bild: ein Logo oder eine Word-Vorlage
+    fragebogen: einen Fragebogen
+    bibliotheksdatei: eine Datei der Bibliothek
+
+# Namen der Symbole für Bildschirmleser (A-24)
+symbol:
+  pfeil_links: Pfeil links
+  pfeil_rechts: Pfeil rechts
+  pfeil_hoch: Pfeil hoch
+  pfeil_runter: Pfeil runter
+  nach: nach
+  weiter_zu: weiter zu

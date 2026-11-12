@@ -1,0 +1,318 @@
+# Page texts for phase E11 Objectives, measurement and document control. Format: src/gefuehrt/FORMAT.md
+E11-einfuehrung:
+  titel: Objectives, measurement and document control
+  frage: How can you tell that your management system works, and which version of a document applies?
+  warum: The standard requires measurable [[g:ki-ziel|AI objectives]], a plan for measuring and evaluating them, and controlled [[g:dokumentierte-information]]. If you have an [[g:isms]], you can usually adopt its existing document control rules.
+  fehler: Objectives without a metric, deadline or owner are a common finding. Auditors ask about the latest measurement and what followed from it.
+E11-ziele:
+  titel: AI objectives
+  frage: Which measurable objectives do you set for AI?
+  warum: Objectives follow from the policy, the risks and the requirements. In an SME, three to six objectives are enough, for example on the completeness of the inventory, on training or on the quality of a system.
+  fehler: "‘Use AI responsibly’ is not a measurable objective. Auditors want to see a metric, a target value, an owner and a deadline."
+  felder:
+    ziel:
+      label: Objective
+      hilfe: e.g. ‘All employees who use AI tools have been trained’.
+    kennzahl:
+      label: Metric
+      hilfe: e.g. ‘Share of users trained’.
+    sollwert:
+      label: Target value
+      hilfe: e.g. "100% by 31/03/2027".
+    verantwortlich:
+      label: Responsible
+      hilfe: The person who makes sure the objective is met.
+    termin:
+      label: Deadline
+      hilfe: The date by which the objective should be reached.
+    ressourcen:
+      label: Resources
+      hilfe: Time, budget or tools.
+    bezugLeitlinie:
+      label: "Link to the policy"
+      hilfe: "Which principle of the AI policy the objective serves."
+    massnahmen:
+      label: "What will be done"
+      hilfe: "Actions by which you will achieve the objective."
+    status:
+      label: "Status"
+      hilfe: "Status of the objective."
+    kiSysteme:
+      label: "AI systems"
+      hilfe: "The systems to which the objective or metric applies; empty means all. Systems with sensitive use need a metric of their own (H34)."
+E11-messplan:
+  titel: Measurement plan
+  frage: How, how often and by whom is each objective measured and evaluated?
+  warum: The standard requires you to define what is measured, how and when, and who evaluates the results. This produces inputs for the management review.
+  fehler: Measurements that nobody evaluates have no effect. Auditors ask where the results are discussed.
+  felder:
+    messmethode:
+      label: Measurement method
+      hilfe: e.g. ‘Report from the e-learning platform’.
+    haeufigkeit:
+      label: Frequency
+      hilfe: How often the measurement takes place.
+    bewertung:
+      label: Evaluated by
+      hilfe: e.g. ‘Management review’ or ‘[[g:aims|AIMS]] team, quarterly’.
+    werMisst:
+      label: "Who actions"
+      hilfe: "Empty means: the person responsible for the objective."
+    auswertungWann:
+      label: "When evaluated"
+      hilfe: "e.g. ‘after each measurement’ or ‘before the management review’."
+    werWertetAus:
+      label: "Who evaluates"
+      hilfe: "Person who assesses the results."
+    empfaenger:
+      label: "Recipients"
+      hilfe: "Who receives the result, e.g. top management."
+E11-messungen:
+  titel: Measured values
+  frage: Which values have you measured so far?
+  warum: Only measured values show whether you are on track. Before the certification audit, there should be at least one measurement for each objective.
+  fehler: Values without a date cannot be compared. Auditors compare the values with the target and ask what you did about deviations.
+  felder:
+    messungen:
+      label: Measurements
+      hilfe: One row per measurement.
+    messungen.datum:
+      label: Date
+      hilfe: Reference date of the measurement.
+    messungen.wert:
+      label: Value
+      hilfe: e.g. "82%".
+    messungen.bemerkung:
+      label: Comment
+      hilfe: e.g. ‘Production still open, follow-up training in May’.
+    messungen.sollErreicht:
+      label: "Target met"
+      hilfe: "Yes, partly or no."
+E11-kennzahlen:
+  titel: Further metrics
+  frage: How do you measure the further metrics, and what values are available?
+  warum: "Besides the objectives, the measurement plan D-05 contains six further measurements: effectiveness of the [[g:control|controls]] (KZ-01), internal audits (KZ-02), number of reports (KZ-03), response time (KZ-04), correction rate (KZ-05) and suitability of the metrics (KZ-06). Your entries replace the defaults of the template; add your own metrics from KZ-07."
+  fehler: Planned measurements without values are a common finding. Auditors ask for the latest value and what followed from it.
+  felder:
+    kennzahlen:
+      label: Metrics
+      hilfe: One row per metric that you measure differently from the proposal or in addition to it.
+    kennzahlen.id:
+      label: ID
+      hilfe: KZ-01 to KZ-06 for the rows of the template, KZ-07 onwards for your own metrics.
+    kennzahlen.kennzahl:
+      label: What is measured
+      hilfe: Leave empty to keep the name from the template.
+    kennzahlen.messmethode:
+      label: Method and source
+      hilfe: e.g. ‘sample of 20 outputs per system and quarter’.
+    kennzahlen.haeufigkeit:
+      label: Frequency
+      hilfe: How often it is measured.
+    kennzahlen.werMisst:
+      label: Who actions
+      hilfe: Person who measures.
+    kennzahlen.auswertungWann:
+      label: Evaluated when
+      hilfe: e.g. ‘before the management review’.
+    kennzahlen.werWertetAus:
+      label: Who evaluates
+      hilfe: Person who evaluates.
+    kennzahlen.empfaenger:
+      label: Recipient
+      hilfe: e.g. ‘top management’.
+    kennzahlMessungen:
+      label: Values of the metrics
+      hilfe: One row per measurement.
+    kennzahlMessungen.kennzahl:
+      label: Metric
+      hilfe: ID of the metric, e.g. ‘KZ-05’.
+    kennzahlMessungen.datum:
+      label: Date
+      hilfe: Reference date of the measurement.
+    kennzahlMessungen.wert:
+      label: Value
+      hilfe: e.g. "6% (3 of 50)".
+    kennzahlMessungen.zaehler:
+      label: Numerator
+      hilfe: For a rate, the cases counted, e.g. 3.
+    kennzahlMessungen.nenner:
+      label: Denominator
+      hilfe: For a rate, the population, e.g. 50.
+    kennzahlMessungen.sollErreicht:
+      label: Target met
+      hilfe: Comparison of the value with the target. Leave empty if no measurement was possible.
+    kennzahlMessungen.keineMessung:
+      label: No measurement
+      hilfe: Choose this if there was no case in the period or the first measurement is still open; give the reason in the remark. Do not estimate a figure.
+    kennzahlMessungen.bemerkung:
+      label: Remarks
+      hilfe: Assessment and conclusion.
+E11-lenkung-isms:
+  titel: Document control from the ISMS
+  frage: Do your [[g:isms]] rules on document control also apply to the AI management system?
+  warum: With an ISMS, you already have rules for versions, approvals and storage. You only add the new AI documents to the register.
+  fehler: A separate storage area just for AI documents leads to duplicate versions. Auditors check whether the AI documents follow the same rules.
+  felder:
+    organisation.dokumentenlenkung.ismsRegelnGelten:
+      label: ISMS rules also apply to the AIMS
+      hilfe: The [[g:aims|AIMS]] then adopts the ISMS rules, using supplementary sheet D-26-EB instead of separate rules.
+    organisation.dokumentenlenkung.ablage:
+      label: Storage location
+      hilfe: e.g. ‘SharePoint, management systems library’.
+    organisation.dokumentenlenkung.klassifikation:
+      label: "Default classification"
+      hilfe: "Appears in the footer of all documents without their own setting, e.g. ‘internal’."
+    organisation.dokumentenlenkung.externeDokumente:
+      label: Register of external documents
+      hilfe: Standards, legal texts, documents from [[g:anbieter|providers]] and customers with edition, storage and responsibility (D-26, sheet ‘External documents’). If left empty, the template's suggestion remains.
+    organisation.dokumentenlenkung.externeDokumente.dokument:
+      label: Document
+      hilfe: e.g. ‘ISO/IEC 42001’ or ‘EU AI Act’.
+    organisation.dokumentenlenkung.externeDokumente.herausgeber:
+      label: Publisher
+      hilfe: e.g. ISO and IEC, EU, provider.
+    organisation.dokumentenlenkung.externeDokumente.stand:
+      label: Edition or status
+      hilfe: e.g. "2023" or ‘consolidated version of 27/07/2026’.
+    organisation.dokumentenlenkung.externeDokumente.ablage:
+      label: Storage location
+      hilfe: Where the valid version is kept.
+    organisation.dokumentenlenkung.externeDokumente.zustaendig:
+      label: Responsible
+      hilfe: Who checks whether a newer version exists.
+    organisation.dokumentenlenkung.externeDokumente.naechstePruefung:
+      label: Next check
+      hilfe: At least once a year, more often for the EU AI Act.
+E11-lenkung:
+  titel: Rules for documents
+  frage: Where do you store documents, who approves them and how long do you keep records?
+  warum: Without an [[g:isms]], you set the basic rules here. Two pages in D-26 are enough; what matters is that everyone can find the current version.
+  fehler: Documents sent around by email leave old versions in circulation. Auditors ask employees where they find the current policy.
+  felder:
+    organisation.dokumentenlenkung.ablage:
+      label: Storage location
+      hilfe: One central place with access rights.
+    organisation.dokumentenlenkung.namensregel:
+      label: Naming
+      hilfe: e.g. ‘ID_Title_Version’, such as ‘D-03_AI-Policy_1.0’.
+    organisation.dokumentenlenkung.freigabe:
+      label: Approved by
+      hilfe: Management always approves the policy and the scope.
+    organisation.dokumentenlenkung.aufbewahrungJahre:
+      label: Retention of records in years
+      hilfe: e.g. 10 years for approvals and audit reports.
+    organisation.dokumentenlenkung.extern:
+      label: External documents
+      hilfe: How you manage standards, laws and supplier documents.
+    organisation.dokumentenlenkung.klassifikation:
+      label: "Default classification"
+      hilfe: "Appears in the footer of all documents without their own setting, e.g. ‘internal’."
+    organisation.dokumentenlenkung.externeDokumente:
+      label: Register of external documents
+      hilfe: Standards, legal texts, documents from [[g:anbieter|providers]] and customers with edition, storage and responsibility (D-26, sheet ‘External documents’). If left empty, the template's suggestion remains.
+    organisation.dokumentenlenkung.externeDokumente.dokument:
+      label: Document
+      hilfe: e.g. ‘ISO/IEC 42001’ or ‘EU AI Act’.
+    organisation.dokumentenlenkung.externeDokumente.herausgeber:
+      label: Publisher
+      hilfe: e.g. ISO and IEC, EU, provider.
+    organisation.dokumentenlenkung.externeDokumente.stand:
+      label: Edition or status
+      hilfe: e.g. "2023" or ‘consolidated version of 27/07/2026’.
+    organisation.dokumentenlenkung.externeDokumente.ablage:
+      label: Storage location
+      hilfe: Where the valid version is kept.
+    organisation.dokumentenlenkung.externeDokumente.zustaendig:
+      label: Responsible
+      hilfe: Who checks whether a newer version exists.
+    organisation.dokumentenlenkung.externeDokumente.naechstePruefung:
+      label: Next check
+      hilfe: At least once a year, more often for the EU AI Act.
+E11-dokumente:
+  titel: Document register
+  frage: Which documents belong to the management system and what state are they in?
+  warum: The register shows the version, status, owner and storage location of every document at a glance. The tool automatically enters generated kit documents.
+  fehler: The check flags documents whose review date has passed as a note. Auditors pick a document from the register and compare it with what is stored.
+  felder:
+    id:
+      label: Document
+      hilfe: Choose from the kit templates.
+    version:
+      label: Version
+      hilfe: e.g. "1.0".
+    status:
+      label: Status
+      hilfe: State of the document.
+    eigner:
+      label: Owner
+      hilfe: The person currently responsible for the document.
+    freigabe:
+      label: Approval
+      hilfe: Person and date.
+    ablageort:
+      label: Storage location
+      hilfe: Path or link.
+    naechsteUeberpruefung:
+      label: Next review
+      hilfe: Usually once a year.
+    giltFuerIsms:
+      label: Applies to ISMS and AIMS
+      hilfe: Shared documents for the [[g:isms]] and the [[g:aims|AIMS]].
+    klassifikation:
+      label: "Classification"
+      hilfe: "For the footer; empty means: default from document control."
+    aufbewahrung:
+      label: "Retention"
+      hilfe: "e.g. ‘10 years after replacement’."
+    aufgenommenIn:
+      label: "Included in or extends ISMS document"
+      hilfe: "Identifier, title and version of the existing [[g:isms]] document into which a supplementary sheet is included or which a document extends, e.g. ‘ISMS training concept SK-ISMS-01, version 1.4’. Appears in the document header (ISMS relation), in the register and in D-23."
+    geprueft:
+      label: "Reviewed by, on"
+      hilfe: "Second person who reviewed the content before approval (D-26). Appears in the document header and in the register."
+    bestaetigt:
+      label: "Confirmed without change, by, on"
+      hilfe: "Latest review without a new version, e.g. in the management review: the content counts as reviewed on this date. References to documents approved by then appear without the note ‘in preparation’. Not before the approval of the current version."
+    aenderungen:
+      label: "Change history"
+      hilfe: "For each version: version, approval date, what changed, who approved it. Oldest first; the last row is the current version. Appears in the register (sheet ‘Changes’) and in the document header."
+    aenderungen.version:
+      label: "Version"
+      hilfe: "e.g. 1.1."
+    aenderungen.datum:
+      label: "Approved on"
+      hilfe: "Date of approval of this version."
+    aenderungen.was:
+      label: "Change"
+      hilfe: "What changed compared with the previous version, e.g. 'suppliers added after review'."
+    aenderungen.von:
+      label: "Approved by"
+      hilfe: "Person who approved this version."
+E11-aenderungen:
+  titel: Changes to the management system
+  frage: How do you plan and manage changes to the AI management system?
+  warum: New systems, laws or organizational changes call for adjustments. The standard wants such changes to be planned and carried out in a controlled way.
+  fehler: Changes that are not recorded anywhere cannot be traced in the audit. Auditors ask about the last major change and how it was carried out.
+  felder:
+    meta.gefuehrt.antworten.aenderungen.weg:
+      label: Route for changes
+      hilfe: In an SME usually via the action list, with approval from management.
+    meta.gefuehrt.antworten.aenderungen.notiz:
+      label: Comment
+      hilfe: e.g. ‘Major changes are decided in the management review’.
+E11-nicht-gemessen:
+  titel: "Deliberately not measured"
+  frage: "Which topics do you deliberately not measure, and why?"
+  warum: "Not everything can be measured with reasonable effort. If you say so openly and give reasons, you show that the choice of metrics was a decision and not a coincidence. The list appears in the measurement plan D-05 on a sheet of its own."
+  fehler: "‘Too much effort’ alone is not a reason; state how you observe the topic instead, e.g. through reports or samples. Auditors ask about topics from the policy for which there is no metric."
+  felder:
+    organisation.nichtGemessen:
+      label: "Deliberately not measured"
+      hilfe: "One row per topic."
+    organisation.nichtGemessen.was:
+      label: "Topic"
+      hilfe: "For example ‘fairness of the translations’."
+    organisation.nichtGemessen.begruendung:
+      label: "Reasoning"
+      hilfe: "Why it is not measured and how you observe the topic instead."

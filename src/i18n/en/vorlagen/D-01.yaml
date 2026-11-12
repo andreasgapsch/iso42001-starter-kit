@@ -1,0 +1,81 @@
+# D-01 Context, interested parties and roles
+einleitung: "This document records the setting in which [[Company name]] uses AI, the role the company takes in doing so and which expectations of interested parties the AI management system takes on. It is the basis for the scope (D-02) and the risk assessment (D-06, D-07)."
+einleitung_firma: "This document records the setting in which {firma} uses AI, the role the company takes in doing so and which expectations of interested parties the AI management system takes on. It is the basis for the scope (D-02) and the risk assessment (D-06, D-07)."
+hinweis_umfang: "Two to three pages are enough. Only record issues that actually affect the AI management system. Review the document every year before the management review (D-21)."
+isms_hinweis: "With an ISMS: manage context and interested parties together with the ISMS. Add the AI topics to the existing document or refer to it here. Tick below whether this document applies to both management systems."
+gilt_fuer_isms: Applies to ISMS and AIMS
+abschnitte:
+  themen: External and internal issues
+  klima: Climate change
+  rollen: Roles of the organization
+  zwecke: Purpose of the AI systems
+  parteien: Interested parties and their requirements
+  ueberpruefung: Review
+hinweis_themen: "Ask yourself for each issue: what affects our use of AI from outside or inside, and what does that mean for the management system? The suggestions show typical issues for SMEs. Delete whatever does not apply."
+themen_fehlen: "No issues have been recorded in the project yet. Complete the table or record the issues in the tool."
+themen_kopf: [ID, Type, Category, Issue, Effect on the AIMS]
+art:
+  extern: external
+  intern: internal
+kategorien:
+  recht: Law
+  regulierung: Regulation
+  markt: Market and customers
+  kultur: Culture and competence
+  governance: Organization and governance
+  vertrag: Contracts
+  zweck: Purpose of the AI systems
+  technik: Technology
+  lieferanten: Suppliers
+  umwelt: Environment and climate
+themen_vorschlag:
+  - [external, Law, "Swiss Federal Act on Data Protection (FADP); where there is an EU connection, GDPR and the EU AI Act", "[[Add effect]]"]
+  - [external, Market and customers, "Customers ask for evidence of how we handle AI and their data", "[[Add effect]]"]
+  - [external, Technology, "AI features keep appearing in existing software, often without notice", "[[Add effect]]"]
+  - [external, Suppliers, "Dependence on a few large AI providers, data held abroad", "[[Add effect]]"]
+  - [internal, Organization and governance, "Existing management systems (e.g. ISMS, quality), roles and committees", "[[Add effect]]"]
+  - [internal, Culture and competence, "Employees' knowledge of AI, attitude to new tools", "[[Add effect]]"]
+  - [internal, Purpose of the AI systems, "What we use AI for and which decisions it prepares", "[[Add effect]]"]
+hinweis_klima: "Decide explicitly whether climate change is a relevant issue for your AI management system, and explain the decision in one or two sentences. It can be relevant if AI systems use a lot of energy, if data centres or supply chains are exposed to climate risks, or if customers ask for information on your footprint."
+klima_felder:
+  relevant: Relevant
+  begruendung: Reason
+klima_werte:
+  ja: "yes"
+  nein: "no"
+  offen: open
+klima_platzhalter: "yes / no"
+hinweis_rollen: "Tick the roles your company takes with regard to AI. Several roles are common. These roles describe your position in the AI ecosystem; you determine the roles under the EU AI Act (e.g. deployer) for each system in D-24 or E-01."
+rollen_kopf: [Role, Applies, Remarks]
+rollen:
+  anbieter: "Provider: makes AI systems or AI services available to others"
+  produzent: "Producer: develops or trains AI systems itself"
+  kunde: "Customer and user: buys AI systems and uses them"
+  partner: "Partner: supplies data, infrastructure or integration services"
+  betroffene: "Affected party: is itself affected by other parties' AI systems"
+  behoerde: "Authority: supervises or regulates the use of AI"
+zwecke_text: "The intended purposes of our AI systems are listed in the AI inventory (D-10). At present they are:"
+zwecke_leer: "The intended purposes of our AI systems are listed in the AI inventory (D-10)."
+hinweis_parteien: "For each party, record the requirements that concern the use of AI and where they come from. Decide for each requirement whether the management system takes it on. ‘No’ is allowed but needs a reason. Settle any open decisions before stage 1."
+parteien_fehlen: "No interested parties have been recorded in the project yet. Complete the table."
+parteien_kopf: [Party, Requirement, Source, Addressed by AIMS, Reason]
+quelle:
+  gesetz: Law
+  vertrag: Contract
+  norm: Standard
+  intern: internal
+  markt: Market
+adressiert:
+  ja: "yes"
+  nein: "no"
+  offen: open
+parteien_vorschlag:
+  - [Customers, "Confidential data and drawings do not end up in third-party AI systems", Contract, "[[yes/no]]", "[[Reason]]"]
+  - [Employees, "Clear rules on which AI tools are allowed; no hidden performance monitoring", internal, "[[yes/no]]", "[[Reason]]"]
+  - [Top management and owners, "Benefits from AI with risk under control, evidence for customers", internal, "[[yes/no]]", "[[Reason]]"]
+  - [Supervisory authorities, "Compliance with data protection law and, where there is an EU connection, the EU AI Act", Law, "[[yes/no]]", "[[Reason]]"]
+  - [Suppliers of AI systems, "Use in line with the contract and terms of use", Contract, "[[yes/no]]", "[[Reason]]"]
+  - [Affected persons, "Information when AI affects them, and a way to report concerns", Law, "[[yes/no]]", "[[Reason]]"]
+  - [Certification body, "Conformity with ISO/IEC 42001 and demonstrable implementation", Standard, "[[yes/no]]", "[[Reason]]"]
+ueberpruefung_text: "This document is reviewed at least once a year and whenever there are significant changes, e.g. new AI systems, new markets or new laws; the person responsible is {verantwortlich}. Changes to issues and parties are an input to the management review (D-21)."
+ausbau_umfeld: "For a more thorough analysis of the setting, go through the political, economic, social, technological, environmental and legal areas one by one. If many people are affected, it is worth asking key parties directly, e.g. with a short survey of customers or employees."

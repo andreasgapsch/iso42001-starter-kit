@@ -1,0 +1,21 @@
+name: Fehler melden
+description: Etwas funktioniert nicht oder ein Dokument ist falsch
+labels: [fehler]
+body:
+  - type: input
+    id: version
+    attributes: { label: Version des Kits, placeholder: "1.0.0" }
+    validations: { required: true }
+  - type: dropdown
+    id: bereich
+    attributes:
+      label: Bereich
+      options: [Vorlage, AIMS-Manager, Leitfaden, KI-Assistent, Beispiele, Anderes]
+    validations: { required: true }
+  - type: input
+    id: umgebung
+    attributes: { label: Umgebung, placeholder: "Windows 11, Edge 141, Word 365" }
+  - type: textarea
+    id: beschreibung
+    attributes: { label: Was ist passiert und was haben Sie erwartet?, description: "Keine vertraulichen Firmendaten anhängen." }
+    validations: { required: true }

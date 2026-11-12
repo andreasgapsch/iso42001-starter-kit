@@ -1,0 +1,65 @@
+# Etappe E10 Kompetenz, Bewusstsein, Kommunikation. Format: src/gefuehrt/FORMAT.md
+seiten:
+  - { id: E10-einfuehrung, typ: info, norm: "7.2 bis 7.4", vorlage: D-17, leitfaden: 8 }
+  - id: E10-kompetenzen
+    typ: liste
+    mindestensEiner: true
+    liste: kompetenzen
+    norm: "7.2, A.4.6"
+    vorlage: D-17
+    leitfaden: 8
+    vorgabe: { status: offen }
+    beispiel: kompetenzen[0]
+    felder:
+      - { pfad: rolle, typ: text, pflicht: true }
+      - { pfad: anforderung, typ: textarea, pflicht: true }
+      - { pfad: personen, typ: personen }
+      - { pfad: gruppe, typ: text }
+      - { pfad: massnahme, typ: textarea }
+      - { pfad: nachweis, typ: text }
+      - { pfad: wirksamkeit, typ: textarea }
+      - { pfad: status, typ: auswahl, optionen: kompetenzStatus }
+  - id: E10-bewusstsein
+    typ: formular
+    norm: "7.3"
+    vorlage: D-17
+    leitfaden: 8
+    beispiel: meta.gefuehrt.antworten.bewusstsein
+    felder:
+      - { pfad: meta.gefuehrt.antworten.bewusstsein.formate, typ: mehrfach, optionen: bewusstseinFormate, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.bewusstsein.rhythmus, typ: auswahl, optionen: rhythmus }
+      - pfad: organisation.bewusstsein
+        typ: tabelle
+        spalten:
+          - { pfad: thema, typ: text, pflicht: true }
+          - { pfad: inhalt, typ: textarea }
+          - { pfad: zielgruppe, typ: text }
+          - { pfad: kanal, typ: text }
+          - { pfad: datum, typ: datum }
+          - { pfad: nachweis, typ: text }
+  - id: E10-ki-kompetenz
+    typ: formular
+    norm: "7.2, 7.3"
+    vorlage: E-04
+    leitfaden: 8
+    aiact: [art-4]
+    wenn: { modul: true }
+    beispiel: meta.gefuehrt.antworten.kiKompetenz
+    felder:
+      - { pfad: meta.gefuehrt.antworten.kiKompetenz.zielgruppen, typ: mehrfach, optionen: kiKompetenzZielgruppen, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.kiKompetenz.massnahmen, typ: textarea, pflicht: true }
+  - id: E10-kommunikation
+    typ: liste
+    mindestensEiner: true
+    liste: kommunikation
+    norm: "7.4"
+    vorlage: D-17
+    leitfaden: 8
+    beispiel: kommunikation[0]
+    felder:
+      - { pfad: was, typ: text, pflicht: true }
+      - { pfad: richtung, typ: auswahl, optionen: richtung, pflicht: true }
+      - { pfad: mitWem, typ: text, pflicht: true }
+      - { pfad: wann, typ: text, pflicht: true }
+      - { pfad: wie, typ: text }
+      - { pfad: wer, typ: person }

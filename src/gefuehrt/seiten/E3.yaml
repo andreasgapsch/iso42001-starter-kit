@@ -1,0 +1,162 @@
+# Etappe E3 Führung, Leitlinie, Rollen. Format: src/gefuehrt/FORMAT.md
+seiten:
+  - { id: E3-einfuehrung, typ: info, norm: "5.1 bis 5.3, A.2, A.3", vorlage: D-03, leitfaden: 3 }
+  - id: E3-grundsaetze
+    typ: formular
+    norm: "5.2, A.2.2"
+    vorlage: D-03
+    leitfaden: 3
+    beispiel: organisation.leitlinie.grundsaetze
+    felder:
+      - { pfad: organisation.leitlinie.grundsaetze, typ: liste-text, vorschlaege: leitlinieGrundsaetze, pflicht: true }
+  - id: E3-risikobereitschaft
+    typ: formular
+    norm: "5.2, 6.1.1, A.2.2"
+    vorlage: D-03
+    leitfaden: 3
+    beispiel: organisation.risikobereitschaft
+    felder:
+      - { pfad: organisation.risikobereitschaft.nie, typ: liste-text, vorschlaege: rbNie }
+      - { pfad: organisation.risikobereitschaft.nurGl, typ: liste-text, vorschlaege: rbNurGl }
+      - { pfad: organisation.risikobereitschaft.aimsAllein, typ: liste-text, vorschlaege: rbAimsAllein }
+  - id: E3-merkmale
+    typ: auswahl-systeme
+    norm: "5.2, A.2.2, A.9.3"
+    nist: [merkmale]
+    vorlage: N-03
+    leitfaden: 3
+    wenn: { modulNistRmf: true }
+    filter: { typ: [eingekauft, saas, eigenbau] }
+    beispiel: kiSysteme[0]
+    felder:
+      - { pfad: messkonzept.merkmale, typ: mehrfach, optionen: vertrauensmerkmal }
+      - { pfad: messkonzept.zielkonflikte, typ: textarea }
+  - id: E3-elemente
+    typ: formular
+    norm: "5.2"
+    vorlage: D-03
+    leitfaden: 3
+    beispiel: meta.gefuehrt.antworten.leitlinie.elemente
+    felder:
+      - { pfad: meta.gefuehrt.antworten.leitlinie.elemente, typ: mehrfach, optionen: leitlinieElemente, pflicht: true }
+  - id: E3-andere-leitlinien
+    typ: formular
+    norm: "A.2.3"
+    vorlage: D-03
+    leitfaden: 3
+    beispiel: organisation.leitlinie.abgleich
+    felder:
+      - { pfad: organisation.leitlinie.abgleich.informationssicherheit, typ: auswahl, optionen: leitlinieAbgleich }
+      - { pfad: organisation.leitlinie.abgleich.datenschutz, typ: auswahl, optionen: leitlinieAbgleich }
+      - { pfad: organisation.leitlinie.abgleich.qualitaet, typ: auswahl, optionen: leitlinieAbgleich }
+      - { pfad: organisation.leitlinie.abgleich.personal, typ: auswahl, optionen: leitlinieAbgleich }
+      - { pfad: organisation.leitlinie.abgleichNotiz, typ: textarea }
+  - id: E3-ausnahmen
+    typ: formular
+    norm: "5.2, A.2.4"
+    vorlage: D-03
+    leitfaden: 3
+    beispiel: organisation.leitlinie
+    felder:
+      - { pfad: organisation.leitlinie.ausnahmeprozess, typ: textarea, pflicht: true }
+      - { pfad: organisation.leitlinie.ausnahmeHoechstMonate, typ: zahl }
+      - { pfad: organisation.leitlinie.version, typ: text }
+      - { pfad: organisation.leitlinie.naechsteUeberpruefung, typ: datum, pflicht: true }
+  - id: E3-leitlinie-freigabe
+    typ: formular
+    norm: "5.2"
+    vorlage: D-03
+    leitfaden: 3
+    beispiel: organisation.leitlinie
+    felder:
+      - { pfad: organisation.leitlinie.freigabe, typ: freigabe, pflicht: true }
+      - { pfad: organisation.leitlinie.kommuniziertAm, typ: datum }
+  - id: E3-isms
+    typ: formular
+    norm: "5.3, A.3"
+    vorlage: D-04
+    leitfaden: 3
+    wenn: { mitIsms: true }
+    beispiel: meta.gefuehrt.antworten.ismsFuehrung
+    felder:
+      - { pfad: meta.gefuehrt.antworten.ismsFuehrung.rollenErgaenzen, typ: janein }
+      - { pfad: meta.gefuehrt.antworten.ismsFuehrung.meldewegErgaenzen, typ: janein }
+      - { pfad: meta.gefuehrt.antworten.ismsFuehrung.leitlinieVerweis, typ: janein }
+  - id: E3-pflichtrollen
+    typ: liste
+    mindestensEiner: true
+    liste: rollen
+    norm: "5.3"
+    vorlage: D-04
+    leitfaden: 3
+    beispiel: rollen[0]
+    filter: { bereich: [konformitaet, berichterstattung] }
+    startwerte:
+      - { bereich: konformitaet }
+      - { bereich: berichterstattung }
+    felder:
+      - { pfad: bereich, typ: auswahl, optionen: rollenBereich, pflicht: true }
+      - { pfad: verantwortlich, typ: person, pflicht: true }
+      - { pfad: rechenschaft, typ: person }
+      - { pfad: stellvertretung, typ: person }
+  - id: E3-raci
+    typ: liste
+    liste: rollen
+    norm: "5.3, A.3.2"
+    vorlage: D-04
+    leitfaden: 3
+    beispiel: rollen[2]
+    filter: { bereich: [risikomanagement, folgenabschaetzung, inventar, daten, informationssicherheit, datenschutz, lieferanten, menschliche-aufsicht, recht, schulung, vorfall, entwicklung, internes-audit, dokumentenlenkung] }
+    startwerte:
+      - { bereich: risikomanagement }
+      - { bereich: folgenabschaetzung }
+      - { bereich: inventar }
+      - { bereich: lieferanten }
+      - { bereich: menschliche-aufsicht }
+      - { bereich: vorfall }
+    felder:
+      - { pfad: bereich, typ: auswahl, optionen: rollenBereich, pflicht: true }
+      - { pfad: verantwortlich, typ: person, pflicht: true }
+      - { pfad: rechenschaft, typ: person }
+      - { pfad: stellvertretung, typ: person }
+      - { pfad: konsultiert, typ: personen }
+      - { pfad: informiert, typ: personen }
+  - id: E3-entscheidungsrechte
+    typ: formular
+    norm: "5.3, A.3.2"
+    vorlage: D-04
+    leitfaden: 3
+    beispiel: organisation.entscheidungsrechte
+    felder:
+      - pfad: organisation.entscheidungsrechte
+        typ: tabelle
+        spalten:
+          - { pfad: entscheid, typ: auswahl, optionen: entscheid, pflicht: true }
+          - { pfad: wer.tief, typ: text, vorschlaege: entscheidungstraeger }
+          - { pfad: wer.mittel, typ: text, vorschlaege: entscheidungstraeger }
+          - { pfad: wer.hoch, typ: text, vorschlaege: entscheidungstraeger }
+      - { pfad: organisation.naechsthoehereStelle, typ: text }
+  - id: E3-gremien
+    typ: formular
+    norm: "5.3, A.3.2"
+    vorlage: D-04
+    leitfaden: 3
+    beispiel: organisation.gremien
+    felder:
+      - { pfad: organisation.gremien, typ: tabelle, spalten: [{ pfad: name, typ: text }, { pfad: themen, typ: textarea }, { pfad: rhythmus, typ: text }, { pfad: vorsitz, typ: person }] }
+  - id: E3-meldeweg
+    typ: formular
+    norm: "A.3.3"
+    vorlage: D-04
+    leitfaden: 3
+    beispiel: organisation.meldeweg
+    felder:
+      - { pfad: organisation.meldeweg.kanaele, typ: mehrfach, optionen: meldekanal, pflicht: true }
+      - { pfad: organisation.meldeweg.kanal, typ: text }
+      - { pfad: organisation.meldestelle, typ: text }
+      - { pfad: organisation.meldeweg.ausweichstelle, typ: person }
+      - { pfad: organisation.meldeweg.vertraulich, typ: janein }
+      - { pfad: organisation.meldeweg.fristTage, typ: zahl }
+      - { pfad: organisation.meldeweg.fristErgebnisTage, typ: zahl }
+      - { pfad: organisation.meldeweg.eskalation, typ: textarea }
+      - { pfad: organisation.meldeweg.bekanntmachung, typ: text }

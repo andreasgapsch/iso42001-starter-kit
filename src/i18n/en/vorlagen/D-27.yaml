@@ -1,0 +1,64 @@
+# D-27 Process descriptions (process manual or a single process). Process texts: src/i18n/en/prozesse.yaml
+hinweis: "The manual contains one chapter for each applicable process. Adapt roles, steps and records to your company and name an owner for each process. The flow can be edited in the AIMS Manager or exchanged as a file for draw.io; the diagram follows the flow. Chapters PS-02, PS-04 and PS-06 are sample texts for base processes that the kit recommends without an ISMS: without an ISMS, adapt them and delete the references to ISO/IEC 27001 and the ISMS; with an ISMS, replace them with a reference to the relevant place in the ISMS."
+einleitung: "This manual describes the processes of the AI management system of [[Company name]]: who does what in which order, which records are produced and how the process is measured."
+einleitung_firma: "This manual describes the processes of the AI management system of {firma}: who does what in which order, which records are produced and how the process is measured."
+einleitung_einzeln: "This description sets out one process of the AI management system of {firma}: who does what in which order, which records are produced and how the process is measured."
+lesehilfe: "In the flow, each role has its own column (lane). The lane carries out the step or is accountable for it; if another role is accountable for the step or carries it out, the table names it in the column ‘Role’, together with who contributes and who is informed. Shapes highlighted in yellow are decisions. The following table names the maturity levels and their criteria."
+reife_kopf: [Maturity, Criterion]
+keine_prozesse: "No processes have been set as applicable for the management system yet."
+abschnitte:
+  einleitung: Purpose and structure
+  ausloeser: Triggers
+  eingaben: Inputs
+  ablauf: Flow
+  ausgaben: Outputs and records
+  kennzahl: Indicator
+  schnittstellen: Interfaces
+  massnahmen: Open actions
+  freigabe: Approval
+felder:
+  art: Scope
+  eigner: Owner
+  stellvertretung: Deputy
+  reife: Maturity
+  letzte: Last performed
+  faellig: Next due
+  isms: In the ISMS
+  extern: Performed by
+eigner_leer: "[[Name, role]] (suggested: {rolle})"
+noch_keine: none yet
+ablauf_titel: "Flow {prozess}"
+alt_text: "Flow with {anzahl} steps in the lanes {bahnen}. The table lists each step with role, contribution and branches."
+alt_text_eins: "Flow with 1 step in the lanes {bahnen}. The table lists the step with role, contribution and branches."
+schritte_kopf: [No., Step, Role, Contributes, Informed, Continue with]
+kennzahl_text: "{kennzahl}. Target: {soll}."
+kennzahl_wert: "Measured as {kennzahl}: {wert} on {datum}."
+kennzahl_ohne_wert: "Measured as {kennzahl}; no value yet."
+kennzahl_keine_messung: "Measured as {kennzahl}: {wert}, as at {datum}."
+kennzahl_soll_ja: "Target met."
+kennzahl_soll_teilweise: "Target partly met."
+kennzahl_soll_nein: "Target not met."
+kennzahl_eigen: "No indicator defined yet."
+kennzahl_messplan: "The indicator is listed under the ID of the process in the measurement plan (D-05); the owner measures it at the frequency of the process."
+verbunden: "Related processes: {liste}"
+verweise: "Hand-over to: {liste}"
+dokumente: "Documents: {liste}"
+massnahmen_kopf: [ID, Action, Responsible, Due, Status]
+freigabe_text: "The process descriptions were approved on {datum}."
+rolle_a: "accountable: {liste}"
+rolle_r: "carries out: {liste}"
+extern_text: "{wer}; steering: {steuerung}"
+# Scope in the company document (subject language instead of the catalogue classification)
+geltung:
+  pflicht: Mandatory process of the management system
+  control: applied; based on the statement of applicability (D-11)
+  bedingt: "applied because {grund}"
+  bedingt_systeme: "applied because {grund} ({systeme})"
+  minimal: Basic information security on which the AI controls build
+  empfohlen: set by the company as basic information security
+  empfohlen_grund: "set by the company as basic information security: {grund}"
+  eigen: own process of the company
+# Control details in the file for draw.io (controlled record belonging to D-27)
+drawio:
+  kopf: "D-27-A Process diagrams, appendix to {titel} (D-27). Version {version}, approved on {datum} by {person}"
+  kopf_entwurf: "D-27-A Process diagrams, appendix to {titel} (D-27). Version {version}, not yet approved"

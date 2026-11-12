@@ -1,0 +1,25 @@
+﻿NOTICE: Diagrammansicht / diagram viewer (AIMS-Manager/Diagrammansicht.html)
+
+Diese Datei enthält / This file contains:
+
+  draw.io viewer (viewer-static.min.js) 32.4.1
+  Copyright (c) JGraph Holdings Ltd, draw.io AG
+  Licensed under the Apache License, Version 2.0 (volltext_Apache-2.0_Viewer.txt)
+  https://github.com/jgraph/drawio/tree/v32.4.1
+
+  with / mit
+  DOMPurify 3.4.16, (c) Cure53 and other contributors, Apache-2.0 (chosen from Apache-2.0 OR MPL-2.0)
+  pako 2.2.0, Copyright (C) 2014-2017 by Vitaly Puzrin and Andrei Tuputcyn, MIT AND Zlib
+  Rough.js 4.6.6, Copyright (c) 2019 Preet Shihn, MIT
+  spin.js 2.0.0, Copyright (c) 2011 Felix Gnass, MIT
+  regenerator-runtime, Copyright (c) 2014-present, Facebook, Inc., MIT
+
+Das Projekt jgraph/drawio liefert beim Tag v32.4.1 keine NOTICE-Datei mit;
+diese Datei fasst die Hinweise nur zusammen. Der Viewer ist nicht verändert.
+The jgraph/drawio project ships no NOTICE file at tag v32.4.1; this file only
+summarizes the notices. The viewer has not been modified.
+
+draw.io ist eine eingetragene Marke von draw.io Ltd. Diese Ansicht ist nicht
+von draw.io Ltd oder JGraph erstellt, geprüft oder gebilligt.
+draw.io is a registered trademark of draw.io Ltd. This viewer is not made,
+reviewed or endorsed by draw.io Ltd or JGraph.

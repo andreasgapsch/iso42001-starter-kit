@@ -1,0 +1,146 @@
+﻿LIZENZ
+ISO/IEC 42001 Starter-Kit von Andreas Gapsch, KMU-CIO, kmu-cio.ch
+
+English version: LICENCE.txt
+
+
+ÜBERSICHT
+---------
+Die Inhalte dieses Kits stehen unter der Lizenz Creative Commons
+Namensnennung 4.0 International (CC BY 4.0), der Programmcode unter der
+MIT-Lizenz. Dokumente, die Sie mit dem Kit für Ihre Organisation oder für
+Ihre Kunden erstellen, dürfen Sie dank einer Zusatzerlaubnis ohne
+Namensnennung verwenden und weitergeben. Wenn Sie das Kit selbst weitergeben
+oder veröffentlichen, auch bearbeitet, nennen Sie es so, wie unten im
+Abschnitt «So nennen Sie uns korrekt» beschrieben.
+
+
+1. INHALTE: CC BY 4.0
+---------------------
+Gilt für: Leitfaden, Poster, Vorlagen, Ergänzungsblätter, Beispiele,
+Startseite, Kurzanleitungen und die Texte des KI-Assistenten (Skill).
+
+Lizenzgeber: Andreas Gapsch, KMU-CIO
+Copyright (c) 2026 Andreas Gapsch, KMU-CIO
+
+Volltext der Lizenz in diesem Ordner:
+  CC-BY-4.0_legalcode.txt     Offizieller englischer Lizenztext
+  CC-BY-4.0_legalcode_de.txt  Hinweis auf die offizielle deutsche Übersetzung
+Online: https://creativecommons.org/licenses/by/4.0/legalcode.de
+Kurzfassung: https://creativecommons.org/licenses/by/4.0/deed.de
+
+
+2. PROGRAMMCODE: MIT-LIZENZ
+---------------------------
+Gilt für: den AIMS-Manager (aims-manager.html) ohne die darin enthaltenen
+Bibliotheken Dritter, die Diagrammansicht (Diagrammansicht.html) ohne den
+darin enthaltenen Viewer, die Build- und Prüfskripte und allfällige Skripte
+des KI-Assistenten.
+
+Volltext der Lizenz in diesem Ordner: MIT.txt
+
+
+3. ZUSATZERLAUBNIS FÜR IHRE EIGENEN DOKUMENTE
+---------------------------------------------
+Dokumente, die Sie mit diesem Kit für Ihre Organisation oder für Ihre Kunden
+erstellen (ausgefüllte Vorlagen sowie Ausgaben des AIMS-Managers und des
+KI-Assistenten), dürfen Sie ohne Namensnennung verwenden, ändern, drucken und
+weitergeben. Den Hinweis auf das Kit in den Vorlagen dürfen Sie löschen. Die
+Pflicht zur Namensnennung gilt für das Kit selbst.
+
+Wortlaut: ZUSATZERLAUBNIS_DE.txt (englisch: ADDITIONAL-PERMISSION_EN.txt)
+
+
+4. NAME UND MARKE
+-----------------
+Die Lizenzen und die Zusatzerlaubnis erlauben nicht, «KMU-CIO», die Domain
+kmu-cio.ch oder den Namen Andreas Gapsch als eigene Marke, Firma oder
+Produktbezeichnung zu verwenden. Sie erlauben auch nicht, zu behaupten oder
+den Eindruck zu erwecken, KMU-CIO oder Andreas Gapsch habe Ihre
+Organisation, Ihr Managementsystem, Ihre Dokumente oder eine bearbeitete
+Fassung des Kits geprüft, empfohlen oder unterstützt (siehe auch CC BY 4.0,
+Abschnitte 2(a)(6) und 2(b)(2)). Die Namensnennung nach CC BY 4.0 ist davon
+nicht betroffen: Sie ist Pflicht und keine Empfehlung.
+
+
+5. DRITTLIZENZEN UND FREMDE INHALTE
+-----------------------------------
+- Bibliotheken im AIMS-Manager (unter anderem preact, @preact/signals, docx,
+  exceljs, fflate und deren gebündelte Abhängigkeiten) stehen unter ihren
+  eigenen Lizenzen. Die Lizenztexte stehen in DRITTLIZENZEN_THIRD-PARTY.txt.
+- Die optionale Diagrammansicht (AIMS-Manager/Diagrammansicht.html) enthält
+  den unveränderten Viewer von draw.io, Version 32.4.1, unter der Apache
+  License 2.0, mit den Bibliotheken DOMPurify, pako, Rough.js, spin.js und
+  regenerator-runtime. Lizenztexte, Hinweise (NOTICE) und Quelle stehen im
+  Ordner DIAGRAMMANSICHT_DIAGRAM-VIEWER. draw.io ist eine eingetragene Marke
+  von draw.io Ltd; die Diagrammansicht ist nicht von draw.io Ltd oder JGraph
+  erstellt oder gebilligt.
+- Rechtstexte der EU (Ordner Rechtstexte_Legal-Texts) und gekennzeichnete
+  wörtliche Auszüge aus dem EU AI Act stehen nicht unter CC BY 4.0. Ihre
+  Weiterverwendung richtet sich nach dem Beschluss 2011/833/EU der
+  Kommission; Einzelheiten in Rechtstexte_Legal-Texts/EU-AI-Act/
+  LIESMICH_README.txt.
+- Normen: Das Kit enthält keinen Normtext. Bezeichnungen wie ISO/IEC 42001
+  oder ISO/IEC 27001 dienen nur der Bezugnahme.
+- Genannte Produktnamen (zum Beispiel Microsoft Office, LibreOffice, Claude,
+  ChatGPT, Codex) sind Marken ihrer jeweiligen Inhaber.
+
+
+6. SO NENNEN SIE UNS KORREKT
+----------------------------
+Wortlaut der Namensnennung:
+  ISO/IEC 42001 Starter-Kit von Andreas Gapsch, KMU-CIO, kmu-cio.ch
+
+CC BY 4.0 verlangt bei der Weitergabe des Kits oder von Teilen davon:
+die Namensnennung, einen Hinweis auf die Lizenz mit Link und bei
+bearbeiteten Fassungen einen Hinweis, dass und wie Sie geändert haben. Ein
+Link auf die Lizenz genügt: https://creativecommons.org/licenses/by/4.0/deed.de
+
+Ihre eigenen Dokumente (zum Beispiel Ihre freigegebene KI-Leitlinie oder Ihr
+ausgefülltes Risikoregister) brauchen keine Nennung. Das regelt die
+Zusatzerlaubnis.
+
+Beispiel 1: Weitergabe im Unternehmen
+  Sie legen das Kit oder leere Vorlagen daraus im Intranet ab. Lassen Sie den
+  Ordner LIZENZ_LICENCE beim Kit und schreiben Sie auf die Intranetseite:
+    «ISO/IEC 42001 Starter-Kit von Andreas Gapsch, KMU-CIO, kmu-cio.ch,
+    Lizenz CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/deed.de)»
+
+Beispiel 2: Schulung
+  Sie nutzen Inhalte aus Leitfaden oder Vorlagen in Folien oder Handouts.
+  Auf der Titel- oder Quellenfolie:
+    «Inhalte teilweise aus: ISO/IEC 42001 Starter-Kit von Andreas Gapsch,
+    KMU-CIO, kmu-cio.ch, Lizenz CC BY 4.0
+    (https://creativecommons.org/licenses/by/4.0/deed.de), gekürzt und
+    bearbeitet.»
+
+Beispiel 3: Beratungsmandat
+  Dokumente, die Sie für Ihren Kunden erstellen, brauchen keine Nennung.
+  Übergeben Sie dem Kunden zusätzlich das Kit oder leere Vorlagen, dann mit
+  diesem Vermerk in der Übergabe oder im Bericht:
+    «Arbeitshilfe: ISO/IEC 42001 Starter-Kit von Andreas Gapsch, KMU-CIO,
+    kmu-cio.ch, Lizenz CC BY 4.0
+    (https://creativecommons.org/licenses/by/4.0/deed.de)»
+
+Beispiel 4: Veröffentlichung einer angepassten Fassung
+  Sie veröffentlichen eine eigene Fassung, zum Beispiel für eine Branche. Am
+  Anfang der Fassung und in ihrer Lizenzdatei:
+    «Diese Fassung beruht auf dem ISO/IEC 42001 Starter-Kit von Andreas
+    Gapsch, KMU-CIO, kmu-cio.ch, Lizenz CC BY 4.0
+    (https://creativecommons.org/licenses/by/4.0/deed.de). Geändert von
+    [Name] im [Monat Jahr]: [Änderungen in einem Satz]. Diese Fassung ist
+    nicht von KMU-CIO geprüft oder empfohlen.»
+  Geben Sie der Fassung einen eigenen Namen ohne «KMU-CIO». Für
+  Programmcode behalten Sie den Copyright-Vermerk und den Text der
+  MIT-Lizenz bei.
+
+
+7. AUSNAHME VON DEN STILREGELN
+------------------------------
+Die Volltexte CC-BY-4.0_legalcode.txt und MIT.txt sowie die Texte in
+DRITTLIZENZEN_THIRD-PARTY.txt und die Dateien volltext_* im Ordner
+DIAGRAMMANSICHT_DIAGRAM-VIEWER sind unverändert wiedergegeben. Sie folgen
+nicht den Schreibregeln des Kits.
+
+
+Andreas Gapsch, KMU-CIO, kmu-cio.ch

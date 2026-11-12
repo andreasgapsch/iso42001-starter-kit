@@ -1,0 +1,89 @@
+# Glossar des Kits: Schlüssel und Bezug zu ISO/IEC 42001 (norm) und EU AI Act (aiact).
+# Texte (Begriff, Erklärung, englischer Fachbegriff): src/i18n/<sprache>/glossar.yaml
+# liste: true nimmt den Begriff in die Begriffsliste auf (Tor G43, scripts/pruefen/begriffe.mts): Die Erstnennung auf START, in
+# Kapitel 1 und auf jeder Guide-Seite braucht eine Erklärung oder einen Glossar-Verweis. Je Sprache gehören dazu kurz (höchstens
+# 20 Wörter) und formen (Schreibweisen, durch | getrennt) in src/i18n/<sprache>/glossar.yaml.
+# In Texten verweist [[g:<id>]] auf einen Eintrag. aiact-Schlüssel aus src/ai-act/artikel-seiten.json.
+begriffe:
+  - { id: aims, liste: true, norm: "4.4" }
+  - { id: aims-manager, liste: true }
+  - { id: anhang-a, liste: true, norm: "Anhang A" }
+  - { id: ki-system, norm: "4.1", aiact: [art-3] }
+  - { id: ki-inventar, norm: "A.4.2" }
+  - { id: kontext, norm: "4.1" }
+  - { id: interessierte-partei, norm: "4.2" }
+  - { id: geltungsbereich, norm: "4.3" }
+  - { id: isms, liste: true, norm: "Anhang D" }
+  - { id: ergaenzungsblatt }
+  - { id: oberste-leitung, norm: "5.1" }
+  - { id: ki-leitlinie, norm: "5.2, A.2" }
+  - { id: raci, norm: "5.3, A.3.2" }
+  - { id: eigner, norm: "A.3.2" }
+  - { id: meldeweg, norm: "A.3.3" }
+  - { id: risikokriterien, norm: "6.1.1" }
+  - { id: risikobeurteilung, norm: "6.1.2" }
+  - { id: risikoquelle, norm: "Anhang C" }
+  - { id: chance, norm: "6.1.1" }
+  - { id: risikobehandlung, norm: "6.1.3" }
+  - { id: restrisiko, norm: "6.1.3" }
+  - { id: control, liste: true, norm: "6.1.3, Anhang A" }
+  - { id: soa, liste: true, norm: "6.1.3" }
+  - { id: folgenabschaetzung, norm: "6.1.4, A.5" }
+  - { id: triage, norm: "A.5.2" }
+  - { id: sensible-nutzung, norm: "6.1.4" }
+  - { id: eingeschraenkte-nutzung, norm: "6.1.4" }
+  - { id: dsfa, norm: "A.5.2", aiact: [art-26] }
+  - { id: datenschutzverantwortliche, norm: "A.3.2" }
+  - { id: fria, aiact: [art-27] }
+  - { id: ki-ziel, norm: "6.2" }
+  - { id: kennzahl, norm: "9.1" }
+  - { id: ki-kompetenz, norm: "7.2", aiact: [art-4] }
+  - { id: dokumentierte-information, norm: "7.5" }
+  - { id: lebenszyklus, norm: "8.1, A.6" }
+  - { id: beabsichtigte-verwendung, norm: "A.9.4" }
+  - { id: zweckbestimmung, aiact: [art-3] }
+  - { id: fehlanwendung, norm: "6.1.4", aiact: [art-3] }
+  - { id: menschliche-aufsicht, norm: "A.9.3", aiact: [art-14, art-26] }
+  - { id: datenqualitaet, norm: "A.7.4", aiact: [art-10] }
+  - { id: datenherkunft, norm: "A.7.5" }
+  - { id: datendrift, norm: "A.6.2.6" }
+  - { id: ereignisprotokoll, norm: "A.6.2.8", aiact: [art-12] }
+  - { id: schatten-ki, liste: true, norm: "A.9.2" }
+  - { id: internes-audit, norm: "9.2" }
+  - { id: managementbewertung, norm: "9.3" }
+  - { id: nichtkonformitaet, norm: "10.2" }
+  - { id: korrekturmassnahme, norm: "10.2" }
+  - { id: fortlaufende-verbesserung, norm: "10.1" }
+  - { id: zertifizierungsstelle, liste: true }
+  - { id: stage-1, liste: true }
+  - { id: stage-2, liste: true }
+  - { id: ueberwachungsaudit }
+  - { id: anbieter, liste: true, norm: "4.1", aiact: [art-3, art-16] }
+  - { id: betreiber, liste: true, norm: "4.1", aiact: [art-3, art-26] }
+  - { id: einfuehrer, aiact: [art-3, art-23] }
+  - { id: haendler, aiact: [art-3, art-24] }
+  - { id: bevollmaechtigter, aiact: [art-3, art-22] }
+  - { id: produkthersteller, aiact: [art-25] }
+  - { id: rollenwechsel, aiact: [art-25] }
+  - { id: verbotene-praxis, aiact: [art-5] }
+  - { id: hochrisiko, aiact: [art-6, anhang-iii] }
+  - { id: sicherheitsbauteil, aiact: [art-6, anhang-i] }
+  - { id: wesentliche-aenderung, aiact: [art-3, art-25] }
+  - { id: gpai, aiact: [art-3, art-53] }
+  - { id: transparenzpflicht, norm: "A.8.2", aiact: [art-50] }
+  - { id: deepfake, aiact: [art-50] }
+  - { id: gebrauchsanweisung, aiact: [art-13, art-26] }
+  - { id: schwerwiegender-vorfall, norm: "A.8.4", aiact: [art-73] }
+  - { id: konformitaetsbewertung, aiact: [art-43] }
+  - { id: kmu, aiact: [art-63, art-99] }
+  - { id: small-midcap, aiact: [art-99] }
+  # Modul NIST AI RMF, handelnde und generative KI, Normung zum AI Act
+  - { id: vertrauensmerkmal }
+  - { id: ist-ziel-profil }
+  - { id: tevv, norm: "A.6.2.4" }
+  - { id: konfabulation }
+  - { id: handelnde-ki, norm: "A.6.2.6" }
+  - { id: prompt-injection }
+  - { id: red-teaming, norm: "A.6.2.4" }
+  - { id: harmonisierte-norm, aiact: [art-40] }
+  - { id: gemeinsame-spezifikation, aiact: [art-41] }

@@ -1,0 +1,349 @@
+# Glossary: begriff (term), erklaerung (explanation in our own words), en (English technical term). Keys: src/kataloge/glossar.yaml
+aims:
+  begriff: AI management system (AIMS)
+  erklaerung: The set of rules, roles and processes a company uses to plan, control and demonstrate its use of AI. ISO/IEC 42001 describes what such a system must contain.
+  en: AI management system
+  kurz: "A management system for dealing with AI: rules, roles and processes that an organization defines and follows."
+  formen: "AIMS"
+ki-system:
+  begriff: AI system
+  erklaerung: A technical system that derives outputs such as predictions, recommendations, texts or decisions from its inputs on its own. ISO/IEC 22989 and the AI Act (Art. 3) describe it in a similar way; the AI Act also stresses adaptiveness and the level of autonomy.
+  en: AI system
+ki-inventar:
+  begriff: AI inventory
+  erklaerung: The complete list of all AI systems in the company, including AI built into purchased software and shadow AI, with purpose, system owners and resources.
+  en: AI inventory
+kontext:
+  begriff: Context of the organization
+  erklaerung: Everything inside and outside the company that affects how you deal with AI, such as laws, customer expectations, the market, company culture and your role in the supply chain.
+  en: context of the organization
+interessierte-partei:
+  begriff: Interested party
+  erklaerung: A person or group that is affected by your use of AI, influences it or has expectations of it, for example customers, employees or authorities.
+  en: interested party
+geltungsbereich:
+  begriff: Scope
+  erklaerung: The defined boundaries of the management system, that is, which areas, sites, processes and AI systems are included and which are not.
+  en: scope
+isms:
+  begriff: ISMS
+  erklaerung: Information security management system under ISO/IEC 27001. If you have one, you can reuse its methods, roles and processes for the AI management system.
+  en: information security management system
+  kurz: "The management system for information security under ISO/IEC 27001; if you have one, you reuse parts for the AIMS."
+  formen: "ISMS"
+ergaenzungsblatt:
+  begriff: Supplementary sheet
+  erklaerung: A short additional document in the kit that extends an existing ISMS document with the AI topics instead of creating a new document.
+  en: supplementary sheet
+oberste-leitung:
+  begriff: Top management
+  erklaerung: The person or group who directs the company at the highest level, in an SME usually the executive board. It owns the management system and approves the key documents.
+  en: top management
+ki-leitlinie:
+  begriff: AI policy
+  erklaerung: A short document approved by top management that sets out the principles by which the company develops, buys and uses AI.
+  en: AI policy
+raci:
+  begriff: RACI matrix
+  erklaerung: A table that records for each task who does it (R), who answers for it (A), who is consulted (C) and who is informed (I).
+  en: RACI matrix
+eigner:
+  begriff: Owner
+  erklaerung: The person who is responsible for an AI system, a risk or a document and makes the decisions about it. For an AI system the role is called ‘system owner’.
+  en: owner
+meldeweg:
+  begriff: Reporting of concerns
+  erklaerung: A known, confidential channel through which employees can report problems with AI systems without fear of reprisal.
+  en: reporting of concerns
+risikokriterien:
+  begriff: Risk criteria
+  erklaerung: The defined scales for likelihood and impact, and the threshold above which a risk must be treated.
+  en: risk criteria
+risikobeurteilung:
+  begriff: AI risk assessment
+  erklaerung: Identifying, estimating and prioritizing the risks of an AI system with a fixed method so that the results stay comparable.
+  en: AI risk assessment
+risikoquelle:
+  begriff: Risk source
+  erklaerung: The origin from which a risk can arise, such as data quality, a supplier, missing competence or a high level of automation.
+  en: risk source
+chance:
+  begriff: Opportunity
+  erklaerung: A possible positive effect you want to use on purpose, such as better quality or relief from routine work. The standard requires you to plan for opportunities just as for risks.
+  en: opportunity
+risikobehandlung:
+  begriff: Risk treatment
+  erklaerung: The decision on how to deal with a risk (avoid, reduce, share or knowingly accept it) and the measures that go with it.
+  en: risk treatment
+restrisiko:
+  begriff: Residual risk
+  erklaerung: The risk that remains after all measures. A responsible person explicitly accepts it and records the date.
+  en: residual risk
+control:
+  begriff: Control
+  erklaerung: A measure from the catalogue in Annex A of the standard (or one of your own) that you use to keep a risk under control. The standard lists 38 controls in 9 groups.
+  en: control
+  kurz: "A single measure or rule from the catalogue in Annex A of the standard, for example on human oversight."
+  formen: "control"
+soa:
+  begriff: Statement of applicability (SoA)
+  erklaerung: The list of all controls with your decision on whether they apply, the reason for it and the implementation status.
+  en: statement of applicability
+  kurz: "The list of all controls with your reasoned decision on whether they apply to you, and their implementation status."
+  formen: "statement of applicability|SoA"
+folgenabschaetzung:
+  begriff: AI system impact assessment
+  erklaerung: The review of how an AI system can affect people, groups and society, including when it is misused. ISO/IEC 42005 gives guidance on this.
+  en: AI system impact assessment
+triage:
+  begriff: Screening (triage)
+  erklaerung: A few yes or no questions per AI system that tell you whether a short assessment is enough or a full impact assessment is needed.
+  en: screening (triage)
+sensible-nutzung:
+  begriff: Sensitive use
+  erklaerung: A use that can noticeably affect people's rights, opportunities, health or safety. It requires a full impact assessment.
+  en: sensitive use
+eingeschraenkte-nutzung:
+  begriff: Restricted use
+  erklaerung: A use you only allow under conditions or rule out completely because the possible consequences are too serious.
+  en: restricted use
+dsfa:
+  begriff: Data protection impact assessment (DPIA)
+  erklaerung: The review under data protection law (Swiss FADP, GDPR) of whether processing personal data poses a high risk to the people concerned. It can be linked with the AI system impact assessment.
+  en: data protection impact assessment
+datenschutzverantwortliche:
+  begriff: Data protection officer
+  erklaerung: The person in the company who is responsible for data protection and leads the data protection area in the responsibility matrix (D-04). The Swiss FADP calls such a person a data protection adviser, the GDPR a data protection officer. The kit documents always use ‘data protection officer’.
+  en: data protection officer
+fria:
+  begriff: Fundamental rights impact assessment (FRIA)
+  erklaerung: An assessment under AI Act Art. 27 that only certain deployers of high-risk AI must carry out, such as public bodies or deployers of systems for creditworthiness or for life and health insurance.
+  en: fundamental rights impact assessment
+ki-ziel:
+  begriff: AI objective
+  erklaerung: A measurable objective derived from the AI policy, with a metric, an owner and a deadline.
+  en: AI objective
+kennzahl:
+  begriff: Metric
+  erklaerung: A value you measure regularly to see whether an objective is being met or a process is working.
+  en: metric
+ki-kompetenz:
+  begriff: AI literacy
+  erklaerung: The knowledge and skills employees need to use AI in an informed way and to recognize its limits. The AI Act (Art. 4) requires measures to achieve this.
+  en: AI literacy
+dokumentierte-information:
+  begriff: Documented information
+  erklaerung: The documents and records the management system requires, controlled by version, approval, storage and retention.
+  en: documented information
+lebenszyklus:
+  begriff: Life cycle
+  erklaerung: All phases of an AI system, from the idea through development or purchase, testing, introduction and operation to retirement.
+  en: life cycle
+beabsichtigte-verwendung:
+  begriff: Intended use
+  erklaerung: What your company has planned and tested an AI system for. Any use beyond that needs a new assessment.
+  en: intended use
+zweckbestimmung:
+  begriff: Intended purpose
+  erklaerung: In the AI Act, the purpose the provider specifies for an AI system, for example in the instructions for use and in advertising.
+  en: intended purpose
+fehlanwendung:
+  begriff: Reasonably foreseeable misuse
+  erklaerung: A use that is not intended but that you must realistically expect, for instance because it is convenient or obvious.
+  en: reasonably foreseeable misuse
+menschliche-aufsicht:
+  begriff: Human oversight
+  erklaerung: Competent people monitor an AI system, understand its outputs and can intervene or stop it.
+  en: human oversight
+datenqualitaet:
+  begriff: Data quality
+  erklaerung: How complete, accurate, current and suitable data is for its purpose. Poor data leads to poor results.
+  en: data quality
+datenherkunft:
+  begriff: Data provenance
+  erklaerung: Being able to trace where data comes from, who changed it and where it was passed on.
+  en: data provenance
+datendrift:
+  begriff: Data drift
+  erklaerung: The data in operation changes compared with the data used to train or test a system. As a result, outputs can get worse without anyone noticing.
+  en: data drift
+ereignisprotokoll:
+  begriff: Event log
+  erklaerung: Automatic records of what an AI system processed and output, and when. They help with troubleshooting, evidence and reporting.
+  en: event log
+schatten-ki:
+  begriff: Shadow AI
+  erklaerung: AI tools that employees use without the company's knowledge or approval, often with private accounts.
+  en: shadow AI
+  kurz: "AI tools that employees use without the organization's knowledge or approval, often with private accounts."
+  formen: "shadow AI"
+internes-audit:
+  begriff: Internal audit
+  erklaerung: A planned, independent review by your own staff or by people you engage to check whether the management system meets the requirements and works.
+  en: internal audit
+managementbewertung:
+  begriff: Management review
+  erklaerung: The regular meeting in which top management assesses the management system against defined inputs and decides on improvements.
+  en: management review
+nichtkonformitaet:
+  begriff: Nonconformity
+  erklaerung: A failure to meet a requirement of the standard, the law or your own rules.
+  en: nonconformity
+korrekturmassnahme:
+  begriff: Corrective action
+  erklaerung: An action that removes the cause of a nonconformity so that it does not happen again. It goes further than the immediate fix.
+  en: corrective action
+fortlaufende-verbesserung:
+  begriff: Continual improvement
+  erklaerung: The management system keeps getting better, based on audits, metrics, reports and decisions by top management.
+  en: continual improvement
+zertifizierungsstelle:
+  begriff: Certification body
+  erklaerung: An independent body that audits your management system and issues the certificate. For ISO/IEC 42001 it should be accredited to ISO/IEC 17021-1 with the additional requirements of ISO/IEC 42006, in Switzerland by SAS (Swiss Accreditation Service).
+  en: certification body
+  kurz: "An independent, recognized firm that audits your management system and issues the certificate."
+  formen: "certification body"
+stage-1:
+  begriff: Stage 1 audit
+  erklaerung: The first part of the certification audit. The body reviews documentation, scope and readiness for the main audit.
+  en: stage 1 audit
+  kurz: "The first stage of certification: the body reviews your documents, your scope and your readiness."
+  formen: "stage 1 audit|stage 1"
+stage-2:
+  begriff: Stage 2 audit
+  erklaerung: The main audit, on site or online. The body checks whether the management system is applied in daily work and is effective.
+  en: stage 2 audit
+  kurz: "The second stage of certification: the body checks that in daily work you really do what you have defined."
+  formen: "stage 2 audit|stage 2"
+ueberwachungsaudit:
+  begriff: Surveillance audit
+  erklaerung: The shorter annual audit by the certification body between initial certification and recertification.
+  en: surveillance audit
+anbieter:
+  begriff: Provider
+  erklaerung: Anyone who develops an AI system or has it developed and places it on the market or puts it into service under their own name. Providers carry most of the obligations under the AI Act.
+  en: provider
+  kurz: "Whoever develops or has built an AI system and markets it or puts it into service under their name."
+  formen: "provider"
+betreiber:
+  begriff: Deployer
+  erklaerung: Anyone who uses an AI system under their own authority in a professional context, for example a company that uses a purchased tool.
+  en: deployer
+  kurz: "Anyone who uses an AI system themselves in a professional context, for example a company with bought-in AI software."
+  formen: "deployer"
+einfuehrer:
+  begriff: Importer
+  erklaerung: Anyone established in the EU who is the first to make available in the EU an AI system from a provider in a third country.
+  en: importer
+haendler:
+  begriff: Distributor
+  erklaerung: Anyone in the supply chain who resells an AI system without being the provider or importer.
+  en: distributor
+bevollmaechtigter:
+  begriff: Authorised representative
+  erklaerung: A person or company in the EU that a provider from a third country (including Switzerland) appoints in writing to carry out certain AI Act obligations on its behalf.
+  en: authorised representative
+produkthersteller:
+  begriff: Product manufacturer
+  erklaerung: Anyone who places a product with built-in AI, such as a machine, on the market under their own name.
+  en: product manufacturer
+rollenwechsel:
+  begriff: Change of role
+  erklaerung: Under AI Act Art. 25, a deployer becomes a provider if it offers a high-risk system under its own name, makes a substantial modification to it or uses it for a new purpose.
+  en: change of role
+verbotene-praxis:
+  begriff: Prohibited practice
+  erklaerung: AI uses the AI Act bans outright in Art. 5, such as manipulative techniques or emotion recognition in the workplace.
+  en: prohibited practice
+hochrisiko:
+  begriff: High-risk AI system
+  erklaerung: An AI system the AI Act regulates strictly because of its area of use (Annex III, such as recruitment) or because it is a safety component of a product (Annex I).
+  en: high-risk AI system
+sicherheitsbauteil:
+  begriff: Safety component
+  erklaerung: A part of a product that performs a safety function or whose failure endangers people. Under Art. 6, AI used only to optimize performance or for quality control does not count as one.
+  en: safety component
+wesentliche-aenderung:
+  begriff: Substantial modification
+  erklaerung: A change to an AI system after it has been placed on the market that was not planned and that affects compliance with the requirements or the intended purpose.
+  en: substantial modification
+gpai:
+  begriff: General-purpose AI model
+  erklaerung: A large model suited to many tasks, such as the language model behind a chatbot. The obligations fall mainly on its provider and rarely on an SME.
+  en: general-purpose AI model
+transparenzpflicht:
+  begriff: Transparency obligation
+  erklaerung: The obligation under AI Act Art. 50 to tell people that they are interacting with AI or that content has been artificially generated.
+  en: transparency obligation
+deepfake:
+  begriff: Deep fake
+  erklaerung: An image, video or audio clip generated or altered with AI that looks real and gives a false picture of people, places or events.
+  en: deep fake
+gebrauchsanweisung:
+  begriff: Instructions for use
+  erklaerung: The documentation a provider gives a deployer so that the deployer can use and oversee an AI system correctly.
+  en: instructions for use
+schwerwiegender-vorfall:
+  begriff: Serious incident
+  erklaerung: A malfunction or failure of an AI system with serious consequences, for example for health, fundamental rights or critical infrastructure. Providers of high-risk AI must report it.
+  en: serious incident
+konformitaetsbewertung:
+  begriff: Conformity assessment
+  erklaerung: The procedure by which a provider shows, before placing a high-risk system on the market, that it meets the requirements of the AI Act. An ISO/IEC 42001 certificate does not replace it.
+  en: conformity assessment
+kmu:
+  begriff: SME
+  erklaerung: Small and medium-sized enterprises. The AI Act grants them relief, such as simplified documentation and lower fines.
+  en: SME
+small-midcap:
+  begriff: Small mid-cap enterprise
+  erklaerung: A company just above the SME threshold. The amended AI Act also grants it some relief.
+  en: small mid-cap enterprise
+vertrauensmerkmal:
+  begriff: Trustworthiness characteristic
+  erklaerung: A property by which trustworthy AI can be recognized. The NIST AI RMF names seven, such as valid and reliable, safe, secure, explainable, privacy-enhanced and fair. In the NIST AI RMF module you decide for each AI system which matter most and test them in the measurement plan (N-03).
+  en: trustworthiness characteristic
+ist-ziel-profil:
+  begriff: Current and target profile
+  erklaerung: A table covering all 72 subcategories of the NIST AI RMF that shows how far each is implemented today (current) and which level you aim for (target). The difference produces gaps and actions (template N-01).
+  en: current and target profile
+tevv:
+  begriff: TEVV (test, evaluation, verification and validation)
+  erklaerung: The NIST AI RMF's collective term for all checks of an AI system, before deployment and in operation. Verification asks whether the system is built correctly, validation whether it is fit for its purpose.
+  en: test, evaluation, verification and validation (TEVV)
+konfabulation:
+  begriff: Confabulation
+  erklaerung: A generative model invents details such as figures, sources or quotations and presents them convincingly. That is why a competent person checks results before they go outside or support decisions.
+  en: confabulation
+handelnde-ki:
+  begriff: Agentic AI (agent)
+  erklaerung: AI that does not just answer but carries out steps itself with tools and access, for example sends emails, books appointments or changes data. In the inventory you record its authority to act, access, memory and how it can be stopped.
+  en: agentic AI (agent)
+prompt-injection:
+  begriff: Prompt injection
+  erklaerung: An attack in which instructions are hidden in inputs, emails, web pages or documents and a language model follows them as commands. Narrow rights and confirmation before actions limit the damage.
+  en: prompt injection
+red-teaming:
+  begriff: Red teaming
+  erklaerung: Targeted attempts to attack an AI system by people who think like attackers, in order to find weaknesses before deployment. For SMEs a catalogue of misuse cases, run before deployment and after a change of model, is usually enough.
+  en: red teaming
+harmonisierte-norm:
+  begriff: Harmonised standard
+  erklaerung: A European standard whose reference is published in the Official Journal of the EU. Complying with it gives a presumption of meeting the requirements of the AI Act it covers; Annex ZA of the standard shows how far. ISO/IEC 42001 is not a harmonised standard.
+  en: harmonised standard
+gemeinsame-spezifikation:
+  begriff: Common specification
+  erklaerung: Technical requirements that the Commission can adopt itself where suitable harmonised standards are missing. They too give a presumption of conformity. By October 2026 the Commission had adopted none.
+  en: common specification
+aims-manager:
+  begriff: AIMS Manager
+  erklaerung: "The tool in this kit that runs in the browser. It guides you step by step from the start interview to readiness for the stage 1 audit and generates your documents."
+  en: AIMS Manager
+  kurz: "The tool in this kit: it runs in your browser and guides you step by step through building your AIMS."
+  formen: "AIMS Manager"
+anhang-a:
+  begriff: Annex A of ISO/IEC 42001
+  erklaerung: "The catalogue of controls in the standard. It is a menu: you decide, with reasons, which controls apply to your AI systems."
+  en: Annex A
+  kurz: "The list of measures at the end of ISO/IEC 42001 from which you choose, with reasons, what applies to you."
+  formen: "Annex A"

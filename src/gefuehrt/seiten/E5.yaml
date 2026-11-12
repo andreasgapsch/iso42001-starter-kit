@@ -1,0 +1,93 @@
+# Etappe E5 Rolle zuerst und Einstufung. Format: src/gefuehrt/FORMAT.md
+seiten:
+  - { id: E5-einfuehrung, typ: info, norm: "4.1", vorlage: D-24, leitfaden: 5, aiact: [art-3, art-25] }
+  - id: E5-rolle
+    typ: auswahl-systeme
+    norm: "4.1"
+    vorlage: D-24
+    leitfaden: 5
+    aiact: [art-3]
+    beispiel: kiSysteme[5]
+    felder:
+      - { pfad: aiAct.rollen, typ: mehrfach, optionen: aiActRolle, pflicht: true }
+      - { pfad: aiAct.anwendungsbereich, typ: mehrfach, optionen: anwendungsbereich, wenn: { modul: true } }
+      - { pfad: aiAct.geprueft, typ: freigabe, wenn: { modul: true } }
+  - id: E5-rollenwechsel
+    typ: auswahl-systeme
+    norm: "4.1"
+    vorlage: E-01
+    leitfaden: 5
+    aiact: [art-25]
+    wenn: { modul: true, rolle: betreiber }
+    filter: { aiAct.rollen: [betreiber] }
+    beispiel: kiSysteme[0]
+    felder:
+      - { pfad: aiAct.rollenwechsel, typ: auswahl, optionen: rollenwechsel }
+      - { pfad: aiAct.rollen, typ: mehrfach, optionen: aiActRolle, pflicht: true }
+      - { pfad: aiAct.begruendung, typ: textarea, pflicht: true }
+  - { id: E5-verbote, typ: info, norm: "4.1, A.5.2", vorlage: E-02, leitfaden: 5, aiact: [art-5], wenn: { modul: true } }
+  - id: E5-risikoklasse
+    typ: auswahl-systeme
+    norm: "A.5.2"
+    vorlage: E-02
+    leitfaden: 5
+    aiact: [art-6, anhang-i, anhang-iii]
+    wenn: { modul: true }
+    beispiel: kiSysteme[7]
+    felder:
+      - { pfad: aiAct.risikoklasse, typ: auswahl, optionen: risikoklasse, pflicht: true }
+      - { pfad: aiAct.anhangIiiBereich, typ: auswahl, optionen: anhangIii, wenn: { eintrag: { aiAct.risikoklasse: [hochrisiko-anhang-iii] } } }
+      - { pfad: aiAct.ausnahmeArt63, typ: janein, wenn: { eintrag: { aiAct.risikoklasse: [hochrisiko-anhang-iii] } } }
+      - { pfad: aiAct.art5.ergebnis, typ: auswahl, optionen: art5 }
+      - { pfad: aiAct.art5.begruendung, typ: textarea }
+      - { pfad: aiAct.produkt.anhangI, typ: auswahl, optionen: anhangI }
+      - { pfad: aiAct.produkt.sicherheitsbauteil, typ: auswahl, optionen: jaNeinOffen, wenn: { eintrag: { aiAct.produkt.anhangI: [abschnitt-a, abschnitt-b, offen] } } }
+      - { pfad: aiAct.produkt.nurNichtSicherheitsrelevant, typ: auswahl, optionen: jaNeinOffen, wenn: { eintrag: { aiAct.produkt.anhangI: [abschnitt-a, abschnitt-b, offen] } } }
+      - { pfad: aiAct.produkt.ausfallGefaehrdet, typ: auswahl, optionen: jaNeinOffen, wenn: { eintrag: { aiAct.produkt.anhangI: [abschnitt-a, abschnitt-b, offen] } } }
+      - { pfad: aiAct.produkt.drittpruefung, typ: auswahl, optionen: jaNeinOffen, wenn: { eintrag: { aiAct.produkt.anhangI: [abschnitt-a, abschnitt-b, offen] } } }
+      - { pfad: aiAct.produkt.begruendung, typ: textarea, wenn: { eintrag: { aiAct.produkt.anhangI: [abschnitt-a, abschnitt-b, offen] } } }
+      - { pfad: aiAct.profiling, typ: auswahl, optionen: jaNeinOffen, wenn: { eintrag: { aiAct.risikoklasse: [hochrisiko-anhang-iii] } } }
+      - { pfad: aiAct.registrierung, typ: auswahl, optionen: registrierung, wenn: { eintrag: { aiAct.ausnahmeArt63: [true] } } }
+      - { pfad: aiAct.eingestuft, typ: freigabe }
+  - id: E5-transparenz
+    typ: auswahl-systeme
+    norm: "A.8.2"
+    vorlage: E-07
+    leitfaden: 5
+    aiact: [art-50]
+    wenn: { modul: true }
+    beispiel: kiSysteme[5]
+    felder:
+      - { pfad: aiAct.transparenz, typ: mehrfach, optionen: transparenz }
+      - { pfad: aiAct.kennzeichnung, typ: textarea, wenn: { eintrag: { aiAct.transparenz: ["50-2"] } } }
+  - id: E5-gpai
+    typ: auswahl-systeme
+    norm: "A.4.4"
+    vorlage: E-02
+    leitfaden: 5
+    aiact: [art-3, art-53]
+    wenn: { modul: true }
+    beispiel: kiSysteme[3]
+    felder:
+      - { pfad: aiAct.gpai, typ: janein }
+  - id: E5-begruendung
+    typ: auswahl-systeme
+    norm: "4.1"
+    vorlage: E-02
+    leitfaden: 5
+    aiact: [art-6]
+    wenn: { modul: true }
+    beispiel: kiSysteme[1]
+    felder:
+      - { pfad: aiAct.begruendung, typ: textarea, pflicht: true }
+      - { pfad: aiAct.juristischGeprueft, typ: janein }
+  - id: E5-vermerk
+    typ: formular
+    norm: "4.1"
+    vorlage: D-24
+    leitfaden: 5
+    wenn: { modul: false }
+    beispiel: meta.gefuehrt.antworten.aiActVermerk
+    felder:
+      - { pfad: meta.gefuehrt.antworten.aiActVermerk.text, typ: textarea, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.aiActVermerk.naechstePruefung, typ: datum }

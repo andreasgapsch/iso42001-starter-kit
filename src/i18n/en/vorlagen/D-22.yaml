@@ -1,0 +1,102 @@
+# D-22 Nonconformities and improvements
+blaetter:
+  nk: Nonconformities
+  verbesserungen: Improvements
+  zusatz: Additional AI fields
+  meldungen: Reports
+titel_nk: "Nonconformities and corrective actions"
+titel_verbesserungen: "Improvements"
+titel_zusatz: "Additional fields for the existing ISMS register"
+titel_meldungen: "Reports, feedback and objections"
+hinweise_meldungen:
+  - "Record every report from employees (reporting channel, D-04) and all feedback or objections from customers and affected persons (contact channel, D-14) with receipt, acknowledgement and closure. This makes it possible to measure the number of reports and the response time (D-05)."
+  - "If a report reveals a deviation, an incident or a near miss, also record it in the sheet ‘Nonconformities’ and name the finding in the result."
+spalten_meldungen: [ID, Received, Type, Origin, Channel, AI system, Description, Handled by, Acknowledged on, Days to acknowledgement, Closed on, Result and response, Status]
+hinweise_nk:
+  - "A nonconformity is a requirement that has not been met: from the standard, from our own rules, from law or from a contract. Sources are audits, the management review, incidents, checks and reports."
+  - "Proceed in this order: correct immediately and limit the consequences, look for the cause (for example by asking ‘Why?’ five times), check whether similar cases exist or could occur, define and implement the corrective action, and check its effectiveness after a set period."
+  - "Close an entry only once its effectiveness is proven. Where AI is involved, check whether the risk assessment (D-07), the impact assessment (D-09) or the use rules (D-15) need to be updated."
+  - "Do not keep separate ‘preventive actions’. Record possible future deviations as risks in the register D-07, where they are assessed and treated."
+  - "Incidents and near misses (events without harm that only ended well through luck or timely intervention) also belong here, so that errors, incidents and near misses are counted in one place. The ‘Severity’ column uses the four levels from D-14."
+  - "For incidents and near misses, record date and time in ‘Discovered’ and ‘Contained’. The PR-19 metric calculates the hours until containment from these (D-05)."
+  - "‘Area’ column: without an ISMS, ‘AIMS’. If an ISMS is added later, keep using the same register for both."
+hinweise_verbesserungen:
+  - "Record suggestions here that make the AIMS better without any requirement having been breached: from audits (observations), reports, metrics, supplier reviews or from staff."
+  - "Also keep planned changes to the AIMS (ISO/IEC 42001, 6.3) here, with purpose, consequences and owners (rules in D-26). The management review (D-21) sets the priorities in the list."
+hinweise_zusatz:
+  - "With an ISMS, you keep one joint register. Add the following fields to your existing register so that AI topics can be analysed."
+  - "If your ISMS does not yet have an improvement register, use the ‘Improvements’ sheet for both systems."
+ausbau: "Analyse the register once a year for the management review: number by grading, severity and area, near misses, time to closure, recurring causes."
+spalten_nk:
+  - F-ID
+  - Date
+  - Source
+  - Grading
+  - Area
+  - Description
+  - Clause reference
+  - AI system
+  - Severity (incident)
+  - Immediate correction
+  - Cause
+  - Root cause method
+  - AI cause category
+  - Similar cases
+  - Corrective action
+  - Action ID
+  - Owner
+  - Due date
+  - Effectiveness review planned for
+  - Effectiveness checked on
+  - Effectiveness result
+  - "Risk or impact assessment updated"
+  - Reporting obligation checked
+  - Status
+# Data source of the PR-19 metric (AF-104), placed after ‘Severity (incident)’ on the sheet
+spalten_vorfall: ["Discovered (date, time)", "Contained (date, time)"]
+spalten_verbesserungen:
+  - No.
+  - Date
+  - Description
+  - Source
+  - Area
+  - Priority
+  - Owner
+  - Start
+  - Completion
+  - Status
+  - Result
+spalten_zusatz: [Field, Purpose, Values or example, Clause reference]
+zusatz_zeilen:
+  - [Area, "Shows whether the ISMS, the AIMS or both are affected; allows analysis by system.", "ISMS, AIMS, both", "10.2"]
+  - [AI system, "Links the deviation to the AI inventory.", "ID from D-10, for example KI-003", "10.2, A.4.2"]
+  - [Clause reference 42001, "Clause or control of ISO/IEC 42001 that was not met.", "for example 6.1.4 or A.6.2.6", "10.2"]
+  - [AI cause category, "Helps to identify causes typical of AI.", "Data, model, use outside the purpose, competence, supplier, process", "10.2"]
+  - [Similar cases, "Records whether the cause also affects other AI systems or processes.", "yes (which) or no", "10.2"]
+  - [Risk or impact assessment updated, "Makes sure that findings feed into D-07 and D-09.", "yes, no, not needed", "10.2, 8.2, 8.4"]
+  - [Severity (incident), "Makes incidents and near misses comparable and drives escalation.", "1 minor, 2 moderate, 3 significant, 4 severe (levels from D-14)", "10.2, A.8.4"]
+  - [Reporting obligation checked, "Checks whether the deviation must be reported to third parties or authorities.", "yes, no, not needed", "A.8.4, A.8.5"]
+  - ["Discovered (date, time)", "Time at which an incident or near miss was noticed; start of the PR-19 measurement.", "DD/MM/YYYY hh:mm", "10.2, A.8.4"]
+  - ["Contained (date, time)", "Time from which the incident can cause no further harm; end of the PR-19 measurement.", "DD/MM/YYYY hh:mm", "10.2, A.8.4"]
+listen:
+  quelle: [internal audit, external audit, management review, incident, near miss, check or monitoring, report, customer or supplier, planned change to the AIMS]
+  einstufung: [NC major, NC minor, observation]
+  bereich: [AIMS, ISMS, both]
+  methode: [5 whys, cause and effect diagram, fault tree, other]
+  schwere: [minor, moderate, significant, severe]
+  ursache_ki: [Data, Model, Use outside the purpose, Competence, Supplier, Process]
+  ja_nein: ["yes", "no", not needed]
+  status: [open, in progress, effectiveness pending, closed]
+  prioritaet: [high, medium, low]
+  status_verbesserung: [proposed, agreed, in progress, completed, rejected]
+  meldung_art: [Concern, Feedback, Objection, Complaint]
+  meldung_herkunft: [internal, external]
+  meldung_status: [open, in progress, closed]
+titel_nk_auszug: "Extract: nonconformities and corrective actions relating to the AIMS"
+auszug_register: "Extract from the leading register ‘{register}’. The register is authoritative; this extract shows the entries relating to the AIMS with cause, corrective action and effectiveness."
+auszug_ohne_register: "Extract from the leading register of nonconformities. The register is authoritative; this extract shows the entries relating to the AIMS with cause, corrective action and effectiveness."
+erfasst_am: "Recorded in the register on {datum}."
+kennung_nach_erfassung: "We assign the identifiers F-xxx consecutively when an entry is recorded, jointly for audit findings, incidents and near misses. An event recorded afterwards therefore has a higher number than events discovered later; the date of recording is stated in the description."
+zusatz_firma_register: "These fields extend the register ‘{register}’ for entries relating to the AIMS."
+zusatz_firma: "These fields extend the register of nonconformities for entries relating to the AIMS."
+ergebnis_massnahme: "{id} completed on {datum}: {beschreibung}"

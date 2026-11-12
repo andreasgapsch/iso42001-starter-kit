@@ -1,0 +1,118 @@
+# Seitentexte Etappe E0 Startinterview. Format: src/gefuehrt/FORMAT.md
+E0-start:
+  titel: Willkommen im Guide
+  frage: Wie kommen Sie Schritt für Schritt zu einem zertifizierbaren KI-Managementsystem?
+  warum: Der Guide stellt Ihnen Frage um Frage, wie eine Steuererklärungssoftware. Aus Ihren Antworten entstehen die Dokumente des Kits, und das Werkzeug prüft laufend, ob etwas fehlt. Sie können jederzeit unterbrechen, Fragen auf später verschieben und weiterarbeiten, wo Sie aufgehört haben.
+  fehler: Viele starten mit dem Schreiben von Dokumenten und merken spät, dass Inventar und Geltungsbereich fehlen. Auditoren wollen ein [[g:aims]] sehen, das zu Ihrem Unternehmen passt, nicht eine Sammlung von Vorlagen. Nehmen Sie sich für das Startinterview zehn Minuten Zeit, es spart später Stunden.
+E0-firma:
+  titel: Ihr Unternehmen
+  frage: Wie heisst Ihr Unternehmen und in welcher Branche ist es tätig?
+  warum: Der Firmenname erscheint in allen Dokumenten. Die Branche hilft uns, passende Beispiele und typische Risiken vorzuschlagen, etwa Exportkontrolle im Maschinenbau oder Patientendaten im Gesundheitswesen.
+  fehler: Wählen Sie die Branche, in der Sie den grössten Teil Ihres Umsatzes machen. Auditoren achten darauf, dass Branchenthemen wie Produkthaftung oder Branchennormen im [[g:kontext]] wieder auftauchen.
+  felder:
+    organisation.name:
+      label: Firmenname
+      hilfe: Wie im Handelsregister, z. B. «Muster Maschinenbau AG».
+    organisation.branche:
+      label: Branche
+      hilfe: Die Haupttätigkeit. Weitere Tätigkeiten erfassen Sie später im Kontext.
+E0-groesse:
+  titel: Grösse und Standorte
+  frage: Wie viele Mitarbeitende hat Ihr Unternehmen und an welchen Standorten arbeiten Sie?
+  warum: Die Grösse bestimmt, wie schlank Ihre Abläufe sein dürfen und wie viel Aufwand die [[g:zertifizierungsstelle]] einplant. Die Standorte brauchen wir für den [[g:geltungsbereich]].
+  fehler: Standorte im Ausland oder Tochtergesellschaften werden oft vergessen. Auditoren prüfen, ob alle Standorte, an denen KI genutzt wird, entweder im Geltungsbereich stehen oder begründet ausgeschlossen sind.
+  felder:
+    organisation.mitarbeitende:
+      label: Anzahl Mitarbeitende
+      hilfe: Köpfe oder Vollzeitstellen, ungefähr genügt.
+    organisation.standorte:
+      label: Standorte
+      hilfe: Ort und Land je Standort, z. B. «Hauptsitz Wil SG, Vertriebsgesellschaft in Stuttgart».
+E0-isms:
+  titel: Informationssicherheit
+  frage: Hat Ihr Unternehmen bereits ein Managementsystem für Informationssicherheit nach ISO/IEC 27001?
+  warum: ISO/IEC 42001 ist gleich aufgebaut wie ISO/IEC 27001. Mit einem [[g:isms]] übernehmen Sie Risikomethode, Dokumentenlenkung, Audit und Managementbewertung und ergänzen nur die KI-Themen in [[g:ergaenzungsblatt|Ergänzungsblättern]]. Ohne ISMS führen wir Sie durch die nötigen Grundlagen. Mit ISMS zeigt die Integrationsmatrix D-23, was Sie übernehmen. Der Dialog beim Anlegen hat diese Frage vorbelegt; hier können Sie die Antwort noch genauer fassen.
+  fehler: Wer ein ISMS hat, baut oft ein zweites, paralleles System auf. Auditoren sehen lieber ein gemeinsames System mit einem Auditprogramm und einer Managementbewertung für beide Normen.
+  felder:
+    meta.gefuehrt.antworten.isms:
+      label: Stand des ISMS
+      hilfe: «Vorhanden» heisst, es gibt Leitlinie, Risikomethode und Rollen nach ISO/IEC 27001, aber kein Zertifikat.
+E0-eu:
+  titel: Bezug zur EU
+  frage: Haben Sie Kunden in der EU, wird das Ergebnis Ihrer KI in der EU genutzt oder haben Sie eine Niederlassung dort?
+  warum: Der AI Act gilt auch für Unternehmen aus der Schweiz, wenn sie KI in der EU anbieten oder deren Ergebnisse dort verwendet werden. Aus diesen drei Antworten schlagen wir vor, ob Sie das Modul AI Act brauchen.
+  fehler: Viele Schweizer KMU halten sich für nicht betroffen, weil sie keine Firma in der EU haben. Massgeblich ist aber, wo die KI wirkt. Beispiel ist ein Chatbot auf der Website, den Kunden in Deutschland nutzen.
+  felder:
+    organisation.euBezug.kundenEu:
+      label: Wir liefern Produkte oder Leistungen an Kunden in der EU.
+      hilfe: Auch einzelne Kunden oder Händler zählen.
+    organisation.euBezug.outputEu:
+      label: Ergebnisse unserer KI werden in der EU verwendet.
+      hilfe: z. B. KI-gestützte Auswertungen für eine Tochter in Deutschland oder ein Chatbot für EU-Kunden.
+    organisation.euBezug.niederlassungEu:
+      label: Wir haben eine Niederlassung oder Tochtergesellschaft in der EU.
+      hilfe: Auch reine Vertriebsgesellschaften zählen.
+E0-ki:
+  titel: Ihr Umgang mit KI
+  frage: Entwickeln Sie KI selbst, verkaufen Sie Produkte mit KI und welche KI-Werkzeuge kennen Sie schon?
+  warum: Wer KI selbst entwickelt, braucht zusätzliche Regeln für Entwurf, Test und Daten. Wer KI verkauft, ist oft [[g:anbieter]] mit mehr Pflichten. Die bekannten Werkzeuge übernehmen wir als Startpunkt ins [[g:ki-inventar]].
+  fehler: KI in eingekaufter Software wird oft übersehen, etwa Prognosen im ERP oder Assistenten in Büroprogrammen. Auditoren fragen gezielt danach. Nennen Sie lieber ein Werkzeug zu viel als eines zu wenig.
+  felder:
+    organisation.entwickeltKi:
+      label: Wir entwickeln oder trainieren KI selbst.
+      hilfe: Auch das Nachtrainieren eines eingekauften Modells mit eigenen Daten zählt.
+    organisation.verkauftKiProdukte:
+      label: Wir verkaufen Produkte oder Dienste, die KI enthalten.
+      hilfe: z. B. eine Maschine mit KI-Funktion oder einen Kundenportal-Chatbot unter eigenem Namen.
+    meta.gefuehrt.antworten.bekannteKiWerkzeuge:
+      label: Bekannte KI-Werkzeuge
+      hilfe: Je Zeile ein Werkzeug, z. B. «M365 Copilot», «ChatGPT Team», «KI-Prognose im ERP». Die Liste ist ein Startpunkt für das Inventar.
+E0-termin:
+  titel: Zieltermin
+  frage: Bis wann wollen Sie bereit für [[g:stage-1|Stage 1]] sein, und was ist der Anlass?
+  warum: Vom Ziel Stage-1-Bereitschaft rechnet der Fahrplan rückwärts, in welcher Kalenderwoche welcher Schritt fertig sein muss. Bereit heisst, dass internes Audit und [[g:managementbewertung]] durchgeführt und die Unterlagen freigegeben sind. Mit [[g:isms]] rechnen Sie bis dahin mit rund 90 Tagen, ohne ISMS mit rund 150 Tagen. [[g:stage-2]] und das Zertifikat folgen einige Wochen bis Monate später.
+  fehler: Ein zu knapper Termin führt zu einem System, das nur auf dem Papier existiert. Auditoren wollen Aufzeichnungen aus mehreren Wochen Betrieb sehen. Halten Sie das Pensum fest, sonst kann der Fahrplan nicht prüfen, ob die Zeit reicht.
+  felder:
+    organisation.zielterminStage1:
+      label: Ziel Stage-1-Bereitschaft
+      hilfe: Bis zu diesem Datum sind internes Audit und Managementbewertung durchgeführt und die Unterlagen für die [[g:zertifizierungsstelle]] bereit. Lassen Sie das Feld leer, wenn noch offen.
+    organisation.projektauftrag.pensumProzent:
+      label: Pensum der AIMS-Verantwortlichen in Prozent
+      hilfe: Anteil der Arbeitszeit, die die Person für das [[g:aims|AIMS]]-Projekt einsetzt, z. B. 40. Der Leitfaden rechnet mit 40 bis 50 %; bei 20 % dauert der Aufbau rund doppelt so lange. Erscheint auch im Projektauftrag (D-00).
+    organisation.zielterminZertifizierung:
+      label: Gewünschter Termin für das Zertifikat
+      hilfe: Nach Stage 1 folgen [[g:stage-2]] und der Zertifizierungsentscheid; rechnen Sie dafür mit einigen Wochen bis Monaten. Erscheint im Projektauftrag (D-00) als Zieltermin Zertifizierung.
+    meta.gefuehrt.antworten.ausloeser:
+      label: Anlass
+      hilfe: Mehrere Antworten möglich. Der Anlass hilft, Prioritäten zu setzen.
+E0-verantwortung:
+  titel: Verantwortung
+  frage: Wer ist im Unternehmen für das KI-Managementsystem verantwortlich?
+  warum: Eine Person muss den Aufbau koordinieren und der Geschäftsleitung berichten. Im KMU ist das oft die IT-Leitung, das Qualitätsmanagement oder die Informationssicherheit.
+  fehler: Die Rolle wird oft jemandem ohne Zeit und Befugnisse übertragen. Auditoren fragen, ob die Person der Geschäftsleitung direkt berichtet und genug Zeit hat. Halten Sie das Pensum später im Projektauftrag fest.
+  felder:
+    organisation.aimsVerantwortlich:
+      label: AIMS-Verantwortliche/r
+      hilfe: Wählen Sie die Person, die das [[g:aims|AIMS]] koordiniert, oder erfassen Sie sie neu (Name, Funktion).
+E0-modul:
+  titel: Optionale Module
+  frage: Wollen Sie das Modul zum EU AI Act und das Modul NIST AI RMF einschalten?
+  warum: Das Modul ergänzt das Kit um die Pflichten aus dem AI Act, etwa Rolle und Risikoklasse je System, Transparenz und Betreiberpflichten. Sie brauchen es, wenn Sie KI in der EU anbieten oder deren Ergebnisse dort genutzt werden; ohne EU-Bezug genügt ein begründeter Vermerk. Das Modul NIST AI RMF ist freiwillig und lohnt sich bei US-Kundschaft, einer US-Konzernmutter oder Kundenfragebögen zum NIST AI RMF.
+  fehler: Ein ISO/IEC-42001-Zertifikat ersetzt die Pflichten aus dem AI Act nicht. Wer EU-Bezug hat und das Modul weglässt, hat eine Lücke, die Kunden und Behörden bemerken. Sie können das Modul später jederzeit ein- oder ausschalten.
+  felder:
+    meta.modulAiAct:
+      label: Modul AI Act einschalten
+      hilfe: Vorschlag aufgrund Ihrer Antworten zum EU-Bezug und zum Verkauf von KI-Produkten.
+    meta.modulNistRmf:
+      label: "Modul NIST AI RMF einschalten"
+      hilfe: "Das NIST AI RMF ist ein freiwilliges Rahmenwerk der US-Behörde NIST für den Umgang mit KI-Risiken; es ist weder Gesetz noch zertifizierbar und lohnt sich vor allem bei US-Kundschaft oder Kundenfragebögen dazu. Das Modul ergänzt das Kit um ein Ist- und Zielprofil, 23 Zusatz-Controls, ein Mess- und Prüfkonzept je System und die Bewertung generativer KI und braucht rund 3 bis 5 Personentage mehr."
+E0-gestaltung:
+  titel: Ihr Logo und Ihre Farbe (optional)
+  frage: Sollen die Dokumente Ihr Logo und Ihre Firmenfarbe tragen?
+  warum: Die erzeugten Dokumente gehören Ihrem Unternehmen. Mit Logo und Primärfarbe erscheinen Kopfzeile, Titel und Tabellenköpfe in Ihrem Erscheinungsbild. Risikostufen, Status und Hinweise behalten ihre Farben, damit sie überall dasselbe bedeuten. Diese Seite können Sie überspringen und die Gestaltung später in den Einstellungen festlegen.
+  fehler: Ein Logo für dunklen Grund (weiss auf transparent) ist auf hellem Papier unsichtbar. Wählen Sie die Variante für hellen Grund. Sehr helle Farben korrigiert das Werkzeug für Text automatisch und zeigt das Ergebnis an.
+E0-fahrplan:
+  titel: Ihr Fahrplan
+  frage: Wie geht es jetzt weiter?
+  warum: Aus Ihren Antworten ergeben sich Pfad, Etappen und ein Plan nach dem Leitfaden. Vom Ziel [[g:stage-1|Stage-1]]-Bereitschaft rückwärts gerechnet sehen Sie, in welchen Kalenderwochen die 10 Schritte liegen, welche Meilensteine fällig sind und wann die Geschäftsleitung freigeben muss. Die Personentage stammen aus Kapitel 5 des Leitfadens.
+  fehler: Der Fahrplan ist ein Richtwert, kein Versprechen. Am meisten Zeit kosten Abstimmungen mit Fachbereichen und Freigaben der Geschäftsleitung. Fragen Sie die [[g:zertifizierungsstelle|Zertifizierungsstellen]] früh an, denn akkreditierte Stellen für ISO/IEC 42001 haben oft lange Vorlaufzeiten.

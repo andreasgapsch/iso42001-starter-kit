@@ -1,0 +1,428 @@
+# Originaltexte NIST AI 600-1 (Generative AI Profile, Juli 2024): wörtliche Zitate mit eigener Übersetzung
+#
+# Rechtslage und Vermerk wie src/nist-rmf/original-100-1.yaml. Übernommen sind die zwölf Risiken aus Abschnitt 2
+# (Titel und Kurzbeschreibung aus der Aufzählung, ohne Fussnotenzeichen; Überschrift des Abschnitts in abschnitt_titel_zitat)
+# und die Massnahmentexte (Suggested Action) nur für die IDs, die das Kit in src/nist-rmf/rmf-controls.yaml (bezug_600_1) nennt.
+#
+# Felder: zitat, titel_zitat, abschnitt_titel_zitat (wörtlich, Englisch; von Tor G5 ausgenommen), de, titel_de (eigene
+# Übersetzung), seite (PDF-Seite in quelle.datei; bis_seite, wenn das Zitat auf der Folgeseite weiterläuft), subkategorie (Kit-ID der Subkategorie, unter der 600-1 die Massnahme führt).
+# Ligaturen des PDF (fi, ff) sind als Einzelbuchstaben geschrieben.
+# Prüfung Wort für Wort gegen den PDF-Text: npx tsx scripts/pruefen/nist-zitate.mts (Tor G18, nur lokal mit den PDFs).
+
+schema: 1
+stand: ai-rmf-1.0
+
+quelle:
+  dokument: NIST AI 600-1
+  titel: "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile"
+  datum: "2024-07-26"
+  doi: https://doi.org/10.6028/NIST.AI.600-1
+  datei: NIST.AI.600-1_GenAI-Profile.pdf
+  vermerk: Republished courtesy of the National Institute of Standards and Technology.
+  uebersetzung:
+    de: Übersetzung KMU-CIO, nicht amtlich
+    en: Translation by KMU-CIO, not official
+  fundstellen: Abschnitt 2 (Risiken), Abschnitt 3 (Suggested Actions je Subkategorie)
+
+risiken:
+  - id: gai-cbrn
+    nr: 1
+    abschnitt: "2.1"
+    seite: 8
+    titel_zitat: "CBRN Information or Capabilities"
+    abschnitt_titel_zitat: "CBRN Information or Capabilities"
+    zitat: "Eased access to or synthesis of materially nefarious information or design capabilities related to chemical, biological, radiological, or nuclear (CBRN) weapons or other dangerous materials or agents."
+    titel_de: "CBRN-Informationen oder -Fähigkeiten"
+    de: "Erleichterter Zugang zu oder Synthese von schädlichen Informationen oder Entwurfsfähigkeiten zu chemischen, biologischen, radiologischen oder nuklearen Waffen (CBRN) oder anderen gefährlichen Stoffen oder Erregern."
+  - id: gai-konfabulation
+    nr: 2
+    abschnitt: "2.2"
+    seite: 8
+    titel_zitat: "Confabulation"
+    abschnitt_titel_zitat: "Confabulation"
+    zitat: "The production of confidently stated but erroneous or false content (known colloquially as “hallucinations” or “fabrications”) by which users may be misled or deceived."
+    titel_de: "Konfabulation"
+    de: "Erzeugung von selbstsicher vorgetragenen, aber fehlerhaften oder falschen Inhalten (umgangssprachlich «Halluzinationen» oder «Erfindungen»), durch die Nutzende irregeführt oder getäuscht werden können."
+  - id: gai-gefaehrlich
+    nr: 3
+    abschnitt: "2.3"
+    seite: 8
+    titel_zitat: "Dangerous, Violent, or Hateful Content"
+    abschnitt_titel_zitat: "Dangerous, Violent, or Hateful Content"
+    zitat: "Eased production of and access to violent, inciting, radicalizing, or threatening content as well as recommendations to carry out self-harm or conduct illegal activities. Includes difficulty controlling public exposure to hateful and disparaging or stereotyping content."
+    titel_de: "Gefährliche, gewalttätige oder hasserfüllte Inhalte"
+    de: "Erleichterte Erzeugung von und erleichterter Zugang zu gewalttätigen, aufhetzenden, radikalisierenden oder bedrohlichen Inhalten sowie Empfehlungen zur Selbstverletzung oder zu rechtswidrigen Handlungen. Umfasst die Schwierigkeit, die öffentliche Verbreitung hasserfüllter, herabsetzender oder stereotypisierender Inhalte zu kontrollieren."
+  - id: gai-datenschutz
+    nr: 4
+    abschnitt: "2.4"
+    seite: 8
+    titel_zitat: "Data Privacy"
+    abschnitt_titel_zitat: "Data Privacy"
+    zitat: "Impacts due to leakage and unauthorized use, disclosure, or de-anonymization of biometric, health, location, or other personally identifiable information or sensitive data."
+    titel_de: "Datenschutz"
+    de: "Auswirkungen durch Abfluss und unbefugte Nutzung, Offenlegung oder Deanonymisierung biometrischer Daten, Gesundheits- oder Standortdaten oder anderer personenbezogener oder sensibler Daten."
+  - id: gai-umwelt
+    nr: 5
+    abschnitt: "2.5"
+    seite: 8
+    titel_zitat: "Environmental Impacts"
+    abschnitt_titel_zitat: "Environmental Impacts"
+    zitat: "Impacts due to high compute resource utilization in training or operating GAI models, and related outcomes that may adversely impact ecosystems."
+    titel_de: "Umweltauswirkungen"
+    de: "Auswirkungen durch hohen Bedarf an Rechenleistung beim Training oder Betrieb generativer KI-Modelle und damit verbundene Folgen, die Ökosysteme beeinträchtigen können."
+  - id: gai-verzerrung
+    nr: 6
+    abschnitt: "2.6"
+    seite: 8
+    titel_zitat: "Harmful Bias or Homogenization"
+    abschnitt_titel_zitat: "Harmful Bias and Homogenization"
+    zitat: "Amplification and exacerbation of historical, societal, and systemic biases; performance disparities between sub-groups or languages, possibly due to non-representative training data, that result in discrimination, amplification of biases, or incorrect presumptions about performance; undesired homogeneity that skews system or model outputs, which may be erroneous, lead to ill-founded decision-making, or amplify harmful biases."
+    titel_de: "Schädliche Verzerrung oder Vereinheitlichung"
+    de: "Verstärkung und Verschärfung historischer, gesellschaftlicher und systemischer Verzerrungen; Leistungsunterschiede zwischen Untergruppen oder Sprachen, etwa wegen nicht repräsentativer Trainingsdaten, die zu Diskriminierung, Verstärkung von Verzerrungen oder falschen Annahmen über die Leistung führen; unerwünschte Gleichförmigkeit, die Ausgaben von System oder Modell verzerrt, fehlerhaft sein kann, zu schlecht begründeten Entscheiden führt oder schädliche Verzerrungen verstärkt."
+  - id: gai-mensch-ki
+    nr: 7
+    abschnitt: "2.7"
+    seite: 8
+    titel_zitat: "Human-AI Configuration"
+    abschnitt_titel_zitat: "Human-AI Configuration"
+    zitat: "Arrangements of or interactions between a human and an AI system which can result in the human inappropriately anthropomorphizing GAI systems or experiencing algorithmic aversion, automation bias, over-reliance, or emotional entanglement with GAI systems."
+    titel_de: "Zusammenwirken von Mensch und KI"
+    de: "Anordnungen oder Wechselwirkungen zwischen Mensch und KI-System, die dazu führen können, dass der Mensch generative KI-Systeme unangemessen vermenschlicht oder Abneigung gegen Algorithmen, Automatisierungsverzerrung, übermässiges Vertrauen oder emotionale Verstrickung mit generativen KI-Systemen erlebt."
+  - id: gai-integritaet
+    nr: 8
+    abschnitt: "2.8"
+    seite: 8
+    titel_zitat: "Information Integrity"
+    abschnitt_titel_zitat: "Information Integrity"
+    zitat: "Lowered barrier to entry to generate and support the exchange and consumption of content which may not distinguish fact from opinion or fiction or acknowledge uncertainties, or could be leveraged for large-scale dis- and mis-information campaigns."
+    titel_de: "Integrität von Informationen"
+    de: "Gesenkte Einstiegshürde, um Inhalte zu erzeugen und ihren Austausch und Konsum zu fördern, die Tatsachen nicht von Meinung oder Fiktion unterscheiden oder Unsicherheiten nicht offenlegen oder für grossangelegte Desinformations- und Falschinformationskampagnen genutzt werden können."
+  - id: gai-sicherheit
+    nr: 9
+    abschnitt: "2.9"
+    seite: 8
+    bis_seite: 9
+    titel_zitat: "Information Security"
+    abschnitt_titel_zitat: "Information Security"
+    zitat: "Lowered barriers for offensive cyber capabilities, including via automated discovery and exploitation of vulnerabilities to ease hacking, malware, phishing, offensive cyber operations, or other cyberattacks; increased attack surface for targeted cyberattacks, which may compromise a system’s availability or the confidentiality or integrity of training data, code, or model weights."
+    titel_de: "Informationssicherheit"
+    de: "Gesenkte Hürden für offensive Cyberfähigkeiten, auch durch automatisiertes Auffinden und Ausnutzen von Schwachstellen, was Hacking, Schadsoftware, Phishing, offensive Cyberoperationen oder andere Cyberangriffe erleichtert; vergrösserte Angriffsfläche für gezielte Cyberangriffe, die die Verfügbarkeit eines Systems oder die Vertraulichkeit oder Integrität von Trainingsdaten, Code oder Modellgewichten gefährden können."
+  - id: gai-schutzrechte
+    nr: 10
+    abschnitt: "2.10"
+    seite: 9
+    titel_zitat: "Intellectual Property"
+    abschnitt_titel_zitat: "Intellectual Property"
+    zitat: "Eased production or replication of alleged copyrighted, trademarked, or licensed content without authorization (possibly in situations which do not fall under fair use); eased exposure of trade secrets; or plagiarism or illegal replication."
+    titel_de: "Geistiges Eigentum"
+    de: "Erleichterte Erzeugung oder Vervielfältigung mutmasslich urheberrechtlich, markenrechtlich oder lizenzrechtlich geschützter Inhalte ohne Erlaubnis (möglicherweise in Fällen, die nicht unter «fair use» fallen); erleichterte Preisgabe von Geschäftsgeheimnissen; oder Plagiat oder rechtswidrige Vervielfältigung."
+  - id: gai-anstoessig
+    nr: 11
+    abschnitt: "2.11"
+    seite: 9
+    titel_zitat: "Obscene, Degrading, and/or Abusive Content"
+    abschnitt_titel_zitat: "Obscene, Degrading, and/or Abusive Content"
+    zitat: "Eased production of and access to obscene, degrading, and/or abusive imagery which can cause harm, including synthetic child sexual abuse material (CSAM), and nonconsensual intimate images (NCII) of adults."
+    titel_de: "Obszöne, erniedrigende oder missbräuchliche Inhalte"
+    de: "Erleichterte Erzeugung von und erleichterter Zugang zu obszönen, erniedrigenden oder missbräuchlichen Bildern, die Schaden anrichten können, einschliesslich synthetischer Darstellungen sexuellen Kindesmissbrauchs (CSAM) und nicht einvernehmlicher intimer Bilder Erwachsener (NCII)."
+  - id: gai-lieferkette
+    nr: 12
+    abschnitt: "2.12"
+    seite: 9
+    titel_zitat: "Value Chain and Component Integration"
+    abschnitt_titel_zitat: "Value Chain and Component Integration"
+    zitat: "Non-transparent or untraceable integration of upstream third-party components, including data that has been improperly obtained or not processed and cleaned due to increased automation from GAI; improper supplier vetting across the AI lifecycle; or other issues that diminish transparency or accountability for downstream users."
+    titel_de: "Wertschöpfungskette und Einbindung von Komponenten"
+    de: "Intransparente oder nicht nachvollziehbare Einbindung vorgelagerter Komponenten Dritter, einschliesslich Daten, die unrechtmässig beschafft oder wegen zunehmender Automatisierung durch generative KI nicht aufbereitet und bereinigt wurden; ungenügende Prüfung von Lieferanten über den KI-Lebenszyklus; oder andere Umstände, die Transparenz oder Rechenschaft gegenüber nachgelagerten Nutzenden schmälern."
+
+massnahmen:
+  - id: GV-1.2-001
+    subkategorie: GV-1.2
+    seite: 18
+    zitat: "Establish transparency policies and processes for documenting the origin and history of training data and generated data for GAI applications to advance digital content transparency, while balancing the proprietary nature of training approaches."
+    de: "Transparenzrichtlinien und -prozesse festlegen, um Herkunft und Geschichte von Trainingsdaten und erzeugten Daten für Anwendungen generativer KI zu dokumentieren und so die Transparenz digitaler Inhalte zu fördern, unter Abwägung der vertraulichen Natur der Trainingsverfahren."
+  - id: GV-1.3-002
+    subkategorie: GV-1.3
+    seite: 18
+    zitat: "Establish minimum thresholds for performance or assurance criteria and review as part of deployment approval (“go/”no-go”) policies, procedures, and processes, with reviewed processes and approval thresholds reflecting measurement of GAI capabilities and risks."
+    de: "Mindestschwellen für Leistungs- oder Zusicherungskriterien festlegen und im Rahmen der Freigabe zum Einsatz (Richtlinien, Verfahren und Prozesse für den Entscheid «Go/No-Go») prüfen; die geprüften Prozesse und Freigabeschwellen bilden die Messung von Fähigkeiten und Risiken der generativen KI ab."
+  - id: GV-1.4-002
+    subkategorie: GV-1.4
+    seite: 19
+    zitat: "Establish transparent acceptable use policies for GAI that address illegal use or applications of GAI."
+    de: "Transparente Richtlinien zur zulässigen Nutzung generativer KI festlegen, die rechtswidrige Nutzungen oder Anwendungen generativer KI behandeln."
+  - id: GV-1.6-001
+    subkategorie: GV-1.6
+    seite: 20
+    zitat: "Enumerate organizational GAI systems for incorporation into AI system inventory and adjust AI system inventory requirements to account for GAI risks."
+    de: "Die generativen KI-Systeme der Organisation für die Aufnahme ins KI-Inventar erfassen und die Anforderungen an das Inventar an die Risiken generativer KI anpassen."
+  - id: GV-1.6-002
+    subkategorie: GV-1.6
+    seite: 20
+    zitat: "Define any inventory exemptions in organizational policies for GAI systems embedded into application software."
+    de: "Ausnahmen vom Inventar für generative KI-Systeme, die in Anwendungssoftware eingebettet sind, in den Richtlinien der Organisation festlegen."
+  - id: GV-1.6-003
+    subkategorie: GV-1.6
+    seite: 20
+    zitat: "In addition to general model, governance, and risk information, consider the following items in GAI system inventory entries: Data provenance information (e.g., source, signatures, versioning, watermarks); Known issues reported from internal bug tracking or external information sharing resources (e.g., AI incident database, AVID, CVE, NVD, or OECD AI incident monitor); Human oversight roles and responsibilities; Special rights and considerations for intellectual property, licensed works, or personal, privileged, proprietary or sensitive data; Underlying foundation models, versions of underlying models, and access modes."
+    de: "Neben allgemeinen Angaben zu Modell, Steuerung und Risiken folgende Punkte in Inventareinträgen generativer KI-Systeme berücksichtigen: Angaben zur Datenherkunft (z. B. Quelle, Signaturen, Versionen, Wasserzeichen); bekannte Probleme aus interner Fehlerverfolgung oder externen Informationsquellen (z. B. AI Incident Database, AVID, CVE, NVD oder OECD AI Incident Monitor); Rollen und Verantwortlichkeiten der menschlichen Aufsicht; besondere Rechte und Gesichtspunkte zu geistigem Eigentum, lizenzierten Werken oder persönlichen, vertraulichen, geschützten oder sensiblen Daten; zugrunde liegende Basismodelle, deren Versionen und Zugriffsarten."
+  - id: GV-1.7-001
+    subkategorie: GV-1.7
+    seite: 21
+    zitat: "Protocols are put in place to ensure GAI systems are able to be deactivated when necessary."
+    de: "Protokolle sind eingerichtet, damit generative KI-Systeme bei Bedarf abgeschaltet werden können."
+  - id: GV-1.7-002
+    subkategorie: GV-1.7
+    seite: 21
+    zitat: "Consider the following factors when decommissioning GAI systems: Data retention requirements; Data security, e.g., containment, protocols, Data leakage after decommissioning; Dependencies between upstream, downstream, or other data, internet of things (IOT) or AI systems; Use of open-source data or models; Users’ emotional entanglement with GAI functions."
+    de: "Bei der Ausserbetriebnahme generativer KI-Systeme folgende Faktoren berücksichtigen: Aufbewahrungspflichten für Daten; Datensicherheit, z. B. Eindämmung, Protokolle, Datenabfluss nach der Ausserbetriebnahme; Abhängigkeiten zwischen vor- und nachgelagerten oder anderen Daten, Geräten des Internets der Dinge (IoT) oder KI-Systemen; Nutzung quelloffener Daten oder Modelle; emotionale Verstrickung der Nutzenden mit Funktionen der generativen KI."
+  - id: GV-3.2-003
+    subkategorie: GV-3.2
+    seite: 22
+    zitat: "Define acceptable use policies for GAI interfaces, modalities, and human-AI configurations (i.e., for chatbots and decision-making tasks), including criteria for the kinds of queries GAI applications should refuse to respond to."
+    de: "Richtlinien zur zulässigen Nutzung für Schnittstellen, Modalitäten und das Zusammenwirken von Mensch und KI bei generativer KI festlegen (d. h. für Chatbots und Entscheidungsaufgaben), einschliesslich Kriterien, auf welche Arten von Anfragen Anwendungen generativer KI nicht antworten sollen."
+  - id: GV-3.2-004
+    subkategorie: GV-3.2
+    seite: 22
+    zitat: "Establish policies for user feedback mechanisms for GAI systems which include thorough instructions and any mechanisms for recourse."
+    de: "Richtlinien für Rückmeldemöglichkeiten der Nutzenden bei generativen KI-Systemen festlegen, mit genauen Anleitungen und allfälligen Möglichkeiten zur Beschwerde."
+  - id: GV-3.2-005
+    subkategorie: GV-3.2
+    seite: 22
+    zitat: "Engage in threat modeling to anticipate potential risks from GAI systems."
+    de: "Bedrohungsmodellierung betreiben, um mögliche Risiken generativer KI-Systeme vorwegzunehmen."
+  - id: GV-4.2-001
+    subkategorie: GV-4.2
+    seite: 23
+    zitat: "Establish terms of use and terms of service for GAI systems."
+    de: "Nutzungs- und Dienstleistungsbedingungen für generative KI-Systeme festlegen."
+  - id: GV-5.1-002
+    subkategorie: GV-5.1
+    seite: 24
+    zitat: "Document interactions with GAI systems to users prior to interactive activities, particularly in contexts involving more significant risks."
+    de: "Den Nutzenden vor interaktiven Tätigkeiten die Interaktion mit generativen KI-Systemen offenlegen, besonders in Kontexten mit erheblicheren Risiken."
+  - id: GV-6.1-001
+    subkategorie: GV-6.1
+    seite: 24
+    zitat: "Categorize different types of GAI content with associated third-party rights (e.g., copyright, intellectual property, data privacy)."
+    de: "Verschiedene Arten von Inhalten generativer KI mit den zugehörigen Rechten Dritter einordnen (z. B. Urheberrecht, geistiges Eigentum, Datenschutz)."
+  - id: GV-6.1-004
+    subkategorie: GV-6.1
+    seite: 24
+    zitat: "Draft and maintain well-defined contracts and service level agreements (SLAs) that specify content ownership, usage rights, quality standards, security requirements, and content provenance expectations for GAI systems."
+    de: "Klar umrissene Verträge und Dienstleistungsvereinbarungen (SLA) entwerfen und pflegen, die Eigentum an Inhalten, Nutzungsrechte, Qualitätsstandards, Sicherheitsanforderungen und Erwartungen an die Herkunft von Inhalten für generative KI-Systeme festlegen."
+  - id: GV-6.1-007
+    subkategorie: GV-6.1
+    seite: 25
+    zitat: "Inventory all third-party entities with access to organizational content and establish approved GAI technology and service provider lists."
+    de: "Alle Dritten mit Zugriff auf Inhalte der Organisation erfassen und Listen zugelassener Techniken und Anbieter generativer KI führen."
+  - id: GV-6.1-008
+    subkategorie: GV-6.1
+    seite: 25
+    zitat: "Maintain records of changes to content made by third parties to promote content provenance, including sources, timestamps, metadata."
+    de: "Aufzeichnungen über Änderungen Dritter an Inhalten führen, um die Herkunft von Inhalten nachvollziehbar zu machen, mit Quellen, Zeitstempeln und Metadaten."
+  - id: GV-6.1-009
+    subkategorie: GV-6.1
+    seite: 25
+    zitat: "Update and integrate due diligence processes for GAI acquisition and procurement vendor assessments to include intellectual property, data privacy, security, and other risks. For example, update processes to: Address solutions that may rely on embedded GAI technologies; Address ongoing monitoring, assessments, and alerting, dynamic risk assessments, and real-time reporting tools for monitoring third-party GAI risks; Consider policy adjustments across GAI modeling libraries, tools and APIs, fine-tuned models, and embedded tools; Assess GAI vendors, open-source or proprietary GAI tools, or GAI service providers against incident or vulnerability databases."
+    de: "Sorgfaltsprüfungen bei Beschaffung generativer KI und Lieferantenbeurteilungen nachführen und um geistiges Eigentum, Datenschutz, Sicherheit und andere Risiken ergänzen. Zum Beispiel Prozesse anpassen, um: Lösungen zu behandeln, die auf eingebetteter generativer KI beruhen; laufende Überwachung, Beurteilungen und Warnungen, dynamische Risikobeurteilungen und Werkzeuge für Echtzeitmeldungen zur Überwachung der Risiken generativer KI Dritter zu regeln; Anpassungen der Richtlinien für Bibliotheken, Werkzeuge und Programmierschnittstellen (API) zur Modellierung generativer KI, feinabgestimmte Modelle und eingebettete Werkzeuge zu prüfen; Anbieter generativer KI, quelloffene oder proprietäre Werkzeuge generativer KI oder Dienstleister generativer KI anhand von Datenbanken zu Vorfällen oder Schwachstellen zu beurteilen."
+  - id: GV-6.2-006
+    subkategorie: GV-6.2
+    seite: 26
+    zitat: "Establish policies and procedures to test and manage risks related to rollover and fallback technologies for GAI systems, acknowledging that rollover and fallback may include manual processing."
+    de: "Richtlinien und Verfahren festlegen, um Risiken von Umschalt- und Rückfalltechniken für generative KI-Systeme zu testen und zu steuern, im Wissen, dass Umschaltung und Rückfall auch manuelle Bearbeitung umfassen können."
+  - id: GV-6.2-007
+    subkategorie: GV-6.2
+    seite: 26
+    zitat: "Review vendor contracts and avoid arbitrary or capricious termination of critical GAI technologies or vendor services and non-standard terms that may amplify or defer liability in unexpected ways and/or contribute to unauthorized data collection by vendors or third-parties (e.g., secondary data use). Consider: Clear assignment of liability and responsibility for incidents, GAI system changes over time (e.g., fine-tuning, drift, decay); Request: Notification and disclosure for serious incidents arising from third-party data and systems; Service Level Agreements (SLAs) in vendor contracts that address incident response, response times, and availability of critical support."
+    de: "Lieferantenverträge prüfen und willkürliche oder unberechenbare Kündigungen kritischer Techniken oder Dienste generativer KI vermeiden, ebenso unübliche Bedingungen, die Haftung auf unerwartete Weise ausweiten oder verschieben und/oder zu unbefugter Datenerhebung durch Lieferanten oder Dritte beitragen (z. B. Zweitnutzung von Daten). Berücksichtigen: klare Zuweisung von Haftung und Verantwortung für Vorfälle, Änderungen am generativen KI-System über die Zeit (z. B. Feinabstimmung, Drift, Verfall); verlangen: Meldung und Offenlegung schwerwiegender Vorfälle aus Daten und Systemen Dritter; Dienstleistungsvereinbarungen (SLA) in Lieferantenverträgen, die Reaktion auf Vorfälle, Reaktionszeiten und Verfügbarkeit kritischer Unterstützung regeln."
+  - id: MP-2.3-003
+    subkategorie: MP-2.3
+    seite: 29
+    zitat: "Deploy and document fact-checking techniques to verify the accuracy and veracity of information generated by GAI systems, especially when the information comes from multiple (or unknown) sources."
+    de: "Techniken zur Faktenprüfung einsetzen und dokumentieren, um Richtigkeit und Wahrheitsgehalt der von generativen KI-Systemen erzeugten Informationen zu prüfen, besonders wenn die Informationen aus mehreren (oder unbekannten) Quellen stammen."
+  - id: MP-2.3-005
+    subkategorie: MP-2.3
+    seite: 29
+    zitat: "Implement plans for GAI systems to undergo regular adversarial testing to identify vulnerabilities and potential manipulation or misuse."
+    de: "Pläne umsetzen, nach denen generative KI-Systeme regelmässig gegnerischen Tests unterzogen werden, um Schwachstellen und mögliche Manipulation oder Missbrauch zu erkennen."
+  - id: MP-3.4-001
+    subkategorie: MP-3.4
+    seite: 29
+    zitat: "Evaluate whether GAI operators and end-users can accurately understand content lineage and origin."
+    de: "Bewerten, ob Bedienende und Endnutzende generativer KI Herkunft und Entstehung von Inhalten richtig verstehen können."
+  - id: MP-3.4-002
+    subkategorie: MP-3.4
+    seite: 29
+    zitat: "Adapt existing training programs to include modules on digital content transparency."
+    de: "Bestehende Schulungsprogramme um Module zur Transparenz digitaler Inhalte ergänzen."
+  - id: MP-4.1-001
+    subkategorie: MP-4.1
+    seite: 30
+    zitat: "Conduct periodic monitoring of AI-generated content for privacy risks; address any possible instances of PII or sensitive data exposure."
+    de: "KI-erzeugte Inhalte periodisch auf Datenschutzrisiken überwachen; mögliche Fälle offengelegter Personendaten oder sensibler Daten behandeln."
+  - id: MP-4.1-002
+    subkategorie: MP-4.1
+    seite: 30
+    zitat: "Implement processes for responding to potential intellectual property infringement claims or other rights."
+    de: "Prozesse einführen, um auf mögliche Ansprüche wegen Verletzung geistigen Eigentums oder anderer Rechte zu reagieren."
+  - id: MP-4.1-006
+    subkategorie: MP-4.1
+    seite: 30
+    zitat: "Implement policies and practices defining how third-party intellectual property and training data will be used, stored, and protected."
+    de: "Richtlinien und Praktiken einführen, die festlegen, wie geistiges Eigentum Dritter und Trainingsdaten genutzt, gespeichert und geschützt werden."
+  - id: MP-4.1-007
+    subkategorie: MP-4.1
+    seite: 30
+    zitat: "Re-evaluate models that were fine-tuned or enhanced on top of third-party models."
+    de: "Modelle neu bewerten, die auf Grundlage von Modellen Dritter feinabgestimmt oder erweitert wurden."
+  - id: MP-4.1-008
+    subkategorie: MP-4.1
+    seite: 30
+    zitat: "Re-evaluate risks when adapting GAI models to new domains. Additionally, establish warning systems to determine if a GAI system is being used in a new domain where previous assumptions (relating to context of use or mapped risks such as security, and safety) may no longer hold."
+    de: "Risiken neu bewerten, wenn generative KI-Modelle an neue Anwendungsgebiete angepasst werden. Zudem Warnsysteme einrichten, die erkennen, ob ein generatives KI-System in einem neuen Gebiet genutzt wird, in dem frühere Annahmen (zum Nutzungskontext oder zu erfassten Risiken wie Informationssicherheit und Sicherheit) nicht mehr gelten könnten."
+  - id: MP-4.1-009
+    subkategorie: MP-4.1
+    seite: 30
+    zitat: "Leverage approaches to detect the presence of PII or sensitive data in generated output text, image, video, or audio."
+    de: "Verfahren nutzen, um Personendaten oder sensible Daten in erzeugten Texten, Bildern, Videos oder Tonaufnahmen zu erkennen."
+  - id: MP-5.1-003
+    subkategorie: MP-5.1
+    seite: 31
+    zitat: "Consider disclosing use of GAI to end users in relevant contexts, while considering the objective of disclosure, the context of use, the likelihood and magnitude of the risk posed, the audience of the disclosure, as well as the frequency of the disclosures."
+    de: "Erwägen, den Endnutzenden in relevanten Kontexten die Nutzung generativer KI offenzulegen, unter Berücksichtigung des Zwecks der Offenlegung, des Nutzungskontexts, der Wahrscheinlichkeit und des Ausmasses des Risikos, des Zielpublikums der Offenlegung und der Häufigkeit der Offenlegungen."
+  - id: MS-1.1-009
+    subkategorie: MS-1.1
+    seite: 33
+    zitat: "Track and document risks or opportunities related to all GAI risks that cannot be measured quantitatively, including explanations as to why some risks cannot be measured (e.g., due to technological limitations, resource constraints, or trustworthy considerations). Include unmeasured risks in marginal risks."
+    de: "Risiken oder Chancen zu allen Risiken generativer KI, die sich nicht quantitativ messen lassen, verfolgen und dokumentieren, mit Erklärung, weshalb einzelne Risiken nicht messbar sind (z. B. wegen technischer Grenzen, knapper Mittel oder Gesichtspunkten der Vertrauenswürdigkeit). Nicht gemessene Risiken in die Grenzrisiken aufnehmen."
+  - id: MS-1.3-003
+    subkategorie: MS-1.3
+    seite: 33
+    zitat: "Verify those conducting structured human feedback exercises are not directly involved in system development tasks for the same GAI model."
+    de: "Sicherstellen, dass die Personen, die strukturierte menschliche Rückmeldeübungen durchführen, nicht direkt an der Systementwicklung für dasselbe generative KI-Modell beteiligt sind."
+  - id: MS-2.2-003
+    subkategorie: MS-2.2
+    seite: 34
+    zitat: "Provide human subjects with options to withdraw participation or revoke their consent for present or future use of their data in GAI applications."
+    de: "Menschlichen Versuchspersonen die Möglichkeit geben, ihre Teilnahme zurückzuziehen oder ihre Einwilligung zur heutigen oder künftigen Nutzung ihrer Daten in Anwendungen generativer KI zu widerrufen."
+  - id: MS-2.3-002
+    subkategorie: MS-2.3
+    seite: 34
+    zitat: "Evaluate claims of model capabilities using empirically validated methods."
+    de: "Angaben zu Modellfähigkeiten mit empirisch validierten Methoden bewerten."
+  - id: MS-2.5-001
+    subkategorie: MS-2.5
+    seite: 35
+    zitat: "Avoid extrapolating GAI system performance or capabilities from narrow, non-systematic, and anecdotal assessments."
+    de: "Leistung oder Fähigkeiten generativer KI-Systeme nicht aus engen, unsystematischen und anekdotischen Beurteilungen hochrechnen."
+  - id: MS-2.5-003
+    subkategorie: MS-2.5
+    seite: 35
+    zitat: "Review and verify sources and citations in GAI system outputs during pre-deployment risk measurement and ongoing monitoring activities."
+    de: "Quellen und Zitate in Ausgaben generativer KI-Systeme bei der Risikomessung vor dem Einsatz und bei der laufenden Überwachung prüfen und verifizieren."
+  - id: MS-2.5-004
+    subkategorie: MS-2.5
+    seite: 35
+    zitat: "Track and document instances of anthropomorphization (e.g., human images, mentions of human feelings, cyborg imagery or motifs) in GAI system interfaces."
+    de: "Fälle von Vermenschlichung (z. B. Bilder von Menschen, Erwähnung menschlicher Gefühle, Cyborg-Bilder oder -Motive) in Schnittstellen generativer KI-Systeme verfolgen und dokumentieren."
+  - id: MS-2.7-001
+    subkategorie: MS-2.7
+    seite: 37
+    zitat: "Apply established security measures to: Assess likelihood and magnitude of vulnerabilities and threats such as backdoors, compromised dependencies, data breaches, eavesdropping, man-in-the-middle attacks, reverse engineering, autonomous agents, model theft or exposure of model weights, AI inference, bypass, extraction, and other baseline security concerns."
+    de: "Bewährte Sicherheitsmassnahmen anwenden, um: Wahrscheinlichkeit und Ausmass von Schwachstellen und Bedrohungen zu beurteilen, etwa Hintertüren, kompromittierte Abhängigkeiten, Datenschutzverletzungen, Abhören, Man-in-the-Middle-Angriffe, Reverse Engineering, autonome Agenten, Diebstahl von Modellen oder Offenlegung von Modellgewichten, Inferenz, Umgehung, Extraktion und andere grundlegende Sicherheitsfragen der KI."
+  - id: MS-2.7-007
+    subkategorie: MS-2.7
+    seite: 37
+    zitat: "Perform AI red-teaming to assess resilience against: Abuse to facilitate attacks on other systems (e.g., malicious code generation, enhanced phishing content), GAI attacks (e.g., prompt injection), ML attacks (e.g., adversarial examples/prompts, data poisoning, membership inference, model extraction, sponge examples)."
+    de: "KI-Red-Teaming durchführen, um die Widerstandsfähigkeit zu beurteilen gegen: Missbrauch zur Erleichterung von Angriffen auf andere Systeme (z. B. Erzeugung von Schadcode, verbesserte Phishing-Inhalte), Angriffe auf generative KI (z. B. Prompt Injection), Angriffe auf maschinelles Lernen (z. B. gegnerische Beispiele oder Eingaben, Vergiftung von Daten, Membership Inference, Modellextraktion, Sponge Examples)."
+  - id: MS-2.7-008
+    subkategorie: MS-2.7
+    seite: 37
+    zitat: "Verify fine-tuning does not compromise safety and security controls."
+    de: "Prüfen, dass Feinabstimmung die Sicherheits- und Schutzkontrollen nicht beeinträchtigt."
+  - id: MS-2.7-009
+    subkategorie: MS-2.7
+    seite: 38
+    zitat: "Regularly assess and verify that security measures remain effective and have not been compromised."
+    de: "Regelmässig beurteilen und prüfen, dass Sicherheitsmassnahmen wirksam bleiben und nicht kompromittiert wurden."
+  - id: MS-2.8-003
+    subkategorie: MS-2.8
+    seite: 38
+    zitat: "Use digital content transparency solutions to enable the documentation of each instance where content is generated, modified, or shared to provide a tamper-proof history of the content, promote transparency, and enable traceability. Robust version control systems can also be applied to track changes across the AI lifecycle over time."
+    de: "Lösungen für die Transparenz digitaler Inhalte nutzen, um jeden Fall zu dokumentieren, in dem Inhalte erzeugt, verändert oder geteilt werden, damit eine fälschungssichere Geschichte des Inhalts entsteht, Transparenz gefördert und Nachverfolgbarkeit ermöglicht wird. Robuste Versionsverwaltungen können zusätzlich Änderungen über den KI-Lebenszyklus verfolgen."
+  - id: MS-2.11-002
+    subkategorie: MS-2.11
+    seite: 40
+    zitat: "Conduct fairness assessments to measure systemic bias. Measure GAI system performance across demographic groups and subgroups, addressing both quality of service and any allocation of services and resources. Quantify harms using: field testing with sub-group populations to determine likelihood of exposure to generated content exhibiting harmful bias, AI red-teaming with counterfactual and low-context (e.g., “leader,” “bad guys”) prompts. For ML pipelines or business processes with categorical or numeric outcomes that rely on GAI, apply general fairness metrics (e.g., demographic parity, equalized odds, equal opportunity, statistical hypothesis tests), to the pipeline or business outcome where appropriate; Custom, context-specific metrics developed in collaboration with domain experts and affected communities; Measurements of the prevalence of denigration in generated content in deployment (e.g., sub-sampling a fraction of traffic and manually annotating denigrating content)."
+    de: "Fairnessbeurteilungen durchführen, um systematische Verzerrung zu messen. Die Leistung generativer KI-Systeme über demografische Gruppen und Untergruppen messen, sowohl zur Dienstqualität als auch zur Zuteilung von Leistungen und Ressourcen. Schäden quantifizieren mit: Feldtests mit Untergruppen, um die Wahrscheinlichkeit zu bestimmen, mit erzeugten Inhalten mit schädlicher Verzerrung in Berührung zu kommen, und KI-Red-Teaming mit kontrafaktischen und kontextarmen Eingaben (z. B. «leader», «bad guys»). Für ML-Pipelines oder Geschäftsprozesse mit kategorialen oder numerischen Ergebnissen, die auf generativer KI beruhen, wo angebracht allgemeine Fairnesskennzahlen auf Pipeline oder Geschäftsergebnis anwenden (z. B. demografische Parität, Equalized Odds, Chancengleichheit, statistische Hypothesentests); eigene, kontextspezifische Kennzahlen, entwickelt mit Fachleuten des Anwendungsgebiets und betroffenen Gemeinschaften; Messungen, wie häufig erzeugte Inhalte im Einsatz herabsetzend sind (z. B. Stichprobe eines Teils des Verkehrs und manuelle Kennzeichnung herabsetzender Inhalte)."
+  - id: MS-3.3-003
+    subkategorie: MS-3.3
+    seite: 42
+    zitat: "Evaluate potential biases and stereotypes that could emerge from the AI-generated content using appropriate methodologies including computational testing methods as well as evaluating structured feedback input."
+    de: "Mögliche Verzerrungen und Stereotype, die in KI-erzeugten Inhalten entstehen können, mit geeigneten Methoden bewerten, darunter rechnergestützte Testverfahren und die Auswertung strukturierter Rückmeldungen."
+  - id: MS-3.3-004
+    subkategorie: MS-3.3
+    seite: 43
+    zitat: "Provide input for training materials about the capabilities and limitations of GAI systems related to digital content transparency for AI Actors, other professionals, and the public about the societal impacts of AI and the role of diverse and inclusive content generation."
+    de: "Beiträge zu Schulungsunterlagen über Fähigkeiten und Grenzen generativer KI-Systeme zur Transparenz digitaler Inhalte liefern, für KI-Akteure, andere Fachleute und die Öffentlichkeit, über die gesellschaftlichen Auswirkungen von KI und die Rolle vielfältiger und inklusiver Inhaltserzeugung."
+  - id: MS-3.3-005
+    subkategorie: MS-3.3
+    seite: 43
+    zitat: "Record and integrate structured feedback about content provenance from operators, users, and potentially impacted communities through the use of methods such as user research studies, focus groups, or community forums. Actively seek feedback on generated content quality and potential biases. Assess the general awareness among end users and impacted communities about the availability of these feedback channels."
+    de: "Strukturierte Rückmeldungen zur Herkunft von Inhalten von Bedienenden, Nutzenden und möglicherweise betroffenen Gemeinschaften erfassen und einbeziehen, etwa über Nutzerstudien, Fokusgruppen oder Foren. Aktiv Rückmeldungen zur Qualität erzeugter Inhalte und zu möglichen Verzerrungen einholen. Beurteilen, wie bekannt diese Rückmeldekanäle bei Endnutzenden und betroffenen Gemeinschaften allgemein sind."
+  - id: MS-4.2-001
+    subkategorie: MS-4.2
+    seite: 43
+    zitat: "Conduct adversarial testing at a regular cadence to map and measure GAI risks, including tests to address attempts to deceive or manipulate the application of provenance techniques or other misuses. Identify vulnerabilities and understand potential misuse scenarios and unintended outputs."
+    de: "In regelmässigen Abständen gegnerische Tests durchführen, um Risiken generativer KI zu erfassen und zu messen, auch mit Tests zu Versuchen, die Anwendung von Herkunftsverfahren zu täuschen oder zu manipulieren, oder zu anderem Missbrauch. Schwachstellen erkennen und mögliche Missbrauchsszenarien und unbeabsichtigte Ausgaben verstehen."
+  - id: MS-4.2-002
+    subkategorie: MS-4.2
+    seite: 43
+    zitat: "Evaluate GAI system performance in real-world scenarios to observe its behavior in practical environments and reveal issues that might not surface in controlled and optimized testing environments."
+    de: "Die Leistung generativer KI-Systeme in realen Szenarien bewerten, um ihr Verhalten in der Praxis zu beobachten und Probleme aufzudecken, die in kontrollierten und optimierten Testumgebungen nicht auftreten."
+  - id: MS-4.2-004
+    subkategorie: MS-4.2
+    seite: 43
+    zitat: "Monitor and document instances where human operators or other systems override the GAI's decisions. Evaluate these cases to understand if the overrides are linked to issues related to content provenance."
+    de: "Fälle überwachen und dokumentieren, in denen menschliche Bedienende oder andere Systeme Entscheide der generativen KI übersteuern. Diese Fälle auswerten, um zu verstehen, ob die Übersteuerungen mit Fragen der Herkunft von Inhalten zusammenhängen."
+  - id: MG-2.4-001
+    subkategorie: MG-2.4
+    seite: 45
+    zitat: "Establish and maintain communication plans to inform AI stakeholders as part of the deactivation or disengagement process of a specific GAI system (including for open-source models) or context of use, including reasons, workarounds, user access removal, alternative processes, contact information, etc."
+    de: "Kommunikationspläne festlegen und pflegen, um KI-Beteiligte im Rahmen der Abschaltung oder Abkopplung eines bestimmten generativen KI-Systems (auch quelloffener Modelle) oder Nutzungskontexts zu informieren, unter anderem über Gründe, Umgehungslösungen, Entzug der Zugriffe, alternative Abläufe und Kontaktangaben."
+  - id: MG-2.4-004
+    subkategorie: MG-2.4
+    seite: 46
+    zitat: "Establish and regularly review specific criteria that warrants the deactivation of GAI systems in accordance with set risk tolerances and appetites."
+    de: "Bestimmte Kriterien festlegen und regelmässig überprüfen, die gemäss den festgelegten Risikotoleranzen und der Risikobereitschaft die Abschaltung generativer KI-Systeme rechtfertigen."
+  - id: MG-3.1-002
+    subkategorie: MG-3.1
+    seite: 46
+    zitat: "Test GAI system value chain risks (e.g., data poisoning, malware, other software and hardware vulnerabilities; labor practices; data privacy and localization compliance; geopolitical alignment)."
+    de: "Risiken der Wertschöpfungskette generativer KI-Systeme testen (z. B. Vergiftung von Daten, Schadsoftware, andere Schwachstellen in Soft- und Hardware; Arbeitsbedingungen; Einhaltung von Datenschutz- und Lokalisierungsvorgaben; geopolitische Ausrichtung)."
+  - id: MG-3.1-003
+    subkategorie: MG-3.1
+    seite: 46
+    zitat: "Re-assess model risks after fine-tuning or retrieval-augmented generation implementation and for any third-party GAI models deployed for applications and/or use cases that were not evaluated in initial testing."
+    de: "Modellrisiken nach Feinabstimmung oder Einführung von Retrieval-Augmented Generation (RAG) erneut beurteilen, ebenso für generative KI-Modelle Dritter, die für Anwendungen oder Nutzungsfälle eingesetzt werden, die in den ersten Tests nicht bewertet wurden."
+  - id: MG-3.1-005
+    subkategorie: MG-3.1
+    seite: 47
+    zitat: "Review various transparency artifacts (e.g., system cards and model cards) for third-party models."
+    de: "Verschiedene Transparenzunterlagen (z. B. System Cards und Model Cards) für Modelle Dritter prüfen."
+  - id: MG-3.2-004
+    subkategorie: MG-3.2
+    seite: 47
+    zitat: "Evaluate user reported problematic content and integrate feedback into system updates."
+    de: "Von Nutzenden gemeldete problematische Inhalte bewerten und die Rückmeldungen in Systemaktualisierungen einbeziehen."
+  - id: MG-3.2-005
+    subkategorie: MG-3.2
+    seite: 47
+    zitat: "Implement content filters to prevent the generation of inappropriate, harmful, false, illegal, or violent content related to the GAI application, including for CSAM and NCII. These filters can be rule-based or leverage additional machine learning models to flag problematic inputs and outputs."
+    de: "Inhaltsfilter einsetzen, um die Erzeugung unangemessener, schädlicher, falscher, rechtswidriger oder gewalttätiger Inhalte in der Anwendung generativer KI zu verhindern, auch für CSAM und NCII. Diese Filter können regelbasiert sein oder zusätzliche Modelle des maschinellen Lernens nutzen, um problematische Eingaben und Ausgaben zu kennzeichnen."
+  - id: MG-4.3-002
+    subkategorie: MG-4.3
+    seite: 49
+    zitat: "Establish and maintain policies and procedures to record and track GAI system reported errors, near-misses, and negative impacts."
+    de: "Richtlinien und Verfahren festlegen und pflegen, um gemeldete Fehler, Beinahe-Vorfälle und negative Auswirkungen generativer KI-Systeme aufzuzeichnen und zu verfolgen."

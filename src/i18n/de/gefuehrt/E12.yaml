@@ -1,0 +1,377 @@
+# Seitentexte Etappe E12 Internes Audit und Managementbewertung. Format: src/gefuehrt/FORMAT.md
+E12-einfuehrung:
+  titel: Internes Audit und Managementbewertung
+  frage: Funktioniert Ihr Managementsystem so, wie Sie es beschrieben haben?
+  warum: Im [[g:internes-audit]] prüft eine unabhängige Person das System gegen Norm und eigene Regeln. In der [[g:managementbewertung]] beurteilt die Geschäftsleitung die Ergebnisse und entscheidet über Verbesserungen. Abweichungen bearbeiten Sie als [[g:nichtkonformitaet|Nichtkonformitäten]] mit Ursache und [[g:korrekturmassnahme]].
+  fehler: Schwache interne Audits, Managementbewertungen ohne Pflichteingaben und Korrekturen ohne Ursachenanalyse gehören zu den fünf häufigsten Befunden. Mit [[g:isms]] führen Sie beides gemeinsam für beide Normen.
+E12-programm:
+  titel: Auditprogramm
+  frage: Wie oft und mit welchen Methoden auditieren Sie das KI-Managementsystem?
+  warum: Das Auditprogramm legt fest, dass innerhalb eines Zyklus alle Abschnitte und alle anwendbaren [[g:control|Controls]] geprüft werden. Vor dem ersten Zertifizierungsaudit braucht es ein vollständiges Audit.
+  fehler: Programme, die nur Dokumente lesen, finden die Lücke zur Praxis nicht. Auditoren der [[g:zertifizierungsstelle]] schauen sich Ihren Auditbericht genau an.
+  felder:
+    meta.gefuehrt.antworten.auditprogramm.rhythmus:
+      label: Rhythmus
+      hilfe: Mindestens jährlich, alle Themen innerhalb von drei Jahren; vor der Erstzertifizierung alles.
+    meta.gefuehrt.antworten.auditprogramm.methoden:
+      label: Methoden
+      hilfe: Befragungen und Stichproben sind unverzichtbar.
+    meta.gefuehrt.antworten.auditprogramm.kombiniert:
+      label: Gemeinsames Audit für ISMS und AIMS
+      hilfe: Ein Audit für [[g:isms]] und [[g:aims|AIMS]] spart Zeit; die Checkliste D-20 enthält beide Normen.
+E12-audit:
+  titel: Internes Audit planen und durchführen
+  frage: Wann, durch wen und mit welchem Umfang findet das interne Audit statt?
+  warum: Die auditierende Person darf nicht ihre eigene Arbeit prüfen. Im KMU übernimmt das oft eine geschulte Person aus einem anderen Bereich, das [[g:isms]]-Team, soweit es nicht im [[g:aims|AIMS]]-Projekt tätig ist, oder eine externe Fachperson. Planen Sie für die Auditperson eine Einarbeitung in ISO/IEC 42001 ein. Die Checkliste hält je Prüfpunkt fest, welcher Nachweis gesehen wurde. Wählen Sie die Prozesse im Umfang so, dass jeder Pflichtprozess im Zyklus von drei Jahren einmal geprüft wird.
+  fehler: Wenn die AIMS-Verantwortliche Person ihr eigenes System auditiert, fehlt die Unabhängigkeit. Ohne Begründung der Unabhängigkeit meldet die Prüfung einen Hinweis.
+  felder:
+    geplant:
+      label: Geplant am
+      hilfe: Einige Wochen vor der Managementbewertung.
+    umfang:
+      label: Umfang
+      hilfe: z. B. «alle Abschnitte 4 bis 10, alle anwendbaren [[g:control|Controls]], Stichprobe KI-001, KI-004, KI-008».
+    kriterien:
+      label: Kriterien
+      hilfe: z. B. «ISO/IEC 42001, KI-Leitlinie, D-15».
+    auditor:
+      label: Auditor/in
+      hilfe: Name und Funktion.
+    unabhaengigkeit:
+      label: Unabhängigkeit
+      hilfe: Warum die Person unabhängig ist, z. B. «Qualitätsmanagerin, nicht am Aufbau des AIMS beteiligt».
+    kombiniertMitIsms:
+      label: Gemeinsam mit dem ISMS-Audit
+      hilfe: Ein Termin für beide Normen.
+    durchgefuehrt:
+      label: Durchgeführt am
+      hilfe: Datum des Abschlussgesprächs.
+    checkliste:
+      label: Checkliste je Prüfpunkt
+      hilfe: Je Normabschnitt und Control der gesehene Nachweis (Dokument mit Version, Aufzeichnung oder Nachweis-ID), die Stichprobe und das Ergebnis. Mit «automatisch» übernimmt D-20 das Ergebnis aus den Feststellungen des Audits. Erscheint in D-20, Blatt «Checkliste».
+    stichproben:
+      label: Stichproben und Prüftests
+      hilfe: Je Zeile des Blatts «Stichproben» in D-20 (Nummer 1 bis 13) der gesehene Nachweis und das Ergebnis, z. B. ein KI-System durch alle Schritte.
+    stichproben.nr:
+      label: Nr.
+      hilfe: Nummer der Zeile im Blatt «Stichproben» (1 bis 7 ein System durch alle Schritte, 8 bis 13 Prüftests).
+    stichproben.nachweis:
+      label: Nachweis gesehen
+      hilfe: Dokument mit Version, Aufzeichnung, System oder Person.
+    stichproben.ergebnis:
+      label: Ergebnis
+      hilfe: Konform, Beobachtung oder Nichtkonformität.
+    ergebnis:
+      label: Ergebnis
+      hilfe: Kurzfazit; Feststellungen erfassen Sie auf der nächsten Seite.
+    bericht:
+      label: Auditbericht
+      hilfe: "Kennung und Ablage des Berichts, z. B. «Auditbericht AU-2027-01, Version 1.0»."
+    ziel:
+      label: "Ziel des Audits"
+      hilfe: "z. B. Bereitschaft für [[g:stage-1|Stage 1]] prüfen."
+    umfangControls:
+      label: "Controls im Umfang"
+      hilfe: "Leer heisst: alle anwendbaren Controls."
+    umfangProzesse:
+      label: "Prozesse im Umfang"
+      hilfe: "Prozesse, die dieses Audit prüft (Bereich Prozesse). Leer heisst: keine Eingrenzung. Über den Zyklus von drei Jahren sollte jeder Pflichtprozess einmal im Umfang sein."
+    ort:
+      label: "Ort"
+      hilfe: "Standort oder «remote»."
+    methode:
+      label: "Methode und Stichproben"
+      hilfe: "z. B. Interviews, Dokumente, Vorführung am System; KI-Systeme der Stichprobe."
+    auditierte:
+      label: "Auditierte Personen"
+      hilfe: "Namen und Funktionen."
+    agenda:
+      label: "Ablauf"
+      hilfe: "z. B. Eröffnung, Interviews je Bereich, Abschlussbesprechung."
+    berichtAn:
+      label: "Bericht an"
+      hilfe: "Wer den Auditbericht erhält, z. B. Geschäftsleitung."
+    durchgefuehrtBis:
+      label: "Letzter Audittag"
+      hilfe: "Bei mehrtägigen Audits der letzte Tag; D-20 zeigt den Zeitraum."
+E12-feststellungen:
+  titel: Feststellungen erfassen
+  frage: Welche Abweichungen und Verbesserungsmöglichkeiten wurden festgestellt?
+  warum: Feststellungen stammen aus Audits, der Managementbewertung, Vorfällen oder Meldungen. Je Feststellung halten Sie Einstufung, Beschreibung und die sofortige Korrektur fest.
+  fehler: Ein Audit ohne jede Feststellung wirkt auf [[g:zertifizierungsstelle|Zertifizierungsstellen]] wenig glaubwürdig. Auditoren wollen sehen, dass Ihr System Schwächen findet.
+  felder:
+    quelle:
+      label: Quelle
+      hilfe: Woher die Feststellung stammt.
+    audit:
+      label: Audit
+      hilfe: Verknüpfung mit dem Audit.
+    einstufung:
+      label: Einstufung
+      hilfe: Eine schwere Nichtkonformität betrifft eine ganze Anforderung oder gefährdet die Wirksamkeit.
+    beschreibung:
+      label: Beschreibung
+      hilfe: Was festgestellt wurde, mit Beleg, z. B. «Für KI-005 fehlt die Lieferantenprüfung».
+    nachweis:
+      label: Objektiver Nachweis
+      hilfe: Was gesehen wurde, z. B. Dokument mit Version, Aufzeichnung, Stichprobe oder Aussage im Interview. Erscheint in D-20 und D-22.
+    normbezug:
+      label: Normbezug
+      hilfe: z. B. «A.10.3».
+    korrektur:
+      label: Sofortige Korrektur
+      hilfe: Was sofort getan wurde, um die Abweichung zu beheben.
+    datum:
+      label: "Datum"
+      hilfe: "Wann die Feststellung gemacht wurde."
+    erfasstAm:
+      label: "Erfasst am"
+      hilfe: "Nur wenn später als das Datum, z. B. bei einem nachgetragenen Vorfall: Ab diesem Tag gilt die Kennung F-xxx. Aufzeichnungen davor nennen das Ereignis ohne Kennung."
+    kiSystem:
+      label: "Betroffenes KI-System"
+      hilfe: "Falls die Feststellung ein bestimmtes System betrifft."
+    bereich:
+      label: "Bereich oder Prozess"
+      hilfe: "z. B. Personal, Lieferantenmanagement."
+    schwere:
+      label: "Schweregrad"
+      hilfe: "Nur bei Vorfällen und Beinahe-Vorfällen: Stufen wie in D-14, von 1 gering bis 4 schwer."
+    entdecktAm:
+      label: "Entdeckt (Datum, Uhrzeit)"
+      hilfe: "Wann der Vorfall oder Beinahe-Vorfall bemerkt wurde. Beginn der Messung PR-19 (Stunden bis zur Eindämmung)."
+    eingedaemmtAm:
+      label: "Eingedämmt (Datum, Uhrzeit)"
+      hilfe: "Ab wann der Vorfall keinen weiteren Schaden anrichten konnte, z. B. System eingeschränkt oder Rückfallweg genutzt. Ende der Messung PR-19."
+E12-meldungen:
+  titel: Meldungen und Einsprüche
+  frage: Welche Meldungen, Rückmeldungen und Einsprüche sind eingegangen, und wie wurden sie bearbeitet?
+  warum: Meldungen von Mitarbeitenden (Meldeweg, D-04) und Rückmeldungen oder Einsprüche von Kunden und Betroffenen (Meldekanal, D-14) gehören in ein Register. Es zeigt, dass der Weg gelebt wird, und liefert Anzahl und Reaktionszeit für den Messplan (D-05). Das Register steht in D-22 im Blatt «Meldungen».
+  fehler: Auditoren verfolgen eine Meldung vom Eingang bis zum Abschluss. Fehlt das Register, ist der Meldeweg nicht belegt.
+  felder:
+    meldungen:
+      label: Meldungen
+      hilfe: Eine Zeile je Meldung.
+    meldungen.id:
+      label: ID
+      hilfe: z. B. «ME-001».
+    meldungen.datum:
+      label: Eingang
+      hilfe: Datum des Eingangs.
+    meldungen.art:
+      label: Art
+      hilfe: Bedenken, Rückmeldung, Einspruch oder Beschwerde.
+    meldungen.herkunft:
+      label: Herkunft
+      hilfe: Intern (Mitarbeitende) oder extern (Kunden, Betroffene, Lieferanten).
+    meldungen.kanal:
+      label: Kanal
+      hilfe: z. B. Postfach, Formular im Kundenportal.
+    meldungen.kiSystem:
+      label: KI-System
+      hilfe: Betroffenes System, falls bekannt.
+    meldungen.beschreibung:
+      label: Beschreibung
+      hilfe: Was gemeldet wurde, ohne unnötige Personendaten.
+    meldungen.bearbeitung:
+      label: Bearbeitung
+      hilfe: Wer die Meldung bearbeitet.
+    meldungen.bestaetigtAm:
+      label: Eingang bestätigt am
+      hilfe: Datum der Eingangsbestätigung.
+    meldungen.erledigtAm:
+      label: Erledigt am
+      hilfe: Datum der Antwort oder des Abschlusses.
+    meldungen.ergebnis:
+      label: Ergebnis und Antwort
+      hilfe: Ergebnis, Antwort und Verweis auf eine Feststellung (F-xxx), Massnahme oder ein Risiko.
+    meldungen.status:
+      label: Status
+      hilfe: Offen, in Arbeit oder erledigt.
+E12-korrektur:
+  titel: Ursache und Korrekturmassnahme
+  frage: Warum ist die Abweichung entstanden, was verhindert eine Wiederholung und hat es gewirkt?
+  warum: Eine Korrektur behebt den einzelnen Fall, eine [[g:korrekturmassnahme]] beseitigt die Ursache. Nach einer angemessenen Zeit prüfen Sie, ob die Massnahme gewirkt hat.
+  fehler: Nichtkonformitäten ohne Ursache oder ohne Wirksamkeitsprüfung meldet die Prüfung als Fehler. Auditoren fragen nach der Methode der Ursachenanalyse, etwa fünfmal «Warum?».
+  felder:
+    ursache:
+      label: Ursache
+      hilfe: z. B. «Kein Auslöser für die Lieferantenprüfung bei SaaS-Abos über Kreditkarte».
+    massnahmen:
+      label: Korrekturmassnahmen
+      hilfe: Verknüpfen Sie Massnahmen mit Verantwortlichen und Termin.
+    wirksamkeit.am:
+      label: Wirksamkeit geprüft am
+      hilfe: Einige Wochen nach Umsetzung.
+    wirksamkeit.ergebnis:
+      label: Ergebnis der Wirksamkeitsprüfung
+      hilfe: z. B. «Zwei neue Abos seither korrekt geprüft».
+    status:
+      label: Status
+      hilfe: Geschlossen erst nach wirksamer Massnahme.
+    ursacheMethode:
+      label: "Methode der Ursachenanalyse"
+      hilfe: "z. B. «5 Warum»."
+    ursacheKategorie:
+      label: Ursachenkategorie KI
+      hilfe: Wählen Sie einen Vorschlag wie in D-22 (Daten, Modell, Nutzung ausserhalb des Zwecks, Kompetenz, Lieferant, Prozess) oder schreiben Sie eine eigene Kategorie.
+    aehnlicheFaelle:
+      label: "Ähnliche Fälle"
+      hilfe: "Ob es den Fehler anderswo auch gibt oder geben könnte, und was Sie geprüft haben."
+    meldepflicht:
+      label: Meldepflicht geprüft
+      hilfe: Ob die Abweichung Kunden, Betroffenen oder Behörden gemeldet werden muss, etwa als schwerwiegender Vorfall nach EU AI Act oder als Datenschutzverletzung. Erscheint in D-22.
+    risikoAngepasst:
+      label: "Risikobeurteilung angepasst"
+      hilfe: "Ob Sie das Risikoregister (D-07) nachgeführt haben."
+    wirksamkeitGeplant:
+      label: "Wirksamkeitsprüfung geplant am"
+      hilfe: "Bis wann die Wirksamkeit geprüft wird, z. B. nach drei Monaten oder einer Anzahl Anwendungen."
+E12-mb:
+  titel: Managementbewertung planen
+  frage: Wann findet die Managementbewertung statt und wer nimmt teil?
+  warum: Die Geschäftsleitung bewertet das System mindestens einmal jährlich. Vor dem ersten Zertifizierungsaudit muss eine Bewertung stattgefunden haben.
+  fehler: Eine Managementbewertung ohne Mitglied der Geschäftsleitung zählt nicht. Auditoren lesen das Protokoll und prüfen die Teilnehmenden.
+  felder:
+    datum:
+      label: Datum
+      hilfe: Nach dem internen Audit, vor [[g:stage-1|Stage 1]].
+    teilnehmende:
+      label: Teilnehmende
+      hilfe: Mindestens ein Mitglied der Geschäftsleitung und die [[g:aims|AIMS]]-Verantwortliche Person.
+    kombiniertMitIsms:
+      label: Gemeinsam mit der ISMS-Managementbewertung
+      hilfe: Eine Sitzung mit Traktanden für das [[g:isms]] und das KI-Managementsystem.
+    ort:
+      label: "Ort"
+      hilfe: "z. B. Sitzungszimmer oder online."
+    leitung:
+      label: "Leitung der Sitzung"
+      hilfe: "Meist die vorsitzende Person der Geschäftsleitung."
+    zeitraum.von:
+      label: "Berichtszeitraum von"
+      hilfe: "Beginn des Zeitraums, den die Bewertung abdeckt."
+    zeitraum.bis:
+      label: "Berichtszeitraum bis"
+      hilfe: "Ende des Zeitraums."
+E12-mb-eingaben:
+  titel: Eingaben der Managementbewertung
+  frage: Was legen Sie der Geschäftsleitung zur Bewertung vor?
+  warum: Die Norm gibt vor, welche Eingaben die Bewertung braucht, etwa Stand früherer Massnahmen, Änderungen im Umfeld, Leistung des Systems und Verbesserungsmöglichkeiten. Fehlt eine, ist die Bewertung unvollständig.
+  fehler: Protokolle, die nur «[[g:aims|AIMS]] läuft gut» festhalten, genügen nicht. Auditoren gehen die Eingaben einzeln durch.
+  felder:
+    eingaben.statusMassnahmen:
+      label: Stand der Massnahmen aus früheren Bewertungen
+      hilfe: Bei der ersten Bewertung der Stand des Aufbauprojekts.
+    eingaben.aenderungenThemen:
+      label: Änderungen bei internen und externen Themen
+      hilfe: z. B. neue Fristen im AI Act, neue Kundenanforderungen.
+    eingaben.aenderungenParteien:
+      label: Änderungen bei Erwartungen interessierter Parteien
+      hilfe: Neue oder geänderte Anforderungen.
+    eingaben.leistung:
+      label: Nichtkonformitäten und Korrekturmassnahmen
+      hilfe: Stand der Nichtkonformitäten und ihrer Korrekturmassnahmen (D-21 Nr. 4). Messungen und Audits haben eigene Felder.
+    eingaben.messung:
+      label: Ergebnisse von Überwachung und Messung, Erreichung der KI-Ziele
+      hilfe: z. B. «Z-001 erreicht, Z-002 teilweise». Leer lassen heisst, D-21 fasst die Messungen der Ziele bis zum Datum der Bewertung zusammen (Nr. 5).
+    eingaben.audits:
+      label: Ergebnisse der Audits
+      hilfe: Interne und externe Audits mit ihren Feststellungen. Leer lassen heisst, D-21 fasst die Audits bis zum Datum der Bewertung zusammen (Nr. 6).
+    eingaben.verbesserungen:
+      label: Möglichkeiten zur Verbesserung
+      hilfe: Vorschläge aus Audit, Mitarbeitenden und Kunden.
+    eingaben.weitere:
+      label: Weitere Eingaben
+      hilfe: z. B. Ressourcen, Rückmeldungen von Betroffenen.
+E12-mb-ergebnisse:
+  titel: Weitere Traktanden der Managementbewertung
+  frage: Was hat die Bewertung zu Inventar, Risiken, Meldungen, Lieferanten, Zielen, Ressourcen und zur KI-Leitlinie ergeben?
+  warum: Neben den Eingaben, die jede Managementbewertung behandelt, prüft die Geschäftsleitung die KI-Themen einzeln und hält je Traktandum Ergebnis und Bewertung fest. Zur KI-Leitlinie braucht es einen ausdrücklichen Entscheid, ob sie noch geeignet und angemessen ist oder angepasst wird. Die Angaben erscheinen in D-21 unter «Empfohlene Punkte», mit [[g:isms]] im Ergänzungsblatt D-21-EB unter «Zusätzliche Traktanden für das [[g:aims|AIMS]]».
+  fehler: Ein Protokoll, das nur «besprochen» festhält, zeigt keine Bewertung. Auditoren suchen je Thema ein Ergebnis und einen Entscheid, besonders zur Leitlinie.
+  felder:
+    ergebnisse.inventar:
+      label: KI-Inventar und Freigaben
+      hilfe: z. B. «Zwei neue Systeme freigegeben, ein Schattensystem untersagt; Inventar vollständig.»
+    ergebnisse.risiken:
+      label: Risiken und Folgenabschätzungen
+      hilfe: Veränderte Risiken, offene Behandlungen, neue Folgenabschätzungen.
+    ergebnisse.meldungen:
+      label: Meldungen und Vorfälle
+      hilfe: Eingegangene Meldungen von Mitarbeitenden und Externen und was daraus folgte.
+    ergebnisse.lieferanten:
+      label: Lieferanten
+      hilfe: Ergebnis der Lieferantenprüfungen, Änderungen bei [[g:anbieter|Anbietern]].
+    ergebnisse.ziele:
+      label: KI-Ziele
+      hilfe: Ob die Ziele noch passen oder angepasst werden.
+    ergebnisse.ressourcen:
+      label: Ressourcen
+      hilfe: Ob Zeit, Budget und Kompetenzen reichen.
+    ergebnisse.aiact:
+      label: EU AI Act
+      hilfe: Stand der Pflichten, neue Fristen, Änderungen der Rechtslage.
+    ergebnisse.leitlinie:
+      label: Überprüfung der KI-Leitlinie
+      hilfe: Ausdrücklicher Entscheid, ob die Leitlinie geeignet und angemessen bleibt oder angepasst wird, z. B. «Leitlinie bleibt angemessen, Grundsatz 4 wird bis 30.06. ergänzt.»
+E12-mb-entscheide:
+  titel: Entscheide der Managementbewertung
+  frage: Was hat die Geschäftsleitung entschieden?
+  warum: Die Bewertung endet mit Entscheiden zu Verbesserungen, Änderungen am System und Ressourcen. Daraus entstehen Massnahmen mit Verantwortlichen und Termin.
+  fehler: Bewertungen ohne Entscheid oder Massnahme wirken wie ein Informationsanlass. Auditoren verfolgen Entscheide bis in die Massnahmenliste.
+  felder:
+    entscheide:
+      label: Entscheide
+      hilfe: z. B. «Budget für Schulung Aufsicht HR freigegeben; Leitlinie unverändert; Ziel Z-003 angepasst».
+    massnahmen:
+      label: Massnahmen
+      hilfe: Verknüpfen Sie die Massnahmen aus den Entscheiden.
+    gesamtbeurteilung.geeignet.urteil:
+      label: "Geeignet: Urteil"
+      hilfe: "Passt das [[g:aims|AIMS]] zu Zweck und KI-Einsatz?"
+    gesamtbeurteilung.geeignet.begruendung:
+      label: "Geeignet: Begründung"
+      hilfe: "Ein bis zwei Sätze."
+    gesamtbeurteilung.angemessen.urteil:
+      label: "Angemessen: Urteil"
+      hilfe: "Stehen Aufwand und Umfang im richtigen Verhältnis?"
+    gesamtbeurteilung.angemessen.begruendung:
+      label: "Angemessen: Begründung"
+      hilfe: "Ein bis zwei Sätze."
+    gesamtbeurteilung.wirksam.urteil:
+      label: "Wirksam: Urteil"
+      hilfe: "Erreicht das AIMS seine Ziele?"
+    gesamtbeurteilung.wirksam.begruendung:
+      label: "Wirksam: Begründung"
+      hilfe: "Ein bis zwei Sätze."
+    entscheideListe:
+      label: "Entscheide einzeln"
+      hilfe: "Je Entscheid eine Zeile mit Art, Verantwortung und Termin; ergänzt den Text oben."
+    entscheideListe.art:
+      label: "Art"
+      hilfe: "Verbesserung, Änderung am AIMS, Ressourcen, Ziele oder Restrisiko."
+    entscheideListe.text:
+      label: "Entscheid"
+      hilfe: "Was entschieden wurde."
+    entscheideListe.verantwortlich:
+      label: "Verantwortlich"
+      hilfe: "Wer den Entscheid umsetzt."
+    entscheideListe.termin:
+      label: "Termin"
+      hilfe: "Bis wann."
+    entscheideListe.massnahme:
+      label: "Massnahme"
+      hilfe: "Zugehörige Massnahme, falls erfasst."
+E12-verbesserung:
+  titel: Fortlaufende Verbesserung
+  frage: Aus welchen Quellen schöpfen Sie Verbesserungen?
+  warum: Die [[g:fortlaufende-verbesserung]] ist mehr als das Beheben von Fehlern. Kennzahlen, Rückmeldungen und Vorschläge zeigen, wo das System besser werden kann.
+  fehler: Ein Verbesserungsregister, das nur Auditfeststellungen enthält, zeigt wenig eigene Initiative. Auditoren fragen nach einer Verbesserung, die aus dem Alltag kam.
+  felder:
+    meta.gefuehrt.antworten.verbesserung.quellen:
+      label: Quellen
+      hilfe: Mehrere Antworten möglich.
+E12-rmf-profil:
+  titel: "Profil NIST AI RMF"
+  frage: "Wo stehen Sie bei den 72 Subkategorien des NIST AI RMF, und wo wollen Sie hin?"
+  warum: "Das Ist- und Zielprofil zeigt je Subkategorie, was erreicht ist, was Sie anstreben und mit welcher Massnahme Sie die Lücke schliessen. Das Werkzeug schlägt die Ist-Stufe aus Ihren Dokumenten, [[g:control|Controls]] und Angaben vor. Aktualisieren Sie das Profil vor der [[g:managementbewertung]] und nehmen Sie die Lücken als Eingabe mit (Vorlage N-01, D-21)."
+  fehler: "Ein Ziel von 3 überall ist kein Ziel. Wählen Sie, was für Ihre Firma und Ihre Kunden zählt, und hinterlegen Sie bei jeder Lücke eine Massnahme. Die Stufen beschreiben Ihren Stand im Kit, nicht eine Bestätigung durch NIST."

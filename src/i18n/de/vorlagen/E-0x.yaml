@@ -1,0 +1,15 @@
+# Gemeinsame Texte der Modulvorlagen E-01 bis E-09 (EU AI Act)
+art: Art.
+fundstelle: "{angabe}, S. {seite}"
+titel_bezug: AI-Act-Bezug
+bezug: "Rechtsgrundlage: Verordnung (EU) 2024/1689 (EU AI Act), {fundstellen}. Seitenangaben beziehen sich auf die {rechtsstand}; Stand geprüft am {geprueft}."
+titel_juristisch: Juristische Prüfung
+juristisch: "Diese Vorlage ist eine fachliche Orientierung, keine Rechtsberatung. Lassen Sie Einstufungen mit Hochrisiko-Bezug, Rollenwechsel und Grenzfälle juristisch prüfen und halten Sie das Ergebnis fest."
+juristisch_firma: "Die Angaben sind eine fachliche Einschätzung, keine Rechtsberatung. Einstufungen mit Hochrisiko-Bezug, Rollenwechsel und Grenzfälle lassen wir juristisch prüfen und halten das Ergebnis fest."
+stand: "Stand der Rechtslage: {rechtsstand}, geprüft am {geprueft}. Vor Entscheiden prüfen wir, ob seither Änderungen gelten (E-09)."
+rollen: [Anbieter, Betreiber, Einführer, Händler, Produkthersteller, Bevollmächtigter]
+klassen: [offen, verbotene Praktik, Hochrisiko Anhang III, Hochrisiko Anhang I, Transparenzpflicht, minimales Risiko]
+klasse_kurz:
+  hochrisiko-anhang-iii: Anhang III
+  hochrisiko-anhang-i: Anhang I
+keine_systeme: "Im Projekt sind noch keine KI-Systeme erfasst. Erfassen Sie zuerst das Inventar (D-10)."

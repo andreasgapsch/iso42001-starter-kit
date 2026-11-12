@@ -1,0 +1,49 @@
+# Register aller Kit-Vorlagen. Titel und Kurzbeschreibung: src/i18n/<sprache>/dokumente.yaml
+# isms: neu | erweitert | wiederverwendet | leitfaden  (Bezug zu einem bestehenden ISMS nach ISO/IEC 27001)
+# eb: true = im Pfad «mit ISMS» als Ergänzungsblatt D-xx-EB statt als eigenes Dokument
+# art: pflicht | leitfaden | modul (EU AI Act, meta.modulAiAct) | modul_nist (NIST AI RMF, meta.modulNistRmf)
+# ordner: kit-ordner (DE/EN-Namen in i18n: ordner.<schluessel>)
+# datei: Dateistamm ohne Endung, je Sprache, ohne Umlaute und Sonderzeichen
+dokumente:
+  - { id: D-00, format: xlsx, normbezug: "alle", isms: neu, eb: false, art: pflicht, ordner: vorlagen, datei: { de: D-00_Gap-Analyse, en: D-00_Gap-Analysis } }
+  - { id: D-01, format: docx, normbezug: "4.1, 4.2", isms: erweitert, eb: false, art: pflicht, ordner: vorlagen, datei: { de: D-01_Kontext, en: D-01_Context } }
+  - { id: D-02, format: docx, normbezug: "4.3, 4.4", isms: erweitert, eb: false, art: pflicht, ordner: vorlagen, datei: { de: D-02_Geltungsbereich, en: D-02_Scope } }
+  - { id: D-03, format: docx, normbezug: "5.2, A.2", isms: neu, eb: false, art: pflicht, ordner: vorlagen, datei: { de: D-03_KI-Leitlinie, en: D-03_AI-Policy } }
+  - { id: D-04, format: docx, normbezug: "5.3, A.3", isms: erweitert, eb: true, art: pflicht, ordner: vorlagen, datei: { de: D-04_Rollen, en: D-04_Roles } }
+  - { id: D-05, format: xlsx, normbezug: "6.2, 9.1, A.6.1.2, A.9.3", isms: erweitert, eb: false, art: pflicht, ordner: vorlagen, datei: { de: D-05_Ziele-Kennzahlen, en: D-05_Objectives-Metrics } }
+  - { id: D-06, format: docx, normbezug: "6.1.1 bis 6.1.3, 8.2, 8.3", isms: erweitert, eb: true, art: pflicht, ordner: vorlagen, datei: { de: D-06_Verfahren-Risiko, en: D-06_Risk-Procedure } }
+  - { id: D-07, format: xlsx, normbezug: "6.1.1 bis 6.1.3, 8.2, 8.3", isms: erweitert, eb: true, art: pflicht, ordner: vorlagen, datei: { de: D-07_Risikoregister, en: D-07_Risk-Register } }
+  - { id: D-08, format: docx, normbezug: "6.1.4, 8.4, A.5.2", isms: neu, eb: false, art: pflicht, ordner: vorlagen, datei: { de: D-08_Verfahren-Folgenabschaetzung, en: D-08_Impact-Assessment-Procedure } }
+  - { id: D-09, format: docx, normbezug: "6.1.4, 8.4, A.5.3 bis A.5.5", isms: neu, eb: false, art: pflicht, ordner: vorlagen, je_system: true, datei: { de: D-09_Folgenabschaetzung, en: D-09_Impact-Assessment } }
+  - { id: D-10, format: xlsx, normbezug: "A.4.2 bis A.4.6, A.6, 7.1", isms: neu, eb: true, art: pflicht, ordner: vorlagen, datei: { de: D-10_KI-Inventar, en: D-10_AI-Inventory } }
+  - { id: D-11, format: xlsx, normbezug: "6.1.3", isms: neu, eb: false, art: pflicht, ordner: vorlagen, datei: { de: D-11_Erklaerung-Anwendbarkeit, en: D-11_Statement-of-Applicability } }
+  - { id: D-12, format: docx, normbezug: "8.1, A.6.1.2 bis A.6.2.8, A.9.4", isms: neu, eb: false, art: pflicht, ordner: vorlagen, datei: { de: D-12_Lebenszyklus, en: D-12_Life-Cycle } }
+  - { id: D-13, format: docx, normbezug: "A.4.3, A.7.2 bis A.7.6", isms: neu, eb: false, art: pflicht, ordner: vorlagen, datei: { de: D-13_Daten, en: D-13_Data } }
+  - { id: D-14, format: docx, normbezug: "A.8", isms: erweitert, eb: true, art: pflicht, ordner: vorlagen, datei: { de: D-14_Information-Transparenz, en: D-14_Information-Transparency } }
+  - { id: D-15, format: docx, normbezug: "A.9, 7.3", isms: erweitert, eb: true, art: pflicht, ordner: vorlagen, datei: { de: D-15_Richtlinie-KI-Nutzung, en: D-15_Responsible-AI-Use } }
+  - { id: D-16, format: xlsx, normbezug: "8.1, A.10", isms: erweitert, eb: true, art: pflicht, ordner: vorlagen, datei: { de: D-16_Lieferanten, en: D-16_Suppliers } }
+  - { id: D-17, format: xlsx, normbezug: "7.2, 7.3, 7.4", isms: erweitert, eb: true, art: pflicht, ordner: vorlagen, datei: { de: D-17_Kompetenz-Kommunikation, en: D-17_Competence-Communication } }
+  - { id: D-20, format: xlsx, normbezug: "9.2", isms: erweitert, eb: true, art: pflicht, ordner: vorlagen, datei: { de: D-20_Internes-Audit, en: D-20_Internal-Audit } }
+  - { id: D-21, format: docx, normbezug: "9.3", isms: erweitert, eb: true, art: pflicht, ordner: vorlagen, datei: { de: D-21_Managementbewertung, en: D-21_Management-Review } }
+  - { id: D-22, format: xlsx, normbezug: "10.1, 10.2", isms: wiederverwendet, eb: true, art: pflicht, ordner: vorlagen, datei: { de: D-22_Nichtkonformitaeten, en: D-22_Nonconformities } }
+  - { id: D-23, format: xlsx, normbezug: "Anhang D", isms: leitfaden, eb: false, art: leitfaden, ordner: integration, datei: { de: D-23_Integrationsmatrix-27001, en: D-23_Integration-Matrix-27001 } }
+  - { id: D-24, format: docx, normbezug: "4.1", isms: leitfaden, eb: false, art: leitfaden, ordner: vorlagen, datei: { de: D-24_Rolle-zuerst, en: D-24_Role-First } }
+  - { id: D-25, format: docx, normbezug: "9, 10", isms: leitfaden, eb: false, art: leitfaden, ordner: vorlagen, datei: { de: D-25_Zertifizierungsfahrplan, en: D-25_Certification-Roadmap } }
+  - { id: D-26, format: docx, normbezug: "6.3, 7.5", isms: wiederverwendet, eb: true, art: pflicht, ordner: vorlagen, datei: { de: D-26_Dokumentenlenkung, en: D-26_Document-Control } }
+  - { id: D-27, format: docx, normbezug: "4.4, 8.1", isms: erweitert, eb: false, art: pflicht, ordner: vorlagen, je_prozess: true, datei: { de: D-27_Prozessbeschreibungen, en: D-27_Process-Descriptions } }
+  - { id: E-01, format: xlsx, normbezug: "AI Act Art. 3, 25", isms: neu, eb: false, art: modul, ordner: modul, datei: { de: E-01_Rollenbestimmung, en: E-01_Role-Determination } }
+  - { id: E-02, format: xlsx, normbezug: "AI Act Art. 5, 6, 50, Anhang I, III", isms: neu, eb: false, art: modul, ordner: modul, datei: { de: E-02_Risikoklassifizierung, en: E-02_Risk-Classification } }
+  - { id: E-03, format: xlsx, normbezug: "AI Act", isms: neu, eb: false, art: modul, ordner: modul, datei: { de: E-03_Pflichtenmatrix, en: E-03_Obligations-Matrix } }
+  - { id: E-04, format: docx, normbezug: "AI Act Art. 4", isms: erweitert, eb: false, art: modul, ordner: modul, datei: { de: E-04_KI-Kompetenz, en: E-04_AI-Literacy } }
+  - { id: E-05, format: xlsx, normbezug: "AI Act Art. 26", isms: neu, eb: false, art: modul, ordner: modul, datei: { de: E-05_Betreiberpflichten, en: E-05_Deployer-Obligations } }
+  - { id: E-06, format: docx, normbezug: "AI Act Art. 27", isms: neu, eb: false, art: modul, ordner: modul, datei: { de: E-06_Grundrechte-Folgenabschaetzung, en: E-06_Fundamental-Rights-Impact-Assessment } }
+  - { id: E-07, format: docx, normbezug: "AI Act Art. 50", isms: neu, eb: false, art: modul, ordner: modul, datei: { de: E-07_Transparenzpflichten, en: E-07_Transparency-Obligations } }
+  - { id: E-08, format: docx, normbezug: "AI Act Art. 8 bis 22, 43, 47 bis 49, 72, 73", isms: neu, eb: false, art: modul, ordner: modul, datei: { de: E-08_Anbieterpflichten, en: E-08_Provider-Obligations } }
+  - { id: E-09, format: docx, normbezug: "AI Act Art. 111, 113", isms: neu, eb: false, art: modul, ordner: modul, datei: { de: E-09_Fristen-Stand, en: E-09_Deadlines-Status } }
+  - { id: N-01, format: xlsx, normbezug: "NIST AI 100-1", isms: neu, eb: false, art: modul_nist, ordner: modul_nist, datei: { de: N-01_AI-RMF-Profil, en: N-01_AI-RMF-Profile } }
+  - { id: N-02, format: xlsx, normbezug: "NIST AI 100-1, ISO/IEC 42001", isms: neu, eb: false, art: modul_nist, ordner: modul_nist, datei: { de: N-02_Abdeckung-AI-RMF-42001, en: N-02_Coverage-AI-RMF-42001 } }
+  - { id: N-03, format: xlsx, normbezug: "NIST AI 100-1 MEASURE", isms: neu, eb: false, art: modul_nist, ordner: modul_nist, datei: { de: N-03_Mess-und-Pruefkonzept, en: N-03_Measurement-and-Test-Plan } }
+  - { id: N-04, format: xlsx, normbezug: "NIST AI 600-1", isms: neu, eb: false, art: modul_nist, ordner: modul_nist, datei: { de: N-04_Generative-KI-Risiken, en: N-04_Generative-AI-Risks } }
+gestrichen:
+  - { id: D-18, ersetzt_durch: D-17 }
+  - { id: D-19, ersetzt_durch: D-05 }

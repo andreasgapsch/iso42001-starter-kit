@@ -1,0 +1,70 @@
+# D-02 Scope and AIMS overview
+einleitung: "This document sets out what the AI management system of [[Company name]] covers and gives an overview of its processes. It builds on the context, roles and interested parties in D-01."
+einleitung_firma: "This document sets out what the AI management system of {firma} covers and gives an overview of its processes. It builds on the context, roles and interested parties in D-01."
+abschnitte:
+  aussage: Scope
+  grenzen: Boundaries
+  systeme: AI systems within the scope
+  schnittstellen: Interfaces and outsourced activities
+  ausschluesse: Exclusions
+  ueberblick: AIMS overview
+  aenderungen: Changes to the scope
+  freigabe: Approval
+hinweis_aussage: |
+  Summarize the scope in two to four sentences. This statement will later appear on the certificate. Check whether it
+  • names the company and its sites,
+  • states which AI-related activities are included (e.g. buying and using, development, offering to customers),
+  • names your role (e.g. user, provider),
+  • does without product names and does not go out of date when a tool changes,
+  • fits the issues and parties in D-01 and leaves out nothing customers expect.
+aussage_beispiel: "[[The AI management system applies to the purchase, introduction and use of AI systems by all units of Company name at the Location site. It covers AI in purchased software, AI services from the cloud and use by employees.]]"
+aussage_fehlt: "No scope statement has been recorded in the project yet. Add it before approval."
+hinweis_grenzen: "Name what is not included, so that the boundary is clear to auditors."
+grenzen_felder:
+  organisation: Organizational
+  technik: Technical
+  standorte: Sites
+grenzen_beispiel:
+  organisation: "[[Companies and units, e.g. all departments of Company name, excluding subsidiary X]]"
+  technik: "[[IT environments and platforms, e.g. Microsoft 365, ERP, AI services from the cloud; excluding production control systems]]"
+  standorte: "[[Sites, e.g. head office Location and field staff]]"
+ausbau_grenzen: "If you develop AI yourself, also name development and test environments, data platforms for training and repositories for models."
+hinweis_systeme: "Take the AI systems from the AI inventory (D-10), including AI in purchased software, identified shadow AI and suspended systems with their status."
+systeme_fehlen: "No AI systems have been recorded in the project yet. Complete the AI inventory (D-10)."
+systeme_keine_aktiven: "All recorded AI systems have been replaced. No AI system within the scope is currently in use, under review or prohibited."
+systeme_ohne_nutzung: "Prohibited and suspended systems are within the scope: the AI management system monitors that they are not used and controls any return to service. Replaced systems appear only in the AI inventory (D-10)."
+lieferant_stand: "supplier assessment: {status}"
+lieferant_stand_datum: "supplier assessment: {status}, {datum}"
+systeme_kopf: [ID, AI system, Type, Purpose, System owner, Status]
+hinweis_schnittstellen: "Name where the management system works with other units or third parties. Outsourced activities stay in scope and are controlled through contracts (D-16)."
+schnittstellen_kopf: [Interface, What is exchanged or provided, Who controls it, Reference]
+schnittstellen_vorschlag:
+  - [Information security (ISMS), "Protection of data in AI systems, incidents, access", "[[Name, role]]", "[[Document]]"]
+  - [Data protection, "Personal data in AI systems, data protection impact assessments", "[[Name, role]]", "[[Document]]"]
+  - [IT service provider, "Operation and configuration of the AI services", "[[Name, role]]", D-16]
+  - [Providers of AI services, "Provision of models and platforms", "[[Name, role]]", D-16]
+  - [Parent company or group, "Requirements and shared tools", "[[Name, role]]", "[[Document]]"]
+schnittstellen_firma: "Description of the interfaces:"
+lieferanten_titel: "Outsourced activities and suppliers (controlled through D-16):"
+hinweis_ausschluesse: "Give reasons for exclusions; clauses 4 to 10 of the standard cannot be excluded. Decide on controls in D-11."
+ausschluesse_kopf: [What is excluded, Reason]
+ausschluesse_vorschlag:
+  - ["[[Unit, site or AI system]]", "[[Reason]]"]
+keine_ausschluesse: "No exclusions have been defined."
+keine_ausschluesse_bestaetigt: "There are no exclusions. Top management has confirmed that the AI management system covers all areas, sites and AI systems."
+aenderung_freigabe: "Approval of version {version}"
+hinweis_ueberblick: "The process map shows which processes make up the management system and who owns them; D-27 describes flow and status."
+ueberblick_text: "This is how the processes interlock: context and inventory determine which risks and impacts we assess. From this we select controls and actions, put them into practice in operation and measure their effect. Internal audit and management review check the whole system; nonconformities and ideas flow back as improvements."
+ueberblick_d27: "the process manual D-27 describes the flow, roles, records, indicator and status of each process with its process diagrams."
+ueberblick_kopf: [Process, Purpose, Owner, Document]
+prozesse_anlage: Processes of the management system
+prozesse_verweis: "The {anzahl} processes with purpose, owner and document are in Appendix {nr} at the end of the document."
+prozesse_verweis_eins: "The process with purpose, owner and document is in Appendix {nr} at the end of the document."
+isms_basis: "The ISMS runs these basic information security processes; the AI management system builds on them: {liste}."
+nicht_anwendbar: "Not applied, with justification: {liste}."
+nicht_anwendbar_bedingung: "condition does not apply"
+hinweis_aenderungen: "Change the scope only in a planned way and inform the certification body of significant changes."
+aenderungen_text: "Changes to the scope are planned in line with D-26 and approved by top management. They are recorded here with version and date."
+aenderungen_kopf: [Version, Date, Change, Approved by]
+freigabe_text: "Top management approved the scope on {datum}."
+freigabe_text_version: "Top management first approved the scope on {erste} and approved version {version} on {datum}."

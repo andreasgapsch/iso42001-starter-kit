@@ -1,0 +1,85 @@
+# D-08 AI system impact assessment procedure
+hinweis_umfang: "The structure follows ISO/IEC 42005 (guidance on AI system impact assessment), clause 5, in our own words. You carry out the assessment for each system with D-09."
+einleitung: "This procedure sets out when, how and by whom [[Company name]] assesses the impacts of AI systems on people and society."
+einleitung_firma: "This procedure sets out when, how and by whom {firma} assesses the impacts of AI systems on people and society."
+abschnitte:
+  zweck: Purpose
+  einbettung: Link to other assessments
+  ausloeser: Triggers and timing
+  triage: Screening and thresholds
+  umfang: Scope
+  zustaendigkeiten: Responsibilities
+  durchfuehrung: Carrying out the assessment
+  auswertung: Evaluation and decision
+  bericht: Reporting and information
+  freigabe: Approval of assessments
+  ueberwachung: Monitoring and repetition
+  aufbewahrung: Retention
+  freigabe_verfahren: Approval of the procedure
+zweck_text: "The risk assessment (D-06) mainly asks what is at stake for the company. The impact assessment asks what an AI system means for the people who use it or are affected by its outputs, and for society. It looks at both benefits and harms."
+einbettung_punkte:
+  - "**Risk management (D-06):** any harm identified is added as a risk to the register D-07. Both procedures use the same impact scale."
+  - "**Data protection impact assessment:** if the system processes personal data with a high risk (Switzerland: FADP Art. 22, EU: GDPR Art. 35), we use the same information and cross-reference the two. We collect each fact only once."
+  - "**Fundamental rights impact assessment:** where the EU AI Act requires one (Art. 27), E-06 extends this assessment."
+  - "**Other reviews:** we link security, ethics or sector-specific reviews in the ‘linked assessments’ field in D-09."
+ausloeser_text: "We carry out a screening for every AI system in the inventory (D-10):"
+ausloeser_punkte:
+  - "before approving a new system or a new use (D-12, D-15);"
+  - "after significant changes to the system, model, data, provider or context of use;"
+  - "after an incident or a justified report from affected persons;"
+  - "for existing systems, at the latest at the next review;"
+  - "after the risk assessment (back-check): if the system has a {{fakt:folgen.schwelle}} (threshold under D-06), the short check is no longer sufficient, even if the six questions allow it."
+ausloeser_entwicklung: "For in-house developments, the assessment already starts at the design stage and is completed before the system goes live."
+triage_text: "The screening consists of six questions about the AI system and its planned use. It is on page 1 of D-09 and usually takes less than an hour."
+triage_kopf: [No., Question]
+triage:
+  fragen:
+    rechtspositionOderChancen: "Does the system shape decisions about rights or opportunities (jobs, credit, benefits)?"
+    gesundheitOderSicherheit: "Can an error or failure endanger people's health or safety?"
+    verletzlicheGruppen: "Does it affect vulnerable groups (children, patients, job applicants, dependent employees)?"
+    besondereDaten: "Does it process sensitive personal data (health, ethnic origin, religion, biometrics)?"
+    automatisierteEntscheidung: "Does it act without human review, or are outputs usually adopted unchanged?"
+    grosseReichweite: "Does it affect many people or outsiders, or are the consequences hard to reverse?"
+schwellen_titel: "Thresholds for sensitive and restricted use"
+ausmass_titel: "Extent of harm"
+schwellen:
+  - "**Sensitive use, full assessment required:** question 1 or 2 is answered ‘yes’, or at least two of questions 3 to 6."
+  - "**Borderline case:** exactly one of questions 3 to 6 is answered ‘yes’. The AIMS lead ({verantwortlich}) decides, with reasons, whether a full assessment is required."
+  - "**No threshold reached:** the screening is enough. The result and the reasons are recorded in D-09."
+  - "**Restricted use:** if harm has extent {hoch} before actions, we only allow the system under conditions (e.g. only with human review, only for certain purposes or data) or not at all. The conditions are listed in the approval list (D-10) and in the AI use policy (D-15)."
+schwellen_aiact: "**EU AI Act:** systems involving a prohibited practice (Art. 5) are not permitted. High-risk systems always get a full assessment."
+ausmass_text: "We rate the extent of harm before actions with the impact scale from D-06 ({bereich}), like impact A before treatment in D-07. We take three aspects into account:"
+ausmass_punkte:
+  - "**Severity:** how hard does the harm hit an individual?"
+  - "**Reach:** how many people are affected, and how vulnerable are they?"
+  - "**Reversibility:** can the harm be remedied quickly and completely?"
+umfang_text: "At the start we record what the assessment covers: the system and its version, the intended uses, the places of use, countries and languages, the life cycle phases and the groups affected. For purchased systems we assess our own use and rely on the supplier's information for the model and training data."
+zustaendigkeiten_kopf: [Role, Tasks]
+zustaendigkeiten:
+  - [AI system owner, "carries out screening and assessment, obtains information from the supplier"]
+  - ["Person responsible for the AIMS ({verantwortlich})", "provides method and template, checks quality, decides borderline cases"]
+  - [Business unit and users, "describe the context of use, intended uses and possible misuse"]
+  - [Data protection adviser, "links the data protection impact assessment, reviews personal data"]
+  - [Representatives of affected persons, "are consulted where possible and useful, e.g. the staff committee"]
+  - ["{{fakt:freigabe.abschaetzung|gross}}", "approves full assessments and decides on restricted use"]
+zustaendigkeiten_unabhaengig: "Whoever carries out an assessment does not approve it."
+durchfuehrung:
+  - "Collect documents: system description, supplier information, contracts, test results."
+  - "Describe the purpose, intended uses and reasonably foreseeable misuse."
+  - "Identify the groups affected (directly and indirectly) and consult them where possible."
+  - "Assess benefits and harms for the eight objectives in D-09 and rate the extent."
+  - "Play through failures and misuse: what happens if the system is wrong, fails or is misused?"
+  - "Define actions and add them to the treatment plan (D-07)."
+auswertung_text: "The assessment leads to one of three decisions: use as planned, use under conditions (restricted use) or do not use. We add any harm identified, with its extent, as risks in D-07."
+bericht_intern: "**Internally**, the owner, top management and users receive the result with all conditions. The management review (D-21) receives an overview."
+bericht_extern: "**Externally**, we provide a summary to customers, affected persons or authorities on request. We leave out trade secrets, security details and personal data. D-14 describes the channel for feedback."
+bericht_aiact: "If a fundamental rights impact assessment under Art. 27 of the EU AI Act is required, we notify the competent market surveillance authority of its result (E-06)."
+freigabe_text: "The {{fakt:freigabe.kurzpruefung}} ({verantwortlich}) approves screenings where no threshold is reached, never the person who carried out the screening. {{fakt:freigabe.abschaetzung|gross}} approves full assessments and every restricted use. Only then may the system go live or remain in use."
+ueberwachung_text: "During operation, the owner watches whether the actions work and whether reports come in. We repeat the assessment when the triggers in section 3 occur, otherwise at least {intervall}."
+ueberwachung_intervall: "every year for sensitive use and every two years for all other systems"
+aufbewahrung_text: "We keep every screening and assessment with version, date and approval for as long as the system is in operation and for [[3 years]] afterwards. Storage: [[Storage location]], in line with document control (D-26)."
+aufbewahrung_text_firma: "We keep every screening and assessment with version, date and approval. Retention: {aufbewahrung}. Storage: {ablage}, in line with document control (D-26)."
+platzhalter_aufbewahrung: "for as long as the system is in operation and 3 years afterwards"
+aufbewahrung_jahre: "for as long as the system is in operation and {jahre} years afterwards"
+ausbau_entwicklung: "For providers and in-house development: start the assessment at the design stage, attach fairness and robustness tests as evidence and review the assessment with every retraining."
+freigabe_verfahren_text: "Top management approved this procedure on {datum}."

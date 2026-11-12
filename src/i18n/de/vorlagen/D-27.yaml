@@ -1,0 +1,64 @@
+# D-27 Prozessbeschreibungen (Prozesshandbuch oder einzelner Prozess). Prozesstexte: src/i18n/de/prozesse.yaml
+hinweis: "Das Handbuch enthält je anwendbarem Prozess ein Kapitel. Passen Sie Rollen, Schritte und Nachweise an Ihre Firma an und benennen Sie je Prozess einen Eigner. Der Ablauf lässt sich im AIMS-Manager bearbeiten oder als Datei für draw.io austauschen; die Grafik folgt dem Ablauf. Die Kapitel PS-02, PS-04 und PS-06 sind Mustertexte für Basisprozesse, die das Kit ohne ISMS empfiehlt: Ohne ISMS passen Sie sie an und streichen die Angaben zu ISO/IEC 27001 und ISMS; mit ISMS ersetzen Sie sie durch einen Verweis auf die Stelle im ISMS."
+einleitung: "Dieses Handbuch beschreibt die Prozesse des KI-Managementsystems von [[Firmenname]]: wer was in welcher Reihenfolge tut, welche Nachweise entstehen und wie der Prozess gemessen wird."
+einleitung_firma: "Dieses Handbuch beschreibt die Prozesse des KI-Managementsystems von {firma}: wer was in welcher Reihenfolge tut, welche Nachweise entstehen und wie der Prozess gemessen wird."
+einleitung_einzeln: "Diese Beschreibung legt einen Prozess des KI-Managementsystems von {firma} fest: wer was in welcher Reihenfolge tut, welche Nachweise entstehen und wie der Prozess gemessen wird."
+lesehilfe: "Im Ablauf steht jede Rolle in einer eigenen Spalte (Bahn). Die Bahn führt den Schritt aus oder verantwortet ihn; verantwortet oder führt eine andere Rolle den Schritt, nennt die Tabelle sie in der Spalte «Rolle», dazu wer mitwirkt und wer informiert wird. Gelb hinterlegte Formen sind Entscheidungen. Die Reifestufen und ihre Kriterien nennt die folgende Tabelle."
+reife_kopf: [Reife, Kriterium]
+keine_prozesse: "Für das Managementsystem sind noch keine Prozesse als anwendbar festgelegt."
+abschnitte:
+  einleitung: Zweck und Aufbau
+  ausloeser: Auslöser
+  eingaben: Eingaben
+  ablauf: Ablauf
+  ausgaben: Ausgaben und Nachweise
+  kennzahl: Kennzahl
+  schnittstellen: Schnittstellen
+  massnahmen: Offene Massnahmen
+  freigabe: Freigabe
+felder:
+  art: Geltung
+  eigner: Eigner/in
+  stellvertretung: Stellvertretung
+  reife: Reife
+  letzte: Letzte Durchführung
+  faellig: Nächste Durchführung
+  isms: Im ISMS
+  extern: Ausgeführt durch
+eigner_leer: "[[Name, Funktion]] (Vorschlag: {rolle})"
+noch_keine: noch keine
+ablauf_titel: "Ablauf {prozess}"
+alt_text: "Ablauf mit {anzahl} Schritten in den Bahnen {bahnen}. Die Tabelle nennt jeden Schritt mit Rolle, Mitwirkung und Zweigen."
+alt_text_eins: "Ablauf mit 1 Schritt in den Bahnen {bahnen}. Die Tabelle nennt den Schritt mit Rolle, Mitwirkung und Zweigen."
+schritte_kopf: [Nr., Schritt, Rolle, Wirkt mit, Wird informiert, Weiter mit]
+kennzahl_text: "{kennzahl}. Sollwert: {soll}."
+kennzahl_wert: "Gemessen als {kennzahl}: {wert} am {datum}."
+kennzahl_ohne_wert: "Gemessen als {kennzahl}; noch kein Messwert."
+kennzahl_keine_messung: "Gemessen als {kennzahl}: {wert}, Stand {datum}."
+kennzahl_soll_ja: "Sollwert erreicht."
+kennzahl_soll_teilweise: "Sollwert teilweise erreicht."
+kennzahl_soll_nein: "Sollwert nicht erreicht."
+kennzahl_eigen: "Noch keine Kennzahl festgelegt."
+kennzahl_messplan: "Die Kennzahl steht unter der Kennung des Prozesses im Messplan (D-05); gemessen wird sie vom Eigner im Rhythmus des Prozesses."
+verbunden: "Verbundene Prozesse: {liste}"
+verweise: "Übergabe an: {liste}"
+dokumente: "Dokumente: {liste}"
+massnahmen_kopf: [ID, Massnahme, Verantwortlich, Termin, Status]
+freigabe_text: "Die Prozessbeschreibungen sind am {datum} freigegeben worden."
+rolle_a: "verantwortet: {liste}"
+rolle_r: "führt aus: {liste}"
+extern_text: "{wer}; Steuerung: {steuerung}"
+# Geltung im Firmendokument (Fachsprache statt Einstufung des Katalogs)
+geltung:
+  pflicht: Pflichtprozess des Managementsystems
+  control: angewendet; Grundlage ist die Erklärung zur Anwendbarkeit (D-11)
+  bedingt: "angewendet, weil {grund}"
+  bedingt_systeme: "angewendet, weil {grund} ({systeme})"
+  minimal: Grundschutz der Informationssicherheit, auf dem die KI-Controls aufbauen
+  empfohlen: von der Firma als Grundschutz der Informationssicherheit festgelegt
+  empfohlen_grund: "von der Firma als Grundschutz der Informationssicherheit festgelegt: {grund}"
+  eigen: eigener Prozess der Firma
+# Lenkungsangaben in der Datei für draw.io (gelenkte Aufzeichnung zu D-27)
+drawio:
+  kopf: "D-27-A Prozessdiagramme, Anlage zu {titel} (D-27). Version {version}, freigegeben am {datum} durch {person}"
+  kopf_entwurf: "D-27-A Prozessdiagramme, Anlage zu {titel} (D-27). Version {version}, noch nicht freigegeben"

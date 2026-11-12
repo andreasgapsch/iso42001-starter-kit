@@ -1,0 +1,38 @@
+# Shared texts of the module templates N-01 to N-04 (NIST AI RMF). Own wording; NIST texts only as marked quotations
+# from src/nist-rmf/original-*.yaml (column ‘Original NIST text’, sheet ‘Source’).
+titel_bezug: NIST AI RMF reference
+quelle_leer: "Source: NIST AI 100-1, Artificial Intelligence Risk Management Framework (AI RMF 1.0, January 2023){genai}, National Institute of Standards and Technology (NIST); works of the US Government, in the public domain in the United States; own short titles. The column ‘Original NIST text’ quotes NIST verbatim; actions and mappings are the kit's own wording. Republished courtesy of the National Institute of Standards and Technology. The PDFs are included with the kit in the folder {ordner}; page numbers refer to these files. The reference does not imply endorsement by NIST."
+quelle_leer_genai: " and NIST AI 600-1, Generative Artificial Intelligence Profile (July 2024)"
+quelle_firma: "Basis: NIST AI 100-1, AI RMF 1.0 (January 2023), {doi_100}{genai}. Short titles in our own words, original texts quoted verbatim; page numbers refer to the NIST PDF files. Republished courtesy of the National Institute of Standards and Technology."
+quelle_firma_genai: ", and NIST AI 600-1, Generative AI Profile (July 2024), {doi_600}"
+kein_recht: "The AI RMF is a voluntary framework, neither law nor a standard. NIST does not certify; the profile is a self-assessment, not evidence of conformity."
+stand: "Status of the NIST AI RMF checked on {datum}: AI RMF 1.0 applies. A revision has been announced; no draft is available."
+stufen_text: "Levels: 0 not achieved, 1 partly (started or only partly covered), 2 achieved (defined and applied), 3 effective (effectiveness checked)."
+fundstelle_100: "AI 100-1 p. {seite}"
+fundstelle_playbook: "Playbook p. {seite}"
+fundstelle_600: "AI 600-1 p. {seite}"
+praezisierung: Refinement of existing documents
+status: [open, planned, partly, implemented, effective]
+entscheid:
+  ja: "included in the SoA, status: {status}"
+  nein: not included
+  offen: open
+spalte_original: "Original NIST text"
+spalte_uebersetzung: "Translation (own, not official)"
+blatt_quelle: Source
+titel_quelle: Source of the quoted NIST texts
+hinweis_quelle: "The column ‘Original NIST text’ reproduces the NIST text verbatim."
+spalten_quelle: [Item, Content]
+quelle:
+  dokument: Document
+  doi: DOI
+  stellen: Quoted passages
+  vermerk: Notice
+  rechte: Right of use
+  uebersetzung: Translation
+  ablage: PDF for reference
+stellen_100: "Tables 1 to 4 (functions, categories, subcategories), section 3 (trustworthiness characteristics), section 5 (functions)"
+stellen_600: "Section 2 (twelve risks), section 3 (suggested actions)"
+rechte_text: "Works of the US Government, in the public domain in the United States (17 U.S.C. § 105); outside the United States, NIST grants a worldwide, royalty-free right to reprint and to create derivative works. The reference does not imply endorsement by NIST."
+uebersetzung_text: "Own translation, not official; the English original prevails."
+ablage_text: "Folder {ordner}, file {datei}"

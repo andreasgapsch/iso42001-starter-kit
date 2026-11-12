@@ -1,0 +1,42 @@
+# Etappe E13 Zertifizierung vorbereiten. Format: src/gefuehrt/FORMAT.md
+seiten:
+  - { id: E13-einfuehrung, typ: info, norm: "9.2, 9.3", vorlage: D-25, leitfaden: 10 }
+  - id: E13-stelle
+    typ: formular
+    norm: "9, 10"
+    vorlage: D-25
+    leitfaden: 10
+    beispiel: meta.gefuehrt.antworten.zertifizierung
+    felder:
+      - { pfad: meta.gefuehrt.antworten.zertifizierung.stelle, typ: text, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.zertifizierung.akkreditiert, typ: janein, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.zertifizierung.kombiniert, typ: janein, wenn: { mitIsms: true } }
+  - id: E13-termine
+    typ: liste
+    mindestensEiner: true
+    liste: audits
+    norm: "9, 10"
+    vorlage: D-25
+    leitfaden: 10
+    filter: { art: [extern-stage1, extern-stage2] }
+    vorgabe: { art: extern-stage1 }
+    startwerte:
+      - { art: extern-stage1 }
+      - { art: extern-stage2 }
+    beispiel: audits[1]
+    felder:
+      - { pfad: art, typ: auswahl, optionen: auditArt, pflicht: true }
+      - { pfad: geplant, typ: datum, pflicht: true }
+      - { pfad: auditor, typ: text }
+      - { pfad: umfang, typ: textarea }
+      - { pfad: kombiniertMitIsms, typ: janein, wenn: { mitIsms: true } }
+      - { pfad: zertifikatAm, typ: datum, wenn: { eintrag: { art: [extern-stage2] } } }
+  - id: E13-unterlagen
+    typ: formular
+    norm: "7.5, 9, 10"
+    vorlage: D-25
+    leitfaden: 10
+    beispiel: meta.gefuehrt.antworten.zertifizierung.unterlagen
+    felder:
+      - { pfad: meta.gefuehrt.antworten.zertifizierung.unterlagen, typ: mehrfach, optionen: stage1Unterlagen, pflicht: true }
+  - { id: E13-pruefung, typ: pruefung, norm: "4 bis 10, Anhang A", vorlage: D-25, leitfaden: 10 }

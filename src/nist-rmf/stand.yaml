@@ -1,0 +1,119 @@
+# Stand der NIST-Grundlage des Moduls «NIST AI RMF»
+#
+# Struktur sprachneutral; Texte in src/i18n/de/nist.yaml und src/i18n/en/nist.yaml unter stand.
+# Vor jedem Release prüfen: Revisionsstand des AI RMF auf nist.gov und airc.nist.gov, Status IR 8596,
+# Playbook-Fassung. Hinweis im Werkzeug, wenn geprueft_am älter als hinweis_nach_monaten ist.
+# Das AI RMF ist ein freiwilliges Rahmenwerk, kein Recht; NIST zertifiziert nicht.
+
+schema: 1
+id: ai-rmf-1.0
+geprueft_am: "2026-10-21"
+naechste_pruefung: vor jedem Release
+hinweis_nach_monaten: 6
+
+fassungen:
+  - id: ai-100-1
+    dokument: NIST AI 100-1
+    kurzname: AI RMF 1.0
+    version: "1.0"
+    datum: "2023-01-26"
+    doi: 10.6028/NIST.AI.100-1
+    url: https://doi.org/10.6028/NIST.AI.100-1
+    pdf_url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf
+    datei: NIST.AI.100-1_AI-RMF-1.0.pdf
+    seiten: 48
+    ueberpruefung_spaetestens: "2028"
+    massgebend: true
+  - id: ai-600-1
+    dokument: NIST AI 600-1
+    kurzname: Generative AI Profile
+    version: "1.0"
+    datum: "2024-07"
+    freigabe: "2024-07-25"
+    veroeffentlicht: "2024-07-26"
+    doi: 10.6028/NIST.AI.600-1
+    url: https://doi.org/10.6028/NIST.AI.600-1
+    pdf_url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf
+    datei: NIST.AI.600-1_GenAI-Profile.pdf
+    seiten: 64
+    profil_zu: ai-100-1
+  - id: playbook
+    dokument: NIST AI RMF Playbook
+    kurzname: Playbook
+    version: null
+    erstveroeffentlicht: "2023-03-30"
+    pdf_erstellt: "2024-08-02"
+    server_stand: "2024-09-16"
+    url: https://airc.nist.gov/airmf-resources/playbook/
+    pdf_url: https://airc.nist.gov/docs/AI_RMF_Playbook.pdf
+    datei: NIST_AI-RMF-Playbook.pdf
+    seiten: 147
+    begleitet: ai-100-1
+
+# Revision des AI RMF: angekündigt (US-«AI Action Plan», 23.07.2025), ohne Entwurf, Versionsnummer oder Termin.
+revision:
+  status: angekuendigt-ohne-entwurf
+  geprueft_am: "2026-10-21"
+  angekuendigt: "2025-07-23"
+  quellen:
+    - https://www.nist.gov/itl/ai-risk-management-framework
+    - https://airc.nist.gov/airmf-resources/airmf/
+  # Teile, die die Revision voraussichtlich betrifft; das Kit führt sie aus eigener Begründung weiter
+  betroffen_vermutet: [GV-3, GV-3.1, MS-2.12]
+
+# Weitere NIST-Dokumente: beobachtet, nicht Teil des Moduls
+weitere:
+  - id: ir-8596
+    dokument: NIST IR 8596
+    kurzname: Cyber AI Profile
+    status: vorentwurf
+    datum: "2025-12-16"
+    kommentarfrist_bis: "2026-01-30"
+    geprueft_am: "2026-10-21"
+    doi: 10.6028/NIST.IR.8596.iprd
+    url: https://csrc.nist.gov/pubs/ir/8596/iprd
+    im_kit: false
+  - id: profil-kritische-infrastruktur
+    dokument: Concept Note
+    kurzname: Trustworthy AI in Critical Infrastructure
+    status: konzeptpapier
+    datum: "2026-04-07"
+    geprueft_am: "2026-10-21"
+    url: https://www.nist.gov/itl/ai-risk-management-framework
+    im_kit: false
+
+# Abgleich der eigenen Zuordnung zu ISO/IEC 42001 (kein NIST-Werk, nicht übernommen)
+abgleich:
+  - id: crosswalk-42001
+    anbieter: Microsoft
+    bezug: ISO/IEC FDIS 42001
+    url: https://airc.nist.gov/airmf-resources/crosswalks/
+    verwendung: nur-abgleich
+    fehler_korrigiert: 7
+
+# Rechtslage (geprüft 21.10.2026): Werke von NIST-Angestellten sind nach 17 U.S.C. § 105 in den USA nicht
+# urheberrechtlich geschützt (gemeinfrei). Ausserhalb der USA behält sich NIST Rechte vor, gewährt aber weltweit
+# ein nicht ausschliessliches, unbefristetes, unentgeltliches Recht zum Nachdruck, auch für Bearbeitungen
+# (Technical Series, gilt für NIST AI 100-1 und 600-1; für das Playbook als Webressource die allgemeine Erklärung
+# auf nist.gov/oism/copyrights). Erbeten ist der Vermerk unten; Werke Dritter können geschützt sein;
+# keine Billigung durch NIST.
+lizenz:
+  status: gemeinfrei-us-regierungswerk
+  grundlage: 17 U.S.C. § 105
+  ausserhalb_usa: rechte-vorbehalten-weltweites-unentgeltliches-nachdruck-und-bearbeitungsrecht
+  vermerk: Republished courtesy of the National Institute of Standards and Technology
+  geprueft_am: "2026-10-21"
+  quellen:
+    - https://www.nist.gov/oism/copyrights
+    - https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications
+  abbildungen_uebernehmen: false
+  pdf_im_kit: true
+
+# Echtheit der PDFs im Kit: SHA-256 gegen die offiziellen Dateien geprüft (Liste: $QUELLEN_DIR/nist/SHA256SUMS.txt)
+pdf_pruefung:
+  geprueft_am: "2026-10-21"
+  ergebnis: identisch
+  dateien:
+    - {datei: NIST.AI.100-1_AI-RMF-1.0.pdf, quelle: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf, sha256: 7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1}
+    - {datei: NIST.AI.600-1_GenAI-Profile.pdf, quelle: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf, sha256: 6e73620ab6b64e90ef2c04bf0e0d6246185a2f4b1b13cab0df494496cff89b6a}
+    - {datei: NIST_AI-RMF-Playbook.pdf, quelle: https://airc.nist.gov/docs/AI_RMF_Playbook.pdf, sha256: 65d6101d806502875aadb0fd19a75c3a9cc9a5e9461129e9398a39192d8202d2}

@@ -1,0 +1,121 @@
+# D-00 Gap-Analyse und Projektauftrag
+blaetter:
+  auftrag: Projektauftrag
+  abschnitte: Normabschnitte
+  controls: Controls Anhang A
+  reifegrade: Reifegrade
+  schnellcheck: Schnellcheck
+titel_auftrag: "Projektauftrag KI-Managementsystem"
+titel_abschnitte: "Gap-Analyse Normabschnitte 4 bis 10"
+titel_controls: "Gap-Analyse Controls Anhang A"
+titel_reifegrade: "Reifegrade 0 bis 5"
+titel_schnellcheck: "Schnellcheck in 15 Fragen"
+hinweise_auftrag:
+  - "Füllen Sie den Projektauftrag zuerst aus und lassen Sie ihn von der Geschäftsleitung freigeben. Ohne Freigabe fehlen Zeit und Mittel, und im Audit fehlt der Beleg, dass die Leitung das Vorhaben trägt."
+  - "Eine Seite genügt. Halten Sie die Angaben knapp und konkret."
+hinweise_abschnitte:
+  - "Eine Zeile je Normabschnitt. Beschreiben Sie in Spalte D kurz, was heute schon vorhanden ist (Dokumente, gelebte Abläufe, Nachweise)."
+  - "Wählen Sie die Ist-Reife und die Soll-Reife (Stufen im Blatt «Reifegrade»). Die Lücke wird berechnet. Die Soll-Reife legen Sie selbst fest; typisch ist Stufe 3 (festgelegt und angewendet). Wählen Sie mehr oder weniger, wo es Ihrem Ziel entspricht."
+  - "Mit ISMS: Viele Abschnitte (z. B. 7.5, 9.2, 9.3, 10) sind im ISMS schon umgesetzt. Tragen Sie das bestehende Dokument als Ist ein; oft genügt eine Erweiterung."
+hinweise_controls:
+  - "Eine Zeile je Control aus Anhang A. Ob ein Control anwendbar ist, entscheiden Sie später in der Erklärung zur Anwendbarkeit (D-11). Hier geht es nur um den heutigen Stand."
+  - "Wer KI nur einkauft und nutzt, erfüllt viele Controls der Gruppen A.6 und A.7 in schlanker Form oder über Angaben des Lieferanten."
+hinweise_reifegrade:
+  - "**Reife ist kein Zertifizierungskriterium.** Die Zertifizierungsstelle prüft Konformität: ob jede Anforderung erfüllt ist und ob das Unternehmen das belegen kann. Die Reifegrade dienen nur dazu, Lücken und Aufwand einzuschätzen."
+  - "Für die Zertifizierung braucht es in der Regel Stufe 3: festgelegt, angewendet und nachweisbar. Stufe 4 und 5 sind kein Muss."
+hinweise_schnellcheck:
+  - "Beantworten Sie jede Frage mit Ja, Teilweise oder Nein. Die Ampel je Kapitel erscheint, sobald alle Fragen des Kapitels beantwortet sind: grün heisst alles erfüllt, gelb im Mittel höchstens teilweise, rot im Mittel schlechter als teilweise (Wert über 1, mit Ja = 0, Teilweise = 1, Nein = 2)."
+  - "Der Schnellcheck dauert etwa 15 Minuten und eignet sich für ein erstes Gespräch mit der Geschäftsleitung. Die genaue Analyse folgt in den Blättern «Normabschnitte» und «Controls Anhang A»."
+hinweise_schnellcheck_firma:
+  - "Stand am {datum}, aus der Einschätzung je Kapitel. Ampel: grün heisst alles erfüllt, gelb im Mittel höchstens teilweise, rot im Mittel schlechter als teilweise (Wert über 1, mit Ja = 0, Teilweise = 1, Nein = 2)."
+hinweise_reifegrade_firma:
+  - "Soll für die Zertifizierung ist Stufe 3: festgelegt, angewendet und nachweisbar. Die Reifegrade dienen der Einschätzung von Lücken und Aufwand; geprüft wird die Konformität."
+aufwand_mit_pensum: "{pt} Personentage, Pensum AIMS-Verantwortung {pensum} %"
+spalten_auftrag: [Angabe, Inhalt, Hinweis]
+auftrag:
+  - id: ziel
+    label: Ziel
+    hinweis: "Was soll bis wann erreicht sein? Zum Beispiel ein zertifizierungsfähiges KI-Managementsystem bis zu einem Termin."
+  - id: geltungsbereich
+    label: Geltungsbereich (grob)
+    hinweis: "Welche Bereiche, Standorte und KI-Systeme sollen dazugehören? Die genaue Abgrenzung folgt in D-02."
+  - id: nutzen
+    label: Nutzen
+    hinweis: "Warum lohnt sich das? Zum Beispiel Anforderungen von Kunden, weniger Risiko bei KI-Werkzeugen, Vorbereitung auf den EU AI Act."
+  - id: zieltermin
+    label: Zieltermin Zertifizierung
+    hinweis: "Rechnen Sie mit drei bis sechs Monaten bis zur Bereitschaft für Stage 1, ohne ISMS eher mehr."
+  - id: ziel_stage1
+    label: Ziel Stage-1-Bereitschaft
+    hinweis: "Termin, bis zu dem internes Audit und Managementbewertung abgeschlossen sind; Ausgangspunkt für die Planung der zehn Schritte."
+  - id: aufwand_intern
+    label: Aufwand intern (Personentage)
+    hinweis: "{richtwert} Planen Sie auch die Zeit der Fachbereiche ein."
+  - id: aufwand_extern
+    label: Externe Kosten (CHF)
+    hinweis: "Beratung, Schulung, Werkzeuge und Zertifizierungsstelle (Stage 1, Stage 2, Überwachungsaudits)."
+  - id: projektleitung
+    label: Projektleitung
+    hinweis: "In der Regel die Person, die später für das KI-Managementsystem zuständig ist."
+  - id: sponsor
+    label: Sponsor (Geschäftsleitung)
+    hinweis: "Ein Mitglied der Geschäftsleitung, das Entscheide herbeiführt und Hindernisse beseitigt."
+  - id: team
+    label: Projektteam
+    hinweis: "Zum Beispiel IT, Informationssicherheit, Datenschutz, Recht, Personal und die Fachbereiche mit den meisten KI-Systemen."
+  - id: meilensteine
+    label: Meilensteine
+    hinweis: "Zum Beispiel Gap-Analyse, KI-Inventar, Risiken und Folgenabschätzungen, Erklärung zur Anwendbarkeit, internes Audit, Managementbewertung, Stage 1, Stage 2."
+  - id: risiken
+    label: Projektrisiken
+    hinweis: "Zum Beispiel zu wenig Zeit in den Fachbereichen, unbekannte Schatten-KI, Lieferanten ohne Auskünfte."
+  - id: freigabe_von
+    label: Freigabe durch die Geschäftsleitung
+    hinweis: "Name und Funktion der Person, die den Auftrag freigibt."
+  - id: freigabe_am
+    label: Freigabe am
+    hinweis: "Datum der Freigabe. Bewahren Sie den freigegebenen Auftrag auf."
+ziel_vorschlag: "[[Zertifizierungsfähiges KI-Managementsystem nach ISO/IEC 42001 bis TT.MM.JJJJ]]"
+ziel_firma: "Zertifizierungsfähiges KI-Managementsystem nach ISO/IEC 42001 bis {datum}"
+richtwert_mit_isms: "Richtwert mit bestehendem ISMS 25 bis 35 Personentage."
+richtwert_ohne_isms: "Richtwert ohne ISMS 45 bis 65 Personentage."
+richtwert_beide: "Richtwerte 25 bis 35 Personentage mit bestehendem ISMS, 45 bis 65 ohne ISMS."
+spalten_gap:
+  - ID
+  - Bezeichnung
+  - Erwarteter Nachweis
+  - Ist-Beschreibung
+  - Ist-Reife
+  - Soll-Reife
+  - Lücke
+  - Massnahme
+  - Verantwortlich
+  - Termin
+spalten_reifegrade: [Stufe, Bezeichnung, Bedeutung, Typischer Nachweis]
+reifegrade:
+  - [0, "nicht vorhanden", "Das Thema ist unbekannt oder wird nicht behandelt.", "keiner"]
+  - [1, "ansatzweise", "Einzelne Personen handeln nach eigenem Ermessen. Nichts ist festgehalten.", "mündliche Auskunft, einzelne E-Mails"]
+  - [2, "wiederholbar", "Es gibt eine übliche Vorgehensweise. Sie hängt aber an Personen und ist nicht oder nur lückenhaft beschrieben.", "Entwurf, Notizen, Dokument ohne Freigabe"]
+  - [3, "festgelegt und angewendet", "Das Vorgehen ist beschrieben, freigegeben und bekannt. Es wird nachweisbar so gearbeitet.", "freigegebenes Dokument und Aufzeichnungen aus der Anwendung"]
+  - [4, "gemessen und gesteuert", "Die Wirkung wird mit Kennzahlen überwacht. Abweichungen führen zu Massnahmen.", "Kennzahlen, Auswertungen, Massnahmenliste"]
+  - [5, "laufend verbessert", "Ergebnisse aus Messung, Audit und Rückmeldungen fliessen regelmässig in Verbesserungen ein.", "Verbesserungsregister, Vergleich über mehrere Jahre"]
+spalten_schnellcheck: [Nr., Kapitel, Frage, Antwort, Punkte, Kapitelwert, Ampel Kapitel, Bemerkung]
+antworten: [Ja, Teilweise, Nein]
+ampel: [grün, gelb, rot]
+schnellcheck:
+  - { kapitel: K-4, frage: "Gibt es eine vollständige Liste der KI-Systeme, auch der KI in eingekaufter Software und der Werkzeuge, die Mitarbeitende selbst nutzen?" }
+  - { kapitel: K-4, frage: "Ist festgehalten, welche Rolle das Unternehmen je KI-System einnimmt, z. B. Anbieter oder Nutzer?" }
+  - { kapitel: K-4, frage: "Ist schriftlich festgelegt, welche Bereiche, Standorte und KI-Systeme das Managementsystem umfasst?" }
+  - { kapitel: K-5, frage: "Hat die Geschäftsleitung verbindliche Grundsätze für den Einsatz von KI freigegeben?" }
+  - { kapitel: K-5, frage: "Ist eine Person benannt, die für das KI-Managementsystem sorgt und der Geschäftsleitung darüber berichtet?" }
+  - { kapitel: K-6, frage: "Werden die Risiken der KI-Systeme nach einer festen Methode beurteilt und die Ergebnisse festgehalten?" }
+  - { kapitel: K-6, frage: "Wird vor der Einführung abgeschätzt, wie ein KI-System auf Menschen wirkt, die davon betroffen sind?" }
+  - { kapitel: K-6, frage: "Gibt es messbare Ziele für den Umgang mit KI, mit Verantwortlichen und Terminen?" }
+  - { kapitel: K-7, frage: "Wissen die Mitarbeitenden, welche KI-Werkzeuge sie wofür nutzen dürfen und welche Daten sie nie eingeben dürfen?" }
+  - { kapitel: K-7, frage: "Haben Dokumente zu KI eine Version, eine Freigabe und einen festen Ablageort?" }
+  - { kapitel: K-8, frage: "Braucht ein neues KI-Werkzeug eine Freigabe, bevor es genutzt wird?" }
+  - { kapitel: K-8, frage: "Werden Anbieter von KI-Systemen vor dem Vertragsabschluss geprüft?" }
+  - { kapitel: K-9, frage: "Wird regelmässig intern geprüft, ob die Regeln zu KI eingehalten werden (internes Audit)?" }
+  - { kapitel: K-9, frage: "Bespricht die Geschäftsleitung mindestens einmal im Jahr den Stand des KI-Managementsystems?" }
+  - { kapitel: K-10, frage: "Werden Probleme mit KI-Systemen erfasst, nach ihrer Ursache untersucht und dauerhaft behoben?" }
+ausbau_wiederholung: "Wiederholen Sie die Gap-Analyse etwa vier Wochen vor Stage 1 als Bereitschaftsprüfung. Dann zählt nicht mehr die Reife, sondern ob für jede Zeile ein Nachweis vorliegt."

@@ -1,0 +1,71 @@
+# D-07 KI-Risikoregister und Behandlungsplan
+blaetter:
+  register: Risikoregister
+  plan: Behandlungsplan
+  skalen: Skalen
+titel_register: "KI-Risiken und -Chancen"
+titel_plan: "Behandlungsplan und Freigabe"
+titel_skalen: "Bewertungsskalen und Kriterien (aus D-06)"
+hinweise_register:
+  - "Eine Zeile je Risiko oder Chance. Beziehen Sie Risiken auf ein KI-System (Spalte C) oder auf das ganze Unternehmen (leer lassen)."
+  - "Bewerten Sie Wahrscheinlichkeit (W) und Auswirkung (A) mit den Skalen im Blatt «Skalen». Der Wert wird berechnet."
+  - "Mit ISMS: Informationssicherheitsrisiken eines KI-Systems bleiben im ISMS-Register. Tragen Sie hier nur den Verweis ein (Spalte X)."
+  - "Für Systeme mit generativer KI: Das Blatt «Vorschläge GenAI-Sicherheit» nennt typische Sicherheits- und Datenrisiken als Gedankenstütze, darunter Risiken handelnder KI (Agenten, Konnektoren, Gedächtnis) (im Guide des AIMS-Managers ebenfalls als Vorschlagsliste). Übernehmen Sie nur, was auf Ihre Systeme zutrifft."
+hinweise_plan:
+  - "Tragen Sie je erledigter Massnahme in der Spalte «Nachweis» ein, was Umsetzung und Wirksamkeit belegt (N-xxx). So bleibt die Kette Risiko, Control, Massnahme, Nachweis geschlossen."
+  - "Der Behandlungsplan und die Annahme der Restrisiken müssen von der zuständigen Leitung freigegeben werden (ISO/IEC 42001, 6.1.3)."
+  - "Der Plan enthält alle Massnahmen, auch solche aus dem AI Act, aus Audits oder Prüfungen. Die Spalte «Herkunft» nennt den Anlass, die Spalte «Risiken» die behandelten Risiken."
+hinweise_plan_firma:
+  - "Der Plan enthält alle Massnahmen mit ihrem Anlass (Spalte «Herkunft») und den behandelten Risiken. Plan und Restrisiken gibt die zuständige Leitung frei (ISO/IEC 42001, 6.1.3)."
+hinweise_skalen:
+  - "Übernehmen Sie die Skalen aus Ihrem Verfahren D-06. Mit ISMS: dieselben Skalen wie im ISMS verwenden."
+spalten_register:
+  - ID
+  - Art
+  - KI-System
+  - Titel
+  - Beschreibung
+  - Risikoquelle
+  - Betroffene Ebene
+  - Ursache
+  - Folge
+  - Bestehende Massnahmen
+  - W
+  - A
+  - Wert
+  - Behandlung
+  - Controls (SoA)
+  - Massnahmen
+  - Eigner/in
+  - W nach
+  - A nach
+  - Restwert
+  - Restrisiko akzeptiert von
+  - Akzeptiert am
+  - Status
+  - Beurteilt am
+  - Begründung der Annahme, Ausnahme
+  - ISMS-Verweis
+spalten_plan: [Massnahme, Titel, Herkunft, Risiken, Verantwortlich, Termin, Status, Priorität, Beschreibung, Nachweis]
+spalten_skalen: [Stufe, Wahrscheinlichkeit, Beschreibung, Auswirkung, Beschreibung]
+freigabe_plan: "Behandlungsplan und Restrisiken freigegeben durch:"
+ausnahme_text: "Befristete Ausnahme von {von} vom {am}, gültig bis {bis}"
+listen:
+  art: [Risiko, Chance]
+  ebene: [Organisation, Individuen, Gesellschaft, mehrere]
+  behandlung: [vermeiden, vermindern, teilen, tragen, nutzen]
+  status: [offen, in Behandlung, behandelt, akzeptiert, geschlossen]
+  massnahme_status: [offen, in Arbeit, erledigt, verworfen]
+  herkunft: [Risiko, Audit, Managementbewertung, Prüfung, Checkliste, AI Act, Ziel, Änderung am AIMS, sonstige]
+  prioritaet: [hoch, mittel, tief]
+skalen_vorschlag:
+  wahrscheinlichkeit:
+    - [1, selten, "weniger als einmal in 5 Jahren"]
+    - [2, möglich, "einmal in 2 bis 5 Jahren"]
+    - [3, wahrscheinlich, "etwa jährlich"]
+    - [4, häufig, "mehrmals pro Jahr"]
+  auswirkung:
+    - [1, gering, "kaum spürbar, rasch behoben"]
+    - [2, spürbar, "Ärger, Aufwand oder kleiner Schaden für Betroffene oder Unternehmen"]
+    - [3, erheblich, "deutlicher Schaden, Rechtsverletzung oder Vertrauensverlust"]
+    - [4, schwer, "Gefahr für Gesundheit, Grundrechte oder Fortbestand"]

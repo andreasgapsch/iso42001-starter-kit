@@ -1,0 +1,140 @@
+# Labels of the graphics in documents (src/vorlagen/grafik.ts): risk matrix, charts, flows
+stufe:
+  tief: low
+  mittel: medium
+  hoch: high
+# Abbreviations of the risk levels in cells (meaning not by colour alone)
+kuerzel: [L, M, H]
+anlage_verweis: "The graphic ‘{titel}’ is in Appendix {nr} at the end of the document."
+matrix:
+  ecke: "I \\ L"
+  spalte: "L {stufe}"
+  zeile: "I {stufe}"
+  zelle: "{kuerzel} {wert}"
+  anzahl_eins: "1 risk"
+  anzahl: "{anzahl} risks"
+  anzahl_null: "none"
+  titel_zonen: "Risk matrix: level per risk score (L×I)"
+  titel_vor: "Risk matrix before treatment"
+  titel_nach: "Risk matrix after treatment"
+  nach_offen: "Planned values: {anzahl} residual risks still depend on open actions and are only reached once these are complete."
+  nach_offen_eins: "Planned values: 1 residual risk still depends on open actions and is only reached once these are complete."
+  legende:
+    tief: "{kuerzel} low: risk score up to {bis}"
+    mittel: "{kuerzel} medium: risk score {werte}"
+    hoch: "{kuerzel} high: risk score from {ab}"
+  alt_zonen: "Matrix of {w} likelihood levels (columns) and {a} impact levels (rows); each cell states level and risk score L×I."
+  alt: "{titel}: {bewertet} risks placed, of which {tief} low, {mittel} medium and {hoch} high."
+  alt_ohne: "{titel}: no risks assessed yet."
+  unbewertet: "Not assessed for this phase: {liste}."
+  xlsx_titel: Risk matrix
+  xlsx_hinweise:
+    - "The figures count the risks in the register per likelihood (L) and impact (I); they recalculate when the file is opened and whenever the register changes. Opportunities and closed risks are not counted."
+    - "The colour shows the level from L×I according to the risk criteria (D-06): {tief}; {mittel}; {hoch}. Level and risk score of the cell are in brackets."
+soa:
+  titel: "Implementation of the Annex A controls per group"
+  achse: Number of controls
+  reihe:
+    umgesetzt: implemented or effective
+    teilweise: partial
+    offen: planned or open
+    ausgeschlossen: excluded
+    unentschieden: not decided
+  alt: "Stacked bars per group: {werte}."
+  alt_gruppe: "{gruppe}: {liste}"
+  alt_wert: "{anzahl} {reihe}"
+kennzahl:
+  titel: "{id} {kennzahl}"
+  ist: Measured value
+  soll: "Target {zahl}"
+  soll_richtung: "Target ({richtung} {zahl})"
+  richtung:
+    mindestens: at least
+    hoechstens: at most
+  alt: "Measured values: {werte}."
+  alt_soll: "Measured values: {werte}. {soll}."
+massnahmen:
+  titel: "Actions by due date on {datum}"
+  achse: Number of actions
+  art:
+    ueberfaellig: overdue
+    bald: due within 30 days
+    spaeter: due later
+    ohneTermin: no due date
+    erledigt: completed
+    verworfen: discarded
+  alt: "Actions on {datum}: {werte}."
+lagebild:
+  titel: Status overview
+  einleitung: "The status overview summarizes the position on {datum}: risks before and after treatment, implementation of the controls, due dates of actions and the trend of the indicators with measured values."
+  einleitung_leer: "The status overview summarizes the position for the review. The risk matrix shows the levels according to your own risk criteria (D-06); enter the number of risks per cell from the register (D-07, sheet ‘Risk matrix’)."
+  kennzahlen: Trend of the indicators
+fahrplan:
+  titel: Roadmap and progress
+  einleitung: "The roadmap shows the audits of the certification cycle with date and status. The certificate is valid for three years; a surveillance audit takes place in each of the two following years and recertification before expiry."
+  einleitung_leer: "The roadmap shows the usual cycle. Before the stage 1 audit come the internal audit, the management review and then a short supplementary audit on 9.3 and A.2.4 (D-20, section 1 above). Replace the indicative dates with your own dates."
+  ecke: Audit
+  jahr: "Year {nr}"
+  meilensteine:
+    stage1: Stage 1 audit
+    stage2: Stage 2 audit
+    zertifikat: Certificate
+    ueberwachung1: Surveillance audit 1
+    ueberwachung2: Surveillance audit 2
+    rezertifizierung: Recertification
+  stand:
+    erledigt: completed
+    geplant: planned
+    richtwert: indicative
+  richtwerte:
+    stage1: "3 to 6 months after start"
+    stage2: "4 to 8 weeks after stage 1"
+    zertifikat: "after completing stage 2"
+    ueberwachung1: "12 months after certificate"
+    ueberwachung2: "24 months after certificate"
+    rezertifizierung: "before expiry after 3 years"
+  legende:
+    erledigt: "completed or granted"
+    geplant: "planned (date from planning)"
+    richtwert: "indicative date from the usual cycle"
+  alt: "Roadmap: {werte}."
+d24:
+  titel: Decision tree for the role under the EU AI Act
+  start: AI system from the inventory (D-10)
+  f1: "1 AI system under\nArt. 3(1)?"
+  f2: "2 Link to the EU?"
+  f3: "3 Developed and offered\nunder our own name?"
+  f4: "4 Third-party system used\nunder our authority?"
+  f5: "5 Change of role under\nArt. 25(1)?"
+  gilt_nicht: AI Act does not apply
+  nicht_erfasst: "Not covered\n(Swiss view)"
+  anbieter: "Provider\n(Art. 3(3))"
+  betreiber: "Deployer\n(Art. 3(4))"
+  uebrige: "Other roles\n(Art. 22 to 25)"
+  bleibt: "Role from question\n3 or 4 remains"
+  wechsel: Take on provider obligations
+  ende: Record the role with reasons in the inventory (D-10)
+  ja: "Yes"
+  nein: "No"
+  alt: "Flow in five questions: 1 AI system under Art. 3(1)? No: the AI Act does not apply. 2 Link to the EU? No: not covered. 3 Developed and offered under our own name? Yes: provider. 4 Third-party system used professionally under our authority? Yes: deployer; No: other roles (Art. 22 to 25). 5 Change of role under Art. 25(1)? Yes: take on provider obligations; No: the role remains. Finally record the role with reasons in the inventory."
+d08:
+  titel: Impact assessment flow
+  ausloeser: "Trigger: new system or new use,\nchange, incident, report, repetition"
+  kurzpruefung: Screening with six questions (D-09)
+  schwelle: "Threshold reached\nor high-risk?"
+  doku: "Record the screening,\nactions into D-07"
+  rueckpruefung: "Back-check: threshold\nfrom D-06 reached?"
+  freigabe_aims: "Approval by\nAIMS lead"
+  voll: Full assessment (D-09)
+  entscheid: "Decision: use, use with conditions\nor do not use; harms into D-07"
+  freigabe_gl: Approval by top management
+  betrieb: "Operation and monitoring,\nrepetition as in section 3"
+  ja: "Yes"
+  nein: "No"
+  alt: "Trigger, then screening with six questions. If a threshold is reached or the system is high-risk, the full assessment follows with a decision (use, use with conditions, do not use) and approval by top management. Otherwise the screening is recorded with its actions and back-checked after the risk assessment: if the impact reaches the threshold from D-06, the full assessment follows after all; otherwise the AIMS lead approves the screening. Then operation and monitoring with repetition."
+d02:
+  titel: Process map of the AI management system
+  isms: "with ISMS"
+  alt_einleitung: "Process map in four groups."
+  alt_wechsel: "Arrows show the interactions: {fuehrung} steers the {kern}, their results go into {bewertung}, the improvements back to {fuehrung}; {unterstuetzung} carries the cycle."
+  alt_isms: "Run jointly with the ISMS: {liste}."

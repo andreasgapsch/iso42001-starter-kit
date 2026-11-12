@@ -1,0 +1,152 @@
+# Etappe E4 KI-Inventar. Format: src/gefuehrt/FORMAT.md
+seiten:
+  - { id: E4-einfuehrung, typ: info, norm: "A.4, A.9.2", vorlage: D-10, leitfaden: 4 }
+  - id: E4-suche
+    typ: formular
+    norm: "A.4.2"
+    vorlage: D-10
+    leitfaden: 4
+    beispiel: meta.gefuehrt.antworten.inventar.quellen
+    felder:
+      - { pfad: meta.gefuehrt.antworten.inventar.quellen, typ: mehrfach, optionen: inventarQuellen, pflicht: true }
+  - id: E4-fragebogen
+    typ: formular
+    norm: "A.4.2"
+    vorlage: D-10
+    leitfaden: 4
+    fragebogen: true
+    beispiel: meta.gefuehrt.antworten.inventar
+    felder:
+      - { pfad: meta.gefuehrt.antworten.inventar.fragebogenBereiche, typ: mehrfach, optionen: fachbereich }
+      - { pfad: meta.gefuehrt.antworten.inventar.ruecklaufBis, typ: datum }
+  - id: E4-systeme
+    typ: liste
+    liste: kiSysteme
+    norm: "A.4.2, A.9.4"
+    vorlage: D-10
+    leitfaden: 4
+    fragebogen: true
+    beispiel: kiSysteme[0]
+    felder:
+      - { pfad: name, typ: text, pflicht: true }
+      - { pfad: typ, typ: auswahl, optionen: kiTyp, pflicht: true }
+      - { pfad: beschreibung, typ: textarea }
+      - { pfad: zweck, typ: textarea, pflicht: true }
+      - { pfad: fachbereich, typ: auswahl, optionen: fachbereich }
+      - { pfad: eigner, typ: person, pflicht: true }
+      - { pfad: lieferant, typ: verweis, quelle: lieferanten, wenn: { eintrag: { typ: [eingekauft, saas] } } }
+      - { pfad: lebenszyklus, typ: auswahl, optionen: lebenszyklus }
+      - { pfad: status, typ: auswahl, optionen: kiStatus }
+  - id: E4-daten
+    typ: auswahl-systeme
+    norm: "A.4.3, A.7"
+    vorlage: D-10
+    leitfaden: 4
+    beispiel: kiSysteme[7]
+    felder:
+      - { pfad: personendaten, typ: janein, pflicht: true }
+      - { pfad: besondereDaten, typ: janein, pflicht: true, wenn: { eintrag: { personendaten: [true] } } }
+      - { pfad: betroffene, typ: textarea, pflicht: true }
+      - { pfad: automatisierung, typ: auswahl, optionen: automatisierung, pflicht: true }
+      - { pfad: aufsicht, typ: textarea }
+  - id: E4-handlung
+    typ: auswahl-systeme
+    norm: "A.4.2, A.9.2, A.9.3"
+    vorlage: D-10
+    leitfaden: 4
+    beispiel: kiSysteme[0]
+    felder:
+      - { pfad: aufgabenart, typ: auswahl, optionen: aufgabenart }
+      - { pfad: handlungsbefugnis, typ: auswahl, optionen: handlungsbefugnis }
+      - { pfad: zugriffe, typ: textarea }
+      - { pfad: gedaechtnis, typ: janein }
+      - { pfad: stoppmoeglichkeit, typ: textarea, wenn: { eintrag: { handlungsbefugnis: [bereitet-vor, fuehrt-begrenzt-aus, handelt-mehrstufig] } } }
+  - id: E4-generativ
+    typ: auswahl-systeme
+    norm: "A.4.2, A.4.4, A.10.3"
+    vorlage: D-10
+    leitfaden: 4
+    beispiel: kiSysteme[0]
+    felder:
+      - { pfad: generativ, typ: janein }
+      - { pfad: modell.anbieter, typ: text }
+      - { pfad: modell.name, typ: text }
+      - { pfad: modell.version, typ: text }
+      - { pfad: fremdeInhalte, typ: janein }
+      - { pfad: oeffentlich, typ: janein }
+  - id: E4-dienst
+    typ: auswahl-systeme
+    norm: "A.4.4, A.10.3"
+    vorlage: D-10
+    leitfaden: 4
+    filter: { typ: [eingekauft, saas, schatten] }
+    beispiel: kiSysteme[3]
+    felder:
+      - { pfad: tarif, typ: auswahl, optionen: tarif }
+      - { pfad: funktionen.websuche, typ: auswahl, optionen: funktionStand }
+      - { pfad: funktionen.codeausfuehrung, typ: auswahl, optionen: funktionStand }
+      - { pfad: funktionen.dateiupload, typ: auswahl, optionen: funktionStand }
+      - { pfad: funktionen.gedaechtnis, typ: auswahl, optionen: funktionStand }
+      - { pfad: funktionen.konnektoren, typ: auswahl, optionen: funktionStand }
+      - { pfad: funktionen.agenten, typ: auswahl, optionen: funktionStand }
+      - { pfad: funktionen.teilen, typ: auswahl, optionen: funktionStand }
+      - { pfad: abkuendigung, typ: datum }
+      - { pfad: quelleAngaben.fundstelle, typ: text }
+      - { pfad: quelleAngaben.abgerufen, typ: datum }
+  - id: E4-kritisch
+    typ: auswahl-systeme
+    norm: "A.4.2, A.6.2.6"
+    vorlage: D-10
+    leitfaden: 4
+    beispiel: kiSysteme[0]
+    felder:
+      - { pfad: kritisch, typ: janein }
+      - { pfad: abhaengigkeiten, typ: textarea }
+  - id: E4-ressourcen
+    typ: auswahl-systeme
+    norm: "A.4.2 bis A.4.6"
+    vorlage: D-10
+    leitfaden: 4
+    beispiel: kiSysteme[2]
+    felder:
+      - { pfad: ressourcen.daten, typ: textarea }
+      - { pfad: ressourcen.werkzeuge, typ: textarea }
+      - { pfad: ressourcen.rechenressourcen, typ: textarea }
+      - { pfad: ressourcen.personal, typ: textarea }
+      - { pfad: aenderungsregel, typ: textarea }
+  - id: E4-schatten
+    typ: auswahl-systeme
+    norm: "A.9.2"
+    vorlage: D-15
+    leitfaden: 4
+    filter: { typ: [schatten] }
+    beispiel: kiSysteme[6]
+    felder:
+      - { pfad: status, typ: auswahl, optionen: kiStatus, pflicht: true }
+      - { pfad: erfasstAm, typ: datum }
+  - id: E4-freigabeprozess
+    typ: formular
+    norm: "A.9.2"
+    vorlage: D-15
+    leitfaden: 4
+    beispiel: meta.gefuehrt.antworten.werkzeugFreigabe
+    felder:
+      - { pfad: meta.gefuehrt.antworten.werkzeugFreigabe.wer, typ: person, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.werkzeugFreigabe.kriterien, typ: mehrfach, optionen: freigabeKriterien }
+      - { pfad: meta.gefuehrt.antworten.werkzeugFreigabe.fristTage, typ: zahl }
+  - id: E4-ueberpruefung
+    typ: auswahl-systeme
+    norm: "A.4.2, 8.2"
+    vorlage: D-10
+    leitfaden: 4
+    beispiel: kiSysteme[0]
+    felder:
+      - { pfad: naechsteUeberpruefung, typ: datum, pflicht: true }
+      - { pfad: antragAm, typ: datum }
+      - { pfad: entscheidAm, typ: datum }
+      - { pfad: freigabe, typ: freigabe }
+      - { pfad: datenklasse, typ: auswahl, optionen: datenklasse }
+      - { pfad: sensibleNutzung, typ: janein }
+      - { pfad: auflagen, typ: textarea }
+      - { pfad: freigabeBegruendung, typ: textarea }
+      - { pfad: ismsAsset, typ: text, wenn: { mitIsms: true } }

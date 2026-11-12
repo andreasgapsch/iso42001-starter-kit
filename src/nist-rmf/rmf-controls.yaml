@@ -1,0 +1,297 @@
+# Zusatz-Controls für das Modul NIST AI RMF (RMF-nn allgemein, RMF-Gnn nur bei generativer KI)
+#
+# Struktur sprachneutral; Texte (Titel, Zweck, Umsetzung, Nachweis) in src/i18n/de/nist.yaml und
+# src/i18n/en/nist.yaml unter controls.<id>.
+# ID-Präfix RMF statt NIST, weil NIST viele Rahmenwerke führt (CSF, Privacy Framework, Cyber AI Profile).
+# In der Erklärung zur Anwendbarkeit (D-11) wie EUAIA-Controls, Rahmenwerk NISTRMF.
+#
+# Felder
+#   art               allgemein | genai
+#   subkategorien     Subkategorien (src/nist-rmf/subkategorien.yaml), deren Lücke das Control schliesst
+#   risiken           nur genai: GenAI-Risiken (src/nist-rmf/genai-risiken.yaml)
+#   verwandt_42001    verwandte Controls (A.x.y) und Abschnitte (K-x.y) aus ISO/IEC 42001
+#   verwandt_27001    verwandte Controls aus ISO/IEC 27001:2022 Anhang A (27001-x.y), fachliche Einschätzung
+#   kit               Kit-Vorlagen (D-xx), in denen das Control umgesetzt wird
+#   nist_vorlagen     geplante Modulvorlagen N-01 bis N-04
+#   betreiber_lite    true: auch für reine Betreiber eingekaufter KI sinnvoll (verkürzte Form)
+#   bezug_600_1       Massnahmen-IDs aus NIST AI 600-1 als Herkunftsnachweis; Wortlaut mit eigener Übersetzung in
+#                     src/nist-rmf/original-600-1.yaml (massnahmen, Test katalog-nist.test.ts)
+#   vorschlag_wenn    Bedingung für den automatischen Vorschlag je KI-System (UND über alle Schlüssel,
+#                     any_of = ODER). Auswertung: src/nist-rmf/logik.ts (rmfVorschlaege).
+#     immer: true                       jedes aktive KI-System im Inventar
+#     typ_any: [...]                    kiSysteme[].typ (eingekauft | saas | eigenbau | schatten)
+#     eigenes_training: true            kiSysteme[].eigenesTraining
+#     rollen_any: [...]                 kiSysteme[].aiAct.rollen (Werte wie AiActRolle)
+#     transparenz_any: [...]            kiSysteme[].aiAct.transparenz ('50-1' bis '50-4')
+#     triage_rechtsposition: true       Kurzprüfung D-09: Rechtsposition oder Chancen von Personen betroffen
+#     triage_gesundheit_sicherheit: true  Kurzprüfung D-09: Gesundheit oder Sicherheit betroffen
+#     generativ: true                   kiSysteme[].generativ (Kennzeichen generative KI, mit dem Modul)
+#     any_of: [ {...}, {...} ]          Alternativen
+#   voll_wenn         nur bei betreiber_lite: Bedingung für die volle Form (sonst Form für Betreiber)
+
+schema: 1
+stand: ai-rmf-1.0
+
+controls:
+  - id: RMF-01
+    art: allgemein
+    subkategorien: [GV-1.2]
+    verwandt_42001: [A.2.2, A.6.1.2, A.9.3]
+    verwandt_27001: [27001-5.1]
+    kit: [D-03]
+    nist_vorlagen: [N-03]
+    betreiber_lite: true
+    bezug_600_1: []
+    vorschlag_wenn: {immer: true}
+
+  - id: RMF-02
+    art: allgemein
+    subkategorien: [GV-1.7, MG-4.1]
+    verwandt_42001: [A.6.1.3, A.6.2.6]
+    verwandt_27001: [27001-5.9, 27001-5.11, 27001-8.10]
+    kit: [D-12, D-10]
+    nist_vorlagen: []
+    betreiber_lite: true
+    bezug_600_1: [GV-1.7-002]
+    vorschlag_wenn: {immer: true}
+
+  - id: RMF-03
+    art: allgemein
+    subkategorien: [GV-3.1, MP-1.2]
+    verwandt_42001: [A.4.6, A.5.2]
+    verwandt_27001: []
+    kit: [D-08, D-09]
+    nist_vorlagen: []
+    betreiber_lite: true
+    bezug_600_1: []
+    vorschlag_wenn: {immer: true}
+
+  - id: RMF-04
+    art: allgemein
+    subkategorien: [GV-3.2, MP-3.5, MG-4.1]
+    verwandt_42001: [A.6.1.3, A.9.3, K-7.2]
+    verwandt_27001: [27001-5.2]
+    kit: [D-10, D-12, D-04]
+    nist_vorlagen: []
+    betreiber_lite: true
+    bezug_600_1: []
+    vorschlag_wenn: {immer: true}
+
+  - id: RMF-05
+    art: allgemein
+    subkategorien: [GV-5.1, GV-5.2, MP-5.2, MS-3.3, MG-4.1]
+    verwandt_42001: [A.8.3, A.10.4]
+    verwandt_27001: [27001-6.8, 27001-5.24]
+    kit: [D-14]
+    nist_vorlagen: []
+    betreiber_lite: true
+    bezug_600_1: [GV-3.2-004, MS-3.3-005]
+    vorschlag_wenn: {immer: true}
+
+  - id: RMF-06
+    art: allgemein
+    subkategorien: [GV-6.1, MP-4.1]
+    verwandt_42001: [A.10.2, A.10.3]
+    verwandt_27001: [27001-5.19, 27001-5.20, 27001-5.32]
+    kit: [D-15, D-16]
+    nist_vorlagen: []
+    betreiber_lite: true
+    bezug_600_1: []
+    vorschlag_wenn: {typ_any: [eingekauft, saas, eigenbau]}
+
+  - id: RMF-07
+    art: allgemein
+    subkategorien: [GV-6.2, MG-2.4]
+    verwandt_42001: [A.9.4, A.10.3, A.6.2.6]
+    verwandt_27001: [27001-5.29, 27001-5.30]
+    kit: [D-12, D-16]
+    nist_vorlagen: []
+    betreiber_lite: true
+    bezug_600_1: [GV-1.7-001, GV-6.2-006, GV-6.2-007, MG-2.4-001, MG-2.4-004]
+    vorschlag_wenn: {immer: true}
+
+  - id: RMF-08
+    art: allgemein
+    subkategorien: [MP-1.4, MG-1.1, MG-2.1]
+    verwandt_42001: [A.6.2.5, A.9.4]
+    verwandt_27001: []
+    kit: [D-09]
+    nist_vorlagen: []
+    betreiber_lite: true
+    bezug_600_1: [GV-1.3-002]
+    vorschlag_wenn: {immer: true}
+
+  - id: RMF-09
+    art: allgemein
+    subkategorien: [MP-2.3, MS-1.1, MS-2.2, MS-2.3, MS-4.1]
+    verwandt_42001: [A.6.2.4, K-9.1]
+    verwandt_27001: [27001-8.29, 27001-8.33]
+    kit: [D-12]
+    nist_vorlagen: [N-03]
+    betreiber_lite: true
+    bezug_600_1: [MS-1.1-009, MS-2.2-003]
+    vorschlag_wenn: {typ_any: [eingekauft, saas, eigenbau]}
+    voll_wenn: {any_of: [{typ_any: [eigenbau]}, {eigenes_training: true}]}
+
+  - id: RMF-10
+    art: allgemein
+    subkategorien: [MS-1.2, MS-1.3, MS-2.13, MS-4.2]
+    verwandt_42001: [K-9.2, A.6.2.4]
+    verwandt_27001: [27001-5.35]
+    kit: [D-20]
+    nist_vorlagen: [N-03]
+    betreiber_lite: false
+    bezug_600_1: [MS-1.3-003]
+    vorschlag_wenn: {any_of: [{typ_any: [eigenbau]}, {rollen_any: [produkthersteller]}, {triage_gesundheit_sicherheit: true}]}
+
+  - id: RMF-11
+    art: allgemein
+    subkategorien: [MS-2.6]
+    verwandt_42001: [A.6.2.4, A.6.2.6]
+    verwandt_27001: []
+    kit: [D-12]
+    nist_vorlagen: [N-03]
+    betreiber_lite: false
+    bezug_600_1: []
+    vorschlag_wenn: {any_of: [{typ_any: [eigenbau]}, {rollen_any: [produkthersteller]}, {triage_gesundheit_sicherheit: true}]}
+
+  - id: RMF-12
+    art: allgemein
+    subkategorien: [MS-2.7]
+    verwandt_42001: [A.6.2.4, A.7.2]
+    verwandt_27001: [27001-8.8, 27001-8.25, 27001-8.26, 27001-8.27, 27001-8.28, 27001-8.29]
+    kit: [D-12, D-23]
+    nist_vorlagen: [N-03]
+    betreiber_lite: true
+    bezug_600_1: []
+    vorschlag_wenn: {typ_any: [eingekauft, saas, eigenbau]}
+    voll_wenn: {any_of: [{typ_any: [eigenbau]}, {eigenes_training: true}]}
+
+  - id: RMF-13
+    art: allgemein
+    subkategorien: [MS-2.11]
+    verwandt_42001: [A.5.4, A.5.5]
+    verwandt_27001: []
+    kit: [D-09]
+    nist_vorlagen: [N-03]
+    betreiber_lite: true
+    bezug_600_1: [MS-2.11-002, MS-3.3-003]
+    vorschlag_wenn: {triage_rechtsposition: true}
+
+  - id: RMF-14
+    art: allgemein
+    subkategorien: [MS-3.1, MS-3.2]
+    verwandt_42001: [K-8.2, K-10.1]
+    verwandt_27001: [27001-5.7]
+    kit: [D-06, D-07]
+    nist_vorlagen: []
+    betreiber_lite: true
+    bezug_600_1: []
+    vorschlag_wenn: {immer: true}
+
+  - id: RMF-15
+    art: allgemein
+    subkategorien: [MG-1.4]
+    verwandt_42001: [K-6.1.3, A.8.2]
+    verwandt_27001: []
+    kit: [D-14, D-07]
+    nist_vorlagen: []
+    betreiber_lite: true
+    bezug_600_1: []
+    vorschlag_wenn: {any_of: [{rollen_any: [anbieter, produkthersteller]}, {transparenz_any: ['50-1', '50-2', '50-4']}]}
+
+  - id: RMF-16
+    art: allgemein
+    subkategorien: [MG-3.2]
+    verwandt_42001: [A.4.4, A.10.3, A.6.2.6]
+    verwandt_27001: [27001-5.22, 27001-8.32]
+    kit: [D-10, D-16, D-12]
+    nist_vorlagen: []
+    betreiber_lite: true
+    bezug_600_1: [GV-1.6-001, GV-1.6-002, GV-1.6-003, MG-3.1-003, MG-3.1-005, MP-4.1-007, MP-4.1-008]
+    vorschlag_wenn: {immer: true}
+
+  # Generative KI (NIST AI 600-1)
+  - id: RMF-G01
+    art: genai
+    risiken: [gai-konfabulation, gai-mensch-ki]
+    subkategorien: [MP-2.3, MS-2.3, MS-2.5, MS-4.2, MG-4.3]
+    verwandt_42001: [A.6.2.4, A.9.3]
+    verwandt_27001: []
+    kit: [D-12, D-15]
+    nist_vorlagen: [N-04]
+    betreiber_lite: true
+    bezug_600_1: [MS-2.5-003, MP-2.3-003, MS-2.5-001, MS-2.3-002, MS-4.2-002, MG-4.3-002]
+    vorschlag_wenn: {generativ: true}
+
+  - id: RMF-G02
+    art: genai
+    risiken: [gai-datenschutz, gai-sicherheit]
+    subkategorien: [GV-1.4, GV-3.2, GV-6.1, MP-4.1, MG-3.1]
+    verwandt_42001: [A.9.4, A.10.3, A.7.2]
+    verwandt_27001: [27001-5.12, 27001-5.14, 27001-5.23, 27001-5.34]
+    kit: [D-15, D-16]
+    nist_vorlagen: [N-04]
+    betreiber_lite: true
+    bezug_600_1: [GV-6.1-007, GV-1.4-002, GV-3.2-003, GV-6.1-009, GV-6.2-007, MG-3.1-002, MP-4.1-001, MP-4.1-009]
+    vorschlag_wenn: {generativ: true}
+
+  - id: RMF-G03
+    art: genai
+    risiken: [gai-integritaet]
+    subkategorien: [GV-1.2, GV-5.1, GV-6.1, MP-3.4, MP-5.1, MS-2.8]
+    verwandt_42001: [A.8.2, A.7.5]
+    verwandt_27001: []
+    kit: [D-15, D-14, D-17]
+    nist_vorlagen: [N-04]
+    betreiber_lite: true
+    bezug_600_1: [MP-5.1-003, GV-5.1-002, GV-1.2-001, MS-2.8-003, GV-6.1-008, MP-3.4-001, MP-3.4-002]
+    vorschlag_wenn: {generativ: true}
+
+  - id: RMF-G04
+    art: genai
+    risiken: [gai-sicherheit, gai-lieferkette]
+    subkategorien: [GV-3.2, MP-2.3, MS-2.7, MS-4.2]
+    verwandt_42001: [A.6.2.4, A.6.2.5]
+    verwandt_27001: [27001-5.15, 27001-8.26, 27001-8.29]
+    kit: [D-12, D-16]
+    nist_vorlagen: [N-04]
+    betreiber_lite: true
+    bezug_600_1: [GV-3.2-005, MS-2.7-001, MP-2.3-005, MS-2.7-007, MS-4.2-001, MS-2.7-008, MS-2.7-009]
+    vorschlag_wenn: {generativ: true}
+
+  - id: RMF-G05
+    art: genai
+    risiken: [gai-schutzrechte]
+    subkategorien: [GV-6.1, MP-4.1]
+    verwandt_42001: [A.7.5, A.10.3]
+    verwandt_27001: [27001-5.32]
+    kit: [D-15, D-16]
+    nist_vorlagen: [N-04]
+    betreiber_lite: true
+    bezug_600_1: [GV-6.1-001, MP-4.1-006, GV-6.1-004, MP-4.1-002]
+    vorschlag_wenn: {generativ: true}
+
+  - id: RMF-G06
+    art: genai
+    risiken: [gai-gefaehrlich, gai-anstoessig, gai-verzerrung]
+    subkategorien: [GV-3.2, GV-4.2, MG-3.2]
+    verwandt_42001: [A.6.2.6, A.8.3, A.9.4]
+    verwandt_27001: []
+    kit: [D-12, D-14]
+    nist_vorlagen: [N-04]
+    betreiber_lite: true
+    bezug_600_1: [GV-4.2-001, MG-3.2-005, GV-3.2-003, MG-3.2-004]
+    vorschlag_wenn: {generativ: true, any_of: [{transparenz_any: ['50-1']}, {rollen_any: [anbieter]}]}
+
+  - id: RMF-G07
+    art: genai
+    risiken: [gai-mensch-ki, gai-konfabulation]
+    subkategorien: [GV-3.2, MS-2.5, MS-3.3, MS-4.2]
+    verwandt_42001: [A.9.3, K-7.3]
+    verwandt_27001: [27001-6.3]
+    kit: [D-15, D-17, D-10]
+    nist_vorlagen: [N-04]
+    betreiber_lite: true
+    bezug_600_1: [GV-3.2-003, GV-3.2-004, MS-3.3-004, MS-4.2-004, MS-2.5-004]
+    vorschlag_wenn: {generativ: true}

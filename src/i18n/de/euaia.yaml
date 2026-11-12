@@ -1,0 +1,259 @@
+# Texte zu src/ai-act/euaia-controls.yaml (Deutsch, Leitsprache)
+# name: Kurzbezeichnung; hinweis: praktischer Umsetzungshinweis für KMU; nachweis: typischer Nachweis.
+# Die Hinweise sind keine Rechtsberatung.
+
+EUAIA-01:
+  name: Prüfung auf verbotene Praktiken je KI-System
+  hinweis: |
+    Prüfen Sie jedes KI-System im Inventar vor der Freigabe und bei jeder Änderung der Zweckbestimmung gegen die Liste in Art. 5(1). Für KMU sind vor allem Emotionserkennung am Arbeitsplatz (Bst. f), manipulative Techniken (Bst. a) und ab 02.12.2026 Bildgeneratoren ohne Schutzvorkehrungen (Bst. ba, bb) relevant.
+
+    Juristisch prüfen lassen, wenn ein System Gefühle, Absichten oder Persönlichkeitsmerkmale von Personen auswertet.
+  nachweis: Prüfvermerk je System im KI-Inventar mit Datum, Ergebnis und prüfender Person.
+
+EUAIA-02:
+  name: Massnahmen zur KI-Kompetenz
+  hinweis: |
+    Legen Sie je Zielgruppe fest, welches Wissen nötig ist (alle Mitarbeitenden, Nutzende bestimmter Systeme, Aufsichtspersonen, Entwicklung). Art. 4 verlangt Massnahmen zur Förderung, kein garantiertes Niveau. Kurze, wiederkehrende Formate genügen oft; halten Sie fest, wer was wann absolviert hat.
+  nachweis: Schulungskonzept je Zielgruppe, Teilnahmelisten, Inhalte der Einführung neuer KI-Werkzeuge.
+
+EUAIA-03:
+  name: Bestimmung der Rolle je KI-System und Prüfung auf Rollenwechsel
+  hinweis: |
+    Bestimmen Sie je System, ob Sie Anbieter, Betreiber, Einführer, Händler, Produkthersteller oder Bevollmächtigter sind, und ob der AI Act räumlich greift (Art. 2(1), auch für Schweizer Unternehmen bei Inverkehrbringen in der EU oder bei Verwendung der Ausgaben in der EU). Prüfen Sie bei eigenem Namen, wesentlicher Veränderung oder neuer Zweckbestimmung, ob Sie nach Art. 25(1) zum Anbieter werden.
+
+    Juristisch prüfen lassen, wenn ein System angepasst, nachtrainiert oder unter eigenem Namen weitergegeben wird.
+  nachweis: Rollenprüfung je System mit Begründung, Datum und Auslöser für die nächste Prüfung.
+
+EUAIA-04:
+  name: Bestimmung und Begründung der Risikoklasse je KI-System
+  hinweis: |
+    Ordnen Sie jedes System einer Risikoklasse zu: verbotene Praktik, Hochrisiko nach Anhang III, Hochrisiko nach Anhang I (Sicherheitsbauteil), Transparenzpflicht, minimales Risiko. Bei KI in Produkten prüfen Sie Art. 6(1a) bis (1c): Qualitätskontrolle oder Leistungsoptimierung ohne Sicherheitsbezug ist kein Sicherheitsbauteil. Als Anbieter dokumentieren Sie eine Ausnahme nach Art. 6(3) vor dem Inverkehrbringen; Profiling bleibt immer hochriskant.
+
+    Juristisch prüfen lassen, wenn die Einstufung von einer Ausnahme nach Art. 6(3) oder 6(1a) abhängt.
+  nachweis: Einstufung je System mit geprüften Kriterien, Begründung und Freigabe.
+
+EUAIA-05:
+  name: Hinweis auf Interaktion mit einem KI-System
+  hinweis: |
+    Zeigen Sie bei Chatbots, Sprachassistenten oder automatischen Antworten spätestens bei der ersten Interaktion gut sichtbar an, dass eine KI antwortet. Der Hinweis muss barrierefrei sein, etwa als Text und nicht nur als Symbol.
+  nachweis: Bildschirmfoto des Hinweises, Gestaltungsvorgabe, Prüfung vor Inbetriebnahme.
+
+EUAIA-06:
+  name: Maschinenlesbare Kennzeichnung synthetischer Inhalte
+  hinweis: |
+    Erzeugt Ihr Produkt Bilder, Videos, Audio oder Text, kennzeichnen Sie die Ausgaben maschinenlesbar, etwa mit Metadaten oder Wasserzeichen. Klären Sie bei zugekauften Modellen, ob der Lieferant die Kennzeichnung bereits liefert. Systeme, die vor dem 02.08.2026 in Verkehr gebracht wurden, müssen bis 02.12.2026 nachgerüstet sein.
+  nachweis: Beschreibung der Kennzeichnungslösung, Testnachweis, Lieferantenbestätigung.
+
+EUAIA-07:
+  name: Offenlegung von Deepfakes, Emotionserkennung und KI-Texten von öffentlichem Interesse
+  hinweis: |
+    Regeln Sie in der Richtlinie zur KI-Nutzung, wann Bild-, Ton- und Videoinhalte als künstlich erzeugt gekennzeichnet werden (Deepfakes, etwa in Marketing) und wann veröffentlichte Texte zu Themen von öffentlichem Interesse einen Hinweis brauchen. Ein redaktioneller Prüfschritt mit verantwortlicher Person ersetzt bei Texten die Kennzeichnung.
+  nachweis: Kennzeichnungsregel, Beispiele gekennzeichneter Inhalte, Freigabeprotokoll der Redaktion.
+
+EUAIA-08:
+  name: Verwendung gemäss Betriebsanleitung
+  hinweis: |
+    Holen Sie die Betriebsanleitung des Anbieters ein, legen Sie fest, wer sie kennt, und übertragen Sie die wichtigsten Vorgaben in eine kurze interne Arbeitsanweisung. Prüfen Sie bei jedem Update des Anbieters, ob sich die Vorgaben ändern.
+  nachweis: Betriebsanleitung in der aktuellen Version, Arbeitsanweisung, Freigabe der Nutzung.
+
+EUAIA-09:
+  name: Menschliche Aufsicht durch befähigte Personen
+  hinweis: |
+    Benennen Sie je Hochrisiko-KI-System Aufsichtspersonen mit Stellvertretung, schulen Sie sie zu Grenzen des Systems und Automatisierungsbias und geben Sie ihnen die Befugnis, Ergebnisse zu übersteuern oder die Nutzung zu stoppen.
+  nachweis: Benennung mit Befugnissen, Schulungsnachweis, Beispiel einer dokumentierten Übersteuerung.
+
+EUAIA-10:
+  name: Eingabedaten passend und repräsentativ
+  hinweis: |
+    Legen Sie fest, welche Eingabedaten in das System gelangen dürfen, und prüfen Sie stichprobenweise, ob sie zur Zweckbestimmung passen, etwa ob Bewerbungsdaten vollständig und vergleichbar sind.
+  nachweis: Regel zu Eingabedaten, Stichprobenprotokoll.
+
+EUAIA-11:
+  name: Überwachung des Betriebs, Information des Anbieters, Aussetzen der Nutzung
+  hinweis: |
+    Definieren Sie einfache Beobachtungspunkte (Fehlerquote, Beschwerden, auffällige Ergebnisse) und einen Meldeweg an den Anbieter. Legen Sie vorab fest, wer die Nutzung bei einem Risiko aussetzen darf.
+  nachweis: Überwachungsplan, Meldungen an den Anbieter, Entscheid zur Aussetzung.
+
+EUAIA-12:
+  name: Aufbewahrung der Protokolle während mindestens sechs Monaten
+  hinweis: |
+    Klären Sie mit dem Anbieter, wo die Protokolle liegen und wer sie kontrolliert. Stellen Sie die Aufbewahrung auf mindestens sechs Monate ein und gleichen Sie die Frist mit dem Datenschutz ab.
+
+    Juristisch prüfen lassen, wenn Protokolle personenbezogene Daten enthalten und andere Aufbewahrungs- oder Löschfristen gelten.
+  nachweis: Aufbewahrungseinstellung, Aufbewahrungsregel, Stichprobe.
+
+EUAIA-13:
+  name: Vorabinformation von Mitarbeitenden und Arbeitnehmervertretung
+  hinweis: |
+    Informieren Sie vor dem Einsatz eines Hochrisiko-KI-Systems am Arbeitsplatz die Personalvertretung und die betroffenen Mitarbeitenden schriftlich. Beachten Sie nationale Mitwirkungsrechte, etwa nach deutschem Betriebsverfassungsrecht.
+
+    Juristisch prüfen lassen, wenn in einer deutschen Gesellschaft ein Betriebsrat besteht.
+  nachweis: Datierte Information, Protokoll der Personalvertretung.
+
+EUAIA-14:
+  name: Information Betroffener über KI-gestützte Entscheide
+  hinweis: |
+    Ergänzen Sie Bewerbungs-, Kunden- oder Datenschutzhinweise um die Information, dass ein Hochrisiko-KI-System Entscheide trifft oder unterstützt. Ein kurzer, verständlicher Satz an der richtigen Stelle genügt oft.
+  nachweis: Informationstext mit Fundstelle und Datum.
+
+EUAIA-15:
+  name: Bearbeitung von Anfragen zum Recht auf Erläuterung
+  hinweis: |
+    Richten Sie einen Eingangskanal für Erläuterungsanfragen ein und bereiten Sie eine Vorlage vor, die die Rolle des KI-Systems und die wichtigsten Entscheidungselemente beschreibt. Holen Sie die nötigen Informationen beim Anbieter ein.
+  nachweis: Ablauf, Antwortvorlage, Anfragenprotokoll.
+
+EUAIA-16:
+  name: Grundrechte-Folgenabschätzung und Mitteilung an die Behörde
+  hinweis: |
+    Prüfen Sie zuerst, ob die Pflicht greift: nur für öffentliche Stellen, private Erbringer öffentlicher Dienste sowie Systeme zu Kreditwürdigkeit (Anhang III Nr. 5 Bst. b) und Lebens- und Krankenversicherung (Bst. c). Für typische Industrie-KMU greift sie meist nicht. Wo sie greift, können Sie Teile der Datenschutz-Folgenabschätzung übernehmen (Art. 27(4)).
+
+    Juristisch prüfen lassen, wenn Ihre Organisation Aufgaben im öffentlichen Auftrag erfüllt.
+  nachweis: Anwendbarkeitsprüfung in E-06, Grundrechte-Folgenabschätzung, Mitteilung an die Behörde.
+
+EUAIA-17:
+  name: Datenschutz-Folgenabschätzung mit Anbieterinformationen
+  hinweis: |
+    Fordern Sie beim Anbieter die Informationen nach Art. 13 an und verwenden Sie sie in der Datenschutz-Folgenabschätzung. Verknüpfen Sie die DSFA mit der Folgenabschätzung für das KI-System (D-09).
+  nachweis: DSFA mit Verweis auf Anbieterinformationen, Verknüpfung in D-09.
+
+EUAIA-18:
+  name: Zusammenarbeit mit Behörden
+  hinweis: |
+    Benennen Sie eine Ansprechperson für Behördenanfragen und legen Sie fest, welche Unterlagen Sie je System in welcher Sprache bereitstellen können. Eine kurze Ablaufbeschreibung genügt.
+  nachweis: Ansprechperson, Ablaufbeschreibung, Protokoll bisheriger Anfragen.
+
+EUAIA-19:
+  name: Risikomanagementsystem nach Art. 9
+  hinweis: |
+    Bauen Sie auf dem Risikoverfahren des AIMS auf und ergänzen Sie je Hochrisiko-KI-System: Risiken für Gesundheit, Sicherheit und Grundrechte, vorhersehbare Fehlanwendung, Daten aus der Beobachtung nach dem Inverkehrbringen, Tests mit vorab festgelegten Metriken und die Berücksichtigung von Personen unter 18 Jahren.
+  nachweis: Risikomanagementplan je System, Testberichte, Restrisiko-Bewertung.
+
+EUAIA-20:
+  name: Daten und Daten-Governance nach Art. 10
+  hinweis: |
+    Halten Sie je Datensatz Herkunft, Zweck der Erhebung, Aufbereitung, Annahmen, Lücken und die Prüfung auf Verzerrungen fest. Besondere Kategorien personenbezogener Daten dürfen Sie nur zur Erkennung und Korrektur von Verzerrungen und nur unter den Bedingungen von Art. 4a(1) verarbeiten.
+
+    Juristisch prüfen lassen, bevor besondere Kategorien personenbezogener Daten für Bias-Tests verarbeitet werden.
+  nachweis: Datenblätter, Bias-Prüfbericht, Aufzeichnung nach Art. 4a(1)(f).
+
+EUAIA-21:
+  name: Technische Dokumentation nach Anhang IV
+  hinweis: |
+    Nutzen Sie als KMU oder kleines Midcap-Unternehmen das vereinfachte Formular der Kommission nach Art. 11(1). Führen Sie die Dokumentation mit Versionsstand und aktualisieren Sie sie bei jeder Änderung.
+  nachweis: Technische Dokumentation je System und Version.
+
+EUAIA-22:
+  name: Automatische Protokollierung
+  hinweis: |
+    Legen Sie fest, welche Ereignisse das System protokolliert (Nutzungszeitraum, Eingaben, Ergebnisse, Eingriffe), und testen Sie die Protokollierung vor der Auslieferung. Beschreiben Sie in der Betriebsanleitung, wie Betreiber die Protokolle erfassen und auswerten.
+  nachweis: Protokollierungskonzept, Testnachweis, Abschnitt in der Betriebsanleitung.
+
+EUAIA-23:
+  name: Betriebsanleitung nach Art. 13
+  hinweis: |
+    Erstellen Sie die Betriebsanleitung anhand der Mindestinhalte von Art. 13(3) und formulieren Sie sie für die Betreiber verständlich und barrierefrei. Halten Sie Genauigkeitsmetriken und bekannte Grenzen fest.
+  nachweis: Freigegebene Betriebsanleitung, Prüfliste gegen Art. 13(3).
+
+EUAIA-24:
+  name: Menschliche Aufsicht im Design
+  hinweis: |
+    Planen Sie die Aufsicht schon in den Anforderungen: Anzeige von Unsicherheit, Möglichkeit zum Übersteuern, Stoppfunktion mit sicherem Zustand und Hinweise gegen Automatisierungsbias.
+  nachweis: Anforderungen zur Aufsicht, Testprotokoll der Eingriffsfunktionen.
+
+EUAIA-25:
+  name: Genauigkeit, Robustheit und Cybersicherheit
+  hinweis: |
+    Testen Sie Genauigkeit und Robustheit mit festgelegten Metriken und prüfen Sie KI-spezifische Angriffe wie Datenvergiftung oder manipulierte Eingaben. Nutzen Sie vorhandene Prozesse aus dem ISMS für Schwachstellen und sichere Entwicklung.
+  nachweis: Testberichte, Sicherheitstests, Schwachstellenmanagement.
+
+EUAIA-26:
+  name: Qualitätsmanagementsystem nach Art. 17
+  hinweis: |
+    Das AIMS nach ISO/IEC 42001 deckt viele Elemente ab, aber nicht alle. Gleichen Sie Art. 17(1)(a) bis (m) ab und ergänzen Sie fehlende Elemente wie Konformitätsbewertung, Meldung schwerwiegender Vorfälle und Kommunikation mit Behörden. Der Umfang darf der Grösse angemessen sein (Art. 17(2)); KMU ohne Partner- oder verbundene Unternehmen dürfen Elemente vereinfacht umsetzen (Art. 63(1)).
+
+    Lassen Sie juristisch prüfen, ob EN 18286 für Ihr QMS sinnvoll ist und wie weit sie für Art. 17 eine Vermutung trägt; Art. 40(1) nennt Art. 17 nicht ausdrücklich (E-09).
+  nachweis: Abgleichstabelle Art. 17 zu AIMS-Dokumenten, ergänzte Verfahren.
+
+EUAIA-27:
+  name: Aufbewahrung der Dokumentation zehn Jahre
+  hinweis: |
+    Ergänzen Sie das Dokumentenregister um eine Aufbewahrungsfrist von zehn Jahren ab Inverkehrbringen für technische Dokumentation, QMS-Dokumentation, Entscheide notifizierter Stellen und EU-Konformitätserklärung.
+  nachweis: Aufbewahrungsregel im Dokumentenregister, Ablageort.
+
+EUAIA-28:
+  name: Konformitätsbewertung, EU-Konformitätserklärung, CE-Kennzeichnung und Herstellerangaben
+  hinweis: |
+    Planen Sie die Konformitätsbewertung früh. Für Anhang III Nr. 2 bis 8 genügt die interne Kontrolle nach Anhang VI; bei Produkten nach Anhang I Abschnitt A läuft sie im Verfahren des Produktrechts. Erstellen Sie danach Konformitätserklärung und CE-Kennzeichnung und geben Sie Name und Kontaktanschrift an.
+
+    Juristisch prüfen lassen, welches Verfahren gilt und ob eine notifizierte Stelle nötig ist.
+  nachweis: Bericht zur Konformitätsbewertung, EU-Konformitätserklärung, CE-Kennzeichnung.
+
+EUAIA-29:
+  name: Registrierung in der EU-Datenbank
+  hinweis: |
+    Registrieren Sie Hochrisiko-KI-Systeme aus Anhang III vor dem Inverkehrbringen. Auch Systeme aus Anhang III, die Sie nach Art. 6(3) als nicht hochriskant einstufen, sind zu registrieren (Art. 49(2)). Anbieter ohne Niederlassung in der EU registrieren über ihren Bevollmächtigten oder selbst.
+  nachweis: Registrierungsbestätigung mit Kennung.
+
+EUAIA-30:
+  name: Korrekturmassnahmen und Informationspflicht
+  hinweis: |
+    Verbinden Sie das Verfahren für Nichtkonformitäten des AIMS mit den Pflichten aus Art. 20: unverzügliche Korrektur, Rücknahme oder Rückruf, Information der Händler und Betreiber, bei Risiko Meldung an die Marktüberwachungsbehörde.
+  nachweis: Ergänztes Verfahren für Korrekturmassnahmen, Kontaktliste der Händler und Betreiber.
+
+EUAIA-31:
+  name: Bevollmächtigter in der EU
+  hinweis: |
+    Schweizer Anbieter von Hochrisiko-KI-Systemen benennen vor der Bereitstellung in der EU schriftlich einen Bevollmächtigten mit Sitz in der EU und erteilen ihm einen Auftrag mit mindestens den Aufgaben nach Art. 22(3).
+
+    Juristisch prüfen lassen, wie der Auftrag und die Haftung vertraglich geregelt werden.
+  nachweis: Unterzeichneter Auftrag, Kontaktangaben in der Betriebsanleitung.
+
+EUAIA-32:
+  name: Beobachtung nach dem Inverkehrbringen
+  hinweis: |
+    Erstellen Sie einen Plan, welche Leistungsdaten Sie bei Kunden und aus anderen Quellen sammeln und wie oft Sie sie auswerten. Die Kommission veröffentlicht bis 02.09.2027 ein Muster (Art. 72(3)).
+  nachweis: Plan zur Beobachtung nach dem Inverkehrbringen, Auswertungsbericht.
+
+EUAIA-33:
+  name: Meldung schwerwiegender Vorfälle
+  hinweis: |
+    Ergänzen Sie das Vorfallmanagement um die Fristen aus Art. 73: höchstens 15 Tage, bei Todesfall 10 Tage, bei weitverbreitetem Verstoss oder schwerer Störung kritischer Infrastruktur 2 Tage. Ein unvollständiger Erstbericht ist zulässig. Betreiber melden nach Art. 26(5) zuerst dem Anbieter.
+  nachweis: Meldeverfahren mit Fristen und Zuständigkeiten, Vorlage Erstmeldung, Kontaktliste der Behörden.
+
+EUAIA-34:
+  name: Barrierefreiheit
+  hinweis: |
+    Prüfen Sie Benutzeroberflächen und Betriebsanleitung gegen die Anforderungen der Richtlinien (EU) 2016/2102 und (EU) 2019/882, etwa mit den einschlägigen Normen für digitale Barrierefreiheit.
+  nachweis: Prüfbericht zur Barrierefreiheit.
+
+EUAIA-35:
+  name: Vereinbarungen mit Zulieferern und Zusammenarbeit in der Wertschöpfungskette
+  hinweis: |
+    Vereinbaren Sie mit Lieferanten von Modellen, Komponenten und Diensten schriftlich, welche Informationen und welcher technische Zugang Ihnen zustehen (Art. 25(4)). Regeln Sie umgekehrt, wie Sie mit Kunden zusammenarbeiten, die Ihr System zu einem Hochrisiko-KI-System machen, oder schliessen Sie dies ausdrücklich aus (Art. 25(2)). Die freiwilligen Musterbedingungen des Büros für Künstliche Intelligenz können helfen.
+  nachweis: Vertragsklauseln, Lieferantenregister mit Vermerk.
+
+EUAIA-36:
+  name: Einführerpflichten
+  hinweis: |
+    Führen Sie eine Eingangsprüfliste für Hochrisiko-KI-Systeme aus Drittländern (Konformitätsbewertung, technische Dokumentation, CE-Kennzeichnung, Konformitätserklärung, Betriebsanleitung, Bevollmächtigter) und bewahren Sie die Unterlagen zehn Jahre auf.
+  nachweis: Ausgefüllte Prüfliste je System, Ablage der Unterlagen.
+
+EUAIA-37:
+  name: Händlerpflichten
+  hinweis: |
+    Prüfen Sie vor dem Weiterverkauf CE-Kennzeichnung, Konformitätserklärung und Betriebsanleitung und halten Sie fest, wie Sie bei Hinweisen auf Nichtkonformität reagieren.
+  nachweis: Prüfliste je System, Protokoll von Sperren und Meldungen.
+
+EUAIA-38:
+  name: Pflichten als Bevollmächtigter
+  hinweis: |
+    Übernehmen Sie für einen Anbieter aus einem Drittland die Rolle des Bevollmächtigten, prüfen Sie Konformitätserklärung und technische Dokumentation, halten Sie die Unterlagen bereit und beenden Sie den Auftrag bei Pflichtverstössen des Anbieters.
+  nachweis: Auftrag, Prüfprotokolle, Ablage der Unterlagen.
+
+EUAIA-39:
+  name: Pflichten für Anbieter von KI-Modellen mit allgemeinem Verwendungszweck (Hinweis)
+  hinweis: |
+    Betrifft nur Organisationen, die selbst ein KI-Modell mit allgemeinem Verwendungszweck in Verkehr bringen, nicht solche, die ein Modell über eine Schnittstelle nutzen oder in ein eigenes KI-System einbauen. Wer ein solches Modell wesentlich verändert und unter eigenem Namen anbietet, sollte die Rolle klären.
+
+    Juristisch prüfen lassen, wenn Sie ein Modell feinabstimmen und an Dritte weitergeben.
+  nachweis: Rollenklärung, bei Anwendbarkeit Dokumentation nach Anhang XI und XII.

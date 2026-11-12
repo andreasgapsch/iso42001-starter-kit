@@ -1,0 +1,7 @@
+titel: Starter kit
+gruss: Hello {nutzer}, welcome
+leer: Not empty here
+liste:
+  - one
+  - two
+nur_en: Only in English

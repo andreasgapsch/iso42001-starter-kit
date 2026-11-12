@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": ["node", "vite/client"],
+    "paths": { "#einbettung": ["./s4/src/einbettung-naiv.ts"] }
+  },
+  "include": ["./**/*", "../src/app/speicher/**/*", "../scripts/csp.mts"],
+  "exclude": ["./**/dist/**"]
+}

@@ -1,0 +1,154 @@
+# Ergänzungsblätter für den Pfad «mit ISMS» (Ordner 03).
+# Jedes Blatt nennt die Abschnitte, die in ein bestehendes ISMS-Dokument
+# aufzunehmen sind. Reihenfolge der Abschnitte = Reihenfolge im Blatt.
+# vorlage: zugehörige Kernvorlage des Kits
+# ismsDokument: Schlüssel des betroffenen ISMS-Dokuments
+# normbezug: Abschnitte (K-x) und Controls (A.x) der ISO/IEC 42001
+# iso27001: verwandte Controls aus ISO/IEC 27001:2022 Anhang A
+# iso27001Kapitel: verwandte Abschnitte der Kapitel 4 bis 10 der ISO/IEC 27001 (gleiche Struktur wie 42001)
+# datei: eigener Dateistamm je Sprache (sonst D-xx-EB_ mit dem Stamm der Vorlage), wenn der Name der Vorlage irreführt
+# Texte: src/i18n/{de,en}/ergaenzungsblaetter.yaml
+blaetter:
+  - id: D-03-EB
+    vorlage: D-03
+    ismsDokument: isms-leitlinie
+    datei: { de: D-03-EB_Sicherheitsleitlinie, en: D-03-EB_Security-Policy }
+    normbezug: [K-5.2, A.2.2, A.2.3, A.2.4]
+    iso27001: [27001-5.1]
+    iso27001Kapitel: [5.2]
+    abschnitte:
+      - geltung-ki
+      - verhaeltnis-ki-leitlinie
+      - sicherheitsgrundsaetze-ki
+      - gemeinsame-ueberpruefung
+  - id: D-04-EB
+    vorlage: D-04
+    ismsDokument: isms-rollen
+    normbezug: [K-5.3, A.3.2, A.3.3]
+    iso27001: [27001-5.2, 27001-6.8]
+    iso27001Kapitel: [5.3]
+    abschnitte:
+      - aims-verantwortung
+      - systemverantwortung
+      - raci-ki
+      - meldeweg-bedenken
+  - id: D-06-EB
+    vorlage: D-06
+    ismsDokument: isms-risikoverfahren
+    normbezug: [K-6.1.1, K-6.1.2, K-6.1.3, K-8.2, K-8.3]
+    iso27001: []
+    iso27001Kapitel: [6.1.2, 6.1.3]
+    abschnitte:
+      - eine-methode
+      - auswirkungen-ki
+      - risikoquellen-ki
+      - verbindung-folgenabschaetzung
+      - risikoeigner-ki
+  - id: D-07-EB
+    vorlage: D-07
+    ismsDokument: isms-risikoregister
+    normbezug: [K-6.1.2, K-6.1.3, K-8.2, K-8.3]
+    iso27001: []
+    iso27001Kapitel: [6.1.2, 6.1.3, 8.2, 8.3]
+    abschnitte:
+      - zusatzspalten
+      - trennung-verknuepfung
+      - chancen
+      - restrisiko
+  - id: D-10-EB
+    vorlage: D-10
+    ismsDokument: isms-asset-inventar
+    normbezug: [A.4.2, A.4.3, A.4.4, A.4.5, A.4.6]
+    iso27001: [27001-5.9]
+    abschnitte:
+      - ki-kennzeichen
+      - ressourcen-zuordnen
+      - schatten-ki
+      - pflege
+  - id: D-14-EB
+    vorlage: D-14
+    ismsDokument: isms-vorfallmanagement
+    normbezug: [A.8.2, A.8.3, A.8.4, A.8.5, A.10.4]
+    iso27001: [27001-5.24, 27001-5.26, 27001-6.8]
+    abschnitte:
+      - ki-vorfaelle
+      - meldekanal-extern
+      - kommunikation
+      - meldepflichten
+      - lehren
+      - information-nutzende
+  - id: D-15-EB
+    vorlage: D-15
+    ismsDokument: isms-akzeptable-nutzung
+    normbezug: [K-7.3, A.9.2, A.9.3, A.9.4]
+    iso27001: [27001-5.10]
+    abschnitte:
+      - freigegebene-werkzeuge
+      - dateneingabe
+      - ergebnisse-pruefen
+      - neue-werkzeuge
+      - verbotene-nutzung
+  - id: D-16-EB
+    vorlage: D-16
+    ismsDokument: isms-lieferanten
+    normbezug: [K-8.1, A.10.2, A.10.3, A.10.4]
+    iso27001: [27001-5.19, 27001-5.20, 27001-5.22, 27001-5.23]
+    abschnitte:
+      - ki-lieferanten
+      - pruefpunkte
+      - vertragsklauseln
+      - verantwortungsteilung
+      - ueberwachung
+  - id: D-17-EB
+    vorlage: D-17
+    ismsDokument: isms-awareness
+    normbezug: [K-7.2, K-7.3, K-7.4, A.4.6]
+    iso27001: [27001-6.3]
+    iso27001Kapitel: [7.2, 7.3, 7.4]
+    abschnitte:
+      - ki-kompetenzen
+      - awareness-ki
+      - kommunikation-ki
+      - nachweise
+  - id: D-20-EB
+    vorlage: D-20
+    ismsDokument: isms-auditprogramm
+    normbezug: [K-9.2]
+    iso27001: []
+    iso27001Kapitel: [9.2]
+    abschnitte:
+      - umfang
+      - planung
+      - auditoren
+      - berichte
+  - id: D-21-EB
+    vorlage: D-21
+    ismsDokument: isms-managementbewertung
+    normbezug: [K-9.3, K-5.1, K-7.1, A.2.4]
+    iso27001: []
+    iso27001Kapitel: [9.3]
+    abschnitte:
+      - eingaben-ki
+      - entscheide-ki
+      - protokoll
+  - id: D-22-EB
+    vorlage: D-22
+    ismsDokument: isms-nichtkonformitaeten
+    normbezug: [K-10.1, K-10.2]
+    iso27001: []
+    iso27001Kapitel: [10.2]
+    abschnitte:
+      - bereich
+      - ursachen-ki
+      - verbesserungen
+  - id: D-26-EB
+    vorlage: D-26
+    ismsDokument: isms-dokumentenlenkung
+    normbezug: [K-7.5, K-6.3]
+    iso27001: [27001-5.33]
+    iso27001Kapitel: [7.5]
+    abschnitte:
+      - geltung-feld
+      - dokumentarten-ki
+      - aenderungen-aims
+      - ki-erstellte-dokumente

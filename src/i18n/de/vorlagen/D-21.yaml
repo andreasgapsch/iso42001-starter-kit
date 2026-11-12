@@ -1,0 +1,147 @@
+# D-21 Managementbewertung
+hinweis_umfang: "Die Geschäftsleitung bewertet das AIMS mindestens jährlich, die erste Bewertung vor dem Stage-1-Audit und nach dem ersten internen Audit. Häufiger ist nicht nötig; ausserordentlich bewerten Sie bei grossen Änderungen, etwa einem neuen KI-System mit hohem Risiko. Bereiten Sie je Traktandum eine kurze Übersicht vor, damit die Sitzung höchstens zwei Stunden dauert."
+hinweis_isms: "Mit ISMS: Führen Sie eine gemeinsame Sitzung mit einem Protokoll für beide Normen. Die Punkte mit «ISMS» behandeln Sie nur für das ISMS, alle übrigen für beide Systeme."
+hinweis_protokoll: "Halten Sie in der letzten Spalte das Ergebnis fest: kurz, was vorgelegt wurde, wie die Geschäftsleitung es bewertet und ob ein Entscheid nötig ist. Ein Auditor sucht zu jeder Pflichteingabe einen Eintrag."
+hinweis_entscheide: "Ohne Entscheide ist eine Managementbewertung nicht vollständig. Halten Sie auch fest, wenn keine Änderung nötig ist, und begründen Sie dies kurz."
+einleitung: "Die Geschäftsleitung von [[Firmenname]] bewertet mit diesem Dokument, ob das KI-Managementsystem (AIMS) geeignet, angemessen und wirksam ist, und entscheidet über Verbesserungen und Änderungen."
+einleitung_firma: "Die Geschäftsleitung von {firma} bewertet mit diesem Dokument, ob das KI-Managementsystem (AIMS) geeignet, angemessen und wirksam ist, und entscheidet über Verbesserungen und Änderungen."
+einleitung_isms: "Die Bewertung findet gemeinsam mit der Managementbewertung des ISMS statt."
+abschnitte:
+  rahmen: Rahmen der Sitzung
+  agenda: Agenda und Protokoll
+  pflicht: Pflichteingaben
+  empfohlen: Empfohlene Punkte
+  isms: Zusätzliche Punkte für das ISMS
+  beurteilung: Gesamtbeurteilung
+  entscheide: Entscheide zu Verbesserungen und Änderungen
+  massnahmen: Massnahmen
+  rhythmus: Rhythmus und nächste Bewertung
+  freigabe: Freigabe des Protokolls
+felder:
+  datum: Datum
+  ort: Ort oder Format
+  leitung: Leitung der Sitzung
+  teilnehmende: Teilnehmende
+  protokoll: Protokoll
+  zeitraum: Bewertungszeitraum
+  isms: Gemeinsam mit ISMS
+  vorher: Letzte Bewertung
+  kennung: Kennung
+platzhalter:
+  ort: "Sitzungszimmer oder online"
+  teilnehmende: "Geschäftsleitung, AIMS-Verantwortung, weitere"
+  zeitraum: "TT.MM.JJJJ bis TT.MM.JJJJ"
+  vorher: "TT.MM.JJJJ oder erste Bewertung"
+agenda_kopf: [Nr., Traktandum, Unterlagen, Ergebnis und Bewertung]
+markierung:
+  isms: "(nur mit ISMS)"
+  modul: "(nur mit Modul AI Act)"
+pflicht:
+  - { punkt: "Stand der Massnahmen aus früheren Managementbewertungen", unterlagen: "Massnahmen der letzten Bewertung, {{fakt:register.massnahmen}}" }
+  - { punkt: "Änderungen bei internen und externen Themen, die das AIMS betreffen", unterlagen: "D-01 (Themen, Rolle, Klimawandel)" }
+  - { punkt: "Änderungen bei Bedürfnissen und Erwartungen der interessierten Parteien", unterlagen: "D-01 (Register der Parteien)" }
+  - { punkt: "Leistung: Nichtkonformitäten und Korrekturmassnahmen, mit Entwicklung über die Zeit", unterlagen: "D-22" }
+  - { punkt: "Leistung: Ergebnisse von Überwachung und Messung, Erreichung der KI-Ziele", unterlagen: "D-05" }
+  - { punkt: "Leistung: Ergebnisse interner und externer Audits", unterlagen: "D-20, Auditberichte" }
+  - { punkt: "Möglichkeiten zur fortlaufenden Verbesserung", unterlagen: "{{fakt:register.massnahmen|gross}}" }
+empfohlen:
+  - { id: inventar, punkt: "KI-Inventar: neue, geänderte und abgelöste Systeme, Schatten-KI; Systeme mit verfehltem Nutzen: weiterführen, ändern oder ablösen?", unterlagen: "D-10, D-09" }
+  - { id: risiken, punkt: "KI-Risiken, Restrisiken und Folgenabschätzungen", unterlagen: "D-07, D-09" }
+  - { id: meldungen, punkt: "Meldungen, Bedenken und KI-Vorfälle", unterlagen: "D-04, D-14" }
+  - { id: lieferanten, punkt: "KI-Lieferanten: Ergebnisse der Überprüfung", unterlagen: "D-16" }
+  - { id: ziele, punkt: "KI-Ziele für die nächste Periode; taugen Kennzahlen und Tests, welche Fehler haben sie nicht erkannt?", unterlagen: "D-05" }
+  - { id: ressourcen, punkt: "Ressourcen für das AIMS: Personal, Zeit, Budget", unterlagen: "D-00, D-05" }
+  - { id: aiact, punkt: "Stand EU AI Act: Rollen, Einstufungen, Fristen", unterlagen: "E-01 bis E-03, E-09", modul: true }
+  - { id: leitlinie, punkt: "Überprüfung der KI-Leitlinie (A.2.4)", unterlagen: "D-03" }
+isms:
+  - { punkt: "ISMS: Rückmeldungen interessierter Parteien zur Informationssicherheit", unterlagen: "ISMS-Unterlagen" }
+  - { punkt: "ISMS: Ergebnisse der Risikobeurteilung und Stand des Behandlungsplans", unterlagen: "ISMS-Risikoregister" }
+  - { punkt: "ISMS: Erreichung der Informationssicherheitsziele", unterlagen: "ISMS-Ziele" }
+beurteilung_felder:
+  geeignet: "Passt das AIMS zum Unternehmen und seinen KI-Systemen?"
+  angemessen: "Reichen Umfang und Mittel?"
+  wirksam: "Erreicht das AIMS seine Ziele?"
+beurteilung_platzhalter: "ja/nein, kurze Begründung"
+# Antwort je Frage der Gesamtbeurteilung (gesamtbeurteilung.<frage>.urteil)
+beurteilung_urteil:
+  ja: "ja"
+  nein: "nein"
+  offen: "noch nicht abschliessend beurteilt"
+zeitraum_text: "{von} bis {bis}"
+erste_bewertung: "erste Bewertung"
+entscheid_bis: "bis {datum}"
+entscheide_art:
+  verbesserung: Verbesserung
+  aenderung: Änderung am AIMS
+  ressourcen: Ressourcen
+  ziele: Ziele
+  restrisiko: Restrisiko
+entscheide_kopf: [Nr., Entscheid, Art, "Verantwortlich, Termin, Massnahme"]
+entscheide_arten: "Verbesserung, Änderung am AIMS, Ressourcen, Ziele, Annahme von Restrisiken"
+entscheide_leer: "[[Verbesserung / Änderung am AIMS / Ressourcen / Ziele / Restrisiko]]"
+massnahmen_kopf: [ID, Massnahme, Verantwortlich, Termin, Status]
+massnahmen_hinweis: "Übertragen Sie jede Massnahme mit ID in das {{fakt:register.massnahmen}}; dort stehen auch die geplanten Änderungen (D-26). Jede Massnahme braucht eine verantwortliche Person und einen Termin."
+massnahme_status:
+  offen: offen
+  in-arbeit: in Arbeit
+  erledigt: erledigt
+  verworfen: verworfen
+rhythmus_text: "Die Managementbewertung findet jährlich statt, im Zertifizierungszyklus jeweils nach dem internen Audit und vor dem externen Audit. Bei grossen Änderungen beruft die Geschäftsleitung eine ausserordentliche Bewertung ein. Nächste ordentliche Bewertung: {naechste}."
+freigabe_text: "Die Geschäftsleitung hat das Protokoll am {datum} freigegeben."
+ausbau: "Bei vielen KI-Systemen: Legen Sie eine Übersicht je System bei (Status, Risiken, Folgenabschätzung, Vorfälle, Kennzahlen). So bleibt die Sitzung kurz, und die Unterlagen belegen die Bewertung."
+eb_einleitung: "Dieses Ergänzungsblatt nennt die Punkte, die Sie in die bestehende Managementbewertung des ISMS aufnehmen. Die Pflichteingaben sind in beiden Normen gleich aufgebaut; behandeln Sie sie in einer Sitzung für beide Systeme und ergänzen Sie die KI-Sicht."
+eb_einleitung_firma: "Die Managementbewertung von {firma} behandelt ISMS und AIMS in einer gemeinsamen Sitzung. Dieses Blatt nennt die zusätzlichen Punkte für das AIMS."
+eb_traktanden: Zusätzliche Traktanden für das AIMS
+eb_pflicht_titel: KI-Sicht bei den gemeinsamen Pflichteingaben
+eb_pflicht_kopf: [Nr., Pflichteingabe, Was für das AIMS dazukommt, Ergebnis und Bewertung]
+eb_pflicht:
+  - ["Stand früherer Massnahmen", "Massnahmen aus KI-Risiken, Folgenabschätzungen und Audits des AIMS"]
+  - ["Änderungen bei Themen", "Rolle je KI-System, neue Technik, KI-Recht, Klimawandel"]
+  - ["Änderungen bei interessierten Parteien", "Betroffene von KI-Entscheiden, Kunden mit KI-Anforderungen, Aufsicht"]
+  - ["Leistung: Nichtkonformitäten", "Nichtkonformitäten und Korrekturmassnahmen mit KI-Bezug"]
+  - ["Leistung: Überwachung, Messung, Ziele", "Kennzahlen der KI-Systeme, Erreichung der KI-Ziele (D-05)"]
+  - ["Leistung: Audits", "Auditergebnisse zu ISO/IEC 42001, auch zu Anhang A"]
+  - ["Verbesserungen", "Vorschläge aus Meldungen, Überwachung und Lieferantenprüfung; Massnahmen und geplante Änderungen im {{fakt:register.massnahmen}}"]
+# Erste Bewertung: Statt «Stand der Massnahmen aus früheren Managementbewertungen» (es gibt keine) der Stand der Massnahmen aus dem Aufbau
+erste_massnahmen: { punkt: "Stand der Massnahmen aus Aufbau und Risikobehandlung (erste Bewertung)", unterlagen: "D-07 (Behandlungsplan), D-22" }
+eb_erste_massnahmen: ["Stand der Massnahmen (erste Bewertung)", "Massnahmen aus Aufbau, KI-Risiken und Folgenabschätzungen"]
+# Zusammenfassung aus den Projektdaten, wenn Nr. 5 und 6 keinen eigenen Text haben
+abgeleitet:
+  messung: "{id} {kennzahl}: {wert} am {datum}"
+  soll: "Soll erreicht: {soll}"
+  soll_wert:
+    ja: ja
+    teilweise: teilweise
+    nein: nein
+  keine_messung: "{id} {kennzahl}: noch keine Messung"
+  audit: "{id} {art} vom {datum}: {ergebnis}"
+  audit_ohne_ergebnis: "{id} {art} vom {datum}"
+  feststellungen: "Feststellungen {liste}"
+  audit_art:
+    intern: internes Audit
+    extern-stage1: Stage-1-Audit
+    extern-stage2: Stage-2-Audit
+    ueberwachung: Überwachungsaudit
+  einstufung:
+    nk-schwer: schwere Nichtkonformität
+    nk-leicht: leichte Nichtkonformität
+    beobachtung: Beobachtung
+    verbesserung: Verbesserung
+eb_traktanden_kopf: [Nr., Traktandum, Unterlagen, Ergebnis und Bewertung]
+weitere_punkt: Weitere Themen
+prozesse:
+  punkt: "Stand der Prozesse: Reife, Eigner, fällige Durchführungen und offene Massnahmen"
+  unterlagen: "D-02, D-27"
+  zusammenfassung: "{anzahl} anwendbare Prozesse: {verteilung}. Ohne Eigner: {ohne}; Durchführung überfällig: {ueberfaellig}; offene Massnahmen: {massnahmen}."
+  zusammenfassung_eins: "1 anwendbarer Prozess: {verteilung}. Ohne Eigner: {ohne}; Durchführung überfällig: {ueberfaellig}; offene Massnahmen: {massnahmen}."
+  titel: Stand der Prozesse
+  einleitung: "Stand am {datum}: anwendbare Prozesse mit Eigner, Reife, Veränderung seit der letzten Bewertung und Befunden."
+  kopf: [Prozess, Eigner/in, Reife, Veränderung, Befunde]
+  gleich: unverändert
+  befund_ueberfaellig: Durchführung überfällig
+  befund_massnahmen: "Massnahmen überfällig: {liste}"
+  befund_feststellungen: "offene Feststellungen: {liste}"
+  befund_massnahmen_offen: "offene Massnahmen: {liste}"
+  befund_eigner: ohne Eigner
+  landkarte_titel: Prozesslandkarte nach Reife
+  landkarte_alt: "Prozesslandkarte nach Gruppen, jeder Prozess mit seiner Reife als Wort: {verteilung}."

@@ -1,0 +1,145 @@
+# D-10 KI-Inventar und Erhebungsfragebogen
+blaetter:
+  inventar: Inventar
+  ressourcen: Ressourcen
+  fragebogen: Fragebogen Fachbereiche
+  freigabe: Freigabeliste
+titel_inventar: "KI-Inventar: alle KI-Systeme im Geltungsbereich"
+titel_ressourcen: "Ressourcen je KI-System"
+titel_fragebogen: "Fragebogen: Wo nutzen Sie KI?"
+titel_freigabe: "Freigabeliste KI-Werkzeuge"
+hinweise_inventar:
+  - "Eine Zeile je KI-System. Erfassen Sie auch KI-Funktionen in eingekaufter Software (z. B. Assistenten in Office-, CRM- oder HR-Programmen) und Schatten-KI, also Werkzeuge, die ohne Freigabe genutzt werden."
+  - "Typ: eingekauft (Software oder Gerät), SaaS (Cloud-Dienst), Eigenbau (selbst entwickelt oder nachtrainiert), Schatten-KI (ohne Freigabe im Einsatz)."
+  - "Sensible Nutzung ergibt sich aus der Kurzprüfung (D-08, D-09). Die nächste Überprüfung planen Sie spätestens nach einem Jahr."
+  - "Handelnde KI: «Handlungsbefugnis» zeigt, wie weit das System selbst handelt: informiert (gibt Auskunft, entwirft), empfiehlt, bereitet vor (z. B. Buchung zur Bestätigung), führt begrenzt aus (einzelne Aktionen ohne Bestätigung), handelt mehrstufig (plant und führt mehrere Schritte mit Werkzeugen aus, sogenannte Agenten). Ab «führt begrenzt aus» braucht das System eine Stoppmöglichkeit, Protokolle und eine benannte Aufsicht. Unter «Zugriffe und Werkzeuge» stehen Systeme, Ablagen, Schnittstellen, Konnektoren und Erweiterungen, die es lesen oder bedienen kann."
+  - "Modell und Version: Anbieter, Modell und Version, bei Diensten die Angabe des Anbieters mit Datum. Ein Modellwechsel ist ein Auslöser für die Neubeurteilung (D-12). «Liest fremde Inhalte» heisst: E-Mails, Webseiten oder Dokumente Dritter; zusammen mit «öffentlich erreichbar» und «generativ» bestimmt es, ob Missbrauchsfälle getestet werden (D-12)."
+  - "Tarif oder Vertragsart: Die Zusagen zu Training, Aufbewahrung und Vertrag hängen am Angebot, nicht am Anbieter. Vertrauliche Daten nur mit Business, Unternehmensvertrag oder eigenem Betrieb. «Abkündigung durch den Anbieter» ist das angekündigte Datum, an dem Modell oder Dienst eingestellt wird; «Quelle der Anbieterangaben» nennt Fundstelle und Abrufdatum beim Hersteller oder Anbieter, nicht aus Sammlungen Dritter."
+  - "Kritisch für den Betrieb: wenn ein Ausfall wichtige Abläufe stört; dann den Rückfallweg nennen. «Aufbewahren bis» gilt für Systeme ausser Betrieb oder abgelöst: bis dahin bleiben Unterlagen, Ergebnisse und Einstellungen erhalten (D-12)."
+hinweis_aiact: "Die Spalten «Rolle AI Act» und «Risikoklasse AI Act» brauchen Sie nur mit dem AI-Act-Modul (E-01, E-02). Sonst leer lassen oder ausblenden."
+hinweise_ressourcen:
+  - "Eine Zeile je KI-System aus dem Blatt «Inventar». Stichworte genügen; verweisen Sie auf bestehende Verzeichnisse statt sie abzuschreiben."
+  - "Daten: Eingaben, Ausgaben und, falls bekannt, Trainingsdaten. Werkzeuge und Modelle: Modell oder Dienst, Version, Anbieter. Rechenressourcen: Betriebsort (eigenes Rechenzentrum, Cloud mit Region, Endgerät). Personal: Rollen für Betrieb, Aufsicht und Support."
+  - "Abhängigkeiten: Systeme und Abläufe, die dem KI-System Daten liefern oder seine Ergebnisse weiterverwenden. Sie zeigen, wer bei Ausfall, Änderung oder Ausserbetriebnahme betroffen ist."
+hinweise_fragebogen:
+  - "Eine Zeile je Werkzeug oder Funktion, die künstliche Intelligenz nutzt; im Zweifel aufführen. Es geht um einen Überblick, nicht um Kontrolle. Dazu gehören auch Gratis- und Privatkonten, die für die Arbeit genutzt werden."
+  - "Beispiele: Chat- und Schreibassistenten (Microsoft 365 Copilot, ChatGPT und ähnliche), KI-Funktionen in CRM (Lead-Bewertung, Textvorschläge), HR-Werkzeuge (Vorselektion von Bewerbungen), Übersetzung, Protokolle und Transkription von Sitzungen, Bild- und Texterzeugung, Belegerkennung, Chatbots auf der Website sowie Browser-Erweiterungen und Apps."
+  - "Die Spaltenköpfe bleiben unverändert. So lassen sich die Antworten aller Fachbereiche zusammenführen und in das Inventar übernehmen."
+hinweise_freigabe:
+  - "Hier steht, welche KI-Werkzeuge Mitarbeitende nutzen dürfen, mit welchen Auflagen und bis zu welcher Klassifikation der Daten. Die Regeln dazu stehen in der Nutzungsrichtlinie (D-15)."
+  - "Untersagte Werkzeuge bleiben mit Begründung auf der Liste, damit die Entscheidung nachvollziehbar ist."
+  - "Erweiterungen, Konnektoren (auch Werkzeugserver, etwa nach dem Model Context Protocol), eigene Assistenten und Agenten brauchen eine eigene Freigabe: Nennen Sie in der Spalte «Freigegebene Zugriffe», welche freigegeben sind. Alles andere ist nicht erlaubt (D-15)."
+  - "Funktionen: je Funktionsschalter des Dienstes die gewählte Einstellung, z. B. «Websuche: ein; Gedächtnis: aus». Nicht genannte Funktionen sind ungeklärt."
+  - "«Antrag am» und «Entscheid am»: Datum, an dem der Antrag einging, und Datum der Freigabe oder Ablehnung (PR-07). Daraus rechnet die Kennzahl PR-07 die Tage bis zum Entscheid (D-05)."
+hinweis_eb: "Mit ISMS: Führen Sie KI-Systeme entweder im bestehenden Asset-Inventar mit dem Kennzeichen «KI» und den Spalten dieses Blatts, oder führen Sie dieses Inventar und verweisen Sie je System auf die Asset-ID (Blatt «Ressourcen»)."
+ausbau_eigenbau: "Für Eigenentwicklungen: Halten Sie im Blatt «Ressourcen» zusätzlich Modellversionen, Trainings- und Testdatensätze sowie Entwicklungswerkzeuge je Version fest (A.4.3, A.4.4, A.6.2.3)."
+spalten_inventar:
+  - ID
+  - Name
+  - Typ
+  - Beschreibung
+  - Zweck
+  - Fachbereich
+  - Eigner/in
+  - Lieferant
+  - Personendaten
+  - Besondere Personendaten
+  - Betroffene
+  - Automatisierung
+  - Lebenszyklus
+  - Status
+  - Sensible Nutzung
+  - Nächste Überprüfung
+  - Erfasst am
+  - Geändert am
+  - "Menschliche Aufsicht (wer prüft)"
+  - Handlungsbefugnis
+  - Zugriffe und Werkzeuge
+  - Gedächtnis über Sitzungen
+  - "Stoppmöglichkeit (wie, wer)"
+  - Art der KI-Aufgabe
+  - Generativ
+  - Modell und Version
+  - Liest fremde Inhalte
+  - Öffentlich erreichbar
+  - Kritisch für den Betrieb
+  - Rückfallweg
+  - Aufbewahren bis
+  - Tarif oder Vertragsart
+  - Abkündigung durch den Anbieter
+  - "Quelle der Anbieterangaben, abgerufen am"
+spalten_aiact: [Rolle AI Act, Risikoklasse AI Act, Begründung Rolle und Klasse, "Festgelegt durch, am"]
+spalten_aiact_optional: ["Rolle AI Act (optional, Modul)", "Risikoklasse AI Act (optional, Modul)", "Begründung Rolle und Klasse (optional)", "Festgelegt durch, am (optional)"]
+spalten_ressourcen:
+  - ID
+  - KI-System
+  - "Daten (A.4.3)"
+  - "Werkzeuge und Modelle (A.4.4)"
+  - "Rechenressourcen, Betriebsort (A.4.5)"
+  - "Personal und Kompetenzen (A.4.6)"
+  - "Abhängigkeiten (Systeme und Abläufe davor und danach)"
+spalte_asset: "Asset-ID im ISMS-Inventar"
+spalten_fragebogen:
+  - Fachbereich
+  - Ausgefüllt von
+  - "1 Name des Werkzeugs oder der Funktion"
+  - "2 Wofür nutzen Sie es?"
+  - "3 Wie kam das Werkzeug zu Ihnen?"
+  - "4 Anbieter oder Hersteller"
+  - "5 Wie viele Personen nutzen es?"
+  - "6 Wie oft nutzen Sie es?"
+  - "7 Welche Daten geben Sie ein?"
+  - "8 Sind Personendaten dabei?"
+  - "9 Sind besonders heikle Daten dabei (Gesundheit, Bewerbungen, Lohn, Kundengeheimnisse)?"
+  - "10 Wer ist von den Ergebnissen betroffen?"
+  - "11 Prüft ein Mensch das Ergebnis, bevor es verwendet wird?"
+  - "12 Bemerkungen oder Bedenken"
+  - "13 Kann das Werkzeug selbst etwas tun, z. B. E-Mails senden, Termine oder Buchungen auslösen, Dateien oder Daten ändern?"
+  - "14 Auf welche Systeme, Ablagen, Postfächer oder Konten greift es zu (z. B. über Erweiterungen, Konnektoren oder Agenten)?"
+spalten_freigabe:
+  - Werkzeug
+  - KI-System
+  - Anbieter
+  - Status
+  - Erlaubte Nutzung und Auflagen
+  - Höchste erlaubte Datenklasse
+  - Begründung
+  - Freigegeben von
+  - Freigegeben am
+  - Nächste Überprüfung
+  - Handlungsbefugnis
+  - "Freigegebene Zugriffe, Erweiterungen und Agenten"
+  - Tarif oder Vertragsart
+  - "Funktionen (ein, aus)"
+# Datenquelle der Kennzahl PR-07 (AF-104), am Ende der Freigabeliste
+spalten_antrag: [Antrag am, Entscheid am]
+listen:
+  typ: [eingekauft, Cloud-Dienst (SaaS), Eigenbau, Schatten-KI]
+  automatisierung: [unterstützend, teilautomatisiert, vollautomatisiert]
+  lebenszyklus: [Idee, Entwicklung, Test, Betrieb, ausser Betrieb]
+  aiact_rolle: [Anbieter, Betreiber, Einführer, Händler, Produkthersteller, Bevollmächtigter]
+  risikoklasse: [offen, verboten, Hochrisiko Anhang III, Hochrisiko Anhang I, Transparenz, minimal]
+  herkunft: [von der Firma bereitgestellt, KI-Funktion in bestehender Software, selbst beschafft oder Gratisversion, selbst entwickelt]
+  haeufigkeit: [täglich, wöchentlich, selten]
+  ja_nein_unklar: [ja, nein, weiss nicht]
+  pruefung: [immer, meistens, selten oder nie]
+  datenklasse: [öffentlich, intern, vertraulich, streng vertraulich]
+  # Reihenfolge wie HANDLUNGSBEFUGNISSE und AUFGABENARTEN in src/model/typen.ts
+  handlungsbefugnis: [informiert, empfiehlt, bereitet vor, führt begrenzt aus, handelt mehrstufig]
+  aufgabenart: [erzeugt Inhalte, klassifiziert oder erkennt, prognostiziert, empfiehlt oder priorisiert, steuert]
+  # Reihenfolge wie TARIFE in src/model/typen.ts
+  tarif: [Gratiskonto, Privat- oder Einzelabo, Business oder Team, Unternehmensvertrag, eigener Betrieb]
+  funktion_stand: [ein, aus]
+# Funktionsschalter (Reihenfolge wie FUNKTIONEN in src/model/typen.ts)
+funktionen:
+  websuche: Websuche
+  codeausfuehrung: Codeausführung
+  dateiupload: Datei-Upload
+  gedaechtnis: Gedächtnis
+  konnektoren: Konnektoren und Werkzeugserver
+  agenten: Eigene Assistenten und Agenten
+  teilen: Teilen nach aussen
+# Freigabeliste: untersagtes System
+keine_nutzung: "keine Nutzung erlaubt"
+modell_teile: [Anbieter, Modell, Version]
+hinweis_fragebogen_firma: "Dieses Blatt ist die leere Vorlage für die nächste Erhebung. Die Antworten früherer Erhebungen sind ins Inventar übernommen; die Rückläufe sind als Nachweis im Dokumentenregister (D-26) abgelegt."

@@ -1,0 +1,166 @@
+# D-06 Verfahren KI-Risikomanagement
+hinweis_umfang: "Das Verfahren beschreibt die Methode; die Risiken stehen in D-07, die Controls in D-11. Beginnen Sie mit Systemen, die Personendaten verarbeiten oder über Menschen mitentscheiden."
+einleitung: "Dieses Verfahren legt fest, wie [[Firmenname]] Risiken und Chancen im Zusammenhang mit KI erkennt, bewertet, behandelt und überwacht. Es sorgt dafür, dass wiederholte Beurteilungen vergleichbare Ergebnisse liefern."
+einleitung_firma: "Dieses Verfahren legt fest, wie {firma} Risiken und Chancen im Zusammenhang mit KI erkennt, bewertet, behandelt und überwacht. Es sorgt dafür, dass wiederholte Beurteilungen vergleichbare Ergebnisse liefern."
+abschnitte:
+  zweck: Zweck
+  geltung: Geltung
+  ablauf: Ablauf
+  skalen: Skalen und Akzeptanzkriterien
+  folgen: Verbindung zur Folgenabschätzung
+  wiederholung: Wiederholung
+  chancen: Chancen
+  zustaendigkeiten: Zuständigkeiten
+  aufzeichnungen: Aufzeichnungen
+  freigabe: Freigabe
+zweck_text: "Es verbindet das KI-Inventar (D-10), die Folgenabschätzungen (D-08, D-09), das Risikoregister (D-07) und die Erklärung zur Anwendbarkeit (D-11)."
+geltung_text: "Wir beurteilen Risiken auf zwei Ebenen:"
+geltung_ebenen:
+  - "**Unternehmensebene:** Risiken für das KI-Managementsystem als Ganzes, z. B. lückenhaftes Inventar, fehlende Kompetenz, neue Gesetze."
+  - "**Systemebene:** Risiken jedes KI-Systems im Inventar D-10, von der Beschaffung bis zur Ausserbetriebnahme."
+ablauf:
+  kontext:
+    titel: Kontext und Kriterien festlegen
+    text: "Grundlage sind Kontext und interessierte Parteien (D-01), Geltungsbereich (D-02), KI-Inventar (D-10) und die Kriterien in Abschnitt 4. Je System klären wir Zweck, Nutzende, Betroffene, Daten und Lieferanten."
+  identifikation:
+    titel: Risiken identifizieren
+    text: "Eigner/in und AIMS-Verantwortliche/r sammeln Risiken mit dem Fachbereich. Eingänge sind Folgenabschätzung (D-09), Lieferantenangaben, Vorfälle, Meldungen und Auditfeststellungen. Wir prüfen mindestens die Risikoquellen in Anlage A; die Liste der KI-Bedrohungen dort dient als Gedankenstütze."
+  analyse:
+    titel: Risiken analysieren
+    text: "Für jedes Risiko halten wir Ursache, Folge und bestehende Massnahmen fest. Wir betrachten die Folgen auf drei Ebenen:"
+    ebenen:
+      - "**Organisation:** finanzieller Schaden, Unterbruch, Haftung, Ruf, Verlust von Know-how."
+      - "**Einzelpersonen und Gruppen:** Benachteiligung, Eingriff in die Privatsphäre, falsche Entscheide, Gefahr für Gesundheit."
+      - "**Gesellschaft:** Wirkung auf viele Menschen, Umwelt, Vertrauen in Information, Zugang zu Leistungen."
+    bewertung: "Wahrscheinlichkeit (W) und Auswirkung (A) schätzen wir mit den Skalen in Abschnitt 4. W bezieht sich immer auf denselben Bezugszeitraum ({zeitraum}). Als A zählt die schwerste realistische Folge über alle drei Ebenen. Führt ein System Aktionen ohne Bestätigung durch einen Menschen aus, bewerten wir A so, als ob eine Fehlaktion unbemerkt bleibt; das hebt A in der Regel um eine Stufe. Risikowert = W x A."
+  bewertung:
+    titel: Bewerten und priorisieren
+    text: "Wir vergleichen den Risikowert mit den Akzeptanzkriterien in Abschnitt 4. Daraus folgt, ob ein Risiko getragen werden kann oder behandelt werden muss. Wir behandeln Risiken in der Reihenfolge ihres Werts. Bei gleichem Wert gehen Folgen für Einzelpersonen und Gesellschaft sowie gesetzliche Pflichten vor."
+  behandlung:
+    titel: Risiken behandeln
+    text: "Für jedes Risiko über der Akzeptanzgrenze wählt der Eigner oder die Eignerin eine Option:"
+    optionen:
+      - "**vermeiden:** auf die Verwendung oder das System verzichten oder den Einsatz einschränken;"
+      - "**vermindern:** Wahrscheinlichkeit oder Auswirkung durch Massnahmen senken;"
+      - "**teilen:** einen Teil des Risikos vertraglich oder über eine Versicherung an Dritte übertragen;"
+      - "**tragen:** das Risiko bewusst und begründet annehmen."
+    controls: "Wir bestimmen die nötigen Controls aus ISO/IEC 42001 Anhang A, aus anderen Quellen oder als eigene Controls (EC-xx). Danach gleichen wir die Auswahl mit allen Controls aus Anhang A ab, damit kein nötiges Control fehlt."
+    soa: "Die Erklärung zur Anwendbarkeit (D-11) hält je Control Entscheid, Begründung für Aufnahme oder Ausschluss und Umsetzungsstand fest. Bereits umgesetzte Controls gelten als anwendbar, nicht als ausgeschlossen."
+    plan: "Massnahmen mit Verantwortlichen, Termin und Priorität stehen im Behandlungsplan (D-07). Danach bewerten wir das Restrisiko mit denselben Skalen."
+  freigabe:
+    text: "**Freigabe:** Die {{fakt:freigabe.behandlungsplan}} gibt den Behandlungsplan frei. Restrisiken nehmen die Stellen nach den Entscheidungsrechten an (D-04, Anlage A); Name und Datum stehen im Register D-07. Restrisiken über der Akzeptanzgrenze nimmt nur die {{fakt:freigabe.restrisiko}} an, mit schriftlicher Begründung."
+skalen:
+  zeitraum_text: "Bezugszeitraum der Wahrscheinlichkeit: {zeitraum}. Ohne Bezugszeitraum sind Einschätzungen verschiedener Personen nicht vergleichbar."
+  isms_uebernommen: "Die Skalen entsprechen der Risikomethode unseres Informationssicherheits-Managementsystems."
+  kopf: [Stufe, Wahrscheinlichkeit, Beschreibung, Auswirkung, Beschreibung]
+  kopf_kriterien: [Risikowert, Einstufung, Was folgt]
+  # Kurzfassung je Zone für die Risikomatrix im Leitfaden; die Dokumente nennen die Stelle aus D-04 Anlage A
+  kriterien:
+    tief: "Akzeptabel. Risikoeigner/in bestätigt das Risiko im Register, weitere Massnahmen sind freiwillig."
+    mittel: "Behandeln oder begründet tragen. Die Annahme gibt die {{fakt:freigabe.restrisiko}} frei."
+    hoch: "Unannehmbar. Das System wird erst eingesetzt oder weiter genutzt, wenn das Risiko behandelt ist. Eine befristete Ausnahme kann nur die Geschäftsleitung annehmen."
+  kriterien_firma:
+    tief: "Akzeptabel; weitere Massnahmen sind freiwillig. Das Restrisiko nimmt im Register an: {wer} (Entscheidungsrechte, D-04)."
+    mittel: "Behandeln oder begründet tragen. Das Restrisiko nimmt an: {wer}, mit schriftlicher Begründung, solange es über der Akzeptanzgrenze liegt (D-04)."
+    hoch: "Unannehmbar. Das System wird erst eingesetzt oder weiter genutzt, wenn das Risiko behandelt ist. Eine befristete Ausnahme erteilt: {wer} (D-04)."
+  einstufung: [tief, mittel, hoch]
+  bis: "bis {wert}"
+  von_bis: "{von} bis {bis}"
+  ab: "ab {wert}"
+hinweis_skalen: "Vorschlag: 4x4-Matrix mit Bezugszeitraum «pro Jahr» wie in D-07. Passen Sie Beschreibungen und Grenzwerte an."
+hinweis_skalen_fehlen: "Im Projekt sind noch keine eigenen Skalen hinterlegt. Hier steht ein Vorschlag (4x4-Matrix). Bestätigen oder ersetzen Sie ihn vor der Freigabe."
+zeitraum_vorschlag: pro Jahr
+hinweis_zeitraum_fehlt: "Im Projekt ist kein Bezugszeitraum für die Wahrscheinlichkeit hinterlegt. Ergänzen Sie ihn, sonst sind Bewertungen verschiedener Personen nicht vergleichbar."
+folgen_text: "Für jedes KI-System im Inventar machen wir eine Kurzprüfung nach D-08. Wo die Schwellen erreicht sind, folgt eine vollständige Folgenabschätzung (D-09). Die Ergebnisse fliessen so ein:"
+folgen_punkte:
+  - "Festgestellte Schäden für Einzelpersonen, Gruppen oder Gesellschaft nehmen wir als Risiken in D-07 auf."
+  - "Ihr Ausmass bestimmt die Auswirkung (A); beide Verfahren nutzen dieselbe Skala."
+  - "Jedes {{fakt:folgen.schwelle}} löst eine vollständige Folgenabschätzung aus, auch wenn die Kurzprüfung sie nicht verlangt (Rückprüfung nach D-08)."
+wiederholung_text: "Wir überprüfen tiefe und mittlere Risiken mindestens {intervall}, hohe Risiken {intervall_hoch}. Bei Systemen mit hohen Risiken prüfen wir im Betrieb grössere Stichproben (D-05, D-12). Ausserdem beurteilen wir ein System neu bei:"
+wiederholung_intervall: einmal jährlich
+wiederholung_intervall_hoch: halbjährlich
+wiederholung_ausloeser:
+  - "neuer Verwendung oder wesentlicher Änderung an System, Modell, Daten, Anbieter oder Vertrag;"
+  - "Vorfällen, Beinahe-Vorfällen oder Meldungen von Betroffenen;"
+  - "neuen rechtlichen Anforderungen, Auditfeststellungen oder verfehlten Kennzahlen (D-05)."
+wiederholung_nachweis: "Jede Beurteilung führen wir mit Datum im Register D-07 nach."
+chancen_text: "Chancen wie Zeitgewinn oder bessere Qualität erfassen wir im Register D-07 mit der Art «Chance» und der Option «nutzen». Wir bewerten sie getrennt, damit sie Risiken nicht verdecken."
+zustaendigkeiten_kopf: [Rolle, Aufgaben]
+zustaendigkeiten:
+  - [Geschäftsleitung, "legt Kriterien fest, gibt Plan und Restrisiken frei, stellt Mittel bereit"]
+  - ["AIMS-Verantwortliche/r ({verantwortlich})", "pflegt Methode und Register, moderiert, berichtet der Geschäftsleitung"]
+  - ["Eigner/in KI-System, Risikoeigner/in", "beurteilt Risiken, schlägt Behandlung vor, setzt Massnahmen um"]
+  - ["Datenschutz, Informationssicherheit", "werden bei Personendaten und Sicherheitsfragen beigezogen"]
+aufzeichnungen_text: "Aufzeichnungen sind das Register mit Behandlungsplan und Restrisiko-Annahme (D-07), die Erklärung zur Anwendbarkeit (D-11) und die Folgenabschätzungen (D-09). Ablage: [[Ablageort]]. Aufbewahrung: [[mindestens 3 Jahre nach Ersatz]], gemäss Dokumentenlenkung (D-26)."
+aufzeichnungen_text_firma: "Aufzeichnungen sind das Register mit Behandlungsplan und Restrisiko-Annahme (D-07), die Erklärung zur Anwendbarkeit (D-11) und die Folgenabschätzungen (D-09). Ablage: {ablage}. Aufbewahrung: {aufbewahrung}, gemäss Dokumentenlenkung (D-26)."
+platzhalter_aufbewahrung: "mindestens 3 Jahre nach Ersatz"
+aufbewahrung_jahre: "{jahre} Jahre nach Ersatz"
+ausbau_methoden: "Bei Eigenentwicklung oder vielen Systemen: Beurteilung je Lebenszyklusphase und eine feinere Skala mit fünf Stufen."
+freigabe_text: "Die Geschäftsleitung hat dieses Verfahren am {datum} freigegeben."
+# Anlage A (Risikoquellen und KI-Bedrohungen)
+anlage:
+  titel: Risikoquellen und KI-Bedrohungen
+  quellen_titel: Risikoquellen
+  bedrohungen_titel: KI-Bedrohungen als Gedankenstütze
+  bedrohungen_text: "Diese Bedrohungen kommen bei KI-Systemen zu den üblichen Bedrohungen der Informationssicherheit hinzu. Wir prüfen bei der Identifikation, welche davon für ein System zutreffen."
+  bedrohungen:
+    - "**Vergiftete Daten:** Jemand verändert Trainings-, Test- oder Wissensdaten absichtlich, damit das System falsch oder gezielt einseitig antwortet."
+    - "**Umgehung:** Eingaben sind so gestaltet, dass das System etwas falsch erkennt oder seine Schutzregeln missachtet."
+    - "**Versteckte Anweisungen:** E-Mails, Webseiten, Dokumente oder Bilder enthalten Anweisungen, die ein Assistent beim Lesen befolgt."
+    - "**Rückschluss auf Trainingsdaten:** Aus Antworten lässt sich ableiten, ob bestimmte Personen oder Dokumente im Training waren, oder Teile davon lassen sich wiederherstellen."
+    - "**Nachbau:** Viele gezielte Abfragen dienen dazu, das Modell, seine Regeln oder seine Anweisungen nachzubilden."
+    - "**Veränderung des Modells:** Modell, Einstellungen oder Systemanweisung werden unbefugt geändert, auch beim Anbieter oder in einer Komponente."
+    - "**Abfluss über Ausgaben:** Antworten, Links oder eingebettete Bilder tragen vertrauliche Daten nach aussen."
+    - "**Gefährliche Weiterverarbeitung:** Ausgaben laufen ungeprüft als Code, Befehl, Formel oder Webinhalt in andere Systeme."
+    - "**Zu viele Rechte:** Assistenten und Agenten können mehr lesen, senden oder ändern, als ihre Aufgabe verlangt."
+    - "**Vergiftetes Gedächtnis:** Eine präparierte Eingabe legt falsche Angaben oder Anweisungen im Gedächtnis oder Kontext eines Assistenten ab, die später weiterwirken."
+    - "**Missbrauch von Agentenidentitäten:** Ein Agent handelt mit Dienstkonten oder dauerhaften Zugängen oder gibt Rechte an Unteragenten weiter, über die Rechte der auslösenden Person hinaus."
+    - "**Kettenreaktion:** Ein Fehler setzt sich über verbundene Agenten, Automationen und Schnittstellen fort, bevor jemand eingreift."
+    - "**Abfluss über Protokolle:** Protokolle, Fehlermitschnitte und Telemetrie enthalten Gesprächsinhalte und sind schlechter geschützt als die Daten selbst."
+    - "**Missbrauch von Kosten und Leistung:** Massenhafte oder sehr lange Anfragen treiben die Kosten hoch oder legen den Dienst lahm."
+  hinweis_genai: "Für generative KI enthält die leere Vorlage des Registers D-07 das Blatt «Vorschläge GenAI-Sicherheit» mit typischen Sicherheits- und Datenrisiken zum Übernehmen; für reine Betreiber genügen meist die Einträge mit Zielgruppe «Betreiber», für handelnde KI kommen GS-11 bis GS-16 dazu."
+# Ergänzungsblatt (Pfad mit ISMS)
+eb:
+  einleitung: "Dieses Ergänzungsblatt erweitert unsere bestehende Risikomethode aus dem ISMS ([[Dokument ISMS-Risikoverfahren]]) um die Punkte, die für KI zusätzlich gelten. Alles Übrige gilt unverändert."
+  einleitung_firma: "Dieses Ergänzungsblatt erweitert die bestehende Risikomethode von {firma} aus dem ISMS ({isms_dokument}) um die Punkte, die für KI zusätzlich gelten. Alles Übrige gilt unverändert."
+  platzhalter_dokument: "Dokument ISMS-Risikoverfahren"
+  hinweis: "Nehmen Sie diese Abschnitte in Ihr ISMS-Risikoverfahren auf oder führen Sie das Blatt als Anhang. Ändern Sie nur, was für KI wirklich anders ist."
+  abschnitte:
+    geltung: Geltung für KI
+    quellen: Zusätzliche Risikoquellen
+    ebenen: Drei Ebenen der Folgen
+    skalen: Skalen und Akzeptanzkriterien
+    folgen: Folgenabschätzung als Eingang
+    behandlung: Behandlung und Controls
+    register: Register und Verknüpfung
+    wiederholung: Zusätzliche Auslöser
+    freigabe: Freigabe
+  geltung_text: "Die ISMS-Methode gilt auch für KI-Risiken. Wir wenden sie auf Unternehmensebene (KI-Managementsystem als Ganzes) und auf Systemebene (jedes KI-System im Inventar D-10) an."
+  quellen_text: "Neben den Bedrohungen und Schwachstellen des ISMS prüfen wir bei KI-Systemen die Risikoquellen und KI-Bedrohungen in Anlage A."
+  ebenen_text: "Die ISMS-Methode bewertet vor allem Schäden für das Unternehmen. Für KI betrachten wir zusätzlich die Folgen für Einzelpersonen und Gruppen sowie für die Gesellschaft. Als Auswirkung zählt die schwerste realistische Folge über alle drei Ebenen."
+  ebenen_kopf: [Stufe, "Ergänzung der Auswirkungsskala für Einzelpersonen und Gesellschaft"]
+  ebenen_vorschlag:
+    - "kaum spürbar, leicht korrigierbar"
+    - "Ärger oder Aufwand für Betroffene, rasch behebbar"
+    - "spürbare Benachteiligung, Eingriff in die Privatsphäre oder in Rechte einzelner Personen"
+    - "Gefahr für Gesundheit oder Grundrechte, Wirkung auf viele Menschen, schwer umkehrbar"
+  hinweis_skalen: "Übernehmen Sie Bezugszeitraum und Grenzwerte aus Ihrer ISMS-Methode. Weichen die Skalen ab, begründen Sie das hier."
+  skalen_text: "Wir verwenden die Skalen und Akzeptanzkriterien des ISMS. Bezugszeitraum der Wahrscheinlichkeit: {zeitraum}. Akzeptabel sind Risikowerte bis {akzeptanz}, unannehmbar ab {unannehmbar}."
+  folgen_text: "Kurzprüfungen und Folgenabschätzungen (D-08, D-09) sind ein fester Eingang der Risikobeurteilung. Festgestellte Schäden für Menschen oder Gesellschaft werden als Risiken aufgenommen, ihr Ausmass bestimmt die Auswirkung. Jedes {{fakt:folgen.schwelle}} löst eine vollständige Folgenabschätzung aus, auch wenn die Kurzprüfung sie nicht verlangt (Rückprüfung nach D-08)."
+  behandlung_text: "Die Behandlungsoptionen des ISMS gelten weiter. Die nötigen Controls gleichen wir zusätzlich mit ISO/IEC 42001 Anhang A ab und halten das Ergebnis in einer eigenen Erklärung zur Anwendbarkeit fest (D-11). Wo ein ISMS-Control das KI-Control abdeckt, verweisen wir darauf. Den Behandlungsplan für KI-Risiken gibt zusätzlich die {{fakt:freigabe.behandlungsplan}} frei (PR-08)."
+  register_text: "Informationssicherheitsrisiken eines KI-Systems, etwa Datenabfluss oder unberechtigter Zugriff, bleiben im ISMS-Risikoregister. Im KI-Risikoregister (D-07) steht dazu nur ein Verweis (Spalte «ISMS-Verweis»). KI-spezifische Risiken wie Verzerrungen, fehlerhafte Ergebnisse oder fehlende menschliche Prüfung führen wir in D-07."
+  wiederholung_text: "Zusätzlich zu den Auslösern des ISMS beurteilen wir ein KI-System neu bei neuer Verwendung, Modell- oder Anbieterwechsel, Nachtraining, sinkender Ergebnisqualität und Meldungen von Betroffenen. Tiefe und mittlere KI-Risiken überprüfen wir mindestens {intervall}, hohe {intervall_hoch}, mit grösseren Stichproben im Betrieb."
+  freigabe_text: "Die Geschäftsleitung hat dieses Ergänzungsblatt am {datum} freigegeben."
+# Erläuterung je Risikoquelle; Kategorien und Reihenfolge aus der Optionsgruppe risikoquelle (wie Auswahlliste in D-07)
+quellen_erlaeuterung:
+  daten: "Herkunft, Qualität, Aktualität und Rechte an Daten, Verzerrungen in Trainings- und Eingabedaten, absichtlich veränderte Daten in Wissensbasis oder Training; Ableitungen wie Zusammenfassungen, Suchindex oder Protokolle, die schlechter geschützt oder länger aufbewahrt sind als die Quelle."
+  modell: "Fehlerquote, erfundene Antworten, ungewohnte Eingaben, Drift nach Updates oder Nachtraining. Bekannte Vorfälle ähnlicher Systeme (Hinweise des Anbieters, Presse, öffentliche Vorfallsammlungen) helfen, die Wahrscheinlichkeit einzuschätzen."
+  fehlanwendung: "Einsatz ausserhalb des Zwecks, blindes Vertrauen in Ergebnisse, neue Nutzergruppen oder Arbeitsabläufe."
+  transparenz: "Ergebnisse sind nicht nachvollziehbar oder nicht als KI erkennbar."
+  vertraulichkeit: "Geschäftsgeheimnisse, Kundendaten oder Know-how gelangen in fremde Systeme oder Ergebnisse."
+  sicherheit: "manipulierte Eingaben, auch versteckt in E-Mails, Webseiten und Dokumenten, die ein KI-Assistent liest; zu weit gehende Rechte von Assistenten und Agenten; vergiftetes Gedächtnis, missbrauchte Agentenidentitäten und Kettenreaktionen über verbundene Agenten; Datenabfluss; Missbrauch von Zugängen und Kosten."
+  lieferant: "Änderungen des Anbieters, Datenstandort, Abhängigkeit, Vertragslücken."
+  recht: "Datenschutz, Urheberrecht, Geheimhaltung, branchenspezifische Vorgaben."
+  kompetenz: "Nutzende oder Verantwortliche kennen Grenzen, Regeln oder Risiken des Systems nicht. Dazu zählen organisatorische Ursachen: Wissen hängt an einer Schlüsselperson, Zuständigkeiten oder Mittel fallen nach einem Strategiewechsel weg."
+  automatisierung: "Ergebnisse werden ohne menschliche Prüfung übernommen."
+  umwelt: "Energie- und Ressourcenbedarf des Systems, Einsatz unter neuen Bedingungen wie Ländern oder Sprachen."

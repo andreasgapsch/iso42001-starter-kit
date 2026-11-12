@@ -1,0 +1,156 @@
+# D-26 Lenkung dokumentierter Information
+hinweis_umfang: "Diese Regeln sind die schlanke Basis für Unternehmen ohne ISMS. Sie sind so gebaut, dass ein späteres ISMS nach ISO/IEC 27001 sie unverändert übernehmen kann: Das Feld «gilt für» im Register ist schon vorgesehen. Halten Sie die Regeln auf zwei Seiten; Einzelheiten stehen im Register (Excel-Datei D-26)."
+einleitung: "Diese Regeln legen fest, wie [[Firmenname]] die Dokumente und Aufzeichnungen des KI-Managementsystems (AIMS) erstellt, freigibt, ablegt, schützt und aufbewahrt, und wie Änderungen am AIMS geplant werden."
+einleitung_firma: "Diese Regeln legen fest, wie {firma} die Dokumente und Aufzeichnungen des KI-Managementsystems (AIMS) erstellt, freigibt, ablegt, schützt und aufbewahrt, und wie Änderungen am AIMS geplant werden."
+abschnitte:
+  arten: Was gelenkt wird
+  kennzeichnung: Kennzeichnung
+  freigabe: Prüfung und Freigabe
+  ablage: Ablage, Zugriff und Schutz
+  versionen: Versionen und Überprüfung
+  aufbewahrung: Aufbewahrung und Vernichtung
+  extern: Externe Dokumente
+  ki: Mit KI erstellte Dokumente
+  aenderungen: Änderungen am AIMS planen
+  freigabe_regeln: Freigabe dieser Regeln
+arten_liste:
+  - "**Dokumente** geben vor, was zu tun ist: Leitlinie, Verfahren, Richtlinien, Pläne. Sie werden freigegeben und bei Bedarf geändert."
+  - "**Aufzeichnungen** belegen, was getan wurde: Protokolle, Auditberichte, Folgenabschätzungen, Schulungsnachweise, Ereignisprotokolle von KI-Systemen. Sie werden nach dem Erstellen nicht mehr verändert."
+  - "**Externe Dokumente** stammen von Dritten und sind für das AIMS nötig: Normen, Gesetze, Verträge, Dokumentation der Anbieter von KI-Systemen."
+kennzeichnung_text: "Jedes Dokument trägt auf der ersten Seite oder im Blatt «Dokument»: Dokument-ID (z. B. D-03) und Titel, Version (1.0, 1.1, 2.0), Datum der Freigabe (TT.MM.JJJJ), Eigner/in (verantwortlich für Inhalt und Aktualität), Freigabe durch und Klassifikation (öffentlich, intern, vertraulich)."
+dateiname: "Dateinamen folgen dem Muster **ID_Titel**, z. B. D-03_KI-Leitlinie. Version und Datum stehen im Dokument und im Register; ältere Fassungen tragen im Archiv zusätzlich die Version, z. B. D-03_KI-Leitlinie_v1.0."
+freigabe_text: "Vor der Freigabe prüft eine zweite Person den Inhalt auf Richtigkeit und Eignung; Dokumentkopf und Register nennen, wer geprüft und wer freigegeben hat. Wer freigibt, richtet sich nach der Art des Dokuments:"
+freigabe_text_firma: "Vor der Freigabe prüft eine zweite Person den Inhalt auf Richtigkeit und Eignung; Dokumentkopf und Register nennen, wer geprüft und wer freigegeben hat. Wer ein Dokument als Eigner/in verantwortet, gibt es nicht selbst frei, ausser die Tabelle sieht das vor. Es gilt:"
+freigabe_kopf: [Art, Prüft, Gibt frei]
+# Freigaberegel der Firma (dokumentenlenkung.freigabe, Optionsgruppe dokumentFreigabe)
+freigabe_zeilen_firma:
+  geschaeftsleitung:
+    - ["KI-Leitlinie, Geltungsbereich", "zweite Person, nicht die Eignerschaft", "Geschäftsleitung"]
+    - ["Verfahren, Richtlinien, Erklärung zur Anwendbarkeit, Register", "Fachperson oder AIMS-Verantwortung", "Geschäftsleitung"]
+    - ["Behandlungsplan und Restrisiken", "zweite Person, nicht die Eignerschaft", "Geschäftsleitung"]
+    - ["Folgenabschätzungen", "zweite Person, nicht die durchführende", "nach D-08, nie die durchführende Person"]
+    - ["Arbeitsanweisungen, Formulare", "Fachperson", "Eigner/in"]
+  aims:
+    - ["KI-Leitlinie, Geltungsbereich", "zweite Person, nicht die Eignerschaft", "Geschäftsleitung"]
+    - ["Verfahren, Richtlinien, Erklärung zur Anwendbarkeit, Register", "Fachperson", "AIMS-Verantwortung oder Geschäftsleitung; Dokumente, deren Eigner/in die AIMS-Verantwortung ist, gibt die Geschäftsleitung frei"]
+    - ["Behandlungsplan und Restrisiken", "zweite Person, nicht die Eignerschaft", "Geschäftsleitung"]
+    - ["Folgenabschätzungen", "zweite Person, nicht die durchführende", "nach D-08, nie die durchführende Person"]
+    - ["Arbeitsanweisungen, Formulare", "Fachperson", "Eigner/in"]
+  eigner:
+    - ["KI-Leitlinie, Geltungsbereich", "zweite Person, nicht die Eignerschaft", "Geschäftsleitung"]
+    - ["Verfahren, Richtlinien, Erklärung zur Anwendbarkeit, Register", "zweite Fachperson", "Eigner/in"]
+    - ["Behandlungsplan und Restrisiken", "zweite Person, nicht die Eignerschaft", "Geschäftsleitung"]
+    - ["Folgenabschätzungen", "zweite Person, nicht die durchführende", "nach D-08, nie die durchführende Person"]
+    - ["Arbeitsanweisungen, Formulare", "Fachperson", "Eigner/in"]
+freigabe_zeilen:
+  - ["KI-Leitlinie, Geltungsbereich", "zweite Person, nicht die Eignerschaft", "Geschäftsleitung"]
+  - ["Verfahren zu Risiken und Folgen (D-06, D-08)", "Fachperson", "Geschäftsleitung"]
+  - ["Erklärung zur Anwendbarkeit (D-11)", "Fachperson oder AIMS-Verantwortung", "{{fakt:freigabe.soa|gross}}"]
+  - ["Weitere Verfahren, Richtlinien", "Fachperson", "AIMS-Verantwortung; Dokumente, deren Eigner/in die AIMS-Verantwortung ist, gibt die Geschäftsleitung frei"]
+  - ["Behandlungsplan und Restrisiken (D-07)", "zweite Person, nicht die Eignerschaft", "Behandlungsplan: {{fakt:freigabe.behandlungsplan}}; Restrisiken nach den Entscheidungsrechten (D-04, Anlage A), über der Akzeptanzgrenze die {{fakt:freigabe.restrisiko}}"]
+  - ["Arbeitsanweisungen, Formulare", "Fachperson", "Eigner/in"]
+ablage_text: "Gültige Dokumente liegen an einem einzigen, allen Berechtigten bekannten Ort: {ort}. Dort ist immer nur die gültige Fassung als solche erkennbar. Ausdrucke und lokale Kopien sind nicht gelenkt; im Zweifel gilt die Fassung am Ablageort. Zugriffsrechte richten sich nach der Klassifikation. Freigegebene Dokumente und alle Aufzeichnungen sind gegen unbeabsichtigte Änderung geschützt, etwa durch Schreibschutz oder Versionsverlauf. Die Ablage wird gesichert."
+protokolle_je_system: "je System festgelegt (Register, Blatt Aufzeichnungen)"
+dateiname_firma: "Dateinamen folgen dem Muster **{regel}**. Enthält der Dateiname eine Version oder ein Datum, sind bei Abweichungen die Angaben im Dokument und im Register massgebend."
+aufbewahrung_firma: "Wo nichts anderes festgelegt ist, gilt eine Aufbewahrung von {wert} Jahren."
+extern_firma: "Bei uns: {wert}"
+ablage_bibliothek: "Dokumente und Nachweise können zusätzlich in der Bibliothek liegen, einem Ordner mit Versionen, Prüfsummen und Status. Für die Lenkung gilt das Register: Es nennt jede Datei der Bibliothek mit Version und Pfad. Ein Eintrag der Bibliothek ersetzt weder Prüfung noch Freigabe; Verknüpfungen mit Controls stimmen mit der Erklärung zur Anwendbarkeit überein. Eigene Dateien der Bibliothek gehören nicht zum erzeugten Dokumentensatz und werden dort direkt geöffnet."
+ablage_platzhalter: "Ablageort, z. B. SharePoint-Bibliothek AIMS"
+versionen_text: "Eine Änderung erhöht die Nebennummer (1.0 auf 1.1), auch eine Ergänzung des Inhalts. Die Hauptnummer steigt (1.1 auf 2.0), wenn das Dokument neu gefasst wird oder sich seine Aussage grundlegend ändert. Jede neue Version wird freigegeben; was sich je Version geändert hat, steht in der Änderungshistorie im Register (Blatt «Änderungen») und als letzte Änderung im Dokumentkopf. Ein freigegebenes Dokument wird nur über eine neue Version geändert. Veraltete Fassungen werden gekennzeichnet und archiviert, nicht gelöscht. Die Eigner/innen überprüfen ihre Dokumente mindestens jährlich; das Register zeigt das nächste Prüfdatum. Angaben zum Stand wie Reife, letzte Durchführung und Messwerte der Prozesse (D-27) sind Aufzeichnungen; sie ändern keine Version."
+aufbewahrung_text: "Die folgenden Fristen sind Vorschläge. Gesetzliche und vertragliche Fristen gehen vor; Personendaten werden gelöscht, wenn sie nicht mehr nötig sind. Nach Ablauf werden Unterlagen sicher vernichtet und die Vernichtung im Register vermerkt."
+aufbewahrung_text_firma: "Es gelten die folgenden Fristen. Gesetzliche und vertragliche Fristen gehen vor; Personendaten werden gelöscht, wenn sie nicht mehr nötig sind. Nach Ablauf werden Unterlagen sicher vernichtet und die Vernichtung im Register vermerkt."
+aufbewahrung_protokolle_grund: "Zweck und Datenschutz"
+aufbewahrung_kopf: [Art, Aufbewahrung, Begründung]
+aufbewahrung_zeilen:
+  - ["Leitlinie, Verfahren, Erklärung zur Anwendbarkeit", "Gültigkeit plus 3 Jahre", "Nachweis über einen Zertifizierungszyklus"]
+  - ["Auditberichte, Managementbewertungen, Nichtkonformitäten", "mindestens 3 Jahre", "Zertifizierungszyklus"]
+  - ["Risikobeurteilungen, Folgenabschätzungen", "Lebensdauer des KI-Systems plus 3 Jahre", "Nachvollziehbarkeit von Entscheiden"]
+  - ["Schulungs- und Kompetenznachweise", "Dauer der Anstellung plus 3 Jahre", "Kompetenznachweis"]
+  - ["Ereignisprotokolle von KI-Systemen", "[[nach Festlegung je System]]", "Zweck und Datenschutz; Hochrisiko-Betreiber nach AI Act mindestens 6 Monate"]
+  - ["Technische Dokumentation als Anbieter von Hochrisiko-KI", "10 Jahre nach Inverkehrbringen", "AI Act Art. 18"]
+extern_text: "Externe Dokumente werden im Register mit Herkunft, Ausgabe oder Stand-Datum und Ablageort geführt. Die Eigner/innen prüfen jährlich, ob eine neuere Fassung vorliegt, besonders beim EU AI Act und bei der Dokumentation der Anbieter. Normen werden nur im erworbenen Umfang genutzt und nicht weitergegeben."
+ki_text: "Dokumente dürfen mit KI-Unterstützung entworfen werden. Vertrauliche Inhalte werden nur in freigegebene Werkzeuge eingegeben (D-15). Vor der Freigabe prüft die verantwortliche Person den Inhalt vollständig; sie trägt die Verantwortung für die Richtigkeit."
+aenderungen_text: "Änderungen am AIMS, etwa ein neuer Prozess, ein erweiterter Geltungsbereich oder neue Rollen, werden geplant umgesetzt. Für jede Änderung wird festgehalten:"
+aenderungen_liste:
+  - "Zweck der Änderung und mögliche Folgen"
+  - "betroffene Dokumente, Rollen, Risiken und KI-Systeme"
+  - "nötige Mittel, verantwortliche Person und Termin"
+  - "Freigabe vor der Umsetzung und Information der Betroffenen"
+aenderungen_ablage: "Geplante Änderungen und die Massnahmen dazu werden im {{fakt:register.massnahmen}} geführt. Grosse Änderungen werden in der Managementbewertung (D-21) behandelt."
+ausbau: "Bei vielen Dokumenten: Ein Dokumentenmanagement mit Freigabe-Workflow, automatischer Versionierung und Erinnerung an Prüftermine ersetzt die manuelle Pflege des Registers."
+freigabe_regeln_text: "Diese Regeln hat am {datum} freigegeben: {person}."
+eb_einleitung: "Dieses Ergänzungsblatt nennt, was Ihre bestehenden Regeln zur Lenkung dokumentierter Information für das AIMS zusätzlich brauchen. Die übrigen Regeln des ISMS gelten unverändert auch für das AIMS."
+eb_einleitung_firma: "Bei {firma} gelten die Regeln des ISMS zur Lenkung dokumentierter Information auch für das AIMS. Dieses Blatt nennt die Ergänzungen."
+eb_einleitung_firma_dokument: "Bei {firma} gelten die Regeln des ISMS zur Lenkung dokumentierter Information ({dokument}) auch für das AIMS. Dieses Blatt nennt die Ergänzungen."
+eb_aufbewahrung: Aufbewahrung der neuen Dokumentarten
+eb_freigabe: Prüfung, Freigabe und Versionen von AIMS-Dokumenten
+# Register (Excel)
+register:
+  d27_anlage: "Prozessdiagramme, Anlage zu D-27 (Datei {datei})"
+  blaetter:
+    dokumente: Dokumente
+    aufzeichnungen: Aufzeichnungen
+    extern: Externe Dokumente
+    aenderungen: Änderungen
+    nachweise: Nachweise
+  titel_dokumente: "Dokumentenregister"
+  titel_aufzeichnungen: "Register der Aufzeichnungen"
+  titel_extern: "Externe Dokumente"
+  hinweise_dokumente:
+    - "Eine Zeile je gelenktes Dokument. Die Liste enthält die Vorlagen des Kits; streichen Sie, was Sie nicht verwenden, und ergänzen Sie eigene Dokumente."
+    - "Spalte «Gilt für ISMS»: ohne ISMS «nein». Kommt später ein ISMS dazu, führen Sie dieses Register für beide Systeme weiter."
+  hinweise_aufzeichnungen:
+    - "Eine Zeile je Art von Aufzeichnung, nicht je einzelne Aufzeichnung. Legen Sie Ablage, Schutz und Aufbewahrung fest."
+  hinweise_extern:
+    - "Führen Sie Normen, Gesetze, Verträge und Anbieterdokumentation mit Stand-Datum. Prüfen Sie mindestens jährlich, ob eine neuere Fassung vorliegt."
+  spalten_dokumente: [ID, Titel, Art, Version, Status, Eigner/in, Geprüft durch, Freigabe durch, Freigegeben am, Nächste Überprüfung, Ablageort, Gilt für ISMS, Klassifikation, Bemerkung]
+  spalten_aenderungen: [ID, Titel, Version, Freigegeben am, Änderung, Freigabe durch]
+  titel_aenderungen: "Änderungshistorie"
+  titel_nachweise: "Register der Nachweise"
+  hinweise_nachweise:
+    - "Eine Zeile je Nachweis, auf den die Erklärung zur Anwendbarkeit (D-11), die Auditcheckliste (D-20) oder andere Dokumente verweisen: Kennung N-001 ff., Titel, Art, Datum und Ablage. Dreistellige Nummern unterscheiden die Nachweise von Dokumenten wie N-01 bis N-04."
+  hinweise_nachweise_firma:
+    - "Nachweise mit dreistelliger Kennung (N-001 ff.), auf die Erklärung zur Anwendbarkeit, Auditcheckliste und weitere Dokumente verweisen."
+  hinweise_nachweise_nist:
+    - "Nachweise mit dreistelliger Kennung (N-001 ff.), auf die Erklärung zur Anwendbarkeit, Auditcheckliste und weitere Dokumente verweisen. Dokumente mit zweistelliger Kennung (z. B. N-01) stehen im Blatt «Dokumente»."
+  spalten_nachweise: [ID, Titel, Art, Datum, Ablageort]
+  aenderung_erstfassung: "Erstfassung"
+  aenderung_ohne_historie: "aktuelle Version (frühere Versionen im Versionsverlauf der Ablage)"
+  aenderung_eb_zum_haupt: "Ergänzungsblatt zu {id}; Änderungen siehe {id}"
+  hinweise_aenderungen:
+    - "Eine Zeile je Version eines Dokuments, älteste zuerst: was sich geändert hat und wer die Version freigegeben hat. Die letzte Zeile je Dokument entspricht der Version im Blatt «Dokumente»."
+  spalten_aufzeichnungen: [Aufzeichnung, Beispiel, Erstellt in, Ablageort, Schutz, Aufbewahrung, Verantwortlich]
+  spalten_extern: [Dokument, Herausgeber, Ausgabe oder Stand, Ablageort, Zuständig, Nächste Prüfung]
+  listen:
+    art: [Dokument, Aufzeichnung, Leitfaden]
+    status:
+      entwurf: Entwurf
+      in-pruefung: in Prüfung
+      freigegeben: freigegeben
+      veraltet: veraltet
+    klassifikation: [öffentlich, intern, vertraulich]
+  modul: "nur mit Modul AI Act"
+  modul_nist: "nur mit Modul NIST AI RMF"
+  protokolle_wie_beschrieben: "wie beschrieben"
+  bemerkung_aufbewahrung: "Aufbewahrung {wert}"
+  bemerkung_aufgenommen: "aufgenommen in {wert}"
+  bemerkung_erweitert: "erweitert {wert}"
+  bemerkung_bestaetigt: "ohne Änderung bestätigt von {person} am {datum}"
+  aufzeichnungen_vorschlag:
+    - ["Auditberichte und Checklisten", "Bericht AU-001", "D-20", "", "schreibgeschützt", "mindestens 3 Jahre", ""]
+    - ["Protokolle der Managementbewertung", "Protokoll MB-001", "D-21", "", "schreibgeschützt", "mindestens 3 Jahre", ""]
+    - ["Nichtkonformitäten und Korrekturen", "F-001", "D-22", "", "Versionsverlauf", "mindestens 3 Jahre", ""]
+    - ["Risikobeurteilungen und Restrisiko-Annahmen", "Register mit Datum", "D-07", "", "Versionsverlauf", "Lebensdauer KI-System plus 3 Jahre", ""]
+    - ["Folgenabschätzungen", "IA-001", "D-09", "", "schreibgeschützt", "Lebensdauer KI-System plus 3 Jahre", ""]
+    - ["Messergebnisse und Kennzahlen", "Messung Quartal", "D-05", "", "Versionsverlauf", "3 Jahre", ""]
+    - ["Schulungs- und Kompetenznachweise", "Teilnahmeliste", "D-17", "", "Zugriff Personalwesen", "Anstellung plus 3 Jahre", ""]
+    - ["Freigaben neuer KI-Werkzeuge", "Antrag mit Entscheid", "D-15", "", "Versionsverlauf", "Nutzungsdauer plus 3 Jahre", ""]
+    - ["Meldungen, Bedenken, KI-Vorfälle", "Meldungsprotokoll", "D-14, D-04", "", "vertraulich", "3 Jahre", ""]
+    - ["Ereignisprotokolle von KI-Systemen", "Logs", "D-12", "", "technisch geschützt", "[nach Festlegung je System]", ""]
+  extern_vorschlag:
+    - ["ISO/IEC 42001", "ISO, SNV, DIN", "2023", "", "", ""]
+    - ["ISO/IEC 42005 (Folgenabschätzung von KI-Systemen)", "ISO, SNV, DIN", "2025", "", "", ""]
+    - ["EU AI Act, Verordnung (EU) 2024/1689", "EUR-Lex", "{rechtsstand}", "", "", ""]
+    - ["Datenschutzgesetze (DSG, DSGVO)", "Bund, EU", "[Stand]", "", "", ""]
+    - ["Dokumentation und Nutzungsbedingungen der KI-Anbieter", "Lieferanten (D-16)", "[Stand je Anbieter]", "", "", ""]
+    - ["Verträge mit Kunden zu KI", "Kunden", "[Stand]", "", "", ""]

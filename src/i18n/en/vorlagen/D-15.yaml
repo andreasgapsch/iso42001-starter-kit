@@ -1,0 +1,82 @@
+# D-15 Policy on responsible use of AI
+hinweis_umfang: "Two pages at most, clear to everyone. Enter the tools from the AI inventory (D-10) and refer to your data classes. Have staff confirm receipt (D-17)."
+einleitung: "This policy applies to all staff and everyone working for [[Company name]] when they use AI tools, for example chatbots, assistants in office software, translation tools, and image and code generators."
+einleitung_firma: "This policy applies to all staff and everyone working for {firma} when they use AI tools, for example chatbots, assistants in office software, translation tools, and image and code generators."
+hinweis_eb: "Add sections 1 to 6 to your existing acceptable use policy. That policy already covers reporting, training and consequences of breaches; just add AI as a topic there."
+einleitung_eb: "The following rules extend our acceptable use policy for IT resources to cover the use of AI tools."
+# Company document: extended document with version (DokumentEintrag.aufgenommenIn)
+eb_aufgenommen: "Incorporated into (document, version)"
+eb_aufgenommen_platzhalter: "Acceptable use policy, version"
+# Traffic light: only tools for employees; own systems and product functions are covered by D-12
+ampel_eigene: "Our own AI systems and the AI functions of our products ({systeme}) are not tools in the sense of this traffic light; approval and conditions under D-12 and the AI inventory (D-10) apply to them."
+modul_kennzeichnung_leer: "**Only with the EU AI Act module:** Special obligations apply to chatbots, deep fakes and published AI-generated text (Art. 50, E-07)."
+modul_kennzeichnung: "Special obligations under the EU AI Act apply to chatbots, deep fakes and published AI-generated text (Art. 50, E-07)."
+abschnitte:
+  ampel: Which tools with which data
+  eingabe: What never goes into an AI tool
+  verboten: What we do not use AI for
+  pruefen: Checking outputs
+  pruefen_eb: Checking and labelling outputs
+  kennzeichnung: Labelling, copyright and confidentiality
+  assistenten: Working safely with AI assistants
+  neu: Requesting a new tool
+  melden: Reporting problems
+  schulung: Training and consequences of breaches
+ampel_text: "For work, employees use only approved tools with the company account."
+ampel_text_ausnahme: "For work, employees use only approved tools with the company account. Deviations apply only as a temporary exception under the AI policy (D-03); they are listed with their deadline below the traffic light."
+ampel_fachanwendungen: "AI in equipment and business applications ({systeme}) is operated only by the people instructed for it; it is not a tool in the sense of this traffic light, and the conditions in the AI inventory (D-10) apply."
+ampel_auflagen: "Conditions for the tools:"
+ampel_ausnahmen: "Temporary exceptions under the AI policy (D-03), only for the stated purpose:"
+datenklassen_isms: "The data classes are those of the information classification of our ISMS: **public** (intended for everyone), **internal** (for employees only), **confidential** (for a defined group only, for example customer, personnel and design data) and **strictly confidential** (serious harm if disclosed). If in doubt, the higher class applies."
+datenklassen: "Data classes: **public** (intended for everyone), **internal** (for employees only), **confidential** (for a defined group only, for example customer, personnel and design data) and **strictly confidential** (serious harm if disclosed). If in doubt, the higher class applies."
+ampel_kopf: [Traffic light, Tools, Data]
+ampel:
+  gruen: "**Green:** allowed"
+  gruen_platzhalter: approved tools from D-10
+  gruen_daten: "public and internal information; confidential data and personal data only where the AI inventory allows it"
+  gelb: "**Amber:** with conditions"
+  gelb_platzhalter: tools with conditions from D-10
+  gelb_daten: "only for the defined purpose and with the conditions set in the AI inventory"
+  rot: "**Red:** prohibited"
+  rot_platzhalter: prohibited tools from D-10
+  keine: "none at present"
+  ausnahme: "{name}, temporary until {bis}"
+  rot_werkzeuge: "{untersagt} and all other tools that are not approved: private accounts, free services and tools under review"
+  rot_werkzeuge_ohne: "all tools that are not approved: private accounts, free services and tools under review"
+  rot_daten: "no company, customer or personal data"
+  mit_klasse: "{name} (data up to ‘{klasse}’)"
+  rot_ausser_ausnahmen: "; the only exceptions are the temporary exceptions below the traffic light"
+eingabe_liste:
+  - "passwords, credentials and keys"
+  - "health data and other sensitive personal data"
+  - "documents of customers and partners where a contract rules out sharing, for example drawings under a non-disclosure agreement"
+  - "export-controlled data and other data we classify as strictly confidential"
+verboten_liste:
+  - "decisions about people without human review, for example on job applications, performance or loans"
+  - "monitoring or rating the performance or behaviour of individual employees"
+  - "deception, for example fake images, voices or statements of real people"
+  - "circumventing security rules or purposes outside the approval"
+pruefen_liste:
+  - "Whoever uses or passes on an output remains responsible for it."
+  - "Facts, figures, quotations, sources, translations and code are checked before they are used."
+  - "For outputs that concern customers, contracts, security or individuals, a person with the necessary expertise always checks them."
+kennzeichnung_text: "We label content that comes largely from AI where others would otherwise assume a human author, for example published texts and images."
+urheberrecht_text: "We upload third-party works only if we are allowed to use them for this purpose. We do not use AI outputs that recognizably copy third-party texts, images, trademarks or code. Trade secrets remain confidential in AI tools too."
+neu_text: "Employees request a new tool or a new use from the {{fakt:freigabe.einfuehren}} ({verantwortlich}), who decides on the approval alone for low risk and together with the system owner for medium risk; for high risk or after a full impact assessment {{fakt:freigabe.einfuehren-hoch}} decides (D-12, section 5). A tool is only approved if it meets the approval criteria below, even without an in-depth review. Until a decision is made, Red applies."
+# Company document with decision rights (D-04 Annex A): bodies per level from the project (N7)
+neu_text_firma: "Employees request a new tool or a new use from the {{fakt:freigabe.einfuehren}} ({verantwortlich}). The approval is decided under D-12, section 5, for low risk: {tief}; for medium risk: {mittel}; for high risk or after a full impact assessment: {hoch}. A tool is only approved if it meets the approval criteria below, even without an in-depth review. Until a decision is made, Red applies."
+neu_schritte:
+  - "**Request:** state the tool, purpose, users, data and the link to the principles of the AI policy (D-03), together with the solution without AI that was considered and why it is not sufficient."
+  - "**Approval criteria:** supplier and contract checked (D-16), permitted data classes set (D-13), impact screening done (D-08), risks recorded in the register (D-07) and test with own cases passed (D-12, section 4). From the threshold under D-08, a full impact assessment follows (D-09)."
+  - "**Decision:** Green, Amber with conditions, or Red; entry in the AI inventory (D-10)."
+  - "**Introduction:** information and training for users (D-12, D-17)."
+melden_text: "Employees report wrong, unfair or unusual outputs, confidential data entered by mistake and suspected misuse immediately via the reporting channel under D-04 to the reporting point: {meldestelle}. Anyone reporting in good faith will suffer no disadvantage."
+schulung_text: "Before first use, employees attend the introduction, and after that a yearly refresher (D-17). We treat breaches like other breaches of internal rules, up to blocking access and actions under employment law. Questions are answered by {verantwortlich}."
+schluss_eb: "The existing policy applies to reporting, training and consequences of breaches. Employees report AI problems via the reporting channel under D-04 to the reporting point: {meldestelle}. Questions are answered by {verantwortlich}."
+# Key messages and rules for AI assistants, agents and extensions
+assistenten_merksaetze: "**Key messages:** What is entered today may become training material tomorrow. Documents, web pages and emails can contain hidden instructions to the AI. AI acts only after confirmation by a person."
+assistenten_regeln:
+  - "Extensions, connectors, custom assistants, agents and browser extensions are used only if they are approved in the AI inventory (D-10)."
+  - "AI assistants do not send, delete, order or change anything before the person has checked and confirmed the action."
+  - "Third-party content (web pages, emails from unknown senders, attachments) is not processed by an assistant that also has access to confidential data, unless the tool is approved for this. Unusual behaviour such as unexpected links, requests for credentials or sudden changes of topic is reported."
+  - "AI-generated code, scripts, macros and formulas are checked before they are run; suggested libraries are checked for existence and origin. Passwords and internal details never go into the instructions of custom assistants."

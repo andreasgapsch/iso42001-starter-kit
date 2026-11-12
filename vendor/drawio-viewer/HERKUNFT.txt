@@ -1,0 +1,59 @@
+HERKUNFT: Viewer für die Diagrammansicht (AIMS-Manager/Diagrammansicht.html)
+==============================================================================
+
+Inhalt dieses Ordners (unverändert vom Hersteller übernommen, ausser dieser
+Datei und SHA256SUMS.txt):
+
+  viewer-static.min.js   draw.io Viewer mit eingebetteten Formen und Schablonen
+  LICENSE                Apache License 2.0 aus dem Repository jgraph/drawio
+
+Version und Bezugsweg
+---------------------
+Repository:   https://github.com/jgraph/drawio
+Tag:          v32.4.1 (annotierter Tag ea90828c, Commit 9034053fba80a435e27d68d374bc564b83917ae9,
+              Tag-Datum 08.10.2026)
+Datei:        src/main/webapp/js/viewer-static.min.js
+Bezug:        curl -sSfL -o viewer-static.min.js \
+                https://raw.githubusercontent.com/jgraph/drawio/v32.4.1/src/main/webapp/js/viewer-static.min.js
+              curl -sSfL -o LICENSE \
+                https://raw.githubusercontent.com/jgraph/drawio/v32.4.1/LICENSE
+Geholt:       23.10.2026
+Prüfen:       sha256sum -c SHA256SUMS.txt
+
+SHA-256
+  viewer-static.min.js  bc7586cb62eec98018c13b78619078d3a7179cc7bfc711c566dda19527520a30  (4'360'162 Byte)
+  LICENSE               43070e2d4e532684de521b885f385d0841030efa2b1a20bafb76133a5e1379c1
+
+Es gibt kein offizielles npm-Paket des Viewers; darum liegt die Datei hier im
+Repository. Der Build (scripts/diagrammansicht.mts) lädt nichts aus dem Netz:
+Er liest die Datei aus diesem Ordner, prüft den SHA-256 gegen den Wert in
+scripts/diagrammansicht.mts und bricht bei Abweichung ab. Danach bettet er die
+Datei unverändert ein (deflate-raw, Base64, Datenblock); die Seite entpackt
+sie erst beim Öffnen des ersten Diagramms.
+
+Lizenzen
+--------
+Viewer (draw.io, mxGraph, GraphViewer, Formen):  Apache-2.0
+Im Viewer gebündelt (Build-Datei etc/build/build.xml, Ziel base-viewer.min.js):
+  DOMPurify 3.4.16          Apache-2.0 oder MPL-2.0 (gewählt: Apache-2.0)
+  pako 2.2.0                MIT AND Zlib
+  Rough.js 4.6.6            MIT
+  spin.js 2.0.0             MIT
+  regenerator-runtime       MIT (Hinweis im Bundle: Copyright Facebook, Inc.)
+Eine NOTICE-Datei gibt es im Repository jgraph/drawio beim Tag v32.4.1 nicht.
+Volltexte und Nachweis: src/lizenz/DIAGRAMMANSICHT_DIAGRAM-VIEWER/ (im Kit
+LIZENZ_LICENCE/DIAGRAMMANSICHT_DIAGRAM-VIEWER/) und DRITTLIZENZEN_THIRD-PARTY.txt.
+
+Aktualisieren
+-------------
+1. Neue Version frühestens zwei Wochen nach dem Tag übernehmen; Sicherheits-
+   meldungen beachten: https://github.com/jgraph/drawio/security/advisories
+2. Datei und LICENSE wie oben holen, SHA256SUMS.txt neu schreiben, VIEWER in
+   scripts/diagrammansicht.mts nachführen (Version, SHA-256).
+3. Stil-Hashes neu messen: npx tsx scripts/diagrammansicht.mts --stile-messen
+   und in VIEWER.stilHashes eintragen.
+4. Lizenzangaben der gebündelten Bibliotheken prüfen (Kommentare @license im
+   Bundle, build.xml).
+5. Tor G7 meldet neue Hosts in URL-Zeichenketten des Viewers; jeden neuen Host
+   prüfen und in VIEWER_URL_HOSTS (scripts/pruefen/links.mts) begründen.
+6. npx playwright test tests/e2e/kit/diagrammansicht.e2e.ts

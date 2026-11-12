@@ -1,0 +1,15 @@
+# Shared texts of the module templates E-01 to E-09 (EU AI Act)
+art: Art.
+fundstelle: "{angabe}, p. {seite}"
+titel_bezug: AI Act reference
+bezug: "Legal basis: Regulation (EU) 2024/1689 (EU AI Act), {fundstellen}. Page numbers refer to the {rechtsstand}; status checked on {geprueft}."
+titel_juristisch: Legal review
+juristisch: "This template is professional guidance, not legal advice. Have classifications with a link to high risk, changes of role and borderline cases reviewed by a lawyer and record the result."
+juristisch_firma: "The information is a professional assessment, not legal advice. We have classifications with a link to high risk, changes of role and borderline cases reviewed by a lawyer and record the result."
+stand: "Legal status: {rechtsstand}, checked on {geprueft}. Before making decisions, we check whether any changes have applied since then (E-09)."
+rollen: [provider, deployer, importer, distributor, product manufacturer, authorised representative]
+klassen: [open, prohibited practice, high-risk Annex III, high-risk Annex I, transparency obligation, minimal risk]
+klasse_kurz:
+  hochrisiko-anhang-iii: Annex III
+  hochrisiko-anhang-i: Annex I
+keine_systeme: "No AI systems have been recorded in the project yet. Record the inventory first (D-10)."

@@ -1,0 +1,284 @@
+# Texte des Rahmens im AIMS-Manager (Symbolleiste, Untermenü, Kopf, Suche, Start, Übersicht, Wissen, Hilfe).
+# Schlüssel rahmen.*; gleiche Struktur in src/i18n/en/rahmen.yaml.
+bereich:
+  start: Start
+  uebersicht: Übersicht
+  guide: Guide
+  register: Register
+  prozesse: Prozesse
+  bibliothek: Bibliothek
+  wissen: Wissen
+  pruefung: Prüfung
+  hinweise: Hinweise
+  hilfe: Hilfe
+  einstellungen: Einstellungen
+
+navi:
+  hauptbereiche: Hauptbereiche
+  unterbereiche: "Unterbereiche: {bereich}"
+  einklappen: Untermenü einklappen
+  schliessen: Untermenü schliessen
+  untermenue_zeigen: Untermenü ein- oder ausblenden
+  mehr: Mehr
+  mehr_aktiv: "aktuell {bereich}"
+  mehr_schliessen: "«Mehr» schliessen"
+  weitere_bereiche: Weitere Bereiche
+
+leiste:
+  fehler: "{anzahl} Fehler"
+  fehler_eins: "1 Fehler"
+  offen: "{anzahl} Punkte offen, noch keine Fehler"
+  offen_eins: "1 Punkt offen, noch kein Fehler"
+  faellig: "{anzahl} fällige Aufgaben"
+  faellig_eins: "1 fällige Aufgabe"
+
+kopf:
+  werkzeug: Kein Projekt geöffnet
+  stichtag: Stichtag
+  stichtag_tipp: Der Datenstand der Projektdatei liegt in der Zukunft (Beispiel). Alle Ansichten, Fälligkeiten und Prüfregeln rechnen mit diesem Stichtag.
+  speichern_tipp: "Speichern (Ctrl+S, auf dem Mac Cmd+S)"
+
+projekt:
+  kachel: "{kuerzel}: Projekt {name}, {stand}"
+  menue: Projekt
+  speichern_unter: Speichern unter …
+  oeffnen: Projektdatei öffnen …
+  beenden: Beenden …
+  andere: Projekte und Beispiele
+
+register:
+  grundlagen: Grundlagen
+  umsetzung: Umsetzung
+  bewertung: Bewertung
+  module: Module
+
+guide:
+  ueberblick: Überblick
+  etappen: Etappen
+  danach: Danach
+  jahreskalender: Jahreskalender
+  stand:
+    offen: offen
+    laeuft: läuft
+    erledigt: erledigt
+
+prozesse:
+  landkarte: Landkarte
+  alle: Alle Prozesse
+  status: Status
+  eigene: Eigene Prozesse
+  gruppen: Gruppen
+
+bibliothek:
+  alle: Alle Dokumente
+  erzeugen: Erzeugen
+  platzhalter: Die Bibliothek mit Dokumenten, Versionen und Freigaben ist in dieser Fassung noch nicht eingebaut. Dokumente erzeugen Sie unter «Erzeugen».
+
+pruefung:
+  regeln: Prüfregeln
+  stage1: Stage-1-Bericht
+
+hinweise:
+  alle: Alle Hinweise
+  text: "Was im Projekt «{name}» Aufmerksamkeit braucht: fällige Aufgaben, Ergebnis der Prüfung und Stand der Rechtsgrundlagen."
+  rechtsstand: Rechtsstand
+  aiact_stand: "Der AIMS-Manager arbeitet mit dem EU AI Act in der konsolidierten Fassung vom {fassung}, zuletzt geprüft am {geprueft}."
+
+start:
+  willkommen: Willkommen
+  projekte: Projekte und Beispiele
+  gruss_morgen: Guten Morgen
+  gruss_tag: Guten Tag
+  gruss_abend: Guten Abend
+  projekt_offen: "Geöffnet: {name}"
+  faellig: Fällige Aufgaben
+  alle_faelligen: "Alle {anzahl} fälligen Aufgaben"
+  alle_faelligen_eins: "Die fällige Aufgabe"
+  erste_schritte: Erste Schritte mit dem AIMS-Manager
+  schritte_stand: "{erledigt} von {gesamt} erledigt"
+  schritte_zeigen: Schritte zeigen
+  schritte_verbergen: Schritte verbergen
+  schritt:
+    speichern:
+      titel: Projekt anlegen und speichern
+      text: Speichern Sie die Projektdatei an einem gesicherten Ort, zum Beispiel in einem Ordner mit Datensicherung. Edge und Chrome schreiben danach direkt in diese Datei.
+      knopf: Projekt speichern
+    interview:
+      titel: Startinterview im Guide beantworten
+      text: Das Startinterview legt Pfad, Module und Fahrplan fest. Es dauert rund 20 Minuten.
+      knopf: Startinterview öffnen
+    inventar:
+      titel: KI-Inventar erfassen
+      text: Erfassen Sie alle KI-Systeme im Unternehmen, auch KI in eingekaufter Software und Schatten-KI.
+      knopf: Zum KI-Inventar
+    bibliothek:
+      titel: Bibliotheksordner verbinden
+      text: Dokumente, Versionen und Nachweise liegen dann als echte Dateien in einem Ordner Ihrer Wahl, zum Beispiel in einem OneDrive- oder Netzlaufwerk-Ordner.
+      knopf: Zur Bibliothek
+    gestaltung:
+      titel: Gestaltung der Dokumente festlegen
+      text: Logo, Farben und Schriften Ihrer Organisation erscheinen in allen erzeugten Dokumenten.
+      knopf: Gestaltung festlegen
+    dokumente:
+      titel: Erste Dokumente erzeugen
+      text: Der Generator erzeugt die Dokumente als Word- und Excel-Dateien; im Dokumentenregister halten Sie Version und Freigabe fest.
+      knopf: Dokumente erzeugen
+
+faellig:
+  aufgabe: Aufgabe
+  bereich: Bereich
+  datum: Fällig
+  stand: Stand
+  ueberfaellig: Überfällig
+  bald: Bald fällig
+  keine: Keine Aufgabe in den nächsten 30 Tagen fällig.
+  art:
+    ueberpruefung: Überprüfung
+    kalender: Jahreskalender
+    prozess: Durchführung
+    massnahme: Massnahme
+    bibliothek: Prüfung in der Bibliothek
+    geaendert: Datei ausserhalb geändert
+    fehlt: Datei fehlt im Ordner
+
+uebersicht:
+  lagebild: Lagebild
+  faellig: Fällig
+  faellig_liste: Fällige Aufgaben, überfällige zuerst
+  faellig_text: "Überprüfungen, Aufgaben aus dem Jahreskalender, Durchführungen der Prozesse, Massnahmen und Prüfungen in der Bibliothek, die bis 30 Tage nach dem {datum} fällig sind, sowie Dateien der Bibliothek, die ausserhalb geändert wurden oder fehlen."
+  massnahmen_offen: Offene Massnahmen
+  bereitschaft: Stage-1-Bereitschaft
+  bereitschaft_text: Wie weit das AIMS für das Stage-1-Audit ist; die Prüfregeln zeigen, was noch fehlt.
+  bereitschaft_gruen: Keine Fehler und keine Hinweise. Erzeugen Sie den Stage-1-Bericht und die Dokumente.
+  bereitschaft_gelb: Keine Fehler, aber Hinweise. Klären Sie die Hinweise vor dem Audit.
+  bereitschaft_rot: Es gibt Fehler. Beheben Sie diese vor dem Stage-1-Audit.
+  bereitschaft_aufbau: "Noch im Aufbau: Es gibt keine Fehler aus begonnenen Etappen. Die offenen Punkte erledigen sich mit den Etappen des Guides."
+  bericht_ansehen: Bericht ansehen
+  etappen_erledigt: Etappen erledigt
+
+suche:
+  label: Suchen
+  platzhalter: Suchen
+  taste: Taste Schrägstrich
+  ergebnisse: Suchergebnisse
+  anzahl: "{anzahl} Treffer"
+  anzahl_eins: "1 Treffer"
+  keine: Keine Treffer
+  controls: Controls
+  weitere: Weitere Einträge
+  seiten: Bereiche
+  bereich: Bereich
+
+einstellungen:
+  alle: Alle Einstellungen
+  projekt: Projekt und Module
+  darstellung: Sprache und Darstellung
+  gestaltung: Dokumentgestaltung
+  normtexte: Normtexte
+  speicher: Speicher und Bibliotheksordner
+  ohne_projekt: Öffnen oder erstellen Sie zuerst ein Projekt.
+  theme_hilfe: Dunkel ist die Voreinstellung. «Wie System» folgt der Einstellung des Betriebssystems. Ausdrucke und erzeugte Dokumente bleiben immer hell.
+  bibliothek_titel: Bibliotheksordner
+  bibliothek_text: Die Bibliothek verwaltet Dokumente, Versionen und Nachweise. In Edge und Chrome verbinden Sie dafür einen Ordner, zum Beispiel einen OneDrive- oder Netzlaufwerk-Ordner; die Dateien bleiben dort sichtbar.
+  bibliothek_browser: In Firefox und Safari liegt die Bibliothek im Browserspeicher; sichern Sie sie dort regelmässig als ZIP.
+  zur_bibliothek: Zur Bibliothek
+  bibliothek_ohne_projekt: Die Bibliothek gehört zu einem Projekt. Öffnen Sie zuerst ein Projekt.
+
+wissen:
+  leitfaden: Leitfaden
+  regelwerke: Regelwerke
+  mehr: Mehr
+  glossar: Glossar
+  glossar_text: "{anzahl} Begriffe in eigenen Worten, mit dem englischen Fachbegriff."
+  glossar_text_eins: "1 Begriff in eigenen Worten, mit dem englischen Fachbegriff."
+  assistent: KI-Assistent
+  assistent_text: Der KI-Assistent des Kits (Ordner KI-Assistent) hilft beim Schnellcheck, beim Inventar, bei Risiken und beim Schreiben der Dokumente. Er gibt eine Projektdatei aus, die Sie hier übernehmen.
+  assistent_daten: Geben Sie nur Angaben in einen KI-Dienst ein, die Ihre Regeln für den KI-Einsatz erlauben. Vertrauliche Angaben wählen Sie vorher ab.
+  fehlt: Die Inhalte des Leitfadens fehlen in dieser Datei.
+  inhalt_kapitel: Abschnitte des Kapitels
+  blaettern: Kapitel blättern
+  druckfassung: Die Druckfassung des Leitfadens liegt als PDF im Kit (Ordner 00_Leitfaden).
+  abbildung_pdf: Die Abbildung steht in der Druckfassung (PDF).
+  hinweis_norm: Das Werkzeug enthält keinen Normtext. Titel und Erläuterungen sind eigene Kurzfassungen; mit Ihrer eigenen Normausgabe erscheinen hier die Originaltexte.
+  hinweis_nist: Originaltexte aus NIST AI 100-1 und NIST AI 600-1 (Englisch) mit eigener Übersetzung. Das NIST AI RMF ist freiwillig und nicht zertifizierbar.
+  kapitel_4_10: Abschnitte 4 bis 10
+  anhang_a: Anhang A (Controls)
+  aus_normausgabe: Aus Ihrer Normausgabe
+  zur_soa: In der Erklärung zur Anwendbarkeit öffnen
+  feld:
+    zweck: Zweck
+    umsetzung: Umsetzung im KMU
+    nachweis: Typischer Nachweis
+    auditor: Darauf achtet das Audit
+  auszuege: Auszüge im Wortlaut
+  seiten_pdf: "PDF-Seiten {seiten}"
+  aiact_pdf: Den vollständigen Text finden Sie im beigelegten PDF im Ordner Rechtstexte.
+  zum_modul_aiact: Zum Modul EU AI Act im Register
+  zum_aiact: EU AI Act im Bereich Wissen
+
+hilfe:
+  kurzanleitung: Kurzanleitung
+  tasten: Tastenkürzel
+  starten:
+    titel: Starten
+    text: Öffnen Sie den AIMS-Manager per Doppelklick. Wählen Sie unter Start ein neues Projekt, eine Projektdatei oder ein Beispiel. Alles läuft offline im Browser.
+  navigation:
+    titel: Navigation
+    text: Links wählen Sie den Bereich, daneben im Untermenü die Seite. Das Untermenü lässt sich einklappen; auf schmalen Bildschirmen öffnen Sie es mit dem Menüknopf vor dem Seitentitel. Auf dem Telefon liegen die Bereiche unten, die übrigen unter «Mehr».
+  arbeiten:
+    titel: Guide und Register
+    text: Der Guide führt Etappe für Etappe durch das AIMS, eine Frage je Seite, mit Hilfe rechts. Das Register zeigt alle Angaben als Listen und Formulare, von der Organisation bis zu den Meldungen.
+  speichern:
+    titel: Speichern
+    text: Speichern Sie mit Ctrl+S (Mac Cmd+S), über die Anzeige des Speicherstands neben der Suche oder im Projektmenü unten in der Symbolleiste. Edge und Chrome schreiben direkt in die geöffnete Datei; Firefox und Safari laden eine neue Datei herunter. Der Zwischenspeicher ersetzt die Projektdatei nicht.
+  pruefen:
+    titel: Prüfen und Dokumente
+    text: Die Prüfung zeigt die Ampel «Bereit für Stage 1» mit Sprung zu jeder Stelle. Dokumente erzeugen Sie in der Bibliothek unter «Erzeugen» als Word- und Excel-Dateien.
+  bibliothek:
+    titel: Bibliothek
+    text: Die Bibliothek verwaltet Dokumente mit Status, Version und Prüftermin. In Edge und Chrome arbeitet sie mit einem Ordner Ihrer Wahl.
+  wissen:
+    titel: Wissen
+    text: Leitfaden, Regelwerke mit eigenen Kurztiteln und Originaltexten, Glossar und Hinweise zum KI-Assistenten, ohne Internet.
+  assistent:
+    titel: KI-Assistent
+    text: «Mit KI vertiefen» erstellt eine Anfrage zum Kopieren. Die Projektdatei des Assistenten übernehmen Sie unter Start, Projekte und Beispiele.
+
+tasten:
+  allgemein: Allgemein
+  taste: Taste
+  wirkung: Wirkung
+  bereich: Bereich
+  bereiche: Bereiche
+  bereiche_text: Drücken Sie zuerst g, danach den Buchstaben des Bereichs.
+  suche: Suche öffnen
+  speichern: Speichern
+  speichern_unter: Speichern unter
+  oeffnen: Projektdatei öffnen
+  pruefung: Prüfung
+  zurueck: Zurück im Guide
+  leiste: In der Symbolleiste zum nächsten oder vorherigen Bereich, mit Pos1 und Ende zum ersten oder letzten
+  escape: Suche, Auswahl, Projektmenü, Untermenü oder Blatt «Mehr» schliessen
+
+# Hauptaktionen der Seitenköpfe (U-34)
+aktion:
+  drucken: Drucken
+  ki_erfassen: KI-System erfassen
+  weitermachen: Weitermachen
+  eigener_prozess: Eigenen Prozess erfassen
+  dokumente: Dokumente erzeugen
+  erfassen:
+    kiSysteme: KI-System erfassen
+    risiken: Risiko erfassen
+    massnahmen: Massnahme erfassen
+    lieferanten: Lieferant erfassen
+    nachweise: Nachweis erfassen
+    feststellungen: Feststellung erfassen
+    audits: Audit erfassen
+    ziele: Ziel erfassen
+    parteien: Partei erfassen
+    rollen: Rolle erfassen
+    personen: Person erfassen
+    kommunikation: Kommunikation erfassen
+    kompetenzen: Kompetenz erfassen
+    bereiche: Bereich erfassen

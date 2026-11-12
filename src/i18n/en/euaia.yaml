@@ -1,0 +1,259 @@
+# Texts for src/ai-act/euaia-controls.yaml (English)
+# name: short title; hinweis: practical implementation note for SMEs; nachweis: typical evidence.
+# The notes are not legal advice.
+
+EUAIA-01:
+  name: Check of each AI system for prohibited practices
+  hinweis: |
+    Check every AI system in the inventory against the list in Article 5(1) before approval and whenever its intended purpose changes. For SMEs, emotion recognition in the workplace (point (f)), manipulative techniques (point (a)) and, from 02/12/2026, image generators without safeguards (points (ba), (bb)) are the most relevant.
+
+    Have it reviewed by a lawyer if a system analyses feelings, intentions or personality traits of people.
+  nachweis: Check record per system in the AI inventory with date, result and the person who checked.
+
+EUAIA-02:
+  name: AI literacy measures
+  hinweis: |
+    Define the knowledge needed per target group (all staff, users of specific systems, oversight persons, development). Article 4 requires measures to support AI literacy, not a guaranteed level. Short, recurring formats are often enough; record who completed what and when.
+  nachweis: Training concept per target group, attendance lists, onboarding content for new AI tools.
+
+EUAIA-03:
+  name: Role per AI system and check for role changes
+  hinweis: |
+    Determine for each system whether you are provider, deployer, importer, distributor, product manufacturer or authorised representative, and whether the AI Act applies territorially (Article 2(1), including Swiss companies placing systems on the EU market or whose output is used in the EU). Where you add your own name, make a substantial modification or change the intended purpose, check whether you become a provider under Article 25(1).
+
+    Have it reviewed by a lawyer if a system is adapted, retrained or passed on under your own name.
+  nachweis: Role check per system with rationale, date and trigger for the next review.
+
+EUAIA-04:
+  name: Risk class per AI system with reasoning
+  hinweis: |
+    Assign each system to a risk class: prohibited practice, high-risk under Annex III, high-risk under Annex I (safety component), transparency obligation, minimal risk. For AI in products, check Article 6(1a) to (1c): quality control or performance optimization without a safety function is not a safety component. As a provider, document an exception under Article 6(3) before placing on the market; profiling always remains high-risk.
+
+    Have it reviewed by a lawyer if the classification depends on an exception under Article 6(3) or 6(1a).
+  nachweis: Classification per system with criteria checked, rationale and approval.
+
+EUAIA-05:
+  name: Notice of interaction with an AI system
+  hinweis: |
+    For chatbots, voice assistants or automated replies, show clearly at the latest at the first interaction that an AI system is responding. The notice must be accessible, for example as text and not only as an icon.
+  nachweis: Screenshot of the notice, design requirement, check before putting into service.
+
+EUAIA-06:
+  name: Machine-readable marking of synthetic content
+  hinweis: |
+    If your product generates images, video, audio or text, mark the output in a machine-readable way, for example with metadata or watermarks. For purchased models, check whether the supplier already provides the marking. Systems placed on the market before 02/08/2026 must be retrofitted by 02/12/2026.
+  nachweis: Description of the marking solution, test evidence, supplier confirmation.
+
+EUAIA-07:
+  name: Disclosure of deep fakes, emotion recognition and AI text on matters of public interest
+  hinweis: |
+    Set out in the responsible AI use policy when image, audio and video content is labelled as artificially generated (deep fakes, for example in marketing) and when published text on matters of public interest needs a notice. For text, an editorial review step with a responsible person replaces the label.
+  nachweis: Labelling rule, examples of labelled content, editorial approval record.
+
+EUAIA-08:
+  name: Use in accordance with the instructions for use
+  hinweis: |
+    Obtain the provider's instructions for use, define who must know them and turn the key requirements into a short internal work instruction. Check with every provider update whether the requirements change.
+  nachweis: Current instructions for use, work instruction, approval of use.
+
+EUAIA-09:
+  name: Human oversight by competent persons
+  hinweis: |
+    Appoint oversight persons with deputies for each high-risk AI system, train them on the system's limitations and automation bias, and give them the authority to override results or stop use.
+  nachweis: Appointment with authority, training record, example of a documented override.
+
+EUAIA-10:
+  name: Input data relevant and representative
+  hinweis: |
+    Define which input data may enter the system and check samples to see whether it fits the intended purpose, for example whether application data is complete and comparable.
+  nachweis: Input data rule, sample check record.
+
+EUAIA-11:
+  name: Monitoring of operation, information of the provider, suspension of use
+  hinweis: |
+    Define simple monitoring points (error rate, complaints, unusual results) and a reporting channel to the provider. Decide in advance who may suspend use if there is a risk.
+  nachweis: Monitoring plan, reports to the provider, suspension decision.
+
+EUAIA-12:
+  name: Retention of logs for at least six months
+  hinweis: |
+    Clarify with the provider where logs are stored and who controls them. Set retention to at least six months and align the period with data protection requirements.
+
+    Have it reviewed by a lawyer if logs contain personal data and other retention or deletion periods apply.
+  nachweis: Retention setting, retention rule, sample check.
+
+EUAIA-13:
+  name: Prior information of staff and workers' representatives
+  hinweis: |
+    Before using a high-risk AI system at the workplace, inform the staff representatives and the affected staff in writing. Observe national participation rights, for example under German works constitution law.
+
+    Have it reviewed by a lawyer if a works council exists in a German company.
+  nachweis: Dated information, record of the staff representatives.
+
+EUAIA-14:
+  name: Information of affected persons about AI-supported decisions
+  hinweis: |
+    Add to recruitment, customer or privacy notices that a high-risk AI system makes or supports decisions. A short, clear sentence in the right place is often enough.
+  nachweis: Information text with location and date.
+
+EUAIA-15:
+  name: Handling of the right to explanation
+  hinweis: |
+    Set up an intake channel for explanation requests and prepare a template describing the role of the AI system and the main elements of the decision. Obtain the information you need from the provider.
+  nachweis: Procedure, reply template, request log.
+
+EUAIA-16:
+  name: Fundamental rights impact assessment and notification to the authority
+  hinweis: |
+    First check whether the obligation applies: only to public bodies, private entities providing public services and systems for creditworthiness (Annex III point 5(b)) and life and health insurance (point 5(c)). It usually does not apply to typical industrial SMEs. Where it applies, you can reuse parts of the data protection impact assessment (Article 27(4)).
+
+    Have it reviewed by a lawyer if your organization performs tasks on behalf of the public sector.
+  nachweis: Applicability check in E-06, fundamental rights impact assessment, notification to the authority.
+
+EUAIA-17:
+  name: Data protection impact assessment using provider information
+  hinweis: |
+    Request the information under Article 13 from the provider and use it in the data protection impact assessment. Link the DPIA with the AI system impact assessment (D-09).
+  nachweis: DPIA referring to provider information, link in D-09.
+
+EUAIA-18:
+  name: Cooperation with authorities
+  hinweis: |
+    Name a contact person for authority requests and define which documents you can provide per system and in which language. A short procedure description is enough.
+  nachweis: Contact person, procedure description, log of past requests.
+
+EUAIA-19:
+  name: Risk management system under Article 9
+  hinweis: |
+    Build on the AIMS risk process and add, for each high-risk AI system: risks to health, safety and fundamental rights, reasonably foreseeable misuse, data from post-market monitoring, testing against predefined metrics and consideration of persons under 18.
+  nachweis: Risk management plan per system, test reports, residual risk evaluation.
+
+EUAIA-20:
+  name: Data and data governance under Article 10
+  hinweis: |
+    Record for each data set its provenance, original purpose of collection, preparation, assumptions, gaps and the bias examination. You may process special categories of personal data only to detect and correct bias and only under the conditions of Article 4a(1).
+
+    Have it reviewed by a lawyer before processing special categories of personal data for bias testing.
+  nachweis: Data sheets, bias examination report, record under Article 4a(1)(f).
+
+EUAIA-21:
+  name: Technical documentation under Annex IV
+  hinweis: |
+    As an SME or small mid-cap enterprise, use the Commission's simplified form under Article 11(1). Keep the documentation versioned and update it with every change.
+  nachweis: Technical documentation per system and version.
+
+EUAIA-22:
+  name: Automatic logging
+  hinweis: |
+    Define which events the system logs (period of use, inputs, results, interventions) and test logging before delivery. Describe in the instructions for use how deployers collect and interpret the logs.
+  nachweis: Logging concept, test evidence, section in the instructions for use.
+
+EUAIA-23:
+  name: Instructions for use under Article 13
+  hinweis: |
+    Write the instructions for use using the minimum content of Article 13(3) and make them understandable and accessible for deployers. State accuracy metrics and known limitations.
+  nachweis: Approved instructions for use, checklist against Article 13(3).
+
+EUAIA-24:
+  name: Human oversight by design
+  hinweis: |
+    Plan oversight from the requirements stage: display of uncertainty, ability to override, a stop function leading to a safe state and prompts against automation bias.
+  nachweis: Oversight requirements, test record of the intervention functions.
+
+EUAIA-25:
+  name: Accuracy, robustness and cybersecurity
+  hinweis: |
+    Test accuracy and robustness against defined metrics and check AI-specific attacks such as data poisoning or adversarial inputs. Use existing ISMS processes for vulnerabilities and secure development.
+  nachweis: Test reports, security tests, vulnerability management.
+
+EUAIA-26:
+  name: Quality management system under Article 17
+  hinweis: |
+    An AIMS under ISO/IEC 42001 covers many elements, but not all. Map Article 17(1)(a) to (m) and add missing elements such as conformity assessment, serious incident reporting and communication with authorities. The scope may be proportionate to size (Article 17(2)); SMEs without partner or linked enterprises may comply with certain elements in a simplified manner (Article 63(1)).
+
+    Have it reviewed by a lawyer whether a standard giving presumption of conformity, such as EN 18286, makes sense for your QMS (see stand.yaml).
+  nachweis: Mapping table Article 17 to AIMS documents, added procedures.
+
+EUAIA-27:
+  name: Retention of documentation for ten years
+  hinweis: |
+    Add a retention period of ten years after placing on the market to the document register for technical documentation, QMS documentation, notified body decisions and the EU declaration of conformity.
+  nachweis: Retention rule in the document register, storage location.
+
+EUAIA-28:
+  name: Conformity assessment, EU declaration of conformity, CE marking and provider details
+  hinweis: |
+    Plan the conformity assessment early. For Annex III points 2 to 8, internal control under Annex VI is sufficient; for products covered by Annex I Section A, it runs within the procedure of the product legislation. Then draw up the declaration of conformity and the CE marking and state your name and contact address.
+
+    Have it reviewed by a lawyer which procedure applies and whether a notified body is needed.
+  nachweis: Conformity assessment report, EU declaration of conformity, CE marking.
+
+EUAIA-29:
+  name: Registration in the EU database
+  hinweis: |
+    Register Annex III high-risk AI systems before placing them on the market. Annex III systems that you classify as not high-risk under Article 6(3) must also be registered (Article 49(2)). Providers without an establishment in the EU register through their authorised representative or themselves.
+  nachweis: Registration confirmation with identifier.
+
+EUAIA-30:
+  name: Corrective actions and duty of information
+  hinweis: |
+    Link the AIMS nonconformity procedure with the obligations of Article 20: immediate correction, withdrawal or recall, informing distributors and deployers and, where there is a risk, notifying the market surveillance authority.
+  nachweis: Extended corrective action procedure, contact list of distributors and deployers.
+
+EUAIA-31:
+  name: Authorised representative in the EU
+  hinweis: |
+    Swiss providers of high-risk AI systems appoint in writing an authorised representative established in the EU before making the system available there, with a mandate covering at least the tasks in Article 22(3).
+
+    Have it reviewed by a lawyer how the mandate and liability are set out in the contract.
+  nachweis: Signed mandate, contact details in the instructions for use.
+
+EUAIA-32:
+  name: Post-market monitoring
+  hinweis: |
+    Draw up a plan setting out which performance data you collect from customers and other sources and how often you analyse it. The Commission will publish a template by 02/09/2027 (Article 72(3)).
+  nachweis: Post-market monitoring plan, analysis report.
+
+EUAIA-33:
+  name: Reporting of serious incidents
+  hinweis: |
+    Add the deadlines of Article 73 to incident management: no later than 15 days, 10 days in case of death and 2 days for a widespread infringement or serious disruption of critical infrastructure. An incomplete initial report is allowed. Deployers report first to the provider under Article 26(5).
+  nachweis: Reporting procedure with deadlines and responsibilities, initial report template, authority contact list.
+
+EUAIA-34:
+  name: Accessibility
+  hinweis: |
+    Check user interfaces and instructions for use against the requirements of Directives (EU) 2016/2102 and (EU) 2019/882, for example using the relevant standards for digital accessibility.
+  nachweis: Accessibility test report.
+
+EUAIA-35:
+  name: Agreements with suppliers and cooperation in the value chain
+  hinweis: |
+    Agree in writing with suppliers of models, components and services which information and technical access you are entitled to (Article 25(4)). Conversely, set out how you cooperate with customers who turn your system into a high-risk AI system, or exclude this explicitly (Article 25(2)). The voluntary model terms of the AI Office can help.
+  nachweis: Contract clauses, supplier register with annotation.
+
+EUAIA-36:
+  name: Importer obligations
+  hinweis: |
+    Keep an incoming checklist for high-risk AI systems from third countries (conformity assessment, technical documentation, CE marking, declaration of conformity, instructions for use, authorised representative) and keep the documents for ten years.
+  nachweis: Completed checklist per system, document filing.
+
+EUAIA-37:
+  name: Distributor obligations
+  hinweis: |
+    Before reselling, check the CE marking, declaration of conformity and instructions for use, and record how you react to signs of non-conformity.
+  nachweis: Checklist per system, record of holds and notifications.
+
+EUAIA-38:
+  name: Obligations as authorised representative
+  hinweis: |
+    When acting as authorised representative for a provider from a third country, verify the declaration of conformity and technical documentation, keep the documents available and terminate the mandate if the provider breaches its obligations.
+  nachweis: Mandate, verification records, document filing.
+
+EUAIA-39:
+  name: Obligations for providers of general-purpose AI models (note)
+  hinweis: |
+    Applies only to organizations that place a general-purpose AI model on the market themselves, not to those that use a model through an interface or build it into their own AI system. Anyone who substantially modifies such a model and offers it under their own name should clarify their role.
+
+    Have it reviewed by a lawyer if you fine-tune a model and pass it on to third parties.
+  nachweis: Role clarification; where applicable, documentation under Annexes XI and XII.

@@ -1,0 +1,257 @@
+naechste_schritte: "What comes next: open a draft and send it ‘for review’. A second person reviews it, then ‘Approve’. Approval enters version, review and date in generated documents. Approvals in the guide (project mandate, scope, policy, impact assessment) also apply here."
+# Library (R4): user interface src/app/ansichten/bibliothek, register D-26. Keys bibliothek.*; same structure in de.
+titel: Library
+suche: Search the library
+filter: Library sections
+menue:
+  arbeitsliste: Work list
+unter:
+  alle: All documents
+  firma: Company documents
+  eigene: Own files
+  nachweise: Evidence
+  vorlagen: Templates
+  recht: Legal texts
+  pruefen: To review
+  entwurf: Drafts
+  ersetzt: Superseded and archived
+art:
+  firmendokument: Company document
+  eigene: Own file
+  nachweis: Evidence
+  vorlage: Template
+  rechtstext: Legal text
+status:
+  entwurf: Draft
+  in-pruefung: In review
+  freigegeben: Approved
+  ersetzt: Superseded
+  archiviert: Archived
+  abgelegt: Filed
+faellig:
+  ueberfaellig: "Review overdue by {tage} days"
+  bald: "Review in {tage} days"
+tabelle:
+  titel: "Documents in the library ({anzahl})"
+  dokument: Document
+  status: Status
+  version: Version
+  gueltig: Valid
+  pruefung: Next review
+  kein_treffer: No document matches the search.
+leer:
+  alle: No documents yet. Connect a folder or use browser storage, then upload files or file generated company documents.
+  firma: No company documents yet. Entries in the document register and generated documents appear here.
+  eigene: No own files yet, for example contracts, policies or photos.
+  nachweise: No evidence yet.
+  vorlagen: No templates for the modules switched on.
+  recht: No legal texts.
+  pruefen: Nothing to review.
+  entwurf: No drafts.
+  ersetzt: No superseded or archived documents.
+verbindung:
+  ordner: Connected to
+  anzahl: "Documents with a file: {anzahl}"
+  abgleich_am: "last checked {zeit}"
+  browser_name: Browser storage
+  browser_titel: The library is kept in browser storage.
+  browser_text: The files are kept only in this browser on this computer and can be lost when the browser is cleaned up. Back up the library regularly as a ZIP file and keep the backup in a safe place.
+  gesichert_am: "Last backup: {zeit}."
+  nie_gesichert: No backup yet.
+  freigabe_text: "The library folder ‘{name}’ is remembered. After reloading, the browser asks once whether the AIMS Manager may access it again."
+  keine_titel: No library folder connected.
+  keine_text: Documents, versions and evidence are then kept as real files in a folder of your choice, for example a OneDrive or network drive folder. The project file only holds references and checksums.
+  ohne_fsa: This browser cannot connect a folder (only Edge and Chrome). The library can be kept in browser storage, with a backup as a ZIP file.
+  ordner_anderswo: "The library of this project is kept in the folder ‘{name}’. Open the project in Edge or Chrome to connect it."
+aktion:
+  vorschau_projekt: Preview from the project
+  hochladen: Upload file
+  verbinden: Connect folder
+  browser: Use browser storage
+  freigeben_ordner: Allow access to the folder
+  abgleichen: Check folder
+  trennen: Disconnect
+  sichern: Back up as ZIP
+  laden: Load backup
+  zum_ordner: Move to a folder
+  aenderung_uebernehmen: Accept change
+  als_version: Check in as new version
+  aufnehmen_eigene: Add as own file
+  aufnehmen_nachweis: Add as evidence
+  freigeben: Approve
+  abbrechen: Cancel
+  oeffnen: Open legal text
+  vorlage: Download template
+  einchecken: Check in new version
+  herunterladen: Download
+  vorschau: Preview
+  version_laden: "Download version {version}"
+  archivieren: Archive
+  zurueckholen: Restore from archive
+  erzeugen: File company documents in the library
+wechsel:
+  in-pruefung: Submit for review
+  entwurf: Back to draft
+  freigegeben: Approve …
+hochladen:
+  erst_ablage: Choose a storage first
+  eigene: New files are filed as own files.
+  nachweis: New files are filed as evidence.
+  erst_verbinden: Connect a folder or use browser storage first.
+  ziehen_eigene: Drag files here to file them as own files.
+  ziehen_nachweis: Drag files here to file them as evidence.
+  erzeugen_hinweis: Generates all company documents from the project. Changed documents receive a new version as a draft; unchanged ones stay as they are.
+abgleich:
+  fehlen_titel: "{anzahl} library files are missing in this browser."
+  fehlen_titel_eins: "1 library file is missing in this browser."
+  fehlen_text: "The project file knows them, but the files themselves are in the browser storage of the computer where they were created. Use ‘Load backup’ to restore them from a backup (ZIP). The check and report continue to count approvals from the register."
+  titel: "Folder check (findings: {anzahl})"
+  geaendert: Changed outside
+  alt-geaendert: Older version changed
+  fehlt: File missing
+  nicht-lokal: Not available locally
+  neu: New file
+feld:
+  status: Status
+  version: Version
+  titel: Title
+  eigner: Owner
+  keiner: not specified
+  waehlen: Choose a person
+  geprueft_von: Reviewed by
+  freigabe_von: Approved by
+  am: on
+  aenderung: What has changed?
+  naechste_pruefung: Next review
+  normbezug: Standard reference
+  verknuepft: Linked
+  ablageort: Location
+  beschreibung: Description
+verknuepfung:
+  kiSysteme: AI systems (KI-001)
+  risiken: Risks (R-001)
+  controls: Controls (A.5.4)
+  prozesse: Processes (PR-08)
+  nachweise: Evidence (N-001)
+detail:
+  ohne_ablage: Preview and download need a connected storage (folder or browser storage). Examples come without files.
+  ohne_ablage_firma: Preview and download of stored files need a connected storage; examples come without files. The preview from the project shows the content as of the current project data.
+  aus_entwurf: "from draft {version}"
+  bearbeiten: Edit details
+  gueltig: "{version} is valid"
+  ohne_version: no file yet
+  hauptversion: Change of content (new major number)
+  versionen: Versions
+  ueberschrieben: File overwritten outside
+  hinweis_d26: "Approval as per D-26: a second person reviews before approval; an approved document only changes through a new version. The versions are kept as files in the library."
+  hinweis_vorlage: Template of the kit, read only. It is generated blank when downloaded, as in the templates folder.
+  hinweis_rechtstext: Legal text in the kit, read only. It opens from the legal texts folder next to the AIMS Manager.
+freigabe:
+  eigene_datei: "Your own file: the approval is recorded in the register; the file content stays as it is."
+  titel: "Approve version {version}"
+  nummer: "Draft {entwurf} is approved as version {version} (D-26: drafts 0.x, first approval 1.0). The file name then shows this version."
+  regel_standard: "Review by a second person, approval depending on the type of document (D-26): policy and scope by top management, procedures and rules by the AIMS lead."
+  regel_geschaeftsleitung: "Company rule: review by a second person, approval by top management."
+  regel_eigner: "Company rule: review by a second person, approval by the document owner."
+  regel_aims: "Company rule: review by a second person, approval by the AIMS lead."
+fehler:
+  datei_fehlt_browser: "The file is missing in this browser: {pfad}. Use ‘Load backup’ to restore it from a backup."
+  datei_fehlt_ordner: "The file is missing in the folder: {pfad}. Check the folder or upload it again."
+  datei_gross: "‘{name}’ is larger than {mb} MB and is not imported into browser storage. Connect a folder in Edge or Chrome, where this limit does not apply, or keep the file elsewhere and refer to it in an evidence entry."
+  datei_gross_lesen: "‘{name}’ is larger than {mb} MB and cannot be opened here. The file itself is unchanged: download it or open it in the folder."
+  sicherung_bestand_gross: "The files together are larger than {grenze_sicherung} and do not fit in a backup. Back up the connected folder with the tools of your storage location."
+  register_schreiben: "bibliothek.json in the folder could not be updated. The project file is correct, but the register in the folder is out of date. Check the write permissions."
+  datei_extern: "‘{id}’ was not regenerated because the file was changed outside the app. Your edits are kept. Choose ‘Take over change’ in the entry."
+  datei_erneuern: "Approved, but the file could not be regenerated"
+  sicherung_gross: "The backup is larger than {grenze_sicherung} and will not be loaded."
+  register_ungueltig: "bibliothek.json does not fit the project and was not imported."
+  allgemein: That did not work
+  ordner: The folder could not be opened
+  berechtigung: The browser did not allow access to the folder.
+  keine_ablage: Connect a folder or use browser storage first.
+  keine_sicherung: The file is not a backup of the library (bibliothek.json is missing).
+  keine-version: There is no file for this entry yet.
+  nicht-erlaubt: This status change is not intended under D-26.
+  pruefung-fehlt: Who reviewed it and when? A second person reviews before approval.
+  freigabe-fehlt: Who approves it and when?
+  gleiche-person: Review and approval need two different people.
+  reihenfolge: The review is dated after the approval. Review first, then approve.
+  aenderung-fehlt: Briefly describe what has changed since the previous version.
+warnung:
+  eigner-gibt-frei: "Note: the owner approves their own document; the company rule does not provide for this."
+  eigner-prueft: "Note: the owner reviewed their own document; a second person should review it."
+meldung:
+  lauf_abgebrochen: "Nothing generated. The library is unchanged."
+  verbunden_abweichend: "{anzahl} files in the folder differ; they were left unchanged, and the browser version is stored next to each as a copy ‘.browser’."
+  verbunden_abweichend_eins: "1 file in the folder differs; it was left unchanged, and the browser version is stored next to it as a copy ‘.browser’."
+  sicherung_ausserhalb: "{anzahl} files outside the register were not imported."
+  sicherung_ausserhalb_eins: "1 file outside the register was not imported."
+  freigegeben_erneuert: "The file was regenerated with version and approval in the header."
+  freigegeben_eigene: "The file itself stays unchanged: add version and approval to the document if it states them."
+  register_abgelehnt: "{anzahl} entries from bibliothek.json were not imported because they are invalid: {ids}."
+  register_abgelehnt_eins: "1 entry from bibliothek.json was not imported because it is invalid: {ids}."
+  verbunden: "Folder ‘{name}’ connected. Files copied: {kopiert}, versions taken over from the folder: {uebernommen}."
+  getrennt: Folder disconnected. The files stay in the folder, the references in the project file.
+  browser: The library uses browser storage. Back it up regularly as a ZIP file.
+  hochgeladen: "Files filed: {anzahl}."
+  eingecheckt: "{id}: version {version} checked in (draft)."
+  freigegeben: "{id}: version {version} approved."
+  status: "{id}: {status}."
+  abgleich_ok: Folder and register match.
+  abgleich_befunde: "Folder check complete, findings: {anzahl}."
+  uebernommen: "{id}: change accepted."
+  aufgenommen: "{id} added."
+  gesichert: "‘{name}’ downloaded (files: {anzahl}). Keep the backup in a safe place."
+  wiederhergestellt: "Backup loaded. Files: {dateien}, new versions in the register: {versionen}."
+  erzeugt: "Company documents generated. New versions: {neu}, unchanged: {gleich}, errors: {fehler}."
+arbeit:
+  verbinden: Connecting folder …
+  hochladen: Filing files …
+  einchecken: Checking in version …
+  lesen: Reading file …
+  vorlage: Generating template …
+  abgleich: Checking folder …
+  sichern: Creating backup …
+  wiederherstellen: Loading backup …
+  erzeugen: Generating company documents …
+vorschau:
+  titel_projekt: Preview from the project (current data)
+  titel: "Preview of version {version}"
+  projektstand: Show current state from the project
+  laedt: Loading preview …
+  fehler: No preview possible
+  keine: There is no preview for this file format. Download the file and open it in the matching application.
+  bild: "{titel}, page {seite}"
+  seite: "Page {seite} of {seiten}"
+  zurueck: Previous page
+  weiter: Next page
+  blatt: Worksheet
+recht:
+  aiact: "EU AI Act, Regulation (EU) 2024/1689, consolidated version of {datum} ({sprache})"
+register:
+  bemerkung_datei: "File {pfad}"
+  bemerkung_in_arbeit: "Version {version} in progress ({status})"
+norm:
+  filter: Filter by standard reference
+  alle: "Standard reference: all"
+  wert: "Clause {norm}"
+
+frage:
+  lauf_alle: "{anzahl} documents change, {frei} of them are approved. Each gets a new draft; the approved version stays valid until the next approval."
+  lauf_alle_eins: "1 document changes and gets a new draft. If it is approved, that version stays valid until the next approval."
+  sicherung_konflikt: "{anzahl} files in the backup differ from what is stored, for example:\n{namen}\n\n‘Load backup’ replaces them; the previous version is kept as a copy ‘.vor-sicherung’. Cancel loads nothing."
+  sicherung_konflikt_eins: "1 file in the backup differs from what is stored:\n{namen}\n\n‘Load backup’ replaces it; the previous version is kept as a copy ‘.vor-sicherung’. Cancel loads nothing."
+  unbenannt: "unnamed"
+  fremdes_projekt: "This library belongs to another project (‘{name}’). Take its entries into the open project?"
+sammel:
+  aenderung: "First version, approved in a batch."
+  teilweise: "{anzahl} documents changed, {fehler} not: {ids}."
+  teilweise_eins: "1 document changed, {fehler} not: {ids}."
+  fertig: "{anzahl} documents changed."
+  fertig_eins: "1 document changed."
+  freigeben: "Approve {anzahl} documents under review"
+  freigeben_eins: "Approve 1 document under review"
+  zur_pruefung: "Send {anzahl} drafts for review"
+  zur_pruefung_eins: "Send 1 draft for review"
+  text: "Sends all drafts for review or approves all reviewed documents with the same details. The four-eyes rule applies here too."
+  titel: "Several documents at once"

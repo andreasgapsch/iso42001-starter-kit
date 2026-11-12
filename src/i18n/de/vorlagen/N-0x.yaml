@@ -1,0 +1,38 @@
+# Gemeinsame Texte der Modulvorlagen N-01 bis N-04 (NIST AI RMF). Eigene Formulierungen; NIST-Texte nur als gekennzeichnete
+# Zitate aus src/nist-rmf/original-*.yaml (Spalte «Originaltext NIST», Blatt «Quelle»).
+titel_bezug: Bezug NIST AI RMF
+quelle_leer: "Quelle: NIST AI 100-1, Artificial Intelligence Risk Management Framework (AI RMF 1.0, Januar 2023){genai}, National Institute of Standards and Technology (NIST); Werke der US-Regierung, in den USA gemeinfrei; eigene Kurztitel. Die Spalte «Originaltext NIST» zitiert NIST wörtlich, die Übersetzung ist eine eigene und nicht amtlich; Massnahmen und Zuordnungen sind eigene Formulierungen des Kits. Republished courtesy of the National Institute of Standards and Technology. Die PDFs liegen dem Kit im Ordner {ordner} bei; Seitenangaben beziehen sich auf diese Dateien. Die Nennung bedeutet keine Billigung durch NIST."
+quelle_leer_genai: " und NIST AI 600-1, Generative Artificial Intelligence Profile (Juli 2024)"
+quelle_firma: "Grundlage: NIST AI 100-1, AI RMF 1.0 (Januar 2023), {doi_100}{genai}. Kurztitel in eigenen Worten, Originaltexte wörtlich mit eigener, nicht amtlicher Übersetzung; Seitenangaben nach den PDF-Dateien von NIST. Republished courtesy of the National Institute of Standards and Technology."
+quelle_firma_genai: ", und NIST AI 600-1, Generative AI Profile (Juli 2024), {doi_600}"
+kein_recht: "Das AI RMF ist ein freiwilliges Rahmenwerk, weder Recht noch Norm. NIST zertifiziert nicht; das Profil ist eine Selbsteinschätzung, kein Konformitätsnachweis."
+stand: "Stand des NIST AI RMF geprüft am {datum}: massgebend ist AI RMF 1.0. Eine Überarbeitung ist angekündigt; ein Entwurf liegt nicht vor."
+stufen_text: "Stufen: 0 nicht erreicht, 1 teilweise (begonnen oder nur zum Teil abgedeckt), 2 erreicht (festgelegt und angewendet), 3 wirksam (Wirksamkeit überprüft)."
+fundstelle_100: "AI 100-1 S. {seite}"
+fundstelle_playbook: "Playbook S. {seite}"
+fundstelle_600: "AI 600-1 S. {seite}"
+praezisierung: Präzisierung bestehender Dokumente
+status: [offen, geplant, teilweise, umgesetzt, wirksam]
+entscheid:
+  ja: "in die SoA aufgenommen, Stand: {status}"
+  nein: nicht aufgenommen
+  offen: offen
+spalte_original: "Originaltext NIST (Englisch)"
+spalte_uebersetzung: "Übersetzung (eigene, nicht amtlich)"
+blatt_quelle: Quelle
+titel_quelle: Quelle der zitierten NIST-Texte
+hinweis_quelle: "Die Spalte «Originaltext NIST» gibt den Text von NIST wörtlich wieder. Die Übersetzung ist eine eigene, sinngetreue Übersetzung und nicht amtlich; massgebend ist der englische Originaltext."
+spalten_quelle: [Angabe, Inhalt]
+quelle:
+  dokument: Dokument
+  doi: DOI
+  stellen: Zitierte Stellen
+  vermerk: Vermerk
+  rechte: Nutzungsrecht
+  uebersetzung: Übersetzung
+  ablage: PDF zum Nachlesen
+stellen_100: "Tabellen 1 bis 4 (Funktionen, Kategorien, Subkategorien), Abschnitt 3 (Vertrauensmerkmale), Abschnitt 5 (Funktionen)"
+stellen_600: "Abschnitt 2 (zwölf Risiken), Abschnitt 3 (vorgeschlagene Massnahmen)"
+rechte_text: "Werke der US-Regierung, in den USA gemeinfrei (17 U.S.C. § 105); ausserhalb der USA gewährt NIST ein weltweites, unentgeltliches Recht zu Nachdruck und Bearbeitung. Die Nennung bedeutet keine Billigung durch NIST."
+uebersetzung_text: "Eigene, sinngetreue Übersetzung, nicht amtlich; massgebend ist der englische Originaltext."
+ablage_text: "Ordner {ordner}, Datei {datei}"

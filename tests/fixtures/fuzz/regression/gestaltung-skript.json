@@ -1,0 +1,12 @@
+{
+  "art": "aims-gestaltung",
+  "version": 1,
+  "gestaltung": {
+    "logo": {
+      "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA1BMVEWAgICQdD0xAAAAAXRSTlOArV5bRgAAAAxJREFUeNpjGAUoAAABEAABz+1zPAAAAABJRU5ErkJggg==",
+      "breite": 16,
+      "hoehe": 16,
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 10 10\"><script>alert(1)</script><rect width=\"5\" height=\"5\" onload=\"alert(1)\"/><foreignObject width=\"5\" height=\"5\"><div xmlns=\"http://www.w3.org/1999/xhtml\">x</div></foreignObject><image href=\"https://example.org/a.png\" width=\"5\" height=\"5\"/></svg>"
+    }
+  }
+}

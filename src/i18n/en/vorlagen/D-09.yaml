@@ -1,0 +1,117 @@
+# D-09 AI system impact assessment
+hinweis_umfang: "One file per AI system. If part A results in ‘no’, enter the reason and approve in part C."
+teil_a: "A Screening"
+teil_b: "B Full impact assessment"
+teil_c: "C Result and approval"
+kopf:
+  system: AI system
+  eigner: System owner
+  fachbereich: Business unit
+  typ: Type of system
+triage_kopf: [No., Question, Answer]
+triage_ergebnis:
+  voll: "Full assessment required"
+  begruendung: Reason
+  durch: Screening by, on
+hinweis_teil_b: "Only complete if part A or the back-check after the risk assessment (D-06, D-08) requires a full assessment. Keywords are enough."
+b:
+  beschreibung: System description
+  zweck: Purpose, uses and misuse
+  daten: Data
+  modell: Model
+  umfeld: Setting of use
+  betroffene: Affected persons
+  nutzen: Benefits and harms
+  gesellschaft: Society and environment
+  ausfaelle: Failures and misuse
+  massnahmen: Actions
+felder:
+  zweck: Purpose
+  verwendungen: Intended uses
+  fehlanwendungen: Reasonably foreseeable misuse
+  modell_typ: Model, version, provider
+  modell_training: Origin of training data
+  modell_training_eigen: Data for our own training
+  modell_grundmodell: Training data of the base model
+  modell_grenzen: Known limitations
+  modell_tests: Tests and metrics
+hinweis_beschreibung: "What does the system do, who uses it, how do inputs and outputs flow? Three to five sentences."
+hinweis_zweck: "Misuse means uses that are not intended but are likely, e.g. a writing assistant used to obtain legal advice."
+hinweis_daten: "Which data goes in and which is produced? Origin, personal data, quality. As a deployer you often do not know the training data: ask the supplier and record the date and the answer."
+daten_lieferant: "requested from the supplier on DD/MM/YYYY"
+grundmodell_ohne_training: "We do not train the model ourselves. Training data and tests of the model as stated by the provider"
+grundmodell_nachtraining: "The base model comes from the provider; training data and tests as stated by the provider"
+grundmodell_anbieter: ": {anbieter}"
+ausbau_modell: "Only for in-house development or if the supplier provides the information."
+hinweis_umfeld: "Where and under which conditions does the system run? Countries, languages, user groups, workflow, degree of human review."
+betroffene_kopf: [Group, "direct/indirect", Effect, Consulted]
+betroffene_art:
+  direkt: direct
+  indirekt: indirect
+hinweis_betroffene: "Directly affected are those who use the system or about whom it produces outputs. Indirectly affected are, for example, relatives, your customers' customers or the public. Record whether and how you consulted the group."
+nutzen_kopf: [Objective, Benefits, Harms, "Extent ({skala})"]
+hinweis_nutzen: "For each objective: what does the system improve, what can it worsen? Rate the extent before actions with the scale from D-06; mark objectives that do not apply as ‘not affected’ with a reason."
+ziele:
+  rechenschaft:
+    name: Accountability
+    frage: "Is it clear who answers for outputs and errors, and where affected persons can complain? Can affected persons request a review by a human?"
+  transparenz:
+    name: Transparency
+    frage: "Do users and affected persons know that AI is involved, and for what?"
+  fairness:
+    name: Fairness
+    frage: "Are people or groups treated differently without an objective reason?"
+  datenschutz:
+    name: Privacy
+    frage: "Is personal data processed lawfully and only to the extent needed?"
+  zuverlaessigkeit:
+    name: Reliability
+    frage: "Does the system produce usable outputs even in unusual cases and after updates by the provider?"
+  sicherheit:
+    name: Safety and security
+    frage: "(1) Can an error or failure endanger people, and does the system then fail safely? (2) Does the system withstand attacks and misuse, and does it recover after a disruption?"
+  erklaerbarkeit:
+    name: Explainability
+    frage: "Can an individual output be explained in a way the people affected understand? Can users interpret the output correctly in context (what it says and what it does not)?"
+  umwelt:
+    name: Environment
+    frage: "Is the use of energy and resources reasonable in relation to the benefit?"
+hinweis_gesellschaft: "Does the system have effects beyond those directly affected, for example on jobs, access to services, the spread of false information or the environment? For small internal systems, one sentence with a reason is enough."
+hinweis_ausfaelle: "What happens with a wrong result, an outage, an update or misuse? Who notices, and how is the response handled?"
+hinweis_massnahmen: "Name the actions with a reference to the treatment plan (D-07), e.g. M-003 human review before sending."
+c:
+  ergebnis: Result and decision
+  eingeschraenkt: Restricted use, conditions
+  dsfa: Linked DPIA, FRIA or other assessments
+  naechste: Next review
+  freigabe_durch: Approved by
+  freigabe_am: Approved on
+  unterschrift_erste_fassung: "Signatures for the first version. The version in force is signed under the reassessments."
+hinweis_ergebnis: "Decision: use as planned, use under conditions or do not use. Name the greatest remaining harm and its extent."
+platzhalter_entscheid: "use as planned / under conditions / do not use"
+platzhalter_dsfa: "none / DPIA no. / FRIA no."
+fria_ref: "Fundamental rights impact assessment {ref} (E-06)"
+fria_nicht_noetig: "no fundamental rights impact assessment required (E-06)"
+neubeurteilung:
+  titel: Reassessments
+  kopf: [Date, Carried out by, Reason, Result, Approval]
+  hinweis: "After the first approval, enter each reassessment as a separate row (8.4): date, who carried it out, reason (for example retraining, change of model or provider, incident), result and approval under D-08. The table is the data source of the metrics PR-09 and PR-13 in the measurement plan (D-05)."
+  platzhalter: [DD/MM/YYYY, Name, Reason, "unchanged / adjusted", "Name, date"]
+# Checklist for vulnerable groups, decision to deploy and contributors
+hinweis_verletzliche: "Check vulnerable groups: children, older people, people with disabilities, financial hardship, low digital or language skills, dependants such as staff."
+hinweis_einsatz: "Record the benefit, the option without AI that was checked, the follow-up and who contributed."
+einsatz:
+  titel: Decision to deploy and contributors
+  nutzen: Expected benefit
+  alternative: "Solution without AI and why it is not sufficient"
+  wiedervorlage: "Follow-up date (review of benefit)"
+  mitgewirkt: Contributors
+  verweis: "Decision to deploy and contributors: see Appendix 1."
+# NIST AI RMF module: trustworthiness characteristics and trade-offs (RMF-01)
+nist:
+  praefix_leer: "Only with the NIST AI RMF module:"
+  praefix: "NIST AI RMF:"
+  verweis_leer: "The three or four most important trustworthiness characteristics of this system and the trade-offs decided (RMF-01) are in the measurement and test plan (N-03); it maps the objectives from Part B to the seven characteristics of the AI RMF."
+  verweis: "The most important trustworthiness characteristics, trade-offs and tests of this system are in the measurement and test plan (N-03)."
+  merkmale: "Most important trustworthiness characteristics: {merkmale}.{konflikte} Tests in the measurement and test plan (N-03)."
+  konflikte: "Trade-offs: {text}."

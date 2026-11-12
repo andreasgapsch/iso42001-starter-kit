@@ -1,0 +1,97 @@
+# D-13 Daten für KI-Systeme
+hinweis_umfang: "Abschnitte 1 bis 4 gelten für alle, die KI-Systeme nutzen. Abschnitt 5 brauchen Sie nur, wenn Sie Modelle selbst trainieren, nachtrainieren oder testen; sonst A.7.2, A.7.3, A.7.5 und A.7.6 in D-11 begründet ausschliessen. A.7.4 bleibt für Betreiber anwendbar."
+einleitung: "Dieses Dokument legt fest, welche Daten [[Firmenname]] in KI-Systeme gibt, welche Qualität sie haben müssen und wie sie geschützt werden."
+einleitung_firma: "Dieses Dokument legt fest, welche Daten {firma} in KI-Systeme gibt, welche Qualität sie haben müssen und wie sie geschützt werden."
+abschnitte:
+  geltung: Geltung und Zuständigkeit
+  qualitaet: Eingabedaten und Datenqualität
+  vertraulichkeit: Vertraulichkeit und Personendaten
+  verboten: Was nicht in KI-Systeme gehört
+  entwicklung: Daten für die Entwicklung
+  herkunft: Herkunft und Rechte der Daten
+unterabschnitte:
+  management: Datenmanagement
+  beschaffung: Beschaffung, Rechte und Herkunft
+  aufbereitung: Aufbereitung
+  datenblatt: Datenblatt je Datensatz
+geltung_text: "Die Regeln gelten für alle Daten, die wir in KI-Systeme eingeben, hochladen oder anbinden, zum Beispiel Texte, Dokumente, Bilder, Tabellen und angebundene Ablagen. Die Eignerin oder der Eigner des KI-Systems (D-12) setzt sie um. Zuständig für die Regeln als Ganzes ist {verantwortlich}."
+qualitaet_text: "Gute Ergebnisse setzen gute Eingaben voraus. Je System halten wir fest, welche Daten hineingehen und was sie erfüllen müssen."
+systeme_fehlen: "Im KI-Inventar ist noch kein KI-System erfasst. Ergänzen Sie zuerst D-10."
+systeme_kopf: [KI-System, Eingabedaten, Personendaten, Anforderung an die Qualität]
+qualitaet_standard: "allgemeine Kriterien für Eingabedaten"
+qualitaet_untersagt: "keine Eingaben erlaubt (System untersagt)"
+qualitaet_system: "{anforderung}; dazu die allgemeinen Kriterien für Eingabedaten"
+# Datenverantwortung ohne Person in der Zuständigkeitsmatrix (Bereich «daten», D-04)
+rolle_daten: "die für Daten verantwortliche Person nach D-04"
+platzhalter_datenschutz: Datenschutzverantwortliche
+personendaten:
+  ja: ja
+  nein: nein
+  besondere: "ja, besondere"
+kriterien_text: "Für alle Eingabedaten gelten diese allgemeinen Kriterien:"
+kriterien_kopf: [Kriterium, Anforderung, Prüfung]
+kriterien_tabelle:
+  - [Richtig, "Inhalt stimmt mit der Quelle überein", "Stichprobe bei der Prüfung vor dem Einsatz (D-12)"]
+  - [Aktuell, "gültige Fassung, veraltete Unterlagen entfernt", "Pflege durch die verantwortliche Person, [[halbjährlich]]"]
+  - [Vollständig, "alle Angaben, die für die Aufgabe nötig sind", "Testfälle mit fehlenden Angaben"]
+  - [Passend, "deckt unsere typischen Fälle, Sprachen und Produkte ab", "Testfälle aus dem eigenen Alltag"]
+  - [Zulässig, "Verwendung ist erlaubt (Abschnitte 3 und 4)", "Freigabe des Systems (D-12)"]
+wissensbasis_text: "Binden wir eigene Ablagen oder Dokumente als Wissensquelle an, legen wir fest, welche Ordner angebunden sind, wer sie pflegt und wie Zugriffsrechte übernommen werden. Nur freigegebene, aktuelle Fassungen gehören hinein. Zugriffsrechte werden bei der Suche geprüft, nicht erst bei der Anzeige. Schreibrechte auf die Wissensbasis haben nur die Pflegenden; Änderungen sind nachvollziehbar. Ein Suchindex (z. B. Vektoren) und seine Sicherungen sind so vertraulich wie die Quelldaten und werden mit ihnen gelöscht."
+vertraulichkeit_text: "Welche Daten in welches System dürfen, hängt von der Datenklasse ab. Freigegebene Werkzeuge und ihre zulässige Datenklasse stehen im KI-Inventar (D-10) und in der Nutzungsrichtlinie (D-15)."
+hinweis_klassen: "Mit ISMS: Verwenden Sie die Klassen Ihrer bestehenden Klassifizierungsrichtlinie und ergänzen Sie nur die Spalte zu KI-Systemen."
+klassen_kopf: [Datenklasse, In KI-Systemen erlaubt]
+klassen_tabelle:
+  - [Öffentlich, "in allen freigegebenen Werkzeugen"]
+  - [Intern, "in freigegebenen Werkzeugen mit Firmenkonto"]
+  - [Vertraulich, "nur in Werkzeugen, die für vertrauliche Daten freigegeben sind; Vertrag schliesst Training mit unseren Daten aus (D-16)"]
+  - [Personendaten, "nur mit festgelegtem Zweck und Vertrag zur Auftragsbearbeitung; so wenig wie möglich, wenn möglich anonymisiert"]
+  - [Besondere Personendaten, "z. B. Gesundheit, Religion, Strafverfahren: nur mit vorheriger Freigabe durch [[Datenschutzverantwortliche]] und Folgenabschätzung (D-09)"]
+ableitungen_text: "**Ableitungen folgen der Quelle:** Zusammenfassungen, Abschriften von Sitzungen, Suchindex und Embeddings, Zwischenspeicher, Gedächtnis von Assistenten, Protokolle von Agenten, Sicherungen und daraus erzeugte Trainings- oder Testdaten erhalten Datenklasse, Zugriffsrechte, Aufbewahrung und Löschung der Quelldaten. Ein Löschbegehren umfasst alle Ableitungen. Protokolle oder Fehlermitschnitte mit Gesprächsinhalten schalten wir nur befristet und mit Freigabe ein."
+datenschutz_text: "Bei Personendaten gelten das Datenschutzgesetz (DSG) und, wo anwendbar, die DSGVO. Ist eine Datenschutz-Folgenabschätzung nötig, verknüpfen wir sie mit der Folgenabschätzung für das KI-System (D-09)."
+verboten_text: "Unabhängig vom Werkzeug gehören nicht in KI-Systeme:"
+verboten_liste:
+  - "Passwörter, Zugangsdaten, Schlüssel und Zertifikate, auch nicht in Anweisungen und Einstellungen von Assistenten"
+  - "Daten von Kunden oder Partnern, wenn eine Geheimhaltungsvereinbarung die Weitergabe ausschliesst"
+  - "Daten, die Exportkontrollen unterliegen, und weitere Daten, die wir als streng vertraulich einstufen"
+  - "besondere Personendaten ohne die Freigabe nach Abschnitt 3"
+  - "Inhalte Dritter, die wir nicht weitergeben oder verarbeiten dürfen"
+verboten_versehen: "Wer versehentlich solche Daten eingibt, meldet dies sofort über den Meldeweg nach D-04 an die Meldestelle: [[Meldestelle]]. Wir prüfen dann mit dem Lieferanten die Löschung."
+entwicklung_geltung: "Dieser Abschnitt gilt für Daten, mit denen wir Modelle trainieren, nachtrainieren, anpassen, testen oder validieren, auch bei eingekauften Systemen."
+ausbau_entwicklung: "**Entwicklung:** für Daten, mit denen wir Modelle trainieren, nachtrainieren, testen oder validieren."
+entwicklung_entfaellt: "Wir trainieren keine eigenen Modelle und führen keine Trainingsdaten. Die Controls zu Daten für die Entwicklung ({controls}) sind in der Erklärung zur Anwendbarkeit (D-11) begründet ausgeschlossen. Testfälle für die Prüfung eingekaufter Systeme vor dem Einsatz (D-12, Abschnitt 4) sind Eingabedaten; für sie gelten die Abschnitte 2 bis 4. Ändert sich das, ergänzen wir diesen Abschnitt vor Beginn des Vorhabens."
+herkunft_eingabedaten: "Bevor wir Daten Dritter als Eingabedaten verwenden (z. B. Kundenzeichnungen, eingekaufte Daten), klären wir Herkunft und Rechte und halten fest, was mit ihnen geschieht."
+entwicklung_teilweise: "Nicht anwendbar und deshalb hier nicht geregelt: {controls}; die Begründung steht in der Erklärung zur Anwendbarkeit (D-11)."
+management_text: "Zuständig für Daten in der Entwicklung ist {verantwortlich}; im Vorhaben ist es die Projektleitung. Es gilt:"
+management_regeln:
+  - "Datensätze liegen an einem festgelegten Ort mit Zugriff nur für das Vorhaben"
+  - "Trainings-, Test- und Validierungsdaten sind getrennt und versioniert"
+  - "für jeden Datensatz gibt es ein Datenblatt (siehe unten)"
+  - "Datensätze werden gelöscht, wenn der Zweck entfällt; die Löschung wird festgehalten"
+beschaffung_text: "Bevor ein Datensatz verwendet wird, klären wir Herkunft und Rechte und halten fest, was mit ihm geschieht."
+beschaffung_regeln:
+  - "Quelle und Art der Beschaffung: eigene Daten, gekauft, öffentlich, von Kunden oder erzeugt"
+  - "Rechte: Lizenz, Vertrag, Einwilligung oder andere Rechtsgrundlage"
+  - "Herkunftsnachweis: Version, Änderungen, Weitergaben und verwendende Modellversionen sind nachvollziehbar"
+aufbereitung_text: "Jeder Aufbereitungsschritt wird mit Begründung im Datenblatt festgehalten, zum Beispiel:"
+aufbereitung_schritte:
+  - "Bereinigung: Dubletten, Fehler und Ausreisser entfernen"
+  - "Anonymisierung oder Pseudonymisierung von Personendaten"
+  - "Beschriftung nach schriftlicher Anleitung, mit Stichprobenkontrolle"
+  - "Ausgleich unterrepräsentierter Gruppen und Aufteilung in Trainings-, Test- und Validierungsdaten"
+hinweis_datenblatt: "Kopieren Sie die Tabelle für jeden Datensatz oder führen Sie die Angaben als Liste im KI-Inventar (D-10)."
+datenblatt_kopf: [Angabe, Eintrag]
+datenblatt_firma: "Für jeden Datensatz eines eigenen oder nachtrainierten Systems führen wir ein Datenblatt mit den Angaben dieses Abschnitts. Ablage: {ablage}. Die Daten je System:"
+datenblatt_systeme_kopf: [KI-System, "Trainings-, Test- und Wissensdaten", Anforderung an die Qualität]
+datenblatt_entfaellt: "Wir führen keine eigenen Trainingsdaten. Testfälle für die Abnahme eingekaufter Systeme (D-12, Abschnitt 4) sind Eingabedaten nach den Abschnitten 2 bis 4. Datenblätter legen wir an, sobald wir eigene Systeme entwickeln oder nachtrainieren."
+datenblatt_tabelle:
+  - ["Bezeichnung und Version", "[[Text ergänzen]]"]
+  - ["Zweck: Training, Test, Validierung, Wissensquelle", "[[Text ergänzen]]"]
+  - ["Quelle und Beschaffung (A.7.3)", "[[Text ergänzen]]"]
+  - ["Rechte und Rechtsgrundlage", "[[Text ergänzen]]"]
+  - ["Personendaten und Schutzmassnahmen", "[[Text ergänzen]]"]
+  - ["Umfang, Zeitraum, Abdeckung", "[[Text ergänzen]]"]
+  - ["Bekannte Lücken und Verzerrungen", "[[Text ergänzen]]"]
+  - ["Aufbereitung (A.7.6)", "[[Text ergänzen]]"]
+  - ["Qualitätsprüfung und Ergebnis (A.7.4)", "[[Text ergänzen]]"]
+  - ["Herkunft und Änderungen (A.7.5)", "[[Text ergänzen]]"]
+  - ["Verantwortlich, Ablage, Löschung", "[[Text ergänzen]]"]

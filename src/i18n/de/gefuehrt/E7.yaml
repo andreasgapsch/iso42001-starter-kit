@@ -1,0 +1,333 @@
+# Seitentexte Etappe E7 Folgenabschätzungen. Format: src/gefuehrt/FORMAT.md
+E7-einfuehrung:
+  titel: Folgenabschätzungen
+  frage: Wie kann ein KI-System auf Menschen und Gesellschaft wirken?
+  warum: Die Risikobeurteilung schaut auf das Unternehmen, die [[g:folgenabschaetzung]] auf die Menschen, die ein System betrifft. Eine [[g:triage]] mit sechs Fragen zeigt je System, ob eine vollständige Abschätzung nötig ist. Wir folgen dabei ISO/IEC 42005.
+  fehler: Fehlende oder unvollständige Folgenabschätzungen gehören zu den häufigsten Befunden. Auditoren wollen für jedes System im Inventar mindestens eine begründete Kurzprüfung sehen und für heikle Systeme eine freigegebene vollständige Abschätzung.
+E7-verfahren:
+  titel: Wer macht die Folgenabschätzung?
+  frage: Wer führt Folgenabschätzungen durch, wer gibt sie frei und wann werden sie wiederholt?
+  warum: Das Verfahren legt Zuständigkeiten, Auslöser und Rhythmus fest. So wird jedes neue System geprüft, bevor es Menschen betrifft.
+  fehler: Wenn die Eignerin oder der Eigner des Systems die eigene Abschätzung freigibt, fehlt der zweite Blick. Auditoren achten auf eine Freigabe durch eine andere Person.
+  felder:
+    meta.gefuehrt.antworten.folgen.durchfuehrung:
+      label: Durchführung
+      hilfe: Meist die [[g:aims|AIMS]]-Verantwortung mit der Eignerin oder dem Eigner des Systems.
+    meta.gefuehrt.antworten.folgen.freigabe:
+      label: Freigabe
+      hilfe: Eine Person, die nicht selbst Eigner/in ist, z. B. ein Mitglied der Geschäftsleitung.
+    meta.gefuehrt.antworten.folgen.rhythmus:
+      label: Wiederholung
+      hilfe: Bei vollständigen Abschätzungen mindestens jährlich.
+    meta.gefuehrt.antworten.folgen.ausloeser:
+      label: Auslöser
+      hilfe: Ereignisse, nach denen die Abschätzung erneut gemacht wird.
+    organisation.oeffentlicheDienste:
+      label: "Öffentliche Dienste"
+      hilfe: "Ja, wenn Ihre Organisation dem öffentlichen Recht untersteht oder als private Organisation öffentliche Dienste erbringt, z. B. Bildung, Gesundheit, Sozialleistungen. Dann kann eine Grundrechte-Folgenabschätzung nötig sein (E-06)."
+E7-triage:
+  titel: Kurzprüfung
+  frage: Trifft eine dieser Aussagen auf das System zu?
+  warum: Die sechs Fragen erkennen eine [[g:sensible-nutzung]]. Schon ein Ja ist ein Hinweis, dass Sie genauer hinschauen sollten. Was das KI-Inventar schon kennt, erscheint als Vorschlag; gesetzt wird es erst mit «Vorschlag übernehmen».
+  fehler: Bei Bürowerkzeugen wird oft «nein» angekreuzt, obwohl sie für Personalentscheide genutzt werden. Denken Sie an die tatsächliche Nutzung, auch an die [[g:fehlanwendung]].
+  felder:
+    triage.rechtspositionOderChancen:
+      label: Es beeinflusst Rechte oder Chancen von Menschen
+      hilfe: z. B. Anstellung, Beförderung, Kredit, Zugang zu Leistungen.
+    triage.gesundheitOderSicherheit:
+      label: Es kann Gesundheit oder Sicherheit berühren
+      hilfe: z. B. Maschinensteuerung, Sicherheitshinweise, Medizin.
+    triage.verletzlicheGruppen:
+      label: Es betrifft besonders verletzliche Menschen
+      hilfe: z. B. Kinder, Lernende, Menschen mit Behinderung, Bewerbende in Abhängigkeit.
+    triage.besondereDaten:
+      label: Es verarbeitet besonders schützenswerte Daten
+      hilfe: z. B. Gesundheit, Herkunft, biometrische Daten.
+    triage.automatisierteEntscheidung:
+      label: Es entscheidet ohne menschliche Prüfung
+      hilfe: Oder Menschen übernehmen die Ergebnisse in der Praxis fast immer ungeprüft.
+    triage.grosseReichweite:
+      label: Es wirkt auf viele Menschen ausserhalb des Unternehmens
+      hilfe: z. B. öffentlicher Chatbot, Inhalte für viele Kunden.
+E7-triage-ergebnis:
+  titel: Ergebnis der Kurzprüfung
+  frage: Genügt die Kurzprüfung oder braucht es eine vollständige Folgenabschätzung?
+  warum: Bei mindestens einem Ja empfehlen wir die vollständige Abschätzung. Sie können begründet davon abweichen, etwa wenn das System nur intern als Formulierungshilfe dient.
+  fehler: Eine Kurzprüfung ohne Begründung genügt nicht. Auditoren lesen die Begründung und prüfen, ob sie zur Nutzung im Inventar passt.
+  felder:
+    triage.ergebnis:
+      label: Ergebnis
+      hilfe: Der Vorschlag ergibt sich aus Ihren Antworten.
+    triage.begruendung:
+      label: Begründung
+      hilfe: z. B. «Bewerbungsvorselektion beeinflusst die Chancen von Bewerbenden; vollständige Abschätzung nötig.»
+    triage.durch:
+      label: "Kurzprüfung durch"
+      hilfe: "Person, die die Kurzprüfung durchgeführt hat."
+    triage.am:
+      label: "Kurzprüfung am"
+      hilfe: "Datum der Kurzprüfung."
+E7-beschreibung:
+  titel: Beschreibung und Verwendung
+  frage: Was tut das System, wofür wird es verwendet und wie könnte es falsch genutzt werden?
+  warum: Eine klare Beschreibung ist die Grundlage der Abschätzung. Die Frage nach der [[g:fehlanwendung]] zwingt dazu, über den vorgesehenen Zweck hinauszudenken.
+  fehler: «Keine Fehlanwendung denkbar» ist fast nie richtig. Auditoren erwarten mindestens eine realistische Fehlanwendung mit passender Massnahme.
+  felder:
+    systembeschreibung:
+      label: Systembeschreibung
+      hilfe: Was das System tut, wer es nutzt, wie Ergebnisse weiterverwendet werden.
+    verwendungen:
+      label: Vorgesehene Verwendungen
+      hilfe: Wofür das System gedacht und geprüft ist.
+    fehlanwendungen:
+      label: Vorhersehbare Fehlanwendungen
+      hilfe: z. B. «Rangliste der Bewerbenden wird ohne Durchsicht übernommen».
+E7-umfeld-betreiber:
+  titel: Einsatzumfeld und Daten
+  frage: Wo und mit welchen Daten setzen Sie das System ein?
+  warum: Länder, Sprachen und Abteilungen beeinflussen, wie gut ein System funktioniert. Bei eingekaufter KI kennen Sie die Trainingsdaten oft nicht; halten Sie fest, was Sie beim Lieferanten angefragt haben und was Sie selbst eingeben.
+  fehler: «Daten beim Lieferanten» ohne Nachfrage genügt nicht. Auditoren wollen sehen, dass Sie gefragt haben und die Antwort bewertet ist.
+  felder:
+    einsatzumfeld:
+      label: Einsatzumfeld
+      hilfe: Standorte, Länder, Sprachen, Abteilungen, Nutzungsdauer.
+    daten:
+      label: Daten
+      hilfe: Eingabedaten von Ihnen, Angaben des Lieferanten zu Trainingsdaten, Datum der Anfrage.
+E7-umfeld-anbieter:
+  titel: Einsatz bei Ihren Kunden
+  frage: Wo und mit welchen Daten setzen Ihre Kunden das System ein?
+  warum: Als [[g:anbieter]] müssen Sie auch an die Menschen bei Ihren Kunden denken. Halten Sie fest, in welchen Ländern, Branchen und Sprachen das System eingesetzt wird und mit welchen Daten es trainiert wurde.
+  fehler: Anbieter beschreiben oft nur die eigene Testumgebung. Auditoren fragen, welche Grenzen der Nutzung Sie Kunden mitteilen und woher die Trainingsdaten stammen.
+  felder:
+    einsatzumfeld:
+      label: Einsatzumfeld bei Kunden
+      hilfe: Länder, Branchen, Sprachen, typische Nutzende.
+    daten:
+      label: Daten
+      hilfe: Herkunft und Umfang der Trainings- und Testdaten, bekannte Lücken.
+E7-betroffene:
+  titel: Betroffene
+  frage: Wer ist vom System betroffen und wie?
+  warum: Die Norm verlangt, Folgen für Einzelne und Gruppen zu beurteilen. Wo möglich, fragen Sie Betroffene oder ihre Vertretung, etwa die Personalkommission.
+  fehler: Indirekt Betroffene werden oft vergessen, etwa Kunden, deren Daten verarbeitet werden. Auditoren fragen, ob jemand aus den betroffenen Gruppen angehört wurde.
+  felder:
+    betroffene:
+      label: Betroffene Gruppen
+      hilfe: Eine Zeile je Gruppe.
+    betroffene.gruppe:
+      label: Gruppe
+      hilfe: z. B. «Bewerbende», «Mitarbeitende Personalabteilung».
+    betroffene.art:
+      label: Art der Betroffenheit
+      hilfe: Direkt heisst, das Ergebnis betrifft die Person selbst.
+    betroffene.wirkung:
+      label: Wirkung
+      hilfe: Was das System für diese Gruppe bedeutet, positiv und negativ.
+    betroffene.konsultiert:
+      label: Angehört
+      hilfe: Die Gruppe oder ihre Vertretung wurde gefragt.
+    gesellschaft:
+      label: "Wirkung auf die Gesellschaft"
+      hilfe: "Folgen über die direkt Betroffenen hinaus, z. B. für Arbeitsmarkt, Umwelt oder Vertrauen."
+E7-ziele-a:
+  titel: Nutzen und Schaden, Teil 1
+  frage: Welchen Nutzen und welchen möglichen Schaden hat das System bei Rechenschaft, Transparenz, Fairness und Datenschutz?
+  warum: Acht Ziele helfen, nichts zu übersehen. Je Ziel halten Sie in ein bis zwei Sätzen Nutzen und Schaden fest; wo nichts zutrifft, schreiben Sie das mit kurzer Begründung. Das Ausmass jedes Schadens vor Massnahmen stufen Sie von 1 bis 4 ein, wie A vor der Behandlung im Risikoregister; davon hängt ab, ob das System nur mit Auflagen genutzt werden darf.
+  fehler: Leere Felder sehen aus wie vergessene Fragen. Auditoren erwarten zu jedem Ziel eine Aussage, auch wenn sie «kein wesentlicher Einfluss» lautet.
+  felder:
+    nutzenSchaden.rechenschaft.nutzen:
+      label: Rechenschaft, Nutzen
+      hilfe: Ist klarer, wer wofür verantwortlich ist?
+    nutzenSchaden.rechenschaft.schaden:
+      label: Rechenschaft, Schaden
+      hilfe: Verschwimmt Verantwortung zwischen Mensch und System?
+    nutzenSchaden.rechenschaft.ausmass:
+      label: Rechenschaft, Ausmass des Schadens
+      hilfe: Stufe 1 (gering) bis 4 (schwer) nach der Auswirkungsskala Ihres Risikoverfahrens. Leer lassen, wenn kein Schaden zu erwarten ist.
+    nutzenSchaden.transparenz.nutzen:
+      label: Transparenz, Nutzen
+      hilfe: Werden Abläufe nachvollziehbarer?
+    nutzenSchaden.transparenz.schaden:
+      label: Transparenz, Schaden
+      hilfe: Wissen Betroffene nicht, dass KI beteiligt ist?
+    nutzenSchaden.transparenz.ausmass:
+      label: Transparenz, Ausmass des Schadens
+      hilfe: Stufe 1 (gering) bis 4 (schwer) nach der Auswirkungsskala Ihres Risikoverfahrens. Leer lassen, wenn kein Schaden zu erwarten ist.
+    nutzenSchaden.fairness.nutzen:
+      label: Fairness, Nutzen
+      hilfe: Werden Entscheide einheitlicher?
+    nutzenSchaden.fairness.schaden:
+      label: Fairness, Schaden
+      hilfe: Kann das System Gruppen benachteiligen, etwa nach Alter oder Geschlecht?
+    nutzenSchaden.fairness.ausmass:
+      label: Fairness, Ausmass des Schadens
+      hilfe: Stufe 1 (gering) bis 4 (schwer) nach der Auswirkungsskala Ihres Risikoverfahrens. Leer lassen, wenn kein Schaden zu erwarten ist.
+    nutzenSchaden.datenschutz.nutzen:
+      label: Datenschutz, Nutzen
+      hilfe: Werden weniger Daten von Hand bearbeitet?
+    nutzenSchaden.datenschutz.schaden:
+      label: Datenschutz, Schaden
+      hilfe: Werden Daten über den Zweck hinaus genutzt oder weitergegeben?
+    nutzenSchaden.datenschutz.ausmass:
+      label: Datenschutz, Ausmass des Schadens
+      hilfe: Stufe 1 (gering) bis 4 (schwer) nach der Auswirkungsskala Ihres Risikoverfahrens. Leer lassen, wenn kein Schaden zu erwarten ist.
+E7-ziele-b:
+  titel: Nutzen und Schaden, Teil 2
+  frage: Welchen Nutzen und welchen möglichen Schaden hat das System bei Zuverlässigkeit, Sicherheit, Erklärbarkeit und Umwelt?
+  warum: Diese vier Ziele betreffen vor allem die Technik und ihre Folgen. Gemeinsam mit Teil 1 ergibt sich ein vollständiges Bild der Wirkungen.
+  fehler: Umwelt wird oft ohne Begründung als «nicht relevant» abgetan. Eine kurze Einschätzung zu Energieverbrauch oder eingesparten Ressourcen genügt.
+  felder:
+    nutzenSchaden.zuverlaessigkeit.nutzen:
+      label: Zuverlässigkeit, Nutzen
+      hilfe: Werden Ergebnisse genauer oder gleichmässiger?
+    nutzenSchaden.zuverlaessigkeit.schaden:
+      label: Zuverlässigkeit, Schaden
+      hilfe: Was passiert bei falschen Ergebnissen oder [[g:datendrift]]?
+    nutzenSchaden.zuverlaessigkeit.ausmass:
+      label: Zuverlässigkeit, Ausmass des Schadens
+      hilfe: Stufe 1 (gering) bis 4 (schwer) nach der Auswirkungsskala Ihres Risikoverfahrens. Leer lassen, wenn kein Schaden zu erwarten ist.
+    nutzenSchaden.sicherheit.nutzen:
+      label: Sicherheit, Nutzen
+      hilfe: Werden Gefahren früher erkannt?
+    nutzenSchaden.sicherheit.schaden:
+      label: Sicherheit, Schaden
+      hilfe: Kann das System Menschen gefährden oder angegriffen werden?
+    nutzenSchaden.sicherheit.ausmass:
+      label: Sicherheit, Ausmass des Schadens
+      hilfe: Stufe 1 (gering) bis 4 (schwer) nach der Auswirkungsskala Ihres Risikoverfahrens. Leer lassen, wenn kein Schaden zu erwarten ist.
+    nutzenSchaden.erklaerbarkeit.nutzen:
+      label: Erklärbarkeit, Nutzen
+      hilfe: Liefert das System Begründungen mit?
+    nutzenSchaden.erklaerbarkeit.schaden:
+      label: Erklärbarkeit, Schaden
+      hilfe: Können Sie Betroffenen ein Ergebnis erklären?
+    nutzenSchaden.erklaerbarkeit.ausmass:
+      label: Erklärbarkeit, Ausmass des Schadens
+      hilfe: Stufe 1 (gering) bis 4 (schwer) nach der Auswirkungsskala Ihres Risikoverfahrens. Leer lassen, wenn kein Schaden zu erwarten ist.
+    nutzenSchaden.umwelt.nutzen:
+      label: Umwelt, Nutzen
+      hilfe: Spart das System Energie, Material oder Wege?
+    nutzenSchaden.umwelt.schaden:
+      label: Umwelt, Schaden
+      hilfe: Wie hoch ist der Energiebedarf von Training und Betrieb ungefähr?
+    nutzenSchaden.umwelt.ausmass:
+      label: Umwelt, Ausmass des Schadens
+      hilfe: Stufe 1 (gering) bis 4 (schwer) nach der Auswirkungsskala Ihres Risikoverfahrens. Leer lassen, wenn kein Schaden zu erwarten ist.
+E7-ausfaelle:
+  titel: Ausfälle und Massnahmen
+  frage: Was passiert, wenn das System ausfällt oder missbraucht wird, und was tun Sie dagegen?
+  warum: Hier fassen Sie die Folgen bei Fehlern und Missbrauch zusammen und leiten Massnahmen ab. Die Massnahmen übernehmen Sie ins Risikoregister und in die [[g:soa|Erklärung zur Anwendbarkeit]].
+  fehler: Massnahmen, die nur in der Folgenabschätzung stehen, werden nicht umgesetzt. Auditoren verfolgen eine Massnahme bis in die Massnahmenliste.
+  felder:
+    ausfaelle:
+      label: Ausfälle und Missbrauch
+      hilfe: z. B. «Bei Ausfall manuelle Vorselektion; Missbrauch durch Filter nach Alter möglich».
+    massnahmen:
+      label: Massnahmen
+      hilfe: z. B. «Menschliche Durchsicht aller abgelehnten Bewerbungen, Filter nach Alter gesperrt, jährliche Prüfung auf Benachteiligung».
+E7-dsfa:
+  titel: Datenschutz und Grundrechte
+  frage: Gibt es eine Datenschutz-Folgenabschätzung oder eine Grundrechte-Folgenabschätzung zu diesem System?
+  warum: Eine [[g:dsfa]] nach Datenschutzrecht überschneidet sich stark mit der KI-Folgenabschätzung. Verknüpfen Sie beide, statt doppelt zu arbeiten. Mit dem Modul AI Act prüfen Sie zudem, ob eine [[g:fria]] nötig ist; für typische Industrie-KMU ist das selten.
+  fehler: DSFA und KI-Folgenabschätzung widersprechen sich oft in der Einschätzung der Risiken. Auditoren gleichen beide ab.
+  felder:
+    verknuepfteDsfa:
+      label: Verknüpfte DSFA oder FRIA
+      hilfe: Dokument-ID oder Ablageort, z. B. «DSFA-2026-03 HR-Software».
+E7-fria:
+  titel: "Grundrechte-Folgenabschätzung"
+  frage: "Brauchen Sie für dieses Hochrisiko-System eine Grundrechte-Folgenabschätzung nach EU AI Act?"
+  warum: "[[g:betreiber]] von Hochrisiko-Systemen nach Anhang III müssen die Folgen für Grundrechte vor der ersten Verwendung abschätzen, wenn sie öffentlich-rechtliche Stellen sind oder als private Unternehmen öffentliche Dienste erbringen (ausser bei Systemen für kritische Infrastruktur nach Anhang III Nr. 2) oder wenn das System die Kreditwürdigkeit natürlicher Personen prüft oder in der Lebens- und Krankenversicherung Risiken bewertet und Preise bildet (Anhang III Nr. 5 Bst. b und c). Fundstelle: Art. 27(1) EU AI Act. Die Vorlage E-06 führt durch die Prüfung."
+  fehler: "Private Unternehmen halten oft gar nicht fest, warum keine Abschätzung nötig ist. Auditoren und Behörden wollen die Begründung sehen, auch wenn das Ergebnis «nicht nötig» lautet."
+  felder:
+    fria.erforderlich:
+      label: "Erforderlich"
+      hilfe: "Ergebnis der Anwendbarkeitsprüfung in E-06."
+    fria.begruendung:
+      label: "Begründung"
+      hilfe: "Warum die Abschätzung nötig ist oder nicht, z. B. «private Arbeitgeberin, keine öffentlichen Dienste»."
+    fria.ref:
+      label: "Kennung oder Ablage"
+      hilfe: "Wo die Grundrechte-Folgenabschätzung liegt."
+    fria.zeitraumHaeufigkeit:
+      label: "Zeitraum und Häufigkeit der Verwendung"
+      hilfe: "z. B. «ab März 2028, an jedem Arbeitstag für alle eingehenden Bewerbungen»."
+    fria.aufsicht:
+      label: "Menschliche Aufsicht im Einsatz"
+      hilfe: "Wer die Ergebnisse prüft, eingreifen und das System stoppen kann, gemäss der Betriebsanleitung des [[g:anbieter|Anbieters]]."
+    fria.durch:
+      label: "Geprüft durch"
+      hilfe: "Person, die die Anwendbarkeit geprüft hat."
+    fria.am:
+      label: "Geprüft am"
+      hilfe: "Datum der Prüfung."
+    fria.behoerde:
+      label: "Mitgeteilt an Behörde"
+      hilfe: "Zuständige Marktüberwachungsbehörde."
+    fria.mitgeteiltAm:
+      label: "Mitgeteilt am"
+      hilfe: "Datum der Mitteilung der Ergebnisse."
+E7-ergebnis:
+  titel: Ergebnis
+  frage: Was ist das Ergebnis der Abschätzung und wann wird sie wiederholt?
+  warum: Das Ergebnis hält fest, ob das System so genutzt werden darf, ob es eine sensible oder [[g:eingeschraenkte-nutzung]] ist und welche Auflagen gelten. Das Datum der Wiederholung sorgt dafür, dass die Abschätzung aktuell bleibt.
+  fehler: Eine sensible Nutzung ohne vollständige Abschätzung meldet die Prüfung als Fehler. Auditoren prüfen, ob das Ergebnis ins Risikoregister übernommen wurde.
+  felder:
+    sensibleNutzung:
+      label: Sensible Nutzung
+      hilfe: Das System kann Rechte, Chancen, Gesundheit oder Sicherheit von Menschen spürbar berühren. Weicht das KI-Inventar ab, zeigt die Seite das an; erst «Ins Inventar übernehmen» ändert das Inventar.
+    eingeschraenkteNutzung:
+      label: Eingeschränkte Nutzung
+      hilfe: Das System darf nur unter Auflagen genutzt werden.
+    ergebnis:
+      label: Ergebnis
+      hilfe: z. B. «Einsatz zulässig mit menschlicher Durchsicht; Auflagen in R-014 und M-007».
+    naechsteUeberpruefung:
+      label: Nächste Überprüfung
+      hilfe: Spätestens nach einem Jahr oder bei wesentlicher Änderung.
+    mitgewirkt:
+      label: "Mitgewirkt"
+      hilfe: "Personen oder Funktionen, die an der Abschätzung beteiligt waren, z. B. Fachbereich, Datenschutz, Vertretung der Betroffenen. Eine fachübergreifende Besetzung erkennt man im Audit sofort."
+E7-freigabe:
+  titel: Freigabe
+  frage: Wer hat die Folgenabschätzung freigegeben?
+  warum: Mit der Freigabe bestätigt eine zuständige Person, dass die Abschätzung vollständig ist und die Massnahmen getragen werden. Erst dann gilt sie als Nachweis.
+  fehler: Nicht freigegebene Folgenabschätzungen meldet die Prüfung als Fehler. Auditoren achten darauf, dass die Freigabe vor dem Einsatz liegt oder bei Altsystemen zeitnah nachgeholt wurde.
+  felder:
+    freigabe:
+      label: Freigabe
+      hilfe: Person und Datum, gemäss Verfahren in D-08.
+    neubeurteilungen:
+      label: "Neubeurteilungen"
+      hilfe: "Je Neubeurteilung nach der ersten Freigabe, z. B. nach einem Nachtraining oder Update: Datum, Person, Anlass, Ergebnis und Freigabe. Die erste Kurzprüfung bleibt unverändert; D-09 erhält eine neue Version."
+    neubeurteilungen.am:
+      label: "Datum"
+      hilfe: "Datum der Neubeurteilung."
+    neubeurteilungen.durch:
+      label: "Durchgeführt von"
+      hilfe: "Person, die neu beurteilt hat."
+    neubeurteilungen.anlass:
+      label: "Anlass"
+      hilfe: "z. B. Nachtraining vom 20.11.2026, ERP-Update."
+    neubeurteilungen.ergebnis:
+      label: "Ergebnis"
+      hilfe: "z. B. keine wesentliche Änderung, Kurzprüfung genügt weiterhin."
+    neubeurteilungen.freigabe:
+      label: "Freigabe"
+      hilfe: "Person und Datum der Freigabe, nie die Person, die neu beurteilt hat."
+E7-einsatzentscheid:
+  titel: "Einsatzentscheid"
+  frage: "Welchen Nutzen erwarten Sie vom System, welche Lösung ohne KI haben Sie geprüft, und wann kontrollieren Sie den Nutzen?"
+  warum: "Ein KI-System soll eingesetzt werden, weil es einen Nutzen bringt, den eine einfachere Lösung nicht bringt. Der Einsatzentscheid hält das fest und setzt ein Datum, an dem Sie prüfen, ob sich der Nutzen eingestellt hat. Die Angaben stehen in der Folgenabschätzung D-09 und in der Nutzungsrichtlinie D-15."
+  fehler: "«Effizienz» allein ist kein Nutzen; nennen Sie, was sich messbar ändert. Die Prüfung meldet freigegebene Systeme ohne geprüfte Lösung ohne KI (H31). Ohne Wiedervorlage läuft ein System weiter, auch wenn es nichts bringt."
+  felder:
+    einsatzentscheid.nutzen:
+      label: "Erwarteter Nutzen"
+      hilfe: "Was sich ändert und woran Sie es messen, z. B. «Antwortzeit im Kundendienst von 2 Tagen auf 4 Stunden»."
+    einsatzentscheid.alternativeOhneKi:
+      label: "Geprüfte Lösung ohne KI"
+      hilfe: "Welche Lösung ohne KI Sie geprüft haben und warum sie nicht genügt."
+    einsatzentscheid.wiedervorlage:
+      label: "Wiedervorlage"
+      hilfe: "Datum, an dem Sie den Nutzen nachkontrollieren, meist nach 6 bis 12 Monaten."

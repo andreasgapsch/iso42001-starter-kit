@@ -1,0 +1,69 @@
+# D-02 Geltungsbereich und AIMS-Überblick
+einleitung: "Dieses Dokument legt fest, was das KI-Managementsystem von [[Firmenname]] umfasst, und stützt sich auf D-01."
+einleitung_firma: "Dieses Dokument legt fest, was das KI-Managementsystem von {firma} umfasst, und gibt einen Überblick über seine Prozesse. Es stützt sich auf Kontext, Rollen und interessierte Parteien in D-01."
+abschnitte:
+  aussage: Geltungsbereich
+  grenzen: Grenzen
+  systeme: KI-Systeme im Geltungsbereich
+  schnittstellen: Schnittstellen und ausgelagerte Tätigkeiten
+  ausschluesse: Ausschlüsse
+  ueberblick: AIMS-Überblick
+  aenderungen: Änderungen am Geltungsbereich
+  freigabe: Freigabe
+hinweis_aussage: |
+  Fassen Sie den Geltungsbereich in zwei bis vier Sätzen zusammen. Diese Aussage erscheint später auf dem Zertifikat. Prüfen Sie, ob sie
+  • das Unternehmen, die Standorte und Ihre Rolle nennt,
+  • sagt, welche Tätigkeiten mit KI dazugehören,
+  • ohne Produktnamen auskommt und nicht veraltet, wenn ein Werkzeug wechselt,
+  • zu den Themen und Parteien in D-01 passt und nichts weglässt, was Kunden erwarten.
+aussage_beispiel: "[[Das KI-Managementsystem gilt für Einkauf, Einführung und Nutzung von KI-Systemen durch alle Bereiche der Firmenname am Standort Ort. Es umfasst KI in eingekaufter Software, KI-Dienste aus der Cloud und die Nutzung durch Mitarbeitende.]]"
+aussage_fehlt: "Im Projekt ist noch keine Geltungsbereichsaussage erfasst. Ergänzen Sie sie vor der Freigabe."
+hinweis_grenzen: "Nennen Sie, was nicht dazugehört, damit die Grenze für Auditoren eindeutig ist."
+grenzen_felder:
+  organisation: Organisatorisch
+  technik: Technisch
+  standorte: Standorte
+grenzen_beispiel:
+  organisation: "[[Gesellschaften und Bereiche, z. B. alle Abteilungen der Firmenname, ohne Tochtergesellschaft X]]"
+  technik: "[[IT-Umgebungen und Plattformen, z. B. Microsoft 365, ERP, KI-Dienste aus der Cloud; ohne Steuerungen in der Produktion]]"
+  standorte: "[[Standorte, z. B. Hauptsitz Ort und Aussendienst]]"
+ausbau_grenzen: "Wer KI selbst entwickelt, nennt zusätzlich Entwicklungs- und Testumgebungen, Datenplattformen für das Training und Ablagen für Modelle."
+hinweis_systeme: "Übernehmen Sie die KI-Systeme aus dem KI-Inventar (D-10), auch KI in eingekaufter Software, erkannte Schatten-KI und ausgesetzte Systeme mit Status."
+systeme_fehlen: "Im Projekt sind noch keine KI-Systeme erfasst. Ergänzen Sie das KI-Inventar (D-10)."
+systeme_keine_aktiven: "Alle erfassten KI-Systeme sind abgelöst. Im Geltungsbereich ist zurzeit kein KI-System in Nutzung, in Prüfung oder untersagt."
+systeme_ohne_nutzung: "Untersagte und ausgesetzte Systeme gehören zum Geltungsbereich: Das KI-Managementsystem überwacht, dass sie nicht genutzt werden, und steuert eine allfällige Wiederinbetriebnahme. Abgelöste Systeme stehen nur im KI-Inventar (D-10)."
+lieferant_stand: "Lieferantenprüfung: {status}"
+lieferant_stand_datum: "Lieferantenprüfung: {status}, {datum}"
+systeme_kopf: [ID, KI-System, Typ, Zweck, Eigner/in, Status]
+hinweis_schnittstellen: "Nennen Sie, wo das Managementsystem mit anderen Bereichen oder Dritten zusammenarbeitet. Ausgelagertes bleibt im Geltungsbereich und wird über Verträge gesteuert (D-16)."
+schnittstellen_kopf: [Schnittstelle, Was wird ausgetauscht oder erbracht, Wer steuert, Verweis]
+schnittstellen_vorschlag:
+  - [Informationssicherheit (ISMS), "Schutz der Daten in KI-Systemen, Vorfälle, Zugriffe", "[[Name, Funktion]]", "[[Dokument]]"]
+  - [Datenschutz, "Personendaten in KI-Systemen, Datenschutz-Folgenabschätzungen", "[[Name, Funktion]]", "[[Dokument]]"]
+  - [IT-Dienstleister, "Betrieb und Konfiguration der KI-Dienste", "[[Name, Funktion]]", D-16]
+  - [Anbieter von KI-Diensten, "Bereitstellung der Modelle und Plattformen", "[[Name, Funktion]]", D-16]
+  - [Muttergesellschaft oder Gruppe, "Vorgaben und gemeinsame Werkzeuge", "[[Name, Funktion]]", "[[Dokument]]"]
+schnittstellen_firma: "Beschreibung der Schnittstellen:"
+lieferanten_titel: "Ausgelagerte Tätigkeiten und Lieferanten (Steuerung über D-16):"
+hinweis_ausschluesse: "Ausschlüsse begründen Sie; die Abschnitte 4 bis 10 der Norm lassen sich nicht ausschliessen. Controls entscheiden Sie in D-11."
+ausschluesse_kopf: [Was ist ausgeschlossen, Begründung]
+ausschluesse_vorschlag:
+  - ["[[Bereich, Standort oder KI-System]]", "[[Begründung]]"]
+keine_ausschluesse: "Es sind keine Ausschlüsse festgelegt."
+keine_ausschluesse_bestaetigt: "Es gibt keine Ausschlüsse. Die Geschäftsleitung hat bestätigt, dass das KI-Managementsystem alle Bereiche, Standorte und KI-Systeme umfasst."
+aenderung_freigabe: "Freigabe der Version {version}"
+hinweis_ueberblick: "Die Prozesslandkarte zeigt, welche Prozesse das Managementsystem bilden und wer sie verantwortet; Ablauf und Stand beschreibt D-27."
+ueberblick_text: "Die Prozesse greifen so ineinander: Kontext und Inventar bestimmen, welche Risiken und Folgen wir beurteilen. Daraus wählen wir Controls und Massnahmen, setzen sie im Betrieb um und messen die Wirkung. Internes Audit und Managementbewertung prüfen das Ganze; Abweichungen und Ideen fliessen als Verbesserungen zurück."
+ueberblick_d27: "Ablauf, Rollen, Nachweise, Kennzahl und Stand jedes Prozesses beschreibt das Prozesshandbuch D-27 mit seinen Prozessdiagrammen."
+ueberblick_kopf: [Prozess, Zweck, Eigner/in, Dokument]
+prozesse_anlage: Prozesse des Managementsystems
+prozesse_verweis: "Die {anzahl} Prozesse mit Zweck, Eigner/in und Dokument stehen in Anlage {nr} am Ende des Dokuments."
+prozesse_verweis_eins: "Der Prozess mit Zweck, Eigner/in und Dokument steht in Anlage {nr} am Ende des Dokuments."
+isms_basis: "Diese Grundprozesse der Informationssicherheit führt das ISMS; das KI-Managementsystem baut auf ihnen auf: {liste}."
+nicht_anwendbar: "Nicht angewendet, mit Begründung: {liste}."
+nicht_anwendbar_bedingung: "Bedingung trifft nicht zu"
+hinweis_aenderungen: "Ändern Sie den Geltungsbereich nur geplant und informieren Sie die Zertifizierungsstelle über wesentliche Änderungen."
+aenderungen_text: "Änderungen werden nach D-26 geplant, von der Geschäftsleitung freigegeben und hier festgehalten."
+aenderungen_kopf: [Version, Datum, Änderung, Freigabe durch]
+freigabe_text: "Die Geschäftsleitung hat den Geltungsbereich am {datum} freigegeben."
+freigabe_text_version: "Die Geschäftsleitung hat den Geltungsbereich am {erste} erstmals und am {datum} in Version {version} freigegeben."

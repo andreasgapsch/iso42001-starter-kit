@@ -1,0 +1,101 @@
+# Optionsgruppen des Guides. Format: src/gefuehrt/FORMAT.md
+# Beschriftungen: src/i18n/<sprache>/gefuehrt.yaml unter optionen.<gruppe>.<wert>
+# Gruppen mit Bezug zu einem Typ in src/model/typen.ts stimmen mit dessen Werten überein.
+optionen:
+  jaNeinOffen: [ja, nein, offen]                      # JaNeinOffen
+  datenklasse: [oeffentlich, intern, vertraulich, streng-vertraulich]   # DATENKLASSEN
+  isms: [zertifiziert, vorhanden, nein]
+  branche: [maschinenbau, metall, elektro, medizintechnik, chemie-pharma, lebensmittel, bau, handel, logistik, it-dienste, finanzen, gesundheit, oeffentlich, dienstleistung, andere]
+  ausloeser: [kunde, lieferantenaudit, geschaeftsleitung, aiact, ausschreibung, wettbewerb, andere]
+  reife: [fehlt, begonnen, weitgehend, erfuellt]
+  managementsysteme: [iso9001, iso27001, iso14001, iso45001, iso13485, iatf16949, datenschutz, keine]
+  aimsRolle: [gl, aims, ism, dsb, recht, it, hr, fachbereich, einkauf, auditor, kommunikation]
+  themaArt: [extern, intern]                           # Thema.art
+  themaKategorie: [recht, regulierung, markt, technik, kultur, governance, vertrag, zweck, umwelt]
+  kiZweck: [effizienz, qualitaet, produkt, kundenservice, entwicklung, verwaltung, entscheidung]
+  rolleIso: [anbieter, produzent, kunde, partner, betroffene, behoerde]   # Organisation.rollenIso[].rolle
+  parteiArt: [intern, extern]                          # InteressiertePartei.art
+  anforderungQuelle: [gesetz, vertrag, norm, intern, markt]
+  ismsDeckung: [gleich, teilweise, anders]
+  aimsProzesse: [inventar, freigabe-werkzeuge, risiko, folgen, lieferanten, schulung, vorfall, aenderung, audit, managementbewertung]
+  leitlinieElemente: [zweck, zielrahmen, anforderungen, verbesserung]
+  leitlinieGrundsaetze: [mensch-entscheidet, zweck, transparenz, daten, fairness, sicherheit, recht, freigabe, melden]
+  leitlinienBezug: [informationssicherheit, datenschutz, qualitaet, personal, beschaffung, verhaltenskodex, nachhaltigkeit]
+  rollenBereich: [konformitaet, berichterstattung, risikomanagement, folgenabschaetzung, inventar, daten, lieferanten, menschliche-aufsicht, recht, schulung, vorfall, entwicklung, informationssicherheit, datenschutz, internes-audit, dokumentenlenkung]
+  meldekanal: [vorgesetzte, aims, whistleblowing, postfach, formular]
+  rhythmus: [vierzehntaeglich, monatlich, quartalsweise, halbjaehrlich, jaehrlich]   # vierzehntaeglich wie im Freigabekalender (Leitfaden Kapitel 4); nicht für Kalenderaufgaben (RHYTHMUS_MONATE)
+  glTakt: [vierzehntaeglich, monatlich, quartalsweise, halbjaehrlich]   # Projektauftrag.glTraktandum (Freigabekalender, Leitfaden Kapitel 4)
+  inventarQuellen: [softwareliste, lizenzen, einkauf, netzwerk, umfrage, fachbereiche, produktentwicklung, spesen]
+  fachbereich: [geschaeftsleitung, verkauf, einkauf, produktion, entwicklung, qualitaet, hr, finanzen, it, service, marketing, logistik]
+  kiTyp: [eingekauft, saas, eigenbau, schatten]        # KiTyp
+  kiStatus: [erfasst, in-pruefung, freigegeben, eingeschraenkt, ausgesetzt, abgeloest, untersagt]   # KiStatus
+  lebenszyklus: [idee, entwicklung, test, betrieb, ausserbetrieb]
+  automatisierung: [unterstuetzend, teilautomatisiert, vollautomatisiert]
+  freigabeKriterien: [datenschutz, vertraulichkeit, vertrag, sicherheit, nutzen, aiact, exportkontrolle]
+  aiActRolle: [anbieter, betreiber, einfuehrer, haendler, produkthersteller, bevollmaechtigter]   # AiActRolle
+  risikoklasse: [offen, verboten, hochrisiko-anhang-iii, hochrisiko-anhang-i, transparenz, minimal]   # Risikoklasse
+  anhangIii: ["1", "2", "3", "4a", "4b", "5a", "5b", "5c", "5d", "6", "7", "8"]
+  transparenz: ["50-1", "50-2", "50-3", "50-4"]
+  art5: [keine, a, b, ba, bb, c, d, e, f, g, h, unklar]   # Art5Ergebnis (KiSystem.aiAct.art5.ergebnis)
+  anhangI: [nein, abschnitt-a, abschnitt-b, offen]   # AnhangI (KiSystem.aiAct.produkt.anhangI)
+  anwendungsbereich: [a, b, c]   # Anwendungsbereich (KiSystem.aiAct.anwendungsbereich, Art. 2(1))
+  registrierung: [ja, nein, nicht-noetig]   # KiSystem.aiAct.registrierung (Art. 49(2))
+  rollenwechsel: [nein, a, b, c, offen]   # KiSystem.aiAct.rollenwechsel (Art. 25(1))
+  zeitraum: [pro-jahr, pro-quartal, pro-monat]
+  risikoquelle: [daten, modell, fehlanwendung, transparenz, vertraulichkeit, sicherheit, lieferant, recht, kompetenz, automatisierung, umwelt]
+  ebene: [organisation, individuen, gesellschaft]
+  neubeurteilung: [neues-system, wesentliche-aenderung, vorfall, rechtslage, lieferantenwechsel, audit]
+  triageErgebnis: [kurz, voll, offen]
+  betroffenArt: [direkt, indirekt]
+  behandlung: [vermeiden, vermindern, teilen, tragen, nutzen]   # Behandlung
+  risikoStatus: [offen, in-behandlung, behandelt, akzeptiert, geschlossen]
+  controlStatus: [offen, geplant, teilweise, umgesetzt, wirksam]   # ControlStatus
+  nachweisArt: [dokument, aufzeichnung, protokoll, vertrag, schulung, sonstiges]
+  massnahmeStatus: [offen, in-arbeit, erledigt, verworfen]
+  prioritaet: [hoch, mittel, tief]
+  herkunft: [risiko, audit, managementbewertung, pruefung, checkliste, aiact, ziel, aenderung, sonstige]
+  protokollInhalt: [eingaben, ausgaben, entscheide, nutzende, fehler, aenderungen]
+  nutzungsregeln: [nur-freigegebene, keine-vertraulichen-daten, keine-personendaten, ergebnisse-pruefen, kennzeichnen, firmenkonten, exportkontrolle, melden]
+  pruefstatus: [offen, in-pruefung, geprueft, mit-auflagen, abgelehnt]
+  bewusstseinFormate: [einfuehrung, e-learning, intranet, teamsitzung, merkblatt, bestaetigung]
+  kompetenzStatus: [offen, teilweise, erfuellt]
+  kiKompetenzZielgruppen: [alle, generativ, aufsicht, entwicklung, geschaeftsleitung, einkauf]
+  richtung: [intern, extern]
+  dokumentStatus: [entwurf, in-pruefung, freigegeben, veraltet]
+  dokumentFreigabe: [geschaeftsleitung, eigner, aims]
+  aenderungsweg: [massnahmenliste, managementbewertung, aims-team]
+  auditMethode: [interviews, dokumente, stichproben, begehung]
+  auditArt: [intern, extern-stage1, extern-stage2, ueberwachung]
+  feststellungQuelle: [audit, managementbewertung, vorfall, beinahe-vorfall, pruefung, meldung]   # Feststellung.quelle
+  schwere: [1, 2, 3, 4]   # Feststellung.schwere (D-14, D-22; Zahlen)
+  einstufung: [nk-schwer, nk-leicht, beobachtung, verbesserung]
+  feststellungStatus: [offen, in-arbeit, geschlossen]
+  meldepflicht: [ja, nein, nicht-noetig]   # Feststellung.meldepflicht (D-22)
+  ursacheKi: [daten, modell, zweck, kompetenz, lieferant, prozess]   # Textbausteine für Feststellung.ursacheKategorie; Beschriftungen wie vorlagen.D-22.listen.ursache_ki
+  checklistenErgebnis: [konform, beobachtung, nk-leicht, nk-schwer, nicht-geprueft, nicht-pruefbar]   # ChecklistenEintrag.ergebnis (D-20)
+  meldungArt: [bedenken, rueckmeldung, einspruch, beschwerde]   # Meldung.art (D-22)
+  meldungHerkunft: [intern, extern]   # Meldung.herkunft
+  meldungStatus: [offen, in-arbeit, erledigt]   # Meldung.status
+  verbesserungQuellen: [audit, managementbewertung, meldungen, vorfaelle, kennzahlen, mitarbeitende, kunden]
+  stage1Unterlagen: [geltungsbereich, leitlinie, rollen, inventar, risiko, folgen, soa, ziele, audit, managementbewertung, nichtkonformitaeten, dokumente]
+  monat: [januar, februar, maerz, april, mai, juni, juli, august, september, oktober, november, dezember]
+  leitlinieAbgleich: [angepasst, verweis, keine, nicht-vorhanden]
+  klauselStand: [ja, nein, offen, nicht-noetig]
+  sollErreicht: [ja, teilweise, nein]
+  keineMessung: [kein-anlass, erste-offen]
+  zielStatus: [geplant, in-arbeit, erreicht, nicht-erreicht, verworfen]
+  mbEntscheid: [verbesserung, aenderung, ressourcen, ziele, restrisiko]
+  # Weitere Einträge
+  handlungsbefugnis: [informiert, empfiehlt, bereitet-vor, fuehrt-begrenzt-aus, handelt-mehrstufig]   # HANDLUNGSBEFUGNISSE; Beschriftungen wie vorlagen.D-10.listen.handlungsbefugnis
+  aufgabenart: [erzeugt-inhalte, klassifiziert, prognostiziert, empfiehlt, steuert]   # AUFGABENARTEN; Beschriftungen wie vorlagen.D-10.listen.aufgabenart
+  entscheid: [einfuehren, restrisiko, ausnahme, stoppen, ausserbetrieb]   # ENTSCHEIDE (D-04)
+  entscheidungstraeger: [eigner, risikoeigner, aufsicht, aims, aims-eigner, aims-gl, gl]   # Textbausteine für organisation.entscheidungsrechte[].wer
+  rbNie: [personalentscheid, vertrauliche-daten, verbotene-praktiken]   # Textbausteine Risikobereitschaft (D-03)
+  rbNurGl: [erhebliche-wirkung, handelt-ohne-bestaetigung, restrisiko-hoch]
+  rbAimsAllein: [tiefes-risiko, mittleres-risiko, restrisiko-tief, ausnahme-befristet]
+  mitwirkende: [fachbereich, it, datenschutz, personal, recht, betroffene, extern]   # Textbausteine Folgenabschaetzung.mitgewirkt
+  # Dienst und Tarif
+  tarif: [gratis, privat, business, enterprise, eigenbetrieb]   # TARIFE; Beschriftungen wie vorlagen.D-10.listen.tarif
+  funktionStand: [an, aus]   # FunktionStand; Beschriftungen wie vorlagen.D-10.listen.funktion_stand
+  wirksamkeitWie: [stichprobe, test, auswertung, audit, uebung]   # Textbausteine ControlEintrag.wirksamkeit.wie
+  vertrauensmerkmal: [gueltig, sicher, geschuetzt, rechenschaft, erklaerbar, datenschutz, fair]   # VERTRAUENSMERKMALE (src/nist-rmf/merkmale.yaml)

@@ -1,0 +1,70 @@
+# D-17 Competence, awareness and communication
+modul_praefix_leer: "Only with the EU AI Act module:"
+modul_praefix: "EU AI Act:"
+modul_hinweis: "Art. 4 requires providers and deployers to take actions to support the AI literacy of their staff and of other persons dealing with AI systems on their behalf; it does not require a guaranteed level. The concept and evidence are in E-04; the ‘Competence needs’ and ‘Training’ sheets serve as evidence."
+eb_titel: Supplementary sheet to competence, awareness and communication
+eb_einleitung: "This workbook extends our existing ISMS programme for competence, awareness and communication to cover AI. The following points are added; everything else remains unchanged."
+eb_abschnitte:
+  - "**AI competences:** transfer the roles from the ‘Competence needs’ sheet to the existing competence matrix."
+  - "**AI awareness:** add the topics from the ‘Awareness’ sheet to the awareness programme."
+  - "**Communication on AI:** add the entries from the ‘Communication plan’ sheet to the existing communication plan, internal and external."
+  - "**Evidence:** record AI training in the existing training records under the topic ‘AI’ and check its effectiveness in the same way as for other training."
+blaetter:
+  kompetenz: Competence needs
+  schulungen: Training
+  bewusstsein: Awareness
+  kommunikation: Communication plan
+titel_kompetenz: "Competence needs by role (7.2, A.4.6)"
+titel_schulungen: "Training and briefings (evidence)"
+titel_bewusstsein: "Awareness of all staff (7.3)"
+titel_kommunikation: "Communication plan (7.4)"
+hinweise_kompetenz:
+  - "One row per role with AI tasks. The suggestions are a starting point: delete, add, enter names."
+  - "‘Current’ shows whether the people have the competence today. Where they do not, plan an action and check later whether it worked, for example through a conversation, a test or a sample of their work."
+hinweise_schulungen:
+  - "One row per training session, briefing or information event. An attendance list, an e-learning confirmation or minutes are sufficient as evidence."
+hinweise_bewusstsein:
+  - "All staff know these topics. Record through which channel and when you informed them."
+hinweise_kommunikation:
+  - "What is communicated, when, by whom, to whom and how, internally and externally. Include at least one external entry, for example customer information or the reporting channel."
+spalten_kompetenz: [K-ID, Role, Competence needed, People, Current, Action, Evidence, Effectiveness checked]
+spalten_schulungen: [Date, Topic, Audience, Participants, Evidence]
+teilnehmende_nachweis: "according to the attendance list in the evidence"
+spalten_bewusstsein: [Topic, Content, Audience, Channel, Date, Evidence]
+spalten_kommunikation: [KO-ID, What, When, Who, To whom, How, Direction]
+listen:
+  ist: [met, partly met, open]
+  richtung: [internal, external]
+kompetenz_vorschlag:
+  - ["Top management", "Leadership tasks in the AI management system, opportunities and risks of AI, decisions on residual risks", "Introduction of [[2]] hours", "Attendance list"]
+  - ["AIMS lead", "ISO/IEC 42001, risk assessment, impact assessment, supplier review", "Course or guided self-study", "Course certificate"]
+  - ["System owners", "How the system works and its limits, tests, monitoring, reporting channels (D-12)", "Briefing by the supplier and the AIMS lead", "Briefing record"]
+  - ["Human oversight", "Assess outputs, spot errors, intervene and switch off", "Hands-on training on the system with case examples", "Attendance, sample of checks"]
+  - ["All AI users", "AI use policy (D-15), safe inputs, checking outputs, typical AI errors and blind trust", "Introduction or e-learning of [[1]] hour, yearly refresher", "Attendance, signed or electronic confirmation of the AI use policy D-15"]
+  - ["Purchasing and contracts", "Review questions and contract clauses for AI (D-16)", "Briefing", "Briefing record"]
+  - ["Internal auditors", "ISO/IEC 42001 and audit methods", "Auditor course", "Certificate"]
+  - ["Development (in-house development only)", "Data quality, tests for fairness and robustness, secure development", "Specialist course", "Certificate"]
+bewusstsein_vorschlag:
+  - ["AI policy", "Our principles for AI and where to find the policy (D-03)", "all", "[[Intranet, introduction]]"]
+  - ["Personal contribution", "How each person contributes to success: follow the rules, check outputs, report problems", "all", "[[Team meeting]]"]
+  - ["Consequences of not conforming", "What happens if rules are not followed: for customers, affected persons and the organization, and under employment law", "all", "[[Introduction]]"]
+  - ["AI use policy", "Traffic light, what never goes into AI tools, requesting new tools (D-15)", "all", "[[E-learning with confirmation]]"]
+  - ["Typical errors and blind trust", "How AI gets things wrong (plausible but false statements, invented sources, outdated knowledge, hidden instructions in documents) and why outputs must be checked even after good experience", "all users", "[[Introduction, everyday examples]]"]
+  - ["Reporting channels", "Where concerns, errors and incidents go (D-04, D-14)", "all", "[[Intranet, notice board]]"]
+kommunikation_vorschlag:
+  - ["Message from top management on the AI management system: why, objectives, expectations", "at launch, then yearly", "Top management", "all staff", "[[Staff meeting, intranet]]", internal]
+  - ["AI policy", "after approval and every change", "AIMS lead", "all staff", "[[Intranet]]", internal]
+  - ["Changes to the AI management system: rules, roles, tools", "when changed", "AIMS lead", "affected staff", "[[Email, team meeting]]", internal]
+  - ["Incidents involving AI systems", "as per D-14", "system owner", "affected users", "[[Email]]", internal]
+  - ["Changes to AI systems: new features, model change, shutdown", "before the change", "system owner", "users", "[[Email, intranet]]", internal]
+  - ["Information about AI in our services and its limits", "with quotation, contract and changes", "[[Sales]]", "Customers", "[[Quotation, contract, website]]", external]
+  - ["AI policy and reporting channel for external parties", "ongoing", "AIMS lead", "Customers, affected persons, partners", "[[Website]]", external]
+# Company document: record of adoption instead of instructions
+eb_einleitung_firma: "This workbook extends our existing ISMS programme for competence, awareness and communication to cover AI. The following points are implemented; everything else remains unchanged."
+eb_abschnitte_firma:
+  - "**AI competences:** the roles from the ‘Competence needs’ sheet are kept in the existing competence matrix."
+  - "**AI awareness:** the topics from the ‘Awareness’ sheet are part of the awareness programme."
+  - "**Communication on AI:** the entries from the ‘Communication plan’ sheet are in the existing communication plan, internal and external."
+  - "**Evidence:** AI training is recorded in the existing training records under the topic ‘AI’; we check its effectiveness in the same way as for other training."
+eb_aufgenommen: "Incorporated into: {dokument}."
+modul_hinweis_eb: "Art. 4 requires providers and deployers to take actions to support the AI literacy of their staff and of other persons dealing with AI systems on their behalf; it does not require a guaranteed level. The concept and evidence are in E-04; the ‘Competence needs’ sheet and the existing training records serve as evidence."

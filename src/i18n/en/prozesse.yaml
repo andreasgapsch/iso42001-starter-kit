@@ -1,0 +1,1265 @@
+# Texts for the process catalogue (src/prozesse/katalog.yaml) and the maturity scale (src/prozesse/reifeskala.yaml).
+# Own wording by KMU-CIO. Reference to the standard only through numbers in the catalogue, no text of the standard.
+titel: Processes
+hilfe: "A process describes who does what in which order and which record it produces. The catalogue suggests lean flows with five to eight steps. Adapt roles and steps to your company; what matters is that every process has an owner and is actually followed."
+gruppen:
+  fuehrung: Leadership
+  kern: Core AI processes
+  unterstuetzung: Support
+  bewertung: Evaluation and improvement
+arten:
+  gemeinsam: Shared with the ISMS
+  gemeinsam-ki: Shared framework, AI added
+  nur-aims: AIMS only
+  nur-isms: ISMS base process
+arten_hilfe:
+  gemeinsam: "One process for information security and AI. With an ISMS you keep the existing process and add AI topics."
+  gemeinsam-ki: "The flow is the same as in the ISMS; AI content is added, for example own criteria or additional participants."
+  nur-aims: "This process exists only in the AI management system."
+  nur-isms: "Process from information security on which AI controls rely. With an ISMS a reference to the ISMS is enough. Without an ISMS you run only the processes marked as minimum scope, in a lean form."
+pflichtarten:
+  pflicht: Mandatory
+  control: Control, can be excluded
+  bedingt: Conditional
+  eigen: Own process
+pflichtarten_hilfe:
+  pflicht: "Follows from clauses 4 to 10 and cannot be excluded."
+  control: "Follows from a control in Annex A. Not applicable only with a justification in the statement of applicability (D-11)."
+  bedingt: "Applies only if the stated condition is met, for example own development of AI."
+  eigen: "A process of your company outside the catalogue. You define title, purpose, group, type and flow yourself; the checks treat it like a process that can be excluded."
+schrittarten:
+  start: Start
+  aufgabe: Task
+  entscheidung: Decision
+  ende: End
+raci:
+  R: does the work
+  A: accountable
+  C: consulted
+  I: informed
+raci_hilfe: "Exactly one role with A per task. R does the work, C is heard beforehand, I learns the result. The roles match the areas in D-04."
+einheiten:
+  prozent: per cent
+  anzahl: number
+  monate: months
+  tage: days
+  stunden: hours
+soll:
+  prozent: "{zahl}%"
+  keiner: "0 (no case)"
+richtungen:
+  mindestens: at least
+  hoechstens: at most
+rollen:
+  ki-eigner: System owner
+  berichterstattung: Reporting to top management
+  konformitaet: Conformity of the AIMS
+  mitarbeitende: Employees
+felder:
+  zweck: Purpose
+  ausloeser: Triggers
+  eingaben: Inputs
+  schritte: Flow
+  ausgaben: Outputs and records
+  kennzahl: Metric (suggestion)
+  normbezug: Reference to the standard
+  dokumente: Documents
+  verbunden: Related processes
+  eigner: Owner (suggestion)
+  rhythmus: Frequency
+  ereignis: when needed
+  bedingung: Condition
+  ohne_isms: Without an ISMS
+ohne_isms:
+  titel: Minimum scope without an ISMS
+  hilfe: "Without an ISMS the AIMS needs only a few basic information security processes, namely those on which AI controls build directly. The kit marks them as minimum scope. Suppliers are already covered: PR-20 governs the review of AI providers for companies without an ISMS as well. The other base processes are recommendations; their status is optional."
+  minimal: Minimum scope
+  empfohlen: recommended
+reifeskala:
+  titel: Process maturity
+  hilfe: "Maturity shows how far a process has arrived in daily work. It is a self-assessment for steering, not a certification criterion. The app suggests a level from records, measurements and audits; you decide."
+  gap_titel: Link to the gap analysis (D-00)
+  gap_hilfe: "The gap analysis D-00 uses maturity levels 0 to 5 per requirement. The mapping helps when transferring values but is not a conversion: D-00 rates requirements, this scale rates flows."
+  nicht-begonnen:
+    titel: not started
+    erklaerung: "Nothing has been defined for the process yet. There is no owner and no described flow."
+    kriterium: "No owner, no approved flow."
+    gap: "Corresponds to levels 0 (not present) and 1 (initial) in D-00."
+  definiert:
+    titel: defined
+    erklaerung: "Flow, roles and records are described and the owner is named. Work does not yet follow it consistently."
+    kriterium: "Owner named, flow described, related document at least in draft."
+    gap: "Corresponds most closely to level 2 (repeatable) in D-00: described, but without records from use yet."
+  eingefuehrt:
+    titel: implemented
+    erklaerung: "The process has been carried out as described at least once. A record from that run exists."
+    kriterium: "At least one run with a record, document approved. Processes that only run on occasion and have had no occasion yet: exercise or trial run with a record."
+    gap: "Corresponds to level 3 (defined and applied) in D-00, the usual target for certification."
+  wirksam:
+    titel: effective
+    erklaerung: "The metric of the process is measured and meets its target, or effectiveness is shown in another way."
+    kriterium: "Measurement from the last twelve months available, target met or deviation with an action."
+    gap: "Corresponds to level 4 (measured and managed) in D-00."
+  ueberprueft:
+    titel: reviewed
+    erklaerung: "The process was checked in an internal audit without open nonconformity and covered in the management review. Findings feed into improvements."
+    kriterium: "Internal audit and management review within the last twelve months, no open nonconformity."
+    gap: "Corresponds to level 5 (continually improved) in D-00."
+
+prozesse:
+  # ---------------------------------------------------------------- Leadership
+  PR-01:
+    titel: Context, interested parties and scope
+    zweck: "Clarify in which environment the company uses AI, who has expectations of it and what the AIMS covers."
+    ausloeser:
+      - Start of the AIMS project
+      - every year before the management review
+      - new site, new line of business or new role regarding AI, for example provider for the first time
+    eingaben:
+      - Strategy and organization chart
+      - AI inventory (D-10)
+      - Requirements of customers, authorities and partners
+      - existing ISMS scope, if any
+    schritte:
+      PR-01.00: Reason for review
+      PR-01.01: Collect internal and external issues related to AI
+      PR-01.02: Determine the own role per AI system, for example provider or deployer
+      PR-01.03: Record parties and their requirements
+      PR-01.04: Select the requirements the AIMS takes up
+      PR-01.05: Set boundaries and justify exclusions
+      PR-01.06: Does top management approve the scope?
+      PR-01.07: Communicate the scope and watch for changes
+      PR-01.90: Context and scope up to date
+    zweige:
+      PR-01.06: { PR-01.07: "yes", PR-01.05: "no, revise boundaries" }
+    ausgaben:
+      - Context with issues and parties (D-01)
+      - approved scope (D-02)
+      - role determination (D-24, E-01)
+    kennzahl: "Months since the last review of D-01 and D-02"
+    kennzahl_methode: "Register D-26, column ‘Approved on’ for D-01 and D-02; the older of the two approvals counts."
+    hilfe: "In an SME half a day with top management and the AIMS lead is often enough. With an ISMS you reuse context and parties and add only the AI topics."
+
+  PR-02:
+    titel: AI policy and leadership
+    zweck: "Set principles for working with AI, align them with the other policies and make the role of top management visible."
+    ausloeser:
+      - Start of the AIMS project
+      - annual review
+      - major change in strategy or law, or after an incident
+    eingaben:
+      - Context and scope (PR-01)
+      - Risk appetite of top management
+      - existing policies on information security, data protection and conduct
+    schritte:
+      PR-02.00: Reason for drafting or review
+      PR-02.01: Write a draft with principles and an objectives framework
+      PR-02.02: Align with existing policies and resolve conflicts
+      PR-02.03: Does top management approve the policy?
+      PR-02.04: Distribute the policy to all employees
+      PR-02.05: Confirm acknowledgement
+      PR-02.06: Review every year and report in the management review
+      PR-02.90: Policy valid and known
+    zweige:
+      PR-02.03: { PR-02.04: "yes", PR-02.01: "no, adapt the draft" }
+    ausgaben:
+      - approved AI policy (D-03)
+      - communication and confirmations (D-17)
+      - review in the minutes of the management review (D-21)
+    kennzahl: "Share of employees with confirmed acknowledgement"
+    kennzahl_methode: "D-17, training sheet, columns ‘Participants’ and ‘Evidence’ (signatures, learning platform) against the staff list; numerator: persons with confirmation, denominator: all employees."
+    hilfe: "A two-page policy that everyone knows is worth more than a long document. Top management shows leadership by approving, providing resources and putting the topic on its agenda."
+
+  PR-03:
+    titel: Roles, responsibilities and reporting channels
+    zweck: "Assign responsibilities for AI clearly and create a channel through which concerns can be raised without disadvantage."
+    ausloeser:
+      - Start of the AIMS project
+      - change of person in a role
+      - new AI system without a system owner
+    eingaben:
+      - Organization chart and job descriptions
+      - Role areas from D-04
+      - existing decision rights and committees
+    schritte:
+      PR-03.00: Reason to define or adjust roles
+      PR-03.01: Define role areas and committees
+      PR-03.02: Name persons and deputies
+      PR-03.03: Set decision rights per risk level
+      PR-03.04: Set the reporting channel with deadlines and an alternative contact
+      PR-03.05: Does top management approve the roles?
+      PR-03.06: Communicate roles and reporting channel
+      PR-03.07: Update when people join or leave
+      PR-03.90: Roles filled and known
+    zweige:
+      PR-03.05: { PR-03.06: "yes", PR-03.02: "no, adjust assignments" }
+    ausgaben:
+      - Roles, responsibilities and reporting channel (D-04)
+      - appointments or minutes of top management
+    kennzahl: "Share of role areas with a named person and deputy"
+    kennzahl_methode: "Roles D-04, columns ‘Area’, ‘A’ and ‘Deputy’; numerator: areas with a named person and deputy, denominator: all areas."
+    hilfe: "Several roles held by one person are normal in an SME. Make sure that nobody checks their own work, especially in the internal audit."
+
+  PR-04:
+    titel: Objectives, measurement and reporting
+    zweck: "Set measurable objectives for AI, measure them at the planned frequency, evaluate them and report to top management."
+    ausloeser:
+      - annual planning
+      - frequency of the metrics
+      - deviation from the target value
+    eingaben:
+      - AI policy (D-03)
+      - Risk register (D-07)
+      - Decisions of the last management review (D-21)
+    schritte:
+      PR-04.00: Planning date or time of measurement
+      PR-04.01: Derive objectives from the policy and risks
+      PR-04.02: Set metric, target, method and frequency
+      PR-04.03: Measure and record the value
+      PR-04.04: Evaluate the measurements
+      PR-04.05: Is the target met?
+      PR-04.06: Create an action
+      PR-04.07: Report the result to top management
+      PR-04.90: Report delivered
+    zweige:
+      PR-04.05: { PR-04.07: "yes", PR-04.06: "no" }
+    ausgaben:
+      - Objectives, measurement plan and values (D-05)
+      - Report to top management
+      - Actions for deviations (D-22)
+    kennzahl: "Share of objectives measured at the planned frequency"
+    kennzahl_methode: "D-05, sheet Measured values, columns ‘Objective or metric’ and ‘Date’ against the column ‘Frequency’ in the measurement plan; numerator: objectives whose due measurement was taken, denominator: objectives with a measurement due."
+    hilfe: "Three to five objectives are enough to start with. Choose metrics you can collect without much effort, for example from the inventory or the register of findings."
+
+  PR-05:
+    titel: Planning changes to the management system
+    zweck: "Implement changes to the AIMS, such as to scope, roles or procedures, in a planned way rather than on the side."
+    ausloeser:
+      - Decision from the management review
+      - Reorganization or new site
+      - new legal obligations
+    eingaben:
+      - Change request with justification
+      - affected documents and roles
+    schritte:
+      PR-05.00: Need for change identified
+      PR-05.01: Describe the change and its goal
+      PR-05.02: Assess the effects on risks, roles and documents
+      PR-05.03: Clarify resources, date and responsibility
+      PR-05.04: Does top management approve the change?
+      PR-05.05: Update the affected documents
+      PR-05.06: Carry out and communicate the change
+      PR-05.07: Verify the effect after implementation
+      PR-05.90: Change implemented
+      PR-05.91: Change rejected
+    zweige:
+      PR-05.04: { PR-05.05: "yes", PR-05.91: "no" }
+    ausgaben:
+      - Change history in the document register (D-26)
+      - "Actions with origin ‘change’ in the {{fakt:register.massnahmen}}"
+    kennzahl: "Share of changes with documented approval"
+    kennzahl_methode: "Actions with source ‘change’ in the {{fakt:register.massnahmen}}, columns ‘Source’ and ‘Status’, against the column ‘Approved by’ in the change history of D-26; numerator: completed changes with approval, denominator: completed changes."
+    hilfe: "Small edits to a document go through document control (PR-23). This process is meant for changes that affect the whole AIMS."
+
+  # ---------------------------------------------------------------- Core
+  PR-06:
+    titel: AI inventory and resources
+    zweck: "Know all AI systems with purpose, system owner, data, tools, computing resources and the people involved."
+    ausloeser:
+      - Start of the AIMS project
+      - new AI tool (PR-07)
+      - discovery of shadow AI
+      - half-yearly survey of business units
+    eingaben:
+      - Software list, licences and purchase records
+      - Analysis of network traffic and expenses
+      - Responses from business units
+    schritte:
+      PR-06.00: Survey planned or hint of a system
+      PR-06.01: Analyse sources such as software list, licences and purchasing
+      PR-06.02: Survey business units with the questionnaire
+      PR-06.03: Record the AI system in the inventory
+      PR-06.04: Name the system owner
+      PR-06.05: Describe data, tools, computing resources and staff
+      PR-06.06: Set the status and link to the asset inventory
+      PR-06.07: Compare the inventory with the sources regularly
+      PR-06.90: Inventory complete and up to date
+    ausgaben:
+      - AI inventory (D-10)
+      - Completed questionnaires
+    kennzahl: "Share of AI systems with a system owner and fully described resources"
+    kennzahl_methode: "AI inventory D-10, column ‘System owner’, and resources sheet, columns ‘Data’ to ‘People and competences’; numerator: systems with a system owner and described resources, denominator: all systems in the inventory."
+    hilfe: "Do not ask only IT. Many AI functions sit in software that business units subscribed to themselves, or in new features of existing software."
+
+  PR-07:
+    titel: Approval of new AI tools and rules of use
+    zweck: "Review new AI tools briefly and traceably before employees use them, and set the rules for their use."
+    ausloeser:
+      - Request from a business unit
+      - new AI feature in existing software
+      - discovery of shadow AI
+    eingaben:
+      - Request with purpose, data, plan and provider
+      - Approval criteria for AI tools (D-15, section ‘Requesting a new tool’)
+      - Policy on AI use (D-15)
+    schritte:
+      PR-07.00: Request or hint of a new tool
+      PR-07.01: Record the request with purpose, data, plan and provider
+      PR-07.02: "Review against the approval criteria: provider and data classes, impact screening under D-08, risks in register D-07"
+      PR-07.11: Test with own cases (D-12)
+      PR-07.03: Is an in-depth review needed (threshold under D-08 or risk above the acceptance threshold)?
+      PR-07.04: Treat the risks; full impact assessment from the threshold
+      PR-07.09: High risk or significant effect on customers, employees or applicants?
+      PR-07.05: Does the AIMS lead approve the tool, alone for low risk, together with the system owner for medium risk, possibly with conditions?
+      PR-07.10: Does top management approve the tool, possibly with conditions?
+      PR-07.06: Record decision, conditions and next review in the inventory
+      PR-07.07: Inform users about rules and conditions
+      PR-07.90: Tool approved
+      PR-07.91: Request rejected, requester informed
+    zweige:
+      PR-07.03: { PR-07.04: "yes", PR-07.05: "no" }
+      PR-07.09: { PR-07.10: "yes, top management decides", PR-07.05: "no" }
+      PR-07.05: { PR-07.06: "yes, with or without conditions", PR-07.91: "no" }
+      PR-07.10: { PR-07.06: "yes, with or without conditions", PR-07.91: "no" }
+    ausgaben:
+      - Inventory entry with decision and justification (D-10)
+      - Rules of use (D-15)
+      - Approval review in the life cycle (D-12)
+    kennzahl: "Days from request to decision"
+    kennzahl_methode: "Approval list in inventory D-10: days from ‘Requested on’ to ‘Decided on’, per request; mean and longest case."
+    hilfe: "A quick review prevents shadow AI better than a strict ban. Even without an in-depth review, the impact screening, the risk entry and the test with own cases are part of it; for simple tools they can be brief. Set the threshold for the in-depth review, for example personal data or decisions about people. If a residual risk lies above the acceptance threshold, {{fakt:freigabe.restrisiko}} first accepts it under PR-08 (from ‘unacceptable’ only as an exception under D-04); only then is the tool approved (PR-07.05 or PR-07.10)."
+
+  PR-08:
+    titel: Assessing and treating AI risks
+    zweck: "Identify, assess and treat the risks and opportunities of AI against fixed criteria."
+    ausloeser:
+      - new AI system or significant change
+      - incident or point raised in an audit
+      - new legal situation or change of provider
+      - annual review
+    eingaben:
+      - AI inventory (D-10)
+      - Results of the impact assessment (D-09)
+      - Risk criteria and acceptance threshold (D-06)
+      - Suggestion lists on AI risks, for example on generative AI
+    schritte:
+      PR-08.00: Reason for assessment
+      PR-08.01: Set or confirm criteria and acceptance threshold
+      PR-08.02: Identify risks and opportunities per AI system
+      PR-08.03: Rate likelihood and impact
+      PR-08.04: Choose treatment and assign controls
+      PR-08.05: Rate the residual risk after treatment
+      PR-08.07: "{{fakt:freigabe.behandlungsplan|gross}} approves the treatment plan and accepts residual risks above the acceptance threshold (D-04, Appendix A)"
+      PR-08.08: Update the register, have residual risks up to the acceptance threshold accepted by the risk owner, schedule the next assessment
+      PR-08.90: Risks assessed and treated
+    ausgaben:
+      - Procedure and criteria (D-06)
+      - Risk register with values before and after treatment (D-07)
+      - Acceptance of residual risks
+      - Controls for the statement of applicability (D-11)
+    kennzahl: "Number of risks above the acceptance threshold without a decision"
+    kennzahl_methode: "Risk register D-07, columns ‘Score’ and ‘Treatment’: count risks above the acceptance limit without a treatment decision."
+    hilfe: "With an ISMS you use the same procedure and mark AI risks in the existing register. Make sure the system owner takes part; they know the use best."
+
+  PR-09:
+    titel: AI impact assessment
+    zweck: "Estimate how an AI system may affect individuals, groups and society before it is deployed."
+    ausloeser:
+      - new AI system or new use
+      - significant change, incident or justified report from affected persons
+      - "Back-check after the risk assessment: impact at or above the threshold from D-06, even if the short check was enough"
+      - planned review date
+    eingaben:
+      - Description of the system and its use
+      - possible misuse
+      - affected individuals and groups
+      - Data protection impact assessment, if any
+    schritte:
+      PR-09.00: New or changed system, new use, incident, report or back-check
+      PR-09.01: Short check with the triage questions
+      PR-09.02: Is a full assessment needed?
+      PR-09.03: Describe affected persons and possible effects
+      PR-09.04: Weigh benefit and harm
+      PR-09.05: Set actions and carry them into the risk assessment
+      PR-09.10: Set actions, carry them into the risk assessment, back-check the impact against the threshold from D-06
+      PR-09.08: Threshold from D-06 reached or restricted use needed?
+      PR-09.06: Approve the short check (not by the person who carried it out)
+      PR-09.09: "{{fakt:freigabe.abschaetzung|gross}} approves the full assessment"
+      PR-09.07: Schedule the next review
+      PR-09.90: Assessment valid
+    zweige:
+      PR-09.02: { PR-09.03: "yes, full assessment", PR-09.10: "no, short version is enough" }
+      PR-09.08: { PR-09.03: "yes, carry out the full assessment", PR-09.06: "no, short check is enough" }
+    ausgaben:
+      - Procedure with flow chart (D-08)
+      - Impact assessment per system (D-09)
+      - for high-risk systems under the AI Act the fundamental rights impact assessment (E-06)
+    kennzahl: "Share of AI systems with a valid impact assessment"
+    kennzahl_methode: "Inventory D-10, column ‘ID’, against D-09 (approval in the document header, reassessments with the columns ‘Date’ and ‘Approval’); numerator: systems with an approved assessment that has not expired, denominator: all systems in the inventory."
+    hilfe: "Most office tools pass the short check quickly. It becomes thorough when AI helps decide about people, for example in applications, credit or ratings."
+
+  PR-10:
+    titel: Selecting controls and statement of applicability
+    zweck: "Derive the necessary controls from risk treatment, compare them with Annex A and track implementation and effectiveness."
+    ausloeser:
+      - after every risk treatment
+      - before an audit
+      - annual review
+    eingaben:
+      - Risk register (D-07)
+      - List of controls from Annex A
+      - with an ISMS the existing statement of applicability under ISO/IEC 27001
+    schritte:
+      PR-10.00: Risk treatment completed or due date
+      PR-10.01: Determine controls per risk
+      PR-10.02: Compare with Annex A and justify exclusions
+      PR-10.03: Assign owners and records
+      PR-10.04: Maintain the implementation status
+      PR-10.05: Assess effectiveness, for example with a sample or test
+      PR-10.06: Does {{fakt:freigabe.soa}} approve the statement?
+      PR-10.90: Statement of applicability approved
+    zweige:
+      PR-10.06: { PR-10.90: "yes", PR-10.03: "no, close the gaps" }
+    ausgaben:
+      - Statement of applicability (D-11)
+      - Records per control
+      - Integration matrix with ISO/IEC 27001 (D-23)
+    kennzahl: "Share of applicable controls with status ‘effective’"
+    kennzahl_methode: "Statement of applicability D-11, columns ‘Applicable’ and ‘Status’; numerator: controls with status ‘effective’, denominator: applicable controls."
+    hilfe: "Justify exclusions briefly and specifically, for example ‘no own development’. Auditors look closely at whether excluded controls are really not needed."
+
+  PR-11:
+    titel: Introducing an AI system
+    zweck: "Review, test and approve a new or purchased AI system for use in an orderly way."
+    ausloeser:
+      - Decision "in-depth review" from PR-07
+      - Procurement project
+      - Completion of an own development (PR-15)
+    eingaben:
+      - Requirements and purpose
+      - Result of the supplier review (D-16)
+      - Risk and impact assessment
+      - Test cases from own use
+    schritte:
+      PR-11.00: Introduction decided
+      PR-11.01: Record purpose and requirements
+      PR-11.02: Review the provider
+      PR-11.03: Set acceptance criteria and measurement concept
+      PR-11.04: Test with own cases before use
+      PR-11.05: Plan the rollout with oversight and a fallback
+      PR-11.08: High risk under the decision rights (D-04)?
+      PR-11.06: Does the AIMS lead approve the system, alone for low risk, together with the system owner for medium risk?
+      PR-11.09: Does top management approve the system?
+      PR-11.07: Inform users and set the inventory to ‘approved’
+      PR-11.90: System in use
+    zweige:
+      PR-11.08: { PR-11.09: "yes, top management decides", PR-11.06: "no" }
+      PR-11.06: { PR-11.07: "yes", PR-11.03: "no, improve and test again" }
+      PR-11.09: { PR-11.07: "yes", PR-11.03: "no, improve and test again" }
+    ausgaben:
+      - Introduction, testing and approval in the life cycle (D-12)
+      - Test report (D-12) and measurement concept (N-03)
+      - Approval in the inventory (D-10)
+    kennzahl: "Share of systems in operation with documented approval"
+    kennzahl_methode: "Inventory D-10, column ‘Life cycle’, against the approval list, column ‘Approved on’; numerator: systems in operation with documented approval, denominator: systems in operation."
+    hilfe: "From high risk onwards top management approves, not the owner (decision rights in D-04). Test with cases from your daily work, not only with the provider's examples."
+
+  PR-12:
+    titel: Operating and monitoring AI systems
+    zweck: "Ensure in operation that the system serves its purpose, is overseen and that deviations are noticed."
+    ausloeser:
+      - ongoing operation
+      - frequency of samples
+      - warning from monitoring
+    eingaben:
+      - Measurement concept and conditions from approval
+      - Logging requirements
+      - Feedback from users
+    schritte:
+      PR-12.00: Sample due or warning
+      PR-12.01: Exercise oversight as planned
+      PR-12.02: Take samples and measurements
+      PR-12.03: Analyse logs
+      PR-12.04: Is there a deviation?
+      PR-12.05: Report the deviation and restrict the system if needed
+      PR-12.06: Report performance to the owner
+      PR-12.07: Review benefit and suitability at the review date
+      PR-12.90: Operation checked
+    zweige:
+      PR-12.04: { PR-12.05: "yes", PR-12.06: "no" }
+    ausgaben:
+      - Operation and logs in the life cycle (D-12)
+      - Measurements and samples
+      - Reports to the incident process (PR-19)
+    kennzahl: "Share of systems with a sample at the planned frequency"
+    kennzahl_methode: "D-05, sheet Measured values, columns ‘Objective or metric’ and ‘Date’, with the systems from the column ‘AI systems’ of the objectives, against inventory D-10, column ‘Life cycle’; numerator: systems actually covered by a sample in the rhythm on the measurement date, denominator: systems in operation."
+    hilfe: "Whoever oversees a system may suspend it without asking. Record samples briefly, for example date, number of cases checked and anything unusual."
+
+  PR-13:
+    titel: Changes to AI systems
+    zweck: "Recognize changes to model, purpose, data, provider or settings and assess them before use."
+    ausloeser:
+      - Model change by the provider
+      - Retraining, model or version change (always with reassessment of the risks, D-12)
+      - new feature or new purpose
+      - new data source
+      - discontinuation by the provider
+    eingaben:
+      - Provider announcement or change request
+      - Change rule in the inventory
+    schritte:
+      PR-13.00: Change announced or planned
+      PR-13.01: Report and describe the change
+      PR-13.02: Retraining, model or version change, or significant change?
+      PR-13.03: Reassess the risks, for a significant change also the impact
+      PR-13.04: Test the changed version
+      PR-13.07: High risk or full impact assessment?
+      PR-13.05: Does the AIMS lead approve the change, alone for low risk, together with the system owner for medium risk (body under D-12)?
+      PR-13.08: Does top management approve the change (body under D-12)?
+      PR-13.06: Update inventory and documentation, inform users
+      PR-13.90: Change in use
+      PR-13.91: Change not deployed, previous state remains
+    zweige:
+      PR-13.02: { PR-13.03: "yes", PR-13.04: "no" }
+      PR-13.07: { PR-13.08: "yes, top management decides", PR-13.05: "no" }
+      PR-13.05: { PR-13.06: "yes", PR-13.91: "no" }
+      PR-13.08: { PR-13.06: "yes", PR-13.91: "no" }
+    ausgaben:
+      - Changes in the life cycle (D-12)
+      - Reassessment in the impact assessment (D-09)
+      - Change date in the inventory (D-10)
+    kennzahl: "Share of significant changes reassessed before use"
+    kennzahl_methode: "Inventory D-10, column ‘Changed on’, against the reassessments in D-09, columns ‘Date’ and ‘Approval’; numerator: reassessed before use, denominator: significant changes."
+    hilfe: "With cloud services the provider often changes things without your involvement. Subscribe to change notices and define in the inventory what counts as significant."
+
+  PR-14:
+    titel: Retiring an AI system
+    zweck: "End an AI system in an orderly way, clean up data and access, and keep the records."
+    ausloeser:
+      - Replacement by another system
+      - Discontinuation by the provider
+      - Prohibition after review or incident
+      - no further benefit at the review date
+    eingaben:
+      - Inventory entry with dependencies
+      - Fallback or successor system
+      - Retention periods
+    schritte:
+      PR-14.00: Decision to retire
+      PR-14.01: Set date and responsibilities
+      PR-14.02: Inform users and affected persons
+      PR-14.03: Activate fallback or successor
+      PR-14.04: Remove access, keys and interfaces
+      PR-14.05: Delete or hand over data
+      PR-14.06: Archive records
+      PR-14.07: Set the inventory to ‘replaced’
+      PR-14.90: System retired
+    ausgaben:
+      - Retirement in the life cycle (D-12)
+      - Deletion record (D-13)
+      - Retirement date in the inventory (D-10)
+    kennzahl: "Share of replaced systems with all steps completed"
+    kennzahl_methode: "Inventory D-10, column ‘Status’, against the decommissioning checklists; numerator: replaced systems with all steps completed, denominator: replaced systems."
+    hilfe: "Forgotten API keys and running subscriptions are the most common leftovers. Ask the provider how they delete your data and keep the confirmation."
+
+  PR-15:
+    titel: Developing AI systems in-house
+    zweck: "Develop own AI systems with fixed checkpoints from the idea to the handover into operation."
+    ausloeser:
+      - new development project
+      - new version of an own system
+    eingaben:
+      - Objectives for responsible development
+      - Requirements of users
+      - Data according to PR-16
+    schritte:
+      PR-15.00: Project decided
+      PR-15.01: Set objectives for responsible development
+      PR-15.02: Create requirements and design
+      PR-15.03: Prepare data
+      PR-15.04: Develop and verify
+      PR-15.05: Validate against the purpose
+      PR-15.06: Has validation passed?
+      PR-15.07: Write technical documentation per audience
+      PR-15.08: Hand over to the introduction
+      PR-15.90: Ready for introduction
+    zweige:
+      PR-15.06: { PR-15.07: "yes", PR-15.02: "no, revise the design" }
+    ausgaben:
+      - Development section in the life cycle (D-12)
+      - Test reports and technical documentation
+      - Data records (D-13)
+      - in the provider role under the AI Act the overview E-08
+    kennzahl: "Share of versions with documented verification and validation"
+    kennzahl_methode: "Verification and validation reports per version; numerator: versions with a report, denominator: released versions."
+    hilfe: "An internal assistant using own documents as a knowledge source can count as own development. Verification checks whether it was built right; validation whether the right thing was built."
+    bedingung: "Applies only if the company develops or significantly adapts AI systems itself (project setting: organization develops AI)."
+    bedingung_firma: "the company develops AI systems itself or adapts them significantly"
+
+  PR-16:
+    titel: Managing data for AI
+    zweck: "Set and regularly check the origin, quality, preparation and protection of data for AI systems."
+    ausloeser:
+      - new AI system or new data source
+      - own training or own knowledge source
+      - data protection request
+    eingaben:
+      - Data classes and protection needs
+      - Contracts and rights of use
+      - Data protection requirements
+    schritte:
+      PR-16.00: Need for data arises
+      PR-16.01: Determine data needs and data class
+      PR-16.02: Clarify origin and rights of use
+      PR-16.03: Is personal data involved?
+      PR-16.04: Review data protection, with an impact assessment if needed
+      PR-16.05: Set quality criteria and preparation
+      PR-16.06: Govern protection, access, retention and deletion
+      PR-16.07: Review quality periodically
+      PR-16.90: Data approved and described
+    zweige:
+      PR-16.03: { PR-16.04: "yes", PR-16.05: "no" }
+    ausgaben:
+      - Data documentation (D-13)
+      - Data classes in the inventory (D-10)
+    kennzahl: "Share of AI systems with data class and clarified origin"
+    kennzahl_methode: "Inventory D-10, approval list, column ‘Highest permitted data class’, against D-13, column ‘Input data’; numerator: systems with a data class and settled origin, denominator: all systems in the inventory."
+    hilfe: "For purchased tools the question of which own data may go in is often enough. It becomes detailed with own training or own knowledge sources."
+
+  PR-17:
+    titel: Informing users and transparency
+    zweck: "Inform users and affected persons clearly about the AI, its limits and their rights."
+    ausloeser:
+      - Approval of a system
+      - Change with effects on users
+      - Obligation under the EU AI Act
+    eingaben:
+      - Inventory entry and approval
+      - Result of the impact assessment
+      - Labelling requirements
+    schritte:
+      PR-17.00: System approved or changed
+      PR-17.01: Determine target groups
+      PR-17.02: Set content per system, for example purpose, limits and rights
+      PR-17.03: Label AI outputs
+      PR-17.04: Choose a channel and publish the information
+      PR-17.05: Collect feedback on clarity
+      PR-17.06: Update the information when things change
+      PR-17.90: Information available
+    ausgaben:
+      - Information and transparency (D-14)
+      - User information in the inventory (D-10)
+      - transparency obligations under the EU AI Act (E-07)
+    kennzahl: "Share of systems with current user information"
+    kennzahl_methode: "Inventory D-10 against D-14, columns ‘AI system’ and ‘Information’; numerator: systems in operation with current user information, denominator: systems in operation."
+    hilfe: "Short notes directly in the tool work better than a long leaflet. Say what the AI does, what it cannot do and whom to contact."
+
+  PR-18:
+    titel: Reports, concerns and objections
+    zweck: "Receive feedback from employees, customers and affected persons, answer it on time and evaluate it."
+    ausloeser:
+      - Receipt of a report through a channel
+    eingaben:
+      - Report with content and sender
+      - Reporting channel (D-04) and channel for external parties (D-14)
+    schritte:
+      PR-18.00: Report received
+      PR-18.01: Record and acknowledge receipt
+      PR-18.02: Classify the type, for example concern, feedback, objection or complaint
+      PR-18.03: Does the report point to an incident?
+      PR-18.04: Clarify the facts with the owner
+      PR-18.05: Answer within the deadline
+      PR-18.06: Create a finding or risk if needed
+      PR-18.07: Close and evaluate every quarter
+      PR-18.90: Report settled
+      PR-18.91: Handed over to the incident process
+    zweige:
+      PR-18.03: { PR-18.91: "yes", PR-18.04: "no" }
+    ausgaben:
+      - Register of reports (D-22)
+      - Reporting channel (D-04) and channel (D-14)
+      - Evaluation for the management review
+    kennzahl: "Share of reports answered within the deadline"
+    kennzahl_methode: "Report register D-22, columns ‘Received’, ‘Acknowledged on’ and ‘Closed on’; numerator: answered within the time limit, denominator: closed reports."
+    hilfe: "Acknowledging receipt within a few days builds trust. Whoever reports must not suffer any disadvantage; say so when you announce the channel."
+
+  PR-19:
+    titel: Handling and reporting AI incidents
+    zweck: "Contain AI misbehaviour or harm quickly, inform affected persons and bodies, and learn from it."
+    ausloeser:
+      - Report from users or affected persons
+      - Warning from monitoring (PR-12)
+      - Notice from a provider
+      - "Reconciliation of reports with register D-22, {{fakt:vorfall.abgleich}}"
+    eingaben:
+      - Report with description
+      - Inventory entry with fallback
+      - Reporting obligations from contracts and law
+    schritte:
+      PR-19.00: Incident reported
+      PR-19.01: "Record in the register {{fakt:vorfall.erfassung}}, rate severity"
+      PR-19.02: Contain, for example restrict the system or use the fallback
+      PR-19.03: Is information security affected?
+      PR-19.04: Handle the security incident together with PS-04
+      PR-19.05: Assess reporting obligations and inform
+      PR-19.06: Clarify the cause
+      PR-19.07: Initiate correction and reassessment
+      PR-19.08: Close and record lessons learned
+      PR-19.90: Incident closed
+    zweige:
+      PR-19.03: { PR-19.04: "yes", PR-19.05: "no" }
+    ausgaben:
+      - Finding with source ‘incident’ (D-22)
+      - Communication to affected persons (D-14)
+      - deployer and provider obligations under the EU AI Act (E-05, E-08)
+    kennzahl: "Hours until containment"
+    kennzahl_methode: "Findings with source incident or near miss in D-22: hours from ‘Discovered’ to ‘Contained’; the longest case counts."
+    hilfe: "Escalation as per D-14: from severity 2 the AIMS lead within {{fakt:vorfall.stufe2}}, from severity 3 top management within {{fakt:vorfall.stufe3}}, at severity 4 {{fakt:vorfall.stufe4}}. Check early whether deadlines apply, for example for notifying customers or authorities."
+
+  PR-20:
+    titel: Suppliers and customers
+    zweck: "Review AI providers, share responsibility by contract and monitor performance; clarify obligations towards customers."
+    ausloeser:
+      - new provider
+      - renewal of a contract
+      - change at the provider
+      - annual review
+    eingaben:
+      - Provider questions and contract clauses (D-16)
+      - Offers and draft contracts
+      - Requirements of customers
+    schritte:
+      PR-20.00: New or changed provider
+      PR-20.01: Record the provider
+      PR-20.02: Evaluate the answers to the provider questions
+      PR-20.03: Agree contract clauses
+      PR-20.04: Can the provider be used?
+      PR-20.05: Record the split of responsibility, also towards customers
+      PR-20.06: Monitor performance and changes at the provider
+      PR-20.07: Schedule the next review
+      PR-20.90: Provider reviewed
+      PR-20.91: Provider rejected
+    zweige:
+      PR-20.04: { PR-20.05: "yes, with or without conditions", PR-20.91: "no" }
+    ausgaben:
+      - Supplier review with result (D-16)
+      - Contracts and data processing agreements
+    kennzahl: "Share of providers with a valid review"
+    kennzahl_methode: "Supplier list D-16, columns ‘Review status’ and ‘Next review’; numerator: providers with a valid review, denominator: all providers."
+    hilfe: "With large cloud providers you rarely negotiate; check plan and settings instead, for example whether inputs are used for training. This process covers supplier management even without an ISMS."
+
+  # ---------------------------------------------------------------- Support
+  PR-21:
+    titel: Competence and awareness
+    zweck: "Determine the AI competence needed per role, close gaps and check the effect."
+    ausloeser:
+      - annual planning
+      - joining or change of role
+      - new AI system
+      - incident related to use
+    eingaben:
+      - Roles (D-04) and inventory (D-10)
+      - Results from audits and incidents
+    schritte:
+      PR-21.00: Planning or occasion
+      PR-21.01: Set requirements per role
+      PR-21.02: Identify gaps
+      PR-21.03: Choose an action, for example training, e-learning or a leaflet
+      PR-21.04: Carry out the action
+      PR-21.05: File the record
+      PR-21.06: Did the action work?
+      PR-21.07: Raise awareness among all employees and update the plan
+      PR-21.90: Competence demonstrated
+    zweige:
+      PR-21.06: { PR-21.07: "yes", PR-21.03: "no, choose another measure" }
+    ausgaben:
+      - Competence and awareness (D-17)
+      - AI literacy under the EU AI Act (E-04)
+    kennzahl: "Share of target groups with status ‘met’"
+    kennzahl_methode: "Competences D-17, columns ‘Role’ and ‘Current’; numerator: target groups with status ‘met’, denominator: all target groups."
+    hilfe: "Effect is easy to check, for example with three questions after the training or a sample in daily use."
+
+  PR-22:
+    titel: Communication
+    zweck: "Plan who talks to whom about the AIMS and when, internally and externally."
+    ausloeser:
+      - annual planning
+      - approvals, changes or incidents that need to be communicated
+    eingaben:
+      - Communication plan (D-17)
+      - Requirements of the parties (D-01)
+    schritte:
+      PR-22.00: Planning or occasion
+      PR-22.01: Determine topics and recipients
+      PR-22.02: Set timing, channel and responsible persons
+      PR-22.03: Is the message aimed at external parties?
+      PR-22.04: Obtain approval from top management
+      PR-22.05: Carry out the communication
+      PR-22.06: Collect feedback
+      PR-22.07: Review the plan every year
+      PR-22.90: Communication done
+    zweige:
+      PR-22.03: { PR-22.04: "yes", PR-22.05: "no" }
+    ausgaben:
+      - Communication sheet (D-17)
+    kennzahl: "Share of planned communications carried out"
+    kennzahl_methode: "Communication plan D-17, column ‘When’, against the minutes; numerator: communications carried out, denominator: communications due."
+    hilfe: "Use existing channels such as team meetings or the intranet. Top management approves messages to the outside, for example on the website."
+
+  PR-23:
+    titel: Document control
+    zweck: "Create, check, approve, distribute, review and retain documents and records."
+    ausloeser:
+      - new document
+      - change to a document
+      - review due
+    eingaben:
+      - Rules of document control (D-26)
+      - Document register
+    schritte:
+      PR-23.00: New or changed document
+      PR-23.01: Create a draft according to the naming rule
+      PR-23.02: Second person reviews the draft
+      PR-23.03: Is it a foundation document?
+      PR-23.04: Approve by top management
+      PR-23.05: Approve by the owner
+      PR-23.06: File and distribute
+      PR-23.07: Review at the set frequency, mark obsolete versions
+      PR-23.90: Document valid
+    zweige:
+      PR-23.03: { PR-23.04: "yes, for example policy or scope", PR-23.05: "no" }
+    ausgaben:
+      - Document register with version, status and approval (D-26)
+      - Control information in every document
+    kennzahl: "Share of documents whose review is not overdue"
+    kennzahl_methode: "Register D-26, columns ‘Approved on’ and ‘Next review’; numerator: documents reviewed within twelve months, denominator: documents in the register."
+    hilfe: "With an ISMS the same document control applies to both systems. External documents such as contracts or vendor information also belong in the register."
+
+  PR-24:
+    titel: Tracking legal and contractual obligations
+    zweck: "Identify laws, regulations and contracts related to AI, track deadlines and check implementation."
+    ausloeser:
+      - new legal situation, for example AI Act deadlines
+      - new customer contract with AI requirements
+      - half-yearly review
+    eingaben:
+      - Role determination (D-24)
+      - Contracts with customers and providers
+      - EU AI Act obligations matrix (E-03)
+    schritte:
+      PR-24.00: Due date or hint of a new obligation
+      PR-24.01: Monitor sources
+      PR-24.02: Assign obligations to the own role
+      PR-24.03: Are there new or changed obligations?
+      PR-24.04: Determine affected AI systems
+      PR-24.05: Create an action with a deadline
+      PR-24.06: Track the deadline and check compliance
+      PR-24.90: Obligations recorded and tracked
+    zweige:
+      PR-24.03: { PR-24.04: "yes", PR-24.90: "no, no action needed" }
+    ausgaben:
+      - Requirements of the parties (D-01)
+      - EU AI Act obligations matrix and deadlines (E-03, E-09)
+    kennzahl: "Share of requirements and obligations with a decision and reason"
+    kennzahl_methode: "Register of interested parties D-01, columns ‘Addressed by AIMS’ and ‘Reason’; numerator: requirements with a decision and reason, denominator: all requirements."
+    hilfe: "In an SME a newsletter from an association or law firm is often enough as a source. Record who reads it and when obligations were last compared."
+
+  # ---------------------------------------------------------------- Evaluation and improvement
+  PR-25:
+    titel: Internal audit
+    zweck: "Independently verify whether the AIMS meets its own requirements and the standard, and whether it works."
+    ausloeser:
+      - Audit programme, at least once a year
+      - before the first certification audit
+    eingaben:
+      - Audit programme and results of earlier audits (D-20)
+      - Status of processes and controls
+    schritte:
+      PR-25.00: Date from the audit programme
+      PR-25.01: Plan the audit programme
+      PR-25.02: Appoint an independent auditor
+      PR-25.03: Set scope, criteria and checklist
+      PR-25.04: Carry out the audit with interviews, documents and samples
+      PR-25.05: Classify findings
+      PR-25.06: Deliver the report to top management
+      PR-25.07: Hand over findings for correction
+      PR-25.90: Audit completed
+    ausgaben:
+      - Audit programme, checklist and report (D-20)
+      - Findings in the register (D-22)
+    kennzahl: "Fulfilment of the audit programme in per cent"
+    kennzahl_methode: "Audit programme D-20, columns ‘Period’ and ‘Status’; numerator: audits carried out, denominator: audits planned up to the reference date."
+    hilfe: "In an SME a person from another area or an external expert can audit. Whoever runs the AIMS does not audit it."
+
+  PR-26:
+    titel: Management review
+    zweck: "Top management judges whether the AIMS is suitable, adequate and effective, and decides on improvements."
+    ausloeser:
+      - annual date
+      - before certification
+      - major event, for example a serious incident
+    eingaben:
+      - Status of actions and changes
+      - Metrics, objectives and status of processes
+      - Results of audits and reports
+    schritte:
+      PR-26.00: Annual date or occasion
+      PR-26.01: Set date and participants
+      PR-26.02: Compile inputs
+      PR-26.03: Hold the meeting
+      PR-26.04: Reach an overall judgement on the AIMS
+      PR-26.05: Record decisions with responsibility and date
+      PR-26.06: Approve the minutes
+      PR-26.07: Track implementation of the decisions
+      PR-26.90: Review completed
+    ausgaben:
+      - Minutes of the management review (D-21)
+      - "Actions from the decisions ({{fakt:register.massnahmen}})"
+    kennzahl: "Share of decisions implemented by the next review"
+    kennzahl_methode: "Decisions in minutes D-21, columns ‘Decision’ and ‘Owner, deadline, action’, against the actions in the {{fakt:register.massnahmen}}, column ‘Status’; measurable only at the next review, until then an interim status only."
+    hilfe: "With an ISMS the review can be combined in one meeting if AI topics get their own agenda items."
+
+  PR-27:
+    titel: Nonconformity, correction and improvement
+    zweck: "Fix deviations, remove their causes, check the effect and implement improvements."
+    ausloeser:
+      - Finding from an audit or management review
+      - Incident or near miss
+      - Report or own check
+    eingaben:
+      - Finding with description
+      - affected processes, systems and risks
+    schritte:
+      PR-27.00: Finding exists
+      PR-27.01: Record and classify the finding
+      PR-27.02: Correct immediately
+      PR-27.03: Analyse the cause
+      PR-27.04: Look for similar cases
+      PR-27.05: Plan and implement the corrective action
+      PR-27.06: Did the action work?
+      PR-27.07: Close and adjust the risk
+      PR-27.90: Finding closed
+    zweige:
+      PR-27.06: { PR-27.07: "yes", PR-27.03: "no, analyse the cause again" }
+    ausgaben:
+      - Register of findings and actions with effectiveness (D-22)
+    kennzahl: "Share of findings closed on time"
+    kennzahl_methode: "Register D-22, nonconformities sheet, columns ‘Due date’ and ‘Status’; numerator: findings closed on time, denominator: findings closed or overdue."
+    hilfe: "Correction fixes the symptom, corrective action the cause. Check the effect after some time, for example after three months."
+
+  # ---------------------------------------------------------------- ISMS base processes
+  PS-01:
+    titel: Recording and classifying assets
+    zweck: "Record information and systems, set owners and protection needs, and lay down rules for handling."
+    ausloeser:
+      - Start of the management system
+      - new system or new type of information
+      - annual comparison
+    eingaben:
+      - Software list, device list, storage locations
+      - AI inventory (D-10)
+    schritte:
+      PS-01.00: Comparison planned or new asset
+      PS-01.01: Record assets
+      PS-01.02: Name owners
+      PS-01.03: Classify protection needs
+      PS-01.04: Set rules for handling
+      PS-01.05: Ensure return when people leave
+      PS-01.06: Compare the register regularly
+      PS-01.90: Register up to date
+    ausgaben:
+      - Asset register with protection needs
+      - Link with the AI inventory (D-10) and data classes (D-13)
+    kennzahl: "Share of assets with owner and protection needs"
+    kennzahl_methode: "Asset inventory; numerator: assets with an owner and protection needs, denominator: all assets."
+    hilfe: "Without an ISMS the AI inventory and the data classes replace this register for the scope of the AIMS."
+    ohne_isms: "Not in the minimum scope. For the AIMS the AI inventory (PR-06) with system owner and resources and the data classes from PR-16 are enough."
+
+  PS-02:
+    titel: Access and permissions
+    zweck: "Request, approve, set up, regularly review and revoke access; this includes AI accounts and API keys."
+    ausloeser:
+      - Request for access
+      - Approval or introduction of an AI system (PR-07, PR-11)
+      - Leaving or change of role
+      - half-yearly review
+    eingaben:
+      - Request with justification
+      - Roles and conditions from approval
+    schritte:
+      PS-02.00: Request for access
+      PS-02.01: Request access with justification
+      PS-02.02: Does the owner approve the access?
+      PS-02.03: Set up with least privilege and secure sign-in
+      PS-02.04: Keep administrator rights and keys tight
+      PS-02.05: Review permissions periodically
+      PS-02.06: Revoke on leaving or change of role
+      PS-02.90: Access valid and reviewed
+      PS-02.91: Request rejected
+    zweige:
+      PS-02.02: { PS-02.03: "yes", PS-02.91: "no" }
+    ausgaben:
+      - List of accounts per AI system
+      - Record of the periodic review
+    kennzahl: "Share of reviews completed on time"
+    kennzahl_methode: "Access review records; numerator: reviews completed on time, denominator: reviews due."
+    hilfe: "For AI services a list per system is enough: who has an account, who manages keys, is multi-factor sign-in active."
+    ohne_isms: "In the minimum scope. Approval, introduction and retirement of AI systems (PR-07, PR-11, PR-14) require that accounts and API keys are granted and revoked in a controlled way. Otherwise people who have left or unknown tools keep using the AI with company data."
+
+  PS-03:
+    titel: Personnel security
+    zweck: "Ensure security when employees join, while they are employed and when they leave."
+    ausloeser:
+      - Joining
+      - Change of role
+      - Leaving
+    eingaben:
+      - Employment contract and job description
+      - Checklists for joining and leaving
+    schritte:
+      PS-03.00: Personnel event
+      PS-03.01: Screen before joining, where permitted
+      PS-03.02: Sign the agreement on confidentiality and use
+      PS-03.03: Plan induction and training
+      PS-03.04: Adjust rights on change of role
+      PS-03.05: Revoke rights and take back devices on leaving
+      PS-03.06: Remind of obligations after leaving
+      PS-03.90: Personnel event completed
+    ausgaben:
+      - Checklists for joining and leaving
+      - signed agreements
+    kennzahl: "Share of leavers whose rights were revoked on their last working day"
+    kennzahl_methode: "Leavers list against the account list; numerator: leavers with access removed on the last working day, denominator: all leavers."
+    hilfe: "The policy on AI use (D-15) can be confirmed on joining together with the confidentiality agreement."
+    ohne_isms: "Not in the minimum scope. Training is covered by PR-21, revoking AI accounts on leaving by PS-02."
+
+  PS-04:
+    titel: Security incidents
+    zweck: "Report, assess and contain security events, secure evidence and learn from them."
+    ausloeser:
+      - Report from employees
+      - Warning from monitoring or logs
+      - Notice from a provider
+    eingaben:
+      - Report with description
+      - Emergency contacts and reporting obligations
+    schritte:
+      PS-04.00: Event noticed
+      PS-04.01: Report the event
+      PS-04.02: Assess and classify
+      PS-04.03: Is it an incident?
+      PS-04.04: Respond and contain
+      PS-04.05: Secure evidence
+      PS-04.06: Assess reporting obligations and inform
+      PS-04.07: Learn lessons and create actions
+      PS-04.90: Incident closed
+      PS-04.91: Event closed without incident
+    zweige:
+      PS-04.03: { PS-04.04: "yes", PS-04.91: "no" }
+    ausgaben:
+      - Register of incidents (D-22, source ‘incident’)
+      - Messages to affected persons and bodies (D-14)
+    kennzahl: "Hours from report to first response"
+    kennzahl_methode: "Incident records: hours from report to first response; the longest case counts."
+    hilfe: "Without an ISMS one joint flow with the AI incident process PR-19 is enough: one contact point, one classification, one register."
+    ohne_isms: "In the minimum scope. AI incidents are often security incidents too, for example data leaking through an AI tool or a manipulated model. PR-19 needs a way to contain, secure evidence and report; without an ISMS PR-19 and PS-04 form one flow."
+
+  PS-05:
+    titel: IT changes
+    zweck: "Request, assess, test, approve and implement changes to IT systems with a fallback."
+    ausloeser:
+      - Change request
+      - Update or new configuration
+    eingaben:
+      - Change request with justification
+      - current configuration
+    schritte:
+      PS-05.00: Change planned
+      PS-05.01: Request the change
+      PS-05.02: Assess risk and fallback
+      PS-05.03: Test
+      PS-05.04: Is the change approved?
+      PS-05.05: Implement
+      PS-05.06: Update configuration and log
+      PS-05.90: Change implemented
+      PS-05.91: Change rejected
+    zweige:
+      PS-05.04: { PS-05.05: "yes", PS-05.91: "no" }
+    ausgaben:
+      - Change log
+      - documented configuration
+    kennzahl: "Share of emergency changes among all changes"
+    kennzahl_methode: "IT change records; numerator: emergency changes, denominator: all changes."
+    hilfe: "Changes to AI systems go through PR-13; this process covers the rest of IT."
+    ohne_isms: "Not in the minimum scope. PR-13 governs changes to AI systems itself."
+
+  PS-06:
+    titel: Backup and restore
+    zweck: "Set what is backed up how often and how long backups are kept, and test restoring regularly."
+    ausloeser:
+      - new system or new data source
+      - quarterly restore test
+    eingaben:
+      - List of systems and data
+      - Retention periods
+    schritte:
+      PS-06.00: Due date or new system
+      PS-06.01: Set the scope, including AI data such as knowledge sources, templates and settings
+      PS-06.02: Set frequency and retention
+      PS-06.03: Run and monitor backups
+      PS-06.04: Test restoring
+      PS-06.05: Was the test successful?
+      PS-06.06: Record the result
+      PS-06.90: Backup checked
+    zweige:
+      PS-06.05: { PS-06.06: "yes", PS-06.02: "no, adjust the backup" }
+    ausgaben:
+      - Backup concept
+      - Records of restore tests
+    kennzahl: "Share of successful restore tests"
+    kennzahl_methode: "Restore test records; numerator: successful tests, denominator: all tests."
+    hilfe: "With pure cloud services the provider backs up. Check in PR-20 whether you can export your data."
+    bedingung: "Applies if the company holds own AI data or runs AI systems itself: own development, purchased software operated in-house or own training. If the company uses only cloud services, the process does not apply."
+    bedingung_firma: "the company runs AI systems or AI data itself and must be able to restore them after an outage"
+    ohne_isms: "In the minimum scope, where relevant. Whoever has own knowledge sources, templates, training data or self-hosted models must be able to restore them after a failure; operation (PR-12) and data management (PR-16) depend on it. With pure cloud services the process does not apply."
+
+  PS-07:
+    titel: Emergency and continuity
+    zweck: "Know critical processes, including those that depend on AI, set emergency plans and practise them."
+    ausloeser:
+      - annual review
+      - new critical system
+      - after a major outage
+    eingaben:
+      - List of processes and systems
+      - Fallbacks from the inventory (D-10)
+    schritte:
+      PS-07.00: Due date or occasion
+      PS-07.01: Determine critical processes, including those depending on AI
+      PS-07.02: Estimate the effects of an outage
+      PS-07.03: Set emergency plans and fallbacks
+      PS-07.04: Have top management approve the plans
+      PS-07.05: Practise an emergency
+      PS-07.06: Update plans after the exercise
+      PS-07.90: Emergency planning up to date
+    ausgaben:
+      - Analysis of outage effects
+      - Emergency plans and exercise report
+    kennzahl: "Number of emergency exercises per year"
+    kennzahl_methode: "Count the records of emergency exercises in the calendar year."
+    hilfe: "Ask for every critical process: what do we do if the AI tool is unavailable for a day?"
+    ohne_isms: "Not in the minimum scope. The fallback per AI system is set in introduction and operation (PR-11, PR-12)."
+
+  PS-08:
+    titel: Vulnerabilities and malware
+    zweck: "Track notices of vulnerabilities, fix them within deadlines and protect against malware."
+    ausloeser:
+      - Notice from the vendor or an authority
+      - monthly patch date
+    eingaben:
+      - List of systems and versions
+      - Notices from vendors and authorities
+    schritte:
+      PS-08.00: Notice or due date
+      PS-08.01: Monitor notices
+      PS-08.02: Assess and set a deadline
+      PS-08.03: Is the vulnerability critical?
+      PS-08.04: Fix or shield immediately
+      PS-08.05: Fix at the regular frequency
+      PS-08.06: Monitor protection against malware
+      PS-08.07: Report the patch status
+      PS-08.90: Systems up to date
+    zweige:
+      PS-08.03: { PS-08.04: "yes", PS-08.05: "no" }
+    ausgaben:
+      - Patch status per system
+      - Reports from the antivirus software
+    kennzahl: "Share of critical vulnerabilities fixed within the deadline"
+    kennzahl_methode: "Vulnerability list and update records; numerator: critical vulnerabilities fixed within the time limit, denominator: all critical vulnerabilities."
+    hilfe: "Browser extensions and local AI tools need updates too."
+    ohne_isms: "Not in the minimum scope. With cloud services the provider carries this duty, checked in PR-20; changes to self-hosted AI systems go through PR-13."
+
+  PS-09:
+    titel: Logging and monitoring
+    zweck: "Set what is logged, protect and analyse the logs and keep system time in sync."
+    ausloeser:
+      - new system
+      - monthly analysis
+      - warning from monitoring
+    eingaben:
+      - Logging requirements
+      - Data protection requirements
+    schritte:
+      PS-09.00: Due date or warning
+      PS-09.01: Set what is logged
+      PS-09.02: Synchronize system time
+      PS-09.03: Protect and retain logs
+      PS-09.04: Analyse logs
+      PS-09.05: Is there anything unusual?
+      PS-09.06: Report it as an event
+      PS-09.07: Review the rules every year
+      PS-09.90: Logs analysed
+    zweige:
+      PS-09.05: { PS-09.06: "yes", PS-09.07: "no" }
+    ausgaben:
+      - Logging requirements
+      - Records of analysis
+    kennzahl: "Share of analyses at the planned frequency"
+    kennzahl_methode: "Records of log reviews; numerator: reviews in the rhythm, denominator: reviews due."
+    hilfe: "For AI systems the life cycle (D-12) sets which events are logged; this process takes care of protection and analysis."
+    ohne_isms: "Not in the minimum scope. PR-12 sets the logs of AI systems with the life cycle (D-12); that is enough without an ISMS."
+
+  PS-10:
+    titel: Secure development
+    zweck: "Set security requirements for development, review code, test, separate environments and monitor outsourced development."
+    ausloeser:
+      - new development project
+      - new version
+    eingaben:
+      - Security requirements
+      - Test results
+    schritte:
+      PS-10.00: Development starts
+      PS-10.01: Set security requirements
+      PS-10.02: Separate development, test and production environments
+      PS-10.03: Review code
+      PS-10.04: Test security
+      PS-10.05: Are all findings fixed?
+      PS-10.06: Release the version, including outsourced development
+      PS-10.90: Version released securely
+    zweige:
+      PS-10.05: { PS-10.06: "yes", PS-10.03: "no" }
+    ausgaben:
+      - Test reports
+      - List of findings before release
+    kennzahl: "Number of open critical findings at release"
+    kennzahl_methode: "Release records: count open critical findings per release."
+    hilfe: "Whoever develops AI also checks risks such as manipulated inputs or data leaking from knowledge sources."
+    bedingung: "Applies only if the company develops software or AI systems itself (project setting: organization develops AI)."
+    bedingung_firma: "the company develops software or AI systems itself"
+    ohne_isms: "Not in the minimum scope. With own development PR-15 covers the checkpoints; security tests are part of verification there."
+
+  PS-11:
+    titel: Physical security
+    zweck: "Protect rooms, devices and storage media against unauthorized access, loss and damage."
+    ausloeser:
+      - annual review
+      - move or new site
+    eingaben:
+      - Floor plans
+      - List of devices
+    schritte:
+      PS-11.00: Due date or occasion
+      PS-11.01: Set zones
+      PS-11.02: Govern and review physical access
+      PS-11.03: Protect devices, including mobile ones
+      PS-11.04: Enforce clear desks and locked screens
+      PS-11.05: Dispose of storage media and devices securely
+      PS-11.90: Physical protection checked
+    ausgaben:
+      - Review of access rights
+      - Disposal records
+    kennzahl: "Share of disposals with a record"
+    kennzahl_methode: "Disposal records; numerator: disposals with evidence, denominator: all disposals."
+    hilfe: "For AI disposal matters most: devices with local models or data count like any storage medium."
+    ohne_isms: "Not in the minimum scope. Secure disposal on retirement is governed by PR-14."

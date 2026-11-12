@@ -1,0 +1,466 @@
+# Originaltexte NIST AI 100-1 (AI RMF 1.0, Januar 2023): wörtliche Zitate mit eigener Übersetzung
+#
+# NIST-Werke sind in den USA gemeinfrei (17 U.S.C. § 105); ausserhalb der USA gewährt NIST ein weltweites, unentgeltliches
+# Recht zu Nachdruck und Bearbeitung und bittet um den Vermerk unter quelle.vermerk.
+#
+# Felder
+#   zitat     wörtlicher Text aus dem PDF (Englisch, US-Schreibweise und Satzzeichen unverändert; Silbentrennung am
+#             Zeilenende aufgehoben). Zitat-Quelle: von Tor G5 Stil ausgenommen (scripts/pruefen/stil.mts).
+#   de        eigene, sinngetreue Übersetzung des Kits («Übersetzung KMU-CIO, nicht amtlich»), Schweizer Rechtschreibung
+#   seite     PDF-Seite in quelle.datei (1 = erste Seite der Datei, wie src/nist-rmf/seiten.json);
+#             titel_seite, wenn die Überschrift (titel_zitat) auf einer anderen Seite steht;
+#             bis_seite, wenn das Zitat auf der Folgeseite weiterläuft
+# Die eigenen Kurztitel stehen weiterhin in src/i18n/{de,en}/nist.yaml.
+# Prüfung Wort für Wort gegen den PDF-Text: npx tsx scripts/pruefen/nist-zitate.mts (Tor G18, nur lokal mit den PDFs).
+
+schema: 1
+stand: ai-rmf-1.0
+
+quelle:
+  dokument: NIST AI 100-1
+  titel: "Artificial Intelligence Risk Management Framework (AI RMF 1.0)"
+  datum: "2023-01-26"
+  doi: https://doi.org/10.6028/NIST.AI.100-1
+  datei: NIST.AI.100-1_AI-RMF-1.0.pdf
+  vermerk: Republished courtesy of the National Institute of Standards and Technology.
+  uebersetzung:
+    de: Übersetzung KMU-CIO, nicht amtlich
+    en: Translation by KMU-CIO, not official
+  fundstellen: Tabellen 1 bis 4 (Kategorien und Subkategorien), Abschnitte 3.1 bis 3.7 (Vertrauensmerkmale), 5.1 bis 5.4 (Funktionen)
+
+funktionen:
+  - id: govern
+    name: GOVERN
+    abschnitt: "5.1"
+    titel_zitat: "Govern"
+    titel_seite: 26
+    seite: 27
+    zitat: "GOVERN is a cross-cutting function that is infused throughout AI risk management and enables the other functions of the process."
+    de: "GOVERN ist eine Querschnittsfunktion, die das ganze KI-Risikomanagement durchdringt und die übrigen Funktionen des Prozesses ermöglicht."
+  - id: map
+    name: MAP
+    abschnitt: "5.2"
+    titel_zitat: "Map"
+    seite: 29
+    zitat: "The MAP function establishes the context to frame risks related to an AI system."
+    de: "Die Funktion MAP legt den Kontext fest, in dem die Risiken eines KI-Systems eingeordnet werden."
+  - id: measure
+    name: MEASURE
+    abschnitt: "5.3"
+    titel_zitat: "Measure"
+    seite: 33
+    zitat: "The MEASURE function employs quantitative, qualitative, or mixed-method tools, techniques, and methodologies to analyze, assess, benchmark, and monitor AI risk and related impacts."
+    de: "Die Funktion MEASURE setzt quantitative, qualitative oder gemischte Werkzeuge, Techniken und Methoden ein, um KI-Risiken und damit verbundene Auswirkungen zu analysieren, zu beurteilen, zu vergleichen und zu überwachen."
+  - id: manage
+    name: MANAGE
+    abschnitt: "5.4"
+    titel_zitat: "Manage"
+    seite: 36
+    zitat: "The MANAGE function entails allocating risk resources to mapped and measured risks on a regular basis and as defined by the GOVERN function."
+    de: "Die Funktion MANAGE teilt den erfassten und gemessenen Risiken regelmässig und wie in der Funktion GOVERN festgelegt Mittel zur Risikobehandlung zu."
+
+kategorien:
+  - id: GV-1
+    seite: 27
+    zitat: "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively."
+    de: "Richtlinien, Prozesse, Verfahren und Praktiken der ganzen Organisation zum Erfassen, Messen und Behandeln von KI-Risiken sind vorhanden, transparent und wirksam umgesetzt."
+  - id: GV-2
+    seite: 28
+    zitat: "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks."
+    de: "Verantwortlichkeitsstrukturen sind so eingerichtet, dass die zuständigen Teams und Personen befähigt, verantwortlich und geschult sind, KI-Risiken zu erfassen, zu messen und zu behandeln."
+  - id: GV-3
+    seite: 28
+    zitat: "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle."
+    de: "Prozesse zu Vielfalt, Chancengleichheit, Inklusion und Barrierefreiheit in der Belegschaft haben beim Erfassen, Messen und Behandeln von KI-Risiken über den ganzen Lebenszyklus Vorrang."
+  - id: GV-4
+    seite: 28
+    bis_seite: 29
+    zitat: "Organizational teams are committed to a culture that considers and communicates AI risk."
+    de: "Die Teams der Organisation pflegen eine Kultur, die KI-Risiken bedenkt und kommuniziert."
+  - id: GV-5
+    seite: 29
+    zitat: "Processes are in place for robust engagement with relevant AI actors."
+    de: "Prozesse für eine tragfähige Zusammenarbeit mit den relevanten KI-Akteuren sind vorhanden."
+  - id: GV-6
+    seite: 29
+    zitat: "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues."
+    de: "Richtlinien und Verfahren sind vorhanden, um KI-Risiken und Nutzen aus Software und Daten Dritter und aus anderen Fragen der Lieferkette zu behandeln."
+  - id: MP-1
+    seite: 31
+    zitat: "Context is established and understood."
+    de: "Der Kontext ist festgelegt und verstanden."
+  - id: MP-2
+    seite: 31
+    zitat: "Categorization of the AI system is performed."
+    de: "Das KI-System ist kategorisiert."
+  - id: MP-3
+    seite: 32
+    zitat: "AI capabilities, targeted usage, goals, and expected benefits and costs compared with appropriate benchmarks are understood."
+    de: "Fähigkeiten, vorgesehene Nutzung, Ziele sowie erwarteter Nutzen und erwartete Kosten der KI im Vergleich mit geeigneten Massstäben sind verstanden."
+  - id: MP-4
+    seite: 32
+    zitat: "Risks and benefits are mapped for all components of the AI system including third-party software and data."
+    de: "Risiken und Nutzen sind für alle Komponenten des KI-Systems erfasst, einschliesslich Software und Daten Dritter."
+  - id: MP-5
+    seite: 32
+    zitat: "Impacts to individuals, groups, communities, organizations, and society are characterized."
+    de: "Auswirkungen auf Einzelpersonen, Gruppen, Gemeinschaften, Organisationen und die Gesellschaft sind beschrieben."
+  - id: MS-1
+    seite: 34
+    zitat: "Appropriate methods and metrics are identified and applied."
+    de: "Geeignete Methoden und Kennzahlen sind bestimmt und werden angewendet."
+  - id: MS-2
+    seite: 34
+    zitat: "AI systems are evaluated for trustworthy characteristics."
+    de: "KI-Systeme werden auf die Merkmale vertrauenswürdiger KI bewertet."
+  - id: MS-3
+    seite: 35
+    zitat: "Mechanisms for tracking identified AI risks over time are in place."
+    de: "Mechanismen, um erkannte KI-Risiken über die Zeit zu verfolgen, sind vorhanden."
+  - id: MS-4
+    seite: 36
+    zitat: "Feedback about efficacy of measurement is gathered and assessed."
+    de: "Rückmeldungen zur Wirksamkeit der Messung werden gesammelt und beurteilt."
+  - id: MG-1
+    seite: 37
+    zitat: "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed."
+    de: "KI-Risiken aus Beurteilungen und anderen Analyseergebnissen der Funktionen MAP und MEASURE werden priorisiert, beantwortet und behandelt."
+  - id: MG-2
+    seite: 37
+    zitat: "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors."
+    de: "Strategien, um den Nutzen von KI zu maximieren und negative Auswirkungen gering zu halten, sind geplant, vorbereitet, umgesetzt und dokumentiert und stützen sich auf Beiträge der relevanten KI-Akteure."
+  - id: MG-3
+    seite: 37
+    zitat: "AI risks and benefits from third-party entities are managed."
+    de: "KI-Risiken und Nutzen aus Einheiten Dritter werden behandelt."
+  - id: MG-4
+    seite: 38
+    zitat: "Risk treatments, including response and recovery, and communication plans for the identified and measured AI risks are documented and monitored regularly."
+    de: "Risikobehandlungen einschliesslich Reaktion und Wiederherstellung sowie Kommunikationspläne für die erkannten und gemessenen KI-Risiken sind dokumentiert und werden regelmässig überwacht."
+
+subkategorien:
+  - id: GV-1.1
+    seite: 27
+    zitat: "Legal and regulatory requirements involving AI are understood, managed, and documented."
+    de: "Rechtliche und regulatorische Anforderungen an KI sind verstanden, werden gesteuert und sind dokumentiert."
+  - id: GV-1.2
+    seite: 27
+    zitat: "The characteristics of trustworthy AI are integrated into organizational policies, processes, procedures, and practices."
+    de: "Die Merkmale vertrauenswürdiger KI sind in die Richtlinien, Prozesse, Verfahren und Praktiken der Organisation eingebunden."
+  - id: GV-1.3
+    seite: 27
+    zitat: "Processes, procedures, and practices are in place to determine the needed level of risk management activities based on the organization’s risk tolerance."
+    de: "Prozesse, Verfahren und Praktiken sind vorhanden, um anhand der Risikotoleranz der Organisation festzulegen, wie viel Risikomanagement nötig ist."
+  - id: GV-1.4
+    seite: 27
+    zitat: "The risk management process and its outcomes are established through transparent policies, procedures, and other controls based on organizational risk priorities."
+    de: "Der Risikomanagementprozess und seine Ergebnisse sind durch transparente Richtlinien, Verfahren und andere Kontrollen nach den Risikoprioritäten der Organisation festgelegt."
+  - id: GV-1.5
+    seite: 28
+    zitat: "Ongoing monitoring and periodic review of the risk management process and its outcomes are planned and organizational roles and responsibilities clearly defined, including determining the frequency of periodic review."
+    de: "Laufende Überwachung und periodische Überprüfung des Risikomanagementprozesses und seiner Ergebnisse sind geplant, und die Rollen und Verantwortlichkeiten in der Organisation sind klar festgelegt, einschliesslich der Häufigkeit der periodischen Überprüfung."
+  - id: GV-1.6
+    seite: 28
+    zitat: "Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities."
+    de: "Mechanismen zur Inventarisierung von KI-Systemen sind vorhanden und nach den Risikoprioritäten der Organisation mit Mitteln ausgestattet."
+  - id: GV-1.7
+    seite: 28
+    zitat: "Processes and procedures are in place for decommissioning and phasing out AI systems safely and in a manner that does not increase risks or decrease the organization’s trustworthiness."
+    de: "Prozesse und Verfahren sind vorhanden, um KI-Systeme sicher ausser Betrieb zu nehmen und auslaufen zu lassen, ohne dass Risiken steigen oder die Vertrauenswürdigkeit der Organisation sinkt."
+  - id: GV-2.1
+    seite: 28
+    zitat: "Roles and responsibilities and lines of communication related to mapping, measuring, and managing AI risks are documented and are clear to individuals and teams throughout the organization."
+    de: "Rollen, Verantwortlichkeiten und Kommunikationswege zum Erfassen, Messen und Behandeln von KI-Risiken sind dokumentiert und für Personen und Teams in der ganzen Organisation klar."
+  - id: GV-2.2
+    seite: 28
+    zitat: "The organization’s personnel and partners receive AI risk management training to enable them to perform their duties and responsibilities consistent with related policies, procedures, and agreements."
+    de: "Das Personal und die Partner der Organisation erhalten Schulungen im KI-Risikomanagement, damit sie ihre Aufgaben und Verantwortlichkeiten im Einklang mit den zugehörigen Richtlinien, Verfahren und Vereinbarungen wahrnehmen können."
+  - id: GV-2.3
+    seite: 28
+    zitat: "Executive leadership of the organization takes responsibility for decisions about risks associated with AI system development and deployment."
+    de: "Die oberste Leitung der Organisation übernimmt die Verantwortung für Entscheide über Risiken aus Entwicklung und Einsatz von KI-Systemen."
+  - id: GV-3.1
+    seite: 28
+    zitat: "Decision-making related to mapping, measuring, and managing AI risks throughout the lifecycle is informed by a diverse team (e.g., diversity of demographics, disciplines, experience, expertise, and backgrounds)."
+    de: "Entscheide zum Erfassen, Messen und Behandeln von KI-Risiken über den gesamten Lebenszyklus stützen sich auf ein vielfältiges Team (z. B. Vielfalt in Herkunft, Fachrichtungen, Erfahrung, Fachwissen und Hintergrund)."
+  - id: GV-3.2
+    seite: 28
+    zitat: "Policies and procedures are in place to define and differentiate roles and responsibilities for human-AI configurations and oversight of AI systems."
+    de: "Richtlinien und Verfahren sind vorhanden, um Rollen und Verantwortlichkeiten für das Zusammenwirken von Mensch und KI und für die Aufsicht über KI-Systeme festzulegen und abzugrenzen."
+  - id: GV-4.1
+    seite: 28
+    zitat: "Organizational policies and practices are in place to foster a critical thinking and safety-first mindset in the design, development, deployment, and uses of AI systems to minimize potential negative impacts."
+    de: "Richtlinien und Praktiken der Organisation sind vorhanden, die kritisches Denken und eine Haltung «Sicherheit zuerst» bei Gestaltung, Entwicklung, Einsatz und Nutzung von KI-Systemen fördern, um mögliche negative Auswirkungen gering zu halten."
+  - id: GV-4.2
+    seite: 29
+    zitat: "Organizational teams document the risks and potential impacts of the AI technology they design, develop, deploy, evaluate, and use, and they communicate about the impacts more broadly."
+    de: "Die Teams der Organisation dokumentieren die Risiken und möglichen Auswirkungen der KI-Technik, die sie gestalten, entwickeln, einsetzen, bewerten und nutzen, und sie kommunizieren breiter über diese Auswirkungen."
+  - id: GV-4.3
+    seite: 29
+    zitat: "Organizational practices are in place to enable AI testing, identification of incidents, and information sharing."
+    de: "Praktiken der Organisation sind vorhanden, die das Testen von KI, das Erkennen von Vorfällen und den Informationsaustausch ermöglichen."
+  - id: GV-5.1
+    seite: 29
+    zitat: "Organizational policies and practices are in place to collect, consider, prioritize, and integrate feedback from those external to the team that developed or deployed the AI system regarding the potential individual and societal impacts related to AI risks."
+    de: "Richtlinien und Praktiken der Organisation sind vorhanden, um Rückmeldungen von Personen ausserhalb des Teams, das das KI-System entwickelt oder eingesetzt hat, zu möglichen Auswirkungen von KI-Risiken auf Einzelne und die Gesellschaft zu sammeln, zu prüfen, zu priorisieren und einzubeziehen."
+  - id: GV-5.2
+    seite: 29
+    zitat: "Mechanisms are established to enable the team that developed or deployed AI systems to regularly incorporate adjudicated feedback from relevant AI actors into system design and implementation."
+    de: "Mechanismen sind eingerichtet, damit das Team, das KI-Systeme entwickelt oder eingesetzt hat, geprüfte Rückmeldungen relevanter KI-Akteure regelmässig in Gestaltung und Umsetzung des Systems aufnehmen kann."
+  - id: GV-6.1
+    seite: 29
+    zitat: "Policies and procedures are in place that address AI risks associated with third-party entities, including risks of infringement of a third-party’s intellectual property or other rights."
+    de: "Richtlinien und Verfahren sind vorhanden, die KI-Risiken im Zusammenhang mit Dritten behandeln, einschliesslich des Risikos, geistiges Eigentum oder andere Rechte Dritter zu verletzen."
+  - id: GV-6.2
+    seite: 29
+    zitat: "Contingency processes are in place to handle failures or incidents in third-party data or AI systems deemed to be high-risk."
+    de: "Notfallprozesse sind vorhanden, um Ausfälle oder Vorfälle bei Daten oder KI-Systemen Dritter zu bewältigen, die als hochriskant gelten."
+  - id: MP-1.1
+    seite: 31
+    zitat: "Intended purposes, potentially beneficial uses, context-specific laws, norms and expectations, and prospective settings in which the AI system will be deployed are understood and documented. Considerations include: the specific set or types of users along with their expectations; potential positive and negative impacts of system uses to individuals, communities, organizations, society, and the planet; assumptions and related limitations about AI system purposes, uses, and risks across the development or product AI lifecycle; and related TEVV and system metrics."
+    de: "Vorgesehene Zwecke, möglicher Nutzen, kontextspezifische Gesetze, Normen und Erwartungen sowie die voraussichtlichen Einsatzumgebungen des KI-Systems sind verstanden und dokumentiert. Zu berücksichtigen sind: die Nutzenden oder Nutzergruppen und ihre Erwartungen; mögliche positive und negative Auswirkungen der Nutzung auf Einzelne, Gemeinschaften, Organisationen, die Gesellschaft und den Planeten; Annahmen und Grenzen zu Zweck, Nutzung und Risiken des KI-Systems über den Lebenszyklus von Entwicklung oder Produkt; sowie die zugehörigen TEVV- und Systemkennzahlen."
+  - id: MP-1.2
+    seite: 31
+    zitat: "Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their participation is documented. Opportunities for interdisciplinary collaboration are prioritized."
+    de: "Die interdisziplinären KI-Akteure, Kompetenzen, Fähigkeiten und Kapazitäten zur Klärung des Kontexts bilden demografische Vielfalt sowie breites Fach- und Nutzungswissen ab, und ihre Mitwirkung ist dokumentiert. Gelegenheiten zur interdisziplinären Zusammenarbeit haben Vorrang."
+  - id: MP-1.3
+    seite: 31
+    zitat: "The organization’s mission and relevant goals for AI technology are understood and documented."
+    de: "Der Auftrag der Organisation und ihre relevanten Ziele für KI-Technik sind verstanden und dokumentiert."
+  - id: MP-1.4
+    seite: 31
+    zitat: "The business value or context of business use has been clearly defined or – in the case of assessing existing AI systems – re-evaluated."
+    de: "Der geschäftliche Wert oder der Kontext der geschäftlichen Nutzung ist klar festgelegt oder, bei der Beurteilung bestehender KI-Systeme, neu bewertet."
+  - id: MP-1.5
+    seite: 31
+    zitat: "Organizational risk tolerances are determined and documented."
+    de: "Die Risikotoleranzen der Organisation sind festgelegt und dokumentiert."
+  - id: MP-1.6
+    seite: 31
+    zitat: "System requirements (e.g., “the system shall respect the privacy of its users”) are elicited from and understood by relevant AI actors. Design decisions take socio-technical implications into account to address AI risks."
+    de: "Systemanforderungen (z. B. «das System muss die Privatsphäre seiner Nutzenden achten») sind bei den relevanten KI-Akteuren erhoben und von ihnen verstanden. Gestaltungsentscheide berücksichtigen soziotechnische Folgen, um KI-Risiken zu begegnen."
+  - id: MP-2.1
+    seite: 31
+    zitat: "The specific tasks and methods used to implement the tasks that the AI system will support are defined (e.g., classifiers, generative models, recommenders)."
+    de: "Die konkreten Aufgaben, die das KI-System unterstützen soll, und die Methoden zu ihrer Umsetzung sind festgelegt (z. B. Klassifikatoren, generative Modelle, Empfehlungssysteme)."
+  - id: MP-2.2
+    seite: 31
+    zitat: "Information about the AI system’s knowledge limits and how system output may be utilized and overseen by humans is documented. Documentation provides sufficient information to assist relevant AI actors when making decisions and taking subsequent actions."
+    de: "Informationen zu den Wissensgrenzen des KI-Systems und dazu, wie Menschen die Ausgaben nutzen und beaufsichtigen können, sind dokumentiert. Die Dokumentation gibt den relevanten KI-Akteuren genügend Informationen für Entscheide und nachfolgende Handlungen."
+  - id: MP-2.3
+    seite: 32
+    zitat: "Scientific integrity and TEVV considerations are identified and documented, including those related to experimental design, data collection and selection (e.g., availability, representativeness, suitability), system trustworthiness, and construct validation."
+    de: "Wissenschaftliche Integrität und TEVV-Gesichtspunkte sind ermittelt und dokumentiert, auch zu Versuchsplanung, Erhebung und Auswahl von Daten (z. B. Verfügbarkeit, Repräsentativität, Eignung), Vertrauenswürdigkeit des Systems und Konstruktvalidierung."
+  - id: MP-3.1
+    seite: 32
+    zitat: "Potential benefits of intended AI system functionality and performance are examined and documented."
+    de: "Der mögliche Nutzen der vorgesehenen Funktionen und Leistung des KI-Systems ist untersucht und dokumentiert."
+  - id: MP-3.2
+    seite: 32
+    zitat: "Potential costs, including non-monetary costs, which result from expected or realized AI errors or system functionality and trustworthiness – as connected to organizational risk tolerance – are examined and documented."
+    de: "Mögliche Kosten, auch nicht monetäre, die aus erwarteten oder eingetretenen KI-Fehlern oder aus Funktion und Vertrauenswürdigkeit des Systems entstehen, sind im Bezug zur Risikotoleranz der Organisation untersucht und dokumentiert."
+  - id: MP-3.3
+    seite: 32
+    zitat: "Targeted application scope is specified and documented based on the system’s capability, established context, and AI system categorization."
+    de: "Der vorgesehene Anwendungsbereich ist anhand der Fähigkeiten des Systems, des festgelegten Kontexts und der Kategorisierung des KI-Systems bestimmt und dokumentiert."
+  - id: MP-3.4
+    seite: 32
+    zitat: "Processes for operator and practitioner proficiency with AI system performance and trustworthiness – and relevant technical standards and certifications – are defined, assessed, and documented."
+    de: "Prozesse für die Kompetenz von Bedienenden und Fachanwendern in Bezug auf Leistung und Vertrauenswürdigkeit des KI-Systems sowie die einschlägigen technischen Normen und Zertifizierungen sind festgelegt, beurteilt und dokumentiert."
+  - id: MP-3.5
+    seite: 32
+    zitat: "Processes for human oversight are defined, assessed, and documented in accordance with organizational policies from the GOVERN function."
+    de: "Prozesse für die menschliche Aufsicht sind im Einklang mit den Richtlinien der Organisation aus der Funktion GOVERN festgelegt, beurteilt und dokumentiert."
+  - id: MP-4.1
+    seite: 32
+    zitat: "Approaches for mapping AI technology and legal risks of its components – including the use of third-party data or software – are in place, followed, and documented, as are risks of infringement of a third party’s intellectual property or other rights."
+    de: "Vorgehen, um die Risiken der KI-Technik und die rechtlichen Risiken ihrer Komponenten zu erfassen, auch bei Nutzung von Daten oder Software Dritter, sind vorhanden, werden befolgt und sind dokumentiert, ebenso die Risiken, geistiges Eigentum oder andere Rechte Dritter zu verletzen."
+  - id: MP-4.2
+    seite: 32
+    zitat: "Internal risk controls for components of the AI system, including third-party AI technologies, are identified and documented."
+    de: "Interne Risikokontrollen für die Komponenten des KI-Systems, einschliesslich KI-Technik Dritter, sind ermittelt und dokumentiert."
+  - id: MP-5.1
+    seite: 32
+    zitat: "Likelihood and magnitude of each identified impact (both potentially beneficial and harmful) based on expected use, past uses of AI systems in similar contexts, public incident reports, feedback from those external to the team that developed or deployed the AI system, or other data are identified and documented."
+    de: "Wahrscheinlichkeit und Ausmass jeder ermittelten Auswirkung (nützlich wie schädlich) sind ermittelt und dokumentiert, gestützt auf die erwartete Nutzung, frühere Nutzungen von KI-Systemen in ähnlichen Kontexten, öffentliche Vorfallberichte, Rückmeldungen von Personen ausserhalb des Teams, das das KI-System entwickelt oder eingesetzt hat, oder andere Daten."
+  - id: MP-5.2
+    seite: 33
+    zitat: "Practices and personnel for supporting regular engagement with relevant AI actors and integrating feedback about positive, negative, and unanticipated impacts are in place and documented."
+    de: "Praktiken und Personal sind vorhanden und dokumentiert, um die regelmässige Zusammenarbeit mit relevanten KI-Akteuren zu unterstützen und Rückmeldungen zu positiven, negativen und unerwarteten Auswirkungen einzubeziehen."
+  - id: MS-1.1
+    seite: 34
+    zitat: "Approaches and metrics for measurement of AI risks enumerated during the MAP function are selected for implementation starting with the most significant AI risks. The risks or trustworthiness characteristics that will not – or cannot – be measured are properly documented."
+    de: "Vorgehen und Kennzahlen zur Messung der in der Funktion MAP ermittelten KI-Risiken sind zur Umsetzung ausgewählt, beginnend mit den bedeutendsten KI-Risiken. Risiken oder Vertrauensmerkmale, die nicht gemessen werden oder nicht gemessen werden können, sind sachgerecht dokumentiert."
+  - id: MS-1.2
+    seite: 34
+    zitat: "Appropriateness of AI metrics and effectiveness of existing controls are regularly assessed and updated, including reports of errors and potential impacts on affected communities."
+    de: "Die Eignung der KI-Kennzahlen und die Wirksamkeit bestehender Kontrollen werden regelmässig beurteilt und nachgeführt, einschliesslich Meldungen von Fehlern und möglichen Auswirkungen auf betroffene Gemeinschaften."
+  - id: MS-1.3
+    seite: 34
+    zitat: "Internal experts who did not serve as front-line developers for the system and/or independent assessors are involved in regular assessments and updates. Domain experts, users, AI actors external to the team that developed or deployed the AI system, and affected communities are consulted in support of assessments as necessary per organizational risk tolerance."
+    de: "Interne Fachleute, die nicht selbst an vorderster Front das System entwickelt haben, und/oder unabhängige Prüfende sind an regelmässigen Beurteilungen und Nachführungen beteiligt. Fachleute des Anwendungsgebiets, Nutzende, KI-Akteure ausserhalb des Teams, das das KI-System entwickelt oder eingesetzt hat, und betroffene Gemeinschaften werden nach Bedarf gemäss Risikotoleranz der Organisation zur Unterstützung der Beurteilungen beigezogen."
+  - id: MS-2.1
+    seite: 34
+    zitat: "Test sets, metrics, and details about the tools used during TEVV are documented."
+    de: "Testdatensätze, Kennzahlen und Angaben zu den bei TEVV verwendeten Werkzeugen sind dokumentiert."
+  - id: MS-2.2
+    seite: 34
+    zitat: "Evaluations involving human subjects meet applicable requirements (including human subject protection) and are representative of the relevant population."
+    de: "Bewertungen mit menschlichen Versuchspersonen erfüllen die anwendbaren Anforderungen (einschliesslich des Schutzes der Versuchspersonen) und sind für die relevante Bevölkerung repräsentativ."
+  - id: MS-2.3
+    seite: 34
+    zitat: "AI system performance or assurance criteria are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s). Measures are documented."
+    de: "Leistungs- oder Zusicherungskriterien des KI-Systems werden qualitativ oder quantitativ gemessen und für Bedingungen nachgewiesen, die der Einsatzumgebung ähneln. Die Messungen sind dokumentiert."
+  - id: MS-2.4
+    seite: 34
+    zitat: "The functionality and behavior of the AI system and its components – as identified in the MAP function – are monitored when in production."
+    de: "Funktion und Verhalten des KI-Systems und seiner Komponenten, wie in der Funktion MAP ermittelt, werden im Betrieb überwacht."
+  - id: MS-2.5
+    seite: 34
+    zitat: "The AI system to be deployed is demonstrated to be valid and reliable. Limitations of the generalizability beyond the conditions under which the technology was developed are documented."
+    de: "Für das einzusetzende KI-System ist nachgewiesen, dass es gültig und zuverlässig ist. Grenzen der Übertragbarkeit über die Bedingungen hinaus, unter denen die Technik entwickelt wurde, sind dokumentiert."
+  - id: MS-2.6
+    seite: 35
+    zitat: "The AI system is evaluated regularly for safety risks – as identified in the MAP function. The AI system to be deployed is demonstrated to be safe, its residual negative risk does not exceed the risk tolerance, and it can fail safely, particularly if made to operate beyond its knowledge limits. Safety metrics reflect system reliability and robustness, real-time monitoring, and response times for AI system failures."
+    de: "Das KI-System wird regelmässig auf Sicherheitsrisiken (Schutz von Leib, Leben und Umwelt) geprüft, wie in der Funktion MAP ermittelt. Für das einzusetzende KI-System ist nachgewiesen, dass es sicher ist, dass sein negatives Restrisiko die Risikotoleranz nicht übersteigt und dass es sicher versagen kann, besonders wenn es jenseits seiner Wissensgrenzen betrieben wird. Sicherheitskennzahlen bilden Zuverlässigkeit und Robustheit des Systems, Echtzeitüberwachung und Reaktionszeiten bei Ausfällen des KI-Systems ab."
+  - id: MS-2.7
+    seite: 35
+    zitat: "AI system security and resilience – as identified in the MAP function – are evaluated and documented."
+    de: "Informationssicherheit und Widerstandsfähigkeit des KI-Systems, wie in der Funktion MAP ermittelt, sind bewertet und dokumentiert."
+  - id: MS-2.8
+    seite: 35
+    zitat: "Risks associated with transparency and accountability – as identified in the MAP function – are examined and documented."
+    de: "Risiken in Bezug auf Transparenz und Rechenschaft, wie in der Funktion MAP ermittelt, sind untersucht und dokumentiert."
+  - id: MS-2.9
+    seite: 35
+    zitat: "The AI model is explained, validated, and documented, and AI system output is interpreted within its context – as identified in the MAP function – to inform responsible use and governance."
+    de: "Das KI-Modell ist erklärt, validiert und dokumentiert, und die Ausgaben des KI-Systems werden in ihrem Kontext, wie in der Funktion MAP ermittelt, interpretiert, um verantwortungsvolle Nutzung und Steuerung zu unterstützen."
+  - id: MS-2.10
+    seite: 35
+    zitat: "Privacy risk of the AI system – as identified in the MAP function – is examined and documented."
+    de: "Das Datenschutzrisiko des KI-Systems, wie in der Funktion MAP ermittelt, ist untersucht und dokumentiert."
+  - id: MS-2.11
+    seite: 35
+    zitat: "Fairness and bias – as identified in the MAP function – are evaluated and results are documented."
+    de: "Fairness und Verzerrung, wie in der Funktion MAP ermittelt, sind bewertet, und die Ergebnisse sind dokumentiert."
+  - id: MS-2.12
+    seite: 35
+    zitat: "Environmental impact and sustainability of AI model training and management activities – as identified in the MAP function – are assessed and documented."
+    de: "Umweltauswirkungen und Nachhaltigkeit von Training und Betrieb der KI-Modelle, wie in der Funktion MAP ermittelt, sind beurteilt und dokumentiert."
+  - id: MS-2.13
+    seite: 35
+    zitat: "Effectiveness of the employed TEVV metrics and processes in the MEASURE function are evaluated and documented."
+    de: "Die Wirksamkeit der eingesetzten TEVV-Kennzahlen und -Prozesse in der Funktion MEASURE ist bewertet und dokumentiert."
+  - id: MS-3.1
+    seite: 35
+    zitat: "Approaches, personnel, and documentation are in place to regularly identify and track existing, unanticipated, and emergent AI risks based on factors such as intended and actual performance in deployed contexts."
+    de: "Vorgehen, Personal und Dokumentation sind vorhanden, um bestehende, unerwartete und neu auftretende KI-Risiken regelmässig zu erkennen und zu verfolgen, gestützt auf Faktoren wie vorgesehene und tatsächliche Leistung im Einsatz."
+  - id: MS-3.2
+    seite: 35
+    zitat: "Risk tracking approaches are considered for settings where AI risks are difficult to assess using currently available measurement techniques or where metrics are not yet available."
+    de: "Vorgehen zur Risikoverfolgung sind für Umgebungen geprüft, in denen KI-Risiken mit heute verfügbaren Messverfahren schwer zu beurteilen sind oder noch keine Kennzahlen bestehen."
+  - id: MS-3.3
+    seite: 36
+    zitat: "Feedback processes for end users and impacted communities to report problems and appeal system outcomes are established and integrated into AI system evaluation metrics."
+    de: "Rückmeldeprozesse, über die Endnutzende und betroffene Gemeinschaften Probleme melden und Ergebnisse des Systems anfechten können, sind eingerichtet und in die Bewertungskennzahlen des KI-Systems eingebunden."
+  - id: MS-4.1
+    seite: 36
+    zitat: "Measurement approaches for identifying AI risks are connected to deployment context(s) and informed through consultation with domain experts and other end users. Approaches are documented."
+    de: "Messverfahren zum Erkennen von KI-Risiken sind auf den Einsatzkontext bezogen und stützen sich auf die Beratung mit Fachleuten des Anwendungsgebiets und anderen Endnutzenden. Die Verfahren sind dokumentiert."
+  - id: MS-4.2
+    seite: 36
+    zitat: "Measurement results regarding AI system trustworthiness in deployment context(s) and across the AI lifecycle are informed by input from domain experts and relevant AI actors to validate whether the system is performing consistently as intended. Results are documented."
+    de: "Messergebnisse zur Vertrauenswürdigkeit des KI-Systems im Einsatzkontext und über den KI-Lebenszyklus stützen sich auf Beiträge von Fachleuten des Anwendungsgebiets und relevanten KI-Akteuren, um zu prüfen, ob das System beständig wie vorgesehen arbeitet. Die Ergebnisse sind dokumentiert."
+  - id: MS-4.3
+    seite: 36
+    zitat: "Measurable performance improvements or declines based on consultations with relevant AI actors, including affected communities, and field data about context-relevant risks and trustworthiness characteristics are identified and documented."
+    de: "Messbare Verbesserungen oder Verschlechterungen der Leistung, gestützt auf die Beratung mit relevanten KI-Akteuren einschliesslich betroffener Gemeinschaften und auf Felddaten zu kontextbezogenen Risiken und Vertrauensmerkmalen, sind ermittelt und dokumentiert."
+  - id: MG-1.1
+    seite: 37
+    zitat: "A determination is made as to whether the AI system achieves its intended purposes and stated objectives and whether its development or deployment should proceed."
+    de: "Es wird entschieden, ob das KI-System seine vorgesehenen Zwecke und erklärten Ziele erreicht und ob seine Entwicklung oder sein Einsatz fortgesetzt werden soll."
+  - id: MG-1.2
+    seite: 37
+    zitat: "Treatment of documented AI risks is prioritized based on impact, likelihood, and available resources or methods."
+    de: "Die Behandlung dokumentierter KI-Risiken ist nach Auswirkung, Wahrscheinlichkeit und verfügbaren Mitteln oder Methoden priorisiert."
+  - id: MG-1.3
+    seite: 37
+    zitat: "Responses to the AI risks deemed high priority, as identified by the MAP function, are developed, planned, and documented. Risk response options can include mitigating, transferring, avoiding, or accepting."
+    de: "Reaktionen auf die KI-Risiken mit hoher Priorität, wie in der Funktion MAP ermittelt, sind entwickelt, geplant und dokumentiert. Optionen der Risikobehandlung können Vermindern, Übertragen, Vermeiden oder Akzeptieren sein."
+  - id: MG-1.4
+    seite: 37
+    zitat: "Negative residual risks (defined as the sum of all unmitigated risks) to both downstream acquirers of AI systems and end users are documented."
+    de: "Negative Restrisiken (definiert als Summe aller nicht verminderten Risiken) für nachgelagerte Erwerber von KI-Systemen und für Endnutzende sind dokumentiert."
+  - id: MG-2.1
+    seite: 37
+    zitat: "Resources required to manage AI risks are taken into account – along with viable non-AI alternative systems, approaches, or methods – to reduce the magnitude or likelihood of potential impacts."
+    de: "Die zur Behandlung von KI-Risiken nötigen Mittel werden berücksichtigt, zusammen mit tauglichen Alternativen ohne KI (Systeme, Vorgehen oder Methoden), um Ausmass oder Wahrscheinlichkeit möglicher Auswirkungen zu verringern."
+  - id: MG-2.2
+    seite: 37
+    zitat: "Mechanisms are in place and applied to sustain the value of deployed AI systems."
+    de: "Mechanismen sind vorhanden und werden angewendet, um den Wert eingesetzter KI-Systeme zu erhalten."
+  - id: MG-2.3
+    seite: 37
+    zitat: "Procedures are followed to respond to and recover from a previously unknown risk when it is identified."
+    de: "Verfahren werden befolgt, um auf ein bisher unbekanntes Risiko zu reagieren und sich davon zu erholen, sobald es erkannt ist."
+  - id: MG-2.4
+    seite: 37
+    zitat: "Mechanisms are in place and applied, and responsibilities are assigned and understood, to supersede, disengage, or deactivate AI systems that demonstrate performance or outcomes inconsistent with intended use."
+    de: "Mechanismen sind vorhanden und werden angewendet, und Verantwortlichkeiten sind zugewiesen und verstanden, um KI-Systeme abzulösen, abzukoppeln oder abzuschalten, deren Leistung oder Ergebnisse nicht mit der vorgesehenen Nutzung übereinstimmen."
+  - id: MG-3.1
+    seite: 37
+    zitat: "AI risks and benefits from third-party resources are regularly monitored, and risk controls are applied and documented."
+    de: "KI-Risiken und Nutzen aus Ressourcen Dritter werden regelmässig überwacht, und Risikokontrollen werden angewendet und dokumentiert."
+  - id: MG-3.2
+    seite: 37
+    zitat: "Pre-trained models which are used for development are monitored as part of AI system regular monitoring and maintenance."
+    de: "Vortrainierte Modelle, die für die Entwicklung genutzt werden, werden im Rahmen der regelmässigen Überwachung und Wartung des KI-Systems überwacht."
+  - id: MG-4.1
+    seite: 38
+    zitat: "Post-deployment AI system monitoring plans are implemented, including mechanisms for capturing and evaluating input from users and other relevant AI actors, appeal and override, decommissioning, incident response, recovery, and change management."
+    de: "Überwachungspläne für KI-Systeme nach dem Einsatz sind umgesetzt, einschliesslich Mechanismen, um Beiträge von Nutzenden und anderen relevanten KI-Akteuren zu erfassen und auszuwerten, sowie für Einspruch und Übersteuerung, Ausserbetriebnahme, Reaktion auf Vorfälle, Wiederherstellung und Änderungsmanagement."
+  - id: MG-4.2
+    seite: 38
+    zitat: "Measurable activities for continual improvements are integrated into AI system updates and include regular engagement with interested parties, including relevant AI actors."
+    de: "Messbare Tätigkeiten zur fortlaufenden Verbesserung sind in die Aktualisierungen des KI-Systems eingebunden und schliessen die regelmässige Zusammenarbeit mit interessierten Parteien, einschliesslich relevanter KI-Akteure, ein."
+  - id: MG-4.3
+    seite: 38
+    zitat: "Incidents and errors are communicated to relevant AI actors, including affected communities. Processes for tracking, responding to, and recovering from incidents and errors are followed and documented."
+    de: "Vorfälle und Fehler werden den relevanten KI-Akteuren, einschliesslich betroffener Gemeinschaften, mitgeteilt. Prozesse, um Vorfälle und Fehler zu verfolgen, darauf zu reagieren und sich davon zu erholen, werden befolgt und dokumentiert."
+
+merkmale:
+  - id: gueltig
+    abschnitt: "3.1"
+    seite: 18
+    zitat: "Valid and Reliable"
+    de: "Gültig und zuverlässig"
+  - id: sicher
+    abschnitt: "3.2"
+    seite: 19
+    zitat: "Safe"
+    de: "Sicher (Schutz von Leib, Leben und Umwelt)"
+  - id: geschuetzt
+    abschnitt: "3.3"
+    seite: 20
+    zitat: "Secure and Resilient"
+    de: "Geschützt und widerstandsfähig"
+  - id: rechenschaft
+    abschnitt: "3.4"
+    seite: 20
+    zitat: "Accountable and Transparent"
+    de: "Rechenschaftspflichtig und transparent"
+  - id: erklaerbar
+    abschnitt: "3.5"
+    seite: 21
+    zitat: "Explainable and Interpretable"
+    de: "Erklärbar und interpretierbar"
+  - id: datenschutz
+    abschnitt: "3.6"
+    seite: 22
+    zitat: "Privacy-Enhanced"
+    de: "Datenschutzfördernd"
+  - id: fair
+    abschnitt: "3.7"
+    seite: 22
+    zitat: "Fair – with Harmful Bias Managed"
+    de: "Fair, schädliche Verzerrung wird behandelt"

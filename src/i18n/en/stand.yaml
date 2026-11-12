@@ -1,0 +1,87 @@
+# Texts for src/ai-act/stand.yaml (English). Not legal advice.
+
+fassung:
+  titel: Consolidated version of 27/07/2026
+  text: |
+    The basis is the consolidated version of Regulation (EU) 2024/1689 of 27/07/2026 (document 02024R1689, German version 001.002, English version 001.001). It includes the amendments made by Regulation (EU) 2026/1744 (Digital Omnibus on AI), published in OJ L 1744 of 24/07/2026 and in force since 27/07/2026.
+
+    The cover page of the German version lists two corrigenda: C1 (OJ L 90802 of 09/10/2025) to Regulation (EU) 2024/1689 and C2 (OJ L 90810 of 29/09/2026) to Regulation (EU) 2026/1744. The English version lists no corrigendum.
+
+    Consolidated texts are for information only. Only the texts published in the Official Journal of the European Union are authentic.
+  geprueft: Checked on {datum}
+  naechste: The status is checked at least every six months and before decisions on classifications
+
+fristen:
+  FRIST-01: Entry into force of Regulation (EU) 2024/1689 (twentieth day after publication on 12/07/2024).
+  FRIST-02: Chapters I and II apply, including AI literacy (Article 4) and the prohibitions in Article 5(1)(a) to (h). Article 4 applies in its amended form since 27/07/2026.
+  FRIST-03: Chapter III Section 4 (notifying authorities, notified bodies), Chapter V (general-purpose AI models), Chapter VII (governance), Chapter XII (penalties) and Article 78 apply, except Article 101.
+  FRIST-04: The Commission publishes guidance on reporting serious incidents. For the status, see the note on the guidelines.
+  FRIST-05: The Commission provides guidelines and examples on classification as a high-risk AI system. For the status, see the note on the guidelines.
+  FRIST-06: Entry into force of Regulation (EU) 2026/1744; Articles 102 to 110 (amendments to other acts) apply.
+  FRIST-07: General date of application, including transparency obligations (Article 50), conformity assessment, declaration, CE marking and registration (Articles 40 to 49), post-market monitoring and incident reporting (Articles 72, 73) and the right to explanation (Article 86).
+  FRIST-08: New prohibitions in Article 5(1)(ba) and (bb) and Article 5(1a) and (1b) apply (non-consensual intimate imagery, child sexual abuse material). Article 113(3)(a) sets this date in addition to 02/02/2025 for Chapters I and II.
+  FRIST-09: Providers of systems generating synthetic content placed on the market before 02/08/2026 comply with the marking obligation in Article 50(2).
+  FRIST-10: Providers of general-purpose AI models placed on the market before 02/08/2025 comply with their obligations.
+  FRIST-11: The Commission adopts delegated acts that may restrict requirements for high-risk AI systems covered by Annex I Section A (Article 2(13)).
+  FRIST-12: The Commission adopts guidelines with a template for the post-market monitoring plan.
+  FRIST-13: Chapter III Sections 1 to 3 apply to high-risk AI systems under Article 6(2) and Annex III (obligations of providers, deployers, importers, distributors and authorised representatives).
+  FRIST-14: Notified bodies under Annex I Section A apply for designation under the AI Act.
+  FRIST-15: Chapter III Sections 1 to 3 apply to high-risk AI systems under Article 6(1) and Annex I.
+  FRIST-16: Delegated acts on Annex III of the Machinery Regulation (EU) 2023/1230 with requirements for AI safety components apply.
+  FRIST-17: Providers and deployers of high-risk AI systems intended to be used by public authorities meet the requirements for legacy systems as well.
+  FRIST-18: AI systems that are components of large-scale IT systems under Annex X and placed on the market before 02/08/2027 are brought into compliance.
+  FRIST-19: Each Member State has at least one AI regulatory sandbox at national level in operation, also jointly with other Member States (Article 57(1)); priority access for SMEs with a registered office or branch in the Union (Article 62(1)).
+
+hinweise:
+  berichtigung-c2:
+    titel: Corrigendum C2 to Article 6(1b)
+    text: |
+      The German consolidated version marks Article 6(1b) as corrected by C2 of 29/09/2026: AI systems the failure or malfunctioning of which would endanger health and safety qualify as safety components notwithstanding Article 6(1a). The corrigendum is more recent than the consolidation date but is included in German version 001.002. At every check of the status, EUR-Lex is searched for a newer consolidation.
+  formell-praktisch:
+    titel: Formal and practical date of application
+    text: |
+      Articles 43, 47 to 49, 72, 73 and 86 are not part of Chapter III Sections 1 to 3 and therefore formally apply from 02/08/2026. They depend, however, on high-risk AI systems and the requirements of Chapter III Section 2, which apply only from 02/12/2027 (Annex III) or 02/08/2028 (Annex I). Both dates are therefore given. This is an interpretation, not legal text; it is reviewed by a lawyer if a specific system is affected.
+  altsysteme:
+    titel: Legacy high-risk systems
+    text: |
+      For high-risk AI systems placed on the market or put into service before Chapter III applies, the Regulation applies only if their design is significantly changed afterwards (Article 111(2)). The prohibitions in Article 5 apply regardless. Exception: systems intended for public authorities must comply by 02/08/2030.
+  maschinen:
+    titel: AI in machinery
+    text: |
+      The Machinery Regulation (EU) 2023/1230 is now listed in Annex I Section B point 21. For high-risk AI systems related to such products, only Articles 6(1), 60a and 102 to 112 of the AI Act apply (Article 2(2)); Articles 57 to 59 apply only to the extent the requirements have been taken over into product legislation.
+
+      AI systems used solely for non-safety related aspects of user assistance, performance optimization, service efficiency, automation, convenience or quality control do not qualify as safety components (Article 6(1a)). Where their failure or malfunctioning would endanger health and safety, they still qualify as safety components (Article 6(1b)). A third-party assessment required only for radio or electromagnetic risks without a safety impact does not meet Article 6(1)(b) (Article 6(1c)).
+
+      AI requirements for machinery will come through delegated acts on Annex III of the Machinery Regulation, applying from 02/08/2028 (Article 8 of the Machinery Regulation, added by Article 3(1) of Regulation (EU) 2026/1744). Until specific standards exist, harmonised standards under the AI Act also give presumption of conformity under the Machinery Regulation (its Article 20(10)). If AI in a machine performs a protective function, the classification is reviewed by a lawyer.
+  normen-en-18286:
+    titel: EN 18286:2026 and Article 17 (open interpretation)
+    text: |
+      Implementing Decision (EU) 2026/2274 of 12/10/2026 (OJ L 2026/2274 of 14/10/2026, CELEX 32026D2274) lists EN 18286:2026 without restriction. Open interpretation: Article 40(1) expressly names, for the presumption, only the requirements in Chapter III Section 2 and the obligations in Chapter V Sections 2 and 3. Article 17 is in Chapter III Section 3. The last subparagraph of Article 40(2), on the other hand, also names Section 3 for standardization requests. This document does not decide whether, or how far, the listing still carries a presumption for the quality management system under Article 17. The mapping in Annex ZA of the purchased standard is decisive; the question is legally reviewed before anyone relies on it.
+  iso-42001-keine-vermutung:
+    titel: ISO/IEC 42001 gives no presumption of conformity
+    text: |
+      ISO/IEC 42001 is not a harmonised standard within the meaning of Article 40(1). A certified AIMS helps to demonstrate many obligations but replaces neither the conformity assessment nor the other obligations of the AI Act. This is an interpretation based on Article 40(1), not legal text.
+  leitlinien-kommission:
+    titel: Commission guidelines (as of 07/11/2026, to be verified)
+    text: |
+      Guidelines are not binding but show the Commission's view. Art. 50, transparency: checked on the Commission page on 07/11/2026; adopted by the Commission and published on 20/07/2026, Commission page updated on 05/11/2026, versions in 23 languages. Art. 6(5), classification as high-risk: draft of 19/05/2026, page updated on 23/07/2026; the statutory deadline has passed, no final version published as of 07/11/2026. Art. 73, serious incidents: draft with a reporting template of 26/09/2025, consultation until 07/11/2025, page updated on 04/11/2025; the statutory deadline has passed, no final version published as of 07/11/2026. Source: digital-strategy.ec.europa.eu, retrieved on 07/11/2026. The status is checked there before a classification is based on it.
+  uebergang-art-111-4:
+    titel: Transition under Art. 111(4) for self-operated systems (open interpretation)
+    text: |
+      Art. 111(4) allows until 02/12/2026 for the marking under Art. 50(2), but names only systems placed on the market before 02/08/2026. Art. 3(9) and (11) distinguish placing on the market from putting into service. This document does not decide whether the period also applies to a system that a company operates itself and has only put into service; the question is legally reviewed. If the marking is implemented before 02/08/2026, the question does not arise.
+  kmu-erleichterungen:
+    titel: Relief for SMEs and small mid-cap enterprises
+    text: |
+      SMEs are defined by Recommendation 2003/361/EC, small mid-cap enterprises by Recommendation (EU) 2025/1099 (Article 3(14a), (14b)). Relief: support with AI literacy (Article 4(2)), simplified technical documentation using a Commission form (Article 11(1)), QMS proportionate to size (Article 17(2)), simplified QMS for SMEs without partner or linked enterprises (Article 63(1)), priority access to sandboxes (only with a registered office or branch in the Union) and lower conformity assessment fees (Article 62(1), (2)), and for fines the lower of the percentage or amount (Article 99(6) for SMEs, Article 99(6a) for small mid-cap enterprises for Article 99(4) and (5)).
+  sanktionen:
+    titel: Fine ranges
+    text: |
+      Prohibited practices up to EUR 35 million or 7% of worldwide annual turnover (Article 99(3)); obligations under Articles 16, 22, 23, 24, 25(2) and (4), 26 and 50 up to EUR 15 million or 3% (Article 99(4)); incorrect information to authorities up to EUR 7.5 million or 1% (Article 99(5)). Article 4 is not listed in Article 99(4); infringements can only be sanctioned under national rules according to Article 99(1).
+  schweiz-geltungsbereich:
+    titel: When the AI Act covers Swiss companies
+    text: |
+      The AI Act covers providers placing AI systems on the market or putting them into service in the EU, irrespective of where they are established (Article 2(1)(a)), and providers and deployers in third countries where the output of the AI system is used in the EU (Article 2(1)(c)). A Swiss deployer without any EU link is not covered. Swiss providers of high-risk AI systems appoint an authorised representative in the EU (Article 22(1)). If the output of a system goes to customers or group companies in the EU, the link is reviewed by a lawyer.
+  schweiz-regulierung:
+    titel: Regulation in Switzerland (as of 07/11/2026, to be verified)
+    text: |
+      Switzerland has no specific legislation on AI. On 12/02/2025 the Federal Council decided to ratify the Council of Europe Framework Convention on AI. Necessary legislative amendments are to be sector-specific where possible; cross-sector rules are limited to key areas relevant to fundamental rights such as data protection. The Federal Department of Justice and Police is preparing a consultation draft on transparency, data protection, non-discrimination and oversight. It is to submit the consultation draft to the Federal Council by the end of 2026 (Federal Council statement of 20/05/2026 on interpellation 26.3414 ‘Umsetzung der KI-Konvention des Europarates in der Schweiz’, parlament.ch, retrieved on 07/11/2026). Important for SMEs: according to this statement, the draft is in principle also to provide obligations for private parties where fundamental rights apply between private parties. According to the statement, the participants in a workshop with around 60 experts largely agreed that certain rules, in particular on transparency, should apply in both the public and the private sector; this is not a decision of the Federal Council. The federal SME portal expects the draft in spring 2027 (kmu.admin.ch, 23/09/2026). The consultation has not been opened as of 07/11/2026.

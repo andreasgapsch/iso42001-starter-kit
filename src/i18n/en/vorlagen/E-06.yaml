@@ -1,0 +1,45 @@
+# E-06 Fundamental rights impact assessment
+hinweis_umfang: "One file for each high-risk AI system under Annex III for which you are the deployer. Page 1 clarifies whether the assessment is required at all; for most SMEs it is not. Four pages at most; the details are in D-09."
+juristisch: "Whether your company provides public services is a legal question. Have the applicability and every assessment carried out reviewed by a lawyer. This template is not legal advice."
+juristisch_firma: "Whether we provide public services is a legal question. We have the applicability and every assessment carried out reviewed by a lawyer. This document is not legal advice."
+abschnitte:
+  anwendbarkeit: Applicability check
+  abschaetzung: Assessment of the impact on fundamental rights
+  dsfa: Link to the data protection impact assessment
+  mitteilung: Notification to the market surveillance authority
+  freigabe: Approval
+anwendbarkeit_text: "A fundamental rights impact assessment under {fs:27} is required before the first use of a high-risk AI system under Annex III, but only for certain deployers. It applies from {frist:FRIST-13}."
+felder:
+  system: AI system
+  bereich: "Area under Annex III (for example 4a, 5b)"
+  ergebnis: Fundamental rights impact assessment required
+  begruendung: Reasoning
+  geprueft: "Checked by, on"
+  dsfa: "DPIA (number, sections)"
+  behoerde: Competent market surveillance authority
+  mitgeteilt: Notified on
+  referenz: Reference of the notification
+platzhalter_bereich: "Point and letter"
+fragen_kopf: ["No.", Question, Answer]
+fragen:
+  hochrisiko: "Do we, as the deployer, use a high-risk AI system under Art. 6(2), that is, a system under {fs:Annex III} (E-02)?"
+  infrastruktur: "Is the system intended for critical infrastructure (Annex III point 2)? These systems are exempt from the obligation."
+  oeffentlich: "Are we a body governed by public law?"
+  dienste: "Are we a private entity providing public services, for example on behalf of or in place of a public authority?"
+  kredit: "Is the system used to evaluate the creditworthiness of natural persons (Annex III point 5(b)) or for risk assessment and pricing in life and health insurance (Annex III point 5(c))?"
+regel: "**Result:** the assessment is required if question 1 is answered yes and question 2 no, and at least one of questions 3, 4 or 5 is answered yes."
+nicht_noetig: "If the assessment is not required, we record the result with the reasoning; the following sections are omitted. The AI system impact assessment under ISO/IEC 42001 (D-09) remains in place in any case. We repeat the check if the purpose, customer base or client changes."
+abschaetzung_text: "The assessment describes how the use of the system may affect the fundamental rights of the persons concerned. It covers the elements under {fs:27(1)}, points (a) to (f)."
+hinweis_abschaetzung: "Much of the information is already in the impact assessment D-09 (part B). Refer to it and add only what is missing there, in particular the period and frequency of use (b) and the implementation of human oversight according to the instructions for use (e). Include the provider's information under Art. 13."
+aus_d09: " (from D-09, {id})"
+inhalte:
+  a: "a) Processes in which the system is used in line with its intended purpose"
+  b: "b) Period of time and frequency of use"
+  c: "c) Categories of natural persons and groups likely to be affected in the specific use"
+  d: "d) Specific risks of harm to these groups, taking into account the provider's information"
+  e: "e) Implementation of human oversight according to the instructions for use"
+  f: "f) Measures to be taken if risks materialize, including internal governance and complaint mechanisms"
+aktualisieren: "The obligation applies to the first use. In similar cases, we may rely on previous assessments or on assessments by the provider. If any of the elements (a) to (f) changes, we update the assessment ({fs:27(2)})."
+dsfa_text: "If an obligation is already met through a data protection impact assessment (GDPR Art. 35), we may refer to the relevant sections or take them over ({fs:27(4)}). For Swiss companies, the DPIA is governed by Art. 22 FADP; for the AI Act, the DPIA under the GDPR counts where the GDPR applies."
+mitteilung_text: "Once the assessment is complete, we notify the market surveillance authority of the result by submitting the completed template of the AI Office ({fs:27(3)}, Art. 27(5)). In the exceptional cases under Art. 46(1), the notification can be omitted."
+unterschriften: ["System owner", "Approval by management"]

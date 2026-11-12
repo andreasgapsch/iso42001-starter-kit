@@ -1,0 +1,377 @@
+# Page texts for phase E12 Internal audit and management review. Format: src/gefuehrt/FORMAT.md
+E12-einfuehrung:
+  titel: Internal audit and management review
+  frage: Does your management system work the way you described it?
+  warum: In the [[g:internes-audit]], an independent person checks the system against the standard and your own rules. In the [[g:managementbewertung]], management assesses the results and decides on improvements. You handle deviations as [[g:nichtkonformitaet|nonconformities]], each with a cause and a [[g:korrekturmassnahme]].
+  fehler: Weak internal audits, management reviews without the required inputs and corrections without root cause analysis are among the five most common findings. If you have an [[g:isms]], you run both jointly for both standards.
+E12-programm:
+  titel: Audit programme
+  frage: How often and with which methods do you audit the AI management system?
+  warum: The audit programme ensures that all clauses and all applicable controls are checked within one cycle. Before the first certification audit you need one complete audit.
+  fehler: Programmes that only read documents miss the gap between paper and practice. The [[g:zertifizierungsstelle|certification body]]'s auditors look closely at your audit report.
+  felder:
+    meta.gefuehrt.antworten.auditprogramm.rhythmus:
+      label: Frequency
+      hilfe: At least once a year, all topics within three years; everything before initial certification.
+    meta.gefuehrt.antworten.auditprogramm.methoden:
+      label: Methods
+      hilfe: Interviews and samples are essential.
+    meta.gefuehrt.antworten.auditprogramm.kombiniert:
+      label: Joint audit for ISMS and AIMS
+      hilfe: One audit for the [[g:isms]] and the [[g:aims|AIMS]] saves time; checklist D-20 covers both standards.
+E12-audit:
+  titel: Plan and carry out the internal audit
+  frage: When, by whom and with what scope will the internal audit take place?
+  warum: The auditor must not check their own work. In an SME this is often done by a trained person from another department, the [[g:isms]] team as far as it is not working on the [[g:aims|AIMS]] project, or an external expert. Plan time for the auditor to get to know ISO/IEC 42001. The checklist records for each audit item which evidence was seen. Choose the processes in scope so that every mandatory process is audited once within the three-year cycle.
+  fehler: If the AIMS lead audits their own system, independence is missing. Without a reason for independence, the check shows a note.
+  felder:
+    geplant:
+      label: Planned for
+      hilfe: A few weeks before the management review.
+    umfang:
+      label: Scope
+      hilfe: e.g. "all clauses 4 to 10, all applicable [[g:control|controls]], sample KI-001, KI-004, KI-008".
+    kriterien:
+      label: Criteria
+      hilfe: e.g. ‘ISO/IEC 42001, AI policy, D-15’.
+    auditor:
+      label: Auditor
+      hilfe: Name and job title.
+    unabhaengigkeit:
+      label: Independence
+      hilfe: Why the person is independent, e.g. ‘Quality manager, not involved in setting up the AIMS’.
+    kombiniertMitIsms:
+      label: Together with the ISMS audit
+      hilfe: One date for both standards.
+    durchgefuehrt:
+      label: Carried out on
+      hilfe: Date of the closing meeting.
+    checkliste:
+      label: Checklist per audit item
+      hilfe: For each clause and control, the evidence seen (document with version, record or evidence ID), the sample and the result. With ‘automatic’, D-20 takes the result from the findings of the audit. Appears in D-20, sheet ‘Checklist’.
+    stichproben:
+      label: Samples and audit tests
+      hilfe: For each row of the sheet ‘Samples’ in D-20 (number 1 to 13), the evidence seen and the result, e.g. one AI system through all steps.
+    stichproben.nr:
+      label: No.
+      hilfe: Number of the row in the sheet ‘Samples’ (1 to 7 one system through all steps, 8 to 13 audit tests).
+    stichproben.nachweis:
+      label: Evidence seen
+      hilfe: Document with version, record, system or person.
+    stichproben.ergebnis:
+      label: Result
+      hilfe: Conforming, observation or nonconformity.
+    ergebnis:
+      label: Result
+      hilfe: Brief conclusion; you record findings on the next page.
+    bericht:
+      label: Audit report
+      hilfe: "Identifier and location of the report, e.g. ‘Audit report AU-2027-01, version 1.0’."
+    ziel:
+      label: "Audit objective"
+      hilfe: "e.g. check readiness for [[g:stage-1|stage 1]]."
+    umfangControls:
+      label: "Controls in scope"
+      hilfe: "Empty means: all applicable controls."
+    umfangProzesse:
+      label: "Processes in scope"
+      hilfe: "Processes this audit examines (Processes area). Empty means: no restriction. Over the three-year cycle, every mandatory process should be in scope once."
+    ort:
+      label: "Location"
+      hilfe: "Site or ‘remote’."
+    methode:
+      label: "Method and samples"
+      hilfe: "e.g. interviews, documents, demonstration on the system; AI systems sampled."
+    auditierte:
+      label: "People audited"
+      hilfe: "Names and roles."
+    agenda:
+      label: "Agenda"
+      hilfe: "e.g. opening, interviews per area, closing meeting."
+    berichtAn:
+      label: "Report to"
+      hilfe: "Who receives the audit report, e.g. top management."
+    durchgefuehrtBis:
+      label: "Last audit day"
+      hilfe: "For audits over several days, the last day; D-20 shows the period."
+E12-feststellungen:
+  titel: Record findings
+  frage: Which deviations and opportunities for improvement were found?
+  warum: Findings come from audits, the management review, incidents or reports. For each finding you record its grading, a description and the immediate correction.
+  fehler: An audit without a single finding does not look very credible to certification bodies. Auditors want to see that your system finds weaknesses.
+  felder:
+    quelle:
+      label: Source
+      hilfe: Where the finding comes from.
+    audit:
+      label: Audit
+      hilfe: Link to the audit.
+    einstufung:
+      label: Grading
+      hilfe: A major nonconformity affects a whole requirement or puts effectiveness at risk.
+    beschreibung:
+      label: Description
+      hilfe: What was found, with evidence, e.g. ‘Supplier review missing for KI-005’.
+    nachweis:
+      label: Objective evidence
+      hilfe: What was seen, e.g. document with version, record, sample or statement in the interview. Appears in D-20 and D-22.
+    normbezug:
+      label: Reference to the standard
+      hilfe: e.g. ‘A.10.3’.
+    korrektur:
+      label: Immediate correction
+      hilfe: What was done straight away to fix the deviation.
+    datum:
+      label: "Date"
+      hilfe: "When the finding was raised."
+    erfasstAm:
+      label: "Recorded on"
+      hilfe: "Only if later than the date, e.g. for an incident recorded afterwards: the identifier F-xxx applies from this day. Records before it name the event without the identifier."
+    kiSystem:
+      label: "AI system concerned"
+      hilfe: "If the finding concerns a specific system."
+    bereich:
+      label: "Area or process"
+      hilfe: "e.g. HR, supplier management."
+    schwere:
+      label: "Severity"
+      hilfe: "Only for incidents and near misses: levels as in D-14, from 1 minor to 4 severe."
+    entdecktAm:
+      label: "Discovered (date, time)"
+      hilfe: "When the incident or near miss was noticed. Start of the PR-19 measurement (hours until containment)."
+    eingedaemmtAm:
+      label: "Contained (date, time)"
+      hilfe: "From when the incident could cause no further harm, e.g. system restricted or fallback used. End of the PR-19 measurement."
+E12-meldungen:
+  titel: Reports and objections
+  frage: Which reports, feedback and objections have been received, and how were they handled?
+  warum: Reports from employees (reporting channel, D-04) and feedback or objections from customers and affected persons (contact channel, D-14) belong in a register. It shows that the channel is used and provides the number of reports and the response time for the measurement plan (D-05). The register is in D-22, sheet ‘Reports’.
+  fehler: Auditors follow a report from receipt to closure. Without a register, the reporting channel is not evidenced.
+  felder:
+    meldungen:
+      label: Reports
+      hilfe: One row per report.
+    meldungen.id:
+      label: ID
+      hilfe: e.g. ‘ME-001’.
+    meldungen.datum:
+      label: Received
+      hilfe: Date of receipt.
+    meldungen.art:
+      label: Type
+      hilfe: Concern, feedback, objection or complaint.
+    meldungen.herkunft:
+      label: Origin
+      hilfe: Internal (employees) or external (customers, affected persons, suppliers).
+    meldungen.kanal:
+      label: Channel
+      hilfe: e.g. mailbox, form in the customer portal.
+    meldungen.kiSystem:
+      label: AI system
+      hilfe: System concerned, if known.
+    meldungen.beschreibung:
+      label: Description
+      hilfe: What was reported, without unnecessary personal data.
+    meldungen.bearbeitung:
+      label: Handled by
+      hilfe: Who handles the report.
+    meldungen.bestaetigtAm:
+      label: Acknowledged on
+      hilfe: Date of the acknowledgement of receipt.
+    meldungen.erledigtAm:
+      label: Closed on
+      hilfe: Date of the answer or closure.
+    meldungen.ergebnis:
+      label: Result and response
+      hilfe: Result, response and reference to a finding (F-xxx), an action or a risk.
+    meldungen.status:
+      label: Status
+      hilfe: Open, in progress or closed.
+E12-korrektur:
+  titel: Cause and corrective action
+  frage: Why did the deviation occur, what prevents it from happening again, and did it work?
+  warum: A correction fixes the individual case; a [[g:korrekturmassnahme]] removes the cause. After a reasonable period you check whether the action has worked.
+  fehler: The check flags nonconformities without a cause or without an effectiveness check as errors. Auditors ask which root cause method you used, such as asking ‘Why?’ five times.
+  felder:
+    ursache:
+      label: Cause
+      hilfe: e.g. "No trigger for supplier review when SaaS subscriptions are paid by credit card".
+    massnahmen:
+      label: Corrective actions
+      hilfe: Link actions with an owner and a deadline.
+    wirksamkeit.am:
+      label: Effectiveness checked on
+      hilfe: A few weeks after implementation.
+    wirksamkeit.ergebnis:
+      label: Result of the effectiveness check
+      hilfe: e.g. ‘Two new subscriptions reviewed correctly since then’.
+    status:
+      label: Status
+      hilfe: Close only once the action has proved effective.
+    ursacheMethode:
+      label: "Root cause method"
+      hilfe: "e.g. ‘5 whys’."
+    ursacheKategorie:
+      label: AI cause category
+      hilfe: Choose a suggestion as in D-22 (data, model, use outside the purpose, competence, supplier, process) or write your own category.
+    aehnlicheFaelle:
+      label: "Similar cases"
+      hilfe: "Whether the problem exists or could occur elsewhere, and what you checked."
+    meldepflicht:
+      label: Reporting duty checked
+      hilfe: Whether the nonconformity must be reported to customers, affected persons or authorities, for example as a serious incident under the EU AI Act or as a personal data breach. Appears in D-22.
+    risikoAngepasst:
+      label: "Risk assessment updated"
+      hilfe: "Whether you updated the risk register (D-07)."
+    wirksamkeitGeplant:
+      label: "Effectiveness review planned for"
+      hilfe: "By when effectiveness will be checked, e.g. after three months or a number of applications."
+E12-mb:
+  titel: Plan the management review
+  frage: When will the management review take place and who will attend?
+  warum: Management reviews the system at least once a year. A review must have taken place before the first certification audit.
+  fehler: A management review without a member of management does not count. Auditors read the minutes and check who attended.
+  felder:
+    datum:
+      label: Date
+      hilfe: After the internal audit, before [[g:stage-1|stage 1]].
+    teilnehmende:
+      label: Participants
+      hilfe: At least one member of management and the [[g:aims|AIMS]] lead.
+    kombiniertMitIsms:
+      label: Together with the ISMS management review
+      hilfe: One meeting with agenda items for the [[g:isms]] and the AI management system.
+    ort:
+      label: "Location"
+      hilfe: "e.g. meeting room or online."
+    leitung:
+      label: "Chair of the meeting"
+      hilfe: "Usually the head of top management."
+    zeitraum.von:
+      label: "Reporting period from"
+      hilfe: "Start of the period covered by the review."
+    zeitraum.bis:
+      label: "Reporting period to"
+      hilfe: "End of the period."
+E12-mb-eingaben:
+  titel: Inputs to the management review
+  frage: What do you present to management for review?
+  warum: The standard specifies which inputs the review needs, such as the status of earlier actions, changes in the environment, the performance of the system and opportunities for improvement. If one is missing, the review is incomplete.
+  fehler: Minutes that only say ‘AIMS is running well’ are not enough. Auditors go through the inputs one by one.
+  felder:
+    eingaben.statusMassnahmen:
+      label: Status of actions from earlier reviews
+      hilfe: For the first review, the status of the setup project.
+    eingaben.aenderungenThemen:
+      label: Changes in internal and external issues
+      hilfe: e.g. new AI Act deadlines, new customer requirements.
+    eingaben.aenderungenParteien:
+      label: Changes in the expectations of interested parties
+      hilfe: New or changed requirements.
+    eingaben.leistung:
+      label: Nonconformities and corrective actions
+      hilfe: Status of nonconformities and their corrective actions (D-21 no. 4). Measurements and audits have their own fields.
+    eingaben.messung:
+      label: Monitoring and measurement results, achievement of AI objectives
+      hilfe: e.g. ‘Z-001 achieved, Z-002 partly’. If left empty, D-21 summarizes the measurements of the objectives up to the date of the review (no. 5).
+    eingaben.audits:
+      label: Audit results
+      hilfe: Internal and external audits with their findings. If left empty, D-21 summarizes the audits up to the date of the review (no. 6).
+    eingaben.verbesserungen:
+      label: Opportunities for improvement
+      hilfe: Suggestions from audits, employees and customers.
+    eingaben.weitere:
+      label: Further inputs
+      hilfe: e.g. resources, feedback from affected people.
+E12-mb-ergebnisse:
+  titel: Further agenda items of the management review
+  frage: What did the review conclude on the inventory, risks, reports, suppliers, objectives, resources and the AI policy?
+  warum: Besides the inputs that every management review covers, management looks at the AI topics one by one and records the result and assessment for each agenda item. For the AI policy, an explicit decision is needed on whether it is still suitable and adequate or will be changed. The information appears in D-21 under ‘Recommended items’, with an [[g:isms]] in the supplementary sheet D-21-EB under ‘Additional agenda items for the [[g:aims|AIMS]]’.
+  fehler: Minutes that only say ‘discussed’ show no assessment. Auditors look for a result and a decision on each topic, especially on the policy.
+  felder:
+    ergebnisse.inventar:
+      label: AI inventory and approvals
+      hilfe: e.g. "Two new systems approved, one shadow system prohibited; inventory complete."
+    ergebnisse.risiken:
+      label: Risks and impact assessments
+      hilfe: Changed risks, open treatments, new impact assessments.
+    ergebnisse.meldungen:
+      label: Reports and incidents
+      hilfe: Reports received from employees and external parties, and what followed from them.
+    ergebnisse.lieferanten:
+      label: Suppliers
+      hilfe: Result of the supplier reviews, changes at [[g:anbieter|providers]].
+    ergebnisse.ziele:
+      label: AI objectives
+      hilfe: Whether the objectives still fit or will be changed.
+    ergebnisse.ressourcen:
+      label: Resources
+      hilfe: Whether time, budget and competences are sufficient.
+    ergebnisse.aiact:
+      label: EU AI Act
+      hilfe: Status of the obligations, new deadlines, changes in the law.
+    ergebnisse.leitlinie:
+      label: Review of the AI policy
+      hilfe: Explicit decision on whether the policy remains suitable and adequate or will be changed, e.g. ‘The policy remains adequate; principle 4 will be extended by 30 June.’
+E12-mb-entscheide:
+  titel: Decisions of the management review
+  frage: What did management decide?
+  warum: The review ends with decisions on improvements, changes to the system and resources. These lead to actions with an owner and a deadline.
+  fehler: Reviews without a decision or action look like an information session. Auditors trace decisions through to the action list.
+  felder:
+    entscheide:
+      label: Decisions
+      hilfe: e.g. "Budget approved for oversight training in HR; policy unchanged; objective Z-003 adjusted".
+    massnahmen:
+      label: Actions
+      hilfe: Link the actions arising from the decisions.
+    gesamtbeurteilung.geeignet.urteil:
+      label: "Suitable: judgement"
+      hilfe: "Does the [[g:aims|AIMS]] fit the purpose and the use of AI?"
+    gesamtbeurteilung.geeignet.begruendung:
+      label: "Suitable: reasons"
+      hilfe: "One or two sentences."
+    gesamtbeurteilung.angemessen.urteil:
+      label: "Adequate: judgement"
+      hilfe: "Are effort and scope in proportion?"
+    gesamtbeurteilung.angemessen.begruendung:
+      label: "Adequate: reasons"
+      hilfe: "One or two sentences."
+    gesamtbeurteilung.wirksam.urteil:
+      label: "Effective: judgement"
+      hilfe: "Does the AIMS achieve its objectives?"
+    gesamtbeurteilung.wirksam.begruendung:
+      label: "Effective: reasons"
+      hilfe: "One or two sentences."
+    entscheideListe:
+      label: "Individual decisions"
+      hilfe: "One row per decision with type, owner and date; adds to the text above."
+    entscheideListe.art:
+      label: "Type"
+      hilfe: "Improvement, change to the AIMS, resources, objectives or residual risk."
+    entscheideListe.text:
+      label: "Decision"
+      hilfe: "What was decided."
+    entscheideListe.verantwortlich:
+      label: "Responsible"
+      hilfe: "Who implements the decision."
+    entscheideListe.termin:
+      label: "Due date"
+      hilfe: "By when."
+    entscheideListe.massnahme:
+      label: "Action"
+      hilfe: "Related action, if recorded."
+E12-verbesserung:
+  titel: Continual improvement
+  frage: Which sources do you draw improvements from?
+  warum: "[[g:fortlaufende-verbesserung|Continual improvement]] is more than fixing errors. Metrics, feedback and suggestions show where the system can get better."
+  fehler: An improvement register that only contains audit findings shows little initiative of your own. Auditors ask about an improvement that came from everyday work.
+  felder:
+    meta.gefuehrt.antworten.verbesserung.quellen:
+      label: Sources
+      hilfe: Several answers possible.
+E12-rmf-profil:
+  titel: "NIST AI RMF profile"
+  frage: "Where do you stand on the 72 subcategories of the NIST AI RMF, and where do you want to be?"
+  warum: "The current and target profile shows for each subcategory what has been achieved, what you are aiming for and with which action you close the gap. The tool suggests the current level from your documents, [[g:control|controls]] and entries. Update the profile before the [[g:managementbewertung|management review]] and take the gaps along as input (template N-01, D-21)."
+  fehler: "A target of 3 everywhere is not a target. Choose what matters for your company and your customers, and record an action for every gap. The levels describe your status in the kit, not a confirmation by NIST."

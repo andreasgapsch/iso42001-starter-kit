@@ -1,0 +1,82 @@
+# Etappe E1 Ausgangslage. Format: src/gefuehrt/FORMAT.md
+seiten:
+  - { id: E1-einfuehrung, typ: info, norm: "4 bis 10, 5.1, 7.1", vorlage: D-00, leitfaden: 1 }
+  - id: E1-vorhanden
+    typ: formular
+    norm: "4.4"
+    vorlage: D-00
+    leitfaden: 2
+    beispiel: meta.gefuehrt.antworten.vorhandeneSysteme
+    felder:
+      - { pfad: meta.gefuehrt.antworten.vorhandeneSysteme, typ: mehrfach, optionen: managementsysteme }
+  - id: E1-schnellcheck-a
+    typ: formular
+    norm: "4 bis 6"
+    vorlage: D-00
+    leitfaden: 1
+    beispiel: gapAnalyse.kapitel
+    felder:
+      - { pfad: gapAnalyse.kapitel.k4, typ: auswahl, optionen: reife }
+      - { pfad: gapAnalyse.kapitel.k5, typ: auswahl, optionen: reife }
+      - { pfad: gapAnalyse.kapitel.k6, typ: auswahl, optionen: reife }
+      - { pfad: gapAnalyse.kapitel.inventar, typ: auswahl, optionen: reife }
+  - id: E1-schnellcheck-b
+    typ: formular
+    norm: "7 bis 10"
+    vorlage: D-00
+    leitfaden: 1
+    beispiel: gapAnalyse.kapitel
+    felder:
+      - { pfad: gapAnalyse.kapitel.k7, typ: auswahl, optionen: reife }
+      - { pfad: gapAnalyse.kapitel.k8, typ: auswahl, optionen: reife }
+      - { pfad: gapAnalyse.kapitel.k9, typ: auswahl, optionen: reife }
+      - { pfad: gapAnalyse.kapitel.k10, typ: auswahl, optionen: reife }
+  - id: E1-team
+    typ: liste
+    liste: personen
+    norm: "5.3, 7.1"
+    vorlage: D-04
+    leitfaden: 1
+    beispiel: personen[0]
+    felder:
+      - { pfad: name, typ: text, pflicht: true }
+      - { pfad: funktion, typ: text, pflicht: true }
+      - { pfad: aimsRollen, typ: mehrfach, optionen: aimsRolle }
+  - id: E1-auftrag
+    typ: formular
+    norm: "5.1, 7.1"
+    vorlage: D-00
+    leitfaden: 1
+    beispiel: organisation.projektauftrag
+    felder:
+      - { pfad: organisation.projektauftrag.ziel, typ: textarea, pflicht: true }
+      - { pfad: organisation.projektauftrag.nutzen, typ: textarea }
+      - { pfad: organisation.projektauftrag.geltungsbereich, typ: textarea }
+      - { pfad: organisation.projektauftrag.aufwandPt, typ: zahl }
+      - { pfad: organisation.projektauftrag.budget, typ: zahl }
+      - { pfad: organisation.projektauftrag.pensumProzent, typ: zahl }
+      - { pfad: organisation.projektauftrag.sponsor, typ: person }
+      - { pfad: organisation.projektauftrag.team, typ: personen }
+      - { pfad: organisation.projektauftrag.meilensteine, typ: tabelle, spalten: [{ pfad: was, typ: text }, { pfad: termin, typ: datum }] }
+      - { pfad: organisation.projektauftrag.risiken, typ: textarea }
+  - id: E1-freigabe
+    typ: formular
+    norm: "5.1"
+    vorlage: D-00
+    leitfaden: 1
+    beispiel: organisation.projektauftrag
+    felder:
+      - { pfad: organisation.projektauftrag.freigabe, typ: freigabe, pflicht: true }
+      - { pfad: organisation.projektauftrag.glTraktandum, typ: auswahl, optionen: glTakt }
+  - id: E1-zertifizierung
+    typ: formular
+    norm: "9.2, 9.3"
+    vorlage: D-25
+    leitfaden: 1
+    beispiel: meta.gefuehrt.antworten.zertifizierung
+    felder:
+      - { pfad: meta.gefuehrt.antworten.zertifizierung.offertenBis, typ: datum }
+      - { pfad: meta.gefuehrt.antworten.zertifizierung.angefragt, typ: textarea }
+      - { pfad: meta.gefuehrt.antworten.zertifizierung.wahlBis, typ: datum }
+      - { pfad: meta.gefuehrt.antworten.zertifizierung.stelle, typ: text }
+      - { pfad: meta.gefuehrt.antworten.zertifizierung.akkreditiert, typ: janein }

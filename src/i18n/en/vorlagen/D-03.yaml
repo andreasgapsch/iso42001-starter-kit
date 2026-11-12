@@ -1,0 +1,82 @@
+# D-03 AI policy
+einleitung: "This policy sets out how [[Company name]] develops, buys and uses artificial intelligence (AI). It applies to all employees and to everyone who works with AI systems on our behalf."
+einleitung_firma: "This policy sets out how {firma} develops, buys and uses artificial intelligence (AI). It applies to all employees and to everyone who works with AI systems on our behalf."
+einleitung_firma_ohne_entwicklung: "This policy sets out how {firma} buys and uses artificial intelligence (AI). It applies to all employees and to everyone who works with AI systems on our behalf."
+hinweis_umfang: "Keep the policy short (two to three pages). It covers the why and the what, not the how. Do not name products; tools are listed in the AI inventory (D-10) and the AI use policy (D-15)."
+abschnitte:
+  zweck: Purpose and scope
+  grundsaetze: Our principles
+  verpflichtungen: Our commitments
+  risikobereitschaft: Risk appetite
+  ziele: Framework for AI objectives
+  zustaendigkeiten: Responsibilities
+  bezug: Relation to other policies
+  ausnahmen: Deviations and exceptions
+  bekanntmachung: Communication and availability
+  ueberpruefung: Review
+  freigabe: Approval
+zweck_text: "The policy applies to the scope of the AI management system as defined in D-02. It provides the framework for our AI objectives, procedures and rules."
+hinweis_grundsaetze: "Choose four to seven principles that suit your company and put them in your own words. The suggestions are a starting point."
+grundsaetze_vorschlag:
+  - "**People decide.** AI supports our work. Decisions with a significant effect on people are taken or checked by a responsible person."
+  - "**Confidentiality first.** We only enter confidential data, personal data and customer data into approved AI systems."
+  - "**Transparency.** We are open about where we use AI, and we label AI-generated content where it matters to others."
+  - "**Fairness.** We make sure AI systems do not put anyone at an unjustified disadvantage."
+  - "**Security and quality.** We check AI outputs before we rely on them, and we protect AI systems like other important information."
+  - "**Law and contracts.** We comply with the applicable laws and contractual obligations."
+  - "**Responsibility for consequences.** Before we use AI systems that affect people, we assess the impacts."
+verpflichtungen:
+  - "We meet the applicable requirements for our use of AI, in particular legal and contractual requirements and those we have chosen ourselves."
+  - "We continually improve our AI management system."
+  - "We provide the necessary resources."
+risikobereitschaft_text: "Top management decides which risks we accept when using AI. Risk evaluation and the acceptance threshold are set out in D-06, decision rights by risk level in D-04."
+hinweis_risikobereitschaft: "In a few sentences, top management decides here what is never allowed, what needs its approval and what the AIMS lead may decide without top management. The suggestions are a starting point. If needed, add deadlines, e.g. ‘treatment plan for high risks within 30 days’, and the maximum duration of an exception."
+risikobereitschaft_kopf: [Boundary, Decision]
+risikobereitschaft_rahmen:
+  nie: Never allowed
+  nurGl: Only with top management approval
+  aimsAllein: Decided by the AIMS lead without top management
+risikobereitschaft_vorschlag:
+  nie:
+    - "AI alone decides on hiring, dismissal, pay or credit of individuals"
+    - "Confidential data is entered into AI services that are not approved"
+    - "Practices prohibited by law, e.g. covert manipulation of people"
+  nurGl:
+    - "AI with a significant effect on customers, employees or other affected persons"
+    - "AI that acts in other systems without confirmation by a person"
+    - "Residual risks above the acceptance threshold"
+  aimsAllein:
+    - "Sole approval of AI systems with low risk (D-04, D-12)"
+    - "Approval of AI systems with medium risk together with the system owner (D-04, D-12)"
+    - "Time-limited exceptions for systems with low risk, for three months at most"
+ziele_text: "We derive measurable AI objectives from this policy and review them every year. The objectives and how we plan to reach them are set out in D-05."
+hinweis_ziele: "Name the topics from which objectives are derived, e.g. confidentiality, quality of outputs, employee competence, a complete AI inventory."
+zustaendigkeiten_text: "Top management has overall responsibility. The person responsible for the AI management system is {verantwortlich}. Further roles and the reporting channels are set out in D-04."
+bezug_text: "The following policies touch on the use of AI. We have reviewed them and, where necessary, adapted them or supplemented them here."
+bezug_kopf: [Policy, Relation to AI, Action]
+bezug_vorschlag:
+  - [Information security policy, "Protection of data in AI systems, AI-specific threats", "[[adapted / reference / none / does not exist]]"]
+  - [Privacy notice and data protection policy, "Personal data in AI systems, rights of data subjects", "[[adapted / reference / none / does not exist]]"]
+  - [Quality policy, "Quality of AI-supported outputs and products", "[[adapted / reference / none / does not exist]]"]
+  - [Staff regulations, "Use of AI by employees, monitoring in the workplace", "[[adapted / reference / none / does not exist]]"]
+abgleich_werte:
+  angepasst: adapted
+  verweis: reference to this policy added
+  keine: no change needed
+  nicht-vorhanden: does not exist
+abgleich_offen: "not yet reviewed"
+abgleich_ohne_isms: "does not exist; the protection of data in AI systems is governed by this policy and the responsible AI use policy (D-15)"
+bezug_weitere: "Use of AI in this area"
+# Relation to AI for each further policy (keys of the option group leitlinienBezug)
+bezug_weitere_je:
+  beschaffung: "AI functions in purchased software and services, assessment of suppliers before purchase"
+  verhaltenskodex: "Confidentiality, handling of customer data and fair conduct when using AI"
+  nachhaltigkeit: "Energy and resource needs of AI systems"
+hinweis_bezug: "Check for contradictions, e.g. whether an AI-supported analysis of employee data is compatible with the staff regulations and with data protection."
+ausnahmen_text: "Deviations from this policy are only permitted with prior written consent. Consent may be given by top management and by {verantwortlich}. Every exception is recorded with its reason, duration and actions. Breaches are reported (D-04) and handled like other breaches of internal rules."
+ausnahmen_text_firma: "Deviations from this policy are only permitted as an exception approved in advance. {regel} Every exception is recorded with its reason, duration and actions. Breaches are reported (D-04) and handled like other breaches of internal rules."
+bekanntmachung_text: "The policy is made known to all employees when they join and after every change. Interested parties receive it on request."
+hinweis_bekanntmachung: "Record how you show that the policy was communicated, e.g. an intranet notice with date or the attendance list of a training session."
+ueberpruefung_text: "The policy is reviewed at least once a year and whenever technology, law or the business change significantly; the person responsible is {verantwortlich}. The results of the management review (D-21) feed into it. Next review: {naechste}."
+freigabe_text: "Top management approved this policy on {datum}."
+ausbau_themen: "Companies that develop AI or use it in ways that affect customers may benefit from additional topic-specific policies, e.g. on developing AI systems, on impact assessments or on AI resources. Refer to them here."

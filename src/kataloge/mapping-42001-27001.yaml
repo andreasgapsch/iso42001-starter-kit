@@ -1,0 +1,399 @@
+# Zuordnung ISO/IEC 42001 Anhang A zu ISO/IEC 27001:2022 Anhang A.
+# Fachliche Einschätzung von KMU-CIO, keine Aussage der Normen.
+# staerke: hoch = ISMS-Nachweis deckt das 42001-Control weitgehend ab;
+#          mittel = Struktur und Teile wiederverwendbar, KI-Inhalte ergänzen;
+#          tief = nur Anknüpfungspunkt.
+# Begründungstexte: src/i18n/{de,en}/mapping.yaml, Abschnitt begruendung.
+staerken:
+  - hoch
+  - mittel
+  - tief
+zuordnungen:
+  - id: A.2.2
+    verwandt:
+      - control: 27001-5.1
+        staerke: hoch
+        begruendung: leitlinie-rahmen
+      - control: 27001-5.4
+        staerke: mittel
+        begruendung: leitlinie-fuehrung
+  - id: A.2.3
+    verwandt:
+      - control: 27001-5.1
+        staerke: hoch
+        begruendung: leitlinie-abgleich
+      - control: 27001-5.31
+        staerke: mittel
+        begruendung: leitlinie-recht
+      - control: 27001-5.36
+        staerke: tief
+        begruendung: leitlinie-einhaltung
+  - id: A.2.4
+    verwandt:
+      - control: 27001-5.1
+        staerke: hoch
+        begruendung: leitlinie-zyklus
+      - control: 27001-5.35
+        staerke: mittel
+        begruendung: leitlinie-unabhaengig
+  - id: A.3.2
+    verwandt:
+      - control: 27001-5.2
+        staerke: hoch
+        begruendung: rollen-zuweisung
+      - control: 27001-5.3
+        staerke: mittel
+        begruendung: rollen-trennung
+      - control: 27001-5.4
+        staerke: mittel
+        begruendung: rollen-fuehrung
+  - id: A.3.3
+    verwandt:
+      - control: 27001-6.8
+        staerke: mittel
+        begruendung: meldeweg-ereignisse
+      - control: 27001-5.24
+        staerke: tief
+        begruendung: meldeweg-vorfallorganisation
+  - id: A.4.2
+    verwandt:
+      - control: 27001-5.9
+        staerke: hoch
+        begruendung: inventar-ressourcen
+      - control: 27001-5.23
+        staerke: mittel
+        begruendung: inventar-cloud
+  - id: A.4.3
+    verwandt:
+      - control: 27001-5.9
+        staerke: mittel
+        begruendung: inventar-daten
+      - control: 27001-5.12
+        staerke: mittel
+        begruendung: daten-klassifizierung
+      - control: 27001-5.33
+        staerke: tief
+        begruendung: daten-aufzeichnungen
+  - id: A.4.4
+    verwandt:
+      - control: 27001-5.9
+        staerke: mittel
+        begruendung: inventar-werkzeuge
+      - control: 27001-5.23
+        staerke: mittel
+        begruendung: werkzeuge-cloud
+      - control: 27001-8.9
+        staerke: tief
+        begruendung: werkzeuge-konfiguration
+  - id: A.4.5
+    verwandt:
+      - control: 27001-5.9
+        staerke: hoch
+        begruendung: inventar-infrastruktur
+      - control: 27001-8.6
+        staerke: hoch
+        begruendung: kapazitaet
+      - control: 27001-5.23
+        staerke: mittel
+        begruendung: infrastruktur-cloud
+      - control: 27001-8.14
+        staerke: tief
+        begruendung: redundanz
+  - id: A.4.6
+    verwandt:
+      - control: 27001-6.3
+        staerke: mittel
+        begruendung: kompetenz-schulung
+      - control: 27001-5.2
+        staerke: tief
+        begruendung: kompetenz-rollen
+  - id: A.5.2
+    verwandt:
+      - control: 27001-5.34
+        staerke: mittel
+        begruendung: folgen-dsfa
+      - control: 27001-5.8
+        staerke: tief
+        begruendung: folgen-projekte
+  - id: A.5.3
+    verwandt:
+      - control: 27001-5.33
+        staerke: mittel
+        begruendung: folgen-aufbewahrung
+      - control: 27001-5.34
+        staerke: tief
+        begruendung: folgen-dsfa-ablage
+  - id: A.5.4
+    verwandt:
+      - control: 27001-5.34
+        staerke: mittel
+        begruendung: folgen-personen
+  - id: A.5.5
+    verwandt:
+      - control: 27001-5.34
+        staerke: tief
+        begruendung: folgen-gesellschaft
+  - id: A.6.1.2
+    verwandt:
+      - control: 27001-8.25
+        staerke: mittel
+        begruendung: entwicklung-ziele
+      - control: 27001-5.8
+        staerke: tief
+        begruendung: entwicklung-projektziele
+  - id: A.6.1.3
+    verwandt:
+      - control: 27001-8.25
+        staerke: hoch
+        begruendung: entwicklung-prozess
+      - control: 27001-5.8
+        staerke: mittel
+        begruendung: entwicklung-projekt
+      - control: 27001-8.27
+        staerke: mittel
+        begruendung: entwicklung-architektur
+  - id: A.6.2.2
+    verwandt:
+      - control: 27001-8.26
+        staerke: mittel
+        begruendung: anforderungen-anwendung
+      - control: 27001-5.8
+        staerke: mittel
+        begruendung: anforderungen-projekt
+  - id: A.6.2.3
+    verwandt:
+      - control: 27001-8.27
+        staerke: mittel
+        begruendung: entwurf-architektur
+      - control: 27001-8.28
+        staerke: tief
+        begruendung: entwurf-code
+      - control: 27001-8.30
+        staerke: mittel
+        begruendung: entwurf-auslagerung
+      - control: 27001-8.4
+        staerke: tief
+        begruendung: entwurf-quellcode
+  - id: A.6.2.4
+    verwandt:
+      - control: 27001-8.29
+        staerke: mittel
+        begruendung: pruefung-tests
+      - control: 27001-8.33
+        staerke: mittel
+        begruendung: pruefung-testdaten
+      - control: 27001-8.31
+        staerke: tief
+        begruendung: pruefung-umgebungen
+  - id: A.6.2.5
+    verwandt:
+      - control: 27001-8.32
+        staerke: hoch
+        begruendung: einfuehrung-aenderung
+      - control: 27001-8.31
+        staerke: mittel
+        begruendung: einfuehrung-umgebungen
+      - control: 27001-8.19
+        staerke: tief
+        begruendung: einfuehrung-installation
+  - id: A.6.2.6
+    verwandt:
+      - control: 27001-8.16
+        staerke: mittel
+        begruendung: betrieb-ueberwachung
+      - control: 27001-5.37
+        staerke: mittel
+        begruendung: betrieb-ablaeufe
+      - control: 27001-8.8
+        staerke: mittel
+        begruendung: betrieb-schwachstellen
+      - control: 27001-8.32
+        staerke: mittel
+        begruendung: betrieb-aenderungen
+      - control: 27001-8.6
+        staerke: mittel
+        begruendung: betrieb-kapazitaet
+  - id: A.6.2.7
+    verwandt:
+      - control: 27001-5.37
+        staerke: mittel
+        begruendung: doku-betrieb
+  - id: A.6.2.8
+    verwandt:
+      - control: 27001-8.15
+        staerke: hoch
+        begruendung: logs-protokollierung
+      - control: 27001-8.17
+        staerke: mittel
+        begruendung: logs-zeit
+      - control: 27001-8.16
+        staerke: mittel
+        begruendung: logs-auswertung
+  - id: A.7.2
+    verwandt:
+      - control: 27001-5.12
+        staerke: mittel
+        begruendung: daten-einstufung
+      - control: 27001-5.34
+        staerke: mittel
+        begruendung: daten-datenschutz
+      - control: 27001-8.10
+        staerke: mittel
+        begruendung: daten-loeschung
+      - control: 27001-5.33
+        staerke: tief
+        begruendung: daten-aufbewahrung
+  - id: A.7.3
+    verwandt:
+      - control: 27001-5.31
+        staerke: mittel
+        begruendung: beschaffung-recht
+      - control: 27001-5.32
+        staerke: mittel
+        begruendung: beschaffung-ip
+      - control: 27001-5.34
+        staerke: mittel
+        begruendung: beschaffung-datenschutz
+      - control: 27001-5.14
+        staerke: tief
+        begruendung: beschaffung-uebertragung
+  - id: A.7.4
+    verwandt:
+      - control: 27001-8.33
+        staerke: tief
+        begruendung: qualitaet-testdaten
+  - id: A.7.5
+    verwandt:
+      - control: 27001-5.33
+        staerke: mittel
+        begruendung: herkunft-aufzeichnungen
+      - control: 27001-5.9
+        staerke: tief
+        begruendung: herkunft-inventar
+      - control: 27001-8.15
+        staerke: tief
+        begruendung: herkunft-logs
+  - id: A.7.6
+    verwandt:
+      - control: 27001-8.11
+        staerke: mittel
+        begruendung: aufbereitung-maskierung
+      - control: 27001-5.34
+        staerke: mittel
+        begruendung: aufbereitung-datenschutz
+  - id: A.8.2
+    verwandt:
+      - control: 27001-5.31
+        staerke: mittel
+        begruendung: info-pflichten
+      - control: 27001-5.34
+        staerke: tief
+        begruendung: info-datenschutz
+  - id: A.8.3
+    verwandt:
+      - control: 27001-6.8
+        staerke: mittel
+        begruendung: extern-meldung
+      - control: 27001-5.24
+        staerke: mittel
+        begruendung: extern-vorfallorganisation
+  - id: A.8.4
+    verwandt:
+      - control: 27001-5.24
+        staerke: hoch
+        begruendung: vorfall-planung
+      - control: 27001-5.25
+        staerke: mittel
+        begruendung: vorfall-bewertung
+      - control: 27001-5.26
+        staerke: hoch
+        begruendung: vorfall-reaktion
+      - control: 27001-5.27
+        staerke: mittel
+        begruendung: vorfall-lernen
+      - control: 27001-5.28
+        staerke: tief
+        begruendung: vorfall-beweise
+      - control: 27001-5.5
+        staerke: mittel
+        begruendung: vorfall-behoerden
+  - id: A.8.5
+    verwandt:
+      - control: 27001-5.31
+        staerke: hoch
+        begruendung: pflichten-recht
+      - control: 27001-5.5
+        staerke: mittel
+        begruendung: pflichten-behoerden
+      - control: 27001-5.34
+        staerke: tief
+        begruendung: pflichten-datenschutz
+  - id: A.9.2
+    verwandt:
+      - control: 27001-5.10
+        staerke: hoch
+        begruendung: nutzung-regeln
+      - control: 27001-6.3
+        staerke: mittel
+        begruendung: nutzung-schulung
+      - control: 27001-8.12
+        staerke: mittel
+        begruendung: nutzung-datenabfluss
+      - control: 27001-8.23
+        staerke: tief
+        begruendung: nutzung-webfilter
+  - id: A.9.3
+    verwandt:
+      - control: 27001-5.10
+        staerke: tief
+        begruendung: nutzung-ziele
+  - id: A.9.4
+    verwandt:
+      - control: 27001-5.10
+        staerke: mittel
+        begruendung: zweck-nutzung
+      - control: 27001-5.37
+        staerke: mittel
+        begruendung: zweck-ablaeufe
+      - control: 27001-6.3
+        staerke: tief
+        begruendung: zweck-schulung
+  - id: A.10.2
+    verwandt:
+      - control: 27001-5.20
+        staerke: hoch
+        begruendung: dritte-vertraege
+      - control: 27001-5.19
+        staerke: mittel
+        begruendung: dritte-anforderungen
+      - control: 27001-5.23
+        staerke: mittel
+        begruendung: dritte-cloud
+  - id: A.10.3
+    verwandt:
+      - control: 27001-5.19
+        staerke: hoch
+        begruendung: lieferant-auswahl
+      - control: 27001-5.20
+        staerke: hoch
+        begruendung: lieferant-vertrag
+      - control: 27001-5.21
+        staerke: mittel
+        begruendung: lieferant-kette
+      - control: 27001-5.22
+        staerke: hoch
+        begruendung: lieferant-ueberwachung
+      - control: 27001-5.23
+        staerke: mittel
+        begruendung: lieferant-cloud
+      - control: 27001-8.30
+        staerke: mittel
+        begruendung: lieferant-entwicklung
+  - id: A.10.4
+    verwandt:
+      - control: 27001-5.31
+        staerke: mittel
+        begruendung: kunden-anforderungen
+      - control: 27001-5.34
+        staerke: tief
+        begruendung: kunden-datenschutz

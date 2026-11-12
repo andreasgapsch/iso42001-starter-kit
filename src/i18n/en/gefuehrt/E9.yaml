@@ -1,0 +1,645 @@
+# Page texts for phase E9 Putting it into operation. Format: src/gefuehrt/FORMAT.md
+E9-einfuehrung:
+  titel: Putting it into operation
+  frage: How do you apply the rules in everyday work, from introducing a system to managing suppliers?
+  warum: The standard requires you to implement and manage the planned [[g:control|controls]] in day-to-day operation. Here you describe, for each topic, how this happens and what evidence you have. For AI you develop yourself, there are extra pages on design and training data.
+  fehler: The biggest gap in an audit is often between policy and practice. Auditors want to see evidence of testing, approval, logging and oversight, not just rules.
+E9-lebenszyklus:
+  titel: Test, introduce, monitor
+  frage: How do you test an AI system before use, how do you approve it and how do you monitor it in operation?
+  warum: A system only goes live once it has been tested with typical cases of your own and approved. In operation you monitor whether it still works well enough, including after supplier updates.
+  fehler: Approvals added after go-live stand out. Auditors ask to see the test, the approval and a monitoring record for one system.
+  felder:
+    umsetzung:
+      label: Implementation
+      hilfe: e.g. "Acceptance test with 50 of our own cases, approval by the owner and the [[g:aims|AIMS]] lead, monthly sample of 20 results".
+    status:
+      label: Status
+      hilfe: Implementation status of the [[g:control|control]].
+    verantwortlich:
+      label: Responsible
+      hilfe: The person who makes sure the process runs.
+    nachweise:
+      label: Evidence
+      hilfe: e.g. test report, approval record, monitoring record.
+E9-dokumentation:
+  titel: Documentation and logs
+  frage: What documentation do users and partners receive, and what do your systems log?
+  warum: Users need clear instructions; partners and authorities need technical information. [[g:ereignisprotokoll|Event logs]] make it possible to trace what a system did and when.
+  fehler: With cloud services, logging is often switched off or deleted after a few days. Auditors ask where logs are kept and for how long.
+  felder:
+    umsetzung:
+      label: Implementation
+      hilfe: e.g. "Short guide for each system on the intranet; chatbot conversation logs kept for 6 months in the admin centre".
+    status:
+      label: Status
+      hilfe: Implementation status of the [[g:control|control]].
+    nachweise:
+      label: Evidence
+      hilfe: e.g. guide, logging settings, sample log.
+E9-protokolle:
+  titel: What is logged
+  frage: What do your AI systems record in logs, how long do you keep them and how often do you review them?
+  warum: The answers feed into the life cycle template D-12. With the AI Act module, [[g:betreiber|deployers]] of high-risk AI must keep logs for at least six months, as far as the logs are under their control.
+  fehler: Logs that are never reviewed only help once damage is done. Auditors ask when they were last reviewed.
+  felder:
+    organisation.protokollierung.inhalt:
+      label: Contents
+      hilfe: What is logged as a minimum.
+    organisation.protokollierung.aufbewahrungMonate:
+      label: Retention in months
+      hilfe: e.g. 6 months. Take data protection and deletion periods into account.
+    organisation.protokollierung.auswertung:
+      label: Review
+      hilfe: How often samples of the logs are checked.
+E9-protokolle-systeme:
+  titel: "Logs per system"
+  frage: "What does each AI system record, where and for how long?"
+  warum: "The general rules for logs apply to all systems. For each system, you record what is actually logged, so that incidents and changes can be traced."
+  fehler: "People often rely on the [[g:anbieter|provider]]'s logs without knowing how long they are kept. Auditors ask about the records for a specific system."
+  felder:
+    protokollierung:
+      label: "Logging"
+      hilfe: "What is recorded, where it is kept and for how long, e.g. ‘audit log in the admin centre for 12 months’."
+E9-entwicklung:
+  titel: Developing your own AI
+  frage: How do you set requirements, how do you document design and development, and which objectives apply to development?
+  warum: If you develop or retrain AI yourself, you need a fixed process with requirements, design, tests and approval. Objectives such as fairness or explainability become testable requirements in that process.
+  fehler: The check flags in-house developments without evidence of requirements, design and testing. Auditors ask to see one project from requirement to approval.
+  felder:
+    umsetzung:
+      label: Implementation
+      hilfe: e.g. "Requirements sheet for each project, design decisions in the wiki, approval by the head of development after the test report".
+    status:
+      label: Status
+      hilfe: Implementation status of the [[g:control|control]].
+    verantwortlich:
+      label: Responsible
+      hilfe: Usually the head of development.
+    nachweise:
+      label: Evidence
+      hilfe: Requirements document, architecture description, test report.
+E9-daten-betrieb:
+  titel: Data in operation
+  frage: How do you ensure the quality of the data you feed into your AI systems, and how do you trace where it comes from?
+  warum: Even if you only use AI, you decide on the input data. Poor or unsuitable input leads to wrong results ([[g:datenqualitaet]]). [[g:datenherkunft]] helps when errors or enquiries come up.
+  fehler: Many people think data is a topic for developers only. Auditors also ask [[g:betreiber|deployers]] how they check input data, such as the image quality of a camera.
+  felder:
+    umsetzung:
+      label: Implementation
+      hilfe: e.g. "Camera calibrated weekly; planning input data comes only from the ERP, version recorded in the log".
+    status:
+      label: Status
+      hilfe: Implementation status of the [[g:control|control]].
+    nachweise:
+      label: Evidence
+      hilfe: Inspection records, data sheet.
+E9-daten-entwicklung:
+  titel: Data for training and testing
+  frage: How do you acquire, document and prepare data for development?
+  warum: For your own models, origin, rights, volume, known biases and preparation must be clear for each dataset. This is also the basis for explaining results later.
+  fehler: Training data without clear rights is a legal risk. Auditors ask to see a data sheet for one dataset.
+  felder:
+    umsetzung:
+      label: Implementation
+      hilfe: e.g. "Data sheet for each dataset with source, rights, volume and preparation steps in D-13".
+    status:
+      label: Status
+      hilfe: Implementation status of the [[g:control|control]].
+    nachweise:
+      label: Evidence
+      hilfe: Data sheets, preparation record.
+E9-information:
+  titel: Information for users and third parties
+  frage: What do users learn about your AI systems, and what information duties do you have towards third parties?
+  warum: Anyone who uses an AI system or is affected by it should know that AI is involved, what it can do and where its limits are. Customers, authorities or partners may also require information by contract or by law.
+  fehler: General notices such as ‘We use AI’ are rarely enough. Auditors expect criteria for who receives which information and when, and a list of information duties.
+  felder:
+    umsetzung:
+      label: Implementation
+      hilfe: e.g. "Notice in the chatbot, user fact sheet for each system, list of information duties in D-14".
+    status:
+      label: Status
+      hilfe: Implementation status of the [[g:control|control]].
+    nachweise:
+      label: Evidence
+      hilfe: Screenshot of the notice, fact sheet, list.
+E9-nutzerinformation:
+  titel: "Information per system"
+  frage: "How do users and people affected learn about this AI system?"
+  warum: "Anyone who works with an AI system or is affected by it should know its purpose and limits. For each system, record where and how you inform them, including the notice text for chatbots."
+  fehler: "The information often sits in an internal document that users never see. Auditors ask to see where the information actually appears."
+  felder:
+    nutzerinformation:
+      label: "Information for users and people affected"
+      hilfe: "e.g. notice at the start of each conversation, chapter in the instructions for use, note in the job advertisement."
+E9-meldekanal:
+  titel: Reporting channel and incidents
+  frage: How can outsiders report adverse effects of your AI, and who takes charge in an incident?
+  warum: Customers and people affected should be able to report problems with your AI. For incidents, you decide who informs whom and by when, ideally as an addition to your existing incident procedure.
+  fehler: If there is no external channel, the check shows a warning. Auditors look for the address on your website and ask about the most recent report.
+  felder:
+    organisation.meldekanalExtern.adresse:
+      label: Address for reports
+      hilfe: e.g. an email address or a form on the website.
+    organisation.meldekanalExtern.bearbeitung:
+      label: Handled by
+      hilfe: The person who receives reports and passes them on.
+    organisation.meldekanalExtern.fristTage:
+      label: Reply within working days
+      hilfe: e.g. 5 working days.
+    organisation.meldekanalExtern.vorfallVerfahren:
+      label: Incident procedure
+      hilfe: Document that covers AI incidents, e.g. ‘IM-08 Incident management, AI section’.
+    organisation.meldekanalExtern.ort:
+      label: "Where the channel is published"
+      hilfe: "e.g. website contact page, customer portal, instructions for use."
+    organisation.meldekanalExtern.fristAntwortTage:
+      label: "Answer on the outcome within days"
+      hilfe: "e.g. 30 days until a substantive answer."
+    organisation.meldekanalExtern.fristKundenStunden:
+      label: "Inform affected customers of an AI incident within hours at the latest"
+      hilfe: "Only fill in if a fixed deadline applies, e.g. 72 hours from quality assurance agreements. Empty: ‘as soon as possible’."
+E9-meldekanal-soa:
+  titel: Implementing the reporting channel and incident handling
+  frage: How are the reporting channel and incident communication implemented?
+  warum: Here you record the status of the two [[g:control|controls]] and link the evidence. With the module, [[g:anbieter|providers]] of high-risk AI must report [[g:schwerwiegender-vorfall|serious incidents]].
+  fehler: An incident plan that has never been practised often fails in a real emergency. Auditors ask whether the process has been run through at least once.
+  felder:
+    umsetzung:
+      label: Implementation
+      hilfe: e.g. "Address ki-meldung@ on the website; AI incidents in the [[g:isms]] incident procedure; exercise in March".
+    status:
+      label: Status
+      hilfe: Implementation status of the control.
+    nachweise:
+      label: Evidence
+      hilfe: Website, procedure, exercise record, report log.
+E9-nutzungsregeln:
+  titel: Rules for employees
+  frage: Which rules apply to employees who use AI tools?
+  warum: The acceptable use policy D-15 sums up on two pages what is allowed and what is not. A few clear rules work better than long lists of bans.
+  fehler: Rules that nobody has acknowledged are hard to enforce. Auditors ask employees about the main rules and for evidence that they have read them.
+  felder:
+    meta.gefuehrt.antworten.nutzung.regeln:
+      label: Rules
+      hilfe: The rules you select appear as text modules in D-15.
+    meta.gefuehrt.antworten.nutzung.bestaetigung:
+      label: Employees confirm the rules in writing or in an e-learning module
+      hilfe: Recommended; simple evidence for the audit.
+E9-nutzung:
+  titel: Implementing responsible use
+  frage: How do you make sure AI is only used according to your rules and for its intended purpose?
+  warum: The acceptable use policy, approval of new tools, objectives for use and [[g:menschliche-aufsicht]] belong together. Samples show whether actual use matches the purpose recorded in the inventory.
+  fehler: Without samples, it remains unclear whether rules are followed. Auditors ask when the last sample was taken and what it showed.
+  felder:
+    umsetzung:
+      label: Implementation
+      hilfe: e.g. "D-15 published, approval list in the inventory, sample of Copilot use every six months".
+    status:
+      label: Status
+      hilfe: Implementation status of the [[g:control|control]].
+    nachweise:
+      label: Evidence
+      hilfe: Policy, acknowledgements, approval list, sampling record.
+E9-lieferanten:
+  titel: Checking AI suppliers
+  frage: Does this supplier meet your requirements for AI?
+  warum: Purchased AI must fit your principles. A few check points before purchase and at fixed intervals afterwards are enough. Link suppliers to the systems in the inventory.
+  fehler: Every purchased AI needs a check status. Often nobody has clarified whether the supplier uses your data to train its own models. Auditors ask to see the check and the contract.
+  felder:
+    name:
+      label: Supplier
+      hilfe: Company name.
+    leistung:
+      label: Service
+      hilfe: Which AI systems or services the supplier provides.
+    pruefstatus:
+      label: Check status
+      hilfe: Result of the check.
+    bemerkung:
+      label: Remarks and conditions
+      hilfe: e.g. ‘Business accounts only, training switched off’.
+    naechstePruefung:
+      label: Next check
+      hilfe: At least once a year.
+    pruefpunkte.PF-01:
+      label: "PF-01 No use of our data for training"
+      hilfe: "The [[g:anbieter|provider]] does not use inputs, files or outputs for its models, or this can be switched off."
+    pruefpunkte.PF-02:
+      label: "PF-02 Storage location and region known"
+      hilfe: "Countries of storage and processing; a region such as Switzerland or the EU can be chosen."
+    pruefpunkte.PF-03:
+      label: "PF-03 Retention and deletion settled"
+      hilfe: "Periods for inputs, outputs and logs; deletion on request with proof."
+    pruefpunkte.PF-04:
+      label: "PF-04 Subcontractors known"
+      hilfe: "List including the model providers; changes are announced in advance."
+    pruefpunkte.PF-05:
+      label: "PF-05 System documentation available"
+      hilfe: "Purpose, capabilities, limits and known risks, so that you can inform your users."
+    pruefpunkte.PF-06:
+      label: "PF-06 Changes are announced"
+      hilfe: "Model changes and significant changes in functionality in good time."
+    pruefpunkte.PF-07:
+      label: "PF-07 Incidents are reported"
+      hilfe: "Security and AI incidents within a fixed deadline to a named contact."
+    pruefpunkte.PF-08:
+      label: "PF-08 Security evidence available"
+      hilfe: "Current certificates or audit reports that cover the service used."
+    pruefpunkte.PF-09:
+      label: "PF-09 Data protection settled by contract"
+      hilfe: "Data processing agreement, safeguarded transfers abroad."
+    pruefpunkte.PF-10:
+      label: "PF-10 Role under the EU AI Act clarified"
+      hilfe: "The provider knows its role and supplies the documents you need as [[g:betreiber|deployer]]."
+    pruefpunkte.PF-11:
+      label: "PF-11 Logs available"
+      hilfe: "Usage and event logs to the extent and for the period needed."
+    pruefpunkte.PF-12:
+      label: "PF-12 Central administration possible"
+      hilfe: "Features, users and data access can be controlled centrally, e.g. admin console and single sign-on."
+    pruefpunkte.PF-13:
+      label: "PF-13 Rights to outputs settled"
+      hilfe: "Who owns the outputs and who is liable if they infringe third-party rights."
+    pruefpunkte.PF-14:
+      label: "PF-14 Test before purchase possible"
+      hilfe: "Test access with your own typical cases before you decide."
+    pruefpunkte.PF-15:
+      label: "PF-15 Exit settled"
+      hilfe: "Data export in a common format, ending without great effort, deletion after the contract ends."
+    geprueft:
+      label: "Reviewed by, on"
+      hilfe: "Who carried out the review and when; appears in D-16 next to the review status."
+    pruefpunkte.PF-16:
+      label: "PF-16 Protection against manipulated inputs"
+      hilfe: "Handling of manipulated inputs in chats, documents and emails described, tested regularly, reports accepted in the vulnerability programme."
+    pruefpunkte.PF-17:
+      label: "PF-17 Permissions in search"
+      hilfe: "The system only sees content the person has access to; checked during the search, not only when results are displayed."
+    pruefpunkte.PF-18:
+      label: "PF-18 Extensions and actions can be controlled"
+      hilfe: "Extensions, connectors and agents can be blocked individually, actions with external effect only after confirmation, logs of the actions available."
+    pruefpunkte.PF-19:
+      label: "PF-19 Costs and usage can be limited"
+      hilfe: "Hard cost cap per account or application, not just a warning."
+    pruefpunkte.PF-20:
+      label: "PF-20 Display of answers can be restricted"
+      hilfe: "External images, links and previews in answers are not loaded automatically or can be blocked."
+    pruefpunkte.PF-21:
+      label: "PF-21 Model, version and components named"
+      hilfe: "Model, version and main components known, vulnerabilities fixed within a set period, licence and origin of open models clarified."
+    pruefpunkte.PF-22:
+      label: "PF-22 Tool servers and connectors reviewed"
+      hilfe: "Origin, review and fixed version of third-party tool servers, connectors and extensions known; permissions of browser and desktop assistants defined."
+    pruefpunkte.PF-23:
+      label: "PF-23 Own identity for agents"
+      hilfe: "Agents act with their own identity or the permissions of the triggering person, with short-lived access; traceable which agent did what."
+    pruefpunkte.PF-24:
+      label: "PF-24 Provider access to content disclosed"
+      hilfe: "Who at the provider or its service providers can view content, for what purpose and how it is logged."
+    pruefpunkte.PF-25:
+      label: "PF-25 Caches and memory separated"
+      hilfe: "Separated between customers and people; stored entries can be viewed and deleted."
+    pruefpunkte.PF-26:
+      label: "PF-26 Emergency stop and withdrawal of permissions"
+      hilfe: "Pause agents and automations centrally and withdraw permissions immediately, also outside office hours."
+    pruefpunkte.PF-27:
+      label: "PF-27 Terms of use and licence allow the use"
+      hilfe: "No ban on our use in the terms; for open models no restrictions by territory, business or number of users that exclude us."
+E9-vertragsklauseln:
+  titel: "Contract clauses"
+  frage: "Which AI clauses are in the contract with this supplier?"
+  warum: "The check questions show what you need; the contract secures it. For each clause, record whether it is agreed, missing or not needed for this service."
+  fehler: "Standard terms often do not cover training on customer data or notice of model changes. Auditors compare the clauses with the answers to the check questions."
+  felder:
+    vertragsklauseln.VK-01:
+      label: "VK-01 No training use without written consent"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-02:
+      label: "VK-02 Storage location and region defined"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-03:
+      label: "VK-03 Retention, deletion and return at contract end"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-04:
+      label: "VK-04 Subcontractors with notice and right to object"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-05:
+      label: "VK-05 Notice of model changes with lead time"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-06:
+      label: "VK-06 Incident reporting within a deadline"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-07:
+      label: "VK-07 Data processing under the DSG and GDPR"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-08:
+      label: "VK-08 Confidentiality including staff and subcontractors"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-09:
+      label: "VK-09 Documentation, logs and support with requests"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-10:
+      label: "VK-10 Audit reports, certificates or audit right"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-11:
+      label: "VK-11 Rights to outputs and indemnity"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-12:
+      label: "VK-12 Availability, support, export and exit"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    verantwortung:
+      label: "Different split of responsibilities"
+      hilfe: "Only if the split differs from the proposal in D-16, e.g. ‘model choice and system prompt with us’."
+    vertragsklauseln.VK-13:
+      label: "VK-13 Protection against manipulated inputs, fixing vulnerabilities"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-14:
+      label: "VK-14 Access rights in search and answers"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-15:
+      label: "VK-15 Usage limits or cost cap"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-16:
+      label: "VK-16 Access to content only for a defined purpose and logged"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-17:
+      label: "VK-17 Separation also in caches and memory"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-18:
+      label: "VK-18 Pausing agents and immediate withdrawal of permissions"
+      hilfe: "Agreed, missing, open or not needed for this service."
+    vertragsklauseln.VK-19:
+      label: "VK-19 Notice of restricting changes to the terms of use"
+      hilfe: "Agreed, missing, open or not needed for this service."
+E9-dritte:
+  titel: Responsibilities with suppliers and customers
+  frage: How do you share responsibilities with suppliers and customers, and how do you take customer expectations into account?
+  warum: With purchased or supplied AI, it must be clear who is responsible for what, such as updates, data protection or oversight. You tell customers about the limits of your AI services.
+  fehler: Responsibilities agreed only verbally do not hold up in a dispute. Auditors look for contract clauses and a responsibility matrix.
+  felder:
+    umsetzung:
+      label: Implementation
+      hilfe: e.g. "Responsibility matrix for each system in D-16; standard clauses for customer contracts; customer information on the maintenance forecast".
+    status:
+      label: Status
+      hilfe: Implementation status of the [[g:control|control]].
+    nachweise:
+      label: Evidence
+      hilfe: Contracts, matrix, check records.
+E9-betreiber-hr:
+  titel: Deployer obligations for high-risk AI, part 1
+  frage: Do you meet your obligations as the [[g:betreiber|deployer]] of this high-risk system?
+  warum: As the [[g:betreiber]] of a high-risk system, you use it in line with the [[g:gebrauchsanweisung]], assign competent people to oversee it, make sure the input data is suitable, monitor operation and keep the logs. If there is a risk, you suspend use and inform the [[g:anbieter|provider]] and the authority. For Annex III, these obligations apply from 02/12/2027.
+  fehler: The supplier's instructions for use are often missing. Request them. Auditors and authorities ask who carries out oversight and how that person was trained.
+  felder:
+    E-05.betriebsanleitung:
+      label: Use in line with the instructions for use is ensured
+      hilfe: The instructions for use are available and known to users.
+    E-05.aufsicht:
+      label: Oversight by a competent person is in place
+      hilfe: Person named, trained and authorized to intervene.
+    E-05.eingabedaten:
+      label: Input data is relevant and sufficiently representative
+      hilfe: As far as you control the input data.
+    E-05.ueberwachung:
+      label: Operation monitored, reporting route to provider and authority defined
+      hilfe: Metrics and responsibility for monitoring, contacts of provider and authority in D-14, procedure for suspending use.
+    E-05.protokolle:
+      label: Logs are kept for at least six months
+      hilfe: As far as they are under your control.
+E9-betreiber-info:
+  titel: Deployer obligations for high-risk AI, part 2
+  frage: As a [[g:betreiber|deployer]], have you taken employees, people affected, data protection and authorities into account?
+  warum: Before using the system in the workplace, you inform employees and their representatives. People about whom the system helps make decisions are told so, and they can ask for an explanation of the decision. For a data protection impact assessment you use the [[g:anbieter|provider]]'s information, and you cooperate with the authorities when they ask.
+  fehler: Employees are often informed only after go-live. If this is missing, the check shows a warning. Record the date and the way you informed them as evidence.
+  felder:
+    E-05.arbeitnehmende:
+      label: Workers and their representatives informed in advance
+      hilfe: e.g. dated notice to the staff committee.
+    E-05.dsfa:
+      label: Provider information used for the data protection impact assessment
+      hilfe: Check whether a DPIA is needed (GDPR Art. 35, Art. 22 FADP) and refer to D-09 and E-06.
+    E-05.betroffene:
+      label: People affected informed about the use of AI
+      hilfe: "e.g. note in the job advertisement or the acknowledgement of receipt. This includes a route for explanations under Art. 86: who explains to people affected, on request, what role the system played in the decision."
+    E-05.behoerden:
+      label: Contact person and procedure for requests from authorities defined
+      hilfe: Who hands over documents and provides information (D-14).
+E9-transparenz:
+  titel: Implementing transparency
+  frage: Have you implemented the disclosure and labelling obligations for this system?
+  warum: People should be able to tell that they are talking to an AI or that content was artificially generated. Template E-07 contains text modules for notices.
+  fehler: The notice is often only in the terms of use. It must be clearly visible at the latest at the first interaction.
+  felder:
+    E-07.hinweis:
+      label: AI notice in place
+      hilfe: e.g. ‘You are chatting with an AI assistant’ at the start of the conversation.
+    E-07.kennzeichnung:
+      label: Generated content is marked
+      hilfe: Machine-readable ([[g:anbieter|providers]]) or visibly disclosed ([[g:betreiber|deployers]], for deep fakes and texts published to inform the public).
+E9-anbieter:
+  titel: Provider obligations
+  frage: As the [[g:anbieter|provider]] of this system, have you completed the necessary steps?
+  warum: As a [[g:anbieter]], you document the classification, give customers instructions and, for high-risk systems without an establishment in the EU, need an [[g:bevollmaechtigter|authorised representative]]. Template E-08 gives an overview of further obligations such as the [[g:konformitaetsbewertung]].
+  fehler: Swiss providers often overlook the authorised representative in the EU. If one is missing for a high-risk system, the check shows a warning.
+  felder:
+    E-08.einstufung:
+      label: Classification documented
+      hilfe: If not high-risk under Art. 6(3), with reasons, before placing on the market.
+    E-08.anleitung:
+      label: Instructions for customers are available
+      hilfe: Purpose, limits, oversight, contact.
+    E-08.bevollmaechtigter:
+      label: Authorised representative in the EU appointed
+      hilfe: Only for high-risk systems and if you have no establishment in the EU.
+E9-missbrauch:
+  titel: "Test abuse cases"
+  frage: "With which abuse cases did you test the system before use, and with what result?"
+  warum: "Systems that read third-party content or are publicly accessible can be attacked with hidden instructions, questions about confidential data or provocative input. A small collection of such cases shows before use and after every model change whether the safeguards hold (D-12). The page shows the systems that read third-party content or are publicly accessible according to phase 4."
+  fehler: "A single attempt is not a test. Record the number, examples, result and date. The check reports generative systems with third-party content or public access but no abuse cases (H32)."
+  felder:
+    missbrauchsfaelle:
+      label: "Abuse cases in the test"
+      hilfe: "Number, examples, result and date, e.g. \"12 cases, including a hidden instruction in an email, passed on 01/10/2026\"."
+E9-rueckfall:
+  titel: "Fallback"
+  frage: "How does work continue if the AI system fails or is switched off?"
+  warum: "A fallback prevents a failure of the system or of the [[g:anbieter|provider]] from stopping work. It sets out who does what by hand or with another tool. It is mandatory for critical systems; for the others, one sentence is enough (D-12)."
+  fehler: "‘Then we will do it by hand again’ is only enough if people can still do it and the documentation for it exists. The check reports critical systems without a fallback (H29). Try out the fallback once a year."
+  felder:
+    rueckfallweg:
+      label: "Fallback"
+      hilfe: "What applies in case of failure or switch-off, e.g. ‘manual processing using a checklist, team lead responsible’."
+E9-ausserbetrieb:
+  titel: "Retirement"
+  frage: "What triggered the retirement, are all steps done, and until when do you keep the records?"
+  warum: "When an AI system is replaced, no accounts, data or dependencies should remain, and work should continue without interruption. The steps are set out in D-12: dependent processes, successor, information, retention and deletion. The page shows systems in the phase ‘retired’ or with the status ‘replaced’."
+  fehler: "Accounts, connectors or data often remain with the [[g:anbieter|provider]]. The check reports retired systems without a retention date or without completed retirement (H30). Keep logs and assessments for as long as you need to evidence outputs of the system."
+  felder:
+    ausserbetrieb.ausloeser:
+      label: "Trigger"
+      hilfe: "For example replacement by a new system, end of contract or a risk that cannot be controlled."
+    ausserbetrieb.schritteErledigt:
+      label: "All steps done"
+      hilfe: "Dependent processes adjusted, successor ready, users informed, access blocked, data deleted at the provider."
+    ausserbetrieb.am:
+      label: "Retired since"
+      hilfe: "Date of switch-off."
+    aufbewahrenBis:
+      label: "Keep records until"
+      hilfe: "Until when logs, settings and assessments are kept; delete them afterwards."
+E9-messkonzept:
+  titel: "Measurement and test plan"
+  frage: "How do you test the most important trustworthiness characteristics of each AI system, with which cases, metrics and thresholds?"
+  warum: "The strength of the NIST AI RMF is measurement: test cases from real use, a metric with a threshold and a fixed frequency show whether a system works as tested. What cannot be measured, you justify and observe in another way. Once a year, someone outside the team checks whether metrics and tests still fit (additional [[g:control|controls]] RMF-09 to RMF-13, template N-03)."
+  fehler: "Individual examples from the [[g:anbieter|provider]]'s demonstration are not test cases. Take 10 to 20 typical and difficult cases from everyday work. A metric without a threshold never triggers an action."
+  felder:
+    messkonzept.pruefungen:
+      label: "Tests per characteristic"
+      hilfe: "One row per characteristic you chose in phase 3. Empty fields remain open in the plan."
+    messkonzept.pruefungen.merkmal:
+      label: "Characteristic"
+      hilfe: "Trustworthiness characteristic that the test evidences."
+    messkonzept.pruefungen.prueffaelle:
+      label: "Test cases"
+      hilfe: "For example ‘15 typical and 5 difficult requests from customer service’."
+    messkonzept.pruefungen.messgroesse:
+      label: "Metric"
+      hilfe: "For example share of correct answers or correction rate."
+    messkonzept.pruefungen.schwelle:
+      label: "Threshold"
+      hilfe: "The value from which you act."
+    messkonzept.pruefungen.haeufigkeit:
+      label: "Frequency"
+      hilfe: "For example quarterly and after every model change."
+    messkonzept.pruefungen.nichtMessbar:
+      label: "Not measurable"
+      hilfe: "Reason and how you observe it instead."
+    messkonzept.pruefungen.ergebnis:
+      label: "Latest result"
+      hilfe: "Result with date."
+    messkonzept.unabhaengig.wer:
+      label: "Independent review: who"
+      hilfe: "Person or function outside the team that looks after the system."
+    messkonzept.unabhaengig.wann:
+      label: "Independent review: when"
+      hilfe: "Date of the last or next review."
+    messkonzept.unabhaengig.ergebnis:
+      label: "Independent review: result"
+      hilfe: "Do metrics and tests still fit, and what will be adjusted?"
+E9-genai:
+  titel: "Generative AI according to NIST AI 600-1"
+  frage: "Which of the twelve risks of generative AI according to NIST AI 600-1 are relevant for the system, and how do you address them?"
+  warum: "The NIST generative AI profile names twelve risks that generative AI introduces or increases, such as invented content, leakage of personal data or opaque components in the value chain. The assessment for each system shows which ones apply and with which action or [[g:control|control]] RMF-Gxx you treat them (template N-04)."
+  fehler: "‘Not relevant’ needs a short reason. For purchased assistants, invented content, personal data, attacks, intellectual property and the value chain are almost always relevant. Relevant risks with a larger effect also belong in the risk register."
+  felder:
+    genaiBewertung.gai-cbrn.relevant:
+      label: "Help towards weapons of mass harm"
+      hilfe: "Hardly relevant; at most in chemistry, laboratories or pharma, where a chatbot answers technical questions about hazardous substances."
+    genaiBewertung.gai-cbrn.massnahme:
+      label: "Help towards weapons of mass harm: action"
+      hilfe: "Action, reference to M-xxx or control, e.g. RMF-G01."
+    genaiBewertung.gai-cbrn.begruendung:
+      label: "Help towards weapons of mass harm: reasoning"
+      hilfe: "Why the risk does not apply to this system."
+    genaiBewertung.gai-konfabulation.relevant:
+      label: "Confident but false output"
+      hilfe: "A quotation, a translated safety instruction or legal information in a chat contains invented details that nobody checks."
+    genaiBewertung.gai-konfabulation.massnahme:
+      label: "Confident but false output: action"
+      hilfe: "Action, reference to M-xxx or control, e.g. RMF-G01."
+    genaiBewertung.gai-konfabulation.begruendung:
+      label: "Confident but false output: reasoning"
+      hilfe: "Why the risk does not apply to this system."
+    genaiBewertung.gai-gefaehrlich.relevant:
+      label: "Dangerous, violent or hateful output"
+      hilfe: "A customer chatbot gives violent or hateful answers to provocative questions."
+    genaiBewertung.gai-gefaehrlich.massnahme:
+      label: "Dangerous, violent or hateful output: action"
+      hilfe: "Action, reference to M-xxx or control, e.g. RMF-G01."
+    genaiBewertung.gai-gefaehrlich.begruendung:
+      label: "Dangerous, violent or hateful output: reasoning"
+      hilfe: "Why the risk does not apply to this system."
+    genaiBewertung.gai-datenschutz.relevant:
+      label: "Leakage and inference of personal data"
+      hilfe: "Staff paste personal data into a free chatbot; an assistant draws conclusions about employees."
+    genaiBewertung.gai-datenschutz.massnahme:
+      label: "Leakage and inference of personal data: action"
+      hilfe: "Action, reference to M-xxx or control, e.g. RMF-G01."
+    genaiBewertung.gai-datenschutz.begruendung:
+      label: "Leakage and inference of personal data: reasoning"
+      hilfe: "Why the risk does not apply to this system."
+    genaiBewertung.gai-umwelt.relevant:
+      label: "High energy and resource use"
+      hilfe: "A large model handles a simple task that a smaller one could have done."
+    genaiBewertung.gai-umwelt.massnahme:
+      label: "High energy and resource use: action"
+      hilfe: "Action, reference to M-xxx or control, e.g. RMF-G01."
+    genaiBewertung.gai-umwelt.begruendung:
+      label: "High energy and resource use: reasoning"
+      hilfe: "Why the risk does not apply to this system."
+    genaiBewertung.gai-verzerrung.relevant:
+      label: "Biased or uniform output"
+      hilfe: "Job ads with one-sided wording, pre-selection of applications, poorer answers in dialect or a foreign language."
+    genaiBewertung.gai-verzerrung.massnahme:
+      label: "Biased or uniform output: action"
+      hilfe: "Action, reference to M-xxx or control, e.g. RMF-G01."
+    genaiBewertung.gai-verzerrung.begruendung:
+      label: "Biased or uniform output: reasoning"
+      hilfe: "Why the risk does not apply to this system."
+    genaiBewertung.gai-mensch-ki.relevant:
+      label: "Over-reliance, aversion, anthropomorphism"
+      hilfe: "Outputs are adopted without checking, or a chatbot with a person's name comes across as human."
+    genaiBewertung.gai-mensch-ki.massnahme:
+      label: "Over-reliance, aversion, anthropomorphism: action"
+      hilfe: "Action, reference to M-xxx or control, e.g. RMF-G01."
+    genaiBewertung.gai-mensch-ki.begruendung:
+      label: "Over-reliance, aversion, anthropomorphism: reasoning"
+      hilfe: "Why the risk does not apply to this system."
+    genaiBewertung.gai-integritaet.relevant:
+      label: "Misinformation and fakes"
+      hilfe: "Unlabelled marketing images, cloned voices, fake calls from the boss."
+    genaiBewertung.gai-integritaet.massnahme:
+      label: "Misinformation and fakes: action"
+      hilfe: "Action, reference to M-xxx or control, e.g. RMF-G01."
+    genaiBewertung.gai-integritaet.begruendung:
+      label: "Misinformation and fakes: reasoning"
+      hilfe: "Why the risk does not apply to this system."
+    genaiBewertung.gai-sicherheit.relevant:
+      label: "Attacks using and against generative AI"
+      hilfe: "Phishing emails written with AI, hidden instructions in emails or documents that steer the assistant, poisoned knowledge sources."
+    genaiBewertung.gai-sicherheit.massnahme:
+      label: "Attacks using and against generative AI: action"
+      hilfe: "Action, reference to M-xxx or control, e.g. RMF-G01."
+    genaiBewertung.gai-sicherheit.begruendung:
+      label: "Attacks using and against generative AI: reasoning"
+      hilfe: "Why the risk does not apply to this system."
+    genaiBewertung.gai-schutzrechte.relevant:
+      label: "Infringement of IP and likeness"
+      hilfe: "Customer drawings in a free chatbot, generated images or voices that infringe third-party rights."
+    genaiBewertung.gai-schutzrechte.massnahme:
+      label: "Infringement of IP and likeness: action"
+      hilfe: "Action, reference to M-xxx or control, e.g. RMF-G01."
+    genaiBewertung.gai-schutzrechte.begruendung:
+      label: "Infringement of IP and likeness: reasoning"
+      hilfe: "Why the risk does not apply to this system."
+    genaiBewertung.gai-anstoessig.relevant:
+      label: "Obscene or abusive imagery"
+      hilfe: "A publicly accessible image generator run by the company produces offensive or abusive images."
+    genaiBewertung.gai-anstoessig.massnahme:
+      label: "Obscene or abusive imagery: action"
+      hilfe: "Action, reference to M-xxx or control, e.g. RMF-G01."
+    genaiBewertung.gai-anstoessig.begruendung:
+      label: "Obscene or abusive imagery: reasoning"
+      hilfe: "Why the risk does not apply to this system."
+    genaiBewertung.gai-lieferkette.relevant:
+      label: "Opaque components in the value chain"
+      hilfe: "Copilot, extensions and plug-ins with unclear components; the vendor switches the model without notice."
+    genaiBewertung.gai-lieferkette.massnahme:
+      label: "Opaque components in the value chain: action"
+      hilfe: "Action, reference to M-xxx or control, e.g. RMF-G01."
+    genaiBewertung.gai-lieferkette.begruendung:
+      label: "Opaque components in the value chain: reasoning"
+      hilfe: "Why the risk does not apply to this system."

@@ -1,0 +1,27 @@
+# N-03 Measurement and test plan per AI system
+blaetter:
+  merkmale: Characteristics
+  pruefungen: Tests
+  erklaerung: Trustworthiness
+titel_merkmale: "Most important trustworthiness characteristics and trade-offs per AI system"
+titel_pruefungen: "Tests and metrics per AI system and characteristic"
+titel_erklaerung: "The seven trustworthiness characteristics of the AI RMF and the objectives of the impact assessment (D-09)"
+merkmal_kopf: "{merkmal} (D-09: {ziele})"
+d09_ausmass: "D-09: severity {ausmass}"
+abschnitt: "AI 100-1 section {abschnitt}"
+ohne_merkmal: no NIST characteristic
+keine_systeme: "No active AI systems are recorded in the AI inventory."
+hinweise_merkmale:
+  - "For each AI system choose the three or four most important trustworthiness characteristics and enter the rank 1 to 4 in their column (1 = most important). The addition in brackets in the column header names the objective of the impact assessment (D-09) that matches the characteristic; record benefit and harm there, not here."
+  - "Record known trade-offs with decision and reasons, e.g. accuracy against explainability or benefit against data minimization (RMF-01). The last column lists the proposed additional controls with the decision in the statement of applicability (D-11)."
+hinweise_merkmale_firma:
+  - "Rank 1 to 4 of the most important trustworthiness characteristics per AI system (1 = most important) and decided trade-offs. Without a ranking, the cell shows the highest severity of harm from the impact assessment (D-09)."
+hinweise_pruefungen:
+  - "One row per AI system and important characteristic: test cases from daily work (typical, difficult and unclear cases), metric, threshold for action and frequency. Metrics from the measurement plan (D-05) and the misuse cases from the pre-deployment test (D-12) can be reused."
+  - "Record what cannot be measured with reasons and observe it qualitatively, e.g. through reports and conversations (column I). Tests involving people, e.g. a pilot with employees, only with information and consent."
+  - "Independent review (RMF-10): someone outside the team that builds or introduces the system assesses at least once a year whether metrics and tests actually detect errors; the internal audit (D-20) can do this."
+hinweise_pruefungen_firma:
+  - "Tests per AI system and characteristic with test cases, metric, threshold and frequency; what cannot be measured with reasons. Where no tests of their own are recorded, the metrics from the measurement plan (D-05) and the misuse cases (D-12) of the system are shown."
+spalten_merkmale: [ID, AI system, Trade-offs and decision, Proposed additional controls]
+spalten_pruefungen: [ID, AI system, Characteristic, Objective in D-09, Test cases, Metric, Threshold, Frequency, "Not measurable: reasons and observation", "Independent review (who, when, result)", Result]
+spalten_erklaerung: [Characteristic, Description, Objective in D-09, Role, Subcategories, Reference, Note on D-09]

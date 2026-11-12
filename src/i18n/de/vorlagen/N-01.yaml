@@ -1,0 +1,51 @@
+# N-01 AI-RMF-Profil Ist und Ziel
+blaetter:
+  profil: Profil
+  uebersicht: Übersicht
+titel_profil: "AI-RMF-Profil: Ist und Ziel je Subkategorie"
+titel_uebersicht: "Übersicht je Funktion"
+hinweise_profil:
+  - "Das Profil zeigt je Subkategorie des NIST AI RMF, wie weit Ihr AIMS das Ergebnis heute erreicht (Ist) und wie weit es das Ergebnis erreichen soll (Ziel). Spalte L berechnet die Lücke aus Ziel minus Ist."
+  - "Ist: Das Werkzeug leitet die Stufe aus der Projektdatei ab, aus freigegebenen Dokumenten, dem Status der verknüpften Controls in der Erklärung zur Anwendbarkeit (D-11) und Angaben im KI-Inventar (D-10). Spalte J zeigt die Herleitung. Deckt das AIMS eine Subkategorie nur teilweise ab und ist das Zusatz-Control aus Spalte H nicht umgesetzt, bleibt die Stufe höchstens 1. Überschreiben Sie die Stufe, wenn Sie es besser wissen."
+  - "Ziel: Legen Sie fest, welche Subkategorien für Sie zählen. Für ein KMU, das KI einkauft, genügt meist Stufe 2 bei den Lite-Subkategorien. Ausbau-Subkategorien brauchen Sie bei Eigenentwicklung, Anbieterrolle oder KI mit Wirkung auf Personen oder Sicherheit. Niemand verlangt, alle 72 auf Stufe 3 zu setzen."
+  - "Massnahme: Verweisen Sie auf Massnahmen im Behandlungsplan (M-xxx, D-07). Nehmen Sie das Zusatz-Control aus Spalte H in die Erklärung zur Anwendbarkeit auf (D-11) oder begründen Sie den Verzicht (N-02)."
+hinweise_profil_firma:
+  - "Profil nach NIST AI RMF: Ist-Stufe je Subkategorie in unserem AIMS, Zielstufe nach unserem Entscheid. Die Lücke ist Ziel minus Ist."
+  - "Die Ist-Stufe beruht auf freigegebenen Dokumenten, dem Status der Controls in der Erklärung zur Anwendbarkeit (D-11) und den Angaben im KI-Inventar (D-10); Spalte J nennt die Grundlage. Massnahmen stehen im Behandlungsplan (D-07)."
+hinweise_uebersicht:
+  - "Die Werte werden aus dem Blatt «Profil» berechnet. Spalte «Kennung» nicht ändern; «??» steht für alle Funktionen."
+abschnitt: "{nist}: {titel}"
+gesamt: "Gesamt (alle Funktionen)"
+gesamt_kennung: alle
+spalten:
+  - ID
+  - NIST-Bezeichnung
+  - Funktion
+  - Kurztitel
+  - "Umfang (Lite oder Ausbau)"
+  - Abdeckung durch das AIMS
+  - Dokumente im AIMS
+  - Zusatz-Control oder Präzisierung
+  - "Ist (0 bis 3)"
+  - Herleitung Ist
+  - "Ziel (0 bis 3)"
+  - Lücke
+  - Priorität
+  - "Massnahme, Notiz"
+  - Nachweis
+  - Fundstelle NIST
+spalten_uebersicht: [Funktion, Kennung, Subkategorien, "Ist im Mittel", "Ziel im Mittel", "Subkategorien mit Lücke", "Abdeckung durch das AIMS ganz"]
+listen:
+  prioritaet: [hoch, mittel, tief]
+herleitung:
+  profil: erfasst im Profil
+  dokumente: "Dokumente {liste}"
+  controls: "Controls {liste}"
+  angaben: Angaben je KI-System unvollständig
+  luecke: "Zusatz-Control {control} nicht umgesetzt"
+  luecke_praez: Präzisierung nicht festgehalten
+  keine: keine Grundlage im Projekt
+  # Reihenfolge: Stufe 0, 1, 2
+  dok_status: [fehlt, in Arbeit, freigegeben]
+  # Reihenfolge: Stufe 0 bis 3
+  ctrl_status: [offen, teilweise, umgesetzt, wirksam]

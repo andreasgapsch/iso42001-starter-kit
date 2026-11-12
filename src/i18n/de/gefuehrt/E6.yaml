@@ -1,0 +1,155 @@
+# Seitentexte Etappe E6 Risiken und Chancen. Format: src/gefuehrt/FORMAT.md
+E6-einfuehrung:
+  titel: Risiken und Chancen
+  frage: Was kann bei Ihren KI-Systemen schiefgehen, was können Sie gewinnen und wie bewerten Sie das?
+  warum: Die Norm verlangt eine [[g:risikobeurteilung]] nach festen [[g:risikokriterien]], damit Ergebnisse vergleichbar sind. Sie betrachten Folgen für das Unternehmen, für einzelne Menschen und für die Gesellschaft und planen auch [[g:chance|Chancen]].
+  fehler: Allgemeine Risiken wie «KI macht Fehler» ohne Bezug zu einem System sind der zweithäufigste Auditbefund. Auditoren wollen systemspezifische Risiken, einen [[g:eigner]] je Risiko und einen Auslöser für die Neubeurteilung sehen.
+E6-isms-skalen:
+  titel: Skalen aus dem ISMS
+  frage: Übernehmen Sie die Risikoskalen und Akzeptanzkriterien aus Ihrem [[g:isms]]?
+  warum: Eine gemeinsame Methode für Informationssicherheit und KI spart Aufwand und macht Risiken vergleichbar. Sie ergänzen nur die Auswirkungen auf Menschen und Gesellschaft.
+  fehler: Abweichende Skalen für ISMS und [[g:aims|AIMS]] meldet die Prüfung als Hinweis. Auditoren fragen dann, warum zwei Methoden nötig sind.
+  felder:
+    organisation.risikokriterien.ausIsmsUebernommen:
+      label: Skalen und Kriterien aus dem ISMS übernehmen
+      hilfe: Die Werte des ISMS tragen Sie auf den nächsten Seiten ein oder prüfen sie nach.
+E6-zeitraum:
+  titel: Bezugszeitraum
+  frage: Auf welchen Zeitraum bezieht sich die Wahrscheinlichkeit?
+  warum: «Wahrscheinlich» heisst nichts ohne Zeitraum. Erst mit einem Bezug wie «pro Jahr» schätzen zwei Personen dasselbe Risiko gleich ein.
+  fehler: Ein fehlender Bezugszeitraum ist ein Fehler in der Prüfung. Auditoren lassen zwei Personen dasselbe Risiko bewerten und vergleichen.
+  felder:
+    organisation.risikokriterien.zeitraum:
+      label: Bezugszeitraum
+      hilfe: Im KMU üblich ist «pro Jahr».
+E6-skalen:
+  titel: Skalen für Wahrscheinlichkeit und Auswirkung
+  frage: Welche Stufen verwenden Sie für Wahrscheinlichkeit und Auswirkung?
+  warum: Vier Stufen sind im KMU bewährt; sie zwingen zu einer Entscheidung und bleiben überschaubar. Jede Stufe braucht eine kurze, messbare Beschreibung, bei der Auswirkung auch für Menschen.
+  fehler: Beschreibungen nur in Franken übersehen Schäden für Betroffene, etwa Benachteiligung oder Verlust von Vertrauen. Auditoren prüfen, ob die Skala Folgen für Einzelne und Gesellschaft abbildet.
+  felder:
+    organisation.risikokriterien.wahrscheinlichkeit:
+      label: Wahrscheinlichkeit
+      hilfe: Von 1 (selten) bis 4 (häufig).
+    organisation.risikokriterien.wahrscheinlichkeit.stufe:
+      label: Stufe
+      hilfe: Ganze Zahl, aufsteigend.
+    organisation.risikokriterien.wahrscheinlichkeit.bezeichnung:
+      label: Bezeichnung
+      hilfe: z. B. «selten», «möglich», «wahrscheinlich», «häufig».
+    organisation.risikokriterien.wahrscheinlichkeit.beschreibung:
+      label: Beschreibung
+      hilfe: z. B. «seltener als alle 5 Jahre».
+    organisation.risikokriterien.auswirkung:
+      label: Auswirkung
+      hilfe: Von 1 (gering) bis 4 (schwer).
+    organisation.risikokriterien.auswirkung.stufe:
+      label: Stufe
+      hilfe: Ganze Zahl, aufsteigend.
+    organisation.risikokriterien.auswirkung.bezeichnung:
+      label: Bezeichnung
+      hilfe: z. B. «gering», «spürbar», «erheblich», «schwer».
+    organisation.risikokriterien.auswirkung.beschreibung:
+      label: Beschreibung
+      hilfe: Für Unternehmen und Menschen, z. B. «Schaden über CHF 100 000 oder ernsthafte Benachteiligung einer Person».
+E6-akzeptanz:
+  titel: Wann ein Risiko behandelt werden muss
+  frage: Bis zu welchem Risikowert akzeptieren Sie ein Risiko ohne Behandlung, und ab welchem ist es nicht mehr tragbar?
+  warum: Der Risikowert ist Wahrscheinlichkeit mal Auswirkung. Die Schwellen legen fest, wann Sie handeln müssen und wann die Geschäftsleitung entscheiden muss.
+  fehler: Die untere Schwelle muss tiefer liegen als die obere, sonst meldet die Prüfung einen Fehler. Auditoren fragen, wer die Schwellen festgelegt hat; lassen Sie die Schwellen von der Geschäftsleitung bestätigen.
+  felder:
+    organisation.risikokriterien.akzeptanzBis:
+      label: Akzeptiert bis Risikowert
+      hilfe: Bei einer 4-mal-4-Matrix z. B. 4.
+    organisation.risikokriterien.unannehmbarAb:
+      label: Nicht tragbar ab Risikowert
+      hilfe: Bei einer 4-mal-4-Matrix z. B. 12. Solche Risiken müssen behandelt oder die Tätigkeit eingestellt werden.
+E6-register:
+  titel: Risiken erfassen
+  frage: Welche Risiken bestehen bei diesem KI-System?
+  warum: Je System erfassen Sie die wichtigsten Risiken mit [[g:risikoquelle]], Ursache und Folge. Die Folgenabschätzung aus Etappe 7 liefert weitere Risiken für Menschen, die Sie hier ergänzen.
+  fehler: Jedes KI-System braucht mindestens ein Risiko, sonst meldet die Prüfung einen Fehler. Auditoren erwarten bei generativer KI Risiken zu Vertraulichkeit und falschen Ergebnissen, bei Personalsystemen zu Fairness.
+  felder:
+    titel:
+      label: Risiko
+      hilfe: Kurz und konkret, z. B. «Konstruktionsdaten gelangen in öffentlichen Chatbot».
+    kiSystem:
+      label: KI-System
+      hilfe: Leer lassen nur bei Risiken, die alle Systeme betreffen.
+    quelle:
+      label: Risikoquelle
+      hilfe: Woraus das Risiko entsteht.
+    ebenen:
+      label: Betroffen sind
+      hilfe: Unternehmen, Einzelpersonen, Gesellschaft. Mehrere möglich.
+    ursache:
+      label: Ursache
+      hilfe: Warum es passieren kann, z. B. «Mitarbeitende kopieren Zeichnungen in private Konten».
+    folge:
+      label: Folge
+      hilfe: Was dann passiert, z. B. «Verlust von Know-how, Verletzung von NDA und Exportkontrolle».
+    bestehendeMassnahmen:
+      label: Bestehende Massnahmen
+      hilfe: Was heute schon schützt.
+    eigner:
+      label: Risiko-Eigner/in
+      hilfe: Die Person, die über die Behandlung entscheidet.
+    ismsRisiko:
+      label: Verweis ins ISMS-Register
+      hilfe: Reine Informationssicherheitsrisiken bleiben im [[g:isms]]-Register; hier nur verknüpfen.
+E6-bewertung:
+  titel: Risiken bewerten
+  frage: Wie wahrscheinlich ist das Risiko und wie schwer wäre die Auswirkung?
+  warum: Mit Ihren Skalen bewerten Sie jedes Risiko vor weiteren Massnahmen. Daraus ergibt sich, welche Risiken Sie behandeln müssen und in welcher Reihenfolge.
+  fehler: Wer alle Risiken mittel bewertet, priorisiert nicht. Bewerten Sie im Team mit der Eignerin oder dem Eigner des Systems; Auditoren fragen, wer an der Bewertung beteiligt war.
+  felder:
+    w:
+      label: Wahrscheinlichkeit
+      hilfe: Stufe nach Ihrer Skala.
+    a:
+      label: Auswirkung
+      hilfe: Die schwerste Folge zählt, auch wenn sie Menschen ausserhalb des Unternehmens trifft.
+    beurteiltAm:
+      label: Beurteilt am
+      hilfe: Datum der Bewertung oder der letzten Neubeurteilung, z. B. nach einer Feststellung, einem Update oder einer verfehlten Kennzahl (D-06).
+    erfasstAm:
+      label: Erfasst am
+      hilfe: Datum, an dem das Risiko ins Register kam. Die Beurteilung und die Annahme des Restrisikos liegen nicht davor.
+E6-chancen:
+  titel: Chancen erfassen
+  frage: Welche Chancen wollen Sie mit KI gezielt nutzen?
+  warum: Die Norm verlangt, auch Chancen zu planen. Wer sie festhält, kann Nutzen belegen und Ressourcen begründen. Chancen stehen im selben Register wie Risiken und tragen deshalb dieselbe Nummernreihe (R-…). Die Behandlung der Risiken folgt in der Etappe «[[g:control|Controls]] und [[g:soa|Erklärung zur Anwendbarkeit]]».
+  fehler: Chancen ohne Massnahme bleiben Wunschdenken. Auditoren wollen sehen, dass Sie mindestens eine Chance mit Massnahme und Verantwortung verfolgen.
+  felder:
+    titel:
+      label: Chance
+      hilfe: z. B. «Weniger Ausschuss durch frühere Fehlererkennung».
+    kiSystem:
+      label: KI-System
+      hilfe: Falls die Chance an ein System gebunden ist.
+    beschreibung:
+      label: Beschreibung
+      hilfe: Was Sie gewinnen und woran Sie es messen.
+    eigner:
+      label: Verantwortlich
+      hilfe: Die Person, die die Chance verfolgt.
+    massnahmen:
+      label: Massnahmen
+      hilfe: Verknüpfen Sie Massnahmen aus der Massnahmenliste.
+E6-neubeurteilung:
+  titel: Wann Sie neu beurteilen
+  frage: In welchem Rhythmus und bei welchen Ereignissen beurteilen Sie Risiken neu?
+  warum: Risiken ändern sich mit neuen Systemen, Updates oder Gesetzen. Die Norm verlangt Neubeurteilungen in festen Abständen und bei wesentlichen Änderungen.
+  fehler: Ohne festgelegte Auslöser bleibt das Register auf dem Stand der Erstbeurteilung. Auditoren suchen nach datierten Neubeurteilungen nach Änderungen.
+  felder:
+    meta.gefuehrt.antworten.neubeurteilung.rhythmus:
+      label: Rhythmus
+      hilfe: Mindestens jährlich, bei vielen Änderungen halbjährlich.
+    meta.gefuehrt.antworten.neubeurteilung.ausloeser:
+      label: Auslöser
+      hilfe: Ereignisse, die eine sofortige Neubeurteilung auslösen.
+E6-genai:
+  titel: "Vorschläge GenAI-Sicherheit"
+  frage: "Welche typischen Sicherheitsrisiken generativer KI betreffen Ihre Systeme?"
+  warum: "Die Liste fasst Risiken zusammen, die bei Assistenten, Chatbots und eigenen Anwendungen mit generativer KI immer wieder auftreten, angelehnt an die OWASP Top 10 for LLM Applications 2026 und für handelnde KI an die OWASP Top 10 for Agentic Applications 2026, dazu eigene Vorschläge zu Datenrisiken. Vorschläge zu handelnder KI erscheinen nur für Systeme, die Aktionen vorbereiten oder ausführen oder ein Gedächtnis haben. Übernehmen Sie passende Einträge je System als Risiko ins Register; Wahrscheinlichkeit, Auswirkung und Behandlung legen Sie danach selbst fest. Die Seite erscheint, sobald ein System in Etappe 4 als generative KI markiert ist."
+  fehler: "Alle Vorschläge ungeprüft zu übernehmen bläht das Register auf. Für die reine Nutzung von Diensten genügen meist die Einträge mit «[[g:betreiber]]». Auditoren wollen sehen, dass Sie die Risiken auf Ihre Systeme bezogen und bewertet haben."

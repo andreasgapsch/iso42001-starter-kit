@@ -1,0 +1,121 @@
+﻿ZUSATZERLAUBNIS FÜR IHRE EIGENEN DOKUMENTE
+zum ISO/IEC 42001 Starter-Kit von Andreas Gapsch, KMU-CIO, kmu-cio.ch
+
+Englische Fassung: ADDITIONAL-PERMISSION_EN.txt
+
+
+KURZFASSUNG
+-----------
+Dokumente, die Sie mit diesem Kit für Ihre Organisation oder für Ihre Kunden
+erstellen (ausgefüllte Vorlagen sowie Ausgaben des AIMS-Managers und des
+KI-Assistenten), dürfen Sie ohne Namensnennung verwenden, ändern, drucken und
+weitergeben. Die Pflicht zur Namensnennung nach CC BY 4.0 gilt für das Kit
+selbst, also wenn Sie die Vorlagen, den Leitfaden, das Werkzeug oder den
+Skill als solche weitergeben oder veröffentlichen, auch in bearbeiteter Form.
+
+Massgebend sind die folgenden Bestimmungen.
+
+
+1. RECHTEINHABER UND VERHÄLTNIS ZU DEN LIZENZEN
+-----------------------------------------------
+Andreas Gapsch, KMU-CIO (nachfolgend «Lizenzgeber»), stellt die Inhalte des
+Kits unter die Lizenz Creative Commons Namensnennung 4.0 International
+(CC BY 4.0) und den Programmcode unter die MIT-Lizenz. Zusätzlich erteilt er
+die folgende Erlaubnis. Sie ist eine eigenständige Erlaubnis im Sinne von
+Abschnitt 7(b) der CC BY 4.0. Sie erweitert Ihre Rechte und schränkt keine
+Rechte aus CC BY 4.0 oder aus der MIT-Lizenz ein.
+
+
+2. BEGRIFFE
+-----------
+a) «Kit» ist das ISO/IEC 42001 Starter-Kit mit allen Bestandteilen,
+   insbesondere Leitfaden, Poster, Vorlagen, Ergänzungsblättern, Beispielen,
+   AIMS-Manager und KI-Assistent (Skill), unverändert oder bearbeitet.
+
+b) «Ihre Dokumente» sind Dokumente, Tabellen und andere Dateien, die Sie für
+   eine bestimmte Organisation erstellen, nämlich für Ihre eigene oder für
+   die Organisation eines Kunden, indem Sie
+   - Vorlagen des Kits ausfüllen, ergänzen, kürzen oder anpassen oder
+   - mit dem AIMS-Manager oder dem KI-Assistenten Inhalte erzeugen
+     (Ausgaben).
+   Dazu gehören auch spätere Fassungen, Auszüge, Ausdrucke und Übersetzungen
+   solcher Dokumente.
+
+c) Nicht zu «Ihren Dokumenten» gehören Vorlagen, Muster, Mustersammlungen,
+   Schulungsunterlagen und Werkzeuge, die dazu bestimmt sind, von anderen als
+   Grundlage für eigene Dokumente verwendet zu werden, auch wenn Sie diese mit
+   dem Kit erstellt haben. Ebenfalls nicht dazu gehören die Beispiele des
+   Kits.
+
+
+3. ERLAUBNIS
+------------
+Der Lizenzgeber erlaubt Ihnen, Ihre Dokumente zu verwenden, zu
+vervielfältigen, zu ändern, zu drucken, weiterzugeben und öffentlich
+zugänglich zu machen (zum Beispiel Ihre KI-Leitlinie auf Ihrer Website), auch
+zu kommerziellen Zwecken und im Rahmen eines entgeltlichen Beratungsmandats.
+Die Erlaubnis ist unentgeltlich, weltweit, nicht ausschliesslich, zeitlich
+unbeschränkt und unwiderruflich.
+
+Dabei müssen Sie die Bedingungen nach Abschnitt 3 der CC BY 4.0 nicht
+erfüllen. Sie müssen also weder den Lizenzgeber oder das Kit nennen noch auf
+die Lizenz hinweisen noch Ihre Änderungen kennzeichnen.
+
+Sie dürfen Hinweise auf das Kit, seine Herkunft und seine Lizenz aus Ihren
+Dokumenten entfernen. Sie dürfen Ihre Dokumente unter Bedingungen Ihrer Wahl
+weitergeben, zum Beispiel als vertraulich oder gestützt auf einen Vertrag mit
+Ihrem Kunden.
+
+Diese Erlaubnis gilt auch für alle, die Ihre Dokumente von Ihnen oder von
+Ihrem Kunden erhalten.
+
+
+4. NENNUNG ALS URHEBER
+----------------------
+Soweit gesetzlich zulässig, verzichtet der Lizenzgeber für Ihre Dokumente
+darauf, als Urheber genannt zu werden, und wird dieses Recht nicht geltend
+machen.
+
+
+5. WAS DIE ZUSATZERLAUBNIS NICHT ERFASST
+----------------------------------------
+a) Das Kit selbst: Die Zusatzerlaubnis gilt nicht für die Weitergabe oder
+   Veröffentlichung des Kits oder von Teilen davon als solche, zum Beispiel
+   der Vorlagen als Vorlagen, des Leitfadens, der Beispiele, des
+   AIMS-Managers oder des KI-Assistenten, auch in bearbeiteter Form oder als
+   Teil eines eigenen Angebots. Dafür gelten CC BY 4.0 (Inhalte) und die
+   MIT-Lizenz (Code) mit ihren Bedingungen, insbesondere der Namensnennung.
+
+b) Name und Marke: Die Zusatzerlaubnis berechtigt nicht, «KMU-CIO», die
+   Domain kmu-cio.ch oder den Namen Andreas Gapsch als eigene Marke, Firma
+   oder Produktbezeichnung zu verwenden oder den Eindruck zu erwecken, der
+   Lizenzgeber habe Ihre Dokumente, Ihr Managementsystem oder Ihre
+   Organisation geprüft, empfohlen oder unterstützt.
+
+
+6. RECHTE DRITTER
+-----------------
+Die Zusatzerlaubnis umfasst nur Rechte des Lizenzgebers. Rechte Dritter
+bleiben unberührt, zum Beispiel an Normen von ISO und IEC, die Sie separat
+beziehen, an Rechtstexten der Europäischen Union oder an Bibliotheken im
+AIMS-Manager. Für KI-Dienste, über die Sie den KI-Assistenten nutzen, gelten
+zusätzlich deren Nutzungsbedingungen.
+
+
+7. GEWÄHRLEISTUNG UND HAFTUNG
+-----------------------------
+Die Gewährleistungs- und Haftungsausschlüsse nach Abschnitt 5 der CC BY 4.0
+und nach der MIT-Lizenz gelten für diese Zusatzerlaubnis entsprechend, soweit
+gesetzlich zulässig.
+
+
+8. GELTUNG UND AUSLEGUNG
+------------------------
+Die Zusatzerlaubnis gilt für die Fassung des Kits, mit der sie geliefert
+wird. Für Dokumente, die Sie erstellt haben, bleibt sie bestehen, auch wenn
+spätere Fassungen des Kits andere Bedingungen enthalten. Im Zweifel ist sie
+zugunsten der Nutzerinnen und Nutzer auszulegen. Sie liegt auf Deutsch und
+auf Englisch vor; bei Abweichungen geht die deutsche Fassung vor.
+
+
+Andreas Gapsch, KMU-CIO, kmu-cio.ch

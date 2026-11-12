@@ -1,0 +1,87 @@
+# D-05 AI objectives, metrics and measurement plan
+blaetter:
+  ziele: Objectives
+  messplan: Measurement plan
+  messwerte: Measurements
+  nicht_gemessen: Not measured
+titel_ziele: "AI objectives and planning"
+titel_messplan: "Measurement plan: what, how, when and by whom"
+titel_messwerte: "Measurements"
+hinweise_ziele:
+  - "Derive three to six objectives from the AI policy (D-03). Every objective needs a metric, a target value, an owner and a deadline."
+  - "The suggestions in square brackets are placeholders. Adopt and adapt them, or delete them."
+  - "At least one objective should concern the responsible use of AI. If you develop AI yourself, also set an objective for development."
+  - "Evaluate the objectives at least once a year in the management review (D-21) and adjust them where needed."
+hinweise_messplan:
+  - "For each metric, define what is measured and how often, who measures, who evaluates and who receives the result."
+  - "Besides the objectives, the measurement plan also covers the effectiveness of the controls, the results of internal audits, reports about AI systems and simple metrics per system (correction rate, response time). These rows are already prepared."
+  - "Once a year, check whether the metrics and tests are fit for purpose: which errors, incidents or complaints did they fail to reveal in advance? The result belongs in the management review (D-21)."
+  - "Rows PR-xx and PS-xx are the process indicators from D-27. From the level ‘implemented’ upwards, enter a first value on the sheet ‘Measured values’, with the process ID as the indicator."
+  - "Column ‘AI systems’ in the Objectives sheet: systems to which an objective applies; empty means all. Every AI system with sensitive use should have at least one metric of its own."
+  - "Column ‘Method and source’: name the template and the column the value comes from (for example AI inventory D-10, column ‘Life cycle’), or the record, such as minutes. For a sample, the method states its size. The denominator of the measured value is this size, and a metric across systems counts only the systems that the sample actually covers on the measurement date."
+hinweise_messwerte:
+  - "Enter every measurement with its date. The measurements are the evidence that you monitor and measure; keep them on file."
+  - "Count every value from the records and state the numerator and denominator, for example ‘3 of 4 (75%)’. Compare it with the target in the column ‘Target met’."
+  - "Do not estimate a figure: if there was no case, write ‘no occasion’. If the indicator cannot be measured yet (in the first year, for example, the implementation of decisions up to the next review), write ‘no measurement yet’ and give the reason in the remark."
+spalten_ziele:
+  - ID
+  - Objective
+  - Link to policy
+  - Metric
+  - Target value
+  - What will be done
+  - Resources
+  - Responsible
+  - Deadline
+  - Evaluation of results
+  - Status
+  - AI systems
+spalten_messplan:
+  - ID
+  - What is measured
+  - Method and source
+  - Frequency
+  - Who actions
+  - When evaluated
+  - Who evaluates
+  - Recipient
+spalten_messwerte: [Objective or metric, Date, Value, Target met, Remarks]
+listen:
+  status: [planned, in progress, achieved, not achieved, discarded]
+  haeufigkeit: [monthly, quarterly, half-yearly, annually, when needed]
+  erreicht: ["yes", partly, "no"]
+ziele_vorschlag:
+  - ["Z-001", "[[All AI systems are recorded in the AI inventory and have a system owner]]", "[[Transparency principle]]", "[[Share of recorded AI systems with a system owner]]", "[[100%]]", "[[Survey in all units, comparison with licences and purchasing]]", "[[2 person-days]]", "[[Name, role]]", "[[DD/MM/YYYY]]", "[[Comparison of inventory with software list]]", ""]
+  - ["Z-002", "[[All employees who use AI have been trained]]", "[[Security and quality principle]]", "[[Training rate]]", "[[at least 95%]]", "[[Short training on the AI use policy, follow-up training for new joiners]]", "[[1 hour per person]]", "[[Name, role]]", "[[DD/MM/YYYY]]", "[[Attendance list against staff list]]", ""]
+  - ["Z-003", "[[AI systems that affect people have an impact assessment]]", "[[Responsibility for consequences principle]]", "[[Share of systems with an approved impact assessment]]", "[[100%]]", "[[Screening for all systems, full impact assessment where needed]]", "[[3 person-days]]", "[[Name, role]]", "[[DD/MM/YYYY]]", "[[Comparison of inventory with D-09]]", ""]
+  - ["Z-004", "[[No confidential data in AI tools that are not approved]]", "[[Confidentiality first principle]]", "[[Number of cases found]]", "[[0 per quarter]]", "[[Provide approved tools, technical blocks, spot checks]]", "[[IT budget for licences]]", "[[Name, role]]", "[[DD/MM/YYYY]]", "[[Evaluation of reports and spot checks]]", ""]
+  - ["Z-005", "[[Reports about AI systems are handled on time]]", "[[People decide principle]]", "[[Share of reports with feedback within 30 days]]", "[[at least 90%]]", "[[Publicize the reporting channel, monitor handling]]", "[[as required]]", "[[Name, role]]", "[[DD/MM/YYYY]]", "[[Evaluation of the report log]]", ""]
+  - ["Z-006", "[[Providers of AI systems have been reviewed]]", "[[Law and contracts principle]]", "[[Share of AI suppliers reviewed]]", "[[100% before signing the contract]]", "[[Review questions from D-16 at purchase and renewal]]", "[[1 person-day per year]]", "[[Name, role]]", "[[DD/MM/YYYY]]", "[[Supplier list D-16]]", ""]
+messplan_vorschlag:
+  - ["Z-001", "[[Share of recorded AI systems with a system owner]]", "[[Comparison of AI inventory with software and licence list]]", quarterly, "[[Name, role]]", "[[after each measurement]]", "[[Name, role]]", "[[Top management]]"]
+  - ["Z-002", "[[Training rate]]", "[[Attendance list against staff list]]", half-yearly, "[[Name, role]]", "[[after each measurement]]", "[[Name, role]]", "[[Top management]]"]
+  - ["Z-003", "[[Share of systems with an impact assessment]]", "[[Comparison of AI inventory with D-09]]", quarterly, "[[Name, role]]", "[[after each measurement]]", "[[Name, role]]", "[[Top management]]"]
+  - ["Z-004", "[[Cases of confidential data in tools that are not approved]]", "[[Reports, spot checks, evaluation of blocks]]", quarterly, "[[Name, role]]", "[[after each measurement]]", "[[Name, role]]", "[[Top management]]"]
+  - ["Z-005", "[[Share of reports handled on time]]", "[[Report log D-22]]", quarterly, "[[Name, role]]", "[[after each measurement]]", "[[Name, role]]", "[[Top management]]"]
+  - ["Z-006", "[[Share of AI suppliers reviewed]]", "[[Supplier list D-16]]", annually, "[[Name, role]]", "[[before the management review]]", "[[Name, role]]", "[[Top management]]"]
+messplan_weitere:
+  - ["", "Effectiveness of the controls", "Status, evidence and column ‘Effectiveness checked’ in the statement of applicability (D-11)", annually, "[[Name, role]]", "before the management review", "[[Name, role]]", Top management]
+  - ["", "Results of internal audits", "Audit reports (D-20)", annually, "[[Name, role]]", "after each audit", "[[Name, role]]", Top management]
+  - ["", "Type and number of reports, incidents and near misses relating to AI systems", "Report log and nonconformities (D-22)", quarterly, "[[Name, role]]", "before the management review", "[[Name, role]]", Top management]
+  - ["", "Response time to reports: days to acknowledgement and to closure", "Dates of receipt, acknowledgement and closure in the register (D-22)", quarterly, "[[Name, role]]", "before the management review", "[[Name, role]]", Top management]
+  - ["", "Correction rate per AI system: share of outputs that users discard or change substantially", "Sample of [[20]] outputs per system; comparison with the acceptance test (D-12)", quarterly, "[[Name, role]]", "after each sample", "[[Name, role]]", "System owner"]
+  - ["", "Suitability of the metrics and tests", "Comparison of the metrics with errors, incidents and complaints they did not reveal", annually, "[[Name, role]]", "before the management review", "[[Name, role]]", Top management]
+messplan_prozess: "{kennzahl} (indicator of the process, target: {soll})"
+messplan_prozess_methode: "Evaluation of the records of the process (D-27)"
+messplan_prozess_eigner: "[[Process owner]]"
+messplan_prozess_wann: "before the management review"
+messplan_prozess_empfaenger: "AIMS lead, top management"
+messplan_weitere_neutral:
+  "4.2": "Sample of outputs per system according to the measurement plan of the system; comparison with the acceptance test (D-12)"
+ausbau_leistung: "If you develop or operate AI yourself, also measure the performance of the AI systems themselves, e.g. error rate, change in the data over time (drift) or the share of outputs that people correct."
+titel_nicht_gemessen: "Deliberately not measured"
+hinweise_nicht_gemessen:
+  - "Record what you deliberately do not measure and why, e.g. because a value is not available or the effort outweighs the benefit. Review the list annually together with the measurement plan."
+spalten_nicht_gemessen: [What is deliberately not measured, Reason]
+nicht_gemessen_vorschlag:
+  - ["[[e.g. energy consumption of the AI services]]", "[[Providers give no figures per customer; low usage; review again if operated in-house]]"]

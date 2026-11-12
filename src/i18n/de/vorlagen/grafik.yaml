@@ -1,0 +1,144 @@
+# Beschriftungen der Grafiken in Dokumenten (src/vorlagen/grafik.ts): Risikomatrix, Diagramme, Abläufe
+stufe:
+  tief: tief
+  mittel: mittel
+  hoch: hoch
+# Kürzel der Risikostufen in Zellen (Bedeutung nicht nur über die Farbe)
+kuerzel: [T, M, H]
+anlage_verweis: "Die Grafik «{titel}» steht in Anlage {nr} am Ende des Dokuments."
+matrix:
+  # Zeilen: Auswirkung (oben hoch), Spalten: Wahrscheinlichkeit
+  ecke: "A \\ W"
+  spalte: "W {stufe}"
+  zeile: "A {stufe}"
+  zelle: "{kuerzel} {wert}"
+  anzahl_eins: "1 Risiko"
+  anzahl: "{anzahl} Risiken"
+  anzahl_null: "keines"
+  titel_zonen: "Risikomatrix: Stufe je Risikowert (W×A)"
+  titel_vor: "Risikomatrix vor Behandlung"
+  titel_nach: "Risikomatrix nach Behandlung"
+  nach_offen: "Geplante Werte: {anzahl} Restrisiken setzen noch offene Massnahmen voraus und sind erst mit deren Abschluss erreicht."
+  nach_offen_eins: "Geplante Werte: 1 Restrisiko setzt noch offene Massnahmen voraus und ist erst mit deren Abschluss erreicht."
+  legende:
+    tief: "{kuerzel} tief: Risikowert bis {bis}"
+    mittel: "{kuerzel} mittel: Risikowert {werte}"
+    hoch: "{kuerzel} hoch: Risikowert ab {ab}"
+  alt_zonen: "Matrix aus {w} Stufen der Wahrscheinlichkeit (Spalten) und {a} Stufen der Auswirkung (Zeilen); jede Zelle nennt Stufe und Risikowert W×A."
+  alt: "{titel}: {bewertet} Risiken eingeordnet, davon {tief} tief, {mittel} mittel und {hoch} hoch."
+  alt_ohne: "{titel}: noch keine Risiken bewertet."
+  unbewertet: "Ohne Bewertung für diesen Stand: {liste}."
+  xlsx_titel: Risikomatrix
+  xlsx_hinweise:
+    - "Die Zahlen zählen die Risiken im Register je Wahrscheinlichkeit (W) und Auswirkung (A); sie rechnen beim Öffnen und bei jeder Änderung des Registers neu. Chancen und geschlossene Risiken zählen nicht."
+    - "Die Farbe zeigt die Stufe aus W×A nach den Risikokriterien (D-06): {tief}; {mittel}; {hoch}. In Klammern stehen Stufe und Risikowert der Zelle."
+soa:
+  titel: "Umsetzung der Controls aus Anhang A je Gruppe"
+  achse: Anzahl Controls
+  reihe:
+    umgesetzt: umgesetzt oder wirksam
+    teilweise: teilweise
+    offen: geplant oder offen
+    ausgeschlossen: ausgeschlossen
+    unentschieden: nicht entschieden
+  alt: "Gestapelte Balken je Gruppe: {werte}."
+  alt_gruppe: "{gruppe}: {liste}"
+  alt_wert: "{anzahl} {reihe}"
+kennzahl:
+  titel: "{id} {kennzahl}"
+  ist: Messwert
+  soll: "Sollwert {zahl}"
+  soll_richtung: "Sollwert ({richtung} {zahl})"
+  richtung:
+    mindestens: mindestens
+    hoechstens: höchstens
+  alt: "Messwerte: {werte}."
+  alt_soll: "Messwerte: {werte}. {soll}."
+massnahmen:
+  titel: "Massnahmen nach Fälligkeit am {datum}"
+  achse: Anzahl Massnahmen
+  art:
+    ueberfaellig: überfällig
+    bald: fällig in 30 Tagen
+    spaeter: später fällig
+    ohneTermin: ohne Termin
+    erledigt: erledigt
+    verworfen: verworfen
+  alt: "Massnahmen am {datum}: {werte}."
+lagebild:
+  titel: Lagebild
+  einleitung: "Das Lagebild fasst den Stand am {datum} zusammen: Risiken vor und nach der Behandlung, Umsetzung der Controls, Fälligkeit der Massnahmen und der Verlauf der Kennzahlen mit Messwerten."
+  einleitung_leer: "Das Lagebild fasst den Stand zur Bewertung zusammen. Die Risikomatrix zeigt die Stufen nach den eigenen Risikokriterien (D-06); tragen Sie die Anzahl Risiken je Zelle aus dem Register (D-07, Blatt «Risikomatrix») ein."
+  kennzahlen: Verlauf der Kennzahlen
+fahrplan:
+  titel: Fahrplan und Fortschritt
+  einleitung: "Der Fahrplan zeigt die Audits des Zertifizierungszyklus mit Termin und Stand. Das Zertifikat gilt drei Jahre; in den beiden Folgejahren findet je ein Überwachungsaudit statt, vor Ablauf die Rezertifizierung."
+  einleitung_leer: "Der Fahrplan zeigt den üblichen Zyklus. Vor dem Stage-1-Audit liegen internes Audit, Managementbewertung und danach ein kurzes Ergänzungsaudit zu 9.3 und A.2.4 (D-20, Abschnitt 1 oben). Ersetzen Sie die Richtwerte durch Ihre Termine."
+  ecke: Audit
+  jahr: "Jahr {nr}"
+  meilensteine:
+    stage1: Stage-1-Audit
+    stage2: Stage-2-Audit
+    zertifikat: Zertifikat
+    ueberwachung1: Überwachungsaudit 1
+    ueberwachung2: Überwachungsaudit 2
+    rezertifizierung: Rezertifizierung
+  stand:
+    erledigt: durchgeführt
+    geplant: geplant
+    richtwert: Richtwert
+  richtwerte:
+    stage1: "3 bis 6 Monate nach Start"
+    stage2: "4 bis 8 Wochen nach Stage 1"
+    zertifikat: "nach Abschluss Stage 2"
+    ueberwachung1: "12 Monate nach Zertifikat"
+    ueberwachung2: "24 Monate nach Zertifikat"
+    rezertifizierung: "vor Ablauf nach 3 Jahren"
+  legende:
+    erledigt: "durchgeführt oder erteilt"
+    geplant: "geplant (Datum aus der Planung)"
+    richtwert: "Richtwert aus dem üblichen Zyklus"
+  alt: "Fahrplan: {werte}."
+# Entscheidungsbaum D-24 (Fragen kurz; die vollständige Fassung steht als Liste im Dokument)
+d24:
+  titel: Entscheidungsbaum Rolle nach EU AI Act
+  start: KI-System aus dem Inventar (D-10)
+  f1: "1 KI-System nach\nArt. 3 Nr. 1?"
+  f2: "2 Bezug zur EU?"
+  f3: "3 Selbst entwickelt und unter\neigenem Namen angeboten?"
+  f4: "4 Fremdes System beruflich\nin eigener Verantwortung?"
+  f5: "5 Rollenwechsel nach\nArt. 25(1)?"
+  gilt_nicht: AI Act gilt nicht
+  nicht_erfasst: "Nicht erfasst\n(Schweizer Blick)"
+  anbieter: "Anbieter\n(Art. 3 Nr. 3)"
+  betreiber: "Betreiber\n(Art. 3 Nr. 4)"
+  uebrige: "Übrige Rollen prüfen\n(Art. 22 bis 25)"
+  bleibt: "Rolle aus Frage\n3 oder 4 bleibt"
+  wechsel: Anbieterpflichten übernehmen
+  ende: Rolle mit Begründung im Inventar festhalten (D-10)
+  ja: Ja
+  nein: Nein
+  alt: "Ablauf in fünf Fragen: 1 KI-System nach Art. 3 Nr. 1? Nein: AI Act gilt nicht. 2 Bezug zur EU? Nein: nicht erfasst. 3 Selbst entwickelt und unter eigenem Namen angeboten? Ja: Anbieter. 4 Fremdes System beruflich in eigener Verantwortung? Ja: Betreiber; Nein: übrige Rollen prüfen (Art. 22 bis 25). 5 Rollenwechsel nach Art. 25(1)? Ja: Anbieterpflichten übernehmen; Nein: Rolle bleibt. Zum Schluss die Rolle mit Begründung im Inventar festhalten."
+# Ablauf der Folgenabschätzung D-08
+d08:
+  titel: Ablauf der Folgenabschätzung
+  ausloeser: "Auslöser: neues System oder neue Verwendung,\nÄnderung, Vorfall, Meldung, Wiederholung"
+  kurzpruefung: Kurzprüfung mit sechs Fragen (D-09)
+  schwelle: "Schwelle erreicht\noder Hochrisiko?"
+  doku: "Kurzprüfung festhalten,\nMassnahmen in D-07"
+  rueckpruefung: "Rückprüfung: Schwelle\naus D-06 erreicht?"
+  freigabe_aims: "Freigabe durch\nAIMS-Verantwortung"
+  voll: Vollständige Abschätzung (D-09)
+  entscheid: "Entscheid: einsetzen, mit Auflagen\noder nicht einsetzen; Schäden in D-07"
+  freigabe_gl: Freigabe durch Geschäftsleitung
+  betrieb: "Betrieb und Überwachung,\nWiederholung nach Abschnitt 3"
+  ja: Ja
+  nein: Nein
+  alt: "Auslöser, dann Kurzprüfung mit sechs Fragen. Ist eine Schwelle erreicht oder das System hochriskant, folgt die vollständige Abschätzung mit Entscheid (einsetzen, mit Auflagen, nicht einsetzen) und Freigabe durch die Geschäftsleitung. Sonst wird die Kurzprüfung mit den Massnahmen festgehalten und nach der Risikobeurteilung zurückgeprüft: Erreicht die Auswirkung die Schwelle aus D-06, folgt doch die vollständige Abschätzung; sonst gibt die AIMS-Verantwortung die Kurzprüfung frei. Danach Betrieb und Überwachung mit Wiederholung."
+# Prozesslandkarte D-02
+d02:
+  titel: Prozesslandkarte des KI-Managementsystems
+  isms: "mit ISMS"
+  alt_einleitung: "Prozesslandkarte in vier Gruppen."
+  alt_wechsel: "Pfeile zeigen die Wechselwirkungen: {fuehrung} steuert die {kern}, deren Ergebnisse gehen in {bewertung}, die Verbesserungen zurück an die {fuehrung}; {unterstuetzung} trägt den Regelkreis."
+  alt_isms: "Mit ISMS gemeinsam geführt: {liste}."

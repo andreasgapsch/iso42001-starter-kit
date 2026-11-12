@@ -1,0 +1,8 @@
+# Anzeige des Skills in ChatGPT und Codex.
+# ISO/IEC 42001 Starter-Kit von Andreas Gapsch, KMU-CIO, kmu-cio.ch
+interface:
+  display_name: "ISO/IEC 42001 für KMU"
+  short_description: "KI-Managementsystem nach ISO/IEC 42001 aufbauen / build an AIMS"
+  default_prompt: "Starte den ISO/IEC 42001 Skill für unser KMU und schlage einen passenden Modus vor. / Start the ISO/IEC 42001 skill for our SME and suggest a suitable mode."
+policy:
+  allow_implicit_invocation: true

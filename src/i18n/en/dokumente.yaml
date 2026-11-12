@@ -1,0 +1,40 @@
+# Titles and short descriptions of all kit templates
+D-00: { titel: "Gap analysis and project mandate", kurz: "Where do we stand? Maturity per clause and control, project mandate approved by top management." }
+D-01: { titel: "Context, interested parties and roles", kurz: "Internal and external issues, climate change, interested parties and their requirements, role(s) of the organization." }
+D-02: { titel: "Scope and AIMS overview", kurz: "Boundaries of the AI management system, exclusions, interfaces and process map." }
+D-03: { titel: "AI policy", kurz: "Binding principles set by top management for developing, buying and using AI." }
+D-04: { titel: "Roles, responsibilities and reporting channels", kurz: "Who is responsible for what (RACI) and how to report concerns about AI systems." }
+D-05: { titel: "AI objectives, metrics and measurement plan", kurz: "Measurable objectives with planning, and what is measured and evaluated, and how often." }
+D-06: { titel: "AI risk management procedure", kurz: "Method, scales and criteria for assessing and treating AI risks." }
+D-07: { titel: "AI risk register and treatment plan", kurz: "Risks and opportunities per AI system, rating, treatment, controls, acceptance of residual risk." }
+D-08: { titel: "AI system impact assessment procedure", kurz: "When, how and by whom the consequences for people and society are assessed." }
+D-09: { titel: "AI system impact assessment", kurz: "Screening with thresholds and, if needed, a full impact assessment per system." }
+D-10: { titel: "AI inventory and survey questionnaire", kurz: "All AI systems, including AI in purchased software and shadow AI, with resources." }
+D-11: { titel: "Statement of applicability", kurz: "All Annex A controls with decision, justification, status and evidence." }
+D-12: { titel: "AI system life cycle", kurz: "Introduction, operation and monitoring (deployer) and development (extension level)." }
+D-13: { titel: "Data for AI systems", kurz: "Provenance, quality, preparation and protection of data." }
+D-14: { titel: "Information, transparency and reporting", kurz: "Information for users, reporting channel for affected persons, incident communication, information obligations." }
+D-15: { titel: "Responsible AI use policy", kurz: "Two pages of rules for employees and the approval of new AI tools." }
+D-16: { titel: "Suppliers and purchased AI", kurz: "Review questions, contract clauses and division of responsibilities with suppliers." }
+D-17: { titel: "Competence, awareness and communication", kurz: "Competence needs per role, training and communication plan." }
+D-20: { titel: "Internal audit", kurz: "Audit programme, audit plan and checklist for ISO/IEC 42001." }
+D-21: { titel: "Management review", kurz: "Agenda with all required inputs and minutes with decisions." }
+D-22: { titel: "Nonconformities and improvements", kurz: "Nonconformities, causes, corrective actions, effectiveness and improvements." }
+D-23: { titel: "Integration matrix ISO/IEC 27001 and 42001", kurz: "What is reused, extended or newly created from the ISMS, with control mapping." }
+D-24: { titel: "Role first", kurz: "Decision tree provider or deployer, and what ISO/IEC 42001 demonstrates and what it does not." }
+D-25: { titel: "Certification roadmap", kurz: "Choosing the certification body, stage 1 and stage 2, what the auditor wants to see." }
+D-26: { titel: "Control of documented information", kurz: "Rules for documents and records, document register, changes to the AIMS." }
+D-27: { titel: "Process descriptions", kurz: "Flow, roles, records, indicator and status for each process of the management system." }
+E-01: { titel: "Role determination under the EU AI Act", kurz: "Role per AI system, including the change from deployer to provider." }
+E-02: { titel: "Risk classification under the EU AI Act", kurz: "Prohibited, high-risk, transparency or minimal risk per AI system." }
+E-03: { titel: "EU AI Act obligations matrix", kurz: "Obligations per role and risk class, and what the AIMS covers." }
+E-04: { titel: "AI literacy of employees", kurz: "Concept and evidence of the AI literacy actions." }
+E-05: { titel: "Deployer obligations for high-risk AI", kurz: "Checklist for deployers of high-risk AI systems." }
+E-06: { titel: "Fundamental rights impact assessment", kurz: "Extension of the impact assessment where the AI Act requires it." }
+E-07: { titel: "Transparency obligations", kurz: "Checklist and text modules for chatbots, generated content and deep fakes." }
+E-08: { titel: "Provider obligations at a glance", kurz: "What providers of high-risk AI must meet and where the AIMS helps." }
+E-09: { titel: "EU AI Act deadlines and status", kurz: "Which obligations apply from when, with a status date." }
+N-01: { titel: "AI RMF profile: current and target", kurz: "72 subcategories of the NIST AI RMF with the current level derived from the project, target, gap, priority and action." }
+N-02: { titel: "Coverage matrix AI RMF and ISO/IEC 42001", kurz: "What ISO/IEC 42001 and the templates cover per subcategory, with additional control and decision." }
+N-03: { titel: "Measurement and test plan per AI system", kurz: "Most important trustworthiness characteristics, test cases, metrics, thresholds and independent review." }
+N-04: { titel: "Generative AI: risks and actions", kurz: "Twelve risks of generative AI under NIST AI 600-1 per system with relevance and measure." }

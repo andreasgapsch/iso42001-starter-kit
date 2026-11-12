@@ -1,0 +1,100 @@
+# D-25 Zertifizierungsfahrplan
+hinweis_umfang: "Dieser Leitfaden zeigt den Weg vom eingeführten AIMS bis zum Zertifikat. Er ersetzt nicht die Regeln Ihrer Zertifizierungsstelle; fragen Sie dort nach Ablauf, Fristen und Unterlagen."
+einleitung: "Eine Zertifizierung nach ISO/IEC 42001 bestätigt durch eine unabhängige Stelle, dass das KI-Managementsystem die Norm erfüllt und wirkt. Geprüft wird nicht, ob ein einzelnes KI-System rechtskonform ist."
+einleitung_firma: "Dieser Fahrplan zeigt, wie {firma} das KI-Managementsystem zertifizieren lässt: Stand der Voraussetzungen, gewählte Stelle, Ablauf, Umgang mit Feststellungen, Zyklus, Nachweise und Zeitplan. Die Zertifizierung bestätigt das Managementsystem, nicht die Rechtskonformität einzelner KI-Systeme."
+nachweise_titel_firma: Nachweise je Normabschnitt
+nachweise_text_firma: "Je Normabschnitt: wo der Nachweis in unserem AIMS liegt."
+zeit_titel_firma: Zeitplan
+abschnitte:
+  voraussetzungen: Voraussetzungen vor Stage 1
+  stelle: Wahl der Zertifizierungsstelle
+  ablauf: Ablauf von Stage 1 und Stage 2
+  feststellungen: Feststellungen der Zertifizierungsstelle
+  zyklus: Zyklus von drei Jahren
+  nachweise: Was der Auditor sehen will
+  haeufig: Die fünf häufigsten Auditfeststellungen
+  zeit: Realistische Zeiträume
+  nist: NIST AI RMF
+voraussetzungen_kopf: [Voraussetzung, Stand, Nachweis]
+voraussetzungen:
+  - ["AIMS umgesetzt und in Betrieb, mit ersten Aufzeichnungen aus Messung, internem Audit und Managementbewertung", "D-00 bis D-17, D-26, D-27"]
+  - ["Geltungsbereich, Leitlinie und Erklärung zur Anwendbarkeit freigegeben", "D-02, D-03, D-11"]
+  - ["Mindestens ein internes Audit über alle Abschnitte und anwendbaren Controls; 9.3 und A.2.4 prüft ein Ergänzungsaudit nach der Managementbewertung", "D-20"]
+  - ["Mindestens eine Managementbewertung nach dem internen Audit", "D-21"]
+  - ["Feststellungen aus internem Audit und Managementbewertung bearbeitet, Ursachen analysiert", "D-22"]
+stand:
+  erfuellt: erfüllt
+  offen: offen
+  audit: "durchgeführt am {datum}"
+  audit_ergaenzung: "durchgeführt am {datum}; {anzahl} Prüfpunkte ({punkte}) prüft das Ergänzungsaudit {audit} am {geplant} nach"
+  audit_ergaenzung_eins: "durchgeführt am {datum}; 1 Prüfpunkt ({punkte}) prüft das Ergänzungsaudit {audit} am {geplant} nach"
+  audit_luecken: "durchgeführt am {datum}, aber {anzahl} Prüfpunkte ohne Ergebnis ({punkte}); nicht erfüllt"
+  audit_luecken_eins: "durchgeführt am {datum}, aber 1 Prüfpunkt ohne Ergebnis ({punkte}); nicht erfüllt"
+  bewertung: "durchgeführt am {datum}"
+  feststellungen: "{anzahl} in Bearbeitung ({details})"
+  einstufung:
+    nk-schwer: NK schwer
+    nk-leicht: NK leicht
+    beobachtung: Beobachtung
+    verbesserung: Verbesserung
+  controls: "{umgesetzt} von {gesamt} Controls umgesetzt"
+  controls_rmf: "{umgesetzt} von {gesamt} Zusatz-Controls NIST AI RMF"
+  platzhalter: "erfüllt / offen"
+stelle_liste:
+  - "**Akkreditierung:** Wir wählen eine Stelle, die für ISO/IEC 42001 akkreditiert ist. Zertifizierungsstellen werden nach ISO/IEC 17021-1 akkreditiert und erfüllen für ISO/IEC 42001 zusätzlich die Anforderungen von ISO/IEC 42006. In der Schweiz akkreditiert die Schweizerische Akkreditierungsstelle (SAS), in Deutschland die DAkkS, in Österreich Akkreditierung Austria. Den Geltungsbereich der Akkreditierung prüfen wir im öffentlichen Verzeichnis."
+  - "**Kompetenz:** ISO/IEC 42006 legt fest, welche Kompetenz Stellen und Auditteams für KI-Managementsysteme brauchen. Wir fragen nach der KI-Erfahrung des vorgesehenen Teams und nach Kenntnissen unserer Branche."
+  - "**Offerten vergleichen:** Wir holen zwei bis drei Offerten ein und vergleichen Audittage für Stage 1, Stage 2 und Überwachung, Reisekosten, Anteil remote, Sprache, Termine und die Kosten über den ganzen Zyklus."
+  - "**Mit ISMS:** Ein kombiniertes Audit mit ISO/IEC 27001 bei derselben Stelle spart Audittage, weil Abschnitte 4 bis 10 gemeinsam geprüft werden."
+# Firmendokument mit gewählter Stelle (statt Offerten und «Mit ISMS»)
+stelle_titel_gewaehlt: Zertifizierungsstelle
+stelle_gewaehlt: "**Gewählte Stelle:** {stelle}."
+stelle_akkreditiert: "**Akkreditierung:** Die Stelle ist für ISO/IEC 42001 akkreditiert. Zertifizierungsstellen werden nach ISO/IEC 17021-1 akkreditiert und erfüllen für ISO/IEC 42001 zusätzlich die Anforderungen von ISO/IEC 42006; in der Schweiz akkreditiert die Schweizerische Akkreditierungsstelle (SAS). Den Geltungsbereich der Akkreditierung haben wir im öffentlichen Verzeichnis geprüft."
+stelle_kombiniert: "**Kombiniertes Audit:** Die Stelle auditiert ISO/IEC 27001 und ISO/IEC 42001 gemeinsam; Abschnitte 4 bis 10 werden zusammen geprüft."
+stelle_isms_firma: "**Kombiniertes Audit:** Ein kombiniertes Audit mit ISO/IEC 27001 bei derselben Stelle spart Audittage, weil Abschnitte 4 bis 10 gemeinsam geprüft werden."
+stage1_titel: "Stage 1: Dokumentprüfung und Bereitschaft"
+stage1_liste:
+  - "Die Stelle prüft Geltungsbereich, Leitlinie, Risiko- und Folgenabschätzungsverfahren, Erklärung zur Anwendbarkeit, internes Audit und Managementbewertung."
+  - "Sie klärt, ob das AIMS bereit ist, und plant Stage 2. Offene Punkte aus dem Bericht beheben wir vor Stage 2; den Abstand legt die Stelle fest."
+stage2_titel: "Stage 2: Wirksamkeit in der Praxis"
+stage2_liste:
+  - "Die Stelle prüft, ob das AIMS so gelebt wird, wie es beschrieben ist: Interviews mit Geschäftsleitung, AIMS-Verantwortung, Eigner/innen der Systeme und Nutzenden."
+  - "Sie zieht Stichproben von KI-Systemen und verfolgt sie durch: Eintrag im Inventar, Risikobeurteilung, Folgenabschätzung, Freigabe, Überwachung, Lieferant, Aufzeichnungen."
+feststellungen_liste:
+  - "**Schwere Nichtkonformität:** Eine Anforderung ist nicht umgesetzt oder das System wirkt in einem Bereich nicht. Das Zertifikat wird erst erteilt, wenn die Behebung nachgewiesen ist."
+  - "**Leichte Nichtkonformität:** Eine einzelne Lücke in einem sonst wirksamen Ablauf. Meist genügt ein Massnahmenplan; die Umsetzung prüft die Stelle im nächsten Audit."
+  - "**Fristen und Form** des Massnahmenplans legt die Stelle fest. Jede Feststellung erfassen wir in D-22 mit Ursache, Korrekturmassnahme und Wirksamkeitsprüfung."
+zyklus_text: "Das Zertifikat gilt drei Jahre. In den beiden Folgejahren findet je ein Überwachungsaudit statt, das einen Teil des AIMS prüft. Vor Ablauf folgt die Rezertifizierung. Bewährt hat sich jedes Jahr dieselbe Reihenfolge: internes Audit, Managementbewertung, externes Audit."
+nachweise_text: "Je Abschnitt und für wichtige Controls: welcher Nachweis erwartet wird und in welchem Dokument er entsteht."
+nachweise_kopf: [Nr., Thema, Nachweis im AIMS]
+controls_kopf: [Control, Thema, Was der Auditor sucht]
+wichtige_controls: [A.2.2, A.3.3, A.4.2, A.5.3, A.6.2.6, A.6.2.8, A.8.4, A.9.2, A.10.3]
+haeufig_hinweis: "Praxisbeobachtung aus veröffentlichten Erfahrungsberichten von Beratungs- und Zertifizierungsunternehmen. Die Reihenfolge ist keine Statistik."
+haeufig_kopf: [Feststellung, So vermeiden wir sie]
+haeufig:
+  - ["KI-Inventar und Geltungsbereich unvollständig, besonders bei KI in eingekaufter Software und Cloud-Diensten", "Inventar mit Fragebogen an alle Teams erheben, Schatten-KI suchen, eingebettete KI-Funktionen aufnehmen (D-10)"]
+  - ["Risikobeurteilung allgemein statt je System, ohne Annahme der Restrisiken und ohne Auslöser für eine Neubeurteilung", "Risiken je KI-System bewerten, Restrisiken mit Name und Datum annehmen, Auslöser in D-06 festlegen (D-07)"]
+  - ["Folgenabschätzung fehlt oder ist lückenhaft; Ausschlüsse in der Erklärung zur Anwendbarkeit ohne Begründung", "Kurzprüfung für jedes System, volle Folgenabschätzung ab Schwelle (D-09); jeden Ausschluss begründen (D-11)"]
+  - ["Lücke zwischen Richtlinie und Praxis: keine Nachweise zu Tests, Protokollen, Freigaben oder menschlicher Aufsicht", "Je Control einen Nachweis mit Ablageort benennen und vor dem Audit Stichproben selbst ziehen (D-11, D-12)"]
+  - ["Schwaches internes Audit, Managementbewertung ohne alle Pflichteingaben, Korrekturen ohne Ursachenanalyse", "Unabhängigen Auditor beiziehen (D-20), Agenda mit allen Pflichteingaben verwenden (D-21), Ursache und Wirksamkeit dokumentieren (D-22)"]
+zeit_kopf: [Ausgangslage, Bis zur Bereitschaft für Stage 1, Bis zum Zertifikat]
+# Zeilen: 0 und 1 mit ISMS, 2 ohne ISMS (Firmendokument: nur die Zeilen des eigenen Pfads)
+zeit:
+  - ["Mit ISMS, kleiner Geltungsbereich", "rund 90 Tage", "6 bis 12 Monate"]
+  - ["Mit ISMS, erweiterter Umfang (mehrere Eigenentwicklungen, Hochrisiko, mehrere Gesellschaften)", "rund 6 Monate", "9 bis 15 Monate"]
+  - ["Ohne ISMS", "rund 150 Tage", "12 bis 18 Monate"]
+zeit_plan: "Unser Zeitplan: {termine}."
+zeit_termin: "{audit} am {datum}"
+zeit_audit:
+  extern-stage1: Stage 1
+  extern-stage2: Stage 2
+zeit_hinweis: "Richtwerte aus öffentlichen Quellen und Praxis. Sie hängen ab von Grösse, Zahl und Art der KI-Systeme, Eigenentwicklung, verfügbarer Zeit und den Terminen der Stelle. Vor Stage 2 braucht es einige Monate Betrieb mit Aufzeichnungen."
+zieltermin: "Zieltermin für die Zertifizierung: {datum}."
+ziel_stage1: "Ziel für die Bereitschaft zu Stage 1 (internes Audit und Managementbewertung abgeschlossen): {datum}."
+# Modul NIST AI RMF
+nist_praefix_leer: "Nur mit Modul NIST AI RMF."
+nist_aims: "das AIMS"
+nist_aims_zertifiziert: "das zertifizierte AIMS"
+nist_liste:
+  - "**Keine Zertifizierung:** NIST zertifiziert nicht, und es gibt kein akkreditiertes Zertifikat nach dem AI RMF. Zutreffend ist «am NIST AI RMF ausgerichtet», nicht «NIST-zertifiziert»."
+  - "**Nachweis gegenüber Kunden:** Fragen Kunden nach dem AI RMF, legen wir das Profil (N-01) und die Abdeckungsmatrix (N-02) vor: welche Subkategorien {aims} abdeckt und wie die Zusatz-Controls die übrigen schliessen."
+  - "**Audit:** Die Zusatz-Controls RMF-xx stehen in der Erklärung zur Anwendbarkeit (D-11). Die Zertifizierungsstelle prüft sie wie andere zusätzliche Controls auf ihre Umsetzung, nicht auf Übereinstimmung mit dem AI RMF."

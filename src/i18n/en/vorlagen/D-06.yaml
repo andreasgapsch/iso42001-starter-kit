@@ -1,0 +1,166 @@
+# D-06 AI risk management procedure
+hinweis_umfang: "The procedure describes the method; the risks are in D-07 and the controls in D-11. Start with systems that process personal data or help make decisions about people."
+einleitung: "This procedure sets out how [[Company name]] identifies, assesses, treats and monitors risks and opportunities related to AI. It ensures that repeated assessments give comparable results."
+einleitung_firma: "This procedure sets out how {firma} identifies, assesses, treats and monitors risks and opportunities related to AI. It ensures that repeated assessments give comparable results."
+abschnitte:
+  zweck: Purpose
+  geltung: Application
+  ablauf: Process
+  skalen: Scales and acceptance criteria
+  folgen: Link to the impact assessment
+  wiederholung: Repetition
+  chancen: Opportunities
+  zustaendigkeiten: Responsibilities
+  aufzeichnungen: Records
+  freigabe: Approval
+zweck_text: "It links the AI inventory (D-10), the impact assessments (D-08, D-09), the risk register (D-07) and the statement of applicability (D-11)."
+geltung_text: "We assess risks at two levels:"
+geltung_ebenen:
+  - "**Company level:** risks to the AI management system as a whole, e.g. gaps in the inventory, lack of competence, new laws."
+  - "**System level:** risks of each AI system in the inventory D-10, from procurement to retirement."
+ablauf:
+  kontext:
+    titel: Setting the context and criteria
+    text: "The basis is the context and interested parties (D-01), the scope (D-02), the AI inventory (D-10) and the criteria in section 4. For each system we clarify the purpose, users, affected persons, data and suppliers."
+  identifikation:
+    titel: Identifying risks
+    text: "The system owner and the AIMS lead collect risks together with the business unit. Inputs are the impact assessment (D-09), supplier information, incidents, reports and audit findings. We check at least the risk sources in Appendix A; the list of AI threats there serves as a checklist."
+  analyse:
+    titel: Analysing risks
+    text: "For every risk we record the cause, the consequence and the existing actions. We look at consequences at three levels:"
+    ebenen:
+      - "**Organization:** financial loss, disruption, liability, reputation, loss of know-how."
+      - "**Individuals and groups:** discrimination, intrusion into privacy, wrong decisions, danger to health."
+      - "**Society:** effect on many people, environment, trust in information, access to services."
+    bewertung: "We estimate likelihood (L) and impact (I) with the scales in section 4. L always refers to the same reference period ({zeitraum}). I is the most severe realistic consequence across all three levels. If a system carries out actions without confirmation by a person, we rate I as if a wrong action went unnoticed; this usually raises I by one level. Risk score = L x I."
+  bewertung:
+    titel: Evaluating and prioritizing
+    text: "We compare the risk score with the acceptance criteria in section 4. This tells us whether a risk can be accepted or must be treated. We treat risks in order of their score. Where scores are equal, consequences for individuals and society and legal obligations come first."
+  behandlung:
+    titel: Treating risks
+    text: "For each risk above the acceptance threshold, the owner chooses an option:"
+    optionen:
+      - "**avoid:** do without the use or the system, or restrict its use;"
+      - "**reduce:** lower the likelihood or impact through actions;"
+      - "**share:** transfer part of the risk to third parties by contract or insurance;"
+      - "**accept:** take on the risk knowingly and with reasons."
+    controls: "We determine the necessary controls from ISO/IEC 42001 Annex A, from other sources or as our own controls (EC-xx). We then compare our selection with all Annex A controls to make sure no necessary control is missing."
+    soa: "The statement of applicability (D-11) records for each control the decision, the reason for inclusion or exclusion and the implementation status. Controls already implemented count as applicable, not as excluded."
+    plan: "Actions with owners, deadline and priority are listed in the treatment plan (D-07). We then rate the residual risk with the same scales."
+  freigabe:
+    text: "**Approval:** {{fakt:freigabe.behandlungsplan}} approves the treatment plan. Residual risks are accepted by the persons named in the decision rights (D-04, Appendix A); name and date are entered in the register D-07. Only {{fakt:freigabe.restrisiko}} can accept residual risks above the acceptance threshold, with a written reason."
+skalen:
+  zeitraum_text: "Reference period for likelihood: {zeitraum}. Without a reference period, estimates by different people cannot be compared."
+  isms_uebernommen: "The scales match the risk method of our information security management system."
+  kopf: [Level, Likelihood, Description, Impact, Description]
+  kopf_kriterien: [Risk score, Rating, What follows]
+  # Kurzfassung je Zone für die Risikomatrix im Leitfaden; die Dokumente nennen die Stelle aus D-04 Anlage A
+  kriterien:
+    tief: "Acceptable. The owner confirms the risk in the register; further actions are optional."
+    mittel: "Treat it or accept it with reasons. {{fakt:freigabe.restrisiko|gross}} approves the acceptance."
+    hoch: "Unacceptable. The system is only put into use, or kept in use, once the risk has been treated. Only top management can accept a time-limited exception."
+  kriterien_firma:
+    tief: "Acceptable; further actions are optional. The residual risk is accepted in the register by: {wer} (decision rights, D-04)."
+    mittel: "Treat it or carry it with reasons. The residual risk is accepted by: {wer}, with written reasons as long as it is above the acceptance threshold (D-04)."
+    hoch: "Unacceptable. The system is only put into use, or kept in use, once the risk has been treated. A time-limited exception is granted by: {wer} (D-04)."
+  einstufung: [low, medium, high]
+  bis: "up to {wert}"
+  von_bis: "{von} to {bis}"
+  ab: "from {wert}"
+hinweis_skalen: "Suggestion: 4x4 matrix with the reference period ‘per year’ as in D-07. Adjust descriptions and thresholds."
+hinweis_skalen_fehlen: "No company-specific scales have been entered in the project yet. This is a suggestion (4x4 matrix). Confirm or replace it before approval."
+zeitraum_vorschlag: per year
+hinweis_zeitraum_fehlt: "No reference period for likelihood has been entered in the project. Add one, otherwise ratings by different people cannot be compared."
+folgen_text: "For every AI system in the inventory we carry out a screening in line with D-08. Where the thresholds are reached, a full impact assessment follows (D-09). The results feed in as follows:"
+folgen_punkte:
+  - "Any harm identified for individuals, groups or society is added as a risk in D-07."
+  - "Its extent determines the impact (I); both procedures use the same scale."
+  - "Every {{fakt:folgen.schwelle}} triggers a full impact assessment, even if the screening does not require one (back-check under D-08)."
+wiederholung_text: "We review low and medium risks at least {intervall} and high risks {intervall_hoch}. For systems with high risks we check larger samples in operation (D-05, D-12). We also reassess a system in the event of:"
+wiederholung_intervall: once a year
+wiederholung_intervall_hoch: every six months
+wiederholung_ausloeser:
+  - "a new use or a significant change to the system, model, data, provider or contract;"
+  - "incidents, near misses or reports from affected persons;"
+  - "new legal requirements, audit findings or missed metrics (D-05)."
+wiederholung_nachweis: "Every assessment is updated with its date in the register D-07."
+chancen_text: "We record opportunities such as time saved or better quality in the register D-07 with the type ‘Opportunity’ and the option ‘exploit’. We rate them separately so that they do not mask risks."
+zustaendigkeiten_kopf: [Role, Tasks]
+zustaendigkeiten:
+  - [Top management, "sets criteria, approves plan and residual risks, provides resources"]
+  - ["Person responsible for the AIMS ({verantwortlich})", "maintains method and register, facilitates, reports to top management"]
+  - ["AI system owner, risk owner", "assesses risks, proposes treatment, implements actions"]
+  - ["Data protection, information security", "are involved for personal data and security questions"]
+aufzeichnungen_text: "Records are the register with the treatment plan and acceptance of residual risk (D-07), the statement of applicability (D-11) and the impact assessments (D-09). Storage: [[Storage location]]. Retention: [[at least 3 years after replacement]], in line with document control (D-26)."
+aufzeichnungen_text_firma: "Records are the register with the treatment plan and acceptance of residual risk (D-07), the statement of applicability (D-11) and the impact assessments (D-09). Storage: {ablage}. Retention: {aufbewahrung}, in line with document control (D-26)."
+platzhalter_aufbewahrung: "at least 3 years after replacement"
+aufbewahrung_jahre: "{jahre} years after replacement"
+ausbau_methoden: "For in-house development or many systems: assessment per life cycle phase and a finer five-level scale."
+freigabe_text: "Top management approved this procedure on {datum}."
+# Appendix A (risk sources and AI threats)
+anlage:
+  titel: Risk sources and AI threats
+  quellen_titel: Risk sources
+  bedrohungen_titel: AI threats as a checklist
+  bedrohungen_text: "For AI systems, these threats come on top of the usual information security threats. When identifying risks, we check which of them apply to a system."
+  bedrohungen:
+    - "**Poisoned data:** someone deliberately alters training, test or knowledge data so that the system answers wrongly or in a deliberately biased way."
+    - "**Evasion:** inputs are crafted so that the system misrecognizes something or ignores its safeguards."
+    - "**Hidden instructions:** emails, web pages, documents or images contain instructions that an assistant follows when reading them."
+    - "**Inference about training data:** answers reveal whether certain persons or documents were in the training data, or parts of them can be reconstructed."
+    - "**Model extraction:** many targeted queries are used to rebuild the model, its rules or its instructions."
+    - "**Tampering with the model:** the model, its settings or its system instructions are changed without authorization, including at the provider or in a component."
+    - "**Leakage through outputs:** answers, links or embedded images carry confidential data outside."
+    - "**Unsafe downstream use:** outputs flow unchecked into other systems as code, commands, formulas or web content."
+    - "**Excessive rights:** assistants and agents can read, send or change more than their task requires."
+    - "**Poisoned memory:** a crafted input places false information or instructions in the memory or context of an assistant that keep working later."
+    - "**Misuse of agent identities:** an agent acts with service accounts or permanent access or passes permissions to sub-agents, beyond the permissions of the triggering person."
+    - "**Chain reaction:** an error spreads across connected agents, automations and interfaces before anyone intervenes."
+    - "**Leakage through logs:** logs, debug recordings and telemetry contain conversation content and are less protected than the data themselves."
+    - "**Abuse of cost and capacity:** mass or very long requests drive up costs or bring the service down."
+  hinweis_genai: "For generative AI, the blank template of the register D-07 contains the sheet ‘Suggestions GenAI security’ with typical security and data risks to adopt; for pure deployers, the entries with audience ‘Deployer’ are usually enough, and for AI that acts, GS-11 to GS-16 are added."
+# Supplementary sheet (path with an ISMS)
+eb:
+  einleitung: "This supplementary sheet extends our existing ISMS risk method ([[ISMS risk procedure document]]) with the points that also apply to AI. Everything else applies unchanged."
+  einleitung_firma: "This supplementary sheet extends the existing ISMS risk method of {firma} ({isms_dokument}) with the points that also apply to AI. Everything else applies unchanged."
+  platzhalter_dokument: "ISMS risk procedure document"
+  hinweis: "Add these sections to your ISMS risk procedure or keep the sheet as an annex. Only change what is genuinely different for AI."
+  abschnitte:
+    geltung: Application to AI
+    quellen: Additional risk sources
+    ebenen: Three levels of consequences
+    skalen: Scales and acceptance criteria
+    folgen: Impact assessment as an input
+    behandlung: Treatment and controls
+    register: Register and links
+    wiederholung: Additional triggers
+    freigabe: Approval
+  geltung_text: "The ISMS method also applies to AI risks. We apply it at company level (the AI management system as a whole) and at system level (each AI system in the inventory D-10)."
+  quellen_text: "In addition to the threats and vulnerabilities covered by the ISMS, we check the risk sources and AI threats in Appendix A for AI systems."
+  ebenen_text: "The ISMS method mainly rates harm to the company. For AI we also consider consequences for individuals and groups and for society. The impact is the most severe realistic consequence across all three levels."
+  ebenen_kopf: [Level, "Addition to the impact scale for individuals and society"]
+  ebenen_vorschlag:
+    - "barely noticeable, easy to correct"
+    - "annoyance or effort for those affected, quickly remedied"
+    - "noticeable disadvantage, intrusion into the privacy or rights of individuals"
+    - "danger to health or fundamental rights, effect on many people, hard to reverse"
+  hinweis_skalen: "Take the reference period and thresholds from your ISMS method. If the scales differ, explain why here."
+  skalen_text: "We use the scales and acceptance criteria of the ISMS. Reference period for likelihood: {zeitraum}. Risk scores up to {akzeptanz} are acceptable, from {unannehmbar} unacceptable."
+  folgen_text: "Screenings and impact assessments (D-08, D-09) are a standing input to the risk assessment. Any harm identified for people or society is added as a risk, and its extent determines the impact. Every {{fakt:folgen.schwelle}} triggers a full impact assessment, even if the screening does not require one (back-check under D-08)."
+  behandlung_text: "The ISMS treatment options continue to apply. We also compare the necessary controls with ISO/IEC 42001 Annex A and record the result in a separate statement of applicability (D-11). Where an ISMS control covers the AI control, we refer to it. In addition, {{fakt:freigabe.behandlungsplan}} approves the treatment plan for AI risks (PR-08)."
+  register_text: "Information security risks of an AI system, such as data leakage or unauthorized access, stay in the ISMS risk register. The AI risk register (D-07) only contains a reference to them (column ‘ISMS reference’). We keep AI-specific risks such as bias, incorrect outputs or missing human review in D-07."
+  wiederholung_text: "In addition to the ISMS triggers, we reassess an AI system in the event of a new use, a change of model or provider, retraining, declining output quality and reports from affected persons. We review low and medium AI risks at least {intervall} and high ones {intervall_hoch}, with larger samples in operation."
+  freigabe_text: "Top management approved this supplementary sheet on {datum}."
+# Explanation per risk source; categories and order from the option group risikoquelle (as the drop-down list in D-07)
+quellen_erlaeuterung:
+  daten: "origin, quality, currency of and rights to data, bias in training and input data, data deliberately altered in a knowledge base or training data; derived data such as summaries, search indexes or logs that are less protected or kept longer than the source."
+  modell: "error rate, made-up answers, unusual inputs, drift after updates or retraining. Known incidents with similar systems (provider notices, press, public incident databases) help to estimate the likelihood."
+  fehlanwendung: "use outside the purpose, blind trust in outputs, new user groups or workflows."
+  transparenz: "outputs cannot be traced or are not recognizable as AI."
+  vertraulichkeit: "trade secrets, customer data or know-how end up in third-party systems or outputs."
+  sicherheit: "manipulated inputs, including instructions hidden in emails, web pages and documents that an AI assistant reads; excessive rights of assistants and agents; poisoned memory, misused agent identities and chain reactions across connected agents; data leakage; misuse of access and of costs."
+  lieferant: "changes by the provider, data location, dependence, gaps in the contract."
+  recht: "data protection, copyright, confidentiality, sector-specific rules."
+  kompetenz: "users or system owners do not know the limits, rules or risks of the system. This includes organizational causes: knowledge depends on one key person, or responsibilities or funding disappear after a change of strategy."
+  automatisierung: "outputs are adopted without human review."
+  umwelt: "energy and resource needs of the system, use under new conditions such as countries or languages."

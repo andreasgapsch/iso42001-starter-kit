@@ -1,0 +1,365 @@
+# Testfälle für den Skill iso42001-kmu (Tor G16).
+# Ausführung: npx tsx tests/skill/lauf.mts  (Optionen siehe Kopf von lauf.mts)
+#
+# Aufbau je Fall:
+#   id, titel, zuege (1 bis 3 Nutzerzüge, nacheinander im selben Gespräch über --resume)
+#   projektdatei (optional): JSON-Text, wird dem ersten Zug als ```json-Block angehängt und vorab gegen das Schema geprüft
+#   pruefungen: maschinell prüfbare Kernergebnisse. Feld «in»: erste | letzte | alle (Standard: letzte)
+#     enthaelt        muster (Regex, Flag i)      muss vorkommen
+#     enthaelt_nicht  muster (Regex, Flag i)      darf nicht vorkommen (ohne_code: true = Codeblöcke nicht durchsuchen)
+#     anzahl_max      muster, max                 höchstens max Treffer
+#     fragen_max      max                         höchstens max Fragen (Fragezeichen ausserhalb von Zitaten und Code)
+#     json_gueltig                                mindestens eine Projektdatei, alle Projektdateien gültig nach Schema
+#     json_enthaelt   pfad, muster                ein Wert am Pfad passt auf das Muster (Pfad mit [*] oder [n])
+#     json_enthaelt_nicht pfad, muster            kein Wert am Pfad passt
+#     json_gleich     pfad, wert                  erster Wert am Pfad ist gleich
+#     json_anzahl     pfad, min                   mindestens min Werte am Pfad
+# JSON-Prüfungen gelten für die letzte Projektdatei im Bereich «in».
+
+faelle:
+  - id: T01
+    titel: Treuhandbüro mit 40 Personen nutzt nur ChatGPT Team und M365 Copilot (ohne ISMS)
+    zuege:
+      - "Wir sind ein Treuhandbüro mit 40 Mitarbeitenden in Bern. Wir nutzen nur ChatGPT Team und Microsoft 365 Copilot. Ein Grosskunde fragt nach ISO 42001. Wo fangen wir an?"
+      - "Wir haben kein ISMS. Keine EU-Kunden und keine Niederlassung in der EU, das AI-Act-Modul brauchen wir nicht. Bitte starten Sie mit dem KI-Inventar."
+      - "ChatGPT Team nutzen 15 Sachbearbeitende für Entwürfe von Mandantenbriefen, Copilot nutzt die Geschäftsleitung für E-Mails und Protokolle. In beide Systeme kommen Mandantendaten. Eigner ist für beide unser IT-Verantwortlicher Marco Keller. Bitte geben Sie jetzt die Inventarzeilen und die Projektdatei aus."
+    pruefungen:
+      - { art: enthaelt, in: erste, muster: "Andreas Gapsch, KMU-CIO, kmu-cio\\.ch" }
+      - { art: enthaelt, in: erste, muster: "keine Rechtsberatung" }
+      - { art: enthaelt, in: erste, muster: "Zertifizierung" }
+      - { art: enthaelt, in: erste, muster: "Datenschutz" }
+      - { art: enthaelt, in: erste, muster: "AIMS-Manager|Offline-Werkzeug" }
+      - { art: enthaelt, in: erste, muster: "ISMS|27001" }
+      - { art: enthaelt, in: erste, muster: "Beispiel" }
+      - { art: fragen_max, in: erste, max: 3 }
+      - { art: anzahl_max, in: alle, muster: "kmu-cio\\.ch", max: 1 }
+      - { art: enthaelt, in: alle, muster: "Schatten" }
+      - { art: enthaelt_nicht, in: letzte, muster: "kmu-cio|Andreas Gapsch" }
+      - { art: json_gueltig }
+      - { art: json_anzahl, pfad: "kiSysteme[*]", min: 2 }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].name", muster: "Copilot" }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].name", muster: "ChatGPT" }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].id", muster: "^KI-001$" }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].personendaten", muster: "^true$" }
+      - { art: json_gleich, pfad: "meta.mitIsms", wert: false }
+      - { art: json_gleich, pfad: "meta.modulAiAct", wert: false }
+
+  - id: T02
+    titel: Maschinenbauer entwickelt eigenes Bildprüfmodell (mit ISMS, mit Modul)
+    zuege:
+      - "Wir sind ein Maschinenbauer mit 180 Mitarbeitenden in der Ostschweiz und liefern Maschinen nach Deutschland. Für die Qualitätskontrolle in unserer eigenen Fertigung haben wir ein eigenes Bildprüfmodell entwickelt. Welche Rolle haben wir damit nach dem EU AI Act und was heisst das für ISO 42001?"
+      - "Unser ISMS nach ISO 27001 ist seit drei Jahren zertifiziert. Das AI-Act-Modul wollen wir. Das Bildprüfmodell läuft nur in unserer eigenen Fertigung und ist nicht Teil der verkauften Maschinen; ein Ausfall gefährdet niemanden, schlechte Teile werden dann einfach manuell geprüft. Bitte bestimmen Sie Rolle und Risikoklasse und geben Sie die Projektdatei aus."
+    pruefungen:
+      - { art: enthaelt, in: erste, muster: "kmu-cio\\.ch" }
+      - { art: enthaelt, in: letzte, muster: "Anbieter" }
+      - { art: enthaelt, in: letzte, muster: "6\\s?\\(1a\\)" }
+      - { art: enthaelt, in: letzte, muster: "juristisch" }
+      - { art: enthaelt, in: letzte, muster: "27\\.0?7\\.2026" }
+      - { art: enthaelt_nicht, in: letzte, muster: "kmu-cio|Andreas Gapsch" }
+      - { art: json_gueltig }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].typ", muster: "^eigenbau$" }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].aiAct.rollen[*]", muster: "^anbieter$" }
+      - { art: json_enthaelt_nicht, pfad: "kiSysteme[*].aiAct.risikoklasse", muster: "^hochrisiko" }
+      - { art: json_gleich, pfad: "meta.mitIsms", wert: true }
+      - { art: json_gleich, pfad: "meta.modulAiAct", wert: true }
+
+  - id: T03
+    titel: HR nutzt KI-Vorselektion von Bewerbungen (Hochrisiko, Modul)
+    zuege:
+      - "Unsere HR-Abteilung nutzt in der Recruiting-Software eine KI-Vorselektion von Bewerbungen. Wir haben 120 Mitarbeitende in Zürich und eine Tochter in München, die dieselbe Software nutzt. Was bedeutet das für ISO 42001 und den AI Act?"
+      - "Wir haben kein ISMS. Ja, das AI-Act-Modul bitte. Die KI vergibt Punkte, unter 50 Punkten gibt es automatisch eine Absage, die niemand mehr ansieht. Bitte bestimmen Sie Rolle und Risikoklasse, machen Sie die Kurzprüfung zur Folgenabschätzung und geben Sie die Projektdatei aus."
+    pruefungen:
+      - { art: enthaelt, in: erste, muster: "kmu-cio\\.ch" }
+      - { art: enthaelt, in: letzte, muster: "Betreiber" }
+      - { art: enthaelt, in: letzte, muster: "Hochrisiko" }
+      - { art: enthaelt, in: letzte, muster: "Anhang III" }
+      - { art: enthaelt, in: letzte, muster: "Art\\.\\s?26" }
+      - { art: enthaelt, in: letzte, muster: "2\\.\\s?12\\.\\s?2027|2\\. Dezember 2027" }
+      - { art: enthaelt, in: letzte, muster: "juristisch" }
+      - { art: enthaelt_nicht, in: letzte, muster: "kmu-cio|Andreas Gapsch" }
+      - { art: json_gueltig }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].aiAct.risikoklasse", muster: "^hochrisiko-anhang-iii$" }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].aiAct.rollen[*]", muster: "^betreiber$" }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].sensibleNutzung", muster: "^true$" }
+      - { art: json_enthaelt, pfad: "folgenabschaetzungen[*].triage.ergebnis", muster: "^voll$" }
+      - { art: json_gleich, pfad: "meta.modulAiAct", wert: true }
+
+  - id: T04
+    titel: IT-Dienstleister mit zertifiziertem ISMS (ISMS-Integration)
+    zuege:
+      - "Wir sind ein IT-Dienstleister mit 60 Mitarbeitenden in Luzern und seit 2022 nach ISO 27001 zertifiziert. Wir wollen ISO 42001 ergänzen. Was können wir aus dem ISMS wiederverwenden?"
+      - "Kein EU-Bezug, das AI-Act-Modul ist nicht nötig. Wir nutzen GitHub Copilot in der Entwicklung und Microsoft 365 Copilot im Büro, beides mit Kundendaten. Bitte zeigen Sie die ISMS-Integration mit den Ergänzungsblättern und geben Sie die Projektdatei aus."
+    pruefungen:
+      - { art: enthaelt, in: erste, muster: "kmu-cio\\.ch" }
+      - { art: enthaelt, in: letzte, muster: "Ergänzungsbl" }
+      - { art: enthaelt, in: letzte, muster: "D-\\d\\d-EB" }
+      - { art: enthaelt, in: letzte, muster: "27001-?\\s?5\\.\\d+|5\\.19|5\\.23" }
+      - { art: enthaelt, in: alle, muster: "gemeinsam" }
+      - { art: enthaelt_nicht, in: letzte, muster: "kmu-cio|Andreas Gapsch" }
+      - { art: json_gueltig }
+      - { art: json_gleich, pfad: "meta.mitIsms", wert: true }
+      - { art: json_gleich, pfad: "meta.ismsZertifiziert", wert: true }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].name", muster: "GitHub Copilot" }
+
+  - id: T05
+    titel: Englischsprachiger Fall, Schnellcheck einer Agentur mit EU-Kunden
+    zuege:
+      - "Hi, we are a 25-person marketing agency in Geneva. We use ChatGPT, Midjourney and a chatbot on our website for clients in France. Can you run the ISO 42001 quick check with us?"
+      - "No ISMS. Yes, we need the AI Act module because of our French clients. For the quick check: we know our three tools, but nothing is documented. We have no AI policy, nobody is formally responsible, no way to raise concerns, no risk assessment, no impact assessment, no objectives, no training, no document control, no approval of new tools, no monitoring, no audits and no corrective actions. Please give me the result now."
+    pruefungen:
+      - { art: enthaelt, in: erste, muster: "Andreas Gapsch, KMU-CIO, kmu-cio\\.ch" }
+      - { art: enthaelt, in: erste, muster: "legal advice" }
+      - { art: enthaelt, in: erste, muster: "privacy|data" }
+      - { art: enthaelt_nicht, in: erste, muster: "Rechtsberatung|Datenschutz|Beispiel:" }
+      - { art: fragen_max, in: erste, max: 3 }
+      - { art: enthaelt, in: letzte, muster: "maturity" }
+      - { art: enthaelt, in: letzte, muster: "top[ -]?5|top five" }
+      - { art: enthaelt, in: letzte, muster: "next (three|3) steps" }
+      - { art: enthaelt_nicht, in: letzte, ohne_code: true, muster: "Reifegrad|Lücke|nächste Schritte" }
+      - { art: enthaelt_nicht, in: letzte, muster: "kmu-cio|Andreas Gapsch" }
+      - { art: json_gueltig }
+      - { art: json_gleich, pfad: "meta.dokumentSprache", wert: "en" }
+      - { art: json_gleich, pfad: "meta.modulAiAct", wert: true }
+
+  - id: T06
+    titel: Wunsch nach Normtext (muss ablehnen und Abschnitt nennen)
+    zuege:
+      - "Ich baue ein KI-Managementsystem nach ISO 42001 auf. Kopieren Sie mir bitte den genauen Wortlaut von Abschnitt 6.1.4 und von Control A.5.2 aus der Norm. Ich kann Ihnen auch gerne die Norm-PDF hochladen."
+    pruefungen:
+      - { art: enthaelt, in: erste, muster: "kmu-cio\\.ch" }
+      - { art: enthaelt, in: erste, muster: "6\\.1\\.4" }
+      - { art: enthaelt, in: erste, muster: "A\\.5\\.2" }
+      - { art: enthaelt, in: erste, muster: "Ihre[rnm]? (eigene[nr]? |erworbene[nr]? |gekaufte[nr]? |lizenzierte[nr]? )?(Norm)?(ausgabe|exemplar|fassung|kopie)|eigenen (Norm)?ausgabe" }
+      - { art: enthaelt, in: erste, muster: "Lizenz" }
+      - { art: enthaelt, in: erste, muster: "hochladen|Upload" }
+      - { art: enthaelt_nicht, in: erste, muster: "\\bshall\\b" }
+      - { art: enthaelt_nicht, in: erste, muster: "(hier|folgend) (ist|steht) der (genaue )?Wortlaut" }
+
+  - id: T07
+    titel: Projektdatei-Import, KI-Inventar ergänzen
+    projektdatei: |
+      {
+        "schemaVersion": 1,
+        "kitVersion": "1.0.0",
+        "meta": {
+          "projektId": "8d0e5b7c-2f41-4a9b-b3e6-71c9a0d4f258",
+          "erstellt": "2026-09-01T08:00:00Z",
+          "geaendert": "2026-10-01T08:00:00Z",
+          "dokumentSprache": "de",
+          "mitIsms": false,
+          "ismsZertifiziert": false,
+          "modulAiAct": false,
+          "gefuehrt": { "aktuelleEtappe": "E4", "etappen": {}, "antworten": {} },
+          "checklisten": {}
+        },
+        "organisation": {
+          "name": "Beispiel Präzisionsteile GmbH",
+          "branche": "CNC-Fertigung Medizintechnik und Automotive",
+          "mitarbeitende": 45,
+          "standorte": "Biel",
+          "euBezug": { "kundenEu": true, "outputEu": false, "niederlassungEu": false },
+          "entwickeltKi": false,
+          "verkauftKiProdukte": false,
+          "kontext": { "themen": [], "klimawandelRelevant": "offen", "klimawandelBegruendung": "" },
+          "rollenIso": [ { "rolle": "kunde", "bemerkung": "Nutzt eingekaufte KI" } ],
+          "geltungsbereich": { "beschreibung": "Ganze Firma am Standort Biel", "grenzenOrganisation": "", "grenzenTechnik": "", "grenzenStandorte": "Biel", "schnittstellen": "", "ausschluesse": [] },
+          "leitlinie": { "version": "", "grundsaetze": [], "ausnahmeprozess": "" },
+          "risikokriterien": { "zeitraum": "pro Jahr", "wahrscheinlichkeit": [], "auswirkung": [], "akzeptanzBis": 4, "unannehmbarAb": 12, "ausIsmsUebernommen": false }
+        },
+        "personen": [
+          { "id": "P-001", "name": "Peter Muster", "funktion": "Geschäftsführer", "aimsRollen": ["gl"] },
+          { "id": "P-002", "name": "Sandra Beispiel", "funktion": "Leiterin IT", "aimsRollen": ["aims-verantwortung"] }
+        ],
+        "parteien": [],
+        "rollen": [],
+        "kiSysteme": [
+          {
+            "id": "KI-001", "name": "Microsoft 365 Copilot", "typ": "saas", "beschreibung": "KI-Assistent in Microsoft 365", "zweck": "Texte und Zusammenfassungen", "fachbereich": "Verwaltung", "eigner": "P-002",
+            "personendaten": true, "besondereDaten": false, "betroffene": "Mitarbeitende", "automatisierung": "unterstuetzend", "lebenszyklus": "betrieb", "status": "freigegeben",
+            "ressourcen": { "daten": "Tenant-Daten", "werkzeuge": "Copilot", "rechenressourcen": "Microsoft Cloud", "personal": "IT" }, "sensibleNutzung": false,
+            "aiAct": { "rollen": ["betreiber"], "risikoklasse": "offen", "transparenz": [], "gpai": false, "begruendung": "Nutzung in eigener Verantwortung", "juristischGeprueft": false }
+          },
+          {
+            "id": "KI-002", "name": "ERP-KI Disposition", "typ": "eingekauft", "beschreibung": "Prognosefunktion im ERP", "zweck": "Materialdisposition", "fachbereich": "Logistik", "eigner": "P-001",
+            "personendaten": false, "besondereDaten": false, "betroffene": "keine Personen direkt", "automatisierung": "teilautomatisiert", "lebenszyklus": "betrieb", "status": "freigegeben",
+            "ressourcen": { "daten": "Lager- und Auftragsdaten", "werkzeuge": "ERP", "rechenressourcen": "lokaler Server", "personal": "Disposition" }, "sensibleNutzung": false,
+            "aiAct": { "rollen": ["betreiber"], "risikoklasse": "offen", "transparenz": [], "gpai": false, "begruendung": "Eingekaufte Funktion", "juristischGeprueft": false }
+          }
+        ],
+        "risiken": [
+          {
+            "id": "R-001", "art": "risiko", "titel": "Falsche Bestellvorschläge", "beschreibung": "Prognose liegt daneben", "kiSystem": "KI-002", "quelle": "Modell", "ebenen": ["organisation"],
+            "ursache": "Saisonale Effekte", "folge": "Lieferverzug", "bestehendeMassnahmen": "Disponent prüft", "w": 2, "a": 2, "wNach": null, "aNach": null,
+            "controls": [], "massnahmen": [], "eigner": "P-001", "status": "offen"
+          }
+        ],
+        "folgenabschaetzungen": [],
+        "controls": [],
+        "eigeneControls": [],
+        "nachweise": [],
+        "dokumente": [],
+        "massnahmen": [],
+        "lieferanten": [],
+        "ziele": [],
+        "kompetenzen": [],
+        "kommunikation": [],
+        "audits": [],
+        "feststellungen": [],
+        "managementbewertungen": []
+      }
+    zuege:
+      - "Hier ist unsere exportierte Projektdatei aus dem AIMS-Manager. Bitte ergänzen Sie das KI-Inventar um DeepL Pro, das unser Verkaufsteam seit letztem Monat für Offerten an Kunden in Deutschland nutzt (mit Kundendaten, Eignerin Sandra Beispiel), und geben Sie die aktualisierte Projektdatei aus."
+    pruefungen:
+      - { art: enthaelt, in: erste, muster: "kmu-cio\\.ch" }
+      - { art: enthaelt_nicht, in: erste, muster: "Haben Sie ein (ISMS|Informationssicherheits)" }
+      - { art: json_gueltig }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].id", muster: "^KI-003$" }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].name", muster: "DeepL" }
+      - { art: json_gleich, pfad: "kiSysteme[0].id", wert: "KI-001" }
+      - { art: json_gleich, pfad: "kiSysteme[0].name", wert: "Microsoft 365 Copilot" }
+      - { art: json_gleich, pfad: "kiSysteme[1].id", wert: "KI-002" }
+      - { art: json_gleich, pfad: "risiken[0].id", wert: "R-001" }
+      - { art: json_gleich, pfad: "organisation.name", wert: "Beispiel Präzisionsteile GmbH" }
+      - { art: json_gleich, pfad: "meta.erstellt", wert: "2026-09-01T08:00:00Z" }
+      - { art: json_gleich, pfad: "meta.projektId", wert: "8d0e5b7c-2f41-4a9b-b3e6-71c9a0d4f258" }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].eigner", muster: "^P-002$" }
+
+  - id: T08
+    titel: Dokument zuschneiden, KI-Leitlinie D-03 ohne Kit-Absender
+    zuege:
+      - "Wir sind die Beispiel Präzisionsteile GmbH mit 45 Mitarbeitenden, CNC-Fertigung für Medizintechnik in Biel. Wir haben kein ISMS und brauchen das EU-AI-Act-Modul nicht. Bitte erstellen Sie unsere KI-Leitlinie (D-03) als Markdown."
+      - "Freigabe durch den Geschäftsführer Peter Muster, Eignerin und AIMS-Verantwortliche ist die IT-Leiterin Sandra Beispiel. Unsere Grundsätze: Der Mensch entscheidet, Kundenzeichnungen bleiben vertraulich, KI-Ergebnisse werden geprüft. Bitte jetzt das fertige Dokument und die Projektdatei."
+    pruefungen:
+      - { art: enthaelt, in: erste, muster: "kmu-cio\\.ch" }
+      - { art: anzahl_max, in: alle, muster: "kmu-cio\\.ch", max: 1 }
+      - { art: enthaelt, in: letzte, muster: "KI-Leitlinie" }
+      - { art: enthaelt, in: letzte, muster: "Peter Muster" }
+      - { art: enthaelt, in: letzte, muster: "Sandra Beispiel" }
+      - { art: enthaelt, in: letzte, muster: "Freigabe" }
+      - { art: enthaelt, in: letzte, muster: "Überprüfung" }
+      - { art: enthaelt_nicht, in: letzte, muster: "kmu-cio|Andreas Gapsch|Starter-Kit|Diesen Block" }
+      - { art: json_gueltig }
+      - { art: json_enthaelt, pfad: "dokumente[*].id", muster: "^D-03$" }
+      - { art: json_anzahl, pfad: "organisation.leitlinie.grundsaetze[*]", min: 3 }
+
+  - id: T09
+    titel: Modus 12 NIST AI RMF, US-Kunde mit Fragebogen, Chatbot und Copilot (mit ISMS, DE)
+    zuege:
+      - "Wir sind ein Hersteller von Messgeräten mit 140 Mitarbeitenden in Aarau, ISMS nach ISO 27001 ist zertifiziert. Ein grosser US-Kunde schickt uns einen Fragebogen, ob wir uns am NIST AI RMF ausrichten. Wir nutzen Microsoft 365 Copilot und einen Chatbot auf unserer Website, der Kundenfragen zu unseren Geräten beantwortet. Wie gehen wir vor?"
+      - "Ja, schalten Sie das Modul NIST AI RMF ein, das Modul EU AI Act brauchen wir nicht. Der Kunde fragt vor allem nach Inventar, Tests vor dem Einsatz und Lieferanten. Copilot liest Mails und Dokumente, der Chatbot ist öffentlich und läuft auf einem Modell eines US-Anbieters, Version unbekannt. Getestet haben wir beide nie systematisch. Eigner beider Systeme ist der IT-Leiter Urs Beispiel. Bitte führen Sie Modus 12 durch: Ziel-Profil vorschlagen, Lücken, Zusatz-Controls und den GenAI-Check, und geben Sie die Projektdatei aus."
+    pruefungen:
+      - { art: enthaelt, in: erste, muster: "Andreas Gapsch, KMU-CIO, kmu-cio\\.ch" }
+      - { art: fragen_max, in: erste, max: 3 }
+      - { art: anzahl_max, in: alle, muster: "kmu-cio\\.ch", max: 1 }
+      - { art: enthaelt, in: alle, muster: "freiwillig" }
+      - { art: enthaelt, in: alle, muster: "(NIST|es) zertifiziert nicht|keine Zertifizierung durch NIST|kein (NIST-)?Zertifikat" }
+      - { art: enthaelt_nicht, in: alle, muster: "\\b(Sie|wir|Ihr Unternehmen|Ihre Firma) (sind|ist|wären|werden) (damit |nun |jetzt |dann )?NIST-(zertifiziert|konform)" }
+      - { art: enthaelt, in: letzte, muster: "Republished courtesy of the National Institute of Standards and Technology" }
+      - { art: enthaelt, in: letzte, muster: "RMF-G0[1-7]" }
+      - { art: enthaelt, in: letzte, muster: "Prompt-Injection|versteckte Anweisungen" }
+      - { art: enthaelt, in: letzte, muster: "Konfabulation|erfundene" }
+      - { art: enthaelt, in: letzte, muster: "Ziel" }
+      - { art: enthaelt, in: letzte, muster: "\"nistProfil\"" }
+      - { art: enthaelt_nicht, in: letzte, muster: "kmu-cio|Andreas Gapsch" }
+      - { art: json_gueltig }
+      - { art: json_gleich, pfad: "meta.modulNistRmf", wert: true }
+      - { art: json_gleich, pfad: "meta.modulAiAct", wert: false }
+      - { art: json_gleich, pfad: "meta.mitIsms", wert: true }
+      - { art: json_enthaelt, pfad: "controls[*].rahmenwerk", muster: "^NISTRMF$" }
+      - { art: json_enthaelt, pfad: "controls[*].vorschlag", muster: "^nistrmf$" }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].generativ", muster: "^true$" }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].genaiBewertung.gai-konfabulation.relevant", muster: "^(ja|nein|offen)$" }
+
+  - id: T10
+    titel: Mode 12 NIST AI RMF with an imported project file (EN, current profile from the file)
+    projektdatei: |
+      {
+        "schemaVersion": 1,
+        "kitVersion": "1.0.0",
+        "meta": {
+          "projektId": "4c1f7a2e-9b3d-4e6f-a1c8-5d2b7e9f0a13",
+          "erstellt": "2026-09-15T08:00:00Z",
+          "geaendert": "2026-10-15T08:00:00Z",
+          "dokumentSprache": "en",
+          "mitIsms": false,
+          "ismsZertifiziert": false,
+          "modulAiAct": false,
+          "modulNistRmf": true,
+          "gefuehrt": { "aktuelleEtappe": "E8", "etappen": {}, "antworten": {} },
+          "checklisten": {}
+        },
+        "organisation": {
+          "name": "Example Sensors Ltd",
+          "branche": "Industrial sensors",
+          "mitarbeitende": 80,
+          "standorte": "Lausanne",
+          "euBezug": { "kundenEu": false, "outputEu": false, "niederlassungEu": false },
+          "entwickeltKi": false,
+          "verkauftKiProdukte": false,
+          "kontext": { "themen": [], "klimawandelRelevant": "nein", "klimawandelBegruendung": "No relevant effect on our use of AI" },
+          "rollenIso": [ { "rolle": "kunde", "bemerkung": "Uses purchased AI" } ],
+          "geltungsbereich": { "beschreibung": "Whole company in Lausanne", "grenzenOrganisation": "", "grenzenTechnik": "", "grenzenStandorte": "Lausanne", "schnittstellen": "", "ausschluesse": [] },
+          "leitlinie": { "version": "1.0", "grundsaetze": ["People decide", "Customer data stays confidential"], "ausnahmeprozess": "Exceptions approved by the CEO" },
+          "risikokriterien": { "zeitraum": "per year", "wahrscheinlichkeit": [], "auswirkung": [], "akzeptanzBis": 4, "unannehmbarAb": 12, "ausIsmsUebernommen": false }
+        },
+        "personen": [
+          { "id": "P-001", "name": "Anna Example", "funktion": "CEO", "aimsRollen": ["gl"] },
+          { "id": "P-002", "name": "Marc Sample", "funktion": "Head of IT", "aimsRollen": ["aims-verantwortung"] }
+        ],
+        "parteien": [],
+        "rollen": [],
+        "kiSysteme": [
+          {
+            "id": "KI-001", "name": "Website support chatbot", "typ": "saas", "beschreibung": "Chatbot on the public website answering product questions", "zweck": "Customer support", "fachbereich": "Sales", "eigner": "P-002",
+            "personendaten": true, "besondereDaten": false, "betroffene": "Customers and prospects", "automatisierung": "teilautomatisiert", "lebenszyklus": "betrieb", "status": "freigegeben",
+            "ressourcen": { "daten": "Product manuals, chat inputs", "werkzeuge": "Chatbot service", "rechenressourcen": "Provider cloud", "personal": "Sales support" }, "sensibleNutzung": false,
+            "aiAct": { "rollen": ["betreiber"], "risikoklasse": "offen", "transparenz": [], "gpai": false, "begruendung": "Used under own authority", "juristischGeprueft": false },
+            "generativ": true, "oeffentlich": true, "modell": { "anbieter": "US provider" }
+          },
+          {
+            "id": "KI-002", "name": "Microsoft 365 Copilot", "typ": "saas", "beschreibung": "AI assistant in Microsoft 365", "zweck": "Drafting and summarizing", "fachbereich": "All", "eigner": "P-002",
+            "personendaten": true, "besondereDaten": false, "betroffene": "Employees", "automatisierung": "unterstuetzend", "lebenszyklus": "betrieb", "status": "freigegeben",
+            "ressourcen": { "daten": "Tenant data", "werkzeuge": "Copilot", "rechenressourcen": "Microsoft Cloud", "personal": "IT" }, "sensibleNutzung": false,
+            "aiAct": { "rollen": ["betreiber"], "risikoklasse": "offen", "transparenz": [], "gpai": false, "begruendung": "Used under own authority", "juristischGeprueft": false },
+            "generativ": true, "fremdeInhalte": true
+          }
+        ],
+        "risiken": [],
+        "folgenabschaetzungen": [],
+        "controls": [],
+        "eigeneControls": [],
+        "nachweise": [],
+        "dokumente": [
+          { "id": "D-03", "version": "1.0", "status": "freigegeben", "eigner": "P-002", "freigabe": { "von": "P-001", "am": "2026-10-01" }, "ablageort": "SharePoint/AIMS", "giltFuerIsms": false },
+          { "id": "D-10", "version": "1.0", "status": "freigegeben", "eigner": "P-002", "freigabe": { "von": "P-001", "am": "2026-10-01" }, "ablageort": "SharePoint/AIMS", "giltFuerIsms": false }
+        ],
+        "massnahmen": [],
+        "lieferanten": [],
+        "ziele": [],
+        "kompetenzen": [],
+        "kommunikation": [],
+        "audits": [],
+        "feststellungen": [],
+        "managementbewertungen": []
+      }
+    zuege:
+      - "Here is our project file from the AIMS Manager. A US customer wants to know how we align with the NIST AI RMF. Please run mode 12: propose a target profile (lite level), derive our current profile from the file, list the main gaps, propose the additional RMF controls and do the GenAI check for both systems. Then give me the updated project file."
+    pruefungen:
+      - { art: enthaelt, in: erste, muster: "Andreas Gapsch, KMU-CIO, kmu-cio\\.ch" }
+      - { art: enthaelt, in: erste, muster: "voluntary" }
+      - { art: enthaelt, in: erste, muster: "(NIST|it) does not certify|no (NIST )?certification|not certif" }
+      - { art: enthaelt_nicht, in: erste, muster: "\\b(you|we|your company) (are|is|will be|would be) (now |then |thus )?NIST[- ](certified|compliant)" }
+      - { art: enthaelt, in: erste, muster: "Republished courtesy of the National Institute of Standards and Technology" }
+      - { art: enthaelt, in: erste, muster: "RMF-G0[1-7]" }
+      - { art: enthaelt, in: erste, muster: "prompt injection" }
+      - { art: enthaelt, in: erste, muster: "target" }
+      - { art: enthaelt_nicht, in: erste, ohne_code: true, muster: "Subkategorie|Lücke|Zusatz-Control" }
+      - { art: json_gueltig }
+      - { art: json_gleich, pfad: "meta.projektId", wert: "4c1f7a2e-9b3d-4e6f-a1c8-5d2b7e9f0a13" }
+      - { art: json_gleich, pfad: "meta.modulNistRmf", wert: true }
+      - { art: json_gleich, pfad: "meta.dokumentSprache", wert: "en" }
+      - { art: json_gleich, pfad: "kiSysteme[0].id", wert: "KI-001" }
+      - { art: json_enthaelt, pfad: "controls[*].rahmenwerk", muster: "^NISTRMF$" }
+      - { art: json_enthaelt, pfad: "controls[*].id", muster: "^RMF-G0[1-7]$" }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].genaiBewertung.gai-konfabulation.relevant", muster: "^(ja|nein|offen)$" }
+      - { art: json_enthaelt, pfad: "kiSysteme[*].genaiBewertung.gai-sicherheit.relevant", muster: "^ja$" }

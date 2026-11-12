@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 99,
+  "kitVersion": "1.0.0-test.3",
+  "meta": {
+    "projektId": "fixture-zu-neu-0001",
+    "erstellt": "2027-01-15T08:00:00.000Z",
+    "geaendert": "2027-01-15T08:00:00.000Z",
+    "dokumentSprache": "de",
+    "mitIsms": false,
+    "ismsZertifiziert": false,
+    "modulAiAct": true,
+    "gefuehrt": {
+      "aktuelleEtappe": "E0",
+      "etappen": {},
+      "antworten": {}
+    },
+    "checklisten": {},
+    "neuesFeldAusV99": true
+  },
+  "organisation": {
+    "name": "Zukunft AG",
+    "branche": "",
+    "mitarbeitende": null,
+    "standorte": "",
+    "euBezug": {},
+    "kontext": {
+      "themen": [],
+      "klimawandelRelevant": "offen",
+      "klimawandelBegruendung": ""
+    },
+    "rollenIso": [],
+    "geltungsbereich": {
+      "beschreibung": "",
+      "grenzenOrganisation": "",
+      "grenzenTechnik": "",
+      "grenzenStandorte": "",
+      "schnittstellen": "",
+      "ausschluesse": []
+    },
+    "leitlinie": {
+      "version": "",
+      "grundsaetze": [],
+      "ausnahmeprozess": ""
+    },
+    "risikokriterien": {
+      "zeitraum": "",
+      "wahrscheinlichkeit": [],
+      "auswirkung": [],
+      "akzeptanzBis": 4,
+      "unannehmbarAb": 12,
+      "ausIsmsUebernommen": false
+    }
+  },
+  "personen": [],
+  "parteien": [],
+  "rollen": [],
+  "kiSysteme": [],
+  "risiken": [],
+  "folgenabschaetzungen": [],
+  "controls": [],
+  "eigeneControls": [],
+  "nachweise": [],
+  "dokumente": [],
+  "massnahmen": [],
+  "lieferanten": [],
+  "ziele": [],
+  "kompetenzen": [],
+  "kommunikation": [],
+  "audits": [],
+  "feststellungen": [],
+  "managementbewertungen": [],
+  "zukunft": {
+    "lieferketten": [
+      {
+        "id": "LK-001",
+        "titel": "Beispiel aus einer späteren Version"
+      }
+    ]
+  }
+}

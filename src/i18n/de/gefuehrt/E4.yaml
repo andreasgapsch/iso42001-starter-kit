@@ -1,0 +1,258 @@
+# Seitentexte Etappe E4 KI-Inventar. Format: src/gefuehrt/FORMAT.md
+E4-einfuehrung:
+  titel: KI-Inventar
+  frage: Welche KI-Systeme gibt es in Ihrem Unternehmen?
+  warum: Das [[g:ki-inventar]] ist die Grundlage für Risiken, Folgenabschätzungen und [[g:control|Controls]]. Es umfasst selbst entwickelte KI, eingekaufte Software mit KI-Funktionen, Cloud-Dienste und [[g:schatten-ki]].
+  fehler: Das häufigste Problem im Audit ist ein unvollständiges Inventar, vor allem KI in eingekaufter Software und von Mitarbeitenden privat genutzte Dienste. Auditoren fragen in Fachbereichen nach und vergleichen mit Ihrer Liste.
+E4-suche:
+  titel: Wo Sie suchen
+  frage: Aus welchen Quellen erheben Sie die KI-Systeme?
+  warum: Keine Quelle allein findet alle Systeme. Lizenzlisten zeigen eingekaufte Software, Netzwerkauswertungen zeigen genutzte Cloud-Dienste, Gespräche mit Fachbereichen zeigen, was tatsächlich im Einsatz ist.
+  fehler: Wer nur die IT fragt, findet die [[g:schatten-ki]] nicht. Auditoren wollen sehen, dass Sie mehrere Quellen genutzt haben, und fragen, wie Sie neue Systeme künftig erkennen.
+  felder:
+    meta.gefuehrt.antworten.inventar.quellen:
+      label: Quellen
+      hilfe: Wählen Sie mindestens drei. Eine kurze Umfrage bei allen Mitarbeitenden findet oft am meisten Schatten-KI.
+E4-fragebogen:
+  titel: Fragebogen für Fachbereiche
+  frage: Welche Fachbereiche sollen den Erhebungsfragebogen ausfüllen und bis wann?
+  warum: Die Fachbereiche wissen am besten, welche Werkzeuge sie nutzen. Mit dem Fragebogen sammeln Sie die Angaben einheitlich und importieren sie danach ins Inventar.
+  fehler: Fragebogen ohne Frist kommen nicht zurück. Setzen Sie eine Frist von zwei Wochen und lassen Sie die Leitung jedes Fachbereichs das Ergebnis bestätigen; das ist ein guter Nachweis für die Vollständigkeit.
+  felder:
+    meta.gefuehrt.antworten.inventar.fragebogenBereiche:
+      label: Fachbereiche
+      hilfe: Alle Bereiche im Geltungsbereich.
+    meta.gefuehrt.antworten.inventar.ruecklaufBis:
+      label: Rücklauf bis
+      hilfe: Datum für die Rückgabe des ausgefüllten Fragebogens.
+E4-systeme:
+  titel: KI-Systeme erfassen
+  frage: Welches KI-System nutzen oder entwickeln Sie, wofür und wer ist dafür verantwortlich?
+  warum: Je System brauchen Sie mindestens Name, Art, Zweck und eine Eignerin oder einen Eigner. Der Zweck ist wichtig, weil ein System nur dafür genutzt werden soll, wofür es geprüft ist ([[g:beabsichtigte-verwendung]]).
+  fehler: Systeme ohne [[g:eigner]] meldet die Prüfung als Fehler. Auditoren fragen die Eignerin oder den Eigner des Systems, wofür das System genutzt wird und wer es freigegeben hat.
+  felder:
+    name:
+      label: Name
+      hilfe: So, wie es im Unternehmen genannt wird, z. B. «Visuelle Qualitätsprüfung Linie 3».
+    typ:
+      label: Art
+      hilfe: Schatten-KI sind Werkzeuge, die ohne Freigabe genutzt werden. Sie gehören ebenfalls ins Inventar.
+    beschreibung:
+      label: Beschreibung
+      hilfe: Was das System tut, in zwei Sätzen.
+    zweck:
+      label: Zweck
+      hilfe: Wofür es eingesetzt wird und wofür nicht, z. B. «Erkennt Oberflächenfehler an Gussteilen; entscheidet nicht über die Freigabe ganzer Lose».
+    fachbereich:
+      label: Fachbereich
+      hilfe: Der Bereich, der das System hauptsächlich nutzt.
+    eigner:
+      label: Eigner/in
+      hilfe: Die Person, die über Einsatz und Änderungen entscheidet, meist die Leitung des Fachbereichs.
+    lieferant:
+      label: Lieferant
+      hilfe: Lieferanten erfassen Sie in Etappe 9 genauer; hier genügt die Auswahl oder ein neuer Eintrag.
+    lebenszyklus:
+      label: Phase
+      hilfe: In welcher Phase des [[g:lebenszyklus]] das System steht.
+    status:
+      label: Status
+      hilfe: «Freigegeben» erst nach Prüfung und Freigabe nach Ihrem Ablauf.
+E4-daten:
+  titel: Daten und Betroffene
+  frage: Welche Daten verarbeitet das System, wen betrifft es und wie stark entscheidet es selbst?
+  warum: Personendaten, betroffene Menschen und der Grad der Automatisierung bestimmen, wie heikel ein System ist. Diese Angaben steuern später die Kurzprüfung der Folgenabschätzung.
+  fehler: «Betroffen sind die Nutzenden» greift oft zu kurz. Denken Sie auch an Kunden, Bewerbende oder Personen, über die das System etwas aussagt. Auditoren achten besonders auf Systeme, die über Menschen urteilen.
+  felder:
+    personendaten:
+      label: Verarbeitet Personendaten
+      hilfe: Auch Namen in Texten oder Zeichnungen zählen.
+    besondereDaten:
+      label: Verarbeitet besonders schützenswerte Daten
+      hilfe: z. B. Gesundheit, Herkunft, Religion, biometrische Daten, Strafverfahren.
+    betroffene:
+      label: Betroffene Personen
+      hilfe: Wer von den Ergebnissen betroffen ist, auch ausserhalb des Unternehmens.
+    automatisierung:
+      label: Grad der Automatisierung
+      hilfe: Wer am Ende entscheidet, Mensch oder System.
+    aufsicht:
+      label: Menschliche Aufsicht (wer prüft)
+      hilfe: Wer die Ergebnisse dieses Systems prüft und eingreifen darf, z. B. «QS-Fachpersonen an der Prüfstation, Schichtleitung». Erscheint im KI-Inventar (D-10).
+E4-ressourcen:
+  titel: Ressourcen je System
+  frage: Woraus besteht das System und wovon hängt es ab?
+  warum: Die Norm verlangt, dass Sie die Ressourcen eines KI-Systems kennen, also Daten, Werkzeuge und Modelle, Rechenleistung und Personal. Bei eingekaufter KI genügen die Angaben des Lieferanten.
+  fehler: Bei Cloud-Diensten fehlt oft die Region der Datenverarbeitung. Auditoren fragen bei Eigenentwicklungen nach Modell und Version und bei Cloud-Diensten nach dem Betriebsort.
+  felder:
+    ressourcen.daten:
+      label: Daten
+      hilfe: Welche Daten in Training, Test und Betrieb verwendet werden und woher sie stammen.
+    ressourcen.werkzeuge:
+      label: Werkzeuge und Modelle
+      hilfe: Modell, Dienst, Version, [[g:anbieter]], z. B. «Bildmodell des Kameraherstellers, Version 4.2, mit eigenen Bildern nachtrainiert».
+    ressourcen.rechenressourcen:
+      label: Betriebsort und Rechenleistung
+      hilfe: Eigenes Rechenzentrum, Cloud mit Region, Gerät in der Produktion.
+    ressourcen.personal:
+      label: Personal
+      hilfe: Welche Rollen das System betreiben, beaufsichtigen und warten.
+    aenderungsregel:
+      label: Nachtrainieren und Modelländerungen
+      hilfe: Nur wenn Sie das Modell nachtrainieren, feinabstimmen oder ändern. Wer ändert, womit getestet wird, wer freigibt und wann eine Änderung wesentlich ist. Erscheint im Verfahren Lebenszyklus (D-12).
+E4-schatten:
+  titel: Schatten-KI entscheiden
+  frage: Was geschieht mit dieser [[g:schatten-ki]]?
+  warum: Schatten-KI ist ein Zeichen für einen echten Bedarf. Sie entscheiden, ob Sie das Werkzeug prüfen und freigeben, durch ein freigegebenes ersetzen oder untersagen.
+  fehler: Schatten-KI, die monatelang «in Prüfung» bleibt, meldet die Prüfung als Hinweis. Auditoren erwarten einen Entscheid mit Datum und eine Mitteilung an die Nutzenden.
+  felder:
+    status:
+      label: Entscheid
+      hilfe: «Abgelöst», wenn ein freigegebenes Werkzeug den Zweck übernimmt.
+    erfasstAm:
+      label: Erfasst am
+      hilfe: Ab diesem Datum zählt die Frist für den Entscheid.
+E4-freigabeprozess:
+  titel: Freigabe neuer KI-Werkzeuge
+  frage: Wer prüft und gibt neue KI-Werkzeuge frei, nach welchen Kriterien und wie schnell?
+  warum: Ein schlanker, schneller Freigabeweg verhindert neue [[g:schatten-ki]]. Wer weiss, dass ein Antrag in wenigen Tagen entschieden ist, wartet lieber, als heimlich ein Werkzeug zu nutzen.
+  fehler: Freigabeprozesse, die Wochen dauern, fördern Schatten-KI. Auditoren lassen sich zeigen, wie ein neues Werkzeug zuletzt freigegeben wurde.
+  felder:
+    meta.gefuehrt.antworten.werkzeugFreigabe.wer:
+      label: Freigabe durch
+      hilfe: Meist die [[g:aims|AIMS]]-Verantwortliche Person, bei heiklen Fällen mit Datenschutz und Informationssicherheit.
+    meta.gefuehrt.antworten.werkzeugFreigabe.kriterien:
+      label: Prüfkriterien
+      hilfe: Die Kriterien erscheinen als Checkliste in der Nutzungsrichtlinie D-15.
+    meta.gefuehrt.antworten.werkzeugFreigabe.fristTage:
+      label: Entscheid innert Arbeitstagen
+      hilfe: z. B. 5 Arbeitstage für Standardfälle.
+E4-ueberpruefung:
+  titel: Überprüfung des Inventars
+  frage: Wann überprüfen Sie die Angaben zu diesem System das nächste Mal?
+  warum: KI-Systeme ändern sich durch Updates, neue Funktionen oder neue Nutzungen. Ein Überprüfungsdatum je System stellt sicher, dass das Inventar aktuell bleibt.
+  fehler: Überschrittene Überprüfungsdaten meldet die Prüfung als Hinweis. Auditoren nehmen ein System heraus und fragen, wann es zuletzt überprüft wurde.
+  felder:
+    naechsteUeberpruefung:
+      label: Nächste Überprüfung
+      hilfe: Spätestens nach einem Jahr, bei heiklen Systemen halbjährlich.
+    antragAm:
+      label: Antrag am
+      hilfe: "Datum, an dem der Antrag auf Nutzung einging (PR-07). Leer lassen, wenn es keinen Antrag gab, z. B. bei einem Fund von [[g:schatten-ki|Schatten-KI]]."
+    entscheidAm:
+      label: Entscheid am
+      hilfe: "Datum der Freigabe, der Freigabe mit Auflagen oder der Ablehnung. Mit «Antrag am» misst die Kennzahl PR-07 die Tage bis zum Entscheid."
+    freigabe:
+      label: "Freigabe zur Nutzung"
+      hilfe: "Wer das System zur Nutzung oder Inbetriebnahme freigegeben hat, und wann."
+    datenklasse:
+      label: Höchste erlaubte Datenklasse
+      hilfe: "Welche Daten in das System eingegeben werden dürfen, z. B. «intern» für ein freigegebenes Chat-Werkzeug ohne Kundendaten."
+    auflagen:
+      label: Auflagen für die Nutzung
+      hilfe: "z. B. «nur mit menschlicher Prüfung der Ergebnisse» oder «keine Personendaten»."
+    freigabeBegruendung:
+      label: Begründung des Entscheids
+      hilfe: Warum das System freigegeben, eingeschränkt oder untersagt ist; Verweis auf Risiko oder Folgenabschätzung genügt.
+    sensibleNutzung:
+      label: Sensible Nutzung
+      hilfe: Übernehmen Sie das Ergebnis der Folgenabschätzung; auf deren Seite «Ergebnis» genügt bei einer Abweichung der Knopf «Ins Inventar übernehmen». Inventar und Abschätzung müssen übereinstimmen.
+    ismsAsset:
+      label: Asset-ID im ISMS-Inventar
+      hilfe: Kennung im bestehenden Inventar der Informationswerte des [[g:isms]], damit beide Inventare verknüpft sind.
+E4-handlung:
+  titel: "Handelnde KI"
+  frage: "Was darf das KI-System selbst tun, worauf greift es zu, und wie wird es gestoppt?"
+  warum: "Ein Assistent, der nur Texte entwirft, birgt andere Risiken als einer, der E-Mails versendet, Buchungen auslöst oder mit Werkzeugen mehrere Schritte selbst ausführt. Je mehr ein System selbst handelt, desto wichtiger sind knappe Zugriffsrechte, Protokolle und eine verlässliche Stoppmöglichkeit. Die Angaben stehen im Inventar D-10 und in den Regeln zum [[g:lebenszyklus]] D-12."
+  fehler: "Erweiterungen, Konnektoren und Agenten in Bürosoftware werden oft übersehen, weil sie per Einstellung dazukommen. Die Prüfung meldet handelnde Systeme ohne Stoppmöglichkeit, Protokolle oder Aufsicht (H28). Auditoren fragen, wer ein System im Notfall abschaltet und wie schnell."
+  felder:
+    aufgabenart:
+      label: "Art der Aufgabe"
+      hilfe: "Was das System hauptsächlich tut."
+    handlungsbefugnis:
+      label: "Handlungsbefugnis"
+      hilfe: "«Führt begrenzt aus»: einzelne Aktionen ohne Bestätigung, z. B. einen Termin eintragen. «Handelt mehrstufig»: plant und führt mehrere Schritte mit Werkzeugen aus (Agent)."
+    zugriffe:
+      label: "Zugriffe und Werkzeuge"
+      hilfe: "Systeme, Ablagen, Postfächer, Schnittstellen und Konnektoren, die das System lesen oder bedienen kann."
+    gedaechtnis:
+      label: "Gedächtnis über Sitzungen hinaus"
+      hilfe: "«Ja», wenn das System Angaben aus früheren Sitzungen speichert und wieder verwendet."
+    stoppmoeglichkeit:
+      label: "Stoppmöglichkeit"
+      hilfe: "Wie das System gestoppt oder seine Rechte entzogen werden und wer das darf, z. B. «Konnektor im Admin-Center deaktivieren; IT oder Eigner/in»."
+E4-generativ:
+  titel: "Generative KI und Modell"
+  frage: "Erzeugt das System Texte, Bilder, Code oder Audio, und welches Modell in welcher Version steckt dahinter?"
+  warum: "Generative KI bringt eigene Risiken mit, etwa erfundene Inhalte oder versteckte Anweisungen in E-Mails und Dokumenten. Mit Modell und Version erkennen Sie, wenn der [[g:anbieter]] wechselt, und können neu beurteilen. Liest das System fremde Inhalte oder ist es öffentlich erreichbar, gehören Missbrauchsfälle in die Prüfung vor dem Einsatz."
+  fehler: "Bei eingekauften Diensten fehlt oft die Angabe zum Modell; dann fällt ein Modellwechsel nicht auf (H33). Halten Sie die Angabe des Anbieters mit Datum fest, auch wenn sie ungenau ist."
+  felder:
+    generativ:
+      label: "Generative KI"
+      hilfe: "«Ja», wenn das System Inhalte erzeugt. Für diese Systeme schlägt Etappe 6 typische Sicherheitsrisiken vor."
+    modell.anbieter:
+      label: "Modell: Anbieter"
+      hilfe: "Wer das Modell entwickelt, z. B. der Hersteller des Grundmodells."
+    modell.name:
+      label: "Modell: Name"
+      hilfe: "Name oder Familie des Modells laut Anbieter."
+    modell.version:
+      label: "Modell: Version"
+      hilfe: "Version oder Stand mit Datum, z. B. «laut Anbieter, Stand 10/2026»."
+    fremdeInhalte:
+      label: "Liest Inhalte Dritter"
+      hilfe: "Zum Beispiel eingehende E-Mails, Webseiten oder Dokumente von Kunden. Solche Inhalte können versteckte Anweisungen enthalten."
+    oeffentlich:
+      label: "Öffentlich erreichbar"
+      hilfe: "Für Personen ausserhalb der Organisation zugänglich, z. B. ein Chatbot auf der Website."
+E4-dienst:
+  titel: "Dienst, Tarif und Funktionen"
+  frage: "Über welchen Tarif nutzen Sie den Dienst, welche Funktionen sind eingeschaltet, und woher stammen die Angaben?"
+  warum: "Die Zusagen eines [[g:anbieter|Anbieters]] zu Training, Aufbewahrung und Vertrag hängen am Angebot: Gratis- und Privatkonten haben andere Bedingungen als ein Business- oder Unternehmensvertrag. Funktionen wie Websuche, Gedächtnis oder Konnektoren verändern die Risiken. Mit dem Datum der Abkündigung planen Sie den Wechsel rechtzeitig. Die Angaben stehen im Inventar D-10 und im Blatt «Dienste» von D-16."
+  fehler: "Häufig nutzen einzelne Teams privat bezahlte Abos für Firmendaten. Die Prüfung meldet vertrauliche Daten in einem Gratis- oder Privattarif als Fehler (F30) und ein nahes Abkündigungsdatum als Hinweis (H53). Nicht festgehaltene Funktionen gelten als ungeklärt, nicht als ausgeschaltet. Auditoren fragen nach der Fundstelle der Angaben."
+  felder:
+    tarif:
+      label: "Tarif oder Vertragsart"
+      hilfe: "Gratiskonto, Privat- oder Einzelabo, Business oder Team, Unternehmensvertrag oder eigener Betrieb."
+    funktionen.websuche:
+      label: "Websuche"
+      hilfe: "Ein oder aus, wie in der Verwaltung des Dienstes eingestellt."
+    funktionen.codeausfuehrung:
+      label: "Codeausführung"
+      hilfe: "Der Dienst führt selbst Code aus, z. B. für Auswertungen."
+    funktionen.dateiupload:
+      label: "Datei-Upload"
+      hilfe: "Nutzende können Dateien hochladen."
+    funktionen.gedaechtnis:
+      label: "Gedächtnis"
+      hilfe: "Der Dienst merkt sich Angaben über die Sitzung hinaus."
+    funktionen.konnektoren:
+      label: "Konnektoren und Werkzeugserver"
+      hilfe: "Anbindungen an E-Mail, Ablagen, Kalender oder Werkzeuge Dritter, auch Werkzeugserver nach dem Model Context Protocol."
+    funktionen.agenten:
+      label: "Eigene Assistenten und Agenten"
+      hilfe: "Nutzende können eigene Assistenten oder Agenten einrichten."
+    funktionen.teilen:
+      label: "Teilen nach aussen"
+      hilfe: "Chats, Assistenten oder Ergebnisse lassen sich mit Personen ausserhalb der Firma teilen."
+    abkuendigung:
+      label: "Abkündigung durch den Anbieter"
+      hilfe: "Angekündigtes Datum, an dem Modell oder Dienst eingestellt wird."
+    quelleAngaben.fundstelle:
+      label: "Quelle der Anbieterangaben"
+      hilfe: "Fundstelle beim Hersteller oder Anbieter, z. B. Vertragsbedingungen, Systemkarte oder Verwaltungskonsole; nicht aus Sammlungen Dritter."
+    quelleAngaben.abgerufen:
+      label: "Abgerufen am"
+      hilfe: "Datum, an dem Sie die Angaben geprüft haben."
+E4-kritisch:
+  titel: "Kritische Systeme und Abhängigkeiten"
+  frage: "Stört ein Ausfall des Systems wichtige Abläufe, und welche Systeme und Abläufe hängen damit zusammen?"
+  warum: "Wer weiss, wovon ein KI-System abhängt und was davon abhängt, kann Ausfälle, Modellwechsel und die Ablösung planen. Für kritische Systeme legen Sie in Etappe 9 einen Rückfallweg fest. Die Abhängigkeiten stehen im Inventar D-10, Blatt Ressourcen."
+  fehler: "Kritisch heisst nicht nur sicherheitsrelevant: Auch ein Offertassistent, ohne den der Verkauf stillsteht, ist kritisch. Die Prüfung meldet kritische Systeme ohne Rückfallweg (H29)."
+  felder:
+    kritisch:
+      label: "Kritisch für den Betrieb"
+      hilfe: "«Ja», wenn ein Ausfall wichtige Abläufe stört oder Kunden betrifft."
+    abhaengigkeiten:
+      label: "Abhängigkeiten"
+      hilfe: "Systeme und Abläufe vor und nach dem KI-System, z. B. «liest aus dem ERP, schreibt Entwürfe ins Ticketsystem»."

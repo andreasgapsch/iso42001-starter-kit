@@ -1,0 +1,80 @@
+# D-24 Role first
+stand: "Legal status: {rechtsstand}. Before making decisions, we check whether any changes have applied since then (E-09)."
+stand_titel: Legal status
+hinweis_umfang: "This guide helps you determine the role under the EU AI Act for each AI system before you derive obligations. It is for orientation and is not legal advice. Have borderline cases and all high-risk cases reviewed by a lawyer."
+einleitung: "The obligations under the EU AI Act depend on the role an organization has for a particular AI system and on how risky the system is. The rule is therefore: first the role, then the risk class, then the obligations. The role can differ from system to system; an SME is often the deployer for most systems and the provider for a few."
+abschnitte:
+  baum: Decision tree as questions
+  schweiz: Swiss perspective
+  begriffe: Roles under ISO/IEC 22989 and under the AI Act
+  nachweis: What ISO/IEC 42001 demonstrates and what it does not
+  systeme: Roles of our AI systems
+  weiter: Next steps
+baum_hinweis: "Answer the questions for each AI system in the inventory (D-10). Record the answer and the reasoning; with the AI Act module, in E-01."
+baum:
+  - "**Is it an AI system within the meaning of the AI Act (Art. 3(1))?** No: the AI Act does not apply to this system; it stays in the inventory if it has AI features. Yes: go to question 2."
+  - "**Is there a link to the EU?** Registered office or establishment in the EU, placing the system on the market or putting it into service in the EU, or use of its output in the EU. No: the AI Act does not cover the system (see Swiss perspective). Yes: go to question 3."
+  - "**Have we developed the system or had it developed, and do we place it on the market or put it into service under our own name or trademark, even if only for our own use?** Yes: we are the **provider** (Art. 3(3)). Go to question 5. No: go to question 4."
+  - "**Do we use another provider's system under our own authority in a professional context?** Yes: we are the **deployer** (Art. 3(4)). Go to question 5. No: the other roles are to be checked: importer (Art. 23) or distributor (Art. 24), product manufacturer integrating the system into its product (Art. 25(3)), or authorised representative (Art. 22)."
+  - "**Change of role under Art. 25(1): does our role change for a high-risk AI system?** We become the provider if we (a) put our name or trademark on a high-risk AI system already on the market, (b) make a substantial modification to a high-risk AI system and it remains high-risk, or (c) change the purpose of a system in such a way that it becomes high-risk. Yes: we take on the provider obligations for this system. No: the role from question 3 or 4 remains."
+  - "**Record the role.** The role for each system is recorded in the inventory (D-10) with the reasoning and date. It is reviewed whenever the purpose, name, model or distribution changes."
+schweiz_text: "The AI Act also applies to organizations outside the EU, but only where there is a link to the EU. Two cases matter most:"
+schweiz_liste:
+  - "**Art. 2(1)(a):** a company places an AI system on the market or puts it into service in the EU, wherever it is based. Example: a chatbot under its own name on its website for customers in Germany."
+  - "**Art. 2(1)(c):** providers or deployers based in Switzerland whose output is used in the EU. Example: AI-assisted analyses produced for customers in the EU."
+  - "**Not covered** is purely Swiss use with no link to the EU, such as an internal tool whose results are used only in Switzerland."
+  - "**Art. 22:** providers of high-risk AI systems established outside the EU must appoint an authorised representative established in the EU by written mandate before making the system available in the EU."
+schweiz_recht: "Switzerland currently has no dedicated AI law. The Swiss Federal Act on Data Protection (DSG) and other existing law also apply to AI. E-09 tracks the status of Swiss regulation."
+begriffe_text: "For roles, ISO/IEC 42001 refers to ISO/IEC 22989. The terms sound similar to those in the AI Act, but they do not mean the same thing:"
+begriffe_kopf: [Topic, ISO/IEC 22989 and 42001, EU AI Act]
+begriffe_zeilen:
+  - ["Purpose of the roles", "Describe who has which task in the AI ecosystem; basis for context (4.1) and scope", "Determine who bears which legal obligations"]
+  - ["Who develops", "AI producer (develops) and AI provider (makes products or services available) are separate roles", "The provider is whoever develops or has a system developed and places it on the market or puts it into service under its own name"]
+  - ["Who uses", "AI customer or user", "Deployer, where use is professional and under its own authority"]
+  - ["Other roles", "AI partner (for example integrators, data suppliers), affected persons, authorities", "Importer, distributor, product manufacturer, authorised representative"]
+  - ["Consequence", "Holding several roles at once is common; no legal obligations", "One role per system and operation; this gives rise to obligations, with fines for infringements"]
+begriffe_hinweis: "The roles under ISO/IEC 22989 are recorded in D-01, the role under the AI Act for each system in D-10 or E-01. An SME can be an ‘AI customer’ under ISO and still be a ‘provider’ under the AI Act, for example if it offers a purchased model under its own name."
+nachweis_text: "A certificate to ISO/IEC 42001 shows that an effective management system for AI is in place. It does not replace the obligations under the AI Act, but it makes many of them easier to meet."
+nachweis_kopf: [Topic, "Demonstrated by ISO/IEC 42001", Remarks]
+nachweis_zeilen:
+  - ["Management system with policy, roles, objectives and improvement", "yes", "Clauses 4 to 10"]
+  - ["AI risk assessment and risk treatment", "yes", "6.1, 8.2, 8.3; for providers of high-risk AI systems, a basis for Art. 9"]
+  - ["Impact assessment for affected persons", "yes", "6.1.4, A.5; the fundamental rights impact assessment under Art. 27 only partly (E-06)"]
+  - ["Supplier management and allocation of responsibilities", "yes", "A.10"]
+  - ["Data, logging, technical documentation", "partly", "A.6.2.7, A.6.2.8, A.7; the content required by Art. 10 to 12 and Annex IV goes further"]
+  - ["Transparency and information for users", "partly", "A.8.2; check the specific obligations under Art. 50 (E-07)"]
+  - ["AI literacy of staff", "partly", "7.2, 7.3; record the actions under Art. 4 (E-04)"]
+  - ["Quality management system for providers under Art. 17", "partly", "EN 18286:2026 is listed (Implementing Decision (EU) 2026/2274, OJ L 2026/2274 of 14/10/2026, without restriction). Open interpretation: Art. 40(1) does not expressly name Art. 17; have the scope under Annex ZA of the standard legally reviewed (E-09)"]
+  - ["Conformity assessment (Art. 43)", "no", "separate procedure for high-risk AI systems"]
+  - ["CE marking (Art. 48)", "no", ""]
+  - ["EU declaration of conformity (Art. 47)", "no", ""]
+  - ["Registration in the EU database (Art. 49)", "no", ""]
+  - ["Presumption of conformity (Art. 40)", "no", "ISO/IEC 42001 is not a harmonised standard. A harmonised standard published in the Official Journal only gives rise to the presumption to the extent that it covers the requirements (Art. 40(1)); which ones these are is usually shown in its Annex ZA"]
+  - ["Common specifications (Art. 41)", "no", "second route to the presumption where the Commission adopts common specifications in the absence of suitable standards; also applies only to the extent that they cover the requirements"]
+  - ["Legal classification of an AI system", "no", "remains a legal assessment"]
+systeme_kopf: [ID, AI system, Role under the AI Act, Reasoning]
+rollen:
+  anbieter: provider
+  betreiber: deployer
+  einfuehrer: importer
+  haendler: distributor
+  produkthersteller: product manufacturer
+  bevollmaechtigter: authorised representative
+  offen: open
+weiter_liste:
+  - "With the AI Act module: record the roles in E-01, determine the risk class in E-02, derive the obligations in E-03. Deadlines and status are in E-09."
+  - "Without the module: record the role for each system in the inventory (D-10) and check once a year whether a link to the EU has arisen."
+  - "We have classifications involving high risk, changes of role under Art. 25 and borderline cases reviewed by a lawyer."
+# Company document: texts depending on the module (with the module: E-01 to E-09; without: inventory and context)
+firma:
+  stand_ohne_modul: "Legal status: {rechtsstand}. Before making decisions, we check whether any changes have applied since then."
+  schweiz_recht_ohne_modul: "Switzerland currently has no dedicated AI law. The Swiss Federal Act on Data Protection (DSG) and other existing law also apply to AI. We review the status of Swiss regulation once a year with the context analysis (D-01)."
+  einleitung: "The obligations under the EU AI Act depend on the role {firma} has for a particular AI system and on how risky the system is. The rule is therefore: first the role, then the risk class, then the obligations. The role can differ from system to system; it is recorded with its rationale in section 5."
+  begriffe_hinweis_modul: "Our roles under ISO/IEC 22989 are recorded in D-01, the role under the AI Act for each system in E-01 and in the inventory (D-10). An ‘AI customer’ under ISO can still be a ‘provider’ under the AI Act, for example if a purchased model is offered under one's own name."
+  begriffe_hinweis_ohne_modul: "Our roles under ISO/IEC 22989 are recorded in D-01, the role under the AI Act for each system in the inventory (D-10)."
+  weiter_modul: "Record the roles in E-01, determine the risk class in E-02, derive the obligations in E-03. Deadlines and status are in E-09."
+  weiter_ohne_modul: "Record the role for each system in the inventory (D-10) and check once a year whether a link to the EU has arisen."
+# NIST AI RMF module
+nist_praefix_leer: "Only with the NIST AI RMF module:"
+nist_praefix: "NIST AI RMF:"
+nist_verhaeltnis: "The US framework is not law and changes neither the role nor the obligations under the AI Act. Profile and coverage matrix (N-01, N-02) are voluntary evidence, above all for customers with a US connection."

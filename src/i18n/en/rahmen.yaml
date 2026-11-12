@@ -1,0 +1,284 @@
+# Texts of the AIMS Manager frame (tool bar, sub-menu, header, search, start, overview, knowledge, help).
+# Keys rahmen.*; same structure as src/i18n/de/rahmen.yaml.
+bereich:
+  start: Start
+  uebersicht: Overview
+  guide: Guide
+  register: Registers
+  prozesse: Processes
+  bibliothek: Library
+  wissen: Knowledge
+  pruefung: Check
+  hinweise: Notices
+  hilfe: Help
+  einstellungen: Settings
+
+navi:
+  hauptbereiche: Main areas
+  unterbereiche: "Sub-areas: {bereich}"
+  einklappen: Collapse sub-menu
+  schliessen: Close sub-menu
+  untermenue_zeigen: Show or hide sub-menu
+  mehr: More
+  mehr_aktiv: "currently {bereich}"
+  mehr_schliessen: "Close ‘More’"
+  weitere_bereiche: More areas
+
+leiste:
+  fehler: "{anzahl} errors"
+  fehler_eins: "1 error"
+  offen: "{anzahl} points open, no errors yet"
+  offen_eins: "1 point open, no errors yet"
+  faellig: "{anzahl} tasks due"
+  faellig_eins: "1 task due"
+
+kopf:
+  werkzeug: No project open
+  stichtag: Reference date
+  stichtag_tipp: The data in this project file is dated in the future (example). All views, due dates and checks use this reference date.
+  speichern_tipp: "Save (Ctrl+S, on a Mac Cmd+S)"
+
+projekt:
+  kachel: "{kuerzel}: project {name}, {stand}"
+  menue: Project
+  speichern_unter: Save as …
+  oeffnen: Open project file …
+  beenden: Finish …
+  andere: Projects and examples
+
+register:
+  grundlagen: Foundations
+  umsetzung: Implementation
+  bewertung: Evaluation
+  module: Modules
+
+guide:
+  ueberblick: Overview
+  etappen: Phases
+  danach: Afterwards
+  jahreskalender: Annual calendar
+  stand:
+    offen: open
+    laeuft: in progress
+    erledigt: done
+
+prozesse:
+  landkarte: Process map
+  alle: All processes
+  status: Status
+  eigene: Own processes
+  gruppen: Groups
+
+bibliothek:
+  alle: All documents
+  erzeugen: Generate
+  platzhalter: The library with documents, versions and approvals is not yet built into this version. You generate documents under ‘Generate’.
+
+pruefung:
+  regeln: Check rules
+  stage1: Stage 1 report
+
+hinweise:
+  alle: All notices
+  text: "What needs attention in the project ‘{name}’: tasks due, result of the check and status of the legal basis."
+  rechtsstand: Legal status
+  aiact_stand: "The AIMS Manager works with the EU AI Act in the consolidated version of {fassung}, last checked on {geprueft}."
+
+start:
+  willkommen: Welcome
+  projekte: Projects and examples
+  gruss_morgen: Good morning
+  gruss_tag: Good afternoon
+  gruss_abend: Good evening
+  projekt_offen: "Open: {name}"
+  faellig: Tasks due
+  alle_faelligen: "All {anzahl} tasks due"
+  alle_faelligen_eins: "The task due"
+  erste_schritte: First steps with the AIMS Manager
+  schritte_stand: "{erledigt} of {gesamt} done"
+  schritte_zeigen: Show steps
+  schritte_verbergen: Hide steps
+  schritt:
+    speichern:
+      titel: Create and save the project
+      text: Save the project file in a secure location, for example a folder with backup. Edge and Chrome then write directly to this file.
+      knopf: Save project
+    interview:
+      titel: Answer the start interview in the guide
+      text: The start interview sets the path, modules and roadmap. It takes about 20 minutes.
+      knopf: Open start interview
+    inventar:
+      titel: Record the AI inventory
+      text: Record all AI systems in the company, including AI in purchased software and shadow AI.
+      knopf: Go to AI inventory
+    bibliothek:
+      titel: Connect the library folder
+      text: Documents, versions and evidence are then stored as real files in a folder of your choice, for example a OneDrive or network drive folder.
+      knopf: Go to library
+    gestaltung:
+      titel: Define the document design
+      text: Your organization's logo, colours and fonts appear in all generated documents.
+      knopf: Define design
+    dokumente:
+      titel: Generate the first documents
+      text: The generator creates the documents as Word and Excel files; in the document register you record version and approval.
+      knopf: Generate documents
+
+faellig:
+  aufgabe: Task
+  bereich: Area
+  datum: Due
+  stand: Status
+  ueberfaellig: Overdue
+  bald: Due soon
+  keine: No task due in the next 30 days.
+  art:
+    ueberpruefung: Review
+    kalender: Annual calendar
+    prozess: Execution
+    massnahme: Action
+    bibliothek: Review in the library
+    geaendert: File changed outside
+    fehlt: File missing from the folder
+
+uebersicht:
+  lagebild: Situation report
+  faellig: Due
+  faellig_liste: Tasks due, overdue first
+  faellig_text: "Reviews, tasks from the annual calendar, process executions, actions and library reviews due up to 30 days after {datum}, and library files changed outside or missing."
+  massnahmen_offen: Open actions
+  bereitschaft: Stage 1 readiness
+  bereitschaft_text: How far the AIMS is ready for the stage 1 audit; the check rules show what is still missing.
+  bereitschaft_gruen: No errors and no notes. Generate the stage 1 report and the documents.
+  bereitschaft_gelb: No errors, but notes. Clarify the notes before the audit.
+  bereitschaft_rot: There are errors. Fix them before the stage 1 audit.
+  bereitschaft_aufbau: "Still being set up: there are no errors from phases already started. The open points are dealt with in the phases of the Guide."
+  bericht_ansehen: View report
+  etappen_erledigt: Phases done
+
+suche:
+  label: Search
+  platzhalter: Search
+  taste: Slash key
+  ergebnisse: Search results
+  anzahl: "{anzahl} results"
+  anzahl_eins: "1 result"
+  keine: No results
+  controls: Controls
+  weitere: Further entries
+  seiten: Areas
+  bereich: Area
+
+einstellungen:
+  alle: All settings
+  projekt: Project and modules
+  darstellung: Language and appearance
+  gestaltung: Document design
+  normtexte: Standard texts
+  speicher: Storage and library folder
+  ohne_projekt: Open or create a project first.
+  theme_hilfe: Dark is the default. ‘Like system’ follows the operating system setting. Printouts and generated documents always stay light.
+  bibliothek_titel: Library folder
+  bibliothek_text: The library manages documents, versions and evidence. In Edge and Chrome you connect a folder for it, for example a OneDrive or network drive folder; the files stay visible there.
+  bibliothek_browser: In Firefox and Safari the library is kept in browser storage; back it up there regularly as a ZIP.
+  zur_bibliothek: Go to library
+  bibliothek_ohne_projekt: The library belongs to a project. Open a project first.
+
+wissen:
+  leitfaden: Guide book
+  regelwerke: Frameworks
+  mehr: More
+  glossar: Glossary
+  glossar_text: "{anzahl} terms in our own words."
+  glossar_text_eins: "1 term in our own words."
+  assistent: AI assistant
+  assistent_text: The kit's AI assistant (folder AI assistant) helps with the quick check, the inventory, risks and writing the documents. It returns a project file that you import here.
+  assistent_daten: Only enter information into an AI service that your rules for AI use allow. Deselect confidential information beforehand.
+  fehlt: The guide book content is missing in this file.
+  inhalt_kapitel: Sections of the chapter
+  blaettern: Browse chapters
+  druckfassung: The print version of the guide book is included in the kit as a PDF (folder 00_Guide).
+  abbildung_pdf: The figure is shown in the print version (PDF).
+  hinweis_norm: The tool contains no template wording. Titles and explanations are our own summaries; with your own copy of the standard, the original texts appear here.
+  hinweis_nist: Original texts from NIST AI 100-1 and NIST AI 600-1. The NIST AI RMF is voluntary and not certifiable.
+  kapitel_4_10: Clauses 4 to 10
+  anhang_a: Annex A (controls)
+  aus_normausgabe: From your copy of the standard
+  zur_soa: Open in the statement of applicability
+  feld:
+    zweck: Purpose
+    umsetzung: Implementation in an SME
+    nachweis: Typical evidence
+    auditor: What the audit looks for
+  auszuege: Verbatim excerpts
+  seiten_pdf: "PDF pages {seiten}"
+  aiact_pdf: The full text is in the enclosed PDF in the legal texts folder.
+  zum_modul_aiact: Go to the EU AI Act module in the registers
+  zum_aiact: EU AI Act in the knowledge area
+
+hilfe:
+  kurzanleitung: Quick guide
+  tasten: Keyboard shortcuts
+  starten:
+    titel: Getting started
+    text: Open the AIMS Manager with a double click. Under Start, choose a new project, a project file or an example. Everything runs offline in the browser.
+  navigation:
+    titel: Navigation
+    text: On the left you choose the area, next to it the page in the sub-menu. The sub-menu can be collapsed; on narrow screens you open it with the menu button before the page title. On a phone the areas are at the bottom, the others under ‘More’.
+  arbeiten:
+    titel: Guide and registers
+    text: The Guide leads you phase by phase through the AIMS, one question per page, with help on the right. The registers show all information as lists and forms, from the organization to the reports.
+  speichern:
+    titel: Saving
+    text: Save with Ctrl+S (Mac Cmd+S), with the save status next to the search or in the project menu at the bottom of the tool bar. Edge and Chrome write directly to the open file; Firefox and Safari download a new file. The temporary storage does not replace the project file.
+  pruefen:
+    titel: Check and documents
+    text: The check shows a traffic light (‘Ready for stage 1’, ‘Ready with notes’ or ‘Not ready yet’) with a jump to each item. You generate documents in the library under ‘Generate’ as Word and Excel files.
+  bibliothek:
+    titel: Library
+    text: The library manages documents with status, version and review date. In Edge and Chrome it works with a folder of your choice.
+  wissen:
+    titel: Knowledge
+    text: Guide book, frameworks with our own short titles and original texts, glossary and notes on the AI assistant, without internet.
+  assistent:
+    titel: AI assistant
+    text: ‘Deepen with AI’ creates a request to copy. You import the assistant's project file under Start, Projects and examples.
+
+tasten:
+  allgemein: General
+  taste: Key
+  wirkung: Effect
+  bereich: Area
+  bereiche: Areas
+  bereiche_text: First press g, then the letter of the area.
+  suche: Open search
+  speichern: Save
+  speichern_unter: Save as
+  oeffnen: Open project file
+  pruefung: Check
+  zurueck: Back in the guide
+  leiste: Next or previous area in the tool bar, Home and End for the first or last
+  escape: Close search, selection list, project menu, sub-menu or ‘More’
+
+# Main actions of the page headers (U-34)
+aktion:
+  drucken: Print
+  ki_erfassen: Add AI system
+  weitermachen: Continue
+  eigener_prozess: Add own process
+  dokumente: Generate documents
+  erfassen:
+    kiSysteme: Add AI system
+    risiken: Add risk
+    massnahmen: Add action
+    lieferanten: Add supplier
+    nachweise: Add evidence
+    feststellungen: Add finding
+    audits: Add audit
+    ziele: Add objective
+    parteien: Add interested party
+    rollen: Add role
+    personen: Add person
+    kommunikation: Add communication
+    kompetenzen: Add competence
+    bereiche: Add area

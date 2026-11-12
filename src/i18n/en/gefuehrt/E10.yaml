@@ -1,0 +1,105 @@
+# Page texts for phase E10 Competence and communication. Format: src/gefuehrt/FORMAT.md
+E10-einfuehrung:
+  titel: Competence and communication
+  frage: Who needs what knowledge about AI, and what do you share with whom?
+  warum: The standard requires people with AI tasks to be competent, all employees to know the policy, and communication to be planned. With the module, the AI Act duty on [[g:ki-kompetenz]] is added.
+  fehler: Training without records and without a check of effectiveness counts for little in the audit. Auditors ask people with oversight roles how they were trained.
+E10-kompetenzen:
+  titel: Competence needs per role
+  frage: Which role needs which competence, and how do you ensure it?
+  warum: People who oversee, develop or buy AI need different knowledge from someone who uses a text assistant. For each role, you define the requirement, the action and the evidence.
+  fehler: The check flags oversight roles without evidence of competence as a notice. Auditors ask how you checked whether a training worked.
+  felder:
+    rolle:
+      label: Role
+      hilfe: e.g. ‘Oversight of applicant pre-selection’.
+    anforderung:
+      label: Requirement
+      hilfe: What the person must be able to do, e.g. ‘Know the limits of the system, check results for unfair treatment’.
+    personen:
+      label: People
+      hilfe: Who has this role.
+    gruppe:
+      label: Further people without their own entry
+      hilfe: e.g. ‘two CAM programmers’ or ‘recruiters Lea Graf and Sara Imhof’; appears in D-17 under people.
+    massnahme:
+      label: Measure
+      hilfe: Training, introduction by the supplier, self-study.
+    nachweis:
+      label: Evidence
+      hilfe: e.g. attendance list, certificate.
+    wirksamkeit:
+      label: Effectiveness
+      hilfe: How you checked whether it worked, e.g. a case review after three months.
+    status:
+      label: Status
+      hilfe: Met once evidence and effectiveness are in place.
+E10-bewusstsein:
+  titel: Inform all employees
+  frage: How do all employees learn about the policy, the rules and their own contribution?
+  warum: Everyone should know the AI policy, what their contribution is, and what happens if rules are not followed. Short, repeated formats work better than a one-off training.
+  fehler: Information sent only by email often does not reach employees in production. Auditors talk to employees at their workplace.
+  felder:
+    meta.gefuehrt.antworten.bewusstsein.formate:
+      label: Formats
+      hilfe: You can select more than one.
+    meta.gefuehrt.antworten.bewusstsein.rhythmus:
+      label: Repetition
+      hilfe: Refresh at least once a year.
+    organisation.bewusstsein:
+      label: Topics with delivery and evidence
+      hilfe: One topic per row, e.g. AI policy, rules of use, reporting route. With date and evidence, D-17 shows that awareness raising has taken place; if left empty, the template's suggestion remains.
+    organisation.bewusstsein.thema:
+      label: Topic
+      hilfe: e.g. ‘AI policy and principles’.
+    organisation.bewusstsein.inhalt:
+      label: Content
+      hilfe: What employees should know, in one sentence.
+    organisation.bewusstsein.zielgruppe:
+      label: Audience
+      hilfe: e.g. ‘all employees’ or ‘users of KI-001’.
+    organisation.bewusstsein.kanal:
+      label: Channel
+      hilfe: e.g. intranet, team meeting, e-learning.
+    organisation.bewusstsein.datum:
+      label: Date
+      hilfe: When the topic was delivered.
+    organisation.bewusstsein.nachweis:
+      label: Evidence
+      hilfe: e.g. attendance list or read confirmation with storage location.
+E10-ki-kompetenz:
+  titel: AI literacy under the AI Act
+  frage: For which groups do you take AI literacy actions, and which ones?
+  warum: Since February 2025, [[g:anbieter|providers]] and [[g:betreiber|deployers]] have had to take actions so that their staff use AI with sufficient knowledge. What is required is a reasonable effort based on role and risk, not a specific level.
+  fehler: A single training for everyone rarely fits. Record which group gets what; template E-04 helps with this.
+  felder:
+    meta.gefuehrt.antworten.kiKompetenz.zielgruppen:
+      label: Target groups
+      hilfe: Groups with different needs.
+    meta.gefuehrt.antworten.kiKompetenz.massnahmen:
+      label: Actions
+      hilfe: e.g. "30-minute e-learning for everyone; workshop for users of generative AI; training by the supplier for HR oversight".
+E10-kommunikation:
+  titel: Communication plan
+  frage: What do you communicate about the AI management system, when, to whom and how?
+  warum: The plan records which information flows internally and externally, such as the policy to all staff, status reports to management or notices to customers.
+  fehler: The check flags plans without external communication as a notice. Auditors check whether customers, authorities or affected people have been considered.
+  felder:
+    was:
+      label: What
+      hilfe: e.g. ‘AI policy’, ‘Notice about AI in the customer portal’.
+    richtung:
+      label: Internal or external
+      hilfe: At least one external entry is expected.
+    mitWem:
+      label: With whom
+      hilfe: Recipients, e.g. ‘all employees’, ‘customers’, ‘employee representatives’.
+    wann:
+      label: When
+      hilfe: Occasion or interval, e.g. ‘on approval, then yearly’.
+    wie:
+      label: How
+      hilfe: e.g. intranet, website, meeting.
+    wer:
+      label: Who
+      hilfe: Responsible person.

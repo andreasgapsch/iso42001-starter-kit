@@ -1,0 +1,23 @@
+# N-04 Generative KI: Risiken und Massnahmen
+blaetter:
+  bewertung: Bewertung
+  risiken: Risiken
+titel_bewertung: "Risiken generativer KI je KI-System nach NIST AI 600-1"
+titel_risiken: "Die zwölf Risiken generativer KI nach NIST AI 600-1 (eigene Kurztitel)"
+abschnitt: "Abschnitt {abschnitt}"
+keine_systeme: "Im KI-Inventar ist kein aktives KI-System als generativ gekennzeichnet."
+hinweise_bewertung:
+  - "Nur für KI-Systeme mit dem Kennzeichen «Generativ» im KI-Inventar (D-10), z. B. Assistenten, Chatbots, Bild- und Textgeneratoren, auch wenn sie in Standardsoftware eingebettet sind. Kopieren Sie die zwölf Zeilen je System und tragen Sie ID und Name ein."
+  - "Entscheiden Sie je Risiko, ob es für das System relevant ist, und begründen Sie kurz, auch bei «nein». Spalte E zeigt die Einschätzung des Kits für KMU, die meist eingekaufte KI betreiben; sie ersetzt den eigenen Entscheid nicht."
+  - "Massnahme: Verweis auf das Risikoregister (D-07, Blatt «Vorschläge GenAI-Sicherheit»), auf Massnahmen (M-xxx) oder auf Regeln der Nutzungsrichtlinie (D-15). Spalte I nennt die Zusatz-Controls RMF-xx; nehmen Sie sie in die Erklärung zur Anwendbarkeit auf (D-11)."
+hinweise_bewertung_firma:
+  - "Bewertung der zwölf Risiken generativer KI je System mit dem Kennzeichen «Generativ» im KI-Inventar (D-10): Relevanz, Begründung und Massnahme. Spalte E zeigt die allgemeine Relevanz bei eingekaufter KI, Spalte I die Zusatz-Controls, die für das System gelten, mit ihrem Stand in der Erklärung zur Anwendbarkeit (D-11)."
+hinweise_risiken:
+  - "Kurztitel und Beispiele sind eigene Formulierungen. Originaltitel und Originalbeschreibung (letzte Spalten) zitieren NIST AI 600-1 Abschnitt 2 wörtlich, die Übersetzung ist eine eigene und nicht amtlich. Die Zusatz-Controls fassen die für KMU nutzbaren Massnahmen in eigenen Worten zusammen; deren Originaltexte stehen in N-02, Blatt «Zusatz-Controls»."
+spalten_bewertung: [ID, KI-System, Nr., Risiko, KMU-Relevanz, Relevant, Begründung, Massnahme, "Zusatz-Controls, Stand", Fundstelle NIST AI 600-1]
+spalten_bewertung_firma: [ID, KI-System, Nr., Risiko, Allgemeine Relevanz, Relevant, Begründung, Massnahme, "Zusatz-Controls für das System, Stand", Fundstelle NIST AI 600-1]
+spalten_risiken_firma: [Nr., Risiko, Fundstelle NIST AI 600-1, Allgemeine Relevanz, Betroffene Vertrauensmerkmale, Zusatz-Controls, Subkategorien, Typischer Fall]
+kein_control_system: "keines für dieses System"
+spalten_risiken: [Nr., Risiko, Fundstelle NIST AI 600-1, KMU-Relevanz, Betroffene Vertrauensmerkmale, Zusatz-Controls, Subkategorien, Typischer Fall im KMU, Präzisierung]
+spalte_originaltitel: "Originaltitel NIST"
+spalte_originaltext: "Originalbeschreibung NIST (Englisch)"

@@ -1,0 +1,165 @@
+# Prüfregeln des Werkzeugs (Plausibilitätsprüfung wie bei einer Steuersoftware).
+# schwere: fehler (muss vor Stage 1 behoben sein) | hinweis (sollte geprüft werden)
+# modul: true nur wenn das AI-Act-Modul eingeschaltet ist; nistrmf nur mit Modul NIST AI RMF (meta.modulNistRmf)
+# ziel: Sprungziel im Werkzeug (Modul/Etappe), {id} = betroffenes Objekt
+# norm: Abschnitt zum Nachlesen
+# Texte: src/i18n/<sprache>/regeln.yaml (titel, erklaerung)
+regeln:
+  - { id: F01, schwere: fehler, ziel: "inventar/{id}", norm: "A.3.2, A.4.2" }
+  - { id: F02, schwere: fehler, ziel: "risiken?ki={id}", norm: "6.1.2, 8.2" }
+  - { id: F03, schwere: fehler, ziel: "folgen?ki={id}", norm: "6.1.4, A.5.2" }
+  - { id: F04, schwere: fehler, ziel: "folgen/{id}", norm: "A.5.3" }
+  - { id: F05, schwere: fehler, ziel: "soa/{id}", norm: "6.1.3" }
+  - { id: F06, schwere: fehler, ziel: "soa/{id}", norm: "6.1.3" }
+  - { id: F07, schwere: fehler, ziel: "soa/{id}", norm: "6.1.3, 8.1" }
+  - { id: F08, schwere: fehler, ziel: "risiken/{id}", norm: "6.1.3" }
+  - { id: F09, schwere: fehler, ziel: "risiken/{id}", norm: "6.1.3" }
+  - { id: F10, schwere: fehler, ziel: "dokumente/{id}", norm: "6.1.3" }
+  - { id: F11, schwere: fehler, ziel: "organisation/geltungsbereich", norm: "4.3" }
+  - { id: F12, schwere: fehler, ziel: "organisation/leitlinie", norm: "5.2" }
+  - { id: F13, schwere: fehler, ziel: "ziele/{id}", norm: "6.2" }
+  - { id: F14, schwere: fehler, ziel: "organisation/rollen", norm: "5.3" }
+  - { id: F15, schwere: fehler, ziel: "audits", norm: "9.2" }
+  - { id: F16, schwere: fehler, ziel: "managementbewertung", norm: "9.3" }
+  - { id: F17, schwere: fehler, ziel: "feststellungen/{id}", norm: "10.2" }
+  - { id: F18, schwere: fehler, ziel: "massnahmen/{id}", norm: "6.1.1, 10.2" }
+  - { id: F19, schwere: fehler, ziel: "organisation/risikokriterien", norm: "6.1.2" }
+  - { id: F20, schwere: fehler, ziel: "organisation/parteien?eintrag={id}", norm: "4.2" }
+  - { id: F21, schwere: fehler, ziel: "risiken/{id}", norm: "6.1.3" }
+  - { id: F22, schwere: fehler, modul: true, ziel: "inventar/{id}", norm: "AI Act Art. 3, 25" }
+  - { id: F23, schwere: fehler, modul: true, ziel: "inventar/{id}", norm: "AI Act Art. 6" }
+  - { id: F24, schwere: fehler, modul: true, ziel: "inventar/{id}", norm: "AI Act Art. 5" }
+  - { id: F25, schwere: fehler, modul: true, ziel: "aiact/pflichten", norm: "6.1.3, AI Act" }
+  - { id: F26, schwere: fehler, ziel: "folgen/{id}", norm: "6.1.4, 8.4" }
+  - { id: H01, schwere: hinweis, ziel: "{bereich}/{id}", norm: "7.5, 9.1" }
+  - { id: H02, schwere: hinweis, ziel: "inventar/{id}", norm: "A.9.2" }
+  - { id: H03, schwere: hinweis, ziel: "organisation/risikokriterien", norm: "6.1.2" }
+  - { id: H04, schwere: hinweis, ziel: "soa/{id}", norm: "6.1.3" }
+  - { id: H05, schwere: hinweis, ziel: "kompetenz", norm: "7.2, A.9.3" }
+  - { id: H06, schwere: hinweis, ziel: "kommunikation", norm: "7.4" }
+  - { id: H07, schwere: hinweis, ziel: "folgen?ki={id}", norm: "8.4" }
+  - { id: H08, schwere: hinweis, ziel: "inventar/{id}", norm: "A.6.2" }
+  - { id: H09, schwere: hinweis, ziel: "soa/A.6.2.8", norm: "A.6.2.8" }
+  - { id: H10, schwere: hinweis, ziel: "soa/A.8.3", norm: "A.8.3" }
+  - { id: H11, schwere: hinweis, ziel: "audits/{id}", norm: "9.2" }
+  - { id: H12, schwere: hinweis, ziel: "soa/{id}", norm: "6.1.3" }
+  - { id: H13, schwere: hinweis, ziel: "organisation/leitlinie", norm: "5.2" }
+  - { id: H14, schwere: hinweis, modul: true, ziel: "inventar/{id}", norm: "AI Act Art. 26(7)" }
+  - { id: H15, schwere: hinweis, modul: true, ziel: "aiact/stand", norm: "AI Act" }
+  - { id: H16, schwere: hinweis, modul: true, ziel: "inventar/{id}", norm: "AI Act Art. 22" }
+  - { id: H17, schwere: hinweis, ziel: "folgen/{id}", norm: "6.1.4" }
+  - { id: H18, schwere: hinweis, ziel: "folgen/{id}", norm: "6.1.4, 5.3" }
+  - { id: H19, schwere: hinweis, ziel: "inventar/{id}", norm: "6.1.4, 8.4" }
+  - { id: H20, schwere: hinweis, ziel: "dokumente/{id}", norm: "6.1.3, 7.5.3" }
+  - { id: H21, schwere: hinweis, ziel: "dokumente/D-11", norm: "6.1.3, 7.5.3" }
+  - { id: H22, schwere: hinweis, ziel: "folgen/{id}", norm: "6.1.4, 8.4" }
+  - { id: H23, schwere: hinweis, ziel: "inventar", norm: "4.1, 6.1" }
+  - { id: H24, schwere: hinweis, ziel: "soa/{id}", norm: "6.1.3, 8.3" }
+  - { id: H25, schwere: hinweis, ziel: "dokumente/{id}", norm: "7.5.2, 7.5.3" }
+  - { id: H26, schwere: hinweis, ziel: "organisation/projektauftrag", norm: "9.2" }
+  - { id: H27, schwere: hinweis, ziel: "dokumente/{id}", norm: "7.5.2" }
+# Weitere Einträge (handelnde KI, generative KI, Lebenszyklus, Wirksamkeit). F27 bis F29 und H36 bis H41: Modul NIST AI RMF (unten).
+  - { id: H28, schwere: hinweis, ziel: "inventar/{id}", norm: "A.9.2, A.6.2.8" }
+  - { id: H29, schwere: hinweis, ziel: "inventar/{id}", norm: "A.6.2.5, A.6.2.6" }
+  - { id: H30, schwere: hinweis, ziel: "inventar/{id}", norm: "A.6.2.6, 7.5.3" }
+  - { id: H31, schwere: hinweis, ziel: "inventar/{id}", norm: "6.1.4, A.5.4" }
+  - { id: H32, schwere: hinweis, ziel: "inventar/{id}", norm: "A.6.2.4" }
+  - { id: H33, schwere: hinweis, ziel: "inventar/{id}", norm: "A.4.4, A.10.3" }
+  - { id: H34, schwere: hinweis, ziel: "ziele", norm: "9.1, A.6.2.6" }
+  - { id: H35, schwere: hinweis, ziel: "soa/{id}", norm: "9.1, 6.1.3" }
+# Ausnahmen, Restrisiken, Entscheidungsrechte, Lieferanten, Prüfvermerke, Wirksamkeit
+  - { id: H42, schwere: hinweis, ziel: "risiken/{id}", norm: "5.2, 6.1.3" }
+  - { id: H43, schwere: hinweis, ziel: "risiken/{id}", norm: "6.1.3" }
+  - { id: H44, schwere: hinweis, ziel: "{bereich}/{id}", norm: "5.3, 6.1.3, 8.1" }
+  - { id: H45, schwere: hinweis, ziel: "lieferanten/{id}", norm: "A.10.3" }
+  - { id: H46, schwere: hinweis, ziel: "dokumente/{id}", norm: "7.5.2" }
+  - { id: H47, schwere: hinweis, ziel: "soa/{id}", norm: "9.1, 6.1.3" }
+  - { id: H48, schwere: hinweis, ziel: "soa/{id}", norm: "9.1, 9.2" }
+# Risiko nach Änderung oder Nachtraining des Systems nicht neu beurteilt (wie H07 für Folgenabschätzungen)
+  - { id: H49, schwere: hinweis, ziel: "risiken/{id}", norm: "8.2, 6.1.2" }
+# Dienst und Tarif, gefährliche Kombination bei handelnder KI, Autonomie, veraltete Kennungen, Abkündigung
+  - { id: F30, schwere: fehler, ziel: "inventar/{id}", norm: "A.9.2, A.10.3" }
+  - { id: H50, schwere: hinweis, ziel: "inventar/{id}", norm: "A.6.2.4, A.9.2" }
+  - { id: H51, schwere: hinweis, ziel: "risiken?ki={id}", norm: "6.1.2, 8.2" }
+  - { id: H52, schwere: hinweis, ziel: "{bereich}/{id}", norm: "7.5.2" }
+  - { id: H53, schwere: hinweis, ziel: "inventar/{id}", norm: "A.4.4, A.10.3" }
+  - { id: H54, schwere: hinweis, ziel: "risiken/{id}", norm: "6.1.3, 8.3" }
+# Prozesse (ab Prozesse, nur wenn das Projekt Prozesse führt: Projekt.prozesse): F31, F32, H55 bis H63
+  - { id: F31, schwere: fehler, ziel: "prozesse/{id}", norm: "4.4, 5.3" }
+  - { id: F32, schwere: fehler, ziel: "prozesse/{id}", norm: "4.3, 4.4" }
+  - { id: H55, schwere: hinweis, ziel: "prozesse/{id}", norm: "9.1" }
+  - { id: H56, schwere: hinweis, ziel: "prozesse/{id}", norm: "7.5" }
+  - { id: H57, schwere: hinweis, ziel: "prozesse/{id}", norm: "9.1" }
+  - { id: H58, schwere: hinweis, ziel: "prozesse/{id}", norm: "9.2, 9.3" }
+  - { id: H59, schwere: hinweis, ziel: "prozesse/{id}", norm: "10.2" }
+  - { id: H60, schwere: hinweis, ziel: "prozesse/{id}", norm: "4.4" }
+  - { id: H61, schwere: hinweis, ziel: "prozesse/{id}", norm: "4.4" }
+  - { id: H62, schwere: hinweis, ziel: "prozesse/{id}", norm: "4.4" }
+# Auditzyklus und Gestaltung: H63 Pflichtprozess nie im Umfang der internen Audits; H64, H65 Gestaltung
+  - { id: H63, schwere: hinweis, ziel: "audits", norm: "9.2" }
+  - { id: H64, schwere: hinweis, ziel: "einstellungen/gestaltung", norm: "7.5.2" }
+  - { id: H65, schwere: hinweis, ziel: "einstellungen/gestaltung", norm: "7.5.2" }
+# Prüfung vor Freigabe, überfällige Prozesse, Eigner, Folgenabschätzung, Änderungen, externe Ausführung,
+# eigene Prozesse, Entscheidungsrechte in Abläufen, Einheit der Kennzahl, Prozess nie durchgeführt
+  - { id: H66, schwere: hinweis, ziel: "dokumente/{id}", norm: "7.5.2" }
+  - { id: H67, schwere: hinweis, ziel: "prozesse/{id}", norm: "9.1, 10.2" }
+  - { id: H68, schwere: hinweis, ziel: "prozesse/{id}", norm: "5.3, 4.4" }
+  - { id: H69, schwere: hinweis, ziel: "folgen?ki={id}", norm: "6.1.4, 8.4" }
+  - { id: H70, schwere: hinweis, ziel: "massnahmen", norm: "6.3" }
+  - { id: H71, schwere: hinweis, ziel: "prozesse/{id}", norm: "8.1, A.10.3" }
+  - { id: H72, schwere: hinweis, ziel: "prozesse/{id}", norm: "4.4, 7.5.1" }
+  - { id: H73, schwere: hinweis, ziel: "prozesse/{id}", norm: "5.3, 8.1, 8.4" }
+  - { id: H74, schwere: hinweis, ziel: "prozesse/{id}", norm: "9.1" }
+  - { id: H75, schwere: hinweis, ziel: "prozesse/{id}", norm: "8.1, 9.1" }
+# Bibliothek (nur mit Projekt.bibliothek): H76 Prüfung überfällig, H77 Freigabe ohne Angaben, H78 Datei ausserhalb
+# geändert, H79 Datei fehlt, H80 Browserspeicher ohne Sicherung
+  - { id: H76, schwere: hinweis, ziel: "bibliothek/{id}", norm: "7.5.2, 7.5.3" }
+  - { id: H77, schwere: hinweis, ziel: "bibliothek/{id}", norm: "7.5.2" }
+  - { id: H78, schwere: hinweis, ziel: "bibliothek/{id}", norm: "7.5.3" }
+  - { id: H79, schwere: hinweis, ziel: "bibliothek/{id}", norm: "7.5.3" }
+  - { id: H80, schwere: hinweis, ziel: "bibliothek", norm: "7.5.3" }
+  - { id: H81, schwere: hinweis, ziel: "folgen/{id}", norm: "6.1.4" }
+  - { id: H82, schwere: hinweis, ziel: "organisation/risikokriterien", norm: "6.1.1" }
+# Kette Massnahme zu Nachweis, Prozess ohne Messwert, Status gegen offene Massnahmen, Wirksamkeit und Massnahme, Bibliothek gegen SoA
+  - { id: H83, schwere: hinweis, ziel: "massnahmen/{id}", norm: "8.3" }
+  - { id: H84, schwere: hinweis, ziel: "prozesse/{id}", norm: "9.1, 4.4" }
+  - { id: H85, schwere: hinweis, ziel: "risiken/{id}", norm: "6.1.3, 8.3" }
+  - { id: H86, schwere: hinweis, ziel: "feststellungen/{id}", norm: "10.2" }
+  - { id: H87, schwere: hinweis, ziel: "bibliothek/{id}", norm: "7.5.3" }
+  - { id: H88, schwere: hinweis, ziel: "bibliothek/{id}", norm: "5.2, 7.5.3" }
+  - { id: H89, schwere: hinweis, ziel: "bibliothek/{id}", norm: "7.5.3, 9.2, 9.3" }
+  - { id: H91, schwere: hinweis, ziel: "organisation", norm: "4.1, A.4" }
+# Modul NIST AI RMF: F27 bis F29, H36 bis H41
+  - { id: F27, schwere: fehler, modul: nistrmf, ziel: "{bereich}/{id}", norm: "6.1.3, NIST AI RMF" }
+  - { id: F28, schwere: fehler, modul: nistrmf, ziel: "inventar/{id}", norm: "6.1.2, NIST AI 600-1" }
+  - { id: F29, schwere: fehler, modul: nistrmf, ziel: "inventar/{id}", norm: "9.1, A.6.2.4, NIST AI RMF MEASURE" }
+  - { id: H36, schwere: hinweis, modul: nistrmf, ziel: "nistrmf/stand", norm: "NIST AI RMF" }
+  - { id: H37, schwere: hinweis, modul: nistrmf, ziel: "nistrmf/{id}", norm: "6.1.3, NIST AI RMF" }
+  - { id: H38, schwere: hinweis, modul: nistrmf, ziel: "nistrmf/profil", norm: "NIST AI RMF" }
+  - { id: H39, schwere: hinweis, modul: nistrmf, ziel: "inventar/{id}", norm: "6.1.3, NIST AI 600-1" }
+  - { id: H40, schwere: hinweis, modul: nistrmf, ziel: "inventar/{id}", norm: "9.1, NIST AI RMF MEASURE 1.3" }
+  - { id: H41, schwere: hinweis, modul: nistrmf, ziel: "inventar/{id}", norm: "A.4.4, NIST AI RMF MANAGE 3.2" }
+  # Verweisregister (src/model/verweise.ts): Kennung zeigt auf keinen Eintrag
+  - { id: F33, schwere: fehler, ziel: "{bereich}/{id}", norm: "7.5.3" }
+# Status nur so gut wie die Aufzeichnung (F34 bis F38), zeitliche Gültigkeit der Belege
+# (F39 bis F41, src/regeln/zeit.ts), Stimmigkeit als Prüfregel (F42, F43). Fehler erst beim verbindlichen Status
+# (freigegeben, erledigt, wirksam), vorher meldet der Treffer einen Hinweis (W2); ein Treffer je Objekt (W3).
+# F35 ersetzt den Hinweis H90 (Prozess eingeführt ohne Durchführung ist ein Fehler).
+  - { id: F34, schwere: fehler, ziel: "soa/{id}", norm: "9.1, 6.1.3, 10.2" }
+  - { id: F35, schwere: fehler, ziel: "prozesse/{id}", norm: "4.4, 9.1" }
+  - { id: F36, schwere: fehler, ziel: "dokumente/{id}", norm: "7.5.2, 7.5.3" }
+  - { id: F37, schwere: fehler, ziel: "organisation/rollen", norm: "5.3, 4.4" }
+  - { id: F38, schwere: fehler, modul: true, ziel: "inventar/{id}", norm: "6.1.3, AI Act" }
+  - { id: F39, schwere: fehler, ziel: "{bereich}/{id}", norm: "7.5.3, 9.2" }
+  - { id: F40, schwere: fehler, ziel: "{bereich}/{id}", norm: "7.5.3, 9.2" }
+  - { id: F41, schwere: fehler, ziel: "{bereich}/{id}", norm: "7.5.2, 7.5.3" }
+  - { id: F42, schwere: fehler, ziel: "prozesse/{id}", norm: "9.1" }
+  # F43 springt dorthin, wo die Datenquelle erfasst wird: PR-07 ins Inventar, PR-19 in die Vorfälle (P14)
+  - { id: F43, schwere: fehler, ziel: "{bereich}/{eintrag}", norm: "9.1" }
+# Folgenabschätzung tragfähig (A3-02b, QK-52). Wortgleiche Zellen, Ausmass gegen Register,
+# Entscheid nach der Schwelle aus D-08, Inventar «sensible Nutzung» gegen die jüngste Abschätzung. Fehler erst mit der
+# Freigabe der Abschätzung, vorher Hinweis (W2).
+  - { id: F44, schwere: fehler, ziel: "folgen/{id}", norm: "6.1.4, 8.4" }
+  - { id: F45, schwere: fehler, ziel: "folgen/{id}", norm: "6.1.4, 8.2" }
+  - { id: F46, schwere: fehler, ziel: "folgen/{id}", norm: "6.1.4, 8.4, A.5.2" }
+  - { id: F47, schwere: fehler, ziel: "inventar/{id}", norm: "6.1.4, A.4.2" }

@@ -1,0 +1,893 @@
+# Guide: Etappen, Beteiligte, Checklisten, Optionen, Kalender und allgemeine Texte.
+# Seitentexte: src/i18n/de/gefuehrt/<etappe>.yaml. Format: src/gefuehrt/FORMAT.md
+etappen:
+  E0:
+    titel: Startinterview
+    kurz: Interview
+    ziel: In wenigen Minuten erfassen wir die wichtigsten Eckdaten Ihres Unternehmens. Daraus ergeben sich Ihr Weg durch das Kit und ein erster Fahrplan.
+    warum: Ein Unternehmen mit zertifiziertem ISMS braucht weniger neue Dokumente als eines ohne. Wer in die EU liefert oder KI verkauft, braucht zusätzlich das Modul zum AI Act. Diese Weichen stellen wir zuerst.
+    ergebnis: Pfad (mit oder ohne ISMS), Entscheid zum Modul AI Act, Fahrplan mit Stunden je Etappe.
+  E1:
+    titel: Auftrag und Ausgangslage
+    kurz: Auftrag
+    ziel: Sie wissen, wo Ihr Unternehmen heute steht, wer im Projekt mitarbeitet, und die Geschäftsleitung hat den Auftrag freigegeben.
+    warum: Ohne klaren Auftrag und Mittel der Geschäftsleitung bleibt ein Managementsystem Papier. Die Norm erwartet, dass die Leitung es sichtbar trägt und Ressourcen bereitstellt.
+    ergebnis: Gap-Schnellcheck und Projektauftrag mit Freigabe (D-00).
+  E2:
+    titel: Kontext, Parteien und Geltungsbereich
+    kurz: Kontext
+    ziel: Sie halten fest, was auf Ihren KI-Einsatz wirkt, wer Erwartungen hat und welche Teile des Unternehmens das Managementsystem umfasst.
+    warum: Alles Weitere baut darauf auf. Risiken, Ziele und Controls lassen sich nur sinnvoll bestimmen, wenn klar ist, worum es geht und wo die Grenzen liegen.
+    ergebnis: Kontext und Parteienregister (D-01), freigegebener Geltungsbereich mit AIMS-Überblick (D-02).
+  E3:
+    titel: Leitlinie, Rollen und Meldewege
+    kurz: Leitlinie
+    ziel: Die Geschäftsleitung gibt eine KI-Leitlinie frei, die Zuständigkeiten sind verteilt und Mitarbeitende wissen, wo sie Bedenken melden.
+    warum: Die Leitlinie ist der verbindliche Rahmen für alle anderen Regeln. Klare Rollen verhindern, dass wichtige Aufgaben liegen bleiben, weil sich niemand zuständig fühlt.
+    ergebnis: KI-Leitlinie (D-03), Rollen, RACI und Meldeweg (D-04).
+  E4:
+    titel: KI-Inventar
+    kurz: Inventar
+    ziel: Sie kennen alle KI-Systeme im Unternehmen, auch KI in eingekaufter Software und Schatten-KI, mit Zweck, Verantwortlichen und Ressourcen.
+    warum: Was nicht im Inventar steht, wird weder beurteilt noch gesteuert. Ein lückenhaftes Inventar ist die häufigste Feststellung in Zertifizierungsaudits.
+    ergebnis: KI-Inventar mit Erhebungsfragebogen (D-10).
+  E5:
+    titel: Rolle zuerst
+    kurz: Rolle
+    ziel: Sie bestimmen je KI-System, ob Sie es anbieten oder nur nutzen. Mit dem Modul AI Act ordnen Sie jedes System zusätzlich einer Risikoklasse zu.
+    warum: Die Rolle entscheidet, welche Pflichten Sie haben. Wer ein System unter eigenem Namen anbietet, trägt deutlich mehr Verantwortung als wer es einkauft und einsetzt.
+    ergebnis: Rollenbestimmung (D-24), mit Modul Rollen und Risikoklassen nach AI Act (E-01, E-02).
+  E6:
+    titel: Risiken und Chancen
+    kurz: Risiken
+    ziel: Sie legen fest, wie Sie Risiken bewerten, und erfassen für jedes KI-System die wichtigsten Risiken und Chancen.
+    warum: Das Herz jedes Managementsystems ist eine Risikobeurteilung, die bei Wiederholung zu vergleichbaren Ergebnissen führt. Daraus folgen später die Controls.
+    ergebnis: Verfahren KI-Risikomanagement (D-06), Risikoregister mit Chancen (D-07).
+  E7:
+    titel: Folgenabschätzungen
+    kurz: Folgen
+    ziel: Sie prüfen je KI-System kurz, ob es Menschen spürbar betreffen kann, und machen bei Bedarf eine vollständige Folgenabschätzung.
+    warum: Ein Risiko für das Unternehmen ist nicht dasselbe wie eine Folge für Menschen. Die Norm verlangt beide Sichten; die Ergebnisse fliessen in die Risikobeurteilung.
+    ergebnis: Verfahren (D-08), Kurzprüfung und Folgenabschätzung je System (D-09), mit Modul Grundrechte-Prüfung (E-06).
+  E8:
+    titel: Controls und Erklärung zur Anwendbarkeit
+    kurz: Controls
+    ziel: Sie entscheiden je Risiko über die Behandlung, wählen die Controls und begründen für alle 38 Controls, ob sie gelten.
+    warum: Die Erklärung zur Anwendbarkeit ist das zentrale Prüfdokument für Auditoren. Sie zeigt, dass Sie jedes Control bewusst gewählt oder begründet ausgeschlossen haben.
+    ergebnis: Erklärung zur Anwendbarkeit (D-11), Behandlungsplan mit Restrisiko-Annahme (D-07), mit Modul Pflichtenmatrix (E-03).
+  E9:
+    titel: Umsetzen im Betrieb
+    kurz: Betrieb
+    ziel: Sie beschreiben, wie KI-Systeme eingeführt, überwacht, mit Daten versorgt, transparent gemacht und bei Lieferanten gesteuert werden.
+    warum: Auditoren prüfen nicht nur Papier, sondern ob die Regeln im Alltag gelebt werden. Hier entstehen die Nachweise dafür.
+    ergebnis: Lebenszyklus (D-12), Daten (D-13), Information und Meldungen (D-14), Nutzungsrichtlinie (D-15), Lieferanten (D-16), mit Modul E-05, E-07, E-08.
+  E10:
+    titel: Kompetenz und Kommunikation
+    kurz: Kompetenz
+    ziel: Sie bestimmen, wer welches Wissen braucht, wie alle Mitarbeitenden informiert werden und was Sie wann mit wem kommunizieren.
+    warum: Menschen machen ein Managementsystem wirksam. Wer KI beaufsichtigt, muss sie verstehen; wer sie nutzt, muss die Regeln kennen.
+    ergebnis: Kompetenz, Bewusstsein und Kommunikationsplan (D-17), mit Modul KI-Kompetenz (E-04).
+  E11:
+    titel: Ziele, Messung und Dokumentenlenkung
+    kurz: Ziele
+    ziel: Sie setzen messbare KI-Ziele, legen fest, was Sie messen, und halten Ihre Dokumente in einem Register.
+    warum: Ohne Ziele und Messung lässt sich nicht zeigen, ob das Managementsystem wirkt. Ohne Lenkung weiss niemand, welche Fassung eines Dokuments gilt.
+    ergebnis: Ziele, Kennzahlen und Messplan (D-05), Lenkung und Dokumentenregister (D-26).
+  E12:
+    titel: Internes Audit und Managementbewertung
+    kurz: Audit
+    ziel: Sie prüfen Ihr Managementsystem einmal vollständig, die Geschäftsleitung bewertet es, und Abweichungen werden behoben.
+    warum: Vor dem Zertifizierungsaudit erwartet jede Stelle ein internes Audit und eine Managementbewertung. Beides zeigt, dass sich das System selbst kontrolliert und verbessert.
+    ergebnis: Auditprogramm und Bericht (D-20), Protokoll der Managementbewertung (D-21), Register der Nichtkonformitäten (D-22).
+  E13:
+    titel: Zertifizierung vorbereiten
+    kurz: Zertifikat
+    ziel: Sie wählen eine Zertifizierungsstelle, planen die Audittermine und prüfen mit dem Werkzeug, ob alles für Stage 1 bereit ist.
+    warum: Eine gute Vorbereitung erspart Nachaudits. Das Werkzeug zeigt in einer Ampel, was noch fehlt, und erzeugt alle Dokumente.
+    ergebnis: Zertifizierungsfahrplan (D-25), Stage-1-Bericht mit Ampel, erzeugte Dokumente.
+  J:
+    titel: Jahreskalender
+    kurz: Kalender
+    ziel: Nach der Zertifizierung zeigt der Kalender, welche wiederkehrenden Aufgaben wann fällig sind.
+    warum: Ein Managementsystem lebt von der Wiederholung. Das Überwachungsaudit prüft jedes Jahr, ob Überprüfungen, Messungen, Audit und Managementbewertung stattgefunden haben.
+    ergebnis: Aktualisierte Register, erledigte Jahresaufgaben mit Nachweis.
+
+beteiligte:
+  gl: Geschäftsleitung
+  aims: AIMS-Verantwortliche/r
+  it: IT-Leitung
+  recht: Recht oder Compliance
+  hr: Personalabteilung
+  fachbereiche: Fachbereiche
+  einkauf: Einkauf
+  ism: Informationssicherheit
+  dsb: Datenschutz
+  kommunikation: Kommunikation
+  auditor: Interne Auditorin oder interner Auditor
+
+checklisten:
+  E1-c1: Der Projektauftrag ist von der Geschäftsleitung freigegeben.
+  E1-c2: Der Gap-Schnellcheck ist mit dem Kernteam besprochen.
+  E1-c3: Zeit und Budget für das Projekt sind zugesagt.
+  E1-c4: Gemeinsame Prozesse mit dem ISMS sind nach D-23 entschieden.
+  E1-c5: Die Kurzfassung der Dokumentenlenkung gilt (D-26 mit Ablage, Kennzeichnung und Freigabeweg).
+  E1-c6: Die Termine für die Offerten der Zertifizierungsstellen und für die Wahl der Stelle stehen im Projektplan.
+  E2-c1: Der Geltungsbereich ist von der Geschäftsleitung freigegeben.
+  E2-c2: Parteien und Anforderungen sind mit den Fachbereichen abgestimmt.
+  E2-c3: Jeder Ausschluss im Geltungsbereich ist begründet.
+  E3-c1: Die KI-Leitlinie ist von der Geschäftsleitung unterzeichnet.
+  E3-c2: Die Leitlinie ist allen Mitarbeitenden bekannt gemacht.
+  E3-c3: Alle Rollen und Stellvertretungen sind den Personen mitgeteilt.
+  E3-c4: Der Meldeweg für Bedenken ist veröffentlicht.
+  E4-c1: Das Inventar ist von allen Fachbereichen bestätigt.
+  E4-c2: KI in eingekaufter Software (z. B. ERP, CRM, Büroprogramme) ist geprüft.
+  E4-c3: Zu jeder Schatten-KI ist entschieden, ob sie freigegeben, ersetzt oder untersagt wird.
+  E4-c4: Jedes KI-System hat eine Eigner/in, die das bestätigt hat.
+  E5-c1: Die Rolle ist je KI-System bestimmt.
+  E5-c2: Alle KI-Systeme sind gegen die verbotenen Praktiken nach Art. 5 geprüft.
+  E5-c3: Grenzfälle der Einstufung sind juristisch geprüft.
+  E6-c1: Die Risikokriterien sind von der Geschäftsleitung bestätigt.
+  E6-c2: Jedes KI-System hat mindestens eine Risikobeurteilung.
+  E6-c3: Die Risiken sind mit den Eignern der Systeme besprochen.
+  E7-c1: Für jedes KI-System liegt eine Kurzprüfung vor.
+  E7-c2: Vollständige Folgenabschätzungen sind von der zuständigen Person freigegeben.
+  E7-c3: Die Ergebnisse der Folgenabschätzungen sind ins Risikoregister übernommen.
+  E8-c1: Die Erklärung zur Anwendbarkeit ist für alle Controls begründet.
+  E8-c2: Behandlungsplan und Restrisiken sind von der Geschäftsleitung freigegeben.
+  E8-c3: Jedes anwendbare Control hat eine verantwortliche Person.
+  E9-c1: Die Nutzungsrichtlinie ist veröffentlicht und von den Mitarbeitenden bestätigt.
+  E9-c2: Jeder KI-Lieferant hat einen Prüfstatus.
+  E9-c3: Der Meldekanal für Externe ist auf der Website auffindbar.
+  E9-c4: KI-Vorfälle sind im Vorfallverfahren ergänzt.
+  E9-c5: Für jede Eigenentwicklung liegen Anforderungen, Entwurf und Testbericht vor.
+  E9-c6: Die Pflichten nach AI Act sind für jedes betroffene System abgehakt.
+  E10-c1: Für alle Aufsichtsrollen liegen Schulungsnachweise vor.
+  E10-c2: Der Kommunikationsplan mit interner und externer Kommunikation ist freigegeben.
+  E10-c3: Die Wirksamkeit der Schulungen ist geprüft.
+  E11-c1: Jedes Ziel hat Kennzahl, Verantwortliche und Termin.
+  E11-c2: Das Dokumentenregister ist vollständig und aktuell.
+  E11-c3: Zu jedem Ziel ist eine erste Messung erfasst.
+  E12-c1: Das interne Audit hat alle Abschnitte und Controls geprüft.
+  E12-c2: Die Managementbewertung ist mit allen Pflichteingaben protokolliert.
+  E12-c3: Jede Nichtkonformität hat Ursache und Massnahme.
+  E12-c4: Der Auditbericht ist der Geschäftsleitung vorgelegt.
+  E13-c1: Alle Fehler aus der Prüfung sind behoben.
+  E13-c2: Die Unterlagen für Stage 1 sind der Zertifizierungsstelle übermittelt.
+  E13-c3: Die Zertifizierungsstelle ist für ISO/IEC 42001 akkreditiert.
+  J-c1: Die jährliche Überprüfung der KI-Leitlinie ist dokumentiert.
+  J-c2: Das Überwachungsaudit ist vorbereitet und terminiert.
+  J-c3: Der Stand des AI Act ist geprüft und die Einstufungen sind aktuell.
+
+kalender:
+  inventar: KI-Inventar durchsehen, neue Systeme erfassen, Überprüfungsdaten nachführen.
+  schatten-ki: Offene Schatten-KI entscheiden (freigeben, ersetzen oder untersagen).
+  ziele: Messwerte zu den KI-Zielen erfassen.
+  risiken: Risiken neu beurteilen und Stand der Massnahmen prüfen.
+  aiact-stand: Stand des AI Act und der Einstufungen prüfen.
+  nist-stand: Stand des NIST AI RMF prüfen und das Profil nachführen.
+  folgen: Folgenabschätzungen auf Aktualität prüfen.
+  lieferanten: KI-Lieferanten erneut prüfen.
+  schulung: Schulungen durchführen und Wirksamkeit prüfen.
+  kommunikation: Kommunikationsplan durchsehen und Mitteilungen versenden.
+  leitlinie: KI-Leitlinie überprüfen und Überprüfung vermerken.
+  dokumente: Dokumentenregister durchsehen, fällige Dokumente überarbeiten.
+  internes-audit: Internes Audit durchführen und Bericht ablegen.
+  managementbewertung: Managementbewertung durchführen und protokollieren.
+  ueberwachungsaudit: Überwachungsaudit der Zertifizierungsstelle vorbereiten.
+
+optionen:
+  datenklasse: { oeffentlich: öffentlich, intern: intern, vertraulich: vertraulich, streng-vertraulich: streng vertraulich }
+  jaNeinOffen: { ja: ja, nein: nein, offen: noch offen }
+  isms:
+    zertifiziert: ISMS nach ISO/IEC 27001, zertifiziert
+    vorhanden: ISMS vorhanden, nicht zertifiziert
+    nein: kein ISMS
+  branche:
+    maschinenbau: Maschinen- und Anlagenbau
+    metall: Metallbearbeitung
+    elektro: Elektrotechnik und Elektronik
+    medizintechnik: Medizintechnik
+    chemie-pharma: Chemie und Pharma
+    lebensmittel: Lebensmittel
+    bau: Bau und Gebäudetechnik
+    handel: Handel
+    logistik: Logistik und Transport
+    it-dienste: IT und Software
+    finanzen: Banken und Versicherungen
+    gesundheit: Gesundheitswesen
+    oeffentlich: Öffentliche Verwaltung
+    dienstleistung: Dienstleistung
+    andere: andere Branche
+  ausloeser:
+    kunde: Kunden verlangen es
+    lieferantenaudit: Lieferantenaudit eines Kunden
+    geschaeftsleitung: Wunsch der Geschäftsleitung
+    aiact: Vorbereitung auf den AI Act
+    ausschreibung: Ausschreibungen
+    wettbewerb: Abheben vom Wettbewerb
+    andere: anderer Grund
+  reife:
+    fehlt: fehlt
+    begonnen: begonnen
+    weitgehend: weitgehend vorhanden
+    erfuellt: erfüllt und belegt
+  managementsysteme:
+    iso9001: Qualität (ISO 9001)
+    iso27001: Informationssicherheit (ISO/IEC 27001)
+    iso14001: Umwelt (ISO 14001)
+    iso45001: Arbeitssicherheit (ISO 45001)
+    iso13485: Medizinprodukte (ISO 13485)
+    iatf16949: Automobil (IATF 16949)
+    datenschutz: Datenschutz-Managementsystem
+    keine: keines
+  aimsRolle:
+    gl: Geschäftsleitung
+    aims: AIMS-Verantwortliche/r
+    ism: Informationssicherheit
+    dsb: Datenschutz
+    recht: Recht oder Compliance
+    it: IT
+    hr: Personal
+    fachbereich: Fachbereich
+    einkauf: Einkauf
+    auditor: Interne Auditorin oder interner Auditor
+    kommunikation: Kommunikation
+  themaArt: { extern: extern, intern: intern }
+  themaKategorie:
+    recht: Recht und Gesetze
+    regulierung: Regulierung und Normen
+    markt: Markt und Wettbewerb
+    technik: Technik
+    kultur: Kultur und Werte
+    governance: Führung und Organisation
+    vertrag: Verträge
+    zweck: Zweck des KI-Einsatzes
+    umwelt: Umwelt und Klima
+  kiZweck:
+    effizienz: Abläufe beschleunigen
+    qualitaet: Qualität verbessern
+    produkt: KI im eigenen Produkt
+    kundenservice: Kundenservice
+    entwicklung: Entwicklung und Konstruktion
+    verwaltung: Verwaltung und Büro
+    entscheidung: Entscheide vorbereiten
+  rolleIso:
+    anbieter: Anbieter von KI (wir bieten KI-Produkte oder -Dienste an)
+    produzent: Produzent von KI (wir entwickeln KI)
+    kunde: Kunde oder Nutzer von KI
+    partner: Partner (z. B. Integrator, Datenlieferant)
+    betroffene: Betroffene von KI
+    behoerde: Behörde
+  parteiArt: { intern: intern, extern: extern }
+  anforderungQuelle:
+    gesetz: Gesetz
+    vertrag: Vertrag
+    norm: Norm
+    intern: interne Vorgabe
+    markt: Markterwartung
+  ismsDeckung:
+    gleich: gleicher Geltungsbereich wie das ISMS
+    teilweise: Teil des ISMS-Geltungsbereichs
+    anders: abweichender Geltungsbereich
+  aimsProzesse:
+    inventar: KI-Inventar führen
+    freigabe-werkzeuge: Neue KI-Werkzeuge freigeben
+    risiko: Risiken beurteilen und behandeln
+    folgen: Folgen abschätzen
+    lieferanten: Lieferanten prüfen
+    schulung: Schulen und informieren
+    vorfall: Vorfälle und Meldungen bearbeiten
+    aenderung: Änderungen steuern
+    audit: Intern auditieren
+    managementbewertung: Managementbewertung
+  leitlinieElemente:
+    zweck: passt zum Zweck des Unternehmens
+    zielrahmen: gibt einen Rahmen für KI-Ziele
+    anforderungen: verpflichtet zur Erfüllung der Anforderungen
+    verbesserung: verpflichtet zur laufenden Verbesserung
+  leitlinieGrundsaetze:
+    mensch-entscheidet: Bei Entscheiden über Menschen hat ein Mensch das letzte Wort.
+    zweck: Wir setzen KI nur für festgelegte und geprüfte Zwecke ein.
+    transparenz: Wir sagen offen, wo wir KI einsetzen, und kennzeichnen KI-erzeugte Inhalte, wo es nötig ist.
+    daten: Vertrauliche Daten und Personendaten geben wir nur in freigegebene Systeme ein.
+    fairness: Wir achten darauf, dass KI niemanden ungerechtfertigt benachteiligt.
+    sicherheit: KI-Systeme schützen wir wie andere wichtige Informationssysteme.
+    recht: Wir halten die gesetzlichen und vertraglichen Anforderungen an KI ein.
+    freigabe: Neue KI-Werkzeuge werden vor dem Einsatz geprüft und freigegeben.
+    melden: Wer ein Problem mit KI sieht, meldet es und erfährt dadurch keinen Nachteil.
+  leitlinienBezug:
+    informationssicherheit: Informationssicherheit
+    datenschutz: Datenschutz
+    qualitaet: Qualität
+    personal: Personal und Arbeitsrecht
+    beschaffung: Beschaffung
+    verhaltenskodex: Verhaltenskodex
+    nachhaltigkeit: Nachhaltigkeit
+  leitlinieAbgleich:
+    angepasst: angepasst
+    verweis: Verweis auf die KI-Leitlinie
+    keine: keine Änderung nötig
+    nicht-vorhanden: nicht vorhanden
+  klauselStand:
+    ja: vereinbart
+    nein: fehlt
+    offen: offen
+    nicht-noetig: nicht nötig
+  keineMessung:
+    kein-anlass: kein Anlass
+    erste-offen: erste Messung offen
+  sollErreicht:
+    ja: ja
+    teilweise: teilweise
+    nein: nein
+  zielStatus:
+    geplant: geplant
+    in-arbeit: in Arbeit
+    erreicht: erreicht
+    nicht-erreicht: nicht erreicht
+    verworfen: verworfen
+  mbEntscheid:
+    verbesserung: Verbesserung
+    aenderung: Änderung am AIMS
+    ressourcen: Ressourcen
+    ziele: Ziele
+    restrisiko: Restrisiko
+  rollenBereich:
+    konformitaet: Sorgt für die Erfüllung der Norm
+    berichterstattung: Berichtet der Geschäftsleitung
+    risikomanagement: Risikomanagement
+    folgenabschaetzung: Folgenabschätzungen
+    inventar: KI-Inventar
+    daten: Daten für KI
+    lieferanten: Lieferanten
+    menschliche-aufsicht: Menschliche Aufsicht
+    recht: Recht und AI Act
+    schulung: Schulung und Kompetenz
+    vorfall: Vorfälle und Meldungen
+    entwicklung: Entwicklung von KI
+    informationssicherheit: Informationssicherheit
+    datenschutz: Datenschutz
+    internes-audit: Internes Audit
+    dokumentenlenkung: Dokumentenlenkung
+  meldekanal:
+    vorgesetzte: Vorgesetzte
+    aims: AIMS-Verantwortliche/r
+    whistleblowing: Hinweisgeberstelle
+    postfach: E-Mail-Postfach
+    formular: Formular im Intranet
+  rhythmus:
+    vierzehntaeglich: alle 14 Tage
+    monatlich: monatlich
+    quartalsweise: quartalsweise
+    halbjaehrlich: halbjährlich
+    jaehrlich: jährlich
+  glTakt:
+    vierzehntaeglich: alle 14 Tage (empfohlen während des Projekts)
+    monatlich: monatlich
+    quartalsweise: quartalsweise
+    halbjaehrlich: halbjährlich
+  inventarQuellen:
+    softwareliste: Softwareliste oder Asset-Inventar
+    lizenzen: Lizenzen und Abonnemente
+    einkauf: Bestellungen und Verträge
+    netzwerk: Auswertung Firewall oder Proxy
+    umfrage: Umfrage bei Mitarbeitenden
+    fachbereiche: Gespräche mit Fachbereichen
+    produktentwicklung: Produktentwicklung
+    spesen: Spesen und Kreditkartenabrechnungen
+  fachbereich:
+    geschaeftsleitung: Geschäftsleitung
+    verkauf: Verkauf
+    einkauf: Einkauf
+    produktion: Produktion
+    entwicklung: Entwicklung und Konstruktion
+    qualitaet: Qualität
+    hr: Personal
+    finanzen: Finanzen
+    it: IT
+    service: Service
+    marketing: Marketing
+    logistik: Logistik
+  kiTyp:
+    eingekauft: eingekauft (Software oder Gerät, im Haus betrieben)
+    saas: Cloud-Dienst (SaaS)
+    eigenbau: selbst entwickelt
+    schatten: Schatten-KI (ohne Freigabe genutzt)
+  kiStatus:
+    erfasst: erfasst
+    in-pruefung: in Prüfung
+    freigegeben: freigegeben
+    eingeschraenkt: eingeschränkt freigegeben
+    ausgesetzt: ausgesetzt (vorübergehend deaktiviert)
+    abgeloest: abgelöst
+    untersagt: untersagt
+  lebenszyklus:
+    idee: Idee
+    entwicklung: Entwicklung oder Beschaffung
+    test: Test
+    betrieb: Betrieb
+    ausserbetrieb: ausser Betrieb
+  automatisierung:
+    unterstuetzend: unterstützt Menschen, die entscheiden
+    teilautomatisiert: entscheidet teilweise selbst, Mensch prüft
+    vollautomatisiert: entscheidet ohne menschliche Prüfung
+  freigabeKriterien:
+    datenschutz: Datenschutz
+    vertraulichkeit: Vertraulichkeit und Geschäftsgeheimnisse
+    vertrag: Vertrag und Nutzungsbedingungen
+    sicherheit: Informationssicherheit
+    nutzen: Nutzen und Kosten
+    aiact: Einstufung nach AI Act
+    exportkontrolle: Exportkontrolle
+  aiActRolle:
+    anbieter: Anbieter
+    betreiber: Betreiber
+    einfuehrer: Einführer
+    haendler: Händler
+    produkthersteller: Produkthersteller
+    bevollmaechtigter: Bevollmächtigter
+  risikoklasse:
+    offen: noch offen
+    verboten: verbotene Praxis (Art. 5)
+    hochrisiko-anhang-iii: Hochrisiko nach Anhang III
+    hochrisiko-anhang-i: Hochrisiko nach Anhang I (Produkt)
+    transparenz: nur Transparenzpflichten (Art. 50)
+    minimal: minimales Risiko
+  anhangIii:
+    "1": "1 Biometrie"
+    "2": "2 Kritische Infrastruktur"
+    "3": "3 Bildung und Berufsbildung"
+    "4a": "4a Personalauswahl und Bewerbungen"
+    "4b": "4b Entscheide im Arbeitsverhältnis"
+    "5a": "5a Öffentliche Leistungen"
+    "5b": "5b Kreditwürdigkeit"
+    "5c": "5c Lebens- und Krankenversicherung"
+    "5d": "5d Notrufe und Notfalldienste"
+    "6": "6 Strafverfolgung"
+    "7": "7 Migration und Grenzkontrolle"
+    "8": "8 Justiz und demokratische Prozesse"
+  transparenz:
+    "50-1": "Art. 50(1): Menschen sprechen mit KI (z. B. Chatbot)"
+    "50-2": "Art. 50(2): KI erzeugt Texte, Bilder, Ton oder Video"
+    "50-3": "Art. 50(3): Emotionserkennung oder biometrische Kategorisierung"
+    "50-4": "Art. 50(4): Deepfakes oder KI-Texte zu Themen öffentlichen Interesses"
+  art5:
+    keine: keine verbotene Praxis
+    a: "a: manipulative Techniken"
+    b: "b: Ausnutzen von Schwächen"
+    ba: "ba: intime Darstellungen ohne Zustimmung"
+    bb: "bb: Darstellungen sexuellen Missbrauchs von Kindern"
+    c: "c: soziale Bewertung"
+    d: "d: Straftatprognose nur aus Profiling"
+    e: "e: Gesichtsdatenbanken durch ungezieltes Auslesen"
+    f: "f: Emotionserkennung am Arbeitsplatz oder in der Bildung"
+    g: "g: biometrische Kategorisierung nach sensiblen Merkmalen"
+    h: "h: biometrische Echtzeit-Fernidentifizierung"
+    unklar: unklar, juristisch prüfen
+  anhangI:
+    nein: kein Produkt nach Anhang I
+    abschnitt-a: Anhang I Abschnitt A
+    abschnitt-b: "Anhang I Abschnitt B (z. B. Maschinen)"
+    offen: noch offen
+  anwendungsbereich:
+    a: "Bst. a: Inverkehrbringen oder Inbetriebnahme in der EU"
+    b: "Bst. b: Betreiber mit Sitz oder Niederlassung in der EU"
+    c: "Bst. c: Ausgabe wird in der EU verwendet"
+  registrierung:
+    ja: registriert
+    nein: nicht registriert
+    nicht-noetig: nicht nötig
+  rollenwechsel:
+    nein: kein Rollenwechsel
+    a: Bst. a, eigener Name oder eigene Marke
+    b: Bst. b, wesentliche Änderung
+    c: Bst. c, neuer Zweck macht das System zum Hochrisiko-System
+    offen: noch offen
+  zeitraum:
+    pro-jahr: pro Jahr
+    pro-quartal: pro Quartal
+    pro-monat: pro Monat
+  risikoquelle:
+    daten: Daten (Qualität, Herkunft, Verzerrung)
+    modell: Modell oder Technik (Fehler, Robustheit)
+    fehlanwendung: Fehlanwendung durch Nutzende
+    transparenz: fehlende Transparenz oder Erklärbarkeit
+    vertraulichkeit: Vertraulichkeit und Know-how
+    sicherheit: Informationssicherheit
+    lieferant: Lieferant oder Abhängigkeit
+    recht: Recht und Verträge
+    kompetenz: fehlende Kompetenz
+    automatisierung: hoher Automatisierungsgrad
+    umwelt: Umwelt und Ressourcen
+  ebene:
+    organisation: Unternehmen
+    individuen: Einzelpersonen
+    gesellschaft: Gesellschaft
+  neubeurteilung:
+    neues-system: neues KI-System
+    wesentliche-aenderung: wesentliche Änderung an System oder Nutzung
+    vorfall: Vorfall oder Beschwerde
+    rechtslage: neue Gesetze oder Fristen
+    lieferantenwechsel: Wechsel des Lieferanten oder Modells
+    audit: Feststellung aus einem Audit
+  triageErgebnis:
+    kurz: Kurzprüfung genügt
+    voll: vollständige Folgenabschätzung nötig
+    offen: noch offen
+  betroffenArt: { direkt: direkt betroffen, indirekt: indirekt betroffen }
+  behandlung:
+    vermeiden: vermeiden (Tätigkeit nicht ausführen)
+    vermindern: vermindern (Controls und Massnahmen)
+    teilen: teilen (z. B. Vertrag, Versicherung)
+    tragen: bewusst tragen
+    nutzen: nutzen (bei Chancen)
+  risikoStatus:
+    offen: offen
+    in-behandlung: in Behandlung
+    behandelt: behandelt
+    akzeptiert: Restrisiko angenommen
+    geschlossen: geschlossen
+  controlStatus:
+    offen: offen
+    geplant: geplant
+    teilweise: teilweise umgesetzt
+    umgesetzt: umgesetzt
+    wirksam: umgesetzt und wirksam
+  nachweisArt:
+    dokument: Dokument
+    aufzeichnung: Aufzeichnung
+    protokoll: Protokoll
+    vertrag: Vertrag
+    schulung: Schulungsnachweis
+    sonstiges: Sonstiges
+  massnahmeStatus:
+    offen: offen
+    in-arbeit: in Arbeit
+    erledigt: erledigt
+    verworfen: verworfen
+  prioritaet: { hoch: hoch, mittel: mittel, tief: tief }
+  herkunft:
+    risiko: Risiko
+    audit: Audit
+    managementbewertung: Managementbewertung
+    pruefung: Prüfung im Werkzeug
+    checkliste: Checkliste
+    aiact: AI Act
+    ziel: Ziel
+    sonstige: Sonstige
+    aenderung: Änderung am AIMS
+  protokollInhalt:
+    eingaben: Eingaben
+    ausgaben: Ergebnisse
+    entscheide: Entscheide und Freigaben
+    nutzende: Nutzende und Zeitpunkt
+    fehler: Fehler und Störungen
+    aenderungen: Änderungen und Updates
+  nutzungsregeln:
+    nur-freigegebene: Nur freigegebene KI-Werkzeuge nutzen
+    keine-vertraulichen-daten: Keine vertraulichen Daten in nicht freigegebene Werkzeuge
+    keine-personendaten: Personendaten nur in freigegebene Werkzeuge
+    ergebnisse-pruefen: Ergebnisse vor der Verwendung prüfen
+    kennzeichnen: KI-Inhalte nach aussen kennzeichnen, wo nötig
+    firmenkonten: Nur Firmenkonten, keine privaten Konten
+    exportkontrolle: Keine exportkontrollierten Daten in Cloud-Werkzeuge ausserhalb des Freigaberahmens
+    melden: Probleme und Fehler melden
+  pruefstatus:
+    offen: noch nicht geprüft
+    in-pruefung: in Prüfung
+    geprueft: geprüft
+    mit-auflagen: geprüft mit Auflagen
+    abgelehnt: abgelehnt
+  bewusstseinFormate:
+    einfuehrung: Einführung neuer Mitarbeitender
+    e-learning: E-Learning
+    intranet: Intranet oder Mitteilung
+    teamsitzung: Teamsitzung
+    merkblatt: Merkblatt
+    bestaetigung: Schriftliche Bestätigung der Regeln
+  kompetenzStatus: { offen: offen, teilweise: teilweise, erfuellt: erfüllt }
+  kiKompetenzZielgruppen:
+    alle: alle Mitarbeitenden
+    generativ: Nutzende generativer KI
+    aufsicht: Personen mit Aufsichtsrolle
+    entwicklung: Entwicklung
+    geschaeftsleitung: Geschäftsleitung
+    einkauf: Einkauf
+  richtung: { intern: intern, extern: extern }
+  dokumentStatus:
+    entwurf: Entwurf
+    in-pruefung: in Prüfung
+    freigegeben: freigegeben
+    veraltet: veraltet
+  dokumentFreigabe:
+    geschaeftsleitung: Geschäftsleitung
+    eigner: Eigner/in des Dokuments
+    aims: AIMS-Verantwortliche/r
+  aenderungsweg:
+    massnahmenliste: über die Massnahmenliste
+    managementbewertung: in der Managementbewertung
+    aims-team: im AIMS-Team mit Freigabe der Geschäftsleitung
+  auditMethode:
+    interviews: Befragungen
+    dokumente: Dokumentenprüfung
+    stichproben: Stichproben in Registern und Systemen
+    begehung: Begehung vor Ort
+  auditArt:
+    intern: internes Audit
+    extern-stage1: Stage 1
+    extern-stage2: Stage 2
+    ueberwachung: Überwachungsaudit
+  feststellungQuelle:
+    audit: Audit
+    managementbewertung: Managementbewertung
+    vorfall: Vorfall
+    beinahe-vorfall: Beinahe-Vorfall
+    pruefung: Prüfung im Werkzeug
+    meldung: Meldung
+  einstufung:
+    nk-schwer: schwere Nichtkonformität
+    nk-leicht: leichte Nichtkonformität
+    beobachtung: Beobachtung
+    verbesserung: Verbesserungsvorschlag
+  feststellungStatus:
+    offen: offen
+    in-arbeit: in Arbeit
+    geschlossen: geschlossen
+  meldepflicht:
+    ja: meldepflichtig
+    nein: nicht meldepflichtig
+    nicht-noetig: Prüfung nicht nötig
+  ursacheKi:
+    daten: Daten
+    modell: Modell
+    zweck: Nutzung ausserhalb des Zwecks
+    kompetenz: Kompetenz
+    lieferant: Lieferant
+    prozess: Prozess
+  checklistenErgebnis:
+    konform: konform
+    beobachtung: Beobachtung
+    nk-leicht: NK leicht
+    nk-schwer: NK schwer
+    nicht-geprueft: nicht geprüft
+    nicht-pruefbar: nicht prüfbar, geplant
+  meldungArt:
+    bedenken: Bedenken
+    rueckmeldung: Rückmeldung
+    einspruch: Einspruch
+    beschwerde: Beschwerde
+  meldungHerkunft:
+    intern: intern
+    extern: extern
+  meldungStatus:
+    offen: offen
+    in-arbeit: in Arbeit
+    erledigt: erledigt
+  verbesserungQuellen:
+    audit: Audits
+    managementbewertung: Managementbewertung
+    meldungen: Meldungen und Beschwerden
+    vorfaelle: Vorfälle
+    kennzahlen: Kennzahlen
+    mitarbeitende: Vorschläge von Mitarbeitenden
+    kunden: Rückmeldungen von Kunden
+  stage1Unterlagen:
+    geltungsbereich: Geltungsbereich
+    leitlinie: KI-Leitlinie
+    rollen: Rollen und Zuständigkeiten
+    inventar: KI-Inventar
+    risiko: Risikoverfahren und Register
+    folgen: Folgenabschätzungen
+    soa: Erklärung zur Anwendbarkeit
+    ziele: Ziele und Kennzahlen
+    audit: Bericht internes Audit
+    managementbewertung: Protokoll Managementbewertung
+    nichtkonformitaeten: Register der Nichtkonformitäten
+    dokumente: Dokumentenregister
+  monat:
+    januar: Januar
+    februar: Februar
+    maerz: März
+    april: April
+    mai: Mai
+    juni: Juni
+    juli: Juli
+    august: August
+    september: September
+    oktober: Oktober
+    november: November
+    dezember: Dezember
+  # Weitere Einträge
+  schwere:
+    "1": 1 gering
+    "2": 2 mittel
+    "3": 3 erheblich
+    "4": 4 schwer
+  tarif:
+    gratis: Gratiskonto
+    privat: Privat- oder Einzelabo
+    business: Business oder Team
+    enterprise: Unternehmensvertrag
+    eigenbetrieb: eigener Betrieb
+  funktionStand:
+    an: ein
+    aus: aus
+  handlungsbefugnis:
+    informiert: informiert
+    empfiehlt: empfiehlt
+    bereitet-vor: bereitet vor
+    fuehrt-begrenzt-aus: führt begrenzt aus
+    handelt-mehrstufig: handelt mehrstufig
+  aufgabenart:
+    erzeugt-inhalte: erzeugt Inhalte
+    klassifiziert: klassifiziert oder erkennt
+    prognostiziert: prognostiziert
+    empfiehlt: empfiehlt oder priorisiert
+    steuert: steuert
+  entscheid:
+    einfuehren: KI-System einführen
+    restrisiko: Restrisiko annehmen
+    ausnahme: Ausnahme bewilligen
+    stoppen: System stoppen oder aussetzen
+    ausserbetrieb: System ausser Betrieb nehmen
+  entscheidungstraeger:
+    eigner: Eigner/in des Systems
+    risikoeigner: Risikoeigner/in
+    aufsicht: Wer das System beaufsichtigt, oder Eigner/in
+    aims: AIMS-Verantwortung
+    aims-eigner: AIMS-Verantwortung mit Eigner/in des Systems
+    aims-gl: AIMS-Verantwortung mit einem Mitglied der Geschäftsleitung
+    gl: Geschäftsleitung
+  rbNie:
+    personalentscheid: KI entscheidet allein über Anstellung, Kündigung, Lohn oder Kredit von Personen
+    vertrauliche-daten: Vertrauliche Daten gehen in KI-Dienste, die nicht freigegeben sind
+    verbotene-praktiken: Praktiken, die das Recht verbietet, z. B. verdeckte Beeinflussung von Personen
+  rbNurGl:
+    erhebliche-wirkung: KI mit erheblicher Wirkung auf Kunden, Mitarbeitende oder andere Betroffene
+    handelt-ohne-bestaetigung: KI, die ohne Bestätigung durch einen Menschen in anderen Systemen handelt
+    restrisiko-hoch: Restrisiken über der Akzeptanzgrenze
+  rbAimsAllein:
+    tiefes-risiko: Alleinige Freigabe von KI-Systemen mit tiefem Risiko
+    mittleres-risiko: Freigabe von KI-Systemen mit mittlerem Risiko zusammen mit der Eignerin oder dem Eigner des Systems
+    restrisiko-tief: Restrisiken bis zur Akzeptanzgrenze
+    ausnahme-befristet: Befristete Ausnahmen für Systeme mit tiefem Risiko, höchstens drei Monate
+  mitwirkende:
+    fachbereich: Fachbereich, der das System nutzt
+    it: Informatik
+    datenschutz: Datenschutz
+    personal: Personalwesen (bei Personenbezug)
+    recht: Recht oder Compliance
+    betroffene: Vertretung der Betroffenen, z. B. Personalkommission oder Kundenbeirat
+    extern: Externe Fachperson
+  wirksamkeitWie:
+    stichprobe: Stichprobe der Fälle im Betrieb
+    test: Test mit typischen und schwierigen Fällen
+    auswertung: Auswertung von Kennzahlen oder Protokollen
+    audit: Internes Audit
+    uebung: Übung, z. B. Abschaltung oder Rückfallweg erprobt
+  vertrauensmerkmal:
+    gueltig: Gültig und zuverlässig
+    sicher: Sicher
+    geschuetzt: Geschützt und widerstandsfähig
+    rechenschaft: Rechenschaftspflichtig und transparent
+    erklaerbar: Erklärbar und interpretierbar
+    datenschutz: Datenschutzfördernd
+    fair: Fair, schädliche Verzerrungen beherrscht
+
+ui:
+  modus: Guide
+  weiter: Weiter
+  zurueck: Zurück
+  spaeter: Später
+  spaeter_hinweis: Auf später verschoben. Die Seite erscheint in der Liste der offenen Punkte.
+  offene_punkte: Offene Punkte
+  ueberspringen: Überspringen
+  speichern: Speichern
+  etappe_abschliessen: Etappe abschliessen
+  etappe_status:
+    offen: offen
+    in-arbeit: in Arbeit
+    erledigt: erledigt
+  zur_uebersicht: Zur Übersicht
+  fortschritt: "{erledigt} von {gesamt} Seiten erledigt"
+  seite_von: "Seite {nummer} von {gesamt}"
+  dauer: "ungefähr {stunden} Stunden"
+  beteiligte: Wen Sie dazu brauchen
+  ergebnis: Was am Ende herauskommt
+  ziel: Ziel
+  warum_norm: Warum die Norm das verlangt
+  pflichtfeld: Pflichtfeld
+  pflicht_fehlt: "Bitte füllen Sie die Pflichtfelder aus oder wählen Sie «Später»."
+  hilfe:
+    titel: Hilfe
+    warum: Warum fragen wir das?
+    beispiel: Beispielantwort
+    beispiel_quelle: Aus dem Beispielprojekt Muster Maschinenbau AG (fiktiv)
+    fehler: Typische Fehler und was Auditoren sehen wollen
+    glossar: Begriffe
+    links: Zum Nachlesen
+    norm: "ISO/IEC 42001, Abschnitt {abschnitt}"
+    norm_hinweis: Die Norm ist bei SNV, DIN oder ISO zu beziehen.
+    vorlage: "Kit-Vorlage {id}"
+    leitfaden: "Leitfaden, Schritt {nummer}"
+    aiact: "AI Act, {artikel} (Seite {seite} im beigelegten PDF)"
+  als_vorlage: Als Vorlage übernehmen
+  als_vorlage_hinweis: Übernimmt die Beispielantwort in Ihr Projekt. Passen Sie sie danach an Ihr Unternehmen an.
+  mit_ki_vertiefen: Mit KI vertiefen
+  mit_ki_hinweis: Kopiert eine Anfrage mit dem Stand dieser Seite für den Skill in Ihre Zwischenablage. Es werden keine Daten versendet.
+  live_vorschau: Live-Vorschau
+  live_vorschau_hinweis: So erscheinen Ihre Angaben im Dokument.
+  vorschlag: Vorschlag
+  vorschlag_uebernehmen: Vorschlag übernehmen
+  textbausteine: Textbausteine
+  eintrag_neu: Eintrag hinzufügen
+  eintrag_entfernen: Eintrag entfernen
+  eintrag_entfernen_frage: Wollen Sie diesen Eintrag wirklich entfernen?
+  keine_eintraege: Noch keine Einträge.
+  keine_passenden: Auf diese Seite trifft im Moment kein Eintrag zu. Sie können weitergehen.
+  zeile_neu: Zeile hinzufügen
+  person_neu: Neue Person erfassen
+  person_waehlen: Person wählen
+  freigabe_von: Freigegeben von
+  freigabe_am: Freigegeben am
+  je_system: Je KI-System
+  system_waehlen: KI-System wählen
+  fragebogen:
+    export: Fragebogen für Fachbereiche exportieren
+    import: Ausgefüllten Fragebogen importieren
+    hinweis: Senden Sie den Fragebogen an die Fachbereiche. Nach dem Import prüfen Sie jede Zeile, bevor sie ins Inventar übernommen wird.
+    import_ergebnis: "{anzahl} Zeilen gelesen, {neu} neu, {doppelt} bereits vorhanden"
+    import_ergebnis_eins: "1 Zeile gelesen, {neu} neu, {doppelt} bereits vorhanden"
+    uebernehmen: Ausgewählte Zeilen übernehmen
+  checkliste:
+    titel: Checkliste
+    erledigt: erledigt
+    nachweis: Nachweis oder Ablageort
+    datum: Datum
+    offen: "{anzahl} Punkte offen"
+    offen_eins: "1 Punkt offen"
+  pfad:
+    mit_isms: Pfad mit ISMS
+    ohne_isms: Pfad ohne ISMS
+  modul:
+    ein: Modul AI Act eingeschaltet
+    aus: Modul AI Act ausgeschaltet
+  fahrplan:
+    titel: Ihr Fahrplan
+    etappen: Etappen
+    stunden_gesamt: "rund {stunden} Stunden Arbeit"
+    wochen: "{wochen} Wochen bis zum Zieltermin"
+    kein_termin: Ohne Zieltermin rechnen wir mit dem Richtwert aus dem Leitfaden.
+    knapp: Der Zieltermin ist knapp. Planen Sie mehr Zeit oder Unterstützung ein.
+  kalender:
+    titel: Jahreskalender
+    faellig: fällig
+    ueberfaellig: überfällig
+    erledigt: erledigt
+    naechste: Nächste Aufgaben
+    oeffnen: Aufgabe öffnen
+    abhaken: Als erledigt vermerken
+  pruefung:
+    titel: Prüfung vor Stage 1
+    starten: Prüfung starten
+    ampel:
+      gruen: Bereit für Stage 1
+      gelb: Bereit mit Hinweisen
+      rot: Noch nicht bereit
+    fehler: "{anzahl} Fehler"
+    fehler_eins: "1 Fehler"
+    hinweise: "{anzahl} Hinweise"
+    hinweise_eins: "1 Hinweis"
+    zum_fehler: Zur Stelle springen
+    bericht: Stage-1-Bericht erzeugen
+    dokumente: Alle Dokumente erzeugen
+  soa:
+    vorschlag_risiko: Vorgeschlagen wegen Risiko
+    vorschlag_aiact: Vorgeschlagen wegen AI-Act-Pflicht
+    filter_alle: alle Controls
+    filter_offen: nur offene
+    gruppe: Gruppe
+  folgen:
+    kurzpruefung: Kurzprüfung
+    voll: Vollständige Folgenabschätzung
+    schwelle: Mindestens eine Frage mit Ja. Wir empfehlen die vollständige Folgenabschätzung.

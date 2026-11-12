@@ -1,0 +1,64 @@
+# N-02 Abdeckungsmatrix AI RMF und ISO/IEC 42001
+blaetter:
+  abdeckung: Abdeckung
+  controls: Zusatz-Controls
+  stand: Stand
+titel_abdeckung: "Abdeckung der 72 Subkategorien des NIST AI RMF durch ISO/IEC 42001 und das AIMS"
+titel_controls: "Zusatz-Controls RMF-xx für die Erklärung zur Anwendbarkeit"
+spalte_nist_firma: "Dokumente NIST AI RMF (N-01 bis N-04)"
+titel_stand: "Bilanz und Stand der NIST-Grundlage"
+hinweise_abdeckung:
+  - "Spalte E zeigt, wie weit ISO/IEC 42001 das Ergebnis der Subkategorie abdeckt (fachliche Einschätzung des Kits). Spalte F zeigt, wie weit es die Vorlagen des Kits ohne dieses Modul abdecken; sie gehen an mehreren Stellen über die Norm hinaus."
+  - "Bei «teilweise» oder «nicht» nennt Spalte I das Zusatz-Control, das die Lücke schliesst, oder eine Präzisierung bestehender Dokumente (Spalte J). Halten Sie in Spalte K den Entscheid fest: Zusatz-Control in die Erklärung zur Anwendbarkeit aufgenommen (D-11), Präzisierung umgesetzt oder begründet nicht aufgenommen."
+  - "Spalte M nennt die Zahl der Massnahmen, die NIST AI 600-1 für generative KI vorschlägt (0 = nicht im Profil). Die Zuordnung zu ISO/IEC 42001 ist eine eigene Einschätzung, keine Übernahme des Crosswalks."
+hinweise_abdeckung_firma:
+  - "Abdeckung je Subkategorie durch ISO/IEC 42001 (Spalte E) und durch unser AIMS (Spalte F). Bei «teilweise» oder «nicht» zeigt Spalte K unseren Entscheid zum Zusatz-Control aus der Erklärung zur Anwendbarkeit (D-11) oder zur Präzisierung."
+hinweise_controls:
+  - "Die Zusatz-Controls schliessen die Lücken zwischen ISO/IEC 42001 und dem AI RMF. Sie gehören wie die Zusatz-Controls zum EU AI Act in den Abschnitt «Zusätzliche Controls» der Erklärung zur Anwendbarkeit (D-11)."
+  - "RMF-Gxx gelten nur für Systeme mit generativer KI (Kennzeichen «Generativ» im KI-Inventar D-10). Spalte H: Für Betreiber eingekaufter KI gibt es eine verkürzte Form; die volle Form gilt bei Eigenentwicklung oder eigenem Training."
+  - "Das Werkzeug schlägt die Controls je KI-System vor, z. B. RMF-13 nur bei KI mit Wirkung auf Rechtsposition oder Chancen von Personen (Kurzprüfung D-09). Spalte K nennt nur die IDs der Massnahmen in NIST AI 600-1 als Herkunft."
+hinweis_controls_firma: "Vorschlag je KI-System nach Typ, Rolle, Kurzprüfung und Kennzeichen «Generativ»; Entscheid aus der Erklärung zur Anwendbarkeit (D-11)."
+nicht_noetig: nicht nötig
+praezisiert: präzisiert
+nicht_vorgeschlagen: für keines unserer Systeme vorgeschlagen
+form_betreiber: "Form für Betreiber: {systeme}"
+spalten:
+  - ID
+  - NIST-Bezeichnung
+  - Kurztitel
+  - "Bezug ISO/IEC 42001 (Abschnitte, Controls)"
+  - "Abdeckung durch ISO/IEC 42001"
+  - Abdeckung durch das AIMS
+  - Dokumente im AIMS
+  - Vorlagen NIST
+  - "Zusatz-Control oder Präzisierung"
+  - Präzisierung
+  - Entscheid
+  - "Umfang (Lite oder Ausbau)"
+  - "Massnahmen NIST AI 600-1"
+  - Fundstelle NIST
+spalten_controls: [ID, Titel, Art, Subkategorien, "Verwandt ISO/IEC 42001", "Verwandt ISO/IEC 27001", Dokumente, Form für Betreiber, "Vorgeschlagen für KI-Systeme", Entscheid, "Herkunft NIST AI 600-1", "Massnahmen NIST AI 600-1 (Originaltext)"]
+spalten_stand: [Thema, Angabe, Zusatz, Erläuterung]
+listen:
+  entscheid: ["in die SoA aufgenommen", präzisiert, nicht aufgenommen, offen, nicht nötig]
+stand:
+  bilanz: Bilanz der 72 Subkategorien
+  norm: ISO/IEC 42001
+  aims: AIMS
+  grad_ganz: "Das Ergebnis ist erreicht, wenn die genannten Dokumente und Controls umgesetzt sind."
+  grad_teilweise: "Struktur und Nachweise sind vorhanden, das Ergebnis verlangt mehr. Zusatz-Control oder Präzisierung umsetzen."
+  grad_nicht: "Nicht abgedeckt. Zusatz-Control nötig."
+  zusatz: "Zusatz-Controls allgemein, generative KI"
+  zusatz_text: "RMF-01 bis RMF-16 und RMF-G01 bis RMF-G07 (Blatt «Zusatz-Controls»)"
+  praezisierungen: Präzisierungen ohne eigenes Control
+  fassungen: Fassung
+  datei: Datei
+  seiten: Seiten
+  url: Quelle
+  geprueft: Stand geprüft am
+  revision: Revision
+  revision_firma: "Massgebend ist AI RMF 1.0; eine Überarbeitung ist angekündigt. Wir prüfen den Stand vor jeder Aktualisierung des Profils."
+  lizenz: Lizenz
+  abgleich: Abgleich der Zuordnung
+  pdf: PDFs im Kit
+  ablage: "Ablage: Ordner {ordner}."

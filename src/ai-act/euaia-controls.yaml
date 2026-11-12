@@ -1,0 +1,391 @@
+# Zusatz-Controls für das AI-Act-Modul (EUAIA-nn)
+#
+# Struktur sprachneutral; Texte (Kurzbezeichnung, Umsetzungshinweis, Nachweis) in
+# src/i18n/de/euaia.yaml und src/i18n/en/euaia.yaml.
+# Rechtsgrundlage: Verordnung (EU) 2024/1689, konsolidierte Fassung 27.07.2026 (siehe stand.yaml).
+# Artikelangaben: «26(7)» = Art. 26 Abs. 7; «16(e)» = Art. 16 Bst. e; «3 Nr. 3 bis 8» = Art. 3 Nummern 3 bis 8.
+#
+# Felder
+#   artikel           Liste der Fundstellen im AI Act
+#   rollen            Rollen nach Art. 3 (Werte wie AiActRolle in src/model/typen.ts)
+#   risikoklassen     verboten | hochrisiko-anhang-iii | hochrisiko-anhang-i | transparenz | minimal | alle
+#   verwandt_42001    verwandte Controls (A.x.y) und Normabschnitte (K-x.y) aus ISO/IEC 42001
+#   verwandt_27001    verwandte Controls aus ISO/IEC 27001:2022 Anhang A (27001-x.y), fachliche Einschätzung
+#   abdeckung_42001   teilweise | nicht (ganz abgedeckte Pflichten brauchen kein Zusatz-Control)
+#   vorschlag_wenn    Bedingung für den automatischen Vorschlag je KI-System. Alle Schlüssel
+#                     eines Objekts müssen zutreffen (UND); any_of enthält Alternativen (ODER).
+#     immer: true                      für jedes KI-System im Inventar
+#     rollen_any: [...]                mindestens eine Rolle des Systems (kiSysteme[].aiAct.rollen)
+#     risikoklasse_any: [...]          Risikoklasse des Systems (kiSysteme[].aiAct.risikoklasse)
+#     transparenz_any: [...]           mindestens ein Transparenzfall ('50-1' bis '50-4')
+#     anhang_iii_bereich_any: [...]    Bereich nach Anhang III (kiSysteme[].aiAct.anhangIiiBereich, z. B. '5b')
+#     ausnahme_art_6_3: true           Anhang-III-System als nicht hochriskant eingestuft (Art. 6(3))
+#     gpai: true                       die Organisation bringt ein KI-Modell mit allgemeinem
+#                                      Verwendungszweck selbst in Verkehr (nicht: blosse Nutzung)
+#     org_niederlassung_eu: false      Organisation ohne Niederlassung in der EU (organisation.euBezug)
+#     org_oeffentliche_dienste: true   Einrichtung des öffentlichen Rechts oder private Einrichtung,
+#                                      die öffentliche Dienste erbringt (Angabe in E-06)
+#     any_of: [ {...}, {...} ]         Alternativen
+
+schema: 1
+stand: konsolidiert-2026-07-27
+
+controls:
+  - id: EUAIA-01
+    artikel: ["5(1)", "5(1a)", "5(1b)"]
+    rollen: [anbieter, betreiber, einfuehrer, haendler, produkthersteller]
+    risikoklassen: [alle]
+    verwandt_42001: [A.5.2, A.9.2, K-6.1.4]
+    verwandt_27001: [27001-5.31]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {immer: true}
+
+  - id: EUAIA-02
+    artikel: ["4(1)"]
+    rollen: [anbieter, betreiber]
+    risikoklassen: [alle]
+    verwandt_42001: [A.4.6, K-7.2, K-7.3]
+    verwandt_27001: [27001-6.3]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter, betreiber]}
+
+  - id: EUAIA-03
+    artikel: ["2(1)", "3 Nr. 3 bis 8", "25(1)", "25(3)"]
+    rollen: [anbieter, betreiber, einfuehrer, haendler, produkthersteller, bevollmaechtigter]
+    risikoklassen: [alle]
+    verwandt_42001: [K-4.1, A.10.2]
+    verwandt_27001: [27001-5.31]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {immer: true}
+
+  - id: EUAIA-04
+    artikel: ["6(1) bis (4)", "6(1a) bis (1c)", "80", "Anhang I", "Anhang III"]
+    rollen: [anbieter, betreiber, einfuehrer, haendler, produkthersteller]
+    risikoklassen: [alle]
+    verwandt_42001: [A.5.2, A.5.3, K-6.1.4]
+    verwandt_27001: [27001-5.31]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {immer: true}
+
+  - id: EUAIA-05
+    artikel: ["50(1)", "50(5)"]
+    rollen: [anbieter]
+    risikoklassen: [alle]
+    verwandt_42001: [A.8.2]
+    verwandt_27001: []
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter], transparenz_any: ["50-1"]}
+
+  - id: EUAIA-06
+    artikel: ["50(2)", "111(4)"]
+    rollen: [anbieter]
+    risikoklassen: [alle]
+    verwandt_42001: []
+    verwandt_27001: []
+    abdeckung_42001: nicht
+    vorschlag_wenn: {rollen_any: [anbieter], transparenz_any: ["50-2"]}
+
+  - id: EUAIA-07
+    artikel: ["50(3)", "50(4)", "50(5)"]
+    rollen: [betreiber]
+    risikoklassen: [alle]
+    verwandt_42001: [A.8.2]
+    verwandt_27001: [27001-5.34]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [betreiber], transparenz_any: ["50-3", "50-4"]}
+
+  - id: EUAIA-08
+    artikel: ["26(1)", "26(3)"]
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.9.4, A.9.2]
+    verwandt_27001: [27001-5.37]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [betreiber], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-09
+    artikel: ["26(2)"]
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.3.2, A.9.2, K-7.2]
+    verwandt_27001: [27001-5.2, 27001-6.3]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [betreiber], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-10
+    artikel: ["26(4)"]
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.7.4]
+    verwandt_27001: []
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [betreiber], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-11
+    artikel: ["26(5)"]
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.6.2.6, A.8.4]
+    verwandt_27001: [27001-8.16]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [betreiber], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-12
+    artikel: ["16(e)", "19", "26(6)"]
+    rollen: [anbieter, betreiber, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.6.2.8]
+    verwandt_27001: [27001-8.15, 27001-5.33]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter, betreiber, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-13
+    artikel: ["26(7)"]
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [K-7.4]
+    verwandt_27001: []
+    abdeckung_42001: nicht
+    vorschlag_wenn: {rollen_any: [betreiber], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-14
+    artikel: ["26(11)"]
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii]
+    verwandt_42001: [A.8.2]
+    verwandt_27001: []
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [betreiber], risikoklasse_any: [hochrisiko-anhang-iii]}
+
+  - id: EUAIA-15
+    artikel: ["86(1)"]
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii]
+    verwandt_42001: [A.8.2, A.8.3]
+    verwandt_27001: []
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [betreiber], risikoklasse_any: [hochrisiko-anhang-iii]}
+
+  - id: EUAIA-16
+    artikel: ["27(1) bis (4)"]
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii]
+    verwandt_42001: [A.5.2, A.5.3, A.5.4, A.5.5, K-6.1.4]
+    verwandt_27001: [27001-5.34]
+    abdeckung_42001: teilweise
+    vorschlag_wenn:
+      any_of:
+        - {rollen_any: [betreiber], risikoklasse_any: [hochrisiko-anhang-iii], anhang_iii_bereich_any: ["5b", "5c"]}
+        - {rollen_any: [betreiber], risikoklasse_any: [hochrisiko-anhang-iii], org_oeffentliche_dienste: true}
+
+  - id: EUAIA-17
+    artikel: ["26(9)"]
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.5.2, A.5.4]
+    verwandt_27001: [27001-5.34]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [betreiber], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-18
+    artikel: ["16(k)", "21", "26(12)", "79(2)", "79(4)"]
+    rollen: [anbieter, betreiber, einfuehrer, haendler, produkthersteller, bevollmaechtigter]
+    risikoklassen: [alle]
+    verwandt_42001: [A.8.5]
+    verwandt_27001: [27001-5.5]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {immer: true}
+
+  - id: EUAIA-19
+    artikel: ["9"]
+    rollen: [anbieter, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [K-6.1.2, K-6.1.3, K-8.2, K-8.3, A.5.2, A.6.2.4]
+    verwandt_27001: []
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-20
+    artikel: ["10", "4a(1)"]
+    rollen: [anbieter, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.7.2, A.7.3, A.7.4, A.7.5, A.7.6]
+    verwandt_27001: [27001-5.12, 27001-5.33, 27001-5.34, 27001-8.11]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-21
+    artikel: ["11", "Anhang IV"]
+    rollen: [anbieter, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.6.2.3, A.6.2.7]
+    verwandt_27001: [27001-5.37]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-22
+    artikel: ["12"]
+    rollen: [anbieter, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.6.2.8]
+    verwandt_27001: [27001-8.15, 27001-8.17]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-23
+    artikel: ["13"]
+    rollen: [anbieter, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.6.2.7, A.8.2]
+    verwandt_27001: []
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-24
+    artikel: ["14"]
+    rollen: [anbieter, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.6.2.2, A.6.2.3]
+    verwandt_27001: []
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-25
+    artikel: ["15"]
+    rollen: [anbieter, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.6.2.4, A.6.2.6]
+    verwandt_27001: [27001-8.8, 27001-8.25, 27001-8.29]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-26
+    artikel: ["16(c)", "17", "63"]
+    rollen: [anbieter, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [K-4.4, K-7.5, K-8.1, K-9.2, K-10.2, A.6.1.3]
+    verwandt_27001: [27001-5.1, 27001-5.36]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-27
+    artikel: ["16(d)", "18"]
+    rollen: [anbieter, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [K-7.5]
+    verwandt_27001: [27001-5.33]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-28
+    artikel: ["16(b)", "16(f) bis (h)", "43", "47", "48"]
+    rollen: [anbieter, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: []
+    verwandt_27001: []
+    abdeckung_42001: nicht
+    vorschlag_wenn: {rollen_any: [anbieter, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-29
+    artikel: ["16(i)", "49(1)", "49(2)"]
+    rollen: [anbieter, bevollmaechtigter]
+    risikoklassen: [hochrisiko-anhang-iii, minimal, transparenz]
+    verwandt_42001: []
+    verwandt_27001: []
+    abdeckung_42001: nicht
+    vorschlag_wenn:
+      any_of:
+        - {rollen_any: [anbieter, bevollmaechtigter], risikoklasse_any: [hochrisiko-anhang-iii]}
+        - {rollen_any: [anbieter, bevollmaechtigter], ausnahme_art_6_3: true}
+
+  - id: EUAIA-30
+    artikel: ["16(j)", "20", "82(2)"]
+    rollen: [anbieter, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [K-10.2, A.8.5]
+    verwandt_27001: [27001-5.27]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-31
+    artikel: ["22(1)", "22(2)"]
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: []
+    verwandt_27001: []
+    abdeckung_42001: nicht
+    vorschlag_wenn: {rollen_any: [anbieter], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i], org_niederlassung_eu: false}
+
+  - id: EUAIA-32
+    artikel: ["72"]
+    rollen: [anbieter, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.6.2.6, K-9.1]
+    verwandt_27001: [27001-8.16]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-33
+    artikel: ["73", "26(5)"]
+    rollen: [anbieter, betreiber, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.8.4, A.8.5]
+    verwandt_27001: [27001-5.24, 27001-5.25, 27001-5.26]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter, betreiber, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-34
+    artikel: ["16(l)"]
+    rollen: [anbieter, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: []
+    verwandt_27001: []
+    abdeckung_42001: nicht
+    vorschlag_wenn: {rollen_any: [anbieter, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-35
+    artikel: ["25(2)", "25(4)"]
+    rollen: [anbieter, produkthersteller]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.10.2, A.10.3]
+    verwandt_27001: [27001-5.19, 27001-5.20, 27001-5.21]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [anbieter, produkthersteller], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-36
+    artikel: ["23"]
+    rollen: [einfuehrer]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.10.3]
+    verwandt_27001: [27001-5.19, 27001-5.22]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [einfuehrer], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-37
+    artikel: ["24"]
+    rollen: [haendler]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    verwandt_42001: [A.10.3]
+    verwandt_27001: [27001-5.19, 27001-5.22]
+    abdeckung_42001: teilweise
+    vorschlag_wenn: {rollen_any: [haendler], risikoklasse_any: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+
+  - id: EUAIA-38
+    artikel: ["22(3)", "22(4)", "54(3) bis (5)"]
+    rollen: [bevollmaechtigter]
+    risikoklassen: [alle]
+    verwandt_42001: []
+    verwandt_27001: []
+    abdeckung_42001: nicht
+    vorschlag_wenn: {rollen_any: [bevollmaechtigter]}
+
+  - id: EUAIA-39
+    artikel: ["52(1)", "53", "54(1)", "54(2)", "55", "111(3)"]
+    rollen: [anbieter]
+    risikoklassen: [alle]
+    verwandt_42001: []
+    verwandt_27001: []
+    abdeckung_42001: nicht
+    # Nur wer selbst ein GPAI-Modell in Verkehr bringt (gpai: true UND Rolle Anbieter). Systeme auf fremden
+    # GPAI-Modellen (Copilot, ChatGPT, eigener Chatbot über eine Cloud-Schnittstelle) haben gpai: false.
+    vorschlag_wenn: {rollen_any: [anbieter], gpai: true}

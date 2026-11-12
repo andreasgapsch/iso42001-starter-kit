@@ -1,0 +1,133 @@
+# Seitentexte Jahreskalender. Format: src/gefuehrt/FORMAT.md
+J-einfuehrung:
+  titel: Jahreskalender
+  frage: Was ist nach der Zertifizierung regelmässig zu tun?
+  warum: Ein Managementsystem lebt von Wiederholung. Das Inventar, die Risiken, die Folgenabschätzungen und die Lieferanten werden regelmässig überprüft, Ziele gemessen, und jedes Jahr folgen internes Audit und Managementbewertung. Der Kalender zeigt, was fällig ist.
+  fehler: Nach der Zertifizierung schläft das System oft ein, bis kurz vor dem [[g:ueberwachungsaudit]]. Auditoren erkennen das an Aufzeichnungen, die alle im selben Monat entstanden sind.
+J-termine:
+  titel: Feste Termine im Jahr
+  frage: In welchem Monat finden internes Audit, Managementbewertung und Überwachungsaudit statt?
+  warum: Feste Monate machen die Planung einfach. Bewährt ist die Reihenfolge internes Audit, dann Managementbewertung, dann Überwachungsaudit, mit einigen Wochen Abstand.
+  fehler: Liegen internes Audit und Überwachungsaudit zu nah beieinander, bleibt keine Zeit für Korrekturen.
+  felder:
+    meta.gefuehrt.antworten.jahr.monatAudit:
+      label: Internes Audit
+      hilfe: Mindestens drei Monate vor dem Überwachungsaudit.
+    meta.gefuehrt.antworten.jahr.monatMb:
+      label: Managementbewertung
+      hilfe: Nach dem internen Audit.
+    meta.gefuehrt.antworten.jahr.monatUeberwachung:
+      label: Überwachungsaudit
+      hilfe: Ungefähr ein Jahr nach der Zertifizierung, danach jährlich.
+J-kalender:
+  titel: Fällige Aufgaben
+  frage: Welche Aufgaben stehen in den nächsten Wochen an?
+  warum: Der Kalender verbindet feste Rhythmen mit den Überprüfungsdaten aus Ihren Registern. Jede Aufgabe öffnet die passende Seite; mit dem Vermerk «erledigt» entsteht ein Nachweis.
+  fehler: Aufgaben, die abgehakt, aber nicht erledigt sind, fallen im Audit auf. Vermerken Sie zu jeder erledigten Aufgabe den Nachweis.
+J-inventar:
+  titel: Inventar überprüfen
+  frage: Stimmen die Angaben zu diesem KI-System noch?
+  warum: Updates, neue Funktionen oder geänderte Nutzung verändern ein System. Mit jeder Überprüfung setzen Sie ein neues Datum; wesentliche Änderungen lösen eine neue Risikobeurteilung und Folgenabschätzung aus.
+  fehler: Ein geändertes System mit alter Folgenabschätzung meldet die Prüfung als Hinweis. Tragen Sie das Änderungsdatum ein, wenn sich etwas Wesentliches geändert hat.
+  felder:
+    status:
+      label: Status
+      hilfe: Ist das System noch freigegeben und im Einsatz?
+    lebenszyklus:
+      label: Phase
+      hilfe: Aktuelle Phase des Lebenszyklus.
+    geaendertAm:
+      label: Wesentlich geändert am
+      hilfe: Nur bei wesentlichen Änderungen.
+    naechsteUeberpruefung:
+      label: Nächste Überprüfung
+      hilfe: Neues Datum setzen.
+J-risiken:
+  titel: Risiken neu beurteilen
+  frage: Hat sich dieses Risiko verändert?
+  warum: Die Norm verlangt Neubeurteilungen in festen Abständen. Prüfen Sie, ob Wahrscheinlichkeit und Auswirkung noch stimmen und ob die Massnahmen gewirkt haben.
+  fehler: Unveränderte Werte über Jahre wirken wie nicht gemacht. Halten Sie auch fest, wenn sich nichts geändert hat.
+  felder:
+    w:
+      label: Wahrscheinlichkeit vor Massnahmen
+      hilfe: Stufe nach Ihrer Skala.
+    a:
+      label: Auswirkung vor Massnahmen
+      hilfe: Stufe nach Ihrer Skala.
+    wNach:
+      label: Wahrscheinlichkeit nach Massnahmen
+      hilfe: Aktuelle Einschätzung.
+    aNach:
+      label: Auswirkung nach Massnahmen
+      hilfe: Aktuelle Einschätzung.
+    status:
+      label: Status
+      hilfe: Geschlossen, wenn das Risiko nicht mehr besteht.
+J-folgen:
+  titel: Folgenabschätzung überprüfen
+  frage: Ist diese Folgenabschätzung noch aktuell?
+  warum: Folgenabschätzungen werden in festen Abständen und bei wesentlichen Änderungen wiederholt. Bei unveränderter Nutzung genügt ein kurzer Vermerk und ein neues Datum.
+  fehler: Wurde das System seit der letzten Freigabe geändert, braucht es eine neue Freigabe. Auditoren vergleichen die Daten.
+  felder:
+    ergebnis:
+      label: Ergebnis der Überprüfung
+      hilfe: z. B. «Nutzung unverändert, Ergebnis bestätigt».
+    naechsteUeberpruefung:
+      label: Nächste Überprüfung
+      hilfe: Neues Datum setzen.
+J-lieferanten:
+  titel: Lieferanten erneut prüfen
+  frage: Erfüllt dieser Lieferant Ihre Anforderungen weiterhin?
+  warum: Lieferanten wechseln Modelle, Unterauftragnehmer und Bedingungen. Eine jährliche Prüfung zeigt, ob die Grundlage Ihrer Freigabe noch stimmt.
+  fehler: Geänderte Nutzungsbedingungen, etwa zum Training mit Kundendaten, bleiben oft unbemerkt. Lesen Sie die aktuellen Bedingungen bei jeder Prüfung.
+  felder:
+    pruefstatus:
+      label: Prüfstatus
+      hilfe: Ergebnis der erneuten Prüfung.
+    bemerkung:
+      label: Bemerkung
+      hilfe: Was sich geändert hat.
+    naechstePruefung:
+      label: Nächste Prüfung
+      hilfe: Neues Datum setzen.
+J-ziele:
+  titel: Ziele messen
+  frage: Welchen Wert hat die Kennzahl heute?
+  warum: Regelmässige Messungen zeigen, ob Sie auf Kurs sind, und liefern Eingaben für die Managementbewertung.
+  fehler: Fehlende Messungen zwischen zwei Audits zeigen, dass der Messplan nicht gelebt wird.
+  felder:
+    messungen:
+      label: Messungen
+      hilfe: Neue Zeile mit Datum und Wert.
+    messungen.datum:
+      label: Datum
+      hilfe: Stichtag der Messung.
+    messungen.wert:
+      label: Wert
+      hilfe: Gemessener Wert.
+    messungen.bemerkung:
+      label: Bemerkung
+      hilfe: Auffälligkeiten und Massnahmen.
+J-ueberwachungsaudit:
+  titel: Überwachungsaudit
+  frage: Wann findet das nächste Überwachungsaudit statt und was war das Ergebnis?
+  warum: Die [[g:zertifizierungsstelle]] prüft jedes Jahr einen Teil des Systems. Feststellungen daraus erfassen Sie wie interne Feststellungen.
+  fehler: Feststellungen aus dem letzten Überwachungsaudit, die noch offen sind, prüft die Stelle als Erstes.
+  felder:
+    geplant:
+      label: Termin
+      hilfe: Erster Audittag.
+    auditor:
+      label: Leitende Auditorin oder leitender Auditor
+      hilfe: Name.
+    durchgefuehrt:
+      label: Durchgeführt am
+      hilfe: Datum des Abschlussgesprächs.
+    ergebnis:
+      label: Ergebnis
+      hilfe: Kurzfazit und Anzahl Feststellungen.
+J-rmf:
+  titel: "Stand NIST AI RMF und Profil"
+  frage: "Gibt es eine neue Fassung des NIST AI RMF, und stimmt Ihr Profil noch?"
+  warum: "NIST hat eine Überarbeitung des AI RMF angekündigt. Prüfen Sie halbjährlich, ob eine neue Fassung erschienen ist, und führen Sie das Profil nach, damit Auskünfte an Kunden und die Managementbewertung auf dem aktuellen Stand beruhen."
+  fehler: "Ein veraltetes Profil in einem Kundenfragebogen schadet mehr als keines. Halten Sie in der Notiz fest, wann Sie eine Subkategorie zuletzt geprüft haben."

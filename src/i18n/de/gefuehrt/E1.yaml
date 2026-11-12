@@ -1,0 +1,141 @@
+# Seitentexte Etappe E1 Auftrag und Ausgangslage. Format: src/gefuehrt/FORMAT.md
+E1-einfuehrung:
+  titel: Auftrag und Ausgangslage
+  frage: Wo steht Ihr Unternehmen heute und wer trägt das Projekt?
+  warum: Bevor Sie Dokumente schreiben, lohnt sich ein ehrlicher Blick auf das, was schon da ist. Danach gibt die Geschäftsleitung den Auftrag frei; damit zeigt die [[g:oberste-leitung]], dass sie das Managementsystem trägt.
+  fehler: Der Reifegrad ist kein Zertifizierungskriterium. Er hilft nur, den Aufwand abzuschätzen. Auditoren interessiert, ob die Geschäftsleitung den Aufbau sichtbar unterstützt, etwa durch Freigaben und Ressourcen.
+E1-vorhanden:
+  titel: Bestehende Managementsysteme
+  frage: Welche Managementsysteme gibt es in Ihrem Unternehmen schon?
+  warum: Was bei Qualität, Umwelt oder Informationssicherheit schon funktioniert, nutzen Sie mit. Dokumentenlenkung, internes Audit und Managementbewertung lassen sich meist gemeinsam führen.
+  fehler: Neue Parallelstrukturen kosten Zeit und verwirren Mitarbeitende. Auditoren begrüssen ein integriertes System, solange die KI-Themen darin klar erkennbar sind.
+  felder:
+    meta.gefuehrt.antworten.vorhandeneSysteme:
+      label: Vorhandene Managementsysteme
+      hilfe: Auch nicht zertifizierte Systeme zählen, wenn sie gelebt werden.
+E1-schnellcheck-a:
+  titel: Schnellcheck, Teil 1
+  frage: Wie weit sind Sie bei Kontext, Führung, Planung und Inventar?
+  warum: Der Schnellcheck zeigt, wo die grössten Lücken liegen, und gewichtet den Fahrplan. Es geht um eine grobe Einschätzung, nicht um eine Prüfung.
+  fehler: Viele schätzen sich zu gut ein, weil es zu einem Thema irgendein Dokument gibt. «Erfüllt» heisst, dass es freigegeben ist, angewendet wird und sich belegen lässt.
+  felder:
+    gapAnalyse.kapitel.k4:
+      label: Kontext, Parteien, Geltungsbereich (Kapitel 4)
+      hilfe: Gibt es eine Beschreibung des Umfelds und einen festgelegten Geltungsbereich für KI?
+    gapAnalyse.kapitel.k5:
+      label: Führung, Leitlinie, Rollen (Kapitel 5)
+      hilfe: Gibt es eine von der Geschäftsleitung freigegebene Regelung für KI und klare Zuständigkeiten?
+    gapAnalyse.kapitel.k6:
+      label: Risiken, Folgenabschätzungen, Ziele (Kapitel 6)
+      hilfe: Werden KI-Risiken nach einer festen Methode beurteilt?
+    gapAnalyse.kapitel.inventar:
+      label: Übersicht über die eingesetzte KI
+      hilfe: Wissen Sie, welche KI-Werkzeuge im Unternehmen genutzt werden?
+E1-schnellcheck-b:
+  titel: Schnellcheck, Teil 2
+  frage: Wie weit sind Sie bei Unterstützung, Betrieb, Bewertung und Verbesserung?
+  warum: Diese Kapitel betreffen den Alltag. Hier zeigt sich, ob Regeln gelebt werden, und hier können Sie mit einem [[g:isms]] am meisten wiederverwenden.
+  fehler: Schulungen ohne Nachweis und Audits ohne Bericht zählen für Auditoren nicht. Bewerten Sie nur, was Sie belegen können.
+  felder:
+    gapAnalyse.kapitel.k7:
+      label: Ressourcen, Kompetenz, Kommunikation, Dokumente (Kapitel 7)
+      hilfe: Gibt es Schulungen zu KI und eine geregelte Dokumentenablage?
+    gapAnalyse.kapitel.k8:
+      label: Betrieb und Steuerung (Kapitel 8)
+      hilfe: Werden neue KI-Werkzeuge vor dem Einsatz geprüft und freigegeben?
+    gapAnalyse.kapitel.k9:
+      label: Messen, Audit, Managementbewertung (Kapitel 9)
+      hilfe: Gibt es regelmässige interne Audits und eine Managementbewertung?
+    gapAnalyse.kapitel.k10:
+      label: Verbesserung (Kapitel 10)
+      hilfe: Werden Abweichungen mit Ursache und Wirksamkeitsprüfung bearbeitet?
+E1-team:
+  titel: Projektteam
+  frage: Wer arbeitet im Projekt mit und welche Rolle hat diese Person?
+  warum: Ein KI-Managementsystem berührt IT, Fachbereiche, Personal, Recht und Einkauf. Wer früh dabei ist, trägt die Regeln später mit. Die Personen hier stehen Ihnen in allen Etappen zur Auswahl.
+  fehler: Ein Ein-Personen-Projekt in der IT führt zu Regeln, die in den Fachbereichen nicht ankommen. Auditoren befragen auch Personen ausserhalb der IT und merken schnell, ob diese einbezogen waren.
+  felder:
+    name:
+      label: Name
+      hilfe: Vor- und Nachname.
+    funktion:
+      label: Funktion
+      hilfe: z. B. «Leiterin IT», «Qualitätsmanager».
+    aimsRollen:
+      label: Rolle im Projekt
+      hilfe: Mehrere Rollen sind im KMU üblich.
+E1-auftrag:
+  titel: Projektauftrag
+  frage: Was soll das Projekt erreichen und welche Mittel stehen zur Verfügung?
+  warum: Der Projektauftrag hält Ziel, Aufwand und Budget fest. Er ist der erste Nachweis, dass die Geschäftsleitung Ressourcen bereitstellt, wie es die Norm verlangt.
+  fehler: Ein Auftrag ohne Pensum führt dazu, dass das Projekt neben dem Tagesgeschäft versandet. Halten Sie fest, wie viel Zeit die [[g:aims|AIMS]]-Verantwortliche Person erhält. Richtwerte sind 25 bis 35 Personentage mit [[g:isms]], 45 bis 65 ohne ISMS.
+  felder:
+    organisation.projektauftrag.ziel:
+      label: Ziel des Projekts
+      hilfe: z. B. «Zertifizierung nach ISO/IEC 42001 bis Juni 2027 und Nachweis gegenüber Kunden, dass wir KI verantwortungsvoll einsetzen».
+    organisation.projektauftrag.aufwandPt:
+      label: Geplanter Aufwand in Personentagen
+      hilfe: Interner Aufwand aller Beteiligten.
+    organisation.projektauftrag.budget:
+      label: Budget in CHF
+      hilfe: Für externe Unterstützung, Schulung und Zertifizierung.
+    organisation.projektauftrag.pensumProzent:
+      label: Pensum der AIMS-Verantwortlichen in Prozent
+      hilfe: Während des Aufbaus, z. B. 40 %. Der Leitfaden rechnet mit 40 bis 50 %; der Fahrplan in E0 prüft, ob die Personentage reichen.
+    organisation.projektauftrag.nutzen:
+      label: "Nutzen"
+      hilfe: "Warum sich der Aufbau lohnt, z. B. Anforderungen von Kunden, weniger Risiko bei KI-Werkzeugen, Vorbereitung auf den EU AI Act."
+    organisation.projektauftrag.sponsor:
+      label: "Sponsor in der Geschäftsleitung"
+      hilfe: "Mitglied der Geschäftsleitung, das Entscheide herbeiführt und Hindernisse aus dem Weg räumt."
+    organisation.projektauftrag.team:
+      label: "Projektteam"
+      hilfe: "Wer am Aufbau mitarbeitet. Interne Auditorinnen und Auditoren gehören nicht dazu, damit das interne Audit unabhängig bleibt. Leer: alle Personen mit AIMS-Rollen ausser der Auditrolle."
+    organisation.projektauftrag.geltungsbereich:
+      label: "Geltungsbereich (grob)"
+      hilfe: "Welche Bereiche, Standorte und KI-Systeme dazugehören sollen, so wie es beim Projektstart bekannt ist. Die genaue Abgrenzung folgt in D-02."
+    organisation.projektauftrag.meilensteine:
+      label: "Meilensteine"
+      hilfe: "z. B. Gap-Analyse, KI-Inventar, [[g:zertifizierungsstelle]] gewählt, Auditperson bestimmt, Einarbeitung der Auditperson in ISO/IEC 42001, Risiken und Folgenabschätzungen, internes Audit, Managementbewertung, [[g:stage-1|Stage-1]]-Bereitschaft. Der Fahrplan in E0 übernimmt die Meilensteine des Leitfadens mit Datum."
+    organisation.projektauftrag.meilensteine.was:
+      label: "Meilenstein"
+      hilfe: "Was erreicht sein soll."
+    organisation.projektauftrag.meilensteine.termin:
+      label: "Termin"
+      hilfe: "Geplantes Datum."
+    organisation.projektauftrag.risiken:
+      label: "Projektrisiken"
+      hilfe: "z. B. wenig Zeit in den Fachbereichen, unbekannte [[g:schatten-ki]], Lieferanten ohne Auskünfte."
+E1-freigabe:
+  titel: Freigabe des Auftrags
+  frage: Hat die Geschäftsleitung den Projektauftrag freigegeben?
+  warum: Mit der Freigabe übernimmt die Geschäftsleitung Verantwortung für das Projekt. Ein fester Termin für Statusberichte hält sie danach informiert.
+  fehler: Mündliche Zusagen lassen sich nicht nachweisen. Auditoren wollen eine datierte Freigabe sehen, etwa ein Protokoll der Geschäftsleitungssitzung.
+  felder:
+    organisation.projektauftrag.freigabe:
+      label: Freigabe des Projektauftrags
+      hilfe: Person der Geschäftsleitung und Datum.
+    organisation.projektauftrag.glTraktandum:
+      label: Statusbericht an die Geschäftsleitung
+      hilfe: Wie oft das Projekt in der Geschäftsleitung traktandiert wird. Während des Projekts alle 14 Tage, sonst dauert das Projekt deutlich länger als geplant. Den Freigabekalender zeigt der Fahrplan in E0.
+E1-zertifizierung:
+  titel: Zertifizierungsstelle früh anfragen
+  frage: Bis wann holen Sie Offerten ein und wann wählen Sie die [[g:zertifizierungsstelle]]?
+  warum: Nur wenige Stellen sind für ISO/IEC 42001 akkreditiert, und ihre Termine sind knapp. Der Leitfaden plant die Offerten mit [[g:isms]] in Woche 4 und die Wahl in Woche 6, ohne ISMS in den Wochen 7 bis 10. Wer erst am Schluss anfragt, verliert Wochen bis zum [[g:stage-1|Stage-1]]-Termin. Die Angaben erscheinen im Zertifizierungsfahrplan D-25.
+  fehler: Viele fragen erst nach der Managementbewertung an und warten dann auf einen Termin. Fragen Sie zwei bis drei akkreditierte Stellen an und lassen Sie sich den Geltungsbereich der Akkreditierung zeigen. Mit ISMS lohnt sich eine Anfrage bei Ihrer bisherigen Stelle für ein kombiniertes Audit.
+  felder:
+    meta.gefuehrt.antworten.zertifizierung.offertenBis:
+      label: Offerten anfragen bis
+      hilfe: Mit ISMS Woche 4, ohne ISMS Wochen 7 bis 8. Das Datum zeigt der Fahrplan in E0 beim Meilenstein Offerten.
+    meta.gefuehrt.antworten.zertifizierung.angefragt:
+      label: Angefragte Stellen
+      hilfe: Je Zeile eine Stelle mit Datum der Anfrage, z. B. «Beispiel Zertifizierung AG, angefragt 12.03.».
+    meta.gefuehrt.antworten.zertifizierung.wahlBis:
+      label: Stelle wählen bis
+      hilfe: Mit ISMS Woche 6, ohne ISMS Wochen 9 bis 10.
+    meta.gefuehrt.antworten.zertifizierung.stelle:
+      label: Gewählte Zertifizierungsstelle
+      hilfe: Falls schon bekannt. Sie können die Angabe in E13 ergänzen.
+    meta.gefuehrt.antworten.zertifizierung.akkreditiert:
+      label: Akkreditiert für ISO/IEC 42001
+      hilfe: Im öffentlichen Verzeichnis der Akkreditierungsstelle prüfen, in der Schweiz bei der SAS.

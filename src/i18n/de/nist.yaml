@@ -1,0 +1,949 @@
+# Texte zum Modul NIST AI RMF (Deutsch, Leitsprache)
+# Struktur: src/nist-rmf/*.yaml. Alle Texte in eigenen Worten; Kurztitel sind eigene Formulierungen. Die wörtlichen
+# NIST-Auszüge mit eigener Übersetzung stehen in src/nist-rmf/original-*.yaml (Zitat-Quelle), hier nur die Texte der
+# Anzeige (original.*). Nichts aus dem Microsoft-Crosswalk, nichts aus OWASP.
+# subkategorien.<id>: titel, massnahmen (Lite-Massnahmen; «(Ausbau)» = nur bei Eigenentwicklung oder
+# hohem Risiko), nachweise, optional praezisierung, revision, genai.
+# controls.<id>: titel, zweck, umsetzung, nachweis (wie controls42001).
+
+funktionen:
+  govern:
+    titel: Steuern
+    kurz: 'Querschnitt: Regeln, Rollen, Kultur und Lieferkette für den Umgang mit KI-Risiken.'
+  map:
+    titel: Erfassen
+    kurz: Kontext klären, System einordnen, Nutzen, Kosten und Auswirkungen erfassen; Grundlage für den Einsatzentscheid.
+  measure:
+    titel: Messen
+    kurz: Risiken und Vertrauensmerkmale mit geeigneten Methoden prüfen und über die Zeit verfolgen.
+  manage:
+    titel: Behandeln
+    kurz: Risiken priorisieren und behandeln, Dritte steuern, den Betrieb überwachen und verbessern.
+kategorien:
+  GV-1:
+    titel: Regeln und Abläufe für KI-Risiken
+  GV-2:
+    titel: Zuständigkeiten und Befähigung
+  GV-3:
+    titel: Vielfältige Perspektiven im Team
+  GV-4:
+    titel: Risikobewusste Kultur
+  GV-5:
+    titel: Austausch mit Beteiligten
+  GV-6:
+    titel: Dritte und Lieferkette
+  MP-1:
+    titel: Einsatzkontext klären
+  MP-2:
+    titel: System einordnen
+  MP-3:
+    titel: Fähigkeiten, Nutzen und Kosten
+  MP-4:
+    titel: Risiken aller Komponenten
+  MP-5:
+    titel: Auswirkungen auf Menschen und Gesellschaft
+  MS-1:
+    titel: Messmethoden wählen
+  MS-2:
+    titel: Vertrauensmerkmale prüfen
+  MS-3:
+    titel: Risiken über die Zeit verfolgen
+  MS-4:
+    titel: Messung selbst überprüfen
+  MG-1:
+    titel: Risiken priorisieren und behandeln
+  MG-2:
+    titel: Nutzen sichern, Schaden begrenzen
+  MG-3:
+    titel: Risiken aus Drittquellen steuern
+  MG-4:
+    titel: Überwachung, Vorfälle, Verbesserung
+subkategorien:
+  GV-1.1:
+    titel: Rechtliche Vorgaben zu KI kennen und erfüllen
+    massnahmen:
+    - Gesetze, Verträge und Branchenvorgaben zum KI-Einsatz erfassen und pflegen.
+    - Rechtsänderungen verfolgen und in Schulungen aufnehmen.
+    nachweise:
+    - Anforderungsregister mit Entscheid «behandelt»
+    - Liste der Melde- und Informationspflichten
+  GV-1.2:
+    titel: Vertrauensmerkmale in Leitlinien verankern
+    massnahmen:
+    - KI-Leitlinie mit Grundsätzen zu vertrauenswürdiger KI freigeben.
+    - Leitlinie mit Datenschutz-, Sicherheits-, Qualitäts- und Beschaffungsregeln abgleichen.
+    - Eingekaufte und bereits genutzte KI ausdrücklich einschliessen.
+    nachweise:
+    - Freigegebene KI-Leitlinie
+    - Abgleich mit anderen Leitlinien
+    - Nutzungsrichtlinie
+  GV-1.3:
+    titel: Umfang des Risikomanagements nach Risikobereitschaft
+    massnahmen:
+    - Einheitliche Skalen für Wahrscheinlichkeit und Auswirkung mit Akzeptanzgrenzen verwenden.
+    - Prüftiefe, Stichprobenumfang und Überprüfungsintervall nach Risikostufe abstufen.
+    nachweise:
+    - Risikoverfahren mit Skalen und Kriterien
+    - Intervalle je Stufe
+    genai: 'Generative KI: Die Risikostufen in D-06 um Missbrauch, neue Sicherheitslücken, psychische Wirkung und Abhängigkeit von anderen Systemen ergänzen.'
+  GV-1.4:
+    titel: Risikoprozess nachvollziehbar festgelegt
+    massnahmen:
+    - 'Dokumentationsregeln je KI-System festlegen: Zweck, Grenzen, Tests, Abhängigkeiten, Kontakte.'
+    - Wirksamkeit des Risikoprozesses jährlich beurteilen.
+    - Festlegen, was über den KI-Einsatz veröffentlicht wird.
+    nachweise:
+    - Dokumentenregister
+    - Managementbewertung mit Beurteilung des Risikoprozesses
+    - Nutzerinformation
+  GV-1.5:
+    titel: Risikoprozess regelmässig überprüfen
+    massnahmen:
+    - Überwachung je System mit Rhythmus und Verantwortung festlegen.
+    - Das Vorfallverfahren gilt ausdrücklich auch für KI.
+    - Betroffene können Ergebnisse beanstanden und eine menschliche Prüfung verlangen.
+    nachweise:
+    - Betriebsregeln mit Stichproben
+    - Vorfallverfahren
+    - Öffentlicher Meldekanal
+  GV-1.6:
+    praezisierung: "Die Norm verlangt Ressourcen je System, aber kein Inventar als Pflicht. D-10 führt es trotzdem vollständig; behandeln Sie es als verbindlich."
+    titel: KI-Inventar führen
+    massnahmen:
+    - Vollständiges KI-Inventar mit Eigner/in je System führen.
+    - Pflichtangaben je System festlegen und eine Person für die Pflege benennen.
+    nachweise:
+    - KI-Inventar
+    - Abgleich mit Lizenz- und Softwareliste
+    - Fragebogen der Fachbereiche
+    genai: 'Generative KI: Auch eingebettete generative KI in Standardsoftware erfassen, mit Grundmodell, Version und Zugangsart (RMF-16).'
+  GV-1.7:
+    titel: KI-Systeme sicher ausser Betrieb nehmen
+    massnahmen:
+    - Bei der Ausserbetriebnahme abhängige Abläufe prüfen und den Übergang zum Nachfolger regeln.
+    - Aufbewahrung von Protokollen, Ergebnissen, Einstellungen und Abschätzungen festlegen.
+    - Löschung beim Anbieter bestätigen lassen, Status im Inventar nachführen.
+    nachweise:
+    - Entscheid mit Datum
+    - Löschbestätigung
+    - Inventarstatus «abgelöst» mit Aufbewahrungsfrist
+  GV-2.1:
+    titel: Rollen und Meldewege für KI-Risiken festgelegt
+    massnahmen:
+    - Rollen, Zuständigkeiten und Meldewege für KI-Risiken festlegen (RACI).
+    - Prüfende Aufgaben von umsetzenden trennen, soweit die Grösse es erlaubt.
+    - Interessenkonflikte offenlegen.
+    nachweise:
+    - RACI
+    - Pflichtrollen mit Stellvertretung
+  GV-2.2:
+    praezisierung: "Die Norm verlangt keine Schulung von Partnern. Nehmen Sie Partner in D-17 und E-04 ausdrücklich auf, wenn sie mit Ihren KI-Systemen arbeiten."
+    titel: Schulung zu KI-Risiken für Personal und Partner
+    massnahmen:
+    - 'Nach Rolle schulen: Nutzende, Aufsicht, Leitung, Einkauf.'
+    - Kenntnisnahme der Nutzungsrichtlinie bestätigen lassen.
+    - Wesentliche Systemänderungen mitteilen.
+    nachweise:
+    - Kompetenzmatrix
+    - Teilnahmelisten
+    - Bestätigungen
+    - Kommunikationsplan
+  GV-2.3:
+    titel: Geschäftsleitung trägt KI-Risikoentscheide
+    massnahmen:
+    - Geschäftsleitung legt Risikobereitschaft fest und gibt Restrisiken frei.
+    - Mittel und Befugnisse zuweisen.
+    nachweise:
+    - Freigegebener Projektauftrag
+    - Freigabe Behandlungsplan
+    - Protokoll Managementbewertung
+  GV-3.1:
+    titel: Entscheide aus mehreren Blickwinkeln
+    massnahmen:
+    - Fachbereich, IT, Datenschutz und HR an Beurteilungen beteiligen.
+    - Externe Fachleute beiziehen, wo Wissen fehlt.
+    - Vielfalt im Team gezielt fördern (Ausbau).
+    nachweise:
+    - Teilnehmende je Beurteilung
+    - Beizug externer Fachleute
+    revision: Bei der angekündigten US-Revision könnte dieser Punkt gestrichen oder umformuliert werden. Das Kit führt ihn als fachübergreifende Beteiligung weiter, weil gute Beurteilungen das Wissen von Fachbereich, IT, Datenschutz und Personalwesen brauchen.
+  GV-3.2:
+    titel: Rollen für Zusammenspiel Mensch und KI und Aufsicht
+    massnahmen:
+    - Je System festlegen, wer Ergebnisse prüft und wer eingreifen darf.
+    - Aufsicht klar von blosser Nutzung unterscheiden.
+    - Kompetenzanforderungen an die Aufsicht festlegen.
+    nachweise:
+    - Inventarspalte Menschliche Aufsicht
+    - RACI Bereich Menschliche Aufsicht
+    - Schulungsnachweis
+  GV-4.1:
+    titel: Kritisch prüfen, Sicherheit zuerst
+    massnahmen:
+    - Freigaben nach dem Vier-Augen-Prinzip erteilen.
+    - Einen geschützten Meldeweg für Bedenken anbieten.
+    - Gezielte Gegenprüfung, etwa mit Angriffsübungen (Ausbau).
+    nachweise:
+    - Freigaben durch Zweitperson
+    - Meldeweg mit Schutz vor Nachteilen
+  GV-4.2:
+    titel: Risiken und Folgen festhalten und mitteilen
+    massnahmen:
+    - Vor dem Einsatz je System eine Folgenabschätzung durchführen.
+    - Die Abschätzung bei Änderungen, nach Vorfällen und im festgelegten Intervall wiederholen.
+    - Festgestellte Schäden ins Risikoregister übernehmen.
+    nachweise:
+    - Kurzprüfungen
+    - Vollständige Abschätzungen
+    - Verknüpfte Risiken
+  GV-4.3:
+    titel: Testen, Vorfälle erkennen, Wissen teilen
+    massnahmen:
+    - Vor dem Einsatz und nach Updates testen.
+    - Grenzen und Vorfälle intern teilen.
+    - Festlegen, wann und wie Vorfälle offengelegt werden.
+    nachweise:
+    - Testberichte
+    - Vorfallprotokoll
+    - Lehren aus Vorfällen
+    genai: 'Generative KI: Mindestangaben für KI-Vorfallmeldungen festlegen und nach jedem Vorfall eine Nachbesprechung durchführen (D-14).'
+  GV-5.1:
+    titel: Rückmeldungen Externer zu Auswirkungen einholen
+    massnahmen:
+    - Einen Kanal für Rückmeldungen von Kundschaft und Betroffenen anbieten.
+    - Rückmeldungen auswerten und beantworten.
+    - KI-Grundsätze veröffentlichen (freiwillig).
+    nachweise:
+    - Öffentlicher Meldekanal
+    - Meldungsprotokoll
+  GV-5.2:
+    titel: Geprüfte Rückmeldungen in das System einarbeiten
+    massnahmen:
+    - 'Freigabe mit drei möglichen Entscheiden: einsetzen, mit Auflagen einsetzen, nicht einsetzen.'
+    - Berechtigte Rückmeldungen in Änderungen überführen.
+    - Systeme frühzeitig ausser Betrieb nehmen, wenn Risiken nicht beherrschbar sind.
+    nachweise:
+    - Entscheid in D-09 Teil C
+    - Änderungen mit Anlass
+  GV-6.1:
+    titel: Regeln für Risiken aus Drittparteien inkl. Schutzrechten
+    massnahmen:
+    - Prüffragen und Vertragsklauseln für KI-Lieferanten verwenden.
+    - Rechte an Daten, Modellen und Ergebnissen klären.
+    - 'Lieferkette kennen: Unterauftragnehmer, Modellhersteller.'
+    nachweise:
+    - Lieferantenprüfung
+    - Vertragscheck
+    - Verantwortungsaufteilung
+  GV-6.2:
+    titel: Notfallweg bei Ausfall eingekaufter KI
+    massnahmen:
+    - 'Für kritische eingekaufte KI einen Notfallweg vorsehen: manuell oder mit einem Ersatzdienst.'
+    - Der Vorfallplan deckt Ausfälle und Vorfälle beim Anbieter ab.
+    nachweise:
+    - Rückfallweg je kritischem System
+    - Vorfallübung mit Anbieterausfall
+  MP-1.1:
+    titel: Zweck, Umfeld, Nutzergruppen und Grenzen beschreiben
+    massnahmen:
+    - Zweck, Nutzende, Betroffene und Einsatzumfeld beschreiben.
+    - Vorhersehbare Fehlanwendung festhalten.
+    - Lösung ohne KI als Alternative prüfen.
+    nachweise:
+    - Systembeschreibung
+    - Antrag nach D-15
+    - Vermerk zu Alternativen
+  MP-1.2:
+    titel: Fachübergreifend besetzen und Beteiligung festhalten
+    massnahmen:
+    - Mitwirkende an der Beurteilung festhalten.
+    - Wissen ausserhalb der IT einbeziehen (Fachbereich, Recht, Personal).
+    nachweise:
+    - Teilnehmende in D-09
+  MP-1.3:
+    titel: Auftrag und KI-Ziele der Firma festhalten
+    massnahmen:
+    - Zweck des Systems mit Unternehmenszielen und Leitlinie abgleichen.
+    - Fehlanreize erkennen, etwa Tempo vor Qualität.
+    nachweise:
+    - Antrag mit Begründung
+    - Bezug zur Leitlinie
+  MP-1.4:
+    titel: Geschäftsnutzen festlegen oder neu beurteilen
+    massnahmen:
+    - Erwarteten Nutzen vor dem Einsatz festhalten.
+    - Nutzen bei jeder Überprüfung erneut bewerten.
+    nachweise:
+    - Antrag
+    - Überprüfung mit Nutzenbewertung
+  MP-1.5:
+    titel: Risikobereitschaft festlegen
+    massnahmen:
+    - Akzeptanzgrenzen und Schwelle für ein Nein festlegen.
+    - Nicht vorgesehene Verwendungen festhalten und prüfen.
+    nachweise:
+    - Akzeptanzkriterien
+    - Freigabeliste mit Auflagen
+    - Fehlanwendungen in D-09
+  MP-1.6:
+    titel: Anforderungen erheben, Wirkung auf Menschen mitdenken
+    massnahmen:
+    - Anforderungen vor Kauf oder Entwicklung festhalten.
+    - Künftige Nutzende früh befragen.
+    nachweise:
+    - Antrag oder Anforderungsdokument
+    - Testfälle mit Nutzenden
+  MP-2.1:
+    titel: Aufgabe und Methode des Systems bestimmen
+    massnahmen:
+    - 'Art der KI-Aufgabe festhalten: erzeugen, klassifizieren, prognostizieren, empfehlen.'
+    - Annahmen und Grenzen notieren.
+    nachweise:
+    - Inventarbeschreibung
+    - Grenzen in D-09
+  MP-2.2:
+    titel: Wissensgrenzen und menschliche Nutzung der Ergebnisse
+    massnahmen:
+    - Einsatzgrenzen und nicht vorgesehene Bedingungen dokumentieren.
+    - Abhängigkeiten zu Daten, Schnittstellen und anderen Systemen erfassen.
+    - Nutzende über Grenzen und Prüfpflicht informieren.
+    nachweise:
+    - Grenzen in D-09
+    - Nutzerinformation
+    - Abhängigkeiten im Ressourcenblatt
+  MP-2.3:
+    titel: Prüfgrundlagen und Datenauswahl begründen
+    massnahmen:
+    - Daten auf Eignung, Repräsentativität, Herkunft und Aktualität prüfen.
+    - Testmethode, Kennzahlen und Annahmen festhalten.
+    - Ersatzgrössen hinterfragen, wenn ein Modell Unbeobachtbares schätzt (Ausbau).
+    nachweise:
+    - Datenblätter
+    - Testkonzept
+  MP-3.1:
+    titel: Erwarteten Nutzen prüfen und festhalten
+    massnahmen:
+    - Nutzen je Betroffenengruppe beschreiben.
+    - Mit dem heutigen Ablauf ohne KI vergleichen.
+    nachweise:
+    - Spalte Nutzen in D-09
+    - Chancen in D-07
+  MP-3.2:
+    titel: Kosten von Fehlern und Ausfällen abschätzen
+    massnahmen:
+    - Festhalten, wer oder was wann und wie geschädigt werden kann.
+    - Kosten von Fehlern und Ausfällen grob schätzen, auch nicht finanzielle.
+    nachweise:
+    - Abschnitt Ausfälle und Missbrauch in D-09
+    - Auswirkung im Register
+  MP-3.3:
+    titel: Einsatzbereich passend zur Leistung begrenzen
+    massnahmen:
+    - 'Erlaubte Nutzung eng fassen: Zwecke, Daten, Nutzerkreis, Länder.'
+    - Einkauf und Recht bei der Festlegung beiziehen.
+    nachweise:
+    - Freigabeliste mit Auflagen und Datenklasse
+  MP-3.4:
+    titel: Befähigung der Bedienenden sicherstellen
+    massnahmen:
+    - Kompetenzanforderungen je Rolle festlegen.
+    - Schulung zu Grenzen, Fehlerbildern und blindem Vertrauen.
+    - Nutzende in Tests einbeziehen.
+    nachweise:
+    - Kompetenzmatrix
+    - Schulungsunterlagen
+    - Testprotokoll mit Nutzenden
+  MP-3.5:
+    titel: Menschliche Aufsicht festlegen und prüfen
+    massnahmen:
+    - Aufsicht je System festlegen.
+    - Wirksamkeit der Aufsicht stichprobenweise prüfen.
+    nachweise:
+    - Inventarspalte Aufsicht
+    - Stichprobe der Prüfungen
+  MP-4.1:
+    titel: Technik- und Rechtsrisiken der Bausteine erfassen
+    massnahmen:
+    - Nutzungsbedingungen, Lizenzen und Rechte prüfen, auch bei Open Source.
+    - 'Drittmaterial erfassen: Modelle, Bibliotheken, Datensätze.'
+    - Release- und Änderungspraxis des Anbieters beobachten.
+    nachweise:
+    - Vertragscheck
+    - Ressourcenblatt
+    - Datenblatt mit Rechten
+  MP-4.2:
+    titel: Kontrollen je Baustein inkl. Fremdtechnik
+    massnahmen:
+    - Freigabeliste erlaubter Werkzeuge führen.
+    - Übliche Kontrollen für Einkauf, Sicherheit und Datenschutz auch auf KI anwenden.
+    nachweise:
+    - Freigabeliste
+    - Lieferantenregister
+  MP-5.1:
+    titel: Wahrscheinlichkeit und Ausmass jeder Auswirkung
+    massnahmen:
+    - Wahrscheinlichkeit und Ausmass je Folge einstufen, Nutzen eingeschlossen.
+    - Bekannte Vorfälle ähnlicher Systeme berücksichtigen.
+    nachweise:
+    - Risikoregister
+    - Ausmass in D-09
+  MP-5.2:
+    titel: Laufender Austausch über Auswirkungen
+    massnahmen:
+    - Betroffene oder ihre Vertretung anhören.
+    - Rückmeldungen aus dem Betrieb in die Beurteilung einfliessen lassen.
+    nachweise:
+    - Spalte Konsultiert in D-09
+    - Meldungen
+  MS-1.1:
+    titel: Messgrössen für die grössten Risiken wählen
+    massnahmen:
+    - Kennzahlen für die wichtigsten Risiken wählen.
+    - Nicht gemessene Risiken mit Begründung festhalten.
+    - Akzeptable Fehlergrenzen je System festlegen.
+    nachweise:
+    - Messplan
+    - Testkriterien
+    - Begründung nicht gemessener Risiken
+  MS-1.2:
+    titel: Messgrössen und Kontrollen regelmässig hinterfragen
+    massnahmen:
+    - Kennzahlen und Controls jährlich auf Eignung prüfen.
+    - Neue Kennzahl einführen, wo Fehler unentdeckt blieben.
+    nachweise:
+    - Managementbewertung mit Kennzahlenprüfung
+  MS-1.3:
+    titel: Unabhängige und externe Fachleute beiziehen
+    massnahmen:
+    - Durch Personen prüfen lassen, die das System nicht eingeführt haben.
+    - Nutzende und Fachleute bei Bedarf beiziehen.
+    nachweise:
+    - Freigabe durch Zweitperson
+    - Internes Audit
+  MS-2.1:
+    praezisierung: "Die Norm verlangt Festlegungen zu Tests, zeigt aber nicht vor, ob Testwerkzeuge und -daten gültig sind. Halten Sie in D-12 und D-13 Testmittel und ihren Stand fest."
+    titel: Testdaten, Messgrössen und Werkzeuge dokumentieren
+    massnahmen:
+    - Testfälle, Kriterien, Ergebnisse, Version und Werkzeuge festhalten.
+    nachweise:
+    - Testbericht mit Systemversion
+  MS-2.2:
+    titel: Tests mit Personen schützen und repräsentativ halten
+    massnahmen:
+    - Mit Personendaten nur rechtmässig und sparsam testen.
+    - Testdaten wählen, die zur tatsächlichen Nutzer- und Betroffenengruppe passen.
+    - Ergebnisse nach Gruppen auswerten (Ausbau).
+    nachweise:
+    - Beschreibung der Testdaten
+    - Rechtsgrundlage oder Einwilligung
+  MS-2.3:
+    titel: Leistung unter realen Einsatzbedingungen messen
+    massnahmen:
+    - Mit eigenen typischen, schwierigen und unklaren Fällen testen.
+    - Unterschiede zwischen Test und Betrieb notieren.
+    nachweise:
+    - Testbericht
+  MS-2.4:
+    titel: Verhalten im Betrieb überwachen
+    massnahmen:
+    - Stichproben im Betrieb mit dem Testergebnis vergleichen.
+    - Nach Updates des Anbieters erneut testen.
+    - Warnschwelle für Qualitätsabfall festlegen.
+    nachweise:
+    - Stichprobenprotokoll
+    - Messwerte
+    - Retest nach Update
+  MS-2.5:
+    praezisierung: "Die Norm verlangt Festlegungen, nicht den Nachweis der Gültigkeit und der Testdetails. Halten Sie in D-12 die Testdetails fest und in D-14, was Sie davon offenlegen."
+    titel: Gültigkeit belegen, Übertragbarkeit begrenzen
+    massnahmen:
+    - Gültigkeitsbereich und Betriebsbedingungen festlegen.
+    - Robustheit und Streuung der Ergebnisse messen.
+    - Vorgehen bei Nutzung ausserhalb des Bereichs festlegen.
+    nachweise:
+    - Validierungsbericht
+    - Betriebsgrenzen in der Dokumentation
+  MS-2.6:
+    titel: Gefährdung prüfen, sicheres Versagen belegen
+    massnahmen:
+    - Sicheres Verhalten bei Fehler und Ausfall nachweisen.
+    - Vor dem Einsatz Grenzfälle und Belastung testen.
+    - Einen Vorfall üben und die Reaktionszeit messen.
+    nachweise:
+    - Testbericht Grenzfälle
+    - Übungsprotokoll
+  MS-2.7:
+    titel: Angriffssicherheit und Widerstandskraft prüfen
+    massnahmen:
+    - Manipulations- und Missbrauchsfälle in die Tests aufnehmen.
+    - Sicherheitsnachweise der Anbieter prüfen.
+    - Angriffsübungen bei Eigenentwicklung (Ausbau).
+    nachweise:
+    - Testfälle mit manipulierten Eingaben
+    - Zertifikate oder Prüfberichte
+  MS-2.8:
+    titel: Risiken für Transparenz und Rechenschaft prüfen
+    massnahmen:
+    - Protokolle für Nachvollziehbarkeit führen.
+    - Übersteuerungen, Beschwerden und Reaktionszeiten zählen.
+    - Freigabe- und Nein-Entscheide mit Namen festhalten.
+    nachweise:
+    - Protokolle
+    - Statistik Übersteuerungen und Beschwerden
+    - Freigaben
+  MS-2.9:
+    titel: Modell erklären, Ergebnisse im Kontext deuten
+    massnahmen:
+    - Nötigen Grad an Erklärbarkeit je System bestimmen.
+    - Erklärungen mit Nutzenden auf Verständlichkeit prüfen.
+    - Bei Eigenentwicklung einen Modellsteckbrief führen (Ausbau).
+    nachweise:
+    - Ziel Erklärbarkeit in D-09
+    - Modellsteckbrief
+    praezisierung: 'In D-09 das Ziel Erklärbarkeit um die Deutung im Kontext ergänzen: Verstehen die Nutzenden, was ein Ergebnis für ihren Fall bedeutet? In D-14 die Information auf die jeweilige Zielgruppe ausrichten.'
+  MS-2.10:
+    titel: Datenschutzrisiko prüfen
+    massnahmen:
+    - Personendaten im System erfassen und minimieren.
+    - Zugriffe auf Trainings- und Betriebsdaten regeln.
+    - Datenschutz-Folgenabschätzung verknüpfen.
+    nachweise:
+    - Datenregeln D-13
+    - DSFA
+    - Zugriffskonzept
+    praezisierung: In D-09 die verknüpfte Datenschutz-Folgenabschätzung angeben (Feld vorhanden); mit ISMS zusätzlich ISO/IEC 27001 Control 5.34. KI-typische Datenschutzrisiken wie Rückschlüsse auf Personen und Datenabfluss über Ausgaben in D-06 als Risikoquellen aufnehmen.
+  MS-2.11:
+    titel: Fairness und Verzerrungen bewerten
+    massnahmen:
+    - 'Bei KI über Personen: Ergebnisse je Gruppe stichprobenweise vergleichen.'
+    - Angaben zu Verzerrungstests beim Anbieter einfordern.
+    - Zulässige Abweichung und Reaktion festlegen.
+    nachweise:
+    - Ergebnis je Gruppe
+    - Anbieterangaben
+    - Schwelle
+  MS-2.12:
+    titel: Umweltwirkung abschätzen
+    massnahmen:
+    - Relevanz von Energie- und Ressourcenbedarf je System einschätzen.
+    - Angaben des Anbieters einholen.
+    - Verbrauch eigener Trainings schätzen (Ausbau).
+    nachweise:
+    - Ziel Umwelt in D-09
+    - Anbieterauskunft
+    - Bezug zum Klimawandel in D-01
+    praezisierung: Für KMU genügen das Ziel Umwelt in D-09 und die Rechenressourcen in D-10 mit einer groben Abschätzung des Verbrauchs je System. Wo es genügt, ein kleineres Modell wählen.
+    revision: Bei der angekündigten US-Revision könnte dieser Punkt entfallen. Das Kit führt ihn weiter, weil ISO/IEC 42001:2023 den Klimawandel in 4.1 verlangt.
+  MS-2.13:
+    titel: Wirksamkeit der Prüfmethoden bewerten
+    massnahmen:
+    - Prüfen, ob Kennzahlen und Tests Fehler tatsächlich aufdecken.
+    - Einfache Kennzahlen bevorzugen.
+    nachweise:
+    - Vermerk in der Managementbewertung
+  MS-3.1:
+    titel: Bekannte und neue Risiken laufend verfolgen
+    massnahmen:
+    - Meldungen der Nutzenden mit internen Kennzahlen abgleichen.
+    - Reaktionszeit auf Fehler messen.
+    - Mit dem Ergebnis ohne KI vergleichen.
+    nachweise:
+    - Meldungsprotokoll
+    - Kennzahl Reaktionszeit
+  MS-3.2:
+    titel: Risiken ohne verfügbare Messgrösse beobachten
+    massnahmen:
+    - 'Schwer messbare Risiken qualitativ beobachten: Gespräche, Meldungen.'
+    - Verantwortliche für neue Risiken benennen.
+    nachweise:
+    - Meldungen
+    - Gesprächsnotizen
+    - Rollen
+  MS-3.3:
+    titel: Meldungen und Einsprüche von Betroffenen auswerten
+    massnahmen:
+    - Meldungen und Einsprachen nach Art und Anzahl auswerten.
+    - Bekanntheit des Meldekanals prüfen.
+    nachweise:
+    - Auswertung Meldungen
+    - Kennzahl Z-005
+  MS-4.1:
+    titel: Messansatz am Einsatzumfeld ausrichten
+    massnahmen:
+    - Nutzende bei Testfällen und Auswertung beteiligen.
+    - Zweifel und Rückmeldungen offen ermöglichen.
+    nachweise:
+    - Testprotokoll mit Nutzenden
+  MS-4.2:
+    titel: Messergebnisse mit Fachleuten bestätigen
+    massnahmen:
+    - Zufriedenheit und Vertrauen der Nutzenden periodisch erfragen.
+    - Übersteuerungen auswerten und in Verbesserungen überführen.
+    nachweise:
+    - Kurzumfrage
+    - Statistik Übersteuerungen
+  MS-4.3:
+    titel: Verbesserung oder Verschlechterung belegen
+    massnahmen:
+    - Ausgangswerte festhalten und Verlauf verfolgen.
+    - Wirkung von Updates und Änderungen messen.
+    nachweise:
+    - Messwerte über die Zeit
+  MG-1.1:
+    titel: Entscheid über Weiterführung oder Einsatz
+    massnahmen:
+    - Vor dem Einsatz entscheiden, ob das System seinen Zweck erfüllt.
+    - Nutzen und Risiken im Betrieb regelmässig neu abwägen.
+    nachweise:
+    - Freigabe mit Testbericht
+    - Überprüfung mit Nutzenbewertung
+  MG-1.2:
+    titel: Behandlung nach Wirkung und Wahrscheinlichkeit ordnen
+    massnahmen:
+    - Behandlung nach Risikowert priorisieren.
+    - Aufwand und Aufsicht nach Risiko zuteilen.
+    nachweise:
+    - Behandlungsplan mit Priorität
+  MG-1.3:
+    titel: Antwort auf hohe Risiken planen
+    massnahmen:
+    - 'Option je hohem Risiko wählen: vermeiden, vermindern, teilen, tragen.'
+    - Unterlagen geordnet und geschützt ablegen.
+    nachweise:
+    - Behandlungsplan
+    - Ablage nach D-26
+  MG-1.4:
+    titel: Restrisiken für Abnehmer und Nutzende offenlegen
+    massnahmen:
+    - Restrisiken festhalten und freigeben lassen.
+    - Nutzende und Kunden über verbleibende Grenzen informieren.
+    nachweise:
+    - Restrisiko-Annahme mit Datum
+    - Nutzer- und Kundeninformation
+  MG-2.1:
+    titel: Ressourcen und Lösungen ohne KI abwägen
+    massnahmen:
+    - Aufwand für Risikomassnahmen einplanen.
+    - Manuelle oder teilautomatisierte Alternative ernsthaft prüfen.
+    nachweise:
+    - Ressourcen im Plan
+    - Vermerk zu Alternativen
+  MG-2.2:
+    titel: Nutzen eingesetzter Systeme erhalten
+    massnahmen:
+    - Auflagen und Geschäftsregeln für Ergebnisse festlegen.
+    - Rückmeldungen im Betrieb sammeln.
+    - Versicherung und Verträge für Risikotransfer prüfen.
+    nachweise:
+    - Auflagen in der Freigabeliste
+    - Versicherungsprüfung
+  MG-2.3:
+    titel: Auf neu entdeckte Risiken reagieren
+    massnahmen:
+    - 'Ablauf für neue, unerwartete Risiken: melden, beurteilen, behandeln.'
+    - Systeme kurzfristig abschalten können.
+    nachweise:
+    - Vorfallprotokoll
+    - Neubeurteilung mit Datum
+  MG-2.4:
+    titel: Fehlverhaltende Systeme ersetzen oder abschalten
+    massnahmen:
+    - Befugnis und Schwellen zum Aussetzen festlegen.
+    - Rückfallweg vorhalten und kennen.
+    - Ursachenanalyse und Kriterien für die Wiederinbetriebnahme.
+    nachweise:
+    - RACI Menschliche Aufsicht
+    - Rückfallweg
+    - Analyse in D-22
+  MG-3.1:
+    titel: Drittanbieter-Risiken regelmässig überwachen
+    massnahmen:
+    - KI-Lieferanten jährlich und bei Anlass neu prüfen.
+    - 'Warnsignale beachten: dürftige Doku, unangekündigte Änderungen, fehlende Sicherheitsangaben.'
+    - Abhängigkeit und Ausstieg planen.
+    nachweise:
+    - Lieferantenregister mit Prüfdatum
+    - Auflagen
+    - Ausstiegsklausel
+  MG-3.2:
+    titel: Vortrainierte Modelle im Betrieb mitüberwachen
+    massnahmen:
+    - Vortrainierte Modelle im Inventar mit Version führen.
+    - Nach Modellwechsel erneut testen.
+    - Modelle ablösen, die Kriterien nicht mehr erfüllen (Ausbau).
+    nachweise:
+    - Ressourcenblatt mit Modellversion
+    - Testbericht nach Wechsel
+  MG-4.1:
+    titel: Überwachungsplan nach Einführung umsetzen
+    massnahmen:
+    - 'Überwachungsplan je System: Stichproben, Meldungen, Updates, Vorfälle.'
+    - Löschungs- und Berichtigungsbegehren nachverfolgen.
+    - Erkenntnisse mit Anbieter und Nutzenden teilen.
+    nachweise:
+    - Betriebsregeln D-12
+    - Messplan
+    - Protokoll Datenbegehren
+  MG-4.2:
+    titel: Verbesserungen messbar in Updates einbauen
+    massnahmen:
+    - Verbesserungen aus Rückmeldungen und Messungen ableiten.
+    - Zielkonflikte und Entscheide begründen.
+    nachweise:
+    - Verbesserungsregister
+    - Entscheide der Managementbewertung
+  MG-4.3:
+    titel: Vorfälle und Fehler mitteilen und aufarbeiten
+    massnahmen:
+    - Register für Vorfälle, Fehler und Beinahe-Vorfälle mit Schwere und Reaktion führen.
+    - Änderungen mit Grund, Test und Freigabe protokollieren.
+    - Betroffene und Nutzende informieren.
+    nachweise:
+    - Register D-22
+    - Änderungsprotokoll
+    - Mitteilungen
+controls:
+  RMF-01:
+    titel: Vertrauensmerkmale und Zielkonflikte festlegen
+    zweck: Die Firma weiss je KI-System, welche Vertrauensmerkmale am meisten zählen, und entscheidet Zielkonflikte bewusst statt zufällig.
+    umsetzung: Wählen Sie je System die drei bis vier wichtigsten Merkmale, etwa Zuverlässigkeit und Datenschutz bei einem Chatbot mit Kundendaten. Halten Sie bekannte Zielkonflikte fest, zum Beispiel Genauigkeit gegen Erklärbarkeit oder Nutzen gegen Datensparsamkeit, jeweils mit Entscheid und Begründung. Die Grundsätze stehen in der KI-Leitlinie D-03, die Auswahl je System im Mess- und Prüfkonzept.
+    nachweis: Grundsätze in D-03, Rangfolge der Merkmale und entschiedene Zielkonflikte je System mit Datum und Freigabe.
+  RMF-02:
+    titel: Ausserbetriebnahme geordnet durchführen
+    zweck: Ein KI-System wird so abgelöst, dass keine Daten, Zugänge oder Abhängigkeiten zurückbleiben und die Arbeit ohne Unterbruch weitergeht.
+    umsetzung: 'Legen Sie Auslöser fest, etwa Ablösung, Vertragsende oder ein nicht beherrschbares Risiko. Arbeiten Sie dann eine Checkliste ab: abhängige Abläufe und Schnittstellen prüfen, Nachfolger oder Ersatzablauf bereitstellen, Nutzende und betroffene Externe informieren, Zugänge sperren, Verträge kündigen, Daten beim Anbieter löschen lassen und die Bestätigung ablegen, Aufbewahrung von Protokollen, Einstellungen und Abschätzungen festlegen, Status im Inventar nachführen. Wer lange mit dem System gearbeitet hat, braucht eine kurze Einführung in den neuen Ablauf.'
+    nachweis: Entscheid mit Datum, erledigte Checkliste, Löschbestätigung, Inventarstatus «abgelöst» mit Aufbewahrungsfrist.
+  RMF-03:
+    titel: Beurteilungen fachübergreifend besetzen
+    zweck: Risiken und Folgen werden nicht nur aus Sicht der IT beurteilt, sondern mit dem Wissen der Bereiche, die das System nutzen oder von ihm betroffen sind.
+    umsetzung: 'Legen Sie im Verfahren D-08 eine Mindestbesetzung fest: Fachbereich, IT, Datenschutz, bei Personenbezug das Personalwesen, bei Bedarf Recht oder Vertretungen der Betroffenen. Fehlt Wissen im Haus, ziehen Sie externe Fachleute bei. Halten Sie in D-09 fest, wer mitgewirkt hat.'
+    nachweis: Mindestbesetzung in D-08, Mitwirkende je Folgenabschätzung, Beizug externer Fachleute.
+  RMF-04:
+    titel: Aufsicht und Eingriff je KI-System festlegen
+    zweck: Für jedes System ist klar, wer Ergebnisse prüft, wann ein Mensch eingreift und dass diese Person dazu befähigt ist.
+    umsetzung: Halten Sie im Inventar D-10 den Grad der Automatisierung fest und je System, wer die Ergebnisse prüft, wer eingreifen oder stoppen darf und in welchen Fällen ein Mensch entscheiden muss. Unterscheiden Sie Aufsicht von blosser Nutzung. Prüfen Sie stichprobenweise, ob die Aufsicht wirkt, etwa an der Zahl der Übersteuerungen. Die Rollen stehen in D-04, die Abläufe in D-12.
+    nachweis: Spalte Aufsicht im Inventar, RACI zur menschlichen Aufsicht, Schulungsnachweis, Stichprobe der Prüfungen.
+  RMF-05:
+    titel: Rückmeldungen und Einsprüche auswerten
+    zweck: Kundschaft, Mitarbeitende und Betroffene können Rückmeldungen geben und gegen ein KI-Ergebnis Einspruch erheben; die Firma wertet das aus und lernt daraus.
+    umsetzung: 'Erweitern Sie den Meldeweg in D-14: Betroffene können verlangen, dass ein Mensch ein KI-Ergebnis nachprüft. Beschreiben Sie den Weg verständlich, mit Ansprechstelle und Frist. Werten Sie Meldungen und Einsprüche quartalsweise nach Art und Anzahl aus und übernehmen Sie Befunde in das Risikoregister D-07 und die Betriebsregeln D-12. Prüfen Sie gelegentlich, ob der Weg bekannt ist.'
+    nachweis: Beschreibung des Meldewegs mit Einspruch, Meldungsprotokoll, Quartalsauswertung, daraus abgeleitete Änderungen.
+  RMF-06:
+    titel: Rechte Dritter bei KI-Bausteinen und Ausgaben prüfen
+    zweck: Modelle, Daten und Ausgaben werden nur so genutzt, wie es Lizenzen und Rechte Dritter erlauben.
+    umsetzung: Prüfen Sie vor dem Einsatz die Nutzungs- und Lizenzbedingungen von Modellen, Bibliotheken und Datensätzen, auch bei Open Source. Klären Sie, wem die Ausgaben gehören und ob der Anbieter bei Ansprüchen Dritter freistellt. Legen Sie in der Nutzungsrichtlinie D-15 fest, wie Bilder, Code und Texte aus KI verwendet werden dürfen. Die Prüfung gehört in die Lieferantenprüfung D-16.
+    nachweis: Lizenz- und Vertragsprüfung je System, Regeln für Ausgaben in D-15, Verantwortungsaufteilung mit dem Anbieter.
+  RMF-07:
+    titel: Abschaltung und Rückfallweg je KI-System
+    zweck: Fällt ein System aus oder verhält es sich falsch, kann die Firma es rasch abschalten und ohne KI weiterarbeiten.
+    umsetzung: Legen Sie je System fest, wer abschalten oder aussetzen darf, bei welchen Schwellen und Auslösern das geschieht und wie der Rückfallweg aussieht, manuell oder mit einem Ersatzdienst. Testen Sie den Rückfallweg bei kritischen Systemen, informieren Sie Nutzende bei einer Abschaltung und regeln Sie die Wiederinbetriebnahme mit Ursachenanalyse. Vereinbaren Sie mit Anbietern Vorfallmeldungen, die Ankündigung von Modelländerungen und Reaktionszeiten.
+    nachweis: Befugnis, Auslöser und Rückfallweg je System in D-12, Testprotokoll des Rückfallwegs, Vertragsklauseln in D-16.
+  RMF-08:
+    titel: Einsatzentscheid mit Nutzen, Kosten und Alternativen
+    zweck: Ein KI-System wird nur eingesetzt, wenn der Nutzen die Risiken und Kosten überwiegt und eine Lösung ohne KI geprüft wurde.
+    umsetzung: Ergänzen Sie den Entscheid in D-09 um den erwarteten Geschäftsnutzen, die geprüfte Lösung ohne KI (manuell oder teilautomatisiert), den Aufwand für Risikomassnahmen und Mindestschwellen für die Qualität als Bedingung. Legen Sie ein Datum für die Wiedervorlage fest und bewerten Sie den Nutzen bei jeder Überprüfung neu.
+    nachweis: Entscheid in D-09 mit Nutzen, Alternative, Bedingungen und Wiedervorlage; Überprüfung mit Nutzenbewertung.
+  RMF-09:
+    titel: Prüf- und Messkonzept je KI-System
+    zweck: Jedes System wird mit Fällen aus dem echten Einsatz geprüft und mit Messgrössen überwacht, die zu den wichtigsten Risiken passen.
+    umsetzung: Halten Sie je System Prüffälle aus dem Arbeitsalltag fest (typische, schwierige und unklare Fälle), Messgrössen mit Schwelle und Häufigkeit sowie Unterschiede zwischen Test und Betrieb. Risiken, die Sie nicht messen können, halten Sie mit Begründung fest und beobachten sie qualitativ. Tests mit Personen, etwa ein Pilot mit Mitarbeitenden, nur mit Information, Einwilligung und Möglichkeit zum Widerruf. Für Betreiber eingekaufter KI genügen eigene Stichproben und die Nachweise des Anbieters; bei Eigenentwicklung oder eigenem Training gilt die volle Form.
+    nachweis: Mess- und Prüfkonzept je System, Testbericht mit Systemversion, Begründung nicht gemessener Risiken.
+  RMF-10:
+    titel: Messungen unabhängig überprüfen
+    zweck: Jemand, der das System nicht gebaut oder eingeführt hat, prüft, ob Messgrössen und Tests Fehler tatsächlich aufdecken.
+    umsetzung: 'Lassen Sie mindestens jährlich eine Person ausserhalb des Teams, das das System baut oder einrichtet, das Mess- und Prüfkonzept beurteilen: Eignung der Messgrössen, Wirksamkeit der Controls, Bestätigung der Ergebnisse durch Fachleute aus dem Einsatz. Das interne Audit D-20 kann diese Rolle übernehmen. Wo Fehler unentdeckt blieben, führen Sie eine neue Messgrösse ein.'
+    nachweis: Prüf- oder Auditbericht mit Befunden zu den Messgrössen, Vermerk in der Managementbewertung.
+  RMF-11:
+    titel: Gefährdung und sicheres Versagen nachweisen
+    zweck: Ein System, das Menschen oder Sachen gefährden kann, versagt sicher und bleibt auch ausserhalb seines vorgesehenen Bereichs beherrschbar.
+    umsetzung: Testen Sie vor dem Einsatz Grenzfälle, Belastung und das Verhalten ausserhalb des vorgesehenen Bereichs. Belegen Sie die sichere Grundstellung bei Fehler und Ausfall und messen Sie in einer Übung die Reaktionszeit. Wichtig vor allem für KI in Maschinen und Anlagen.
+    nachweis: Testbericht zu Grenzfällen, Nachweis der sicheren Grundstellung, Übungsprotokoll mit Reaktionszeit.
+  RMF-12:
+    titel: KI-typische Angriffe prüfen
+    zweck: Angriffe, die es nur bei KI gibt, werden vor dem Einsatz und nach grösseren Änderungen geprüft.
+    umsetzung: 'Nehmen Sie Manipulations- und Missbrauchsfälle in die Tests auf: manipulierte Eingaben (Prompt-Injection), vergiftete Trainings- oder Wissensdaten, Abfluss von Modell oder Daten über die Ausgaben. Betreiber eingekaufter KI prüfen die Sicherheitsnachweise des Anbieters und machen eigene Stichproben; bei Eigenentwicklung oder eigenem Training kommen gezielte Angriffsübungen dazu. Mit ISMS gehört das in die Sicherheitstests nach ISO/IEC 27001.'
+    nachweis: Testfälle mit manipulierten Eingaben und Ergebnis, Zertifikate oder Prüfberichte des Anbieters.
+  RMF-13:
+    titel: Ungleichbehandlung messen und begrenzen
+    zweck: KI, die über Personen urteilt oder ihnen Chancen eröffnet, behandelt Gruppen nicht ohne sachlichen Grund unterschiedlich.
+    umsetzung: 'Nur bei Personenbezug: Vergleichen Sie Ergebnisse stichprobenweise nach Gruppen (etwa Sprache, Alter oder Geschlecht, soweit zulässig), prüfen Sie Ausgaben auf Stereotype, fordern Sie beim Anbieter Angaben zu Verzerrungstests ein und legen Sie fest, welche Abweichung tragbar ist und was bei einer Überschreitung geschieht. Denken Sie an drei Ursachen: verzerrte Daten, statistische Effekte und menschliche Vorannahmen.'
+    nachweis: Ergebnis je Gruppe, Schwelle und Massnahme, Angaben des Anbieters.
+  RMF-14:
+    titel: Neue und schwer messbare Risiken beobachten
+    zweck: Die Firma erkennt neue KI-Risiken früh, auch solche, für die es noch keine Messgrösse gibt.
+    umsetzung: Legen Sie Quellen fest (Mitteilungen der Lieferanten, öffentliche Sammlungen von KI-Vorfällen, Behörden, Fachverbände) und eine verantwortliche Person. Sichten Sie die Quellen halbjährlich, beobachten Sie schwer messbare Risiken qualitativ, etwa über Gespräche und Meldungen, und übernehmen Sie Befunde in das Risikoregister D-07.
+    nachweis: Quellenliste mit Verantwortung, Sichtungsvermerk mit Datum, neue Einträge im Risikoregister.
+  RMF-15:
+    titel: Restrisiken an Nutzende und Abnehmer mitteilen
+    zweck: Wer KI-Ergebnisse nutzt oder ein KI-Produkt erhält, kennt die Grenzen, die die Firma bewusst in Kauf nimmt.
+    umsetzung: 'Nehmen Sie angenommene Restrisiken, die Nutzende oder Kundschaft betreffen, in die Nutzerinformation oder die Produktdokumentation auf: bekannte Grenzen, typische Fehler und was Nutzende selbst prüfen müssen. Die Annahme des Restrisikos mit Datum steht im Risikoregister D-07.'
+    nachweis: Annahme des Restrisikos mit Datum, Nutzer- oder Kundeninformation mit den Grenzen.
+  RMF-16:
+    titel: Modell- und Versionswechsel der Anbieter verfolgen
+    zweck: Die Firma merkt, wenn ein Anbieter das Modell hinter einem Dienst wechselt, und prüft dann kurz, ob das System noch wie erwartet arbeitet.
+    umsetzung: Führen Sie im Inventar D-10 je System Anbieter, Grundmodell, Version und Zugangsart, auch für generative KI, die in Standardsoftware eingebettet ist. Abonnieren Sie Änderungsmitteilungen und lesen Sie die System- und Modellkarten der Anbieter. Ein Modellwechsel, eine angekündigte Abkündigung von Modell oder Dienst (Datum im Inventar), eigenes Nachtraining, die Anbindung eigener Daten oder ein neuer Einsatzbereich lösen eine Kurzprüfung mit den Prüffällen aus RMF-09 aus.
+    nachweis: Inventar mit Modell und Version, Änderungsmitteilungen, Testbericht nach dem Wechsel.
+  RMF-G01:
+    titel: Erfundene Inhalte vor Verwendung prüfen
+    zweck: Ausgaben generativer KI, die überzeugend klingen, aber falsch sind, gelangen nicht ungeprüft nach aussen oder in Entscheide.
+    umsetzung: Ausgaben, die nach aussen gehen oder Entscheide stützen, prüft eine fachkundige Person; Quellen und Zitate werden nachgeschlagen. Beurteilen Sie die Qualität nicht nach Einzelbeispielen, sondern vor der Freigabe mit 10 bis 20 eigenen Prüffällen aus dem Arbeitsalltag. Erfassen Sie erkannte Fehler und Beinahe-Fehler kurz und werten Sie sie quartalsweise aus.
+    nachweis: Prüfregel in D-15, Prüffälle mit Ergebnis, Fehlerliste mit Quartalsauswertung.
+  RMF-G02:
+    titel: Keine vertraulichen Daten in ungeprüfte KI-Dienste
+    zweck: Vertrauliche und personenbezogene Daten gelangen nur in KI-Dienste, die dafür geprüft und freigegeben sind.
+    umsetzung: Führen Sie in D-15 eine Liste der freigegebenen KI-Dienste mit den Datenklassen, die eingegeben werden dürfen. Prüfen Sie vor dem Kauf, ob Eingaben für Training verwendet werden, wo die Daten liegen, welche Unterauftragnehmer beteiligt sind und wie gelöscht wird. Sehen Sie Ausgaben vor der Veröffentlichung auf Personendaten durch.
+    nachweis: Freigabeliste mit Datenklassen, Lieferantenprüfung mit den Antworten, Prüfvermerk vor der Veröffentlichung.
+  RMF-G03:
+    titel: Herkunft und Kennzeichnung KI-erzeugter Inhalte
+    zweck: Kundschaft und Öffentlichkeit erkennen, wo KI mitgewirkt hat, und die Firma kann die Herkunft ihrer Inhalte belegen.
+    umsetzung: Informieren Sie Kundschaft und Betroffene, wenn sie mit KI interagieren oder KI-Inhalte erhalten (mit dem Modul EU AI Act zusammen mit EUAIA-05 bis EUAIA-07). Halten Sie für veröffentlichte Bilder, Videos und Texte fest, ob und mit welchem Werkzeug KI beteiligt war, und entfernen Sie Kennzeichen oder Metadaten nicht. Schulen Sie Mitarbeitende darin, Fälschungen zu erkennen und Kennzeichen zu verstehen.
+    nachweis: Kennzeichnungsregel in D-15, Herkunftsvermerk bei veröffentlichten Inhalten, Schulungsnachweis.
+  RMF-G04:
+    titel: Schutz vor Prompt-Injection und Werkzeugmissbrauch
+    zweck: Chatbots, Erweiterungen und Agenten lassen sich nicht durch versteckte Anweisungen zu ungewollten Handlungen oder zum Abfluss von Daten bringen.
+    umsetzung: Erstellen Sie für Systeme mit Zugriff auf Daten oder Werkzeuge ein einfaches Bedrohungsmodell, vergeben Sie Rechte so knapp wie möglich und lassen Sie keine automatischen Aktionen ohne Bestätigung zu. Führen Sie vor der Freigabe und nach grösseren Änderungen gezielte Angriffsversuche durch, direkt und indirekt über Dokumente, E-Mails oder Webseiten. Prüfen Sie nach Nachtraining oder nach der Anbindung eigener Daten, ob die Schutzfunktionen noch greifen.
+    nachweis: Bedrohungsmodell, Berechtigungskonzept, Protokoll der Angriffsversuche mit Ergebnis.
+  RMF-G05:
+    titel: Urheberrecht an Eingaben und Ausgaben beachten
+    zweck: Die Firma gibt keine geschützten Inhalte Dritter unerlaubt in KI-Dienste ein und verwendet Ausgaben nur im Rahmen der Rechte.
+    umsetzung: Teilen Sie Inhalte mit Rechten Dritter ein (Kundenzeichnungen, lizenzierte Texte, Bilder, Stimmen) und legen Sie je Klasse Regeln in D-15 fest. Regeln Sie in Verträgen die Rechte an Ausgaben, die Freistellung durch den Anbieter sowie Anforderungen an Qualität und Sicherheit. Legen Sie fest, wer Verletzungsvorwürfe prüft und wie ein Inhalt zurückgezogen wird.
+    nachweis: Regeln je Inhaltsklasse in D-15, Vertragsprüfung, Ablauf für Verletzungsvorwürfe.
+  RMF-G06:
+    titel: Schädliche Ausgaben extern genutzter Chatbots verhindern
+    zweck: Öffentlich zugängliche Chatbots und Generatoren erzeugen im Namen der Firma keine gefährlichen, hetzerischen, anstössigen oder diskriminierenden Inhalte.
+    umsetzung: Veröffentlichen Sie Nutzungsbedingungen für öffentlich zugängliche Chatbots und Generatoren. Aktivieren Sie die Inhaltsfilter des Anbieters und legen Sie Themen fest, auf die der Chatbot nicht antwortet. Werten Sie gemeldete problematische Antworten aus und passen Sie die Konfiguration an.
+    nachweis: Nutzungsbedingungen, Einstellungen der Filter und gesperrten Themen, Auswertung gemeldeter Antworten.
+  RMF-G07:
+    titel: Übermässiges Vertrauen in KI-Ausgaben vermeiden
+    zweck: Mitarbeitende übernehmen Ergebnisse generativer KI nicht blind, und Chatbots wecken keine falschen Erwartungen.
+    umsetzung: Legen Sie je Einsatzart fest, wer prüft und wann KI nicht genutzt wird (zusammen mit RMF-04). Schulen Sie alle Nutzenden zu den Grenzen generativer KI, etwa erfundenen Inhalten und Verzerrungen. Halten Sie Fälle fest, in denen Menschen KI-Ergebnisse übersteuern, und werten Sie sie aus. Verzichten Sie ohne Grund auf eine vermenschlichende Gestaltung von Chatbots (Name, Bild, vorgetäuschte Gefühle).
+    nachweis: Regeln je Einsatzart in D-15, Schulungsnachweis, Auswertung der Übersteuerungen.
+genai_risiken:
+  gai-cbrn:
+    titel: Hilfe zu Massenvernichtungswaffen
+    kmu_fall: Kaum relevant; allenfalls in Chemie, Labor oder Pharma, wenn ein Chatbot Fachfragen zu gefährlichen Stoffen beantwortet.
+    praezisierung: Kein eigenes Control; ein Hinweis im Leitfaden genügt. Wer mit gefährlichen Stoffen arbeitet, sperrt solche Themen im Chatbot (RMF-G06).
+  gai-konfabulation:
+    titel: Erfundene, aber überzeugend wirkende Inhalte
+    kmu_fall: Eine Offerte, eine übersetzte Sicherheitsanweisung oder eine Rechtsauskunft im Chat enthält erfundene Angaben, die niemand nachprüft.
+  gai-gefaehrlich:
+    titel: Gefährliche, gewaltbezogene oder hetzerische Inhalte
+    kmu_fall: Ein Kunden-Chatbot gibt auf provozierende Fragen gewaltbezogene oder hetzerische Antworten.
+  gai-datenschutz:
+    titel: Abfluss und Rückschluss auf Personendaten
+    kmu_fall: Mitarbeitende kopieren Personendaten in einen Gratis-Chatbot; ein Assistent zieht Rückschlüsse über Mitarbeitende.
+  gai-umwelt:
+    titel: Hoher Energie- und Ressourcenverbrauch
+    kmu_fall: Ein grosses Modell erledigt eine einfache Aufgabe, für die ein kleineres genügt hätte.
+    praezisierung: Kein eigenes Control; MS-2.12 mit dem Ziel Umwelt in D-09 und den Rechenressourcen in D-10 genügt.
+  gai-verzerrung:
+    titel: Verzerrte oder gleichförmige Ausgaben
+    kmu_fall: Stelleninserate mit einseitiger Sprache, Vorauswahl von Bewerbungen, schlechtere Antworten in Dialekt oder Fremdsprache.
+  gai-mensch-ki:
+    titel: Übervertrauen, Ablehnung, Vermenschlichung
+    kmu_fall: Ergebnisse werden ungeprüft übernommen, oder ein Chatbot mit Personennamen wirkt wie ein Mensch.
+  gai-integritaet:
+    titel: Falschinformation und Fälschungen
+    kmu_fall: Marketingbilder ohne Kennzeichnung, geklonte Stimmen, gefälschte Anrufe der Chefin oder des Chefs.
+  gai-sicherheit:
+    titel: Angriffe mit und auf generative KI
+    kmu_fall: Phishing-Mails, die mit KI geschrieben sind, versteckte Anweisungen in E-Mails oder Dokumenten, die den Assistenten steuern, vergiftete Wissensquellen.
+  gai-schutzrechte:
+    titel: Verletzung von Urheber- und Schutzrechten
+    kmu_fall: Kundenzeichnungen im Gratis-Chatbot, generierte Bilder oder Stimmen, die Rechte Dritter verletzen.
+  gai-anstoessig:
+    titel: Anstössige und missbräuchliche Bildinhalte
+    kmu_fall: Ein öffentlich zugänglicher Bildgenerator der Firma erzeugt anstössige oder missbräuchliche Bilder.
+  gai-lieferkette:
+    titel: Undurchsichtige Bausteine in der Lieferkette
+    kmu_fall: Copilot, Erweiterungen und Plug-ins mit unklaren Bausteinen; der Anbieter wechselt das Modell ohne Ankündigung.
+merkmale:
+  gueltig:
+    titel: Gültig und zuverlässig
+    beschreibung: Das System erfüllt seinen Zweck nachweislich und arbeitet auch bei ungewohnten Eingaben beständig. Grundlage der übrigen Merkmale.
+    d09_hinweis: 'Ziel Zuverlässigkeit. Ergänzen: Genauigkeit belegt, etwa mit eigenem Test oder Anbieterangabe.'
+  sicher:
+    titel: Sicher
+    beschreibung: Das System gefährdet weder Leib und Leben noch Eigentum oder Umwelt, auch nicht, wenn es versagt.
+    d09_hinweis: 'Ziel Sicherheit fragt in einem Satz nach Gefährdung und nach Angriffen. In zwei Teilfragen trennen: Gefährdung von Menschen; Angriffe und Missbrauch.'
+  geschuetzt:
+    titel: Geschützt und widerstandsfähig
+    beschreibung: Das System widersteht Angriffen und Missbrauch und läuft nach einer Störung wieder an.
+    d09_hinweis: Teilfrage Angriffe und Missbrauch im Ziel Sicherheit; um Wiederanlauf und Rückfallweg (D-12) ergänzen.
+  rechenschaft:
+    titel: Rechenschaftspflichtig und transparent
+    beschreibung: Verantwortung ist zugewiesen, und Betroffene erhalten angemessene Information über das System und seine Ergebnisse. Querschnitt zu allen Merkmalen.
+    d09_hinweis: Ziele Rechenschaft und Transparenz. Das Kit trennt, was NIST zusammenfasst; keine Änderung nötig.
+  erklaerbar:
+    titel: Erklärbar und interpretierbar
+    beschreibung: Wie das System zu einem Ergebnis kommt, lässt sich darlegen, und Nutzende verstehen, was das Ergebnis für ihren Fall bedeutet.
+    d09_hinweis: Ziel Erklärbarkeit fragt nach der Begründung eines Ergebnisses. Um die Deutung im Kontext ergänzen.
+  datenschutz:
+    titel: Datenschutzfördernd
+    beschreibung: Das System schützt Privatsphäre und Personendaten und vermeidet unerwünschte Rückschlüsse auf Personen.
+    d09_hinweis: Ziel Datenschutz. KI-typische Rückschlüsse auf Personen als Beispiel nennen.
+  fair:
+    titel: Fair, schädliche Verzerrungen beherrscht
+    beschreibung: Das System behandelt Menschen gleichwertig; Verzerrungen aus Daten, Statistik und menschlichen Vorannahmen werden erkannt und begrenzt.
+    d09_hinweis: Ziel Fairness. Die drei Ursachen von Verzerrungen als Hilfetext aufnehmen.
+ziele_ohne_merkmal:
+  umwelt: Kein NIST-Merkmal; das AI RMF behandelt die Umweltwirkung in MS-2.12. Das Ziel stammt aus ISO/IEC 42001 Anhang C und Abschnitt 4.1 und bleibt.
+werte:
+  abdeckung:
+    ganz: ganz
+    teilweise: teilweise
+    nicht: nicht
+  stufe:
+    lite: Lite (Grundumfang)
+    ausbau: Ausbau (Eigenentwicklung, hohes Risiko)
+  kmu_relevanz:
+    hoch: hoch
+    mittel: mittel
+    gering: gering
+  passung:
+    gut: gut
+    teilweise: teilweise
+    vermischt: vermischt
+  rolle:
+    grundlage: Grundlage
+    querschnitt: Querschnitt
+    merkmal: Merkmal
+  art:
+    allgemein: allgemein
+    genai: generative KI
+stand:
+  modul: NIST AI RMF
+  kurz: Das NIST AI RMF ist ein freiwilliges Rahmenwerk der US-Behörde NIST mit Ergebnissen für den Umgang mit KI-Risiken. Es ist weder Recht noch Norm; NIST zertifiziert nicht.
+  botschaft: ISO/IEC 42001 ist das zertifizierbare Managementsystem, das AI RMF ein freiwilliger Katalog von Ergebnissen. NIST zertifiziert nicht.
+  fassungen:
+    ai-100-1: NIST AI 100-1, Artificial Intelligence Risk Management Framework (AI RMF 1.0), 26.01.2023
+    ai-600-1: NIST AI 600-1, Generative Artificial Intelligence Profile, Juli 2024
+    playbook: NIST AI RMF Playbook (PDF vom 02.08.2024, ohne Versionsangabe)
+  revision: NIST hat eine Überarbeitung des AI RMF 1.0 angekündigt (US-«AI Action Plan», Juli 2025). Am 21.10.2026 gab es weder einen Entwurf noch eine Versionsnummer oder einen Termin. Massgebend bleibt AI RMF 1.0. Betroffen sein dürften vor allem GOVERN 3 und MEASURE 2.12; das Kit führt diese Punkte aus eigener Begründung weiter.
+  veraltet: Der Stand des NIST AI RMF wurde zuletzt am {datum} geprüft. Prüfen Sie auf nist.gov, ob eine neue Fassung erschienen ist.
+  weitere:
+    ir-8596: 'NIST IR 8596, Cyber AI Profile: nur Vorentwurf vom 16.12.2025 (Kommentarfrist bis 30.01.2026). Nicht Teil des Moduls; für Firmen mit ISMS vormerken, sobald die Endfassung erscheint.'
+    profil-kritische-infrastruktur: 'Profil «Trustworthy AI in Critical Infrastructure»: nur Konzeptpapier vom 07.04.2026. Nicht Teil des Moduls.'
+  abgleich:
+    crosswalk-42001: Die Zuordnung zu ISO/IEC 42001 ist eine eigene Einschätzung des Kits. Abgeglichen wurde sie mit dem Crosswalk «NIST AI RMF to ISO/IEC FDIS 42001» (Anbieter Microsoft, auf airc.nist.gov gelistet, kein NIST-Werk). Dessen Tabellen sind nicht übernommen; 7 Fehler darin sind in der eigenen Zuordnung korrigiert.
+  lizenz: Die NIST-Dokumente sind Werke der US-Regierung und nach 17 U.S.C. § 105 in den USA gemeinfrei. Ausserhalb der USA behält sich NIST Rechte vor, gewährt aber weltweit ein unentgeltliches Recht zum Nachdruck und zur Bearbeitung (nist.gov/oism/copyrights). Das Kit zitiert die Funktionen, Kategorien und Subkategorien, die Vertrauensmerkmale, die zwölf GenAI-Risiken und die referenzierten Massnahmen aus NIST AI 600-1 wörtlich (Englisch) mit Seitenangabe, ergänzt um eine eigene, nicht amtliche Übersetzung, führt eigene Kurztitel und Texte und liefert die PDFs unverändert mit, mit dem Vermerk «Republished courtesy of the National Institute of Standards and Technology». Die Nennung bedeutet keine Billigung durch NIST.
+  quellenangabe: 'Quelle: National Institute of Standards and Technology (NIST), NIST AI 100-1, AI RMF 1.0, Januar 2023, https://doi.org/10.6028/NIST.AI.100-1'
+  pdf_pruefung: Die mitgelieferten PDFs sind bitgleich mit den Dateien auf nvlpubs.nist.gov und airc.nist.gov (SHA-256 geprüft am 21.10.2026).
+original:
+  uebersetzung: Übersetzung KMU-CIO, nicht amtlich
+  fundstelle: '{dokument}, S. {seite}'
+  fundstelle_bis: '{dokument}, S. {seite} bis {bis}'
+  aufklappen: Originaltext und Übersetzung
+  massnahmen_600: Massnahmen aus NIST AI 600-1, auf die sich das Control stützt
+  subkategorien_control: Subkategorien, deren Lücke das Control schliesst
+  merkmale: Vertrauensmerkmale nach NIST AI 100-1 Abschnitt 3
+  messen: Subkategorien MEASURE 2 (Bewertung der Vertrauensmerkmale)
+  risiken: Die zwölf Risiken nach NIST AI 600-1 Abschnitt 2
+  nachlesen_100: 'NIST AI 100-1, S. {seite}: {was}'
+  nachlesen_600: 'NIST AI 600-1, S. {seite}: {was}'
+  was:
+    tabellen: Kategorien und Subkategorien (Tabellen 1 bis 4)
+    merkmale: Vertrauensmerkmale (Abschnitt 3)
+    messen: MEASURE 2 (Tabelle 3)
+    risiken: zwölf Risiken generativer KI (Abschnitt 2)
+    massnahmen: vorgeschlagene Massnahmen (Abschnitt 3)

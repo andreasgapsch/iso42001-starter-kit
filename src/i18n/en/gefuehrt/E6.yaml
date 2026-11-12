@@ -1,0 +1,155 @@
+# Page texts for phase E6 Risks and opportunities. Format: src/gefuehrt/FORMAT.md
+E6-einfuehrung:
+  titel: Risks and opportunities
+  frage: What can go wrong with your AI systems, what can you gain, and how do you rate it?
+  warum: The standard requires an [[g:risikobeurteilung]] based on fixed [[g:risikokriterien]], so that results are comparable. You look at consequences for the company, for individuals and for society, and you also plan [[g:chance|opportunities]].
+  fehler: Generic risks such as ‘AI makes mistakes’ with no link to a system are the second most common audit finding. Auditors want to see system-specific risks, an [[g:eigner]] for each risk and a trigger for reassessment.
+E6-isms-skalen:
+  titel: Scales from the ISMS
+  frage: Do you adopt the risk scales and acceptance criteria from your [[g:isms]]?
+  warum: One shared method for information security and AI saves effort and makes risks comparable. You only add the impacts on people and society.
+  fehler: The check flags different scales for ISMS and [[g:aims|AIMS]] as a notice. Auditors will then ask why two methods are needed.
+  felder:
+    organisation.risikokriterien.ausIsmsUebernommen:
+      label: Adopt scales and criteria from the ISMS
+      hilfe: Enter or check the ISMS values on the next pages.
+E6-zeitraum:
+  titel: Reference period
+  frage: What period does the likelihood refer to?
+  warum: '‘Likely’ means nothing without a time frame. Only with a reference such as ‘per year’ will two people rate the same risk the same way.'
+  fehler: A missing reference period is an error in the check. Auditors ask two people to rate the same risk and compare the results.
+  felder:
+    organisation.risikokriterien.zeitraum:
+      label: Reference period
+      hilfe: In SMEs, ‘per year’ is usual.
+E6-skalen:
+  titel: Scales for likelihood and impact
+  frage: Which levels do you use for likelihood and impact?
+  warum: Four levels work well in SMEs; they force a decision and stay manageable. Each level needs a short, measurable description, and for impact this includes consequences for people.
+  fehler: Descriptions in francs only miss harm to affected people, such as unfair treatment or loss of trust. Auditors check whether the scale covers consequences for individuals and society.
+  felder:
+    organisation.risikokriterien.wahrscheinlichkeit:
+      label: Likelihood
+      hilfe: From 1 (rare) to 4 (frequent).
+    organisation.risikokriterien.wahrscheinlichkeit.stufe:
+      label: Level
+      hilfe: Whole number, ascending.
+    organisation.risikokriterien.wahrscheinlichkeit.bezeichnung:
+      label: Name
+      hilfe: e.g. ‘rare’, ‘possible’, ‘likely’, ‘frequent’.
+    organisation.risikokriterien.wahrscheinlichkeit.beschreibung:
+      label: Description
+      hilfe: e.g. ‘less often than once every 5 years’.
+    organisation.risikokriterien.auswirkung:
+      label: Impact
+      hilfe: From 1 (minor) to 4 (severe).
+    organisation.risikokriterien.auswirkung.stufe:
+      label: Level
+      hilfe: Whole number, ascending.
+    organisation.risikokriterien.auswirkung.bezeichnung:
+      label: Name
+      hilfe: e.g. ‘minor’, ‘noticeable’, ‘significant’, ‘severe’.
+    organisation.risikokriterien.auswirkung.beschreibung:
+      label: Description
+      hilfe: For the company and for people, e.g. ‘damage above CHF 100,000 or serious disadvantage to a person’.
+E6-akzeptanz:
+  titel: When a risk must be treated
+  frage: Up to which risk score do you accept a risk without treatment, and from which score is it no longer tolerable?
+  warum: The risk score is likelihood times impact. The thresholds decide when you have to act and when management has to decide.
+  fehler: The lower threshold must be below the upper one, otherwise the check reports an error. Auditors ask who set the thresholds; have management confirm them.
+  felder:
+    organisation.risikokriterien.akzeptanzBis:
+      label: Accepted up to risk score
+      hilfe: For a 4 by 4 matrix, e.g. 4.
+    organisation.risikokriterien.unannehmbarAb:
+      label: Not tolerable from risk score
+      hilfe: For a 4 by 4 matrix, e.g. 12. Such risks must be treated, or the activity must stop.
+E6-register:
+  titel: Record risks
+  frage: What risks exist for this AI system?
+  warum: For each system, record the main risks with their [[g:risikoquelle]], cause and consequence. The impact assessment in phase 7 adds further risks for people, which you add here.
+  fehler: Every AI system needs at least one risk, otherwise the check reports an error. For generative AI, auditors expect risks on confidentiality and wrong results; for HR systems, on fairness.
+  felder:
+    titel:
+      label: Risk
+      hilfe: Short and specific, e.g. ‘Design data ends up in a public chatbot’.
+    kiSystem:
+      label: AI system
+      hilfe: Only leave empty for risks that affect all systems.
+    quelle:
+      label: Risk source
+      hilfe: Where the risk comes from.
+    ebenen:
+      label: Affected
+      hilfe: Company, individuals, society. You can select more than one.
+    ursache:
+      label: Cause
+      hilfe: Why it can happen, e.g. ‘Employees copy drawings into private accounts’.
+    folge:
+      label: Consequence
+      hilfe: What happens then, e.g. ‘Loss of know-how, breach of NDAs and export controls’.
+    bestehendeMassnahmen:
+      label: Existing actions
+      hilfe: What already protects you today.
+    eigner:
+      label: Risk owner
+      hilfe: The person who decides on the treatment.
+    ismsRisiko:
+      label: Link to the ISMS register
+      hilfe: Pure information security risks stay in the [[g:isms]] register; just link them here.
+E6-bewertung:
+  titel: Rate risks
+  frage: How likely is the risk, and how severe would the impact be?
+  warum: Use your scales to rate each risk before any further actions. This shows which risks you must treat and in which order.
+  fehler: Rating every risk as medium means you are not prioritizing. Rate as a team with the system owner; auditors ask who was involved in the rating.
+  felder:
+    w:
+      label: Likelihood
+      hilfe: Level on your scale.
+    a:
+      label: Impact
+      hilfe: The most severe consequence counts, even if it affects people outside the company.
+    beurteiltAm:
+      label: Assessed on
+      hilfe: Date of the assessment or of the latest reassessment, e.g. after a finding, an update or a missed metric (D-06).
+    erfasstAm:
+      label: Recorded on
+      hilfe: Date on which the risk entered the register. The assessment and the acceptance of the residual risk do not precede it.
+E6-chancen:
+  titel: Record opportunities
+  frage: Which opportunities do you want to pursue with AI?
+  warum: The standard requires you to plan opportunities too. Recording them lets you show the benefit and justify resources. Opportunities share the register with risks and therefore the same numbering (R-…). Risk treatment follows in the stage ‘[[g:control|Controls]] and [[g:soa|statement of applicability]]’.
+  fehler: Opportunities without an action remain wishful thinking. Auditors want to see that you pursue at least one opportunity with an action and a responsible person.
+  felder:
+    titel:
+      label: Opportunity
+      hilfe: e.g. ‘Less scrap through earlier defect detection’.
+    kiSystem:
+      label: AI system
+      hilfe: If the opportunity is tied to a system.
+    beschreibung:
+      label: Description
+      hilfe: What you gain and how you measure it.
+    eigner:
+      label: Responsible
+      hilfe: The person who pursues the opportunity.
+    massnahmen:
+      label: Actions
+      hilfe: Link actions from the action list.
+E6-neubeurteilung:
+  titel: When you reassess
+  frage: How often, and after which events, do you reassess risks?
+  warum: Risks change with new systems, updates or laws. The standard requires reassessments at planned intervals and after significant changes.
+  fehler: Without defined triggers, the register stays at the state of the first assessment. Auditors look for dated reassessments after changes.
+  felder:
+    meta.gefuehrt.antworten.neubeurteilung.rhythmus:
+      label: Interval
+      hilfe: At least once a year; every six months if there are many changes.
+    meta.gefuehrt.antworten.neubeurteilung.ausloeser:
+      label: Triggers
+      hilfe: Events that trigger an immediate reassessment.
+E6-genai:
+  titel: "Suggestions for generative AI security"
+  frage: "Which typical security risks of generative AI affect your systems?"
+  warum: "The list sums up risks that keep occurring with assistants, chatbots and your own applications with generative AI, based on the OWASP Top 10 for LLM Applications 2026 and, for AI that acts, the OWASP Top 10 for Agentic Applications 2026, plus own suggestions on data risks. Suggestions on AI that acts only appear for systems that prepare or carry out actions or have a memory. Add suitable entries for each system to the register as a risk; you then set likelihood, impact and treatment yourself. The page appears as soon as a system is marked as generative AI in phase 4."
+  fehler: "Adopting all suggestions unchecked bloats the register. For simply using services, the entries marked ‘deployer’ are usually enough. Auditors want to see that you have related the risks to your systems and assessed them."

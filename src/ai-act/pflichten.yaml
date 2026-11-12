@@ -1,0 +1,1043 @@
+# Pflichten aus dem AI Act je Rolle und Risikoklasse (Grundlage für E-03)
+#
+# Struktur sprachneutral; Kurzbeschreibung und typischer Nachweis in
+# src/i18n/de/pflichten.yaml und src/i18n/en/pflichten.yaml.
+# Rechtsgrundlage: Verordnung (EU) 2024/1689, konsolidierte Fassung 27.07.2026 (siehe stand.yaml).
+# Artikelangaben: «26(7)» = Art. 26 Abs. 7; «16(e)» = Art. 16 Bst. e; «50(4) UAbs. 2» = Unterabsatz 2.
+#
+# Felder je Pflicht
+#   id                 P-ALLE-nn, P-ANB-nn, P-ANB6-3-nn, P-BETR-nn, P-EINF-nn, P-HAEN-nn, P-BEV-nn,
+#                      P-PROD-nn, P-TRANSP-ANB-nn, P-TRANSP-BETR-nn, P-GPAI-nn
+#   artikel            Fundstelle(n)
+#   rollen             Rollen nach Art. 3 (Werte wie AiActRolle in src/model/typen.ts)
+#   risikoklassen      verboten | hochrisiko-anhang-iii | hochrisiko-anhang-i | transparenz | minimal | alle
+#   bedingung          zusätzliche Bedingung (gleiche Schlüssel wie vorschlag_wenn in euaia-controls.yaml;
+#                      dazu fria_anwendbar: Ergebnis der Anwendbarkeitsprüfung in E-06) oder null
+#                      gpai: true heisst: Die Organisation bringt das KI-Modell mit allgemeinem Verwendungszweck
+#                      selbst in Verkehr (kiSysteme[].aiAct.gpai, src/model/typen.ts) oder vertritt als Bevollmächtigte
+#                      dessen Anbieter. Wer ein GPAI-Modell nur nutzt oder ein KI-System auf einem fremden
+#                      GPAI-Modell aufbaut (z. B. Copilot, Chatbot über eine Cloud-Schnittstelle), erfüllt sie nicht.
+#   gilt_ab            Geltungsbeginn nach Art. 113 bzw. 111 in der geänderten Fassung
+#   gilt_ab_je_klasse  abweichender Geltungsbeginn je Risikoklasse (Art. 113(3)(c)), sonst fehlt das Feld
+#   gilt_praktisch_ab  nur bei Pflichten, die formell ab 02.08.2026 gelten, aber erst mit den
+#                      Hochrisiko-Pflichten greifen (gekennzeichnete Auslegung, siehe stand.yaml)
+#   gilt_praktisch_je_klasse  wie gilt_ab_je_klasse
+#   kmu_erleichterung  Artikelverweis oder leer
+#   abdeckung_42001    grad ganz | teilweise | nicht; controls (A.x.y); klauseln (K-x.y)
+#   zusatz_control     EUAIA-nn; Pflicht bei grad teilweise oder nicht
+#   vorlage            Vorlagen des Kits (E-01 bis E-09, D-xx)
+#   kmu_relevanz       hoch | mittel | gering (Einschätzung für die Filterung in E-03)
+
+schema: 1
+stand: konsolidiert-2026-07-27
+
+regeln:
+  # Für Produkte nach Anhang I Abschnitt B (z. B. Maschinen, Nr. 21) gelten aus dem AI Act nur
+  # die folgenden Artikel. Pflichten mit hochrisiko-anhang-i betreffen daher nur Anhang I Abschnitt A.
+  anhang_i_abschnitt_b:
+    artikel: "2(2)"
+    gelten_nur: ["6(1)", "60a", "102 bis 112"]
+    bedingt: ["57", "58", "59"]
+  # Wer als Anbieter gilt, übernimmt die Pflichten mit Rolle anbieter.
+  gilt_als_anbieter:
+    - {artikel: "25(1)", rollen: [haendler, einfuehrer, betreiber], risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]}
+    - {artikel: "25(3)", rollen: [produkthersteller], risikoklassen: [hochrisiko-anhang-i]}
+  # Hochrisiko-Altsysteme (vor dem Geltungsbeginn von Kapitel III in Verkehr gebracht oder in
+  # Betrieb genommen) fallen nur bei erheblicher Veränderung der Konzeption unter die Verordnung.
+  altsysteme_hochrisiko:
+    artikel: "111(2)"
+
+pflichten:
+  # Alle Risikoklassen
+  - id: P-ALLE-01
+    artikel: "4(1)"
+    rollen: [anbieter, betreiber]
+    risikoklassen: [alle]
+    bedingung: null
+    gilt_ab: "2025-02-02"
+    kmu_erleichterung: "4(2)"
+    abdeckung_42001: {grad: teilweise, controls: [A.4.6], klauseln: [K-7.2, K-7.3]}
+    zusatz_control: EUAIA-02
+    vorlage: [E-04, D-17]
+    kmu_relevanz: hoch
+
+  - id: P-ALLE-02
+    artikel: "5(1)(a) bis (h)"
+    rollen: [anbieter, betreiber, einfuehrer, haendler, produkthersteller]
+    risikoklassen: [alle]
+    bedingung: null
+    gilt_ab: "2025-02-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.5.2, A.9.2], klauseln: [K-6.1.4]}
+    zusatz_control: EUAIA-01
+    vorlage: [E-02]
+    kmu_relevanz: hoch
+
+  - id: P-ALLE-03
+    artikel: "5(1)(ba), (bb), 5(1a), (1b)"
+    rollen: [anbieter, betreiber, einfuehrer, haendler, produkthersteller]
+    risikoklassen: [alle]
+    bedingung: null
+    gilt_ab: "2026-12-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.5.2, A.9.2], klauseln: []}
+    zusatz_control: EUAIA-01
+    vorlage: [E-02]
+    kmu_relevanz: mittel
+
+  - id: P-ALLE-04
+    artikel: "79(2), (4)"
+    rollen: [anbieter, betreiber, einfuehrer, haendler, produkthersteller, bevollmaechtigter]
+    risikoklassen: [alle]
+    bedingung: null
+    gilt_ab: "2026-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.5], klauseln: [K-10.2]}
+    zusatz_control: EUAIA-18
+    vorlage: [D-14]
+    kmu_relevanz: mittel
+
+  # Anbieter von Hochrisiko-KI-Systemen
+  - id: P-ANB-01
+    artikel: "9"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.5.2, A.6.2.4], klauseln: [K-6.1.2, K-6.1.3, K-8.2, K-8.3]}
+    zusatz_control: EUAIA-19
+    vorlage: [E-08, D-06, D-07]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-02
+    artikel: "10, 4a(1)"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.7.2, A.7.3, A.7.4, A.7.5, A.7.6], klauseln: []}
+    zusatz_control: EUAIA-20
+    vorlage: [E-08, D-13]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-03
+    artikel: "11(1)"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: "11(1) UAbs. 2"
+    abdeckung_42001: {grad: teilweise, controls: [A.6.2.3, A.6.2.7], klauseln: []}
+    zusatz_control: EUAIA-21
+    vorlage: [E-08]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-04
+    artikel: "12"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.6.2.8], klauseln: []}
+    zusatz_control: EUAIA-22
+    vorlage: [E-08, D-12]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-05
+    artikel: "13"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.6.2.7, A.8.2], klauseln: []}
+    zusatz_control: EUAIA-23
+    vorlage: [E-08, D-14]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-06
+    artikel: "14"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.6.2.2, A.6.2.3], klauseln: []}
+    zusatz_control: EUAIA-24
+    vorlage: [E-08, D-12]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-07
+    artikel: "15"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.6.2.4, A.6.2.6], klauseln: []}
+    zusatz_control: EUAIA-25
+    vorlage: [E-08, D-12]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-08
+    artikel: "16(b)"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-28
+    vorlage: [E-08]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-09
+    artikel: "16(c), 17"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: "17(2), 63(1)"
+    abdeckung_42001: {grad: teilweise, controls: [A.6.1.3], klauseln: [K-4.4, K-7.5, K-8.1, K-9.2, K-10.2]}
+    zusatz_control: EUAIA-26
+    vorlage: [E-08]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-10
+    artikel: "16(d), 18"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [], klauseln: [K-7.5]}
+    zusatz_control: EUAIA-27
+    vorlage: [E-08, D-26]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-11
+    artikel: "16(e), 19"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.6.2.8], klauseln: []}
+    zusatz_control: EUAIA-12
+    vorlage: [E-08, D-12]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-12
+    artikel: "16(f), 43(1), (2)"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii]
+    bedingung: null
+    gilt_ab: "2026-08-02"
+    gilt_praktisch_ab: "2027-12-02"
+    kmu_erleichterung: "62(2)"
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-28
+    vorlage: [E-08]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-13
+    artikel: "16(g), 47"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2026-08-02"
+    gilt_praktisch_ab: "2027-12-02"
+    gilt_praktisch_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-28
+    vorlage: [E-08]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-14
+    artikel: "16(h), 48"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2026-08-02"
+    gilt_praktisch_ab: "2027-12-02"
+    gilt_praktisch_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-28
+    vorlage: [E-08]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-15
+    artikel: "16(i), 49(1)"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii]
+    bedingung: null
+    gilt_ab: "2026-08-02"
+    gilt_praktisch_ab: "2027-12-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-29
+    vorlage: [E-08]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-16
+    artikel: "16(j), 20"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.5], klauseln: [K-10.2]}
+    zusatz_control: EUAIA-30
+    vorlage: [E-08, D-22]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-17
+    artikel: "16(k), 21"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.5], klauseln: []}
+    zusatz_control: EUAIA-18
+    vorlage: [E-08, D-14]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-18
+    artikel: "16(l)"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-34
+    vorlage: [E-08]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-19
+    artikel: "22(1), (2)"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: {org_niederlassung_eu: false}
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-31
+    vorlage: [E-08, E-09]
+    kmu_relevanz: hoch
+
+  - id: P-ANB-20
+    artikel: "25(2)"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.10.2], klauseln: []}
+    zusatz_control: EUAIA-35
+    vorlage: [E-08, D-16]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-21
+    artikel: "25(4)"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.10.2, A.10.3], klauseln: []}
+    zusatz_control: EUAIA-35
+    vorlage: [E-08, D-16]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-22
+    artikel: "72"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2026-08-02"
+    gilt_praktisch_ab: "2027-12-02"
+    gilt_praktisch_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.6.2.6], klauseln: [K-9.1]}
+    zusatz_control: EUAIA-32
+    vorlage: [E-08]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-23
+    artikel: "73"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2026-08-02"
+    gilt_praktisch_ab: "2027-12-02"
+    gilt_praktisch_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.4, A.8.5], klauseln: []}
+    zusatz_control: EUAIA-33
+    vorlage: [E-08, D-14]
+    kmu_relevanz: mittel
+
+  - id: P-ANB-24
+    artikel: "82(2)"
+    rollen: [anbieter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2026-08-02"
+    gilt_praktisch_ab: "2027-12-02"
+    gilt_praktisch_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [], klauseln: [K-10.2]}
+    zusatz_control: EUAIA-30
+    vorlage: [E-08, D-22]
+    kmu_relevanz: gering
+
+  # Anbieter von Anhang-III-Systemen, die nach Art. 6(3) nicht als hochriskant gelten
+  - id: P-ANB6-3-01
+    artikel: "6(3), (4)"
+    rollen: [anbieter]
+    risikoklassen: [minimal, transparenz]
+    bedingung: {ausnahme_art_6_3: true}
+    gilt_ab: "2027-12-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.5.2, A.5.3], klauseln: []}
+    zusatz_control: EUAIA-04
+    vorlage: [E-02]
+    kmu_relevanz: hoch
+
+  - id: P-ANB6-3-02
+    artikel: "49(2)"
+    rollen: [anbieter]
+    risikoklassen: [minimal, transparenz]
+    bedingung: {ausnahme_art_6_3: true}
+    gilt_ab: "2026-08-02"
+    gilt_praktisch_ab: "2027-12-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-29
+    vorlage: [E-02]
+    kmu_relevanz: hoch
+
+  - id: P-ANB6-3-03
+    artikel: "80(4), (5)"
+    rollen: [anbieter]
+    risikoklassen: [minimal, transparenz]
+    bedingung: {ausnahme_art_6_3: true}
+    gilt_ab: "2026-08-02"
+    gilt_praktisch_ab: "2027-12-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [], klauseln: [K-10.2]}
+    zusatz_control: EUAIA-04
+    vorlage: [E-02]
+    kmu_relevanz: gering
+
+  # Betreiber von Hochrisiko-KI-Systemen
+  - id: P-BETR-01
+    artikel: "26(1), (3)"
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.9.4, A.9.2], klauseln: []}
+    zusatz_control: EUAIA-08
+    vorlage: [E-05, D-15]
+    kmu_relevanz: hoch
+
+  - id: P-BETR-02
+    artikel: "26(2)"
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.3.2, A.9.2], klauseln: [K-7.2]}
+    zusatz_control: EUAIA-09
+    vorlage: [E-05, D-04, D-17]
+    kmu_relevanz: hoch
+
+  - id: P-BETR-03
+    artikel: "26(4)"
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.7.4], klauseln: []}
+    zusatz_control: EUAIA-10
+    vorlage: [E-05, D-13]
+    kmu_relevanz: hoch
+
+  - id: P-BETR-04
+    artikel: "26(5)"
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.6.2.6, A.8.4], klauseln: []}
+    zusatz_control: EUAIA-11
+    vorlage: [E-05, D-12]
+    kmu_relevanz: hoch
+
+  - id: P-BETR-05
+    artikel: "26(5), 73"
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.4, A.8.5], klauseln: []}
+    zusatz_control: EUAIA-33
+    vorlage: [E-05, D-14]
+    kmu_relevanz: hoch
+
+  - id: P-BETR-06
+    artikel: "26(6)"
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.6.2.8], klauseln: []}
+    zusatz_control: EUAIA-12
+    vorlage: [E-05, D-12]
+    kmu_relevanz: hoch
+
+  - id: P-BETR-07
+    artikel: "26(7)"
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-13
+    vorlage: [E-05, D-17]
+    kmu_relevanz: hoch
+
+  - id: P-BETR-08
+    artikel: "26(9)"
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.5.2, A.5.4], klauseln: []}
+    zusatz_control: EUAIA-17
+    vorlage: [E-05, D-09]
+    kmu_relevanz: hoch
+
+  - id: P-BETR-09
+    artikel: "26(11)"
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.2], klauseln: []}
+    zusatz_control: EUAIA-14
+    vorlage: [E-05, D-14]
+    kmu_relevanz: hoch
+
+  - id: P-BETR-10
+    artikel: "26(12)"
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.5], klauseln: []}
+    zusatz_control: EUAIA-18
+    vorlage: [E-05]
+    kmu_relevanz: mittel
+
+  - id: P-BETR-11
+    artikel: "27(1), (2), (4)"
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii]
+    bedingung: {fria_anwendbar: true}
+    gilt_ab: "2027-12-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.5.2, A.5.3, A.5.4, A.5.5], klauseln: [K-6.1.4]}
+    zusatz_control: EUAIA-16
+    vorlage: [E-06, D-09]
+    kmu_relevanz: gering
+
+  - id: P-BETR-12
+    artikel: "27(3)"
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii]
+    bedingung: {fria_anwendbar: true}
+    gilt_ab: "2027-12-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-16
+    vorlage: [E-06]
+    kmu_relevanz: gering
+
+  - id: P-BETR-13
+    artikel: "86(1)"
+    rollen: [betreiber]
+    risikoklassen: [hochrisiko-anhang-iii]
+    bedingung: null
+    gilt_ab: "2026-08-02"
+    gilt_praktisch_ab: "2027-12-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.2, A.8.3], klauseln: []}
+    zusatz_control: EUAIA-15
+    vorlage: [E-05, D-14]
+    kmu_relevanz: hoch
+
+  - id: P-BETR-14
+    artikel: "25(1)"
+    rollen: [betreiber, einfuehrer, haendler]
+    risikoklassen: [alle]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.10.2], klauseln: [K-4.1]}
+    zusatz_control: EUAIA-03
+    vorlage: [E-01, D-24]
+    kmu_relevanz: hoch
+
+  # Einführer
+  - id: P-EINF-01
+    artikel: "23(1)"
+    rollen: [einfuehrer]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.10.3], klauseln: []}
+    zusatz_control: EUAIA-36
+    vorlage: [D-16, E-03]
+    kmu_relevanz: mittel
+
+  - id: P-EINF-02
+    artikel: "23(2)"
+    rollen: [einfuehrer]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.10.3, A.8.5], klauseln: []}
+    zusatz_control: EUAIA-36
+    vorlage: [D-16, E-03]
+    kmu_relevanz: mittel
+
+  - id: P-EINF-03
+    artikel: "23(3)"
+    rollen: [einfuehrer]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-36
+    vorlage: [D-16, E-03]
+    kmu_relevanz: mittel
+
+  - id: P-EINF-04
+    artikel: "23(4)"
+    rollen: [einfuehrer]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-36
+    vorlage: [D-16, E-03]
+    kmu_relevanz: gering
+
+  - id: P-EINF-05
+    artikel: "23(5)"
+    rollen: [einfuehrer]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [], klauseln: [K-7.5]}
+    zusatz_control: EUAIA-36
+    vorlage: [D-16, D-26]
+    kmu_relevanz: mittel
+
+  - id: P-EINF-06
+    artikel: "23(6), (7)"
+    rollen: [einfuehrer]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.5], klauseln: []}
+    zusatz_control: EUAIA-36
+    vorlage: [D-16, E-03]
+    kmu_relevanz: mittel
+
+  # Händler
+  - id: P-HAEN-01
+    artikel: "24(1)"
+    rollen: [haendler]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.10.3], klauseln: []}
+    zusatz_control: EUAIA-37
+    vorlage: [D-16, E-03]
+    kmu_relevanz: mittel
+
+  - id: P-HAEN-02
+    artikel: "24(2)"
+    rollen: [haendler]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.10.3, A.8.5], klauseln: []}
+    zusatz_control: EUAIA-37
+    vorlage: [D-16, E-03]
+    kmu_relevanz: mittel
+
+  - id: P-HAEN-03
+    artikel: "24(3)"
+    rollen: [haendler]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-37
+    vorlage: [D-16, E-03]
+    kmu_relevanz: gering
+
+  - id: P-HAEN-04
+    artikel: "24(4)"
+    rollen: [haendler]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.5], klauseln: [K-10.2]}
+    zusatz_control: EUAIA-37
+    vorlage: [D-16, D-22]
+    kmu_relevanz: mittel
+
+  - id: P-HAEN-05
+    artikel: "24(5), (6)"
+    rollen: [haendler]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.5], klauseln: []}
+    zusatz_control: EUAIA-37
+    vorlage: [D-16, E-03]
+    kmu_relevanz: mittel
+
+  # Bevollmächtigte
+  - id: P-BEV-01
+    artikel: "22(3)"
+    rollen: [bevollmaechtigter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-38
+    vorlage: [E-03]
+    kmu_relevanz: gering
+
+  - id: P-BEV-02
+    artikel: "22(4)"
+    rollen: [bevollmaechtigter]
+    risikoklassen: [hochrisiko-anhang-iii, hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2027-12-02"
+    gilt_ab_je_klasse: {hochrisiko-anhang-iii: "2027-12-02", hochrisiko-anhang-i: "2028-08-02"}
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-38
+    vorlage: [E-03]
+    kmu_relevanz: gering
+
+  # Produkthersteller
+  - id: P-PROD-01
+    artikel: "25(3)"
+    rollen: [produkthersteller]
+    risikoklassen: [hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2028-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [], klauseln: [K-4.1]}
+    zusatz_control: EUAIA-03
+    vorlage: [E-01, E-08]
+    kmu_relevanz: hoch
+
+  - id: P-PROD-02
+    artikel: "6(1), (1a) bis (1c), 2(2)"
+    rollen: [produkthersteller, anbieter]
+    risikoklassen: [alle]
+    bedingung: null
+    gilt_ab: "2028-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.5.2], klauseln: []}
+    zusatz_control: EUAIA-04
+    vorlage: [E-02, E-09]
+    kmu_relevanz: hoch
+
+  - id: P-PROD-03
+    artikel: "43(3)"
+    rollen: [produkthersteller, anbieter]
+    risikoklassen: [hochrisiko-anhang-i]
+    bedingung: null
+    gilt_ab: "2026-08-02"
+    gilt_praktisch_ab: "2028-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-28
+    vorlage: [E-08]
+    kmu_relevanz: mittel
+
+  # Transparenzpflichten der Anbieter (Art. 50, unabhängig von der Risikoklasse)
+  - id: P-TRANSP-ANB-01
+    artikel: "50(1)"
+    rollen: [anbieter]
+    risikoklassen: [alle]
+    bedingung: {transparenz_any: ["50-1"]}
+    gilt_ab: "2026-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.2], klauseln: []}
+    zusatz_control: EUAIA-05
+    vorlage: [E-07, D-14]
+    kmu_relevanz: hoch
+
+  - id: P-TRANSP-ANB-02
+    artikel: "50(2)"
+    rollen: [anbieter]
+    risikoklassen: [alle]
+    bedingung: {transparenz_any: ["50-2"]}
+    gilt_ab: "2026-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-06
+    vorlage: [E-07]
+    kmu_relevanz: mittel
+
+  - id: P-TRANSP-ANB-03
+    artikel: "111(4)"
+    rollen: [anbieter]
+    risikoklassen: [alle]
+    bedingung: {transparenz_any: ["50-2"]}
+    gilt_ab: "2026-12-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-06
+    vorlage: [E-07, E-09]
+    kmu_relevanz: mittel
+
+  - id: P-TRANSP-ANB-04
+    artikel: "50(5)"
+    rollen: [anbieter]
+    risikoklassen: [alle]
+    bedingung: {transparenz_any: ["50-1"]}
+    gilt_ab: "2026-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.2], klauseln: []}
+    zusatz_control: EUAIA-05
+    vorlage: [E-07]
+    kmu_relevanz: hoch
+
+  # Transparenzpflichten der Betreiber
+  - id: P-TRANSP-BETR-01
+    artikel: "50(3)"
+    rollen: [betreiber]
+    risikoklassen: [alle]
+    bedingung: {transparenz_any: ["50-3"]}
+    gilt_ab: "2026-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.2], klauseln: []}
+    zusatz_control: EUAIA-07
+    vorlage: [E-07, D-14]
+    kmu_relevanz: gering
+
+  - id: P-TRANSP-BETR-02
+    artikel: "50(4) UAbs. 1"
+    rollen: [betreiber]
+    risikoklassen: [alle]
+    bedingung: {transparenz_any: ["50-4"]}
+    gilt_ab: "2026-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.2], klauseln: []}
+    zusatz_control: EUAIA-07
+    vorlage: [E-07, D-15]
+    kmu_relevanz: hoch
+
+  - id: P-TRANSP-BETR-03
+    artikel: "50(4) UAbs. 2"
+    rollen: [betreiber]
+    risikoklassen: [alle]
+    bedingung: {transparenz_any: ["50-4"]}
+    gilt_ab: "2026-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.2], klauseln: []}
+    zusatz_control: EUAIA-07
+    vorlage: [E-07, D-15]
+    kmu_relevanz: mittel
+
+  - id: P-TRANSP-BETR-04
+    artikel: "50(5)"
+    rollen: [betreiber]
+    risikoklassen: [alle]
+    bedingung: {transparenz_any: ["50-3", "50-4"]}
+    gilt_ab: "2026-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: teilweise, controls: [A.8.2], klauseln: []}
+    zusatz_control: EUAIA-07
+    vorlage: [E-07]
+    kmu_relevanz: mittel
+
+  # Anbieter von KI-Modellen mit allgemeinem Verwendungszweck (für KMU selten; nur Hinweis)
+  - id: P-GPAI-01
+    artikel: "53(1)(a), (b)"
+    rollen: [anbieter]
+    risikoklassen: [alle]
+    bedingung: {gpai: true}
+    gilt_ab: "2025-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-39
+    vorlage: [E-02]
+    kmu_relevanz: gering
+
+  - id: P-GPAI-02
+    artikel: "53(1)(c)"
+    rollen: [anbieter]
+    risikoklassen: [alle]
+    bedingung: {gpai: true}
+    gilt_ab: "2025-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-39
+    vorlage: [E-02]
+    kmu_relevanz: gering
+
+  - id: P-GPAI-03
+    artikel: "53(1)(d)"
+    rollen: [anbieter]
+    risikoklassen: [alle]
+    bedingung: {gpai: true}
+    gilt_ab: "2025-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-39
+    vorlage: [E-02]
+    kmu_relevanz: gering
+
+  - id: P-GPAI-04
+    artikel: "54(1), (2)"
+    rollen: [anbieter]
+    risikoklassen: [alle]
+    bedingung: {gpai: true, org_niederlassung_eu: false}
+    gilt_ab: "2025-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-39
+    vorlage: [E-02, E-09]
+    kmu_relevanz: gering
+
+  - id: P-GPAI-05
+    artikel: "52(1), 55(1)"
+    rollen: [anbieter]
+    risikoklassen: [alle]
+    bedingung: {gpai: true}
+    gilt_ab: "2025-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-39
+    vorlage: [E-02]
+    kmu_relevanz: gering
+
+  - id: P-GPAI-06
+    artikel: "54(3) bis (5)"
+    rollen: [bevollmaechtigter]
+    risikoklassen: [alle]
+    bedingung: {gpai: true}
+    gilt_ab: "2025-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-38
+    vorlage: [E-03]
+    kmu_relevanz: gering
+
+  - id: P-GPAI-07
+    artikel: "111(3)"
+    rollen: [anbieter]
+    risikoklassen: [alle]
+    bedingung: {gpai: true}
+    gilt_ab: "2027-08-02"
+    kmu_erleichterung: ""
+    abdeckung_42001: {grad: nicht, controls: [], klauseln: []}
+    zusatz_control: EUAIA-39
+    vorlage: [E-02, E-09]
+    kmu_relevanz: gering
+
+# Bestimmungen, die bewusst nicht als Pflicht für KMU aufgenommen sind (Grund in i18n, Schlüssel ausgeklammert)
+ausgeklammert:
+  - {artikel: "4a(1), (2)", grund: erlaubnis}
+  - {artikel: "5(2) bis (7)", grund: behoerden}
+  - {artikel: "26(8)", grund: behoerden}
+  - {artikel: "26(10)", grund: behoerden}
+  - {artikel: "49(3)", grund: behoerden}
+  - {artikel: "57 bis 61", grund: freiwillig}
+  - {artikel: "60a", grund: freiwillig}
+  - {artikel: "78", grund: behoerden}
+  - {artikel: "87", grund: verweis}
+  - {artikel: "99", grund: keine_pflicht}
+  - {artikel: "111(1)", grund: behoerden}
+  - {artikel: "111(2) Satz 2", grund: behoerden}

@@ -1,0 +1,177 @@
+# Seitentexte Etappe E2 Kontext, Parteien und Geltungsbereich. Format: src/gefuehrt/FORMAT.md
+E2-einfuehrung:
+  titel: Kontext, Parteien und Geltungsbereich
+  frage: Was wirkt auf Ihren KI-Einsatz, wer hat Erwartungen und wo liegen die Grenzen des Managementsystems?
+  warum: Die Norm will, dass Ihr Managementsystem zu Ihrer Lage passt. Deshalb klären Sie zuerst den [[g:kontext]], die [[g:interessierte-partei|interessierten Parteien]] und Ihre Rolle; daraus folgt der [[g:geltungsbereich]].
+  fehler: Kontextanalysen werden oft aus einer anderen Firma kopiert und passen nicht. Auditoren prüfen, ob sich Themen und Anforderungen später in Risiken, Zielen und [[g:control|Controls]] wiederfinden.
+E2-isms-bezug:
+  titel: Bezug zum ISMS
+  frage: Wie verhält sich der Geltungsbereich des KI-Managementsystems zu dem Ihres [[g:isms]]?
+  warum: Mit gleichem Geltungsbereich können Sie Kontextanalyse und Parteienliste des ISMS erweitern statt neu schreiben. Bei Abweichungen halten Sie die Unterschiede fest.
+  fehler: Ein AIMS, das nur einen Teil des ISMS umfasst, ist zulässig, braucht aber klare Schnittstellen. Auditoren fragen, wo die bestehenden Unterlagen liegen und wie sie ergänzt wurden.
+  felder:
+    meta.gefuehrt.antworten.ismsKontext.deckung:
+      label: Geltungsbereich im Vergleich zum ISMS
+      hilfe: Gleich ist der einfachste Fall und im KMU der häufigste.
+    meta.gefuehrt.antworten.ismsKontext.ablage:
+      label: Ablage der ISMS-Kontextanalyse
+      hilfe: Pfad oder Dokument-ID, z. B. «ISMS-02 Kontext, SharePoint/ISMS».
+E2-grundlagen:
+  titel: Grundlagen
+  frage: Welche Hauptprozesse hat Ihr Unternehmen und wie ist die IT organisiert?
+  warum: Ohne [[g:isms]] fehlt oft eine Übersicht über Prozesse und IT. Sie brauchen sie, um Grenzen und Schnittstellen des Managementsystems zu beschreiben und KI-Systeme den Prozessen zuzuordnen.
+  fehler: Eine zu feine Prozessliste lenkt ab. Fünf bis zehn Hauptprozesse genügen. Auditoren wollen verstehen, in welchen Abläufen KI wirkt.
+  felder:
+    meta.gefuehrt.antworten.grundlagen.prozesse:
+      label: Hauptprozesse
+      hilfe: Je Zeile ein Prozess, z. B. «Offerte und Auftrag», «Konstruktion», «Fertigung», «Service».
+    meta.gefuehrt.antworten.grundlagen.organigramm:
+      label: Ablage des Organigramms
+      hilfe: Pfad oder Link im Intranet.
+    meta.gefuehrt.antworten.grundlagen.itBetrieb:
+      label: Organisation der IT
+      hilfe: Eigene IT, externer Dienstleister oder gemischt; wichtige Cloud-Dienste.
+E2-themen:
+  titel: Was beeinflusst Ihren KI-Einsatz?
+  frage: Welche Themen ausserhalb und innerhalb Ihres Unternehmens wirken auf Ihren Umgang mit KI?
+  warum: Gesetze, Kundenerwartungen, Fachkräftemangel oder die eigene Kultur bestimmen, welche Risiken und Ziele wichtig sind. Wer diese Themen kennt, setzt das Managementsystem dort an, wo es nützt.
+  fehler: Eine Liste allgemeiner Schlagworte («Digitalisierung», «Wettbewerb») hilft niemandem. Auditoren wollen konkrete Themen mit Auswirkung sehen, z. B. «Kunden aus der Automobilindustrie verlangen Nachweise zum KI-Einsatz».
+  felder:
+    organisation.kontext.themen:
+      label: Themen
+      hilfe: Mindestens je drei externe und interne Themen.
+    organisation.kontext.themen.art:
+      label: Art
+      hilfe: Extern wirkt von aussen (Markt, Recht), intern kommt aus dem Unternehmen (Kultur, Ressourcen).
+    organisation.kontext.themen.kategorie:
+      label: Kategorie
+      hilfe: Hilft, die Liste zu ordnen und Lücken zu sehen.
+    organisation.kontext.themen.beschreibung:
+      label: Thema
+      hilfe: Ein Satz, z. B. «Der AI Act verlangt ab 2027 Pflichten für KI bei der Personalauswahl».
+    organisation.kontext.themen.auswirkung:
+      label: Auswirkung auf das AIMS
+      hilfe: Was daraus für das [[g:aims|AIMS]] folgt, z. B. «Folgenabschätzung für die Bewerbungsvorselektion».
+E2-klima:
+  titel: Klimawandel
+  frage: Ist der Klimawandel für Ihren Umgang mit KI ein relevantes Thema?
+  warum: ISO/IEC 42001 verlangt in 4.1 und 4.2, dass Sie diese Frage ausdrücklich beantworten (ISO/IEC 27001 seit Amd 1:2024 ebenso). Bei KI kann sie etwa den Energieverbrauch von Rechenzentren oder KI zur Energieoptimierung betreffen.
+  fehler: Die Antwort «nein» ist zulässig, braucht aber eine Begründung. Auditoren prüfen, dass die Frage gestellt und nachvollziehbar beantwortet wurde.
+  felder:
+    organisation.kontext.klimawandelRelevant:
+      label: Klimawandel relevant
+      hilfe: Ja, wenn Kunden, Gesetze oder Ihr KI-Einsatz einen spürbaren Bezug zum Klima haben.
+    organisation.kontext.klimawandelBegruendung:
+      label: Begründung
+      hilfe: Zwei bis drei Sätze, z. B. «Wir nutzen KI fast nur als Cloud-Dienst. Kunden fragen nach dem CO2-Fussabdruck unserer Maschinen; die KI zur Wartungsprognose senkt den Energieverbrauch.»
+E2-zweck:
+  titel: Wozu Sie KI nutzen
+  frage: Was wollen Sie mit KI erreichen?
+  warum: Die Norm verlangt, dass Sie den Zweck Ihrer KI-Systeme kennen. Die Antwort fliesst in die Leitlinie und hilft später, Ziele und Chancen zu formulieren.
+  fehler: Ohne klaren Zweck lässt sich nicht beurteilen, ob ein System das Richtige tut. Auditoren erwarten, dass der Zweck je System im Inventar steht und zur Leitlinie passt.
+  felder:
+    meta.gefuehrt.antworten.kiZweck.ziele:
+      label: Zwecke
+      hilfe: Mehrere Antworten möglich.
+    meta.gefuehrt.antworten.kiZweck.text:
+      label: In eigenen Worten
+      hilfe: Ein bis zwei Sätze für die Leitlinie, z. B. «KI entlastet uns bei Routinearbeit und verbessert die Qualität unserer Maschinen. Entscheide über Menschen bleiben bei Menschen.»
+E2-rollen-iso:
+  titel: Ihre Rolle bei KI
+  frage: Welche Rollen nimmt Ihr Unternehmen gegenüber KI ein?
+  warum: Ein Unternehmen kann KI gleichzeitig nutzen, entwickeln und an Kunden liefern. Jede Rolle bringt andere Pflichten und andere [[g:control|Controls]] mit sich. In Etappe 5 bestimmen Sie die Rolle zusätzlich je System.
+  fehler: Oft wird nur «Nutzer» angegeben, obwohl das Unternehmen KI in eigene Produkte einbaut. Auditoren gleichen die Rollen mit dem Inventar ab.
+  felder:
+    organisation.rollenIso:
+      label: Rollen
+      hilfe: Eine Zeile je Rolle.
+    organisation.rollenIso.rolle:
+      label: Rolle
+      hilfe: Die Begriffe stammen aus ISO/IEC 22989.
+    organisation.rollenIso.bemerkung:
+      label: Wofür
+      hilfe: z. B. «[[g:anbieter]] für die Wartungsprognose in unseren Maschinen».
+E2-parteien:
+  titel: Interessierte Parteien
+  frage: Wer hat Erwartungen an Ihren Umgang mit KI und welche davon nehmen Sie auf?
+  warum: Kunden, Mitarbeitende, Behörden oder Lieferanten stellen Anforderungen, etwa aus Verträgen oder Gesetzen. Die Norm will, dass Sie je Anforderung entscheiden, ob Ihr Managementsystem sie aufnimmt.
+  fehler: Parteien ohne Anforderungen oder Anforderungen ohne Entscheid sind ein häufiger Befund. Auditoren wollen je Anforderung ein «ja» oder «nein» mit Begründung sehen.
+  felder:
+    name:
+      label: Partei
+      hilfe: z. B. «Kunden Automobilindustrie», «Mitarbeitende», «Personalkommission».
+    art:
+      label: Intern oder extern
+      hilfe: Intern sind z. B. Mitarbeitende und Geschäftsleitung.
+    anforderungen:
+      label: Anforderungen
+      hilfe: Eine Zeile je Erwartung.
+    anforderungen.text:
+      label: Anforderung
+      hilfe: z. B. «Keine Kundenzeichnungen in öffentliche KI-Dienste».
+    anforderungen.quelle:
+      label: Quelle
+      hilfe: Woher die Anforderung stammt.
+    anforderungen.adressiert:
+      label: Nimmt das AIMS sie auf?
+      hilfe: Ja, nein oder noch offen, je nachdem, ob das [[g:aims|AIMS]] die Anforderung aufnimmt. Offene Einträge meldet die Prüfung.
+    anforderungen.begruendung:
+      label: Begründung
+      hilfe: Vor allem bei «nein» nötig.
+E2-grenzen:
+  titel: Geltungsbereich
+  frage: Welche Teile Ihres Unternehmens umfasst das KI-Managementsystem?
+  warum: Der [[g:geltungsbereich]] legt fest, worauf sich das Zertifikat bezieht. Er stützt sich auf Kontext und Anforderungen und nennt Organisation, Standorte und Technik.
+  fehler: Ein zu enger Geltungsbereich, der heikle KI-Systeme ausklammert, fällt im Audit auf. Auditoren prüfen, ob alle KI-Systeme aus dem Inventar drin sind oder begründet fehlen.
+  felder:
+    organisation.geltungsbereich.beschreibung:
+      label: Geltungsbereich in einem Satz
+      hilfe: z. B. «Entwicklung, Einkauf und Nutzung von KI-Systemen in allen Bereichen der Muster Maschinenbau AG und ihrer Vertriebsgesellschaft».
+    organisation.geltungsbereich.grenzenOrganisation:
+      label: Organisatorische Grenzen
+      hilfe: Welche Gesellschaften und Abteilungen dazugehören.
+    organisation.geltungsbereich.grenzenStandorte:
+      label: Standorte
+      hilfe: Welche Standorte dazugehören.
+    organisation.geltungsbereich.grenzenTechnik:
+      label: Technische Grenzen
+      hilfe: z. B. «alle KI-Systeme im Inventar, auch in Produkten; Produktionsnetz (OT) eingeschlossen».
+    organisation.geltungsbereich.keineAusschluesseBestaetigt:
+      label: "Keine Ausschlüsse"
+      hilfe: "Bestätigen Sie ausdrücklich, dass nichts aus dem Geltungsbereich ausgenommen ist. Sonst erfassen Sie Ausschlüsse mit Begründung."
+E2-schnittstellen:
+  titel: Schnittstellen und Ausschlüsse
+  frage: Wo berührt das Managementsystem andere Bereiche oder Firmen, und was schliessen Sie aus?
+  warum: Schnittstellen zeigen, wo Verantwortung übergeben wird, etwa an einen IT-Dienstleister oder die Muttergesellschaft. Ausschlüsse sind erlaubt, wenn sie begründet sind und die Wirksamkeit nicht schwächen.
+  fehler: Ausschlüsse ohne Begründung oder mit «nicht relevant» genügen nicht. Auditoren wollen verstehen, warum der Ausschluss vertretbar ist.
+  felder:
+    organisation.geltungsbereich.schnittstellen:
+      label: Schnittstellen
+      hilfe: z. B. «IT-Betrieb durch externen Partner, Datenschutz durch externe Datenschutzverantwortliche, HR-Software als Cloud-Dienst».
+    organisation.geltungsbereich.ausschluesse:
+      label: Ausschlüsse
+      hilfe: Leer lassen, wenn es keine gibt.
+    organisation.geltungsbereich.ausschluesse.was:
+      label: Was ist ausgeschlossen
+      hilfe: z. B. «Tochtergesellschaft in Polen».
+    organisation.geltungsbereich.ausschluesse.begruendung:
+      label: Begründung
+      hilfe: z. B. «nutzt keine KI und hat eigene IT; Überprüfung 2027».
+E2-prozesse:
+  titel: Prozesse des Managementsystems
+  frage: Welche Abläufe gehören zu Ihrem KI-Managementsystem?
+  warum: Die Norm verlangt, dass Sie die Prozesse des Managementsystems festlegen und wissen, wie sie zusammenwirken. Daraus entsteht die Prozesslandkarte im [[g:aims|AIMS]]-Überblick.
+  fehler: Fehlt ein Ablauf wie die Freigabe neuer KI-Werkzeuge, entsteht [[g:schatten-ki]]. Auditoren lassen sich einen Ablauf an einem Beispiel zeigen.
+  felder:
+    meta.gefuehrt.antworten.aimsProzesse:
+      label: Abläufe
+      hilfe: Alle vorgeschlagenen Abläufe sind für eine Zertifizierung üblich. Abwählen nur mit gutem Grund. Eigner, Reife und Ablauf je Prozess pflegen Sie im Bereich Prozesse; die hier gewählten Abläufe übernimmt er als Vorschlag. Abläufe, die hier fehlen, legen Sie dort als eigene Prozesse an (PE-01 und folgende).
+E2-freigabe:
+  titel: Freigabe des Geltungsbereichs
+  frage: Hat die Geschäftsleitung den Geltungsbereich freigegeben?
+  warum: Der Geltungsbereich bindet das Unternehmen gegenüber der [[g:zertifizierungsstelle]]. Deshalb gibt ihn die Geschäftsleitung frei.
+  fehler: Wird der Geltungsbereich später geändert, braucht es eine neue Freigabe. Auditoren vergleichen die freigegebene Fassung mit dem, was im Zertifikatsantrag steht.
+  felder:
+    organisation.geltungsbereich.freigabe:
+      label: Freigabe
+      hilfe: Person der Geschäftsleitung und Datum.

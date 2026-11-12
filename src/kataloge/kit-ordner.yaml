@@ -1,0 +1,12 @@
+# Ordnerstruktur des ausgelieferten ZIP (massgebend für Build, Startseite, Leitfaden, Links)
+# modul: Modul EU AI Act; modul_nist: Modul NIST AI RMF (Vorlagen N-01 bis N-04, Dokumente mit ordner: modul_nist)
+wurzel: KMU-CIO_ISO42001-Starter-Kit_v{version}
+sprachen:
+  de: { ordner: DE, leitfaden: 00_Leitfaden, vorlagen: 01_Vorlagen, modul: 02_Modul_EU-AI-Act, modul_nist: 02_Modul_NIST-AI-RMF, integration: 03_ISO27001-Integration, beispiele: 04_Beispiele }
+  en: { ordner: EN, leitfaden: 00_Guide, vorlagen: 01_Templates, modul: 02_Module_EU-AI-Act, modul_nist: 02_Module_NIST-AI-RMF, integration: 03_ISO27001-Integration, beispiele: 04_Examples }
+skill: KI-Assistent_AI-Assistant
+werkzeug: AIMS-Manager
+rechtstexte: Rechtstexte_Legal-Texts/EU-AI-Act
+# NIST-Dokumente (freiwilliges Rahmenwerk, kein Recht; gemeinfreie US-Regierungswerke), nie im Repo
+rechtstexte_nist: Rechtstexte_Legal-Texts/NIST-AI-RMF
+lizenz: LIZENZ_LICENCE

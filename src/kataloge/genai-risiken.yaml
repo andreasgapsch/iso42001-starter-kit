@@ -1,0 +1,59 @@
+# Vorschlagsliste «GenAI-Sicherheit» (D-07, Blatt «Vorschläge GenAI-Sicherheit»; später Geführter Modus E6).
+# GS-01 bis GS-10 lehnen sich an die Themen der OWASP Top 10 for LLM Applications 2026 an, GS-11 bis GS-16 an die
+# Themen der OWASP Top 10 for Agentic Applications 2026 (handelnde KI); GS-17 bis GS-22 sind eigene Zusatzvorschläge
+# zu Datenrisiken ohne OWASP-Verweis. Eigene Beschreibungen und eigene Zuordnungen von KMU-CIO, nicht von OWASP geprüft.
+# Von den OWASP-Dokumenten (CC BY-SA 4.0) werden nur die IDs als Verweis genannt, keine Texte, Tabellen oder
+# Zuordnungen übernommen. Die ASI-Nummern sind an der Seite des Herausgebers geprüft (quelle_agenten.geprueft).
+# Felder:
+#   id          eigene Kennung GS-01 bis GS-22
+#   bereich     llm (Anwendung mit Sprachmodell) | agenten (handelnde KI) | daten (Zusatzvorschlag Datenrisiken)
+#   owasp       Verweis auf den Eintrag der OWASP-Liste (ID:Jahr); fehlt bei eigenen Zusatzvorschlägen
+#   nur_handelnd  true: Vorschlag im Geführten Modus nur für Systeme mit Handlungsbefugnis ab «bereitet vor» oder mit
+#               Gedächtnis über Sitzungen (KiSystem.handlungsbefugnis, KiSystem.gedaechtnis); die leere Vorlage D-07 zeigt alle
+#   nist_600_1  verwandte Risiken generativer KI nach NIST AI 600-1 (IDs aus src/nist-rmf/genai-risiken.yaml); mit Modul
+#               NIST AI RMF schlägt das Werkzeug deren Zusatz-Controls (RMF-Gxx) beim übernommenen Risiko vor
+#   quelle      Risikoquelle (Wert der Optionsgruppe risikoquelle, src/gefuehrt/optionen.yaml), Vorschlag für Risiko.quelle
+#   ebenen      vorgeschlagene Folgenebenen (Risiko.ebenen)
+#   controls    vorgeschlagene Controls aus ISO/IEC 42001 Anhang A (eigene fachliche Einschätzung)
+#   zielgruppe  betreiber: relevant schon für reine Nutzung (Copilot, Chat-Dienste, SaaS);
+#               entwickler: erst bei eigenem Chatbot, eigener Anwendung oder eigener Entwicklung
+# Texte: src/i18n/<sprache>/genai-risiken.yaml (titel, ursache, folge, massnahmen)
+quelle:
+  titel: "OWASP Top 10 for LLM Applications 2026"
+  herausgeber: "OWASP GenAI Security Project"
+  url: "https://genai.owasp.org"
+  lizenz: "CC BY-SA 4.0"
+  stand: "2026-08"
+  geprueft: "2026-10-21"
+quelle_agenten:
+  titel: "OWASP Top 10 for Agentic Applications 2026"
+  herausgeber: "OWASP GenAI Security Project"
+  url: "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+  lizenz: "CC BY-SA 4.0"
+  stand: "2025-12"
+  geprueft: "2026-10-21"
+risiken:
+  - { id: GS-01, bereich: llm, owasp: "LLM01:2026", quelle: sicherheit, ebenen: [organisation, individuen], controls: [A.6.2.4, A.6.2.6, A.9.2, A.9.4, A.10.3], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-sicherheit, gai-integritaet] }
+  - { id: GS-02, bereich: llm, owasp: "LLM02:2026", quelle: vertraulichkeit, ebenen: [organisation, individuen], controls: [A.4.3, A.7.4, A.9.2, A.10.3], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-datenschutz, gai-sicherheit] }
+  - { id: GS-03, bereich: llm, owasp: "LLM03:2026", quelle: automatisierung, ebenen: [organisation, individuen], controls: [A.3.2, A.6.2.5, A.6.2.8, A.9.2, A.9.4], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-sicherheit, gai-mensch-ki] }
+  - { id: GS-04, bereich: llm, owasp: "LLM04:2026", quelle: lieferant, ebenen: [organisation], controls: [A.4.4, A.6.2.6, A.10.2, A.10.3], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-lieferkette] }
+  - { id: GS-05, bereich: llm, owasp: "LLM05:2026", quelle: daten, ebenen: [organisation, individuen], controls: [A.6.2.4, A.7.3, A.7.4, A.7.5], zielgruppe: [entwickler], nist_600_1: [gai-integritaet, gai-sicherheit] }
+  - { id: GS-06, bereich: llm, owasp: "LLM06:2026", quelle: sicherheit, ebenen: [organisation], controls: [A.4.5, A.6.2.6, A.6.2.8, A.10.3], zielgruppe: [entwickler], nist_600_1: [gai-sicherheit] }
+  - { id: GS-07, bereich: llm, owasp: "LLM07:2026", quelle: modell, ebenen: [organisation, individuen], controls: [A.4.6, A.6.2.4, A.8.2, A.9.3, A.9.4], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-konfabulation, gai-mensch-ki] }
+  - { id: GS-08, bereich: llm, owasp: "LLM08:2026", quelle: vertraulichkeit, ebenen: [organisation], controls: [A.6.2.2, A.6.2.4, A.9.2], zielgruppe: [entwickler], nist_600_1: [gai-sicherheit] }
+  - { id: GS-09, bereich: llm, owasp: "LLM09:2026", quelle: vertraulichkeit, ebenen: [organisation, individuen], controls: [A.4.3, A.7.4, A.7.5, A.10.3], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-datenschutz, gai-sicherheit] }
+  - { id: GS-10, bereich: llm, owasp: "LLM10:2026", quelle: sicherheit, ebenen: [organisation], controls: [A.6.2.2, A.6.2.4, A.6.2.8], zielgruppe: [entwickler], nist_600_1: [gai-sicherheit] }
+  # Handelnde KI (Themen der OWASP Top 10 for Agentic Applications 2026)
+  - { id: GS-11, bereich: agenten, owasp: "ASI06:2026", nur_handelnd: true, quelle: sicherheit, ebenen: [organisation, individuen], controls: [A.6.2.4, A.6.2.6, A.6.2.8, A.7.4, A.9.4], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-sicherheit, gai-integritaet] }
+  - { id: GS-12, bereich: agenten, owasp: "ASI07:2026", nur_handelnd: true, quelle: sicherheit, ebenen: [organisation], controls: [A.6.2.2, A.6.2.4, A.6.2.8, A.10.3], zielgruppe: [entwickler], nist_600_1: [gai-sicherheit] }
+  - { id: GS-13, bereich: agenten, owasp: "ASI08:2026", nur_handelnd: true, quelle: automatisierung, ebenen: [organisation, individuen], controls: [A.6.2.2, A.6.2.5, A.6.2.6, A.9.2], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-sicherheit, gai-lieferkette] }
+  - { id: GS-14, bereich: agenten, owasp: "ASI09:2026", nur_handelnd: true, quelle: fehlanwendung, ebenen: [organisation, individuen], controls: [A.4.6, A.8.2, A.9.3, A.9.4], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-mensch-ki] }
+  - { id: GS-15, bereich: agenten, owasp: "ASI03:2026", nur_handelnd: true, quelle: automatisierung, ebenen: [organisation, individuen], controls: [A.3.2, A.6.2.5, A.6.2.8, A.9.2, A.9.4], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-sicherheit] }
+  - { id: GS-16, bereich: agenten, owasp: "ASI04:2026", nur_handelnd: true, quelle: lieferant, ebenen: [organisation], controls: [A.4.4, A.6.2.4, A.10.2, A.10.3], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-lieferkette, gai-sicherheit] }
+  # Zusatzvorschläge Datenrisiken (eigene Themen des Kits, ohne OWASP-Verweis)
+  - { id: GS-17, bereich: daten, quelle: vertraulichkeit, ebenen: [organisation, individuen], controls: [A.4.3, A.7.2, A.7.5, A.9.2], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-datenschutz] }
+  - { id: GS-18, bereich: daten, quelle: vertraulichkeit, ebenen: [organisation, individuen], controls: [A.6.2.8, A.7.4, A.10.3], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-datenschutz] }
+  - { id: GS-19, bereich: daten, quelle: lieferant, ebenen: [organisation, individuen], controls: [A.7.3, A.10.2, A.10.3], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-datenschutz, gai-lieferkette] }
+  - { id: GS-20, bereich: daten, quelle: daten, ebenen: [individuen], controls: [A.7.4, A.7.5, A.7.6], zielgruppe: [entwickler], nist_600_1: [gai-datenschutz] }
+  - { id: GS-21, bereich: daten, quelle: vertraulichkeit, ebenen: [organisation, individuen], controls: [A.6.2.4, A.7.4, A.9.2, A.10.3], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-datenschutz, gai-sicherheit] }
+  - { id: GS-22, bereich: daten, quelle: daten, ebenen: [organisation, individuen], controls: [A.7.4, A.6.2.6, A.9.3], zielgruppe: [betreiber, entwickler], nist_600_1: [gai-konfabulation, gai-integritaet] }

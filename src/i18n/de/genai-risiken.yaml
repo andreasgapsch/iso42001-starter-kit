@@ -1,0 +1,201 @@
+# Vorschlagsliste GenAI-Sicherheit (Katalog src/kataloge/genai-risiken.yaml): eigene Texte, keine Übersetzung der OWASP-Liste.
+# titel: Kurztitel für das Risikoregister; ursache und folge: Vorschlag für die Spalten des Registers;
+# massnahmen: typische bestehende oder mögliche Massnahmen (Gedankenstütze, nicht abschliessend)
+titel_blatt: "Vorschläge GenAI-Sicherheit"
+hinweise:
+  - "Gedankenstütze für Systeme mit generativer KI (Texte, Bilder, Code): typische Sicherheits- und Datenrisiken. GS-01 bis GS-10 betreffen jede Anwendung mit Sprachmodell, GS-11 bis GS-16 nur handelnde KI (Agenten, Konnektoren, Gedächtnis), GS-17 bis GS-22 sind Zusatzvorschläge zu Daten. Übernehmen Sie passende Einträge als eigenes Risiko in das Blatt «Risikoregister», ordnen Sie das KI-System zu und bewerten Sie Wahrscheinlichkeit und Auswirkung selbst."
+  - "Spalte «Zielgruppe»: Für die reine Nutzung von Diensten (Assistent in der Bürosoftware, Chat-Dienst, Software als Dienst) genügen meist die Einträge mit «Betreiber». Die übrigen werden wichtig, sobald ein eigener Chatbot, eine eigene Anwendung oder eine eigene Entwicklung dazukommt."
+  - "Die Themen von GS-01 bis GS-10 lehnen sich an die OWASP Top 10 for LLM Applications 2026 an, jene von GS-11 bis GS-16 an die OWASP Top 10 for Agentic Applications 2026 (OWASP GenAI Security Project, genai.owasp.org, Lizenz CC BY-SA 4.0). Beschreibungen, Massnahmen und Zuordnungen zu ISO/IEC 42001 und NIST AI 600-1 sind eigene Formulierungen und nicht von OWASP geprüft."
+spalten: [ID, Titel, Risikoquelle, Ursache, Folge, Typische Massnahmen, Vorgeschlagene Controls, Zielgruppe, Verweis OWASP, Bezug NIST AI 600-1]
+# Verweis bei Zusatzvorschlägen ohne OWASP-Eintrag
+eigener_vorschlag: "eigener Vorschlag"
+zielgruppe:
+  betreiber: Betreiber
+  entwickler: Entwicklung
+GS-01:
+  titel: "Versteckte Anweisungen steuern den KI-Assistenten"
+  ursache: "Das Modell trennt Anweisungen nicht sicher von Inhalten. Text in Chats, E-Mails, Webseiten, Dokumenten oder Werkzeugantworten kann sein Verhalten ändern."
+  folge: "Falsche Antworten, Abfluss interner Daten oder ungewollte Aktionen mit den Rechten der Nutzenden."
+  massnahmen:
+    - "Zugriffe des Assistenten auf E-Mail, Ablagen und Konnektoren auf das Nötige beschränken"
+    - "Aktionen mit Aussenwirkung nur nach Bestätigung durch einen Menschen"
+    - "Fremde Inhalte nicht in Werkzeugen mit Zugriff auf vertrauliche Daten verarbeiten, ausser freigegeben"
+    - "Missbrauchsfälle in der Prüfung vor dem Einsatz, Wiederholung nach Modellwechsel"
+    - "Auffälliges Verhalten über den Meldeweg melden"
+GS-02:
+  titel: "Vertrauliche Daten gelangen über die KI an Unbefugte"
+  ursache: "Zu viele Daten liegen in Reichweite des Modells, z. B. durch zu breite Freigaben in Ablagen, oder Eingaben werden beim Anbieter weiterverwendet."
+  folge: "Verletzung von Geheimhaltung, Datenschutz oder Kundenverträgen; Verlust von Know-how."
+  massnahmen:
+    - "Datenklassen und verbotene Eingaben in der Nutzungsrichtlinie"
+    - "Freigaben in Ablagen bereinigen, bevor ein Assistent sie durchsucht"
+    - "Vertrag: kein Training mit unseren Daten, Aufbewahrung und Löschung geregelt"
+    - "Protokolle und Zwischenergebnisse so schützen wie die Quelldaten"
+GS-03:
+  titel: "KI handelt mit zu weit gehenden Rechten"
+  ursache: "Ein Assistent oder Agent hat mehr Werkzeuge, Zugriffe oder Befugnisse als für seine Aufgabe nötig und handelt ohne Bestätigung."
+  folge: "Ungewollte E-Mails, Buchungen, Bestellungen oder Änderungen an Daten, die schwer rückgängig zu machen sind."
+  massnahmen:
+    - "Handlungsbefugnis und Zugriffe je System im Inventar festhalten"
+    - "Erweiterungen, Konnektoren und Agenten nur nach Freigabe"
+    - "Eigene Identität und minimale Rechte je Agent, Notstopp und Entzug der Rechte"
+    - "Protokoll jeder Aktion mit Auslöser und Freigabe"
+GS-04:
+  titel: "Unsichere Lieferkette bei Modellen, Erweiterungen und Komponenten"
+  ursache: "Modelle, Erweiterungen, Bibliotheken oder Dienste Dritter ändern sich unangekündigt, haben Schwachstellen oder unklare Herkunft und Lizenz."
+  folge: "Schwachstellen, verändertes Verhalten nach Updates oder Rechtsverletzungen, ohne dass wir es bemerken."
+  massnahmen:
+    - "Modell und Version je System im Inventar führen"
+    - "Lieferanten vor dem Einsatz prüfen, Ankündigung von Modellwechseln vertraglich regeln"
+    - "Nach einem Modellwechsel die Tests aus der Prüfung vor dem Einsatz wiederholen"
+    - "Nur Erweiterungen aus geprüften Quellen zulassen"
+GS-05:
+  titel: "Manipulierte Daten in Wissensbasis oder Training"
+  ursache: "Jemand verändert Einträge in der Wissensbasis, in Trainings- oder Testdaten absichtlich oder schleust eigene Inhalte ein."
+  folge: "Das System gibt gezielt falsche Antworten oder Empfehlungen, oft unbemerkt."
+  massnahmen:
+    - "Schreibrechte auf Wissensbasis und Trainingsdaten nur für Pflegende, Änderungen nachvollziehbar"
+    - "Herkunft der Daten festhalten, Änderungen freigeben"
+    - "Stichproben der Antworten gegen die Quelle"
+GS-06:
+  titel: "Missbrauch treibt Verbrauch und Kosten in die Höhe"
+  ursache: "Öffentlich erreichbare oder schlecht begrenzte Dienste lassen sehr viele oder sehr lange Anfragen zu."
+  folge: "Hohe Rechnungen bei Abrechnung nach Verbrauch, Ausfall des Dienstes für die eigentlichen Nutzenden."
+  massnahmen:
+    - "Kostendach und Begrenzung je Konto statt nur Warnung"
+    - "Länge von Eingaben und Antworten begrenzen"
+    - "Verbrauch und Kosten monatlich auswerten"
+GS-07:
+  titel: "Falsche, aber überzeugende Ergebnisse werden übernommen"
+  ursache: "Generative KI erzeugt plausible, aber falsche Angaben, Quellen oder Code; Nutzende vertrauen dem Ergebnis ohne Prüfung."
+  folge: "Fehlentscheide, falsche Auskünfte an Kunden, fehlerhafter oder unsicherer Code."
+  massnahmen:
+    - "Ergebnisse vor der Verwendung prüfen, Regel in der Nutzungsrichtlinie"
+    - "Schulung zu typischen Fehlern und blindem Vertrauen"
+    - "Quellenangaben verlangen, wo möglich; Korrekturquote messen"
+    - "KI-Code und vorgeschlagene Bibliotheken vor der Ausführung prüfen"
+GS-08:
+  titel: "Systemanweisungen und Einstellungen werden offengelegt"
+  ursache: "Anweisungen und Einstellungen eines Assistenten lassen sich durch geschickte Fragen auslesen."
+  folge: "Interne Regeln, Schutzmassnahmen oder darin abgelegte Zugangsdaten werden bekannt und erleichtern Angriffe."
+  massnahmen:
+    - "Keine Passwörter, Schlüssel oder internen Details in Anweisungen und Einstellungen"
+    - "Schutzregeln in der Anwendung umsetzen, nicht nur in der Anweisung"
+    - "Testfall «Anweisung ausgeben» in der Prüfung vor dem Einsatz"
+GS-09:
+  titel: "Wissenssuche zeigt Inhalte, die die Person nicht sehen darf"
+  ursache: "Die Suche über Dokumente oder Vektoren prüft die Berechtigung nicht oder zu spät; Suchindex und Sicherungen sind schlechter geschützt als die Quellen."
+  folge: "Fremde Personendaten, Offerten oder vertrauliche Dokumente erscheinen in Antworten."
+  massnahmen:
+    - "Berechtigung bei der Suche prüfen, nicht erst bei der Anzeige"
+    - "Suchindex so vertraulich behandeln wie die Quelldaten und mit ihnen löschen"
+    - "Freigaben in Ablagen regelmässig prüfen"
+GS-10:
+  titel: "KI-Ausgaben werden ungeprüft weiterverarbeitet"
+  ursache: "Andere Systeme übernehmen Ausgaben der KI direkt, z. B. als Code, Befehl, Link, Bild oder HTML."
+  folge: "Schadcode wird ausgeführt, Daten fliessen über Links oder Bilder ab, nachgelagerte Systeme werden gestört."
+  massnahmen:
+    - "Ausgaben vor der Weitergabe prüfen und maskieren"
+    - "Externe Bilder und Links in Antworten nicht automatisch laden"
+    - "Feste Formate für Ausgaben, die andere Systeme verwenden"
+GS-11:
+  titel: "Gedächtnis oder Kontext eines Agenten wird vergiftet"
+  ursache: "Ein Assistent speichert Notizen, Vorlieben oder Zwischenergebnisse über die Sitzung hinaus oder übernimmt Inhalte in seinen Arbeitskontext. Eine präparierte E-Mail, ein Dokument oder eine Eingabe legt dort falsche Angaben oder Anweisungen ab."
+  folge: "Das System handelt auch Tage später noch nach der eingeschleusten Angabe, oft ohne dass jemand den Zusammenhang erkennt."
+  massnahmen:
+    - "Gedächtnis über Sitzungen nur nach Freigabe einschalten und im Inventar festhalten"
+    - "Gespeicherte Einträge einsehbar, löschbar und regelmässig geprüft"
+    - "Inhalte Dritter nicht ungeprüft ins Gedächtnis übernehmen"
+    - "Prüffall: Eintrag aus einer Sitzung wirkt nicht in einer fremden Sitzung"
+GS-12:
+  titel: "Agenten tauschen Nachrichten ungeschützt aus"
+  ursache: "Mehrere Agenten oder Automationen geben sich Aufträge und Ergebnisse weiter, ohne Absender, Inhalt und Berechtigung zu prüfen."
+  folge: "Ein gefälschter oder veränderter Auftrag wird ausgeführt, als käme er von einem vertrauenswürdigen Agenten."
+  massnahmen:
+    - "Jeder Agent mit eigener Identität; Aufträge nur von bekannten Absendern annehmen"
+    - "Nachrichten zwischen Agenten verschlüsselt und nachvollziehbar protokolliert"
+    - "Weitergegebene Aufträge auf die Rechte des Empfängers begrenzen"
+GS-13:
+  titel: "Ein Fehler setzt sich über verbundene Agenten und Automationen fort"
+  ursache: "Agenten, Automationen und Schnittstellen sind hintereinander geschaltet; ein falsches Ergebnis oder eine falsche Aktion wird ohne Prüfung zum Eingang des nächsten Schritts."
+  folge: "Aus einem kleinen Fehler entstehen viele falsche Buchungen, E-Mails oder Änderungen, bevor jemand eingreift."
+  massnahmen:
+    - "Abläufe mit mehreren Schritten aufzeichnen und Abhängigkeiten im Inventar festhalten"
+    - "Grenzen je Lauf: Anzahl Aktionen, Beträge, Empfänger"
+    - "Zwischenstopp mit Bestätigung vor Schritten mit grosser Wirkung"
+    - "Notstopp für die ganze Kette, getestet"
+GS-14:
+  titel: "Menschen bestätigen überzeugend begründete Aktionen eines Agenten ohne Prüfung"
+  ursache: "Der Agent legt eine Aktion mit glaubwürdiger Begründung zur Bestätigung vor; die Person vertraut der Erklärung, statt Empfänger, Betrag oder Inhalt selbst zu prüfen."
+  folge: "Die vorgesehene Bestätigung schützt nicht mehr: Schädliche oder manipulierte Aktionen laufen mit menschlicher Freigabe durch."
+  massnahmen:
+    - "Bestätigungsdialog zeigt die Aktion selbst (Empfänger, Betrag, Änderung), nicht nur die Begründung"
+    - "Schulung: Begründungen eines Agenten sind kein Beweis"
+    - "Vier-Augen-Prinzip für Aktionen mit grosser Wirkung"
+    - "Stichproben bestätigter Aktionen im Betrieb"
+GS-15:
+  titel: "Agent nutzt oder delegiert mehr Rechte als die auslösende Person hat"
+  ursache: "Der Agent arbeitet mit einem Dienstkonto, mit dauerhaften Zugängen oder gibt Aufgaben samt Rechten an Unteragenten weiter; die Rechte der Person, die ihn auslöst, sind nicht die Grenze."
+  folge: "Personen erreichen über den Agenten Daten oder Aktionen, die sie selbst nicht dürften; ein gestohlener Zugang wirkt weit über die Aufgabe hinaus."
+  massnahmen:
+    - "Agent handelt mit den Rechten der auslösenden Person oder mit eigener, knapper Identität"
+    - "Kurzlebige Zugänge, die mit der Sitzung enden"
+    - "Delegation an Unteragenten nur mit gleichen oder kleineren Rechten"
+    - "Rechte der Agenten regelmässig prüfen und entziehen, wenn nicht mehr nötig"
+GS-16:
+  titel: "Werkzeugbeschreibung oder Konnektor eines Dritten ist manipuliert"
+  ursache: "Ein Agent bindet Werkzeuge, Werkzeugserver oder Konnektoren Dritter ein. Deren Beschreibung enthält versteckte Anweisungen, oder eine neue Version verhält sich anders als die geprüfte."
+  folge: "Der Agent folgt Anweisungen des Dritten, gibt Daten weiter oder ruft andere Werkzeuge auf, als vorgesehen."
+  massnahmen:
+    - "Nur freigegebene Werkzeugserver und Konnektoren aus bekannter Quelle, mit fester Version"
+    - "Beschreibungen und Berechtigungen vor der Freigabe prüfen, nach jedem Update erneut"
+    - "Neue Werkzeuge und Konnektoren sind ein Auslöser für die Neubeurteilung (D-12)"
+    - "Prüffrage zu Werkzeugservern und Konnektoren an den Anbieter (D-16)"
+GS-17:
+  titel: "Ableitungen erben Klassifikation und Löschung der Quelldaten nicht"
+  ursache: "Zusammenfassungen, Abschriften von Sitzungen, Suchindex, Embeddings, Zwischenspeicher, Agentenprotokolle oder Trainingsdaten entstehen aus vertraulichen Quellen, werden aber breiter geteilt, länger aufbewahrt oder bei der Löschung vergessen."
+  folge: "Vertrauliche Inhalte und Personendaten bleiben nach der Löschung der Quelle verfügbar oder erreichen Personen ohne Berechtigung; Löschbegehren werden unvollständig erfüllt."
+  massnahmen:
+    - "Regel: Ableitungen erhalten Datenklasse, Zugriff, Aufbewahrung und Löschung der Quelle (D-13)"
+    - "Löschbegehren umfassen alle Ableitungen; Löschprobe in der Prüfung"
+    - "Ablage von Abschriften und Zusammenfassungen festlegen"
+GS-18:
+  titel: "Protokolle und Fehlermitschnitte enthalten Gesprächsinhalte"
+  ursache: "Eigene Protokolle, Fehlersuche oder Telemetrie des Anbieters zeichnen Eingaben und Antworten vollständig auf; diese Aufzeichnungen sind schlechter geschützt oder länger gespeichert als die Daten selbst."
+  folge: "Vertrauliche Inhalte und Personendaten liegen in Protokollsystemen, bei Dienstleistern oder in Supportfällen, oft ohne dass jemand davon weiss."
+  massnahmen:
+    - "Inhalte nur protokollieren, wo nötig; Mitschnitte zur Fehlersuche befristet und mit Freigabe"
+    - "Protokolle mit Inhalten wie die Quelldaten klassifizieren und schützen"
+    - "Beim Anbieter klären, welche Telemetrie Inhalte enthält und wie lange sie liegt (D-16)"
+GS-19:
+  titel: "Menschliche Prüfer oder Annotatoren sehen unsere Inhalte"
+  ursache: "Der Anbieter oder ein beauftragter Dienstleister lässt Gespräche, Dateien oder Ergebnisse durch Menschen prüfen, beschriften oder zur Fehlersuche einsehen."
+  folge: "Vertrauliche Inhalte und Personendaten gelangen an Personen ausserhalb unserer Kontrolle, möglicherweise im Ausland."
+  massnahmen:
+    - "Prüffrage zur Einsicht des Anbieters in Inhalte (D-16)"
+    - "Vertragsklausel: Einsicht nur zweckgebunden, protokolliert und mit Vertraulichkeit"
+    - "Funktionen zur Rückmeldung an den Anbieter bewusst ein- oder ausschalten"
+GS-20:
+  titel: "Synthetische oder anonymisierte Daten lassen Rückschlüsse auf Personen zu"
+  ursache: "Aus echten Daten erzeugte synthetische Datensätze oder schwach anonymisierte Daten enthalten noch seltene Merkmale oder Kombinationen, die auf einzelne Personen zurückführen."
+  folge: "Personendaten werden ohne Rechtsgrundlage genutzt oder weitergegeben, obwohl sie als unbedenklich galten."
+  massnahmen:
+    - "Verfahren der Anonymisierung oder Erzeugung im Datenblatt festhalten (D-13)"
+    - "Prüfung auf Rückidentifizierung vor der Weitergabe"
+    - "Synthetische Daten gleich behandeln wie die Quelle, bis die Prüfung bestanden ist"
+GS-21:
+  titel: "Inhalte einer Person oder eines Kunden erscheinen in einer fremden Sitzung"
+  ursache: "Zwischenspeicher, Gedächtnis, gemeinsame Arbeitsbereiche oder die Trennung der Mandanten beim Anbieter halten Sitzungen, Personen oder Kunden nicht sauber auseinander."
+  folge: "Fremde Offerten, Personendaten oder Kundendaten erscheinen in Antworten an Unbefugte."
+  massnahmen:
+    - "Prüffrage zur Trennung von Zwischenspeichern und Gedächtnis (D-16)"
+    - "Prüffall: Person A erhält keine Inhalte von Person B"
+    - "Gemeinsame Arbeitsbereiche und geteilte Assistenten nur mit festgelegtem Nutzerkreis"
+GS-22:
+  titel: "Veralteter Suchindex liefert plausible, aber falsche Antworten"
+  ursache: "Der Suchindex einer Wissensbasis wird nicht im gleichen Takt wie die Quellen nachgeführt; gelöschte oder ersetzte Dokumente bleiben auffindbar."
+  folge: "Das System beantwortet Fragen überzeugend mit überholten Preisen, Teilenummern oder Regeln; gelöschte Inhalte tauchen wieder auf."
+  massnahmen:
+    - "Index im gleichen Ablauf wie die Quellen aktualisieren und löschen"
+    - "Stand des Index anzeigen oder protokollieren"
+    - "Stichproben der Antworten gegen die aktuelle Quelle"

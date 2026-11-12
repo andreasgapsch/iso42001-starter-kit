@@ -1,0 +1,181 @@
+Hier ist die aktualisierte Projektdatei der Muster Treuhand AG. Ich habe ein zweites KI-System und ein erstes Risiko ergänzt.
+
+```json
+{
+  "schemaVersion": 1,
+  "kitVersion": "1.0.0",
+  "meta": {
+    "projektId": "3f6c2a9e-8b1d-4e7a-9c55-0d2f7b41a6e3",
+    "erstellt": "2026-10-19T09:00:00Z",
+    "geaendert": "2026-10-19T09:00:00Z",
+    "dokumentSprache": "de",
+    "mitIsms": false,
+    "ismsZertifiziert": false,
+    "modulAiAct": false,
+    "gefuehrt": {
+      "aktuelleEtappe": "E0",
+      "etappen": {},
+      "antworten": {}
+    },
+    "checklisten": {}
+  },
+  "organisation": {
+    "name": "Muster Treuhand AG",
+    "branche": "Treuhand",
+    "mitarbeitende": 40,
+    "standorte": "Bern",
+    "euBezug": {
+      "kundenEu": false,
+      "outputEu": false,
+      "niederlassungEu": false
+    },
+    "entwickeltKi": false,
+    "verkauftKiProdukte": false,
+    "kontext": {
+      "themen": [],
+      "klimawandelRelevant": "offen",
+      "klimawandelBegruendung": ""
+    },
+    "rollenIso": [],
+    "geltungsbereich": {
+      "beschreibung": "",
+      "grenzenOrganisation": "",
+      "grenzenTechnik": "",
+      "grenzenStandorte": "",
+      "schnittstellen": "",
+      "ausschluesse": []
+    },
+    "leitlinie": {
+      "version": "",
+      "grundsaetze": [],
+      "ausnahmeprozess": ""
+    },
+    "risikokriterien": {
+      "zeitraum": "",
+      "wahrscheinlichkeit": [],
+      "auswirkung": [],
+      "akzeptanzBis": 4,
+      "unannehmbarAb": 12,
+      "ausIsmsUebernommen": false
+    }
+  },
+  "personen": [
+    {
+      "id": "P-001",
+      "name": "[[Name]]",
+      "funktion": "Geschäftsleitung",
+      "aimsRollen": [
+        "aims-verantwortung"
+      ]
+    }
+  ],
+  "parteien": [],
+  "rollen": [],
+  "kiSysteme": [
+    {
+      "id": "KI-001",
+      "name": "Microsoft 365 Copilot",
+      "typ": "saas",
+      "beschreibung": "KI-Assistent in Word, Outlook, Teams",
+      "zweck": "Texte entwerfen, zusammenfassen",
+      "fachbereich": "alle",
+      "eigner": "P-001",
+      "personendaten": true,
+      "besondereDaten": false,
+      "betroffene": "Mitarbeitende, Kundschaft (Daten in Mandaten)",
+      "automatisierung": "unterstuetzend",
+      "lebenszyklus": "betrieb",
+      "status": "in-pruefung",
+      "ressourcen": {
+        "daten": "Dokumente und E-Mails im Tenant",
+        "werkzeuge": "Microsoft 365 Copilot",
+        "rechenressourcen": "Microsoft Cloud, Region Schweiz/EU zu prüfen",
+        "personal": "IT-Verantwortliche"
+      },
+      "sensibleNutzung": false,
+      "aiAct": {
+        "rollen": [
+          "betreiber"
+        ],
+        "risikoklasse": "offen",
+        "transparenz": [],
+        "gpai": false,
+        "begruendung": "Annahme: Nutzung unter eigener Verantwortung, kein eigenes Angebot.",
+        "juristischGeprueft": false
+      }
+    },
+    {
+      "id": "KI-002",
+      "name": "DeepL Pro",
+      "typ": "saas",
+      "beschreibung": "KI-Assistent in Word, Outlook, Teams",
+      "zweck": "Übersetzung von Kundenkorrespondenz",
+      "fachbereich": "alle",
+      "eigner": "P-001",
+      "personendaten": true,
+      "besondereDaten": false,
+      "betroffene": "Mitarbeitende, Kundschaft (Daten in Mandaten)",
+      "automatisierung": "unterstuetzend",
+      "lebenszyklus": "betrieb",
+      "status": "freigegeben",
+      "ressourcen": {
+        "daten": "Dokumente und E-Mails im Tenant",
+        "werkzeuge": "Microsoft 365 Copilot",
+        "rechenressourcen": "Microsoft Cloud, Region Schweiz/EU zu prüfen",
+        "personal": "IT-Verantwortliche"
+      },
+      "sensibleNutzung": false,
+      "aiAct": {
+        "rollen": [
+          "betreiber"
+        ],
+        "risikoklasse": "offen",
+        "transparenz": [],
+        "gpai": false,
+        "begruendung": "Annahme: Nutzung unter eigener Verantwortung, kein eigenes Angebot.",
+        "juristischGeprueft": false
+      }
+    }
+  ],
+  "risiken": [
+    {
+      "id": "R-001",
+      "art": "risiko",
+      "titel": "Vertrauliche Mandatsdaten im Prompt",
+      "beschreibung": "",
+      "kiSystem": "KI-001",
+      "quelle": "vertraulichkeit",
+      "ebenen": [
+        "organisation"
+      ],
+      "ursache": "",
+      "folge": "Verletzung des Berufsgeheimnisses",
+      "bestehendeMassnahmen": "",
+      "w": 3,
+      "a": 4,
+      "wNach": null,
+      "aNach": null,
+      "controls": [
+        "A.9.2"
+      ],
+      "massnahmen": [],
+      "status": "offen"
+    }
+  ],
+  "folgenabschaetzungen": [],
+  "controls": [],
+  "eigeneControls": [],
+  "nachweise": [],
+  "dokumente": [],
+  "massnahmen": [],
+  "lieferanten": [],
+  "ziele": [],
+  "kompetenzen": [],
+  "kommunikation": [],
+  "audits": [],
+  "feststellungen": [],
+  "managementbewertungen": []
+}
+```
+
+Speichern Sie die Datei als muster-treuhand.aims.json und öffnen Sie sie im AIMS-Manager.

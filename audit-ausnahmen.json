@@ -1,0 +1,13 @@
+{
+  "hinweis": "Ausnahmen für scripts/pruefen/audit.mts (AF-038). Jede Ausnahme braucht advisory (GHSA-Kennung), paket, grund, ablauf (JJJJ-MM-TT) und erfasst (JJJJ-MM-TT). Abgelaufene oder unvollständige Ausnahmen brechen das Tor.",
+  "ausnahmen": [
+    {
+      "advisory": "GHSA-w5hq-g745-h8pq",
+      "paket": "uuid",
+      "schwere": "moderate",
+      "grund": "Mittlerer Befund über exceljs: fehlende Grenzprüfung in uuid v3, v5 und v6, wenn ein Puffer übergeben wird. Unterhalb der Schwelle high, daher kein Bruch; die einzige angebotene Behebung ist ein Major-Downgrade von exceljs auf 3.4.0 und damit keine Option. Offen: prüfen, ob exceljs die betroffenen Funktionen aufruft; sonst Beobachtung bis zu einem exceljs-Release mit uuid 11.1.1 oder höher.",
+      "erfasst": "2026-11-07",
+      "ablauf": "2027-02-07"
+    }
+  ]
+}

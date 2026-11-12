@@ -1,0 +1,9 @@
+:root { --hg: #fff; --vg: #1b1b1b; --akzent: #1f4e79; color-scheme: light dark; }
+[data-thema='dunkel'] { --hg: #161a1f; --vg: #e8e8e8; --akzent: #7fb2e5; }
+body { margin: 0; font-family: 'Segoe UI', -apple-system, system-ui, sans-serif; background: var(--hg); color: var(--vg); }
+.kopf { display: flex; gap: 1rem; align-items: center; padding: .75rem 1rem; border-bottom: 2px solid var(--akzent); }
+.namensnennung { margin-left: auto; font-size: .85rem; }
+.etappen { display: flex; flex-wrap: wrap; gap: .25rem; padding: .5rem 1rem; }
+.etappen [aria-current='step'] { background: var(--akzent); color: var(--hg); }
+.seite { padding: 1rem; max-width: 50rem; display: grid; gap: .75rem; }
+label { display: grid; gap: .25rem; }

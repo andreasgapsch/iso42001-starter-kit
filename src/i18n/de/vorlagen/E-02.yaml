@@ -1,0 +1,98 @@
+# E-02 Risikoklassifizierung nach EU AI Act
+blaetter:
+  klassen: Klassifizierung
+  hilfe: Prüfhilfe
+titel_klassen: "Risikoklasse je KI-System nach EU AI Act"
+titel_hilfe: "Prüfhilfe: Verbote, Hochrisiko, Ausnahmen, Transparenz"
+juristisch: "Die Einstufung ist eine fachliche Einschätzung, keine Rechtsberatung. Lassen Sie jede Einstufung als Hochrisiko, jede Ausnahme nach Art. 6(3) oder 6(1a) und jeden Verdacht auf eine verbotene Praktik juristisch prüfen."
+juristisch_firma: "Die Einstufung ist eine fachliche Einschätzung, keine Rechtsberatung. Jede Einstufung als Hochrisiko, jede Ausnahme nach Art. 6(3) oder 6(1a) und jeden Verdacht auf eine verbotene Praktik lassen wir juristisch prüfen."
+hinweise_klassen:
+  - "Eine Zeile je KI-System aus dem Inventar (D-10). Bestimmen Sie zuerst die Rolle (E-01). Gehen Sie die Spalten von links nach rechts durch; das Blatt «Prüfhilfe» erklärt jeden Prüfpunkt."
+  - "Schritt 1, verbotene Praktiken ({fs:5(1)}): Spalte D. Jeder Treffer ausser «keine» stoppt den Einsatz, bis die juristische Prüfung vorliegt."
+  - "Für Betreiber generativer Bild- und Videowerkzeuge: Ab {frist:FRIST-08} gelten zusätzlich die Verbote nach Art. 5(1) Bst. ba und bb (realistische intime oder sexuell explizite Darstellungen einer erkennbaren Person ohne deren ausdrückliche Einwilligung, Darstellungen sexuellen Missbrauchs von Kindern). Prüfen Sie, ob Werkzeug und Einstellungen solche Inhalte ausschliessen, und halten Sie das in Spalte D fest."
+  - "Schritt 2, Hochrisiko über Produkte ({fs:6(1)}, {fs:Anhang I}): Spalten E bis I. KI nur für Nutzerunterstützung, Leistungsoptimierung, Effizienz, Automatisierung, Benutzerfreundlichkeit oder Qualitätskontrolle ist kein Sicherheitsbauteil (Art. 6(1a)), ausser ihr Ausfall gefährdet Gesundheit und Sicherheit (Art. 6(1b)). Die Maschinenverordnung steht jetzt in Anhang I Abschnitt B Nr. 21."
+  - "Schritt 3, Hochrisiko nach {fs:Anhang III}: Spalten J bis O. Wählen Sie den Bereich 1 bis 8 und nennen Sie den Anwendungsfall (z. B. 4a). Als Anbieter können Sie eine Ausnahme nach Art. 6(3) geltend machen; dann dokumentieren Sie die Bewertung vor dem Inverkehrbringen (Art. 6(4)) und registrieren das System ({fs:49(2)}). Profiling natürlicher Personen ist immer hochriskant."
+  - "Schritt 4, Transparenz ({fs:50}): Spalten P bis S. Diese Pflichten gelten zusätzlich zu jeder anderen Klasse."
+  - "Zu Art. 6(5) liegt bisher ein Entwurf von Leitlinien der Kommission vor (19.05.2026, Stand siehe E-09). Prüfen Sie den aktuellen Stand, bevor Sie sich darauf stützen."
+  - "Spalte T schlägt eine Klasse vor. Das Ergebnis in Spalte U setzt die verantwortliche Person, mit Begründung in Spalte V. Übertragen Sie das Ergebnis ins Inventar (D-10) und leiten Sie die Pflichten in E-03 ab."
+hinweis_firma: "Ergebnis und Begründung je System wie im KI-Inventar (D-10). «Nicht relevant»: Der Prüfpunkt gilt für dieses System nicht, etwa ohne Produktbezug nach Anhang I oder ohne Ausnahme nach Art. 6(3). Leere Prüfpunkte sind noch nicht beurteilt."
+nicht_relevant: nicht relevant
+begruendung_art5: "Art. 5: {text}"
+begruendung_produkt: "Art. 6(1), Anhang I: {text}"
+spalten:
+  - ID
+  - KI-System
+  - Zweckbestimmung
+  - "Verbotene Praktik Art. 5(1)"
+  - "Produkt nach Anhang I"
+  - "Sicherheitsbauteil oder selbst Produkt (Art. 6(1) Bst. a)?"
+  - "Nur Nutzerunterstützung, Leistung, Effizienz, Automatisierung, Bedienbarkeit oder Qualitätskontrolle (Art. 6(1a))?"
+  - "Ausfall gefährdet Gesundheit und Sicherheit (Art. 6(1b))?"
+  - "Drittprüfung wegen Gesundheits- oder Sicherheitsrisiken (Art. 6(1) Bst. b, 6(1c))?"
+  - "Bereich Anhang III"
+  - "Anwendungsfall (z. B. 4a)"
+  - "Profiling natürlicher Personen?"
+  - "Ausnahme Art. 6(3)"
+  - "Bewertung dokumentiert (Art. 6(4))?"
+  - "Registrierung (Art. 49(2))"
+  - "Art. 50(1) Interaktion mit Personen?"
+  - "Art. 50(2) erzeugt synthetische Inhalte?"
+  - "Art. 50(3) Emotionserkennung oder biometrische Kategorisierung?"
+  - "Art. 50(4) Deepfake oder Text zu Themen öffentlichen Interesses?"
+  - Vorschlag (berechnet)
+  - Ergebnis-Klasse
+  - Begründung
+  - Juristisch geprüft
+  - "Eingestuft durch, am"
+listen:
+  verbot: [keine, "a: manipulative Techniken", "b: Ausnutzen von Schwächen", "ba: intime Darstellungen ohne Zustimmung", "bb: Darstellungen sexuellen Missbrauchs von Kindern", "c: soziale Bewertung", "d: Straftatprognose nur aus Profiling", "e: Gesichtsdatenbanken durch ungezieltes Auslesen", "f: Emotionserkennung am Arbeitsplatz oder in der Bildung", "g: biometrische Kategorisierung nach sensiblen Merkmalen", "h: biometrische Echtzeit-Fernidentifizierung zur Strafverfolgung", unklar]
+  anhang_i: [nein, "Abschnitt A", "Abschnitt B (z. B. Maschinen, Nr. 21)", offen]
+  anhang_iii:
+    - kein Bereich
+    - "1 Biometrie"
+    - "2 Kritische Infrastruktur"
+    - "3 Bildung und Ausbildung"
+    - "4 Beschäftigung und Personal"
+    - "5 Grundlegende private und öffentliche Dienste"
+    - "6 Strafverfolgung"
+    - "7 Migration, Asyl, Grenzkontrolle"
+    - "8 Rechtspflege und demokratische Prozesse"
+    - offen
+  ausnahme: [nein, "ja, Bst. a: eng gefasste Verfahrensaufgabe", "ja, Bst. b: verbessert Ergebnis menschlicher Arbeit", "ja, Bst. c: erkennt Entscheidungsmuster, ersetzt keine menschliche Bewertung", "ja, Bst. d: vorbereitende Aufgabe", "ja, Bedingung noch angeben"]
+  registrierung: [ja, nein, nicht nötig]
+hinweise_hilfe:
+  - "Die Erläuterungen sind eigene Kurzfassungen. Massgebend ist der Wortlaut des AI Act; die Seitenangaben beziehen sich auf die {rechtsstand}."
+  - "Die Pflichten für KI-Modelle mit allgemeinem Verwendungszweck ({fs:51} ff.) treffen nur, wer ein solches Modell selbst in Verkehr bringt. Die blosse Nutzung eines Sprachmodells über ein Produkt fällt nicht darunter."
+spalten_hilfe: [Bereich, Prüfpunkt, Erläuterung, Fundstelle, Gilt ab]
+hilfe:
+  - ["Verbote", "Bst. a", "Unterschwellige, manipulative oder täuschende Techniken, die Entscheidungen von Personen deutlich beeinträchtigen und erheblichen Schaden verursachen können.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Verbote", "Bst. b", "Ausnutzen von Alter, Behinderung oder sozialer oder wirtschaftlicher Lage, um Verhalten schädlich zu beeinflussen.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Verbote", "Bst. ba", "Realistische Bilder, Videos oder Töne, die intime Körperteile oder sexuelle Handlungen einer bestimmbaren Person ohne deren ausdrückliche Zustimmung zeigen. Für Anbieter nur verboten, wenn das der Zweck ist oder ohne wirksame Schutzvorkehrungen naheliegt (Art. 5(1a)).", "{fs:5(1)}", "{frist:FRIST-08}"]
+  - ["Verbote", "Bst. bb", "Erzeugen oder Verändern von Darstellungen sexuellen Missbrauchs von Kindern. Gleiche Einschränkung für Anbieter wie bei Bst. ba (Art. 5(1a)).", "{fs:5(1)}", "{frist:FRIST-08}"]
+  - ["Verbote", "Bst. c", "Soziale Bewertung von Personen über längere Zeit, die zu ungerechtfertigter Benachteiligung führt.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Verbote", "Bst. d", "Vorhersage, ob eine Person eine Straftat begeht, allein aus Profiling oder Persönlichkeitsmerkmalen.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Verbote", "Bst. e", "Aufbau von Gesichtsdatenbanken durch ungezieltes Sammeln von Bildern aus dem Internet oder aus Videoüberwachung.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Verbote", "Bst. f", "Ableiten von Emotionen am Arbeitsplatz oder in Bildungseinrichtungen, ausser aus medizinischen oder Sicherheitsgründen. Zu prüfen etwa bei Analysen von Kundengesprächen oder Mitarbeitenden.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Verbote", "Bst. g", "Biometrische Kategorisierung, um auf Herkunft, politische Haltung, Gewerkschaftszugehörigkeit, Religion oder Sexualleben zu schliessen.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Verbote", "Bst. h", "Biometrische Echtzeit-Fernidentifizierung im öffentlichen Raum zur Strafverfolgung, mit engen Ausnahmen. Für Unternehmen kaum relevant.", "{fs:5(1)}", "{frist:FRIST-02}"]
+  - ["Produkte", "Art. 6(1)", "Hochriskant ist KI, die Sicherheitsbauteil eines Produkts nach Anhang I ist oder selbst ein solches Produkt, wenn das Produkt eine Konformitätsbewertung durch Dritte braucht.", "{fs:6(1)}", "{frist:FRIST-15}"]
+  - ["Produkte", "Art. 6(1a)", "KI ausschliesslich für nicht sicherheitsrelevante Nutzerunterstützung, Leistungsoptimierung, Effizienz, Automatisierung, Bedienbarkeit oder Qualitätskontrolle gilt nicht als Sicherheitsbauteil.", "{fs:6(1a)}", "{frist:FRIST-15}"]
+  - ["Produkte", "Art. 6(1b)", "Gefährdet ein Ausfall oder eine Fehlfunktion Gesundheit und Sicherheit, ist die KI trotzdem ein Sicherheitsbauteil (Berichtigung C2 vom 29.09.2026).", "{fs:6(1b)}", "{frist:FRIST-15}"]
+  - ["Produkte", "Art. 6(1c)", "Eine Drittprüfung nur wegen Funk- oder EMV-Risiken ohne Bezug zu Gesundheit und Sicherheit erfüllt die Bedingung von Art. 6(1) Bst. b nicht.", "{fs:6(1c)}", "{frist:FRIST-15}"]
+  - ["Produkte", "Anhang I Abschnitt A und B", "Abschnitt A: z. B. Spielzeug, Aufzüge, Funkanlagen, Druckgeräte, Medizinprodukte. Abschnitt B: z. B. Fahrzeuge, Luftfahrt, Eisenbahn und neu die Maschinenverordnung (EU) 2023/1230 unter Nr. 21. Für Produkte nach Abschnitt B gelten aus dem AI Act nur Art. 6(1), 60a und 102 bis 112 (Art. 2(2)); die KI-Anforderungen an Maschinen kommen über delegierte Rechtsakte zur Maschinenverordnung ab {frist:FRIST-16}.", "{fs:Anhang I}", "{frist:FRIST-15}"]
+  - ["Anhang III", "Bereich 1", "Biometrie: Fernidentifizierung (nicht blosse Verifizierung), Kategorisierung nach sensiblen Merkmalen, Emotionserkennung.", "{fs:Anhang III}", "{frist:FRIST-13}"]
+  - ["Anhang III", "Bereich 2", "Sicherheitsbauteile in kritischer digitaler Infrastruktur, Strassenverkehr oder Versorgung mit Wasser, Gas, Wärme oder Strom.", "{fs:Anhang III}", "{frist:FRIST-13}"]
+  - ["Anhang III", "Bereich 3", "Bildung: Zulassung und Zuweisung, Bewertung von Lernergebnissen, Einstufung des Bildungsniveaus, Überwachung bei Prüfungen.", "{fs:Anhang III}", "{frist:FRIST-13}"]
+  - ["Anhang III", "Bereich 4", "Beschäftigung: a) Stellenanzeigen gezielt schalten, Bewerbungen sichten oder bewerten; b) Entscheide über Arbeitsbedingungen, Beförderung, Kündigung, Aufgabenzuweisung, Leistungs- und Verhaltensbewertung. Häufig betroffen sind Funktionen in Bewerbungs- und Personalsoftware.", "{fs:Anhang III}", "{frist:FRIST-13}"]
+  - ["Anhang III", "Bereich 5", "Dienste: a) Anspruch auf öffentliche Leistungen; b) Kreditwürdigkeit natürlicher Personen (ohne Betrugserkennung); c) Risiko und Preis bei Lebens- und Krankenversicherungen; d) Notrufe und Triage.", "{fs:Anhang III}", "{frist:FRIST-13}"]
+  - ["Anhang III", "Bereich 6", "Strafverfolgung durch oder für Behörden.", "{fs:Anhang III}", "{frist:FRIST-13}"]
+  - ["Anhang III", "Bereich 7", "Migration, Asyl und Grenzkontrolle durch oder für Behörden.", "{fs:Anhang III}", "{frist:FRIST-13}"]
+  - ["Anhang III", "Bereich 8", "Unterstützung von Gerichten und Schlichtung; Beeinflussung von Wahlen und Abstimmungen.", "{fs:Anhang III}", "{frist:FRIST-13}"]
+  - ["Ausnahme", "Art. 6(3)", "Ein Anhang-III-System ist nicht hochriskant, wenn es kein erhebliches Risiko für Gesundheit, Sicherheit oder Grundrechte birgt und eine der Bedingungen a bis d erfüllt: eng gefasste Verfahrensaufgabe, Verbesserung eines abgeschlossenen menschlichen Ergebnisses, Erkennen von Entscheidungsmustern ohne Ersatz der menschlichen Bewertung, vorbereitende Aufgabe.", "{fs:6(3)}", "{frist:FRIST-13}"]
+  - ["Ausnahme", "Profiling", "Nimmt das System ein Profiling natürlicher Personen vor, ist es immer hochriskant; die Ausnahme greift dann nicht.", "{fs:6(3)}", "{frist:FRIST-13}"]
+  - ["Ausnahme", "Art. 6(4)", "Wer als Anbieter eine Ausnahme geltend macht, dokumentiert die Bewertung vor dem Inverkehrbringen oder der Inbetriebnahme und legt sie Behörden auf Verlangen vor.", "{fs:6(4)}", "{frist:FRIST-13}"]
+  - ["Ausnahme", "Art. 49(2)", "Ein so eingestuftes System registriert der Anbieter vor dem Inverkehrbringen in der EU-Datenbank.", "{fs:49(2)}", "{frist:FRIST-07} formell, {frist:FRIST-13} praktisch"]
+  - ["Transparenz", "Art. 50(1)", "Anbieter: Personen erfahren, dass sie mit einer KI interagieren, ausser es ist offensichtlich (z. B. Chatbot).", "{fs:50(1)}", "{frist:FRIST-07}"]
+  - ["Transparenz", "Art. 50(2)", "Anbieter: erzeugte Bilder, Videos, Töne und Texte maschinenlesbar als künstlich kennzeichnen. Ältere Systeme bis {frist:FRIST-09} ({fs:111(4)}).", "{fs:50(2)}", "{frist:FRIST-07}"]
+  - ["Transparenz", "Art. 50(3)", "Betreiber: betroffene Personen über Emotionserkennung oder biometrische Kategorisierung informieren.", "{fs:50(3)}", "{frist:FRIST-07}"]
+  - ["Transparenz", "Art. 50(4)", "Betreiber: Deepfakes offenlegen; KI-Texte zu Themen öffentlichen Interesses offenlegen, ausser sie wurden redaktionell geprüft und jemand trägt die Verantwortung.", "{fs:50(4)}", "{frist:FRIST-07}"]

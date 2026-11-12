@@ -1,0 +1,84 @@
+# D-23 Integrationsmatrix ISO/IEC 27001 und 42001
+hinweis_einschaetzung: "Die Zuordnungen in diesem Dokument sind eine fachliche Einschätzung, keine Aussage der Normen. Sie zeigen, wo Nachweise aus dem ISMS wiederverwendet werden können, und ersetzen keine Prüfung im Einzelfall."
+normverweis_27001: "Anforderungstext siehe ISO/IEC 27001:2022, Abschnitte 4 bis 10 und Anhang A. Die Norm ist bei SNV, DIN oder ISO zu beziehen."
+normverweis_27001_firma: "Bezug: ISO/IEC 27001:2022, Abschnitte 4 bis 10 und Anhang A."
+blaetter:
+  dokumente: Dokumente
+  kapitel: Abschnitte 4 bis 10
+  mapping: Control-Mapping
+  katalog: Katalog 27001
+titel_dokumente: "AIMS-Dokumente und ihr Gegenstück im ISMS"
+titel_kapitel: "Abschnitte 4 bis 10: gemeinsam führen"
+titel_mapping: "Zuordnung ISO/IEC 42001 Anhang A zu ISO/IEC 27001:2022 Anhang A"
+titel_katalog: "ISO/IEC 27001:2022 Anhang A mit zugeordneten 42001-Controls"
+hinweise_dokumente:
+  - "«wiederverwendet»: Das ISMS-Dokument gilt auch für das AIMS, ergänzt durch ein Ergänzungsblatt. «erweitert»: Das ISMS-Dokument wird um KI-Inhalte ergänzt. «neu»: Für das AIMS ist ein eigenes Dokument nötig."
+  - "Mit ISMS gilt für Dokumente mit «Ergänzungsblatt ja» das Blatt D-xx-EB statt eines eigenen Dokuments."
+hinweise_kapitel:
+  - "Die Abschnitte 4 bis 10 sind in beiden Normen gleich gegliedert. «ja» heisst: ein Prozess und ein Nachweis für beide Systeme. «teilweise» heisst: gemeinsamer Rahmen, KI-Inhalte ergänzen. «nein» heisst: nur im AIMS, ohne Gegenstück im ISMS."
+hinweise_mapping:
+  - "Stärke «hoch»: Der ISMS-Nachweis deckt das KI-Control weitgehend ab. «mittel»: Ablauf und Form lassen sich übernehmen, KI-Inhalte fehlen. «tief»: nur ein Anknüpfungspunkt."
+  - "Für Sicherheitsbedrohungen gegen KI-Systeme selbst ist ISO/IEC 27090:2026 eine zusätzliche Quelle für Controls; das Kit ordnet sie hier nicht zu."
+hinweise_mapping_firma:
+  - "Die Spalte «In der SoA verknüpft» zeigt, ob die Erklärung zur Anwendbarkeit (D-11) das 27001-Control als wiederverwendeten Nachweis nennt."
+hinweise_katalog:
+  - "Kurzbezeichnungen in eigenen Worten, nicht die Titel der Norm. Der Anforderungstext steht in der Normausgabe."
+spalten_dokumente: [ID, Titel, Format, Art, Bezug zum ISMS, Gegenstück im ISMS, Ergänzungsblatt, Normbezug 42001]
+spalten_kapitel: [Abschnitt, Titel, Gegenstück 27001, Gemeinsam, Hinweis, AIMS-Dokumente]
+spalten_mapping: [Control 42001, Kurzbezeichnung 42001, Control 27001, Kurzbezeichnung 27001, Stärke, Begründung]
+spalte_verknuepft: In der SoA verknüpft
+spalten_katalog: [Control 27001, Thema, Kurzbezeichnung, Zugeordnete 42001-Controls]
+art:
+  pflicht: Pflichtdokument
+  leitfaden: Leitfaden
+  modul: Modul AI Act
+  modul_nist: Modul NIST AI RMF
+isms:
+  neu: neu
+  erweitert: erweitert
+  wiederverwendet: wiederverwendet
+  leitfaden: Leitfaden
+gemeinsam:
+  ja: ja
+  teilweise: teilweise
+  nein: nein (nur AIMS)
+staerke:
+  hoch: hoch
+  mittel: mittel
+  tief: tief
+kein_gegenstueck: kein Gegenstück
+# Firmendokument: eigene Umsetzung je Abschnitt
+spalte_umsetzung: Umsetzung bei uns
+kapitel_aufgenommen: "{id}, aufgenommen in {dokument}"
+kapitel_erweitert: "{id}, erweitert {dokument}"
+ja: ja
+nein: nein
+gegenstueck:
+  D-00: "Projektauftrag oder Gap-Analyse des ISMS, falls vorhanden"
+  D-01: "Kontextanalyse und Register der interessierten Parteien"
+  D-02: "Geltungsbereich des ISMS"
+  D-03: "Informationssicherheitsleitlinie (Abgleich, Ergänzungsblatt D-03-EB)"
+  D-04: "Rollen, Zuständigkeiten und Organigramm"
+  D-05: "Sicherheitsziele und Messplan"
+  D-06: "Verfahren für Informationssicherheitsrisiken"
+  D-07: "Risikoregister und Behandlungsplan"
+  D-08: "Verfahren Datenschutz-Folgenabschätzung (Vorbild)"
+  D-09: "Datenschutz-Folgenabschätzung (Verweis)"
+  D-10: "Inventar der Informationswerte"
+  D-11: "Erklärung zur Anwendbarkeit des ISMS (eigene Liste je Norm)"
+  D-12: "Sichere Entwicklung und Änderungsverfahren"
+  D-13: "Klassifizierung und Umgang mit Informationen"
+  D-14: "Verfahren für Sicherheitsvorfälle"
+  D-15: "Richtlinie zur akzeptablen Nutzung"
+  D-16: "Lieferantenmanagement"
+  D-17: "Schulung, Bewusstsein und Kommunikation"
+  D-20: "Internes Auditprogramm"
+  D-21: "Managementbewertung"
+  D-22: "Nichtkonformitäten und Korrekturmassnahmen"
+  D-23: "Leitfaden"
+  D-24: "Leitfaden"
+  D-25: "Leitfaden"
+  D-26: "Lenkung dokumentierter Information"
+  E-04: "Schulungs- und Awarenesskonzept des ISMS"
+gegenstueck_firma:
+  D-00: "Projektauftrag und Gap-Analyse des ISMS"

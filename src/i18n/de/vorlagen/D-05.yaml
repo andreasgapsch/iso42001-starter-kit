@@ -1,0 +1,87 @@
+# D-05 KI-Ziele, Kennzahlen und Messplan
+blaetter:
+  ziele: Ziele
+  messplan: Messplan
+  messwerte: Messwerte
+  nicht_gemessen: Nicht gemessen
+titel_ziele: "KI-Ziele und Planung"
+titel_messplan: "Messplan: was, wie, wann und durch wen"
+titel_messwerte: "Messwerte"
+hinweise_ziele:
+  - "Leiten Sie drei bis sechs Ziele aus der KI-Leitlinie (D-03) ab. Jedes Ziel braucht eine Kennzahl, einen Sollwert, Verantwortliche und einen Termin."
+  - "Die Vorschläge in eckigen Klammern sind Platzhalter. Übernehmen und anpassen oder löschen Sie sie."
+  - "Mindestens ein Ziel sollte die verantwortungsvolle Nutzung von KI betreffen. Wer KI selbst entwickelt, setzt auch ein Ziel für die Entwicklung."
+  - "Bewerten Sie die Ziele mindestens jährlich in der Managementbewertung (D-21) und passen Sie sie bei Bedarf an."
+hinweise_messplan:
+  - "Legen Sie für jede Kennzahl fest, was wie oft gemessen wird, wer misst, wer auswertet und wer das Ergebnis erhält."
+  - "Der Messplan umfasst neben den Zielen auch die Wirksamkeit der Controls, die Ergebnisse interner Audits, die Meldungen zu KI-Systemen und einfache Kennzahlen je System (Korrekturquote, Reaktionszeit). Diese Zeilen sind vorbereitet."
+  - "Prüfen Sie einmal im Jahr, ob die Kennzahlen und Tests taugen: Welche Fehler, Vorfälle oder Beschwerden haben sie nicht vorher angezeigt? Das Ergebnis gehört in die Managementbewertung (D-21)."
+  - "Die Zeilen PR-xx und PS-xx sind die Kennzahlen der Prozesse aus D-27. Tragen Sie ab der Stufe «eingeführt» einen ersten Messwert im Blatt «Messwerte» ein, mit der Prozess-ID als Kennzahl."
+  - "Spalte «KI-Systeme» im Blatt Ziele: Systeme, für die ein Ziel gilt; leer heisst alle. Für jedes KI-System mit sensibler Nutzung sollte mindestens eine eigene Kennzahl bestehen."
+  - "Spalte «Methode und Quelle»: Nennen Sie die Vorlage und die Spalte, aus der der Wert kommt (z. B. KI-Inventar D-10, Spalte «Lebenszyklus»), oder die Aufzeichnung, etwa ein Protokoll. Bei einer Stichprobe steht der Umfang in der Methode. Der Nenner im Messwert ist dieser Umfang, und eine Kennzahl über Systeme zählt nur Systeme, die die Stichprobe am Messdatum tatsächlich umfasst."
+hinweise_messwerte:
+  - "Tragen Sie jede Messung mit Datum ein. Die Messwerte sind der Nachweis, dass Sie überwachen und messen; bewahren Sie sie auf."
+  - "Zählen Sie jeden Wert aus den Aufzeichnungen aus und schreiben Sie Zähler und Nenner dazu, z. B. «3 von 4 (75 %)». Vergleichen Sie ihn in der Spalte «Sollwert erreicht» mit dem Sollwert."
+  - "Keine Zahl schätzen: Gab es keinen Fall, schreiben Sie «kein Anlass». Ist die Kennzahl noch nicht messbar (im ersten Jahr etwa die Umsetzung der Entscheide bis zur nächsten Bewertung), schreiben Sie «noch keine Messung» und in der Bemerkung den Grund."
+spalten_ziele:
+  - ID
+  - Ziel
+  - Bezug Leitlinie
+  - Kennzahl
+  - Sollwert
+  - Was wird getan
+  - Ressourcen
+  - Verantwortlich
+  - Termin
+  - Bewertung des Ergebnisses
+  - Status
+  - KI-Systeme
+spalten_messplan:
+  - ID
+  - Was wird gemessen
+  - Methode und Quelle
+  - Häufigkeit
+  - Wer misst
+  - Auswertung wann
+  - Wer wertet aus
+  - Empfänger
+spalten_messwerte: [Ziel oder Kennzahl, Datum, Wert, Sollwert erreicht, Bemerkung]
+listen:
+  status: [geplant, in Arbeit, erreicht, nicht erreicht, verworfen]
+  haeufigkeit: [monatlich, quartalsweise, halbjährlich, jährlich, bei Bedarf]
+  erreicht: [ja, teilweise, nein]
+ziele_vorschlag:
+  - ["Z-001", "[[Alle KI-Systeme sind im KI-Inventar erfasst und haben eine Eignerin oder einen Eigner]]", "[[Grundsatz Transparenz]]", "[[Anteil erfasster KI-Systeme mit Eigner/in]]", "[[100 %]]", "[[Erhebung in allen Bereichen, Abgleich mit Lizenzen und Einkauf]]", "[[2 Personentage]]", "[[Name, Funktion]]", "[[TT.MM.JJJJ]]", "[[Abgleich Inventar mit Software-Liste]]", ""]
+  - ["Z-002", "[[Alle Mitarbeitenden, die KI nutzen, sind geschult]]", "[[Grundsatz Sicherheit und Qualität]]", "[[Schulungsquote]]", "[[mindestens 95 %]]", "[[Kurzschulung zur Nutzungsrichtlinie, Nachschulung bei Eintritt]]", "[[1 Stunde je Person]]", "[[Name, Funktion]]", "[[TT.MM.JJJJ]]", "[[Teilnahmeliste gegen Personalliste]]", ""]
+  - ["Z-003", "[[KI-Systeme mit Wirkung auf Menschen haben eine Folgenabschätzung]]", "[[Grundsatz Verantwortung für Folgen]]", "[[Anteil Systeme mit freigegebener Folgenabschätzung]]", "[[100 %]]", "[[Kurzprüfung für alle Systeme, volle Folgenabschätzung wo nötig]]", "[[3 Personentage]]", "[[Name, Funktion]]", "[[TT.MM.JJJJ]]", "[[Abgleich Inventar mit D-09]]", ""]
+  - ["Z-004", "[[Keine vertraulichen Daten in nicht freigegebenen KI-Werkzeugen]]", "[[Grundsatz Vertraulichkeit zuerst]]", "[[Anzahl festgestellter Fälle]]", "[[0 je Quartal]]", "[[Freigegebene Werkzeuge bereitstellen, technische Sperren, Stichproben]]", "[[IT-Budget für Lizenzen]]", "[[Name, Funktion]]", "[[TT.MM.JJJJ]]", "[[Auswertung Meldungen und Stichproben]]", ""]
+  - ["Z-005", "[[Meldungen zu KI-Systemen werden fristgerecht behandelt]]", "[[Grundsatz Der Mensch entscheidet]]", "[[Anteil Meldungen mit Rückmeldung innert 30 Tagen]]", "[[mindestens 90 %]]", "[[Meldeweg bekannt machen, Bearbeitung überwachen]]", "[[nach Aufwand]]", "[[Name, Funktion]]", "[[TT.MM.JJJJ]]", "[[Auswertung Meldungsprotokoll]]", ""]
+  - ["Z-006", "[[Anbieter von KI-Systemen sind geprüft]]", "[[Grundsatz Recht und Verträge]]", "[[Anteil geprüfter KI-Lieferanten]]", "[[100 % vor Vertragsabschluss]]", "[[Prüffragen aus D-16 bei Einkauf und Verlängerung]]", "[[1 Personentag je Jahr]]", "[[Name, Funktion]]", "[[TT.MM.JJJJ]]", "[[Lieferantenliste D-16]]", ""]
+messplan_vorschlag:
+  - ["Z-001", "[[Anteil erfasster KI-Systeme mit Eigner/in]]", "[[Abgleich KI-Inventar mit Software- und Lizenzliste]]", quartalsweise, "[[Name, Funktion]]", "[[nach jeder Messung]]", "[[Name, Funktion]]", "[[Geschäftsleitung]]"]
+  - ["Z-002", "[[Schulungsquote]]", "[[Teilnahmeliste gegen Personalliste]]", halbjährlich, "[[Name, Funktion]]", "[[nach jeder Messung]]", "[[Name, Funktion]]", "[[Geschäftsleitung]]"]
+  - ["Z-003", "[[Anteil Systeme mit Folgenabschätzung]]", "[[Abgleich KI-Inventar mit D-09]]", quartalsweise, "[[Name, Funktion]]", "[[nach jeder Messung]]", "[[Name, Funktion]]", "[[Geschäftsleitung]]"]
+  - ["Z-004", "[[Fälle vertraulicher Daten in nicht freigegebenen Werkzeugen]]", "[[Meldungen, Stichproben, Auswertung der Sperren]]", quartalsweise, "[[Name, Funktion]]", "[[nach jeder Messung]]", "[[Name, Funktion]]", "[[Geschäftsleitung]]"]
+  - ["Z-005", "[[Anteil fristgerecht behandelter Meldungen]]", "[[Meldungsprotokoll D-22]]", quartalsweise, "[[Name, Funktion]]", "[[nach jeder Messung]]", "[[Name, Funktion]]", "[[Geschäftsleitung]]"]
+  - ["Z-006", "[[Anteil geprüfter KI-Lieferanten]]", "[[Lieferantenliste D-16]]", jährlich, "[[Name, Funktion]]", "[[vor der Managementbewertung]]", "[[Name, Funktion]]", "[[Geschäftsleitung]]"]
+messplan_weitere:
+  - ["", "Wirksamkeit der Controls", "Status, Nachweise und Spalte «Wirksamkeit geprüft» in der Erklärung zur Anwendbarkeit (D-11)", jährlich, "[[Name, Funktion]]", "vor der Managementbewertung", "[[Name, Funktion]]", Geschäftsleitung]
+  - ["", "Ergebnisse interner Audits", "Auditberichte (D-20)", jährlich, "[[Name, Funktion]]", "nach jedem Audit", "[[Name, Funktion]]", Geschäftsleitung]
+  - ["", "Art und Anzahl der Meldungen, Vorfälle und Beinahe-Vorfälle zu KI-Systemen", "Meldungsprotokoll und Nichtkonformitäten (D-22)", quartalsweise, "[[Name, Funktion]]", "vor der Managementbewertung", "[[Name, Funktion]]", Geschäftsleitung]
+  - ["", "Reaktionszeit auf Meldungen: Tage bis zur Eingangsbestätigung und bis zum Abschluss", "Datum von Eingang, Bestätigung und Abschluss im Register (D-22)", quartalsweise, "[[Name, Funktion]]", "vor der Managementbewertung", "[[Name, Funktion]]", Geschäftsleitung]
+  - ["", "Korrekturquote je KI-System: Anteil der Ergebnisse, die Nutzende verwerfen oder wesentlich ändern", "Stichprobe von [[20]] Ergebnissen je System; Vergleich mit dem Abnahmetest (D-12)", quartalsweise, "[[Name, Funktion]]", "nach jeder Stichprobe", "[[Name, Funktion]]", "Eigner/in des Systems"]
+  - ["", "Eignung der Kennzahlen und Tests", "Abgleich der Kennzahlen mit Fehlern, Vorfällen und Beschwerden, die sie nicht angezeigt haben", jährlich, "[[Name, Funktion]]", "vor der Managementbewertung", "[[Name, Funktion]]", Geschäftsleitung]
+messplan_prozess: "{kennzahl} (Kennzahl des Prozesses, Sollwert: {soll})"
+messplan_prozess_methode: "Auswertung der Aufzeichnungen des Prozesses (D-27)"
+messplan_prozess_eigner: "[[Eigner/in des Prozesses]]"
+messplan_prozess_wann: "vor der Managementbewertung"
+messplan_prozess_empfaenger: "AIMS-Verantwortliche/r, Geschäftsleitung"
+messplan_weitere_neutral:
+  "4.2": "Stichprobe von Ergebnissen je System nach dem Messkonzept des Systems; Vergleich mit dem Abnahmetest (D-12)"
+ausbau_leistung: "Wer KI selbst entwickelt oder betreibt, misst zusätzlich die Leistung der KI-Systeme selbst, z. B. Fehlerquote, Abweichung der Daten über die Zeit (Drift) oder Anteil der Ergebnisse, die von Menschen korrigiert werden."
+titel_nicht_gemessen: "Bewusst nicht gemessen"
+hinweise_nicht_gemessen:
+  - "Halten Sie fest, was Sie bewusst nicht messen und warum, z. B. weil ein Wert nicht verfügbar ist oder der Aufwand den Nutzen übersteigt. Prüfen Sie die Liste jährlich mit dem Messplan."
+spalten_nicht_gemessen: [Was bewusst nicht gemessen wird, Begründung]
+nicht_gemessen_vorschlag:
+  - ["[[z. B. Energieverbrauch der KI-Dienste]]", "[[Anbieter liefern keine Angaben je Kunde; Nutzung gering; erneut prüfen bei eigenem Betrieb]]"]

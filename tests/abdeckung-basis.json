@@ -1,0 +1,10 @@
+{
+  "stand": "2026-11-07",
+  "hinweis": "Basis der Abdeckungs-Ratsche (scripts/pruefen/ratsche.mts). Werte nur steigend; Anheben mit `npx tsx scripts/pruefen/ratsche.mts --anheben` nach `npm run test:cov`. Eine Absenkung braucht im Commit «Erwartung geändert: Grund».",
+  "gesamt": {
+    "lines": 66.01,
+    "statements": 65.56,
+    "functions": 64.08,
+    "branches": 59.03
+  }
+}

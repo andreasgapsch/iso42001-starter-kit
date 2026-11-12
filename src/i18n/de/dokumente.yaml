@@ -1,0 +1,40 @@
+# Titel und Kurzbeschreibung aller Kit-Vorlagen
+D-00: { titel: "Gap-Analyse und Projektauftrag", kurz: "Wo stehen wir? Reifegrad je Normabschnitt und Control, Projektauftrag mit Freigabe der Geschäftsleitung." }
+D-01: { titel: "Kontext, interessierte Parteien und Rollen", kurz: "Themen im Umfeld, Klimawandel, interessierte Parteien mit Anforderungen, Rolle(n) der Organisation." }
+D-02: { titel: "Geltungsbereich und AIMS-Überblick", kurz: "Grenzen des KI-Managementsystems, Ausschlüsse, Schnittstellen und Prozesslandkarte." }
+D-03: { titel: "KI-Leitlinie", kurz: "Verbindliche Grundsätze der Geschäftsleitung für Entwicklung, Einkauf und Nutzung von KI." }
+D-04: { titel: "Rollen, Verantwortlichkeiten und Meldewege", kurz: "Wer ist wofür zuständig (RACI), und wie meldet man Bedenken zu KI-Systemen." }
+D-05: { titel: "KI-Ziele, Kennzahlen und Messplan", kurz: "Messbare Ziele mit Planung sowie was wie oft gemessen und ausgewertet wird." }
+D-06: { titel: "Verfahren KI-Risikomanagement", kurz: "Methode, Skalen und Kriterien für Beurteilung und Behandlung von KI-Risiken." }
+D-07: { titel: "KI-Risikoregister und Behandlungsplan", kurz: "Risiken und Chancen je KI-System, Bewertung, Behandlung, Controls, Restrisiko-Annahme." }
+D-08: { titel: "Verfahren Folgenabschätzung für KI-Systeme", kurz: "Wann, wie und durch wen Folgen für Menschen und Gesellschaft abgeschätzt werden." }
+D-09: { titel: "Folgenabschätzung für ein KI-System", kurz: "Kurzprüfung mit Schwellen und, falls nötig, vollständige Folgenabschätzung je System." }
+D-10: { titel: "KI-Inventar und Erhebungsfragebogen", kurz: "Alle KI-Systeme inklusive KI in eingekaufter Software und Schatten-KI, mit Ressourcen." }
+D-11: { titel: "Erklärung zur Anwendbarkeit", kurz: "Alle Controls aus Anhang A mit Entscheid, Begründung, Status und Nachweis." }
+D-12: { titel: "Lebenszyklus von KI-Systemen", kurz: "Einführung, Betrieb und Überwachung (Betreiber) sowie Entwicklung (Ausbaustufe)." }
+D-13: { titel: "Daten für KI-Systeme", kurz: "Herkunft, Qualität, Aufbereitung und Schutz der Daten." }
+D-14: { titel: "Information, Transparenz und Meldungen", kurz: "Information für Nutzende, Meldekanal für Betroffene, Vorfallkommunikation, Informationspflichten." }
+D-15: { titel: "Richtlinie zur verantwortungsvollen KI-Nutzung", kurz: "Zwei Seiten Regeln für Mitarbeitende und die Freigabe neuer KI-Werkzeuge." }
+D-16: { titel: "Lieferanten und eingekaufte KI", kurz: "Prüffragen, Vertragsklauseln und Verantwortungsaufteilung mit Lieferanten." }
+D-17: { titel: "Kompetenz, Bewusstsein und Kommunikation", kurz: "Kompetenzbedarf je Rolle, Schulungen und Kommunikationsplan." }
+D-20: { titel: "Internes Audit", kurz: "Auditprogramm, Auditplan und Checkliste für ISO/IEC 42001." }
+D-21: { titel: "Managementbewertung", kurz: "Agenda mit allen Pflichteingaben und Protokoll mit Entscheiden." }
+D-22: { titel: "Nichtkonformitäten und Verbesserungen", kurz: "Abweichungen, Ursachen, Korrekturmassnahmen, Wirksamkeit und Verbesserungen." }
+D-23: { titel: "Integrationsmatrix ISO/IEC 27001 und 42001", kurz: "Was aus dem ISMS wiederverwendet, erweitert oder neu erstellt wird, mit Control-Zuordnung." }
+D-24: { titel: "Rolle zuerst", kurz: "Entscheidungsbaum Anbieter oder Betreiber und was ISO/IEC 42001 nachweist und was nicht." }
+D-25: { titel: "Zertifizierungsfahrplan", kurz: "Wahl der Zertifizierungsstelle, Stage 1 und Stage 2, was der Auditor sehen will." }
+D-26: { titel: "Lenkung dokumentierter Information", kurz: "Regeln für Dokumente und Aufzeichnungen, Dokumentenregister, Änderungen am AIMS." }
+D-27: { titel: "Prozessbeschreibungen", kurz: "Ablauf, Rollen, Nachweise, Kennzahl und Stand je Prozess des Managementsystems." }
+E-01: { titel: "Rollenbestimmung nach EU AI Act", kurz: "Rolle je KI-System, inklusive Wechsel vom Betreiber zum Anbieter." }
+E-02: { titel: "Risikoklassifizierung nach EU AI Act", kurz: "Verbote, Hochrisiko, Transparenz oder minimales Risiko je KI-System." }
+E-03: { titel: "Pflichtenmatrix EU AI Act", kurz: "Pflichten je Rolle und Risikoklasse und was das AIMS davon abdeckt." }
+E-04: { titel: "KI-Kompetenz der Mitarbeitenden", kurz: "Konzept und Nachweis der Massnahmen zur KI-Kompetenz." }
+E-05: { titel: "Betreiberpflichten bei Hochrisiko-KI", kurz: "Checkliste für Betreiber von Hochrisiko-KI-Systemen." }
+E-06: { titel: "Grundrechte-Folgenabschätzung", kurz: "Erweiterung der Folgenabschätzung, wo der AI Act sie verlangt." }
+E-07: { titel: "Transparenzpflichten", kurz: "Checkliste und Textbausteine für Chatbots, erzeugte Inhalte und Deepfakes." }
+E-08: { titel: "Anbieterpflichten im Überblick", kurz: "Was Anbieter von Hochrisiko-KI erfüllen müssen und wo das AIMS hilft." }
+E-09: { titel: "Fristen und Stand EU AI Act", kurz: "Welche Pflichten ab wann gelten, mit Stand-Datum." }
+N-01: { titel: "AI-RMF-Profil Ist und Ziel", kurz: "72 Subkategorien des NIST AI RMF mit Ist-Stufe aus dem Projekt, Ziel, Lücke, Priorität und Massnahme." }
+N-02: { titel: "Abdeckungsmatrix AI RMF und ISO/IEC 42001", kurz: "Was ISO/IEC 42001 und die Vorlagen je Subkategorie abdecken, mit Zusatz-Control und Entscheid." }
+N-03: { titel: "Mess- und Prüfkonzept je KI-System", kurz: "Wichtigste Vertrauensmerkmale, Prüffälle, Messgrössen, Schwellen und unabhängige Überprüfung." }
+N-04: { titel: "Generative KI: Risiken und Massnahmen", kurz: "Zwölf Risiken generativer KI nach NIST AI 600-1 je System mit Relevanz und Massnahme." }

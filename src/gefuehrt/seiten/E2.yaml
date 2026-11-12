@@ -1,0 +1,129 @@
+# Etappe E2 Kontext und Geltungsbereich. Format: src/gefuehrt/FORMAT.md
+seiten:
+  - { id: E2-einfuehrung, typ: info, norm: "4.1 bis 4.4", vorlage: D-01, leitfaden: 2 }
+  - id: E2-isms-bezug
+    typ: formular
+    norm: "4.1 bis 4.3"
+    vorlage: D-23
+    leitfaden: 2
+    wenn: { mitIsms: true }
+    beispiel: meta.gefuehrt.antworten.ismsKontext
+    felder:
+      - { pfad: meta.gefuehrt.antworten.ismsKontext.deckung, typ: auswahl, optionen: ismsDeckung, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.ismsKontext.ablage, typ: text }
+  - id: E2-grundlagen
+    typ: formular
+    norm: "4.1, 4.4"
+    vorlage: D-02
+    leitfaden: 2
+    wenn: { mitIsms: false }
+    beispiel: meta.gefuehrt.antworten.grundlagen
+    felder:
+      - { pfad: meta.gefuehrt.antworten.grundlagen.prozesse, typ: liste-text, pflicht: true }
+      - { pfad: meta.gefuehrt.antworten.grundlagen.organigramm, typ: text }
+      - { pfad: meta.gefuehrt.antworten.grundlagen.itBetrieb, typ: textarea }
+  - id: E2-themen
+    typ: formular
+    norm: "4.1"
+    vorlage: D-01
+    leitfaden: 2
+    beispiel: organisation.kontext.themen
+    felder:
+      - pfad: organisation.kontext.themen
+        typ: tabelle
+        pflicht: true
+        spalten:
+          - { pfad: art, typ: auswahl, optionen: themaArt, pflicht: true }
+          - { pfad: kategorie, typ: auswahl, optionen: themaKategorie, pflicht: true }
+          - { pfad: beschreibung, typ: textarea, pflicht: true }
+          - { pfad: auswirkung, typ: textarea }
+  - id: E2-klima
+    typ: formular
+    norm: "4.1"
+    vorlage: D-01
+    leitfaden: 2
+    beispiel: organisation.kontext
+    felder:
+      - { pfad: organisation.kontext.klimawandelRelevant, typ: auswahl, optionen: jaNeinOffen, pflicht: true }
+      - { pfad: organisation.kontext.klimawandelBegruendung, typ: textarea, pflicht: true }
+  - id: E2-zweck
+    typ: formular
+    norm: "4.1"
+    vorlage: D-01
+    leitfaden: 2
+    beispiel: meta.gefuehrt.antworten.kiZweck
+    felder:
+      - { pfad: meta.gefuehrt.antworten.kiZweck.ziele, typ: mehrfach, optionen: kiZweck }
+      - { pfad: meta.gefuehrt.antworten.kiZweck.text, typ: textarea }
+  - id: E2-rollen-iso
+    typ: formular
+    norm: "4.1"
+    vorlage: D-01
+    leitfaden: 2
+    beispiel: organisation.rollenIso
+    felder:
+      - pfad: organisation.rollenIso
+        typ: tabelle
+        pflicht: true
+        spalten:
+          - { pfad: rolle, typ: auswahl, optionen: rolleIso, pflicht: true }
+          - { pfad: bemerkung, typ: textarea }
+  - id: E2-parteien
+    typ: liste
+    mindestensEiner: true
+    liste: parteien
+    norm: "4.2"
+    vorlage: D-01
+    leitfaden: 2
+    beispiel: parteien[0]
+    felder:
+      - { pfad: name, typ: text, pflicht: true }
+      - { pfad: art, typ: auswahl, optionen: parteiArt, pflicht: true }
+      - pfad: anforderungen
+        typ: tabelle
+        spalten:
+          - { pfad: text, typ: textarea, pflicht: true }
+          - { pfad: quelle, typ: auswahl, optionen: anforderungQuelle }
+          - { pfad: adressiert, typ: auswahl, optionen: jaNeinOffen, pflicht: true }
+          - { pfad: begruendung, typ: text }
+  - id: E2-grenzen
+    typ: formular
+    norm: "4.3"
+    vorlage: D-02
+    leitfaden: 2
+    beispiel: organisation.geltungsbereich
+    felder:
+      - { pfad: organisation.geltungsbereich.beschreibung, typ: textarea, pflicht: true }
+      - { pfad: organisation.geltungsbereich.grenzenOrganisation, typ: textarea }
+      - { pfad: organisation.geltungsbereich.grenzenStandorte, typ: textarea }
+      - { pfad: organisation.geltungsbereich.grenzenTechnik, typ: textarea }
+      - { pfad: organisation.geltungsbereich.keineAusschluesseBestaetigt, typ: janein }
+  - id: E2-schnittstellen
+    typ: formular
+    norm: "4.3"
+    vorlage: D-02
+    leitfaden: 2
+    beispiel: organisation.geltungsbereich
+    felder:
+      - { pfad: organisation.geltungsbereich.schnittstellen, typ: textarea }
+      - pfad: organisation.geltungsbereich.ausschluesse
+        typ: tabelle
+        spalten:
+          - { pfad: was, typ: text, pflicht: true }
+          - { pfad: begruendung, typ: textarea, pflicht: true }
+  - id: E2-prozesse
+    typ: formular
+    norm: "4.4"
+    vorlage: D-02
+    leitfaden: 2
+    beispiel: meta.gefuehrt.antworten.aimsProzesse
+    felder:
+      - { pfad: meta.gefuehrt.antworten.aimsProzesse, typ: mehrfach, optionen: aimsProzesse }
+  - id: E2-freigabe
+    typ: formular
+    norm: "4.3"
+    vorlage: D-02
+    leitfaden: 2
+    beispiel: organisation.geltungsbereich.freigabe
+    felder:
+      - { pfad: organisation.geltungsbereich.freigabe, typ: freigabe, pflicht: true }

@@ -1,0 +1,333 @@
+# Page texts for phase E7 Impact assessments. Format: src/gefuehrt/FORMAT.md
+E7-einfuehrung:
+  titel: Impact assessments
+  frage: How can an AI system affect people and society?
+  warum: The risk assessment looks at your company; the [[g:folgenabschaetzung]] looks at the people a system affects. A [[g:triage]] with six questions shows for each system whether a full assessment is needed. We follow ISO/IEC 42005 here.
+  fehler: Missing or incomplete impact assessments are among the most common findings. Auditors want to see at least a screening with reasons for every system in the inventory, and an approved full assessment for sensitive systems.
+E7-verfahren:
+  titel: Who carries out the impact assessment?
+  frage: Who carries out impact assessments, who approves them and when are they repeated?
+  warum: The procedure sets out responsibilities, triggers and frequency. That way every new system is assessed before it affects people.
+  fehler: If the system owner approves their own assessment, nobody takes a second look. Auditors check that a different person gives the approval.
+  felder:
+    meta.gefuehrt.antworten.folgen.durchfuehrung:
+      label: Carried out by
+      hilfe: Usually the [[g:aims|AIMS]] lead together with the system owner.
+    meta.gefuehrt.antworten.folgen.freigabe:
+      label: Approval
+      hilfe: Someone who is not the system owner, e.g. a member of management.
+    meta.gefuehrt.antworten.folgen.rhythmus:
+      label: Repetition
+      hilfe: At least once a year for full assessments.
+    meta.gefuehrt.antworten.folgen.ausloeser:
+      label: Triggers
+      hilfe: Events after which the assessment is carried out again.
+    organisation.oeffentlicheDienste:
+      label: "Public services"
+      hilfe: "Yes if your organization is governed by public law or, as a private organization, provides public services, e.g. education, health, social benefits. A fundamental rights impact assessment may then be required (E-06)."
+E7-triage:
+  titel: Screening
+  frage: Does any of these statements apply to the system?
+  warum: The six questions identify a [[g:sensible-nutzung]]. A single yes is a sign that you should take a closer look. What the AI inventory already knows appears as a suggestion; it is only set when you select ‘Accept suggestion’.
+  fehler: Office tools are often marked ‘no’ even though they are used for HR decisions. Think about how the system is actually used, including [[g:fehlanwendung]].
+  felder:
+    triage.rechtspositionOderChancen:
+      label: It affects people's rights or opportunities
+      hilfe: e.g. hiring, promotion, credit, access to services.
+    triage.gesundheitOderSicherheit:
+      label: It can affect health or safety
+      hilfe: e.g. machine control, safety instructions, medicine.
+    triage.verletzlicheGruppen:
+      label: It affects particularly vulnerable people
+      hilfe: e.g. children, apprentices, people with disabilities, applicants in a dependent position.
+    triage.besondereDaten:
+      label: It processes particularly sensitive data
+      hilfe: e.g. health, ethnic origin, biometric data.
+    triage.automatisierteEntscheidung:
+      label: It decides without human review
+      hilfe: Or, in practice, people almost always accept its results without checking.
+    triage.grosseReichweite:
+      label: It affects many people outside the company
+      hilfe: e.g. a public chatbot, content for many customers.
+E7-triage-ergebnis:
+  titel: Screening result
+  frage: Is the screening enough, or do you need a full impact assessment?
+  warum: If at least one answer is yes, we recommend the full assessment. You can decide otherwise if you give reasons, for example if the system is only used internally to help with wording.
+  fehler: A screening without reasons is not enough. Auditors read the reasons and check whether they match the use recorded in the inventory.
+  felder:
+    triage.ergebnis:
+      label: Result
+      hilfe: The suggestion is based on your answers.
+    triage.begruendung:
+      label: Reasons
+      hilfe: e.g. "Pre-selection of applications affects applicants' chances; full assessment needed."
+    triage.durch:
+      label: "Screening by"
+      hilfe: "Person who carried out the screening."
+    triage.am:
+      label: "Screening date"
+      hilfe: "Date of the screening."
+E7-beschreibung:
+  titel: Description and use
+  frage: What does the system do, what is it used for and how could it be misused?
+  warum: A clear description is the basis of the assessment. Asking about [[g:fehlanwendung]] makes you think beyond the intended purpose.
+  fehler: '‘No misuse conceivable’ is almost never true. Auditors expect at least one realistic misuse with a matching measure.'
+  felder:
+    systembeschreibung:
+      label: System description
+      hilfe: What the system does, who uses it and how its results are used afterwards.
+    verwendungen:
+      label: Intended uses
+      hilfe: What the system is meant and tested for.
+    fehlanwendungen:
+      label: Reasonably foreseeable misuse
+      hilfe: e.g. ‘Ranking of applicants is adopted without review’.
+E7-umfeld-betreiber:
+  titel: Context of use and data
+  frage: Where and with what data do you use the system?
+  warum: Countries, languages and departments influence how well a system works. With purchased AI you often do not know the training data; record what you asked the supplier and what data you enter yourself.
+  fehler: '‘Data held by the supplier’ without asking is not enough. Auditors want to see that you asked and that you evaluated the answer.'
+  felder:
+    einsatzumfeld:
+      label: Context of use
+      hilfe: Sites, countries, languages, departments, period of use.
+    daten:
+      label: Data
+      hilfe: Input data from you, supplier information on training data, date of your request.
+E7-umfeld-anbieter:
+  titel: Use by your customers
+  frage: Where and with what data do your customers use the system?
+  warum: As a [[g:anbieter|provider]], you also need to think about the people at your customers. Record in which countries, industries and languages the system is used and what data it was trained on.
+  fehler: Providers often describe only their own test environment. Auditors ask which limits of use you communicate to customers and where the training data comes from.
+  felder:
+    einsatzumfeld:
+      label: Context of use at customers
+      hilfe: Countries, industries, languages, typical users.
+    daten:
+      label: Data
+      hilfe: Origin and volume of training and test data, known gaps.
+E7-betroffene:
+  titel: People affected
+  frage: Who is affected by the system, and how?
+  warum: The standard requires you to assess the effects on individuals and groups. Where possible, ask the people affected or their representatives, such as the staff committee.
+  fehler: People affected indirectly are often forgotten, for example customers whose data is processed. Auditors ask whether anyone from the affected groups was consulted.
+  felder:
+    betroffene:
+      label: Affected groups
+      hilfe: One row per group.
+    betroffene.gruppe:
+      label: Group
+      hilfe: e.g. ‘Applicants’, ‘HR staff’.
+    betroffene.art:
+      label: Type of impact
+      hilfe: Direct means the result concerns the person themselves.
+    betroffene.wirkung:
+      label: Effect
+      hilfe: What the system means for this group, positive and negative.
+    betroffene.konsultiert:
+      label: Consulted
+      hilfe: The group or its representatives were asked.
+    gesellschaft:
+      label: "Effect on society"
+      hilfe: "Consequences beyond the people directly affected, e.g. for the labour market, the environment or trust."
+E7-ziele-a:
+  titel: Benefits and harms, part 1
+  frage: What benefits and possible harms does the system have for accountability, transparency, fairness and privacy?
+  warum: Eight objectives help you not to overlook anything. For each one, note benefits and harms in one or two sentences; where nothing applies, say so with a short reason. Rate the extent of each harm before actions from 1 to 4, like impact A before treatment in the risk register; this decides whether the system may only be used with conditions.
+  fehler: Empty fields look like forgotten questions. Auditors expect a statement for every objective, even if it is ‘no significant effect’.
+  felder:
+    nutzenSchaden.rechenschaft.nutzen:
+      label: Accountability, benefit
+      hilfe: Is it clearer who is responsible for what?
+    nutzenSchaden.rechenschaft.schaden:
+      label: Accountability, harm
+      hilfe: Does responsibility become blurred between people and the system?
+    nutzenSchaden.rechenschaft.ausmass:
+      label: Accountability, extent of harm
+      hilfe: Level 1 (minor) to 4 (severe) on the impact scale of your risk procedure. Leave empty if no harm is expected.
+    nutzenSchaden.transparenz.nutzen:
+      label: Transparency, benefit
+      hilfe: Are processes easier to follow?
+    nutzenSchaden.transparenz.schaden:
+      label: Transparency, harm
+      hilfe: Are people unaware that AI is involved?
+    nutzenSchaden.transparenz.ausmass:
+      label: Transparency, extent of harm
+      hilfe: Level 1 (minor) to 4 (severe) on the impact scale of your risk procedure. Leave empty if no harm is expected.
+    nutzenSchaden.fairness.nutzen:
+      label: Fairness, benefit
+      hilfe: Are decisions more consistent?
+    nutzenSchaden.fairness.schaden:
+      label: Fairness, harm
+      hilfe: Can the system disadvantage groups, for example by age or gender?
+    nutzenSchaden.fairness.ausmass:
+      label: Fairness, extent of harm
+      hilfe: Level 1 (minor) to 4 (severe) on the impact scale of your risk procedure. Leave empty if no harm is expected.
+    nutzenSchaden.datenschutz.nutzen:
+      label: Privacy, benefit
+      hilfe: Is less data handled manually?
+    nutzenSchaden.datenschutz.schaden:
+      label: Privacy, harm
+      hilfe: Is data used beyond its purpose or passed on?
+    nutzenSchaden.datenschutz.ausmass:
+      label: Privacy, extent of harm
+      hilfe: Level 1 (minor) to 4 (severe) on the impact scale of your risk procedure. Leave empty if no harm is expected.
+E7-ziele-b:
+  titel: Benefits and harms, part 2
+  frage: What benefits and possible harms does the system have for reliability, safety, explainability and the environment?
+  warum: These four objectives mainly concern the technology and its effects. Together with part 1, they give a complete picture of the impact.
+  fehler: The environment is often dismissed as ‘not relevant’ without reasons. A short estimate of energy use or resources saved is enough.
+  felder:
+    nutzenSchaden.zuverlaessigkeit.nutzen:
+      label: Reliability, benefit
+      hilfe: Are results more accurate or more consistent?
+    nutzenSchaden.zuverlaessigkeit.schaden:
+      label: Reliability, harm
+      hilfe: What happens with wrong results or [[g:datendrift]]?
+    nutzenSchaden.zuverlaessigkeit.ausmass:
+      label: Reliability, extent of harm
+      hilfe: Level 1 (minor) to 4 (severe) on the impact scale of your risk procedure. Leave empty if no harm is expected.
+    nutzenSchaden.sicherheit.nutzen:
+      label: Safety, benefit
+      hilfe: Are hazards detected earlier?
+    nutzenSchaden.sicherheit.schaden:
+      label: Safety, harm
+      hilfe: Can the system put people at risk or be attacked?
+    nutzenSchaden.sicherheit.ausmass:
+      label: Safety, extent of harm
+      hilfe: Level 1 (minor) to 4 (severe) on the impact scale of your risk procedure. Leave empty if no harm is expected.
+    nutzenSchaden.erklaerbarkeit.nutzen:
+      label: Explainability, benefit
+      hilfe: Does the system give reasons for its results?
+    nutzenSchaden.erklaerbarkeit.schaden:
+      label: Explainability, harm
+      hilfe: Can you explain a result to the people affected?
+    nutzenSchaden.erklaerbarkeit.ausmass:
+      label: Explainability, extent of harm
+      hilfe: Level 1 (minor) to 4 (severe) on the impact scale of your risk procedure. Leave empty if no harm is expected.
+    nutzenSchaden.umwelt.nutzen:
+      label: Environment, benefit
+      hilfe: Does the system save energy, material or journeys?
+    nutzenSchaden.umwelt.schaden:
+      label: Environment, harm
+      hilfe: Roughly how much energy do training and operation need?
+    nutzenSchaden.umwelt.ausmass:
+      label: Environment, extent of harm
+      hilfe: Level 1 (minor) to 4 (severe) on the impact scale of your risk procedure. Leave empty if no harm is expected.
+E7-ausfaelle:
+  titel: Failures and actions
+  frage: What happens if the system fails or is misused, and what do you do about it?
+  warum: Here you summarize the consequences of errors and misuse and derive actions. You carry the actions over into the risk register and the [[g:soa|statement of applicability]].
+  fehler: Actions that only appear in the impact assessment do not get implemented. Auditors trace an action all the way to the action list.
+  felder:
+    ausfaelle:
+      label: Failures and misuse
+      hilfe: e.g. "If it fails, manual pre-selection; misuse possible through filtering by age".
+    massnahmen:
+      label: Actions
+      hilfe: e.g. "Human review of all rejected applications, age filter blocked, annual check for bias".
+E7-dsfa:
+  titel: Data protection and fundamental rights
+  frage: Is there a data protection impact assessment or a fundamental rights impact assessment for this system?
+  warum: A [[g:dsfa]] under data protection law overlaps strongly with the AI system impact assessment. Link the two instead of doing the work twice. With the AI Act module, you also check whether a [[g:fria]] is needed; for typical industrial SMEs this is rare.
+  fehler: The DPIA and the AI system impact assessment often rate the risks differently. Auditors compare the two.
+  felder:
+    verknuepfteDsfa:
+      label: Linked DPIA or FRIA
+      hilfe: Document ID or storage location, e.g. ‘DPIA-2026-03 HR software’.
+E7-fria:
+  titel: "Fundamental rights impact assessment"
+  frage: "Do you need a fundamental rights impact assessment under the EU AI Act for this high-risk system?"
+  warum: "[[g:betreiber|Deployers]] of high-risk systems under Annex III must assess the effects on fundamental rights before first use if they are bodies governed by public law or private entities providing public services (except for systems for critical infrastructure under Annex III, point 2), or if the system evaluates the creditworthiness of natural persons or assesses risks and prices in life and health insurance (Annex III, point 5(b) and (c)). Source: Art. 27(1) EU AI Act. Template E-06 guides you through the check."
+  fehler: "Private companies often do not record why no assessment is needed. Auditors and authorities want to see the reasons, even if the result is ‘not required’."
+  felder:
+    fria.erforderlich:
+      label: "Required"
+      hilfe: "Result of the applicability check in E-06."
+    fria.begruendung:
+      label: "Reasons"
+      hilfe: "Why the assessment is or is not needed, e.g. ‘private employer, no public services’."
+    fria.ref:
+      label: "Reference or location"
+      hilfe: "Where the fundamental rights impact assessment is stored."
+    fria.zeitraumHaeufigkeit:
+      label: "Period and frequency of use"
+      hilfe: "e.g. ‘from March 2028, every working day for all incoming applications’."
+    fria.aufsicht:
+      label: "Human oversight in use"
+      hilfe: "Who checks the results and can intervene and stop the system, in line with the [[g:anbieter|provider]]'s instructions for use."
+    fria.durch:
+      label: "Checked by"
+      hilfe: "Person who checked applicability."
+    fria.am:
+      label: "Checked on"
+      hilfe: "Date of the check."
+    fria.behoerde:
+      label: "Notified authority"
+      hilfe: "Competent market surveillance authority."
+    fria.mitgeteiltAm:
+      label: "Notified on"
+      hilfe: "Date the results were notified."
+E7-ergebnis:
+  titel: Result
+  frage: What is the result of the assessment and when will it be repeated?
+  warum: The result records whether the system may be used as planned, whether it is a sensitive use or a [[g:eingeschraenkte-nutzung]] and which conditions apply. The review date makes sure the assessment stays up to date.
+  fehler: The check reports a sensitive use without a full assessment as an error. Auditors check whether the result was carried over into the risk register.
+  felder:
+    sensibleNutzung:
+      label: Sensitive use
+      hilfe: The system can noticeably affect people's rights, opportunities, health or safety. If the AI inventory differs, the page shows it; only ‘Apply to the inventory’ changes the inventory.
+    eingeschraenkteNutzung:
+      label: Restricted use
+      hilfe: The system may only be used under conditions.
+    ergebnis:
+      label: Result
+      hilfe: e.g. ‘Use permitted with human review; conditions in R-014 and M-007’.
+    naechsteUeberpruefung:
+      label: Next review
+      hilfe: After one year at the latest, or after a substantial modification.
+    mitgewirkt:
+      label: "Contributors"
+      hilfe: "People or functions involved in the assessment, e.g. the business unit, data protection, representatives of those affected. A cross-functional team is immediately visible in the audit."
+E7-freigabe:
+  titel: Approval
+  frage: Who approved the impact assessment?
+  warum: With the approval, a responsible person confirms that the assessment is complete and that the actions are supported. Only then does it count as evidence.
+  fehler: The check reports impact assessments without approval as errors. Auditors check that approval came before the system went live or, for existing systems, was obtained promptly afterwards.
+  felder:
+    freigabe:
+      label: Approval
+      hilfe: Person and date, following the procedure in D-08.
+    neubeurteilungen:
+      label: "Reassessments"
+      hilfe: "For each reassessment after the first approval, e.g. after retraining or an update: date, person, reason, result and approval. The first screening stays unchanged; D-09 receives a new version."
+    neubeurteilungen.am:
+      label: "Date"
+      hilfe: "Date of the reassessment."
+    neubeurteilungen.durch:
+      label: "Carried out by"
+      hilfe: "Person who carried out the reassessment."
+    neubeurteilungen.anlass:
+      label: "Reason"
+      hilfe: "e.g. retraining of 20/11/2026, ERP update."
+    neubeurteilungen.ergebnis:
+      label: "Result"
+      hilfe: "e.g. no significant change, screening remains sufficient."
+    neubeurteilungen.freigabe:
+      label: "Approval"
+      hilfe: "Person and date of approval, never the person who carried out the reassessment."
+E7-einsatzentscheid:
+  titel: "Deployment decision"
+  frage: "What benefit do you expect from the system, which solution without AI did you consider, and when will you check the benefit?"
+  warum: "An AI system should be used because it brings a benefit that a simpler solution does not. The deployment decision records this and sets a date on which you check whether the benefit has materialized. The entries appear in the impact assessment D-09 and in the acceptable use policy D-15."
+  fehler: "‘Efficiency’ alone is not a benefit; name what changes measurably. The check reports approved systems without a solution without AI that was considered (H31). Without a review date, a system keeps running even if it brings nothing."
+  felder:
+    einsatzentscheid.nutzen:
+      label: "Expected benefit"
+      hilfe: "What changes and how you measure it, e.g. ‘response time in customer service from 2 days to 4 hours’."
+    einsatzentscheid.alternativeOhneKi:
+      label: "Solution without AI considered"
+      hilfe: "Which solution without AI you considered and why it is not enough."
+    einsatzentscheid.wiedervorlage:
+      label: "Review date"
+      hilfe: "Date on which you check the benefit, usually after 6 to 12 months."

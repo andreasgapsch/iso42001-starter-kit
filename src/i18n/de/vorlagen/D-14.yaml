@@ -1,0 +1,117 @@
+# D-14 Information, Transparenz und Meldungen
+hinweis_umfang: "Halten Sie das Dokument knapp und passen Sie Fristen und Wege an. Mit ISMS verwenden Sie stattdessen das Ergänzungsblatt D-14-EB für Ihr bestehendes Verfahren für Sicherheitsvorfälle."
+einleitung: "Dieses Dokument legt fest, wie [[Firmenname]] Nutzende und Kunden über KI informiert, Meldungen von aussen entgegennimmt und bei KI-Vorfällen kommuniziert."
+einleitung_firma: "Dieses Dokument legt fest, wie {firma} Nutzende und Kunden über KI informiert, Meldungen von aussen entgegennimmt und bei KI-Vorfällen kommuniziert."
+hinweis_eb: "Nehmen Sie die Abschnitte 1 bis 5 in Ihr Verfahren für Sicherheitsvorfälle auf (ISO/IEC 27001, A.5.24 bis A.5.28) und passen Sie die Nummerierung an. Abschnitt 6 gehört nicht ins Vorfallverfahren. Führen Sie ihn als eigenes kurzes Blatt weiter, damit A.8.2 und A.10.4 abgedeckt bleiben."
+einleitung_eb: "Dieses Ergänzungsblatt erweitert unser bestehendes Verfahren für Sicherheitsvorfälle um KI-Vorfälle, einen Meldekanal für Externe und Informationspflichten. Wo nichts anderes steht, gilt das bestehende Verfahren."
+einleitung_eb_firma: "Dieses Ergänzungsblatt erweitert unser Verfahren für Sicherheitsvorfälle ({dokument}) um KI-Vorfälle, einen Meldekanal für Externe und Informationspflichten. Wo nichts anderes steht, gilt dieses Verfahren."
+modul_praefix_leer: "Nur mit Modul EU AI Act:"
+modul_praefix: "EU AI Act:"
+abschnitte:
+  information: Information für Nutzende
+  meldekanal: Meldekanal für Externe
+  vorfall: KI-Vorfälle
+  kommunikation: Kommunikation bei KI-Vorfällen
+  pflichten: Informationspflichten gegenüber Dritten
+  kunden: Information für Kunden über Grenzen
+  lehren: Lehren und Überprüfung
+  schwere: Schweregrade für KI-Vorfälle
+  einspruch: Einspruch gegen KI-Ergebnisse
+  ausserhalb: Information für Nutzende und Kunden
+info_text: "Wer ein KI-System nutzt oder von seinen Ergebnissen betroffen ist, erhält die nötigen Informationen: dass KI beteiligt ist, wofür sie dient, wo ihre Grenzen liegen, wer Ergebnisse prüft und an wen man sich wendet. Wir informieren, wenn mindestens eines zutrifft:"
+info_kriterien:
+  - "Menschen schreiben oder sprechen direkt mit einem KI-System"
+  - "Ergebnisse gehen ohne Prüfung an Kunden oder an die Öffentlichkeit"
+  - "das System bereitet Entscheide über Personen vor"
+  - "Mitarbeitende arbeiten regelmässig mit dem System"
+systeme_fehlen: "Im KI-Inventar ist noch kein KI-System erfasst. Ergänzen Sie zuerst D-10."
+info_kopf: [KI-System, Zielgruppe, Information, Ort]
+info_vorschlag: "Hinweis auf KI, Zweck, Grenzen, Prüfung, Kontakt"
+info_ort_im_text: "wie beschrieben"
+info_untersagt: "Nutzung untersagt; Hinweis in der Richtlinie KI-Nutzung (D-15)"
+modul_info: "Für Chatbots, erzeugte oder veränderte Inhalte, Emotionserkennung und Deepfakes gelten Transparenzpflichten (Art. 50). Checkliste und Textbausteine stehen in E-07."
+modul_info_systeme: "Betroffen sind: {systeme}."
+meldekanal_text: "Kunden, Betroffene und Partner können uns nachteilige Wirkungen unserer KI-Systeme melden, auch vermutete Schwachstellen und Verzerrungen. Meldungen behandeln wir vertraulich; niemand erleidet Nachteile, weil er in guten Treuen meldet."
+hinweis_meldekanal: "Ein bestehender Kanal genügt, z. B. die allgemeine Kontaktadresse oder die Meldestelle für Hinweise, wenn KI-Meldungen dort ausdrücklich erwähnt sind. Der Kanal muss öffentlich auffindbar sein, etwa auf der Website."
+meldekanal_felder:
+  kanal: "Kanal (Adresse, Formular)"
+  veroeffentlicht: Veröffentlicht auf
+  bearbeitung: Bearbeitung durch
+  fristen: Fristen
+  ablage: Ablage der Meldungen
+  verfahren: Weiterbearbeitung
+meldekanal_ort: "[[Website, Seite Kontakt]]"
+meldekanal_fristen: "Eingangsbestätigung innert [[5]] Arbeitstagen, Antwort innert [[30]] Tagen"
+meldekanal_fristen_firma: "Eingangsbestätigung innert {bestaetigung} Arbeitstagen, Antwort innert {antwort} Tagen"
+vorfall_bestehend: "KI-Vorfälle laufen über unser bestehendes Verfahren für Vorfälle ({verfahren}). Dieser Abschnitt ergänzt nur, was bei KI anders ist."
+vorfall_isms: "Haben wir ein Verfahren für Sicherheitsvorfälle, laufen KI-Vorfälle darüber. Dieser Abschnitt ergänzt nur, was bei KI anders ist."
+vorfall_definition: "Ein KI-Vorfall ist ein Ereignis, bei dem ein KI-System Menschen, Daten, Kunden oder das Unternehmen schädigt oder schädigen könnte. Beispiele:"
+vorfall_beispiele:
+  - "vertrauliche Daten oder Personendaten gelangen über ein KI-System an Unbefugte"
+  - "falsche oder erfundene Ergebnisse gelangen an Kunden oder in Entscheide"
+  - "ein System benachteiligt Personen oder Gruppen"
+  - "ein System wird manipuliert, z. B. durch versteckte Anweisungen in Dokumenten oder Webseiten"
+  - "ein System wird ausserhalb seines Zwecks genutzt oder fällt bei einer wichtigen Aufgabe aus"
+kommunikation_text: "Bei einem KI-Vorfall informieren wir in dieser Reihenfolge. Die Koordination und, gemeinsam mit der Geschäftsleitung, den Entscheid über die Information nach aussen übernimmt die verantwortliche Person für Vorfälle (D-04): {verantwortlich}."
+hinweis_kommunikation: "Passen Sie Fristen und Wege an, in dieser Tabelle, in den Schweregraden und im Ablauf PR-19 (D-27) gleich. Üben Sie den Ablauf einmal im Jahr an einem Beispiel; der Auditor fragt danach."
+kommunikation_kopf: [Wer, informiert wen, Frist, Weg]
+kommunikation_tabelle:
+  - ["Wer den Vorfall bemerkt", "Meldestelle (D-04)", "{{fakt:vorfall.meldung}}", "[[Telefon, Ticket]]"]
+  - ["Meldestelle", "Eigner/in des Systems", "[[{{fakt:vorfall.erfassung}}]]", "[[Ticket]]"]
+  - ["Meldestelle", "AIMS-Verantwortliche, ab Stufe 2", "innert [[{{fakt:vorfall.stufe2}}]]", "[[Ticket]]"]
+  - ["AIMS-Verantwortliche", "Geschäftsleitung, ab Stufe 3", "innert [[{{fakt:vorfall.stufe3}}]], bei Stufe 4 {{fakt:vorfall.stufe4}}", "direkt"]
+  - ["Eigner/in des Systems", "Lieferant des KI-Systems", "{{fakt:vorfall.lieferant}}", "Supportkanal gemäss Vertrag"]
+  - ["Eigner/in des Systems", "betroffene Nutzende intern", "innert [[{{fakt:vorfall.nutzende}}]]", "[[E-Mail, Intranet]]"]
+  - ["Geschäftsleitung", "betroffene Kunden und Personen", "so rasch wie möglich", "[[schriftlich]]"]
+  - ["Datenschutzverantwortliche (D-04)", "Behörden nach Abschnitt 4", "gesetzliche Frist", "Meldeformular der Behörde"]
+frist_kunden_offen: "so rasch wie möglich"
+frist_kunden: "so rasch wie möglich, spätestens innert {stunden} Stunden"
+kommunikation_tabelle_eb:
+  - ["Meldestelle des Vorfallverfahrens", "Eigner/in des Systems", "[[{{fakt:vorfall.erfassung}}]]", "[[Ticket]]"]
+  - ["Meldestelle des Vorfallverfahrens", "AIMS-Verantwortliche, ab Stufe 2", "innert [[{{fakt:vorfall.stufe2}}]]", "[[Ticket]]"]
+  - ["Eigner/in des Systems", "Lieferant des KI-Systems", "{{fakt:vorfall.lieferant}}", "Supportkanal gemäss Vertrag"]
+  - ["Eigner/in des Systems", "betroffene Nutzende intern", "innert [[{{fakt:vorfall.nutzende}}]]", "[[E-Mail, Intranet]]"]
+  - ["Geschäftsleitung", "betroffene Kunden und Personen", "so rasch wie möglich", "[[schriftlich]]"]
+pflichten_text: "Diese Informations- und Meldepflichten gelten für uns. Die Liste wird bei neuen Verträgen und Gesetzen nachgeführt."
+hinweis_pflichten: "Streichen Sie, was nicht zutrifft, und ergänzen Sie Pflichten aus Kundenverträgen. Lassen Sie die Liste bei Unsicherheit rechtlich prüfen."
+pflichten_kopf: [Pflicht, Quelle, Empfänger, Verantwortlich]
+pflichten_tabelle:
+  - ["Verletzung der Datensicherheit mit voraussichtlich hohem Risiko melden, so rasch als möglich", "DSG Art. 24", "EDÖB, gegebenenfalls Betroffene", "[[Name, Funktion]]"]
+  - ["Verletzung des Schutzes von Personendaten melden, innert 72 Stunden", "DSGVO Art. 33 und 34, falls anwendbar", "Aufsichtsbehörde, gegebenenfalls Betroffene", "[[Name, Funktion]]"]
+  - ["Cyberangriff melden, innert 24 Stunden (nur Betreiber kritischer Infrastrukturen)", "ISG Art. 74a ff.", "BACS", "[[Name, Funktion]]"]
+  - ["über automatisierte Einzelentscheide informieren", "DSG Art. 21, DSGVO Art. 22", "betroffene Personen", "[[Name, Funktion]]"]
+  - ["über KI-Einsatz, Unterauftragnehmer und Vorfälle informieren", "[[Kundenverträge, Lieferantenaudits]]", "Kunden", "[[Name, Funktion]]"]
+  - ["Auskunft auf Anfrage geben", "Gesetz, Zertifizierung", "Behörden, Zertifizierungsstelle", "[[Name, Funktion]]"]
+pflichten_eb: "Meldepflichten bei Verletzungen der Datensicherheit und bei Cyberangriffen regelt das bestehende Verfahren. Für KI kommen hinzu:"
+pflichten_tabelle_eb:
+  - ["über automatisierte Einzelentscheide informieren", "DSG Art. 21, DSGVO Art. 22", "betroffene Personen", "[[Name, Funktion]]"]
+  - ["über KI-Einsatz, Unterauftragnehmer und Vorfälle informieren", "[[Kundenverträge, Lieferantenaudits]]", "Kunden", "[[Name, Funktion]]"]
+  - ["Auskunft auf Anfrage geben", "Gesetz, Zertifizierung", "Behörden, Zertifizierungsstelle", "[[Name, Funktion]]"]
+pflichten_modul_tabelle:
+  - ["schwerwiegenden Vorfall bei Hochrisiko-KI melden", "AI Act Art. 26 Abs. 5, Art. 73", "Anbieter, Marktüberwachungsbehörde", "[[Name, Funktion]]"]
+  - ["Mitarbeitende vor dem Einsatz von Hochrisiko-KI am Arbeitsplatz informieren", "AI Act Art. 26 Abs. 7", "Mitarbeitende, Personalvertretung", "[[Name, Funktion]]"]
+  - ["Betroffene über den Einsatz von Hochrisiko-KI bei Entscheiden informieren und Entscheide auf Anfrage erläutern", "AI Act Art. 26 Abs. 11, Art. 86", "betroffene Personen", "[[Name, Funktion]]"]
+modul_pflichten: "Welche dieser Pflichten für unsere Rollen und Risikoklassen gelten, steht in E-03 und E-05."
+kunden_text: "Setzen wir KI in Leistungen für Kunden ein oder liefern wir KI an Kunden, informieren wir sie über:"
+kunden_inhalt:
+  - "wo und wofür KI in der Leistung eingesetzt wird"
+  - "was das System kann und was nicht, einschliesslich bekannter Fehlerquellen"
+  - "welche Ergebnisse ein Mensch prüft"
+  - "wie Kundendaten verwendet werden, insbesondere ob sie dem Training dienen"
+  - "wohin sie Fragen und Meldungen richten (Meldekanal)"
+kunden_ort: "Die Information steht in [[Offerte, Vertrag oder Leistungsbeschreibung]]. Anforderungen von Kunden an unseren KI-Einsatz erfassen wir in D-01 und berücksichtigen sie bei Einführung und Änderung (D-12)."
+lehren_text: "Nach jedem KI-Vorfall und Beinahe-Vorfall halten wir Ursache, Wirkung und Massnahmen fest (D-22) und prüfen, ob Risiken (D-07), Folgenabschätzung (D-09) und die Information für Nutzende anzupassen sind. Akzeptierte Restrisiken, die Nutzende oder Kunden betreffen, nehmen wir in deren Information auf. Wir überprüfen diese Festlegungen jährlich und nach erheblichen Vorfällen."
+ausserhalb_text: "Die folgenden Festlegungen betreffen nicht nur Vorfälle. Sie gehören zu diesem Ergänzungsblatt, damit alle Themen aus A.8 und A.10.4 abgedeckt sind."
+ausserhalb_text_firma: "Die folgenden Festlegungen gelten für den Betrieb unserer KI-Systeme, nicht nur bei Vorfällen (A.8.2, A.10.4)."
+# Schweregrade für KI-Vorfälle und Einspruch
+schwere_text: "Wir stufen jeden KI-Vorfall und Beinahe-Vorfall nach seiner schwersten Folge ein; im Zweifel gilt die höhere Stufe. Die Stufe bestimmt Eskalation und Frist und steht im Register D-22. Meldungen und Register gleichen wir {{fakt:vorfall.abgleich}} ab, damit kein Vorfall fehlt."
+schwere_text_eb: "Wir stufen jeden KI-Vorfall und Beinahe-Vorfall nach seiner schwersten Folge ein; im Zweifel gilt die höhere Stufe. Die Stufen ergänzen die Einstufung des bestehenden Vorfallverfahrens und stehen im Register D-22. Meldungen und Register gleichen wir {{fakt:vorfall.abgleich}} ab, damit kein Vorfall fehlt."
+schwere_kopf: [Stufe, Beispiele, Eskalation und Frist]
+schwere_tabelle:
+  - ["1 gering", "einzelnes falsches Ergebnis, vor der Verwendung erkannt; kein Schaden", "Eigner/in des Systems, Eintrag im Register [[{{fakt:vorfall.erfassung}}]]"]
+  - ["2 mittel", "falsches Ergebnis erreicht einen internen Entscheid oder einen Kunden und ist rasch korrigierbar; Beinahe-Vorfall mit möglichem erheblichem Schaden", "AIMS-Verantwortliche innert [[{{fakt:vorfall.stufe2}}]]"]
+  - ["3 erheblich", "vertrauliche Daten oder Personendaten gelangen an Unbefugte, Personen werden benachteiligt, mehrere Kunden sind betroffen", "Geschäftsleitung innert [[{{fakt:vorfall.stufe3}}]], Meldepflichten nach Abschnitt 4 prüfen"]
+  - ["4 schwer", "Gefahr für Gesundheit oder Sicherheit, viele Betroffene, Meldepflicht gegenüber Behörden", "Geschäftsleitung {{fakt:vorfall.stufe4}}, System aussetzen, Information nach Abschnitt 3 beziehungsweise 4"]
+einspruch_text: "Wer von einem Ergebnis eines unserer KI-Systeme betroffen ist, kann über den Meldekanal verlangen, dass ein Mensch das Ergebnis prüft. Das gilt für alle KI-Systeme, nicht nur für Hochrisiko-KI. Die Eignerin oder der Eigner des Systems prüft innert [[10 Arbeitstagen]], erläutert das Ergebnis und korrigiert es, wo nötig. Einsprüche erfassen wir im Register D-22 und werten sie bei der Überprüfung des Systems aus."
+anlage_titel: "Schweregrade und Einspruch"
+anlage_verweis: "Schweregrade für KI-Vorfälle und der Einspruch gegen KI-Ergebnisse stehen in Anlage {nr}."

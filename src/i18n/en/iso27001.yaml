@@ -1,0 +1,193 @@
+hinweis: "Short labels written by KMU-CIO, not the titles used in the standard. For the requirement text, see ISO/IEC 27001:2022, Annex A. The standard is available from SNV, DIN or ISO."
+themen:
+  organisatorisch: "Organization"
+  personen: "People"
+  physisch: "Physical environment"
+  technologisch: "Technology"
+controls:
+  27001-5.1:
+    titel: "Security policy framework in place"
+  27001-5.2:
+    titel: "Security duties clearly assigned"
+  27001-5.3:
+    titel: "Conflicting duties kept apart"
+  27001-5.4:
+    titel: "Managers enforce security rules"
+  27001-5.5:
+    titel: "Liaison with public authorities"
+  27001-5.6:
+    titel: "Links with expert communities"
+  27001-5.7:
+    titel: "Tracking and analysing current threats"
+  27001-5.8:
+    titel: "Security built into projects"
+  27001-5.9:
+    titel: "Register of information assets kept"
+  27001-5.10:
+    titel: "Rules for handling company assets"
+  27001-5.11:
+    titel: "Assets recovered on departure"
+  27001-5.12:
+    titel: "Information graded by sensitivity"
+  27001-5.13:
+    titel: "Sensitivity marked on information"
+  27001-5.14:
+    titel: "Secure exchange of information"
+  27001-5.15:
+    titel: "Access governed by business need"
+  27001-5.16:
+    titel: "Identities managed through their lifecycle"
+  27001-5.17:
+    titel: "Passwords and secrets protected"
+  27001-5.18:
+    titel: "Permissions granted and reviewed"
+  27001-5.19:
+    titel: "Security expectations for suppliers"
+  27001-5.20:
+    titel: "Security clauses in supplier contracts"
+  27001-5.21:
+    titel: "ICT supply chain risks controlled"
+  27001-5.22:
+    titel: "Supplier services monitored and adjusted"
+  27001-5.23:
+    titel: "Cloud services procured and used safely"
+  27001-5.24:
+    titel: "Readiness for handling incidents"
+  27001-5.25:
+    titel: "Events triaged and classified"
+  27001-5.26:
+    titel: "Structured response to incidents"
+  27001-5.27:
+    titel: "Lessons drawn from incidents"
+  27001-5.28:
+    titel: "Evidence preserved for legal use"
+  27001-5.29:
+    titel: "Security maintained during a crisis"
+  27001-5.30:
+    titel: "ICT prepared for emergencies"
+  27001-5.31:
+    titel: "Legal and contractual obligations identified"
+  27001-5.32:
+    titel: "Intellectual property respected"
+  27001-5.33:
+    titel: "Records kept safe and intact"
+  27001-5.34:
+    titel: "Personal data and privacy safeguarded"
+  27001-5.35:
+    titel: "Security checked by independent parties"
+  27001-5.36:
+    titel: "Adherence to security rules checked"
+  27001-5.37:
+    titel: "Operating routines written down"
+  27001-6.1:
+    titel: "Background checks before hiring"
+  27001-6.2:
+    titel: "Security duties in employment contracts"
+  27001-6.3:
+    titel: "Staff made aware and trained"
+  27001-6.4:
+    titel: "Consequences for rule breaches"
+  27001-6.5:
+    titel: "Duties continuing after leaving or moving"
+  27001-6.6:
+    titel: "Confidentiality agreed in writing"
+  27001-6.7:
+    titel: "Working securely away from the office"
+  27001-6.8:
+    titel: "Easy reporting of security events"
+  27001-7.1:
+    titel: "Secure zones physically defined"
+  27001-7.2:
+    titel: "Building entry controlled"
+  27001-7.3:
+    titel: "Offices and rooms protected"
+  27001-7.4:
+    titel: "Premises watched for intrusion"
+  27001-7.5:
+    titel: "Protection from fire, flood and hazards"
+  27001-7.6:
+    titel: "Rules inside secure areas"
+  27001-7.7:
+    titel: "Tidy desk, locked screen"
+  27001-7.8:
+    titel: "Equipment placed and shielded"
+  27001-7.9:
+    titel: "Devices protected when off-site"
+  27001-7.10:
+    titel: "Removable media handled securely"
+  27001-7.11:
+    titel: "Power and utilities assured"
+  27001-7.12:
+    titel: "Cables protected from tampering"
+  27001-7.13:
+    titel: "Equipment properly serviced"
+  27001-7.14:
+    titel: "Equipment wiped before disposal or reuse"
+  27001-8.1:
+    titel: "Staff devices kept secure"
+  27001-8.2:
+    titel: "Admin rights tightly limited"
+  27001-8.3:
+    titel: "Data visible only to authorized users"
+  27001-8.4:
+    titel: "Source code access guarded"
+  27001-8.5:
+    titel: "Robust login methods used"
+  27001-8.6:
+    titel: "Capacity planned and monitored"
+  27001-8.7:
+    titel: "Malware detected and blocked"
+  27001-8.8:
+    titel: "Vulnerabilities found and fixed"
+  27001-8.9:
+    titel: "Secure settings defined and tracked"
+  27001-8.10:
+    titel: "Unneeded data reliably erased"
+  27001-8.11:
+    titel: "Data masked or pseudonymized"
+  27001-8.12:
+    titel: "Stopping unwanted data outflow"
+  27001-8.13:
+    titel: "Regular, tested backup copies"
+  27001-8.14:
+    titel: "Systems designed with redundancy"
+  27001-8.15:
+    titel: "Systematic event logs kept"
+  27001-8.16:
+    titel: "Watching for anomalous behaviour"
+  27001-8.17:
+    titel: "Consistent time across systems"
+  27001-8.18:
+    titel: "Powerful system tools restricted"
+  27001-8.19:
+    titel: "Controlled software installs in production"
+  27001-8.20:
+    titel: "Networks secured and managed"
+  27001-8.21:
+    titel: "Network services provided safely"
+  27001-8.22:
+    titel: "Networks split into zones"
+  27001-8.23:
+    titel: "Risky websites blocked"
+  27001-8.24:
+    titel: "Encryption applied deliberately"
+  27001-8.25:
+    titel: "Security across the development lifecycle"
+  27001-8.26:
+    titel: "Security needs for applications defined"
+  27001-8.27:
+    titel: "Secure design principles applied"
+  27001-8.28:
+    titel: "Writing code securely"
+  27001-8.29:
+    titel: "Security tested before acceptance"
+  27001-8.30:
+    titel: "Steering development by partners"
+  27001-8.31:
+    titel: "Distinct environments for build and run"
+  27001-8.32:
+    titel: "Changes introduced in a controlled way"
+  27001-8.33:
+    titel: "Test data chosen and protected"
+  27001-8.34:
+    titel: "Audits without disrupting operations"

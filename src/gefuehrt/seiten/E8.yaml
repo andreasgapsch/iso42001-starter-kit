@@ -1,0 +1,170 @@
+# Etappe E8 Controls, Erklärung zur Anwendbarkeit, Behandlungsplan. Format: src/gefuehrt/FORMAT.md
+seiten:
+  - { id: E8-einfuehrung, typ: info, norm: "6.1.3, 8.3, Anhang A", vorlage: D-11, leitfaden: 7 }
+  - id: E8-behandlung
+    typ: liste
+    liste: risiken
+    norm: "6.1.3"
+    vorlage: D-07
+    leitfaden: 7
+    filter: { art: [risiko] }
+    anlegen: false
+    beispiel: risiken[0]
+    felder:
+      - { pfad: behandlung, typ: auswahl, optionen: behandlung, pflicht: true }
+      - { pfad: controls, typ: verweis, quelle: controls, wenn: { eintrag: { behandlung: [vermindern, vermeiden, teilen] } } }
+      - { pfad: massnahmen, typ: verweis, quelle: massnahmen }
+      - { pfad: wNach, typ: zahl, skala: wahrscheinlichkeit }
+      - { pfad: aNach, typ: zahl, skala: auswirkung }
+  - id: E8-soa
+    typ: soa
+    rahmenwerk: ISO42001
+    norm: "6.1.3, Anhang A und B"
+    vorlage: D-11
+    leitfaden: 7
+    beispiel: controls[0]
+    felder:
+      - { pfad: anwendbar, typ: auswahl, optionen: jaNeinOffen, pflicht: true }
+      - { pfad: begruendung, typ: textarea, pflicht: true }
+      - { pfad: status, typ: auswahl, optionen: controlStatus, wenn: { eintrag: { anwendbar: [ja] } } }
+      - { pfad: verantwortlich, typ: person, wenn: { eintrag: { anwendbar: [ja] } } }
+      - { pfad: kiSysteme, typ: verweis, quelle: kiSysteme, wenn: { eintrag: { anwendbar: [ja] } } }
+      - { pfad: iso27001, typ: verweis, quelle: katalog-27001, wenn: { mitIsms: true, eintrag: { anwendbar: [ja] } } }
+  - id: E8-euaia
+    typ: soa
+    rahmenwerk: EUAIA
+    norm: "6.1.3"
+    vorlage: E-03
+    leitfaden: 7
+    aiact: [art-16, art-26, art-50]
+    wenn: { modul: true }
+    beispiel: controls[38]
+    felder:
+      - { pfad: anwendbar, typ: auswahl, optionen: jaNeinOffen, pflicht: true }
+      - { pfad: begruendung, typ: textarea, pflicht: true }
+      - { pfad: status, typ: auswahl, optionen: controlStatus, wenn: { eintrag: { anwendbar: [ja] } } }
+      - { pfad: verantwortlich, typ: person, wenn: { eintrag: { anwendbar: [ja] } } }
+      - { pfad: kiSysteme, typ: verweis, quelle: kiSysteme, wenn: { eintrag: { anwendbar: [ja] } } }
+  - id: E8-rmf
+    typ: soa
+    rahmenwerk: NISTRMF
+    norm: "6.1.3"
+    nist: [kern, massnahmen]
+    vorlage: D-11
+    leitfaden: 7
+    wenn: { modulNistRmf: true }
+    beispiel: controls[59]
+    felder:
+      - { pfad: anwendbar, typ: auswahl, optionen: jaNeinOffen, pflicht: true }
+      - { pfad: begruendung, typ: textarea, pflicht: true }
+      - { pfad: status, typ: auswahl, optionen: controlStatus, wenn: { eintrag: { anwendbar: [ja] } } }
+      - { pfad: verantwortlich, typ: person, wenn: { eintrag: { anwendbar: [ja] } } }
+      - { pfad: kiSysteme, typ: verweis, quelle: kiSysteme, wenn: { eintrag: { anwendbar: [ja] } } }
+  - id: E8-eigene
+    typ: liste
+    liste: eigeneControls
+    norm: "6.1.3"
+    vorlage: D-11
+    leitfaden: 7
+    beispiel: eigeneControls[0]
+    felder:
+      - { pfad: titel, typ: text, pflicht: true }
+      - { pfad: beschreibung, typ: textarea, pflicht: true }
+      - { pfad: quelle, typ: text }
+  - id: E8-massnahmen
+    typ: liste
+    liste: massnahmen
+    norm: "6.1.3, 8.3"
+    vorlage: D-07
+    leitfaden: 7
+    vorgabe: { status: offen, herkunft: { art: risiko } }
+    beispiel: massnahmen[0]
+    felder:
+      - { pfad: titel, typ: text, pflicht: true }
+      - { pfad: beschreibung, typ: textarea }
+      - { pfad: verantwortlich, typ: person, pflicht: true }
+      - { pfad: termin, typ: datum, pflicht: true }
+      - { pfad: prioritaet, typ: auswahl, optionen: prioritaet }
+      - { pfad: herkunft.art, typ: auswahl, optionen: herkunft }
+      - { pfad: herkunft.ref, typ: text }
+      - { pfad: status, typ: auswahl, optionen: massnahmeStatus }
+      - { pfad: nachweise, typ: verweis, quelle: nachweise }
+      - { pfad: erfasstAm, typ: datum }
+  - id: E8-nachweise
+    typ: liste
+    # C4-07: E8-umsetzung verlangt je anwendbarem Control einen Nachweis aus dieser Liste; «kein Eintrag nötig» wäre eine Falle
+    mindestensEiner: true
+    liste: nachweise
+    norm: "7.5"
+    vorlage: D-26
+    leitfaden: 7
+    beispiel: nachweise[0]
+    felder:
+      - { pfad: titel, typ: text, pflicht: true }
+      - { pfad: art, typ: auswahl, optionen: nachweisArt }
+      - { pfad: ablageort, typ: text, pflicht: true }
+      - { pfad: datum, typ: datum }
+  - id: E8-umsetzung
+    typ: soa
+    norm: "6.1.3, 8.1"
+    vorlage: D-11
+    leitfaden: 7
+    filter: { anwendbar: [ja] }
+    beispiel: controls[0]
+    felder:
+      - { pfad: umsetzung, typ: textarea, pflicht: true }
+      - { pfad: nachweise, typ: verweis, quelle: nachweise, pflicht: true }
+      - { pfad: status, typ: auswahl, optionen: controlStatus, pflicht: true, ungueltig: [offen] }
+  - id: E8-wirksamkeit
+    typ: soa
+    norm: "9.1, 6.1.3"
+    vorlage: D-11
+    leitfaden: 7
+    filter: { anwendbar: [ja], status: [umgesetzt, wirksam] }
+    beispiel: controls[0]
+    felder:
+      - { pfad: wirksamkeit.wie, typ: text, vorschlaege: wirksamkeitWie }
+      - { pfad: wirksamkeit.wann, typ: datum }
+      - { pfad: wirksamkeit.wer, typ: person }
+      - { pfad: wirksamkeit.ergebnis, typ: textarea }
+  - id: E8-restrisiko
+    typ: liste
+    liste: risiken
+    norm: "6.1.3, 8.3"
+    vorlage: D-07
+    leitfaden: 7
+    filter: { art: [risiko], behandlung: ["*"] }
+    anlegen: false
+    beispiel: risiken[0]
+    felder:
+      - { pfad: restrisikoAkzeptiert, typ: freigabe, pflicht: true }
+      - { pfad: restrisikoBegruendung, typ: textarea }
+      - { pfad: ausnahme.von, typ: person }
+      - { pfad: ausnahme.am, typ: datum }
+      - { pfad: ausnahme.bis, typ: datum }
+      - { pfad: ausnahme.begruendung, typ: textarea }
+      - { pfad: status, typ: auswahl, optionen: risikoStatus }
+  - id: E8-plan-freigabe
+    typ: liste
+    liste: dokumente
+    eintrag: D-07
+    wenn: { mitIsms: false }
+    norm: "6.1.3"
+    vorlage: D-07
+    leitfaden: 7
+    beispiel: dokumente[7]
+    felder:
+      - { pfad: version, typ: text }
+      - { pfad: freigabe, typ: freigabe, pflicht: true }
+  - id: E8-plan-freigabe-eb
+    typ: liste
+    liste: dokumente
+    eintrag: D-07-EB
+    wenn: { mitIsms: true }
+    norm: "6.1.3"
+    vorlage: D-07
+    leitfaden: 7
+    beispiel: dokumente[7]
+    felder:
+      - { pfad: version, typ: text }
+      - { pfad: freigabe, typ: freigabe, pflicht: true }

@@ -1,0 +1,46 @@
+# E-04 AI literacy of staff
+hinweis_umfang: "This concept sets out how you support AI literacy. Adapt the target groups and formats to your AI systems. Two to three pages are enough; you keep the attendance records in D-17."
+abschnitte:
+  wozu: Purpose of this concept
+  zielgruppen: Target groups and needs
+  inhalte: Content
+  formen: Formats
+  nachweis: Evidence
+  verbindung: Link to the AIMS
+wozu_text: "Under {fs:4}, providers and deployers of AI systems take measures so that their staff and other persons who deal with AI systems on their behalf can develop the AI literacy they need. What counts is their technical knowledge, experience, education and training, the context of use and the persons on whom the systems are used."
+wozu_pflicht: "The obligation has applied since {frist:FRIST-02}, and in its amended form since 27/07/2026: it requires **measures to support** AI literacy, but **no guaranteed level of literacy** for individuals. Art. 4 is not among the fines listed in Art. 99(4); infringements can only be penalized under national law ({fs:99(1)}). The Commission and the Member States support SMEs in particular with examples (Art. 4(2))."
+hinweis_zielgruppen: "Delete target groups that do not exist in your company and add the needs from the competence matrix (D-17, ‘Competence needs’ sheet)."
+zielgruppen_kopf: [Target group, What they should know and be able to do, Format, Frequency, Evidence]
+zielgruppen_zeilen:
+  - ["All staff with access to AI tools", "What AI can and cannot do, rules for using AI (D-15), handling confidential data, checking results, reporting incidents", "Introduction, fact sheet", "when joining, annually", "Attendance list, acknowledgement of the policy"]
+  - ["Users of a specific AI system", "Purpose and limits of the system, instructions for use, typical errors, when a human decides", "Briefing on the system", "before use, after major updates", "Briefing record"]
+  - ["Persons assigned human oversight", "Assessing outputs, intervening and stopping, reporting obligations; for high-risk AI systems, competence, training and authority under Art. 26(2)", "Training with exercises", "before taking on the task, annually", "Training record, appointment (D-04)"]
+  - ["Top management and managers", "Opportunities and risks, roles under the AI Act, the company's obligations, decisions in the management review", "Short workshop", "annually", "Minutes"]
+  - ["Development and IT (for in-house development)", "Data, testing, logging, security, documentation across the life cycle (D-12, D-13)", "Specialist training", "as needed", "Certificate, course record"]
+  - ["External persons acting on our behalf", "Rules for using AI and confidentiality", "Fact sheet, contract clause", "at the start of the assignment", "Confirmation, contract (D-16)"]
+systeme_text: "AI systems in operation or testing for which we brief users:"
+inhalte_liste:
+  - "**Basics:** what an AI system is, how it arrives at results, typical errors such as invented information or bias."
+  - "**Company rules:** permitted and prohibited uses, approved tools, handling of personal data, trade secrets and customer data (D-15)."
+  - "**Checking results:** verifying sources, plausibility, when a human must decide."
+  - "**Reporting:** report errors, incidents and shadow AI through the reporting channel (D-04, D-14)."
+  - "**System-specific:** purpose, limits and instructions for use for each system, especially where human oversight is assigned."
+  - "**The AI Act in outline** for those responsible: role, risk class, transparency, reporting obligations (E-01 to E-09)."
+formen_liste:
+  - "Introduction when joining and when a new tool is approved (15 to 30 minutes)."
+  - "Fact sheet or short video on the rules for using AI."
+  - "Briefing on the system by the system owner."
+  - "Exercises with our own examples, such as checking results together."
+  - "Annual refresher covering changes and incidents from our own operations."
+nachweis_isms: "Attendance per person with date and content in the existing training records under the topic ‘AI’ (D-17)."
+nachweis_liste:
+  - "Attendance per person with date and content in the ‘Training’ sheet of D-17."
+  - "Keep the training material and its version (control under D-26)."
+  - "Verify effectiveness, for example with short questions, spot checks in practice or by evaluating reports (ISO/IEC 42001, 7.2)."
+  - "Report the status of the measures in the management review once a year (D-21)."
+kompetenzen_text: "Actions per role; requirements and evidence in detail in D-17:"
+kompetenzen_kopf: [ID, Role, Measure, Status]
+status: [open, partly met, met]
+verbindung_text: "The concept also meets the requirements for competence (7.2) and awareness (7.3) of ISO/IEC 42001 and the additional control EUAIA-02. We keep the competence needs per role, the training and the communication in D-17; this document explains why and how we train."
+juristisch: "Art. 4 is briefly worded. The concept shows an appropriate way to implement it, but it is not legal advice. Check the Commission's practical examples on its single information platform (Art. 4(2))."
+juristisch_firma: "Art. 4 is briefly worded. The concept describes how we implement it, but it is not legal advice. We take the Commission's practical examples on its single information platform (Art. 4(2)) into account in the annual review."

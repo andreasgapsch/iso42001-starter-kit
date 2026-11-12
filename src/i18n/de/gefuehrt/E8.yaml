@@ -1,0 +1,246 @@
+# Seitentexte Etappe E8 Controls und Erklärung zur Anwendbarkeit. Format: src/gefuehrt/FORMAT.md
+E8-einfuehrung:
+  titel: Controls und Erklärung zur Anwendbarkeit
+  frage: Wie behandeln Sie Ihre Risiken und welche [[g:control|Controls]] setzen Sie dafür ein?
+  warum: Für jedes Risiko über der Akzeptanzschwelle wählen Sie eine [[g:risikobehandlung]]. Danach gleichen Sie Ihre Massnahmen mit den 38 [[g:control|Controls]] aus [[g:anhang-a|Anhang A]] ab und begründen in der [[g:soa]] für jedes, ob es gilt. Das Werkzeug schlägt Controls aus Ihren Risiken vor.
+  fehler: Ausschlüsse ohne Begründung und Controls, die als umgesetzt gelten, ohne Nachweis, sind typische Befunde. Auditoren ziehen Stichproben und lassen sich je Control den Nachweis zeigen.
+E8-behandlung:
+  titel: Behandlung je Risiko
+  frage: Wie gehen Sie mit diesem Risiko um und wie hoch ist es danach?
+  warum: Sie entscheiden, ob Sie das Risiko vermeiden, vermindern, teilen oder bewusst tragen. Beim Vermindern verknüpfen Sie [[g:control|Controls]] und Massnahmen und schätzen das Risiko danach erneut.
+  fehler: «Vermindern» ohne verknüpftes Control meldet die Prüfung als Fehler. Auditoren fragen, warum das Risiko nach den Massnahmen tiefer liegt.
+  felder:
+    behandlung:
+      label: Behandlung
+      hilfe: Bei Risiken über der oberen Schwelle kommt «tragen» nur mit Entscheid der Geschäftsleitung in Frage.
+    controls:
+      label: Controls
+      hilfe: Controls aus [[g:anhang-a|Anhang A]], Zusatz-Controls zum AI Act oder eigene.
+    massnahmen:
+      label: Massnahmen
+      hilfe: Konkrete Aufgaben mit Termin, erfasst in der Massnahmenliste.
+    wNach:
+      label: Wahrscheinlichkeit danach
+      hilfe: Nach Umsetzung der Massnahmen.
+    aNach:
+      label: Auswirkung danach
+      hilfe: Nach Umsetzung der Massnahmen.
+E8-soa:
+  titel: Erklärung zur Anwendbarkeit
+  frage: Gilt dieses [[g:control]] für Ihr Unternehmen und warum?
+  warum: In der [[g:soa|Erklärung zur Anwendbarkeit]] halten Sie für jedes der 38 Controls fest, ob es anwendbar ist, mit Begründung. Anwendbar ist es, wenn ein Risiko, eine Anforderung oder Ihre Leitlinie es verlangt. Vorschläge aus Ihren Risiken sind markiert.
+  fehler: «Bereits vorhanden» ist kein Grund für einen Ausschluss; dann ist das Control anwendbar und umgesetzt. Controls zur Entwicklung (A.6.1, A.6.2.2, A.6.2.3) dürfen Sie ausschliessen, wenn Sie keine KI entwickeln; schreiben Sie das so.
+  felder:
+    anwendbar:
+      label: Anwendbar
+      hilfe: «Noch offen» meldet die Prüfung als Fehler.
+    begruendung:
+      label: Begründung
+      hilfe: Für Aufnahme und Ausschluss, z. B. «Risiken R-003 und R-011; Anforderung Kunde Automobil».
+    status:
+      label: Stand der Umsetzung
+      hilfe: «Wirksam» erst, wenn Sie die Wirkung geprüft haben.
+    verantwortlich:
+      label: Verantwortlich
+      hilfe: Die Person, die für die Umsetzung sorgt.
+    kiSysteme:
+      label: Gilt für
+      hilfe: Leer lassen, wenn das Control für alle KI-Systeme gilt.
+    iso27001:
+      label: Verwandte Controls aus ISO/IEC 27001
+      hilfe: Nachweise aus dem [[g:isms]] können Sie wiederverwenden.
+E8-euaia:
+  titel: Zusatz-Controls zum AI Act
+  frage: Übernehmen Sie dieses Zusatz-Control für eine Pflicht aus dem AI Act?
+  warum: ISO/IEC 42001 deckt nicht alle Pflichten aus dem AI Act ab. Das Kit schlägt für jede Lücke ein Zusatz-Control vor, passend zu Ihren Rollen und Risikoklassen. Sie übernehmen es oder begründen die Ablehnung.
+  fehler: Ein Zusatz-Control ohne Entscheid meldet die Prüfung als Fehler. Kunden und Behörden fragen bei Hochrisiko-Systemen gezielt nach diesen Pflichten.
+  felder:
+    anwendbar:
+      label: Übernommen
+      hilfe: Vorschläge ergeben sich aus Rolle und Risikoklasse der Systeme.
+    begruendung:
+      label: Begründung
+      hilfe: z. B. «KI-008 ist Hochrisiko nach Anhang III Nr. 4; wir sind [[g:betreiber]]».
+    status:
+      label: Stand der Umsetzung
+      hilfe: Stand der Umsetzung.
+    verantwortlich:
+      label: Verantwortlich
+      hilfe: Die Person, die für die Umsetzung sorgt.
+    kiSysteme:
+      label: Gilt für
+      hilfe: Die betroffenen Systeme.
+E8-eigene:
+  titel: Eigene Controls
+  frage: Brauchen Sie Controls, die weder in [[g:anhang-a|Anhang A]] noch im Modul stehen?
+  warum: Manche Risiken verlangen eigene Regeln, etwa zur Exportkontrolle bei Konstruktionsdaten. Eigene Controls erscheinen in der [[g:soa|Erklärung zur Anwendbarkeit]] wie alle anderen.
+  fehler: Eigene Controls, die nur ein Anhang-A-Control umbenennen, schaffen Verwirrung. Auditoren wollen sehen, welche Lücke ein eigenes Control schliesst.
+  felder:
+    titel:
+      label: Titel
+      hilfe: z. B. «Exportkontrolle bei KI-Diensten».
+    beschreibung:
+      label: Beschreibung
+      hilfe: Was das Control verlangt.
+    quelle:
+      label: Quelle
+      hilfe: Woher die Anforderung stammt, z. B. «Güterkontrollverordnung, Kundenvertrag».
+E8-massnahmen:
+  titel: Massnahmen
+  frage: Welche konkreten Aufgaben folgen aus der Behandlung, wer erledigt sie und bis wann?
+  warum: "[[g:control|Controls]] beschreiben, was gelten soll; Massnahmen beschreiben, was dafür noch zu tun ist. Jede Massnahme braucht eine verantwortliche Person und einen Termin."
+  fehler: Massnahmen ohne Termin oder Verantwortung meldet die Prüfung als Fehler. Auditoren verfolgen einzelne Massnahmen bis zur Erledigung.
+  felder:
+    titel:
+      label: Massnahme
+      hilfe: z. B. «Private ChatGPT-Konten sperren und Firmenlizenz einführen».
+    beschreibung:
+      label: Beschreibung
+      hilfe: Was genau getan wird.
+    verantwortlich:
+      label: Verantwortlich
+      hilfe: Eine Person, nicht eine Abteilung.
+    termin:
+      label: Termin
+      hilfe: Realistisch, aber verbindlich.
+    prioritaet:
+      label: Priorität
+      hilfe: Hoch bei Risiken über der oberen Schwelle.
+    herkunft.art:
+      label: Herkunft
+      hilfe: Woraus die Massnahme stammt.
+    herkunft.ref:
+      label: Bezug
+      hilfe: ID, z. B. «R-007» oder «F-002».
+    status:
+      label: Status
+      hilfe: Stand der Umsetzung.
+    nachweise:
+      label: Nachweise
+      hilfe: Was belegt Umsetzung und Wirksamkeit der erledigten Massnahme?
+    erfasstAm:
+      label: "Erfasst am"
+      hilfe: "Datum, an dem die Massnahme erfasst wurde. IDs werden in dieser Reihenfolge vergeben; Dokumente, die vor diesem Datum freigegeben wurden, nennen die Massnahme nicht."
+E8-nachweise:
+  titel: Nachweise
+  frage: Welche Dokumente und Aufzeichnungen belegen die Umsetzung, und wo liegen sie?
+  warum: Die Nachweisliste sagt Auditoren, wo sie was finden. Sie erspart im Audit lange Suchen und zeigt, dass Ihr System Spuren im Alltag hinterlässt.
+  fehler: Nachweise ohne Ablageort sind im Audit nicht auffindbar. Geben Sie einen Pfad oder Link an, den auch eine Stellvertretung findet.
+  felder:
+    titel:
+      label: Nachweis
+      hilfe: z. B. «Freigabeprotokoll M365 Copilot».
+    art:
+      label: Art
+      hilfe: Dokument, Aufzeichnung, Protokoll, Vertrag, Schulungsnachweis.
+    ablageort:
+      label: Ablageort
+      hilfe: Pfad oder Link.
+    datum:
+      label: Datum
+      hilfe: Datum des Nachweises.
+E8-umsetzung:
+  titel: Umsetzung und Nachweis
+  frage: Wie ist dieses [[g:control]] umgesetzt und womit können Sie das belegen?
+  warum: Für jedes anwendbare Control beschreiben Sie kurz die Umsetzung und verknüpfen mindestens einen Nachweis. Die [[g:soa|Erklärung zur Anwendbarkeit]] wird so zum Wegweiser für das Audit.
+  fehler: Ein Verweis auf eine Richtlinie allein zeigt nicht, dass sie gelebt wird. Auditoren wollen auch Aufzeichnungen sehen, etwa Freigabeprotokolle, Schulungslisten oder Prüfberichte.
+  felder:
+    umsetzung:
+      label: Beschreibung der Umsetzung
+      hilfe: Ein bis drei Sätze, z. B. «Freigabe neuer Werkzeuge gemäss D-15, Abschnitt 4; Freigabeliste im KI-Inventar».
+    nachweise:
+      label: Nachweise
+      hilfe: Wählen Sie die Nachweise aus der Liste des vorigen Schritts. Fehlt einer, erfassen Sie ihn unter «Nachweise» (Formularansicht) oder im Schritt davor.
+    status:
+      label: Stand der Umsetzung
+      hilfe: Solange der Stand «offen» ist, meldet die Prüfung das Control als Fehler. Stimmen Beschreibung und Nachweis, wählen Sie «umgesetzt».
+E8-restrisiko:
+  titel: Restrisiko annehmen
+  frage: Nimmt die zuständige Person das verbleibende Risiko an?
+  warum: Nach der Behandlung bleibt ein [[g:restrisiko]]. Die Norm verlangt, dass die zuständige Leitung es ausdrücklich annimmt, mit Name und Datum.
+  fehler: Behandelte Risiken ohne Annahme meldet die Prüfung als Fehler. Auditoren achten darauf, dass Restrisiken über der Akzeptanzschwelle von der Geschäftsleitung angenommen wurden.
+  felder:
+    restrisikoAkzeptiert:
+      label: Restrisiko angenommen
+      hilfe: Person und Datum. Bei hohen Restrisiken ein Mitglied der Geschäftsleitung.
+    restrisikoBegruendung:
+      label: Begründung der Annahme
+      hilfe: Nötig, wenn das Restrisiko über der Akzeptanzgrenze liegt, z. B. warum es bis zum Abschluss einer Massnahme getragen wird und bis wann.
+    ausnahme.von:
+      label: Ausnahme erteilt von
+      hilfe: Nur für ein Risiko, das nicht annehmbar ist und befristet getragen wird. Wer die Ausnahme erteilt, richtet sich nach den Entscheidungsrechten (D-04).
+    ausnahme.am:
+      label: Ausnahme erteilt am
+      hilfe: Datum des Entscheids.
+    ausnahme.bis:
+      label: Ausnahme gültig bis
+      hilfe: Höchstens so lange, wie die KI-Leitlinie Ausnahmen zulässt.
+    ausnahme.begruendung:
+      label: Begründung und Auflagen der Ausnahme
+      hilfe: z. B. «bis zur Einführung des freigegebenen Dienstes, nur mit Fachprüfung jeder Übersetzung».
+    status:
+      label: Status
+      hilfe: «Restrisiko angenommen» nach der Annahme.
+E8-plan-freigabe:
+  titel: Behandlungsplan freigeben
+  frage: Hat die Geschäftsleitung den Behandlungsplan freigegeben?
+  warum: Der Behandlungsplan fasst Risiken, Behandlungen, [[g:control|Controls]] und Massnahmen zusammen. Die Freigabe zeigt, dass die Geschäftsleitung die Mittel bereitstellt und die Restrisiken kennt.
+  fehler: Ein nicht freigegebener Plan ist ein Fehler in der Prüfung. Auditoren vergleichen Datum der Freigabe und Stand des Registers.
+  felder:
+    version:
+      label: Version
+      hilfe: Version des Risikoregisters mit Behandlungsplan (D-07).
+    freigabe:
+      label: Freigabe
+      hilfe: Person der Geschäftsleitung und Datum.
+E8-plan-freigabe-eb:
+  titel: Behandlungsplan freigeben (mit ISMS)
+  frage: Hat die Geschäftsleitung den Behandlungsplan freigegeben?
+  warum: Der Behandlungsplan fasst Risiken, Behandlungen, [[g:control|Controls]] und Massnahmen zusammen. Die Freigabe zeigt, dass die Geschäftsleitung die Mittel bereitstellt und die Restrisiken kennt.
+  fehler: Ein nicht freigegebener Plan ist ein Fehler in der Prüfung. Auditoren vergleichen Datum der Freigabe und Stand des Registers.
+  felder:
+    version:
+      label: Version
+      hilfe: Version des Ergänzungsblatts D-07-EB, mit dem das Risikoregister des [[g:isms]] den Behandlungsplan für KI führt.
+    freigabe:
+      label: Freigabe
+      hilfe: Person der Geschäftsleitung und Datum.
+E8-rmf:
+  titel: "Zusatz-Controls NIST AI RMF"
+  frage: "Übernehmen Sie dieses Zusatz-Control aus dem NIST AI RMF in die [[g:soa|Erklärung zur Anwendbarkeit]]?"
+  warum: "Das Modul schliesst mit den Zusatz-Controls RMF-01 bis RMF-16 und RMF-G01 bis RMF-G07 die Teile des NIST AI RMF, die ISO/IEC 42001 nicht oder nur teilweise abdeckt. Das Werkzeug schlägt je KI-System vor, was passt; die G-Controls gelten nur für generative KI. Die Entscheide stehen wie die [[g:control|Controls]] aus [[g:anhang-a|Anhang A]] in D-11."
+  fehler: "Ein abgelehntes Control braucht eine Begründung, die zu Ihren Systemen passt. Das NIST AI RMF ist freiwillig, und niemand zertifiziert die Übereinstimmung damit. Nennen Sie in Kundenfragebögen deshalb nur, was im Profil N-01 belegt ist."
+  felder:
+    anwendbar:
+      label: "Übernommen"
+      hilfe: "Vorschläge ergeben sich aus Art, Rolle und Kurzprüfung der Systeme und aus der Angabe «generative KI»."
+    begruendung:
+      label: "Begründung"
+      hilfe: "z. B. «KI-004 ist ein Assistent mit generativer KI; wir prüfen erfundene Inhalte vor jeder Offerte»."
+    status:
+      label: "Umsetzung"
+      hilfe: "Stand der Umsetzung."
+    verantwortlich:
+      label: "Verantwortlich"
+      hilfe: "Die Person, die für die Umsetzung sorgt."
+    kiSysteme:
+      label: "Gilt für"
+      hilfe: "Die betroffenen Systeme."
+E8-wirksamkeit:
+  titel: "Wirksamkeit der Controls"
+  frage: "Wie, wann und von wem haben Sie geprüft, ob die umgesetzten [[g:control|Controls]] wirken?"
+  warum: "Ein umgesetztes Control ist erst dann ein guter Nachweis, wenn jemand geprüft hat, dass es im Alltag wirkt. Eine Stichprobe, ein Test oder eine Auswertung genügt; wichtig sind Datum, Person und Ergebnis. Die Angaben erscheinen in der [[g:soa|Erklärung zur Anwendbarkeit]] D-11 in der Spalte «Wirksamkeit geprüft»."
+  fehler: "Beginnen Sie mit den wichtigsten Controls; nicht jedes braucht im ersten Jahr eine eigene Prüfung. Die Prüfung meldet umgesetzte Controls ohne Angabe zur Wirksamkeit (H35). Auditoren fragen nach dem Beleg der letzten Prüfung."
+  felder:
+    wirksamkeit.wie:
+      label: "Wirksamkeit: wie geprüft"
+      hilfe: "Methode, z. B. Stichprobe von 10 Fällen, Test oder Auswertung der Protokolle."
+    wirksamkeit.wann:
+      label: "Wirksamkeit: wann geprüft"
+      hilfe: "Datum der Prüfung oder geplantes Datum."
+    wirksamkeit.wer:
+      label: "Wirksamkeit: geprüft durch"
+      hilfe: "Möglichst nicht die Person, die das Control umsetzt."
+    wirksamkeit.ergebnis:
+      label: "Wirksamkeit: Ergebnis"
+      hilfe: "Kurz das Ergebnis und allfällige Massnahmen."

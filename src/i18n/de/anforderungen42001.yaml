@@ -1,0 +1,120 @@
+# ISO/IEC 42001 Abschnitte 4 bis 10: eigene Kurzbezeichnungen und Erläuterungen.
+# Kein Normtext. Den Anforderungstext lesen Sie in Ihrer eigenen Normausgabe nach.
+kapitel:
+  K-4: Kontext der Organisation
+  K-5: Führung
+  K-6: Planung
+  K-7: Unterstützung
+  K-8: Betrieb
+  K-9: Bewertung der Leistung
+  K-10: Verbesserung
+
+abschnitte:
+  K-4.1:
+    titel: Umfeld und Rolle verstehen
+    was: Klären Sie, welche internen und externen Themen Ihr KI-Managementsystem beeinflussen, ob der Klimawandel dazugehört, wofür Ihre KI-Systeme gedacht sind und welche Rolle Sie dabei einnehmen (z. B. Anbieter, Nutzer, Partner).
+    nachweis: Themenliste und Rollenbestimmung in D-01.
+  K-4.2:
+    titel: Interessierte Parteien und ihre Anforderungen
+    was: Bestimmen Sie, wer vom KI-Einsatz betroffen ist oder ihn beeinflusst, was diese Parteien erwarten und welche dieser Anforderungen Ihr Managementsystem aufnimmt.
+    nachweis: Register der interessierten Parteien mit Entscheid je Anforderung (D-01).
+  K-4.3:
+    titel: Geltungsbereich festlegen
+    was: Grenzen Sie ab, welche Organisationseinheiten, Standorte, Prozesse und KI-Systeme das Managementsystem umfasst. Begründen Sie Ausschlüsse; das empfehlen wir für das Audit, Abschnitt 4.3 verlangt es nicht ausdrücklich.
+    nachweis: Freigegebener Geltungsbereich (D-02).
+  K-4.4:
+    titel: Managementsystem aufbauen und beschreiben
+    was: Richten Sie die nötigen Prozesse ein, beschreiben Sie, wie sie zusammenwirken, und verbessern Sie sie laufend.
+    nachweis: AIMS-Überblick mit Prozesslandkarte (D-02), Prozessbeschreibungen mit Prozessdiagrammen (D-27).
+  K-5.1:
+    titel: Führung und Verpflichtung
+    was: "Die Geschäftsleitung trägt das Managementsystem sichtbar mit: Sie setzt Leitlinie und Ziele, stellt Mittel bereit und fordert Ergebnisse ein."
+    nachweis: Freigaben, Protokolle der Managementbewertung (D-21), Kommunikation der Geschäftsleitung.
+  K-5.2:
+    titel: KI-Leitlinie
+    was: Die Geschäftsleitung erlässt eine KI-Leitlinie, die zum Unternehmen passt, einen Rahmen für Ziele setzt und Verpflichtungen zu Anforderungen und Verbesserung enthält. Sie wird bekannt gemacht.
+    nachweis: Freigegebene und verteilte KI-Leitlinie (D-03).
+  K-5.3:
+    titel: Rollen und Befugnisse
+    was: Zuständigkeiten sind vergeben und bekannt, insbesondere wer für die Normkonformität sorgt und wer der Geschäftsleitung über die Leistung berichtet.
+    nachweis: Rollenmatrix (D-04).
+  K-6.1.1:
+    titel: Risiken und Chancen planen
+    was: Leiten Sie aus Umfeld und Anforderungen ab, welche Risiken und Chancen Sie angehen müssen, legen Sie Kriterien für akzeptable Risiken fest und planen Sie Massnahmen samt Wirksamkeitsprüfung.
+    nachweis: Risikokriterien (D-06), Risiken und Chancen mit Massnahmen (D-07).
+  K-6.1.2:
+    titel: KI-Risiken beurteilen
+    was: Beurteilen Sie KI-Risiken nach einer festen Methode, die bei Wiederholung vergleichbare Ergebnisse liefert. Betrachten Sie Folgen für Unternehmen, Einzelpersonen und Gesellschaft und priorisieren Sie.
+    nachweis: Verfahren (D-06), Risikoregister (D-07).
+  K-6.1.3:
+    titel: KI-Risiken behandeln
+    was: Wählen Sie für jedes Risiko eine Behandlung, bestimmen Sie die nötigen Controls, gleichen Sie diese mit Anhang A ab, erstellen Sie die Erklärung zur Anwendbarkeit und einen Behandlungsplan. Plan und Restrisiken werden von der zuständigen Leitung freigegeben.
+    nachweis: Behandlungsplan und Restrisiko-Annahme (D-07), Erklärung zur Anwendbarkeit (D-11).
+  K-6.1.4:
+    titel: Folgenabschätzung für KI-Systeme
+    was: Legen Sie ein Verfahren fest, mit dem Sie abschätzen, wie sich ein KI-System auf Menschen, Gruppen und die Gesellschaft auswirken kann, auch bei vorhersehbarer Fehlanwendung. Ergebnisse fliessen in die Risikobeurteilung.
+    nachweis: Verfahren (D-08), Folgenabschätzungen (D-09).
+  K-6.2:
+    titel: KI-Ziele und Planung
+    was: Setzen Sie messbare KI-Ziele, die zur Leitlinie passen, und planen Sie, was, mit welchen Mitteln, durch wen, bis wann und mit welcher Erfolgsmessung geschieht.
+    nachweis: Ziele und Kennzahlen (D-05).
+  K-6.3:
+    titel: Änderungen planen
+    was: Änderungen am Managementsystem werden geplant und kontrolliert umgesetzt.
+    nachweis: Regeln für Änderungen in D-26, geplante Änderungen im Register D-22 (Blatt Verbesserungen).
+  K-7.1:
+    titel: Ressourcen
+    was: Stellen Sie Personal, Zeit, Budget und Werkzeuge für das Managementsystem bereit.
+    nachweis: Ressourcenplanung in D-05 und D-10, beim Aufbau auch D-00 (Projektauftrag).
+  K-7.2:
+    titel: Kompetenz
+    was: Bestimmen Sie, welche Kompetenzen für KI-relevante Aufgaben nötig sind, sorgen Sie dafür, dass die Personen sie haben, und prüfen Sie die Wirkung von Schulungen.
+    nachweis: Kompetenzmatrix und Schulungsnachweise (D-17).
+  K-7.3:
+    titel: Bewusstsein
+    was: Alle Mitarbeitenden kennen die KI-Leitlinie, ihren Beitrag und die Folgen, wenn Regeln nicht eingehalten werden.
+    nachweis: Schulungs- und Informationsnachweise (D-17), Nutzungsrichtlinie (D-15).
+  K-7.4:
+    titel: Kommunikation
+    was: Legen Sie fest, was wann mit wem auf welchem Weg zum KI-Managementsystem kommuniziert wird, intern und extern.
+    nachweis: Kommunikationsplan (D-17).
+  K-7.5:
+    titel: Dokumentierte Information lenken
+    was: Dokumente und Aufzeichnungen sind gekennzeichnet, geprüft, freigegeben, geschützt, versioniert und auffindbar. Externe Dokumente werden ebenfalls gelenkt.
+    nachweis: Regeln und Dokumentenregister (D-26).
+  K-8.1:
+    titel: Betrieb planen und steuern
+    was: Setzen Sie die geplanten Massnahmen und Controls im Alltag um, steuern Sie Änderungen und ausgelagerte Leistungen und überwachen Sie die Wirksamkeit.
+    nachweis: Lebenszyklus und Betrieb (D-12), Lieferanten (D-16), Nachweise je Control.
+  K-8.2:
+    titel: Risikobeurteilung im Betrieb
+    was: Wiederholen Sie die Risikobeurteilung in festen Abständen und bei wesentlichen Änderungen.
+    nachweis: Datierte Einträge im Risikoregister (D-07).
+  K-8.3:
+    titel: Risikobehandlung im Betrieb
+    was: Setzen Sie den Behandlungsplan um, prüfen Sie die Wirkung und passen Sie den Plan an, wenn Massnahmen nicht greifen.
+    nachweis: Status der Massnahmen und Nachweis je Massnahme (D-07).
+  K-8.4:
+    titel: Folgenabschätzung im Betrieb
+    was: Wiederholen Sie Folgenabschätzungen in festen Abständen und bei wesentlichen Änderungen am System oder seiner Nutzung.
+    nachweis: Datierte Folgenabschätzungen (D-09).
+  K-9.1:
+    titel: Überwachen und messen
+    was: Legen Sie fest, was wie und wann gemessen und ausgewertet wird, und bewerten Sie die Leistung des Managementsystems.
+    nachweis: Messplan und Ergebnisse (D-05).
+  K-9.2:
+    titel: Internes Audit
+    was: Prüfen Sie in geplanten Abständen mit einem Auditprogramm, ob das Managementsystem die eigenen und die Normanforderungen erfüllt und wirksam ist. Die Auditoren prüfen nicht ihre eigene Arbeit.
+    nachweis: Auditprogramm, Auditberichte (D-20).
+  K-9.3:
+    titel: Managementbewertung
+    was: Die Geschäftsleitung bewertet das Managementsystem in geplanten Abständen anhand festgelegter Eingaben und entscheidet über Verbesserungen und Änderungen.
+    nachweis: Protokoll der Managementbewertung (D-21).
+  K-10.1:
+    titel: Fortlaufende Verbesserung
+    was: Verbessern Sie Eignung, Angemessenheit und Wirksamkeit des Managementsystems laufend.
+    nachweis: Verbesserungsregister (D-22), Entscheide der Managementbewertung.
+  K-10.2:
+    titel: Nichtkonformitäten und Korrekturmassnahmen
+    was: Reagieren Sie auf Abweichungen, suchen Sie die Ursache, beheben Sie sie dauerhaft und prüfen Sie, ob die Korrektur wirkt.
+    nachweis: Register der Nichtkonformitäten und Korrekturmassnahmen (D-22).

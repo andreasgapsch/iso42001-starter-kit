@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Andreas Gapsch, KMU-CIO, kmu-cio.ch">
+<title>AIMS-Manager: Kurzanleitung</title>
+<style>
+:root { --text:#1c2430; --text-2:#4a5566; --akzent:#1f5b8f; --rand:#cfd6df; --flaeche:#eef1f5; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 15px/1.45 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif; color: var(--text); background: #fff; }
+main { max-width: 820px; margin: 0 auto; padding: 28px 24px; }
+h1 { font-size: 1.55rem; margin: 0 0 4px; color: var(--akzent); }
+h2 { font-size: 1.05rem; margin: 18px 0 6px; }
+p, li { margin: 0 0 6px; }
+ol, ul { padding-left: 1.3em; margin: 0 0 6px; }
+.unter { color: var(--text-2); margin-bottom: 14px; }
+.kasten { background: var(--flaeche); border-left: 4px solid var(--akzent); padding: 10px 14px; border-radius: 6px; margin: 12px 0; }
+.spalten { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+kbd { font: 0.85em ui-monospace, Consolas, monospace; border: 1px solid var(--rand); border-radius: 4px; padding: 0 4px; }
+footer { margin-top: 18px; padding-top: 8px; border-top: 1px solid var(--rand); color: var(--text-2); font-size: 0.85rem; }
+@media (max-width: 700px) { .spalten { grid-template-columns: 1fr; } }
+@media print { @page { size: A4; margin: 12mm; } main { padding: 0; max-width: none; } body { font-size: 10.5pt; } h2 { margin-top: 10px; } }
+</style>
+</head>
+<body>
+<main>
+<h1>AIMS-Manager: Kurzanleitung</h1>
+<p class="unter">Werkzeug des ISO/IEC 42001 Starter-Kits. Eine Datei, läuft offline im Browser.</p>
+<div class="kasten"><strong>Ihre Daten verlassen diesen Rechner nicht.</strong> Ihre Angaben stehen in einer Projektdatei mit der Endung <code>.aims.json</code>. Speichern Sie sie an einem gesicherten Ort, zum Beispiel in einem Ordner mit Datensicherung.</div>
+<div class="spalten">
+<section>
+<h2>1. Starten</h2>
+<ol>
+<li>Öffnen Sie <code>aims-manager.html</code> per Doppelklick (Edge, Chrome, Firefox oder Safari).</li>
+<li>Wählen Sie <strong>Neues Projekt</strong>, <strong>Projektdatei öffnen</strong> oder ein <strong>Beispiel</strong>.</li>
+<li>Beim neuen Projekt legen Sie den Pfad fest (mit oder ohne ISMS) und ob das Modul EU AI Act dazugehört. Beides lässt sich in den Einstellungen ändern.</li>
+</ol>
+<h2>2. Arbeiten</h2>
+<ul>
+<li><strong>Navigation:</strong> Links wählen Sie den Bereich (Start, Übersicht, Guide, Register, Prozesse, Bibliothek, Wissen, Prüfung), daneben im Untermenü die Seite. Jede Seite hat oben ihren Titel, die Suche (<kbd>/</kbd>) und die Hauptaktion, zum Beispiel «KI-System erfassen». Auf dem Telefon liegen die Bereiche unten, die übrigen unter «Mehr».</li>
+<li><strong>Guide:</strong> Etappe für Etappe, eine Frage je Seite. Rechts stehen Hilfe, Beispielantwort, typische Fehler und Verweise auf Norm, Vorlage und Leitfaden.</li>
+<li><strong>Später:</strong> Seiten ohne Antwort zurückstellen; sie erscheinen bei den offenen Punkten.</li>
+<li><strong>Register:</strong> alle Angaben auf einen Blick (Inventar, Risiken, SoA, Massnahmen, AI Act, 27001-Brücke und weitere).</li>
+<li><strong>Fragebogen:</strong> im KI-Inventar als Excel-Datei an Fachbereiche senden und ausgefüllt wieder einlesen.</li>
+</ul>
+</section>
+<section>
+<h2>3. Speichern</h2>
+<ul>
+<li><strong>Speichern</strong> mit <kbd>Ctrl</kbd>+<kbd>S</kbd> (Mac <kbd>Cmd</kbd>+<kbd>S</kbd>), über die Anzeige des Speicherstands neben der Suche oder im Projektmenü unten in der Symbolleiste. Edge und Chrome schreiben direkt in die geöffnete Datei; Firefox und Safari laden eine neue Datei in den Download-Ordner.</li>
+<li>«Ungespeicherte Änderungen» neben der Suche zeigt, dass die Datei nicht aktuell ist. Der Browser hält alle zwei Sekunden einen Zwischenstand; er ersetzt die Projektdatei nicht.</li>
+</ul>
+<h2>4. Prüfen und Dokumente erzeugen</h2>
+<ul>
+<li><strong>Prüfung</strong> (<kbd>Alt</kbd>+<kbd>P</kbd>): Ampel «Bereit für Stage 1», Fehler und Hinweise mit Sprung zur Stelle.</li>
+<li><strong>Bibliothek:</strong> Dokumente mit Status, Version und Prüftermin. In Edge und Chrome verbinden Sie einen Ordner Ihrer Wahl; in Firefox und Safari bleibt die Bibliothek im Browserspeicher.</li>
+<li><strong>Dokumente erzeugen</strong> (Bibliothek, Erzeugen): komplettes Set als Word- und Excel-Dateien (ZIP), einzeln oder als Druckansicht für PDF. Die Dokumente gehören Ihrem Unternehmen.</li>
+</ul>
+<h2>5. KI-Assistent</h2>
+<p>«Mit KI vertiefen» erstellt eine Anfrage zum Kopieren; vertrauliche Angaben lassen sich vorher abwählen. Die Projektdatei des Assistenten übernehmen Sie auf der Startseite mit «Ergebnis des KI-Assistenten übernehmen».</p>
+</section>
+</div>
+<h2>Gut zu wissen</h2>
+<ul>
+<li>Tastatur: <kbd>Enter</kbd> weiter, <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>Pfeil links</kbd> zurück, <kbd>Alt</kbd>+<kbd>P</kbd> Prüfung. Sprache und Darstellung (dunkel, hell, wie System) wählen Sie unter Einstellungen.</li>
+<li>Windows: Erzeugte Word- und Excel-Dateien öffnen sich zuerst in der geschützten Ansicht. Klicken Sie auf «Bearbeitung aktivieren».</li>
+<li>Auf gemeinsam genutzten Rechnern leeren Sie den Zwischenspeicher in den Einstellungen.</li>
+<li>Drucken: Ausdrucke nennen Organisation, Stand und in Edge und Chrome die Seite. In Firefox und Safari setzt die Einstellung «Kopf- und Fusszeilen» im Druckdialog die Seitenzahl, druckt aber auch die Adresse der Datei.</li>
+</ul>
+<footer>ISO/IEC 42001 Starter-Kit von Andreas Gapsch, KMU-CIO, kmu-cio.ch. Die Norm ist bei SNV, DIN oder ISO zu beziehen. Das Kit ersetzt keine Rechtsberatung.</footer>
+</main>
+</body>
+</html>

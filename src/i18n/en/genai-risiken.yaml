@@ -1,0 +1,199 @@
+# GenAI security suggestions (catalogue src/kataloge/genai-risiken.yaml): own texts, not a translation of the OWASP list.
+titel_blatt: "GenAI security suggestions"
+hinweise:
+  - "Prompt for systems using generative AI (text, images, code): typical security and data risks. GS-01 to GS-10 concern any application with a language model, GS-11 to GS-16 only AI that acts (agents, connectors, memory), GS-17 to GS-22 are additional suggestions on data. Copy suitable entries as a risk of your own into the sheet ‘Risk register’, assign the AI system and rate likelihood and impact yourself."
+  - "Column ‘Audience’: for plain use of services (assistant in office software, chat service, software as a service) the entries marked ‘Deployer’ usually suffice. The others become relevant once an own chatbot, an own application or own development is added."
+  - "The topics of GS-01 to GS-10 follow those of the OWASP Top 10 for LLM Applications 2026, those of GS-11 to GS-16 the OWASP Top 10 for Agentic Applications 2026 (OWASP GenAI Security Project, genai.owasp.org, licensed under CC BY-SA 4.0). Descriptions, measures and mappings to ISO/IEC 42001 and NIST AI 600-1 are our own wording and have not been reviewed by OWASP."
+spalten: [ID, Title, Risk source, Cause, Consequence, Typical measures, Suggested controls, Audience, OWASP reference, Related NIST AI 600-1 risks]
+# Reference for additional suggestions without an OWASP entry
+eigener_vorschlag: "own suggestion"
+zielgruppe:
+  betreiber: Deployer
+  entwickler: Development
+GS-01:
+  titel: "Hidden instructions steer the AI assistant"
+  ursache: "The model cannot reliably separate instructions from content. Text in chats, emails, web pages, documents or tool responses can change its behaviour."
+  folge: "Wrong answers, leakage of internal data or unintended actions with the users' permissions."
+  massnahmen:
+    - "Limit the assistant's access to email, file shares and connectors to what is needed"
+    - "Actions with external effect only after confirmation by a person"
+    - "Do not process third-party content in tools with access to confidential data unless approved"
+    - "Misuse cases in the pre-deployment test, repeated after a model change"
+    - "Report unusual behaviour through the reporting channel"
+GS-02:
+  titel: "Confidential data reach unauthorized persons through the AI"
+  ursache: "Too much data is within reach of the model, e.g. through overly broad sharing in file stores, or inputs are reused by the provider."
+  folge: "Breach of confidentiality, data protection or customer contracts; loss of know-how."
+  massnahmen:
+    - "Data classes and prohibited inputs in the usage policy"
+    - "Clean up sharing in file stores before an assistant searches them"
+    - "Contract: no training with our data, retention and deletion agreed"
+    - "Protect logs and intermediate results like the source data"
+GS-03:
+  titel: "AI acts with excessive permissions"
+  ursache: "An assistant or agent has more tools, access or authority than its task needs and acts without confirmation."
+  folge: "Unintended emails, bookings, orders or changes to data that are hard to reverse."
+  massnahmen:
+    - "Record the level of autonomy and access per system in the inventory"
+    - "Extensions, connectors and agents only after approval"
+    - "Own identity and least privilege per agent, emergency stop and withdrawal of rights"
+    - "Log every action with trigger and approval"
+GS-04:
+  titel: "Insecure supply chain for models, extensions and components"
+  ursache: "Third-party models, extensions, libraries or services change without notice, have vulnerabilities or unclear origin and licence."
+  folge: "Vulnerabilities, changed behaviour after updates or legal infringements without our noticing."
+  massnahmen:
+    - "Record model and version per system in the inventory"
+    - "Assess suppliers before use, agree notice of model changes in the contract"
+    - "Repeat the pre-deployment tests after a model change"
+    - "Allow extensions from vetted sources only"
+GS-05:
+  titel: "Manipulated data in the knowledge base or training"
+  ursache: "Someone deliberately alters entries in the knowledge base or in training or test data, or slips in content of their own."
+  folge: "The system gives deliberately wrong answers or recommendations, often unnoticed."
+  massnahmen:
+    - "Write access to the knowledge base and training data for maintainers only, changes traceable"
+    - "Record the origin of data, approve changes"
+    - "Spot checks of answers against the source"
+GS-06:
+  titel: "Misuse drives up consumption and costs"
+  ursache: "Publicly accessible or poorly limited services allow very many or very long requests."
+  folge: "High bills with usage-based pricing, outage of the service for its actual users."
+  massnahmen:
+    - "Cost cap and limit per account rather than just a warning"
+    - "Limit the length of inputs and answers"
+    - "Review consumption and costs monthly"
+GS-07:
+  titel: "Wrong but convincing results are adopted"
+  ursache: "Generative AI produces plausible but false statements, sources or code; users trust the result without checking."
+  folge: "Wrong decisions, incorrect information to customers, faulty or insecure code."
+  massnahmen:
+    - "Check results before use, rule in the usage policy"
+    - "Training on typical errors and blind trust"
+    - "Ask for sources where possible; measure the correction rate"
+    - "Check AI-generated code and suggested libraries before running them"
+GS-08:
+  titel: "System instructions and settings are disclosed"
+  ursache: "The instructions and settings of an assistant can be extracted with skilful questions."
+  folge: "Internal rules, safeguards or credentials stored in them become known and make attacks easier."
+  massnahmen:
+    - "No passwords, keys or internal details in instructions and settings"
+    - "Implement safeguards in the application, not only in the instruction"
+    - "Test case ‘reveal the instruction’ in the pre-deployment test"
+GS-09:
+  titel: "Knowledge search shows content the person may not see"
+  ursache: "Search across documents or vectors checks permissions not at all or too late; the search index and backups are less protected than the sources."
+  folge: "Other people's personal data, quotations or confidential documents appear in answers."
+  massnahmen:
+    - "Check permissions during the search, not only when displaying"
+    - "Treat the search index as confidential as the source data and delete it with them"
+    - "Review sharing in file stores regularly"
+GS-10:
+  titel: "AI output is processed further without checks"
+  ursache: "Other systems take AI output directly, e.g. as code, command, link, image or HTML."
+  folge: "Malicious code is executed, data leaks through links or images, downstream systems are disrupted."
+  massnahmen:
+    - "Check and escape output before passing it on"
+    - "Do not load external images and links in answers automatically"
+    - "Fixed formats for output that other systems use"
+GS-11:
+  titel: "An agent's memory or context is poisoned"
+  ursache: "An assistant stores notes, preferences or interim results beyond the session or takes content into its working context. A crafted email, document or input places false information or instructions there."
+  folge: "Days later the system still acts on the planted information, often without anyone recognizing the connection."
+  massnahmen:
+    - "Switch on memory across sessions only after approval and record it in the inventory"
+    - "Stored entries can be viewed, deleted and are reviewed regularly"
+    - "Do not take third-party content into memory unchecked"
+    - "Test case: an entry from one session has no effect in another person's session"
+GS-12:
+  titel: "Agents exchange messages without protection"
+  ursache: "Several agents or automations pass tasks and results to each other without checking sender, content and authorization."
+  folge: "A forged or altered task is executed as if it came from a trusted agent."
+  massnahmen:
+    - "Each agent has its own identity; accept tasks only from known senders"
+    - "Messages between agents encrypted and logged in a traceable way"
+    - "Limit forwarded tasks to the permissions of the recipient"
+GS-13:
+  titel: "An error spreads across connected agents and automations"
+  ursache: "Agents, automations and interfaces are chained; a wrong result or action becomes the input of the next step without review."
+  folge: "A small error turns into many wrong bookings, emails or changes before anyone intervenes."
+  massnahmen:
+    - "Document multi-step workflows and record dependencies in the inventory"
+    - "Limits per run: number of actions, amounts, recipients"
+    - "Stop for confirmation before steps with a large effect"
+    - "Emergency stop for the whole chain, tested"
+GS-14:
+  titel: "People approve convincingly justified agent actions without checking"
+  ursache: "The agent presents an action for confirmation with a credible justification; the person trusts the explanation instead of checking recipient, amount or content."
+  folge: "The intended confirmation no longer protects: harmful or manipulated actions pass with human approval."
+  massnahmen:
+    - "The confirmation dialogue shows the action itself (recipient, amount, change), not only the justification"
+    - "Training: an agent's justification is no proof"
+    - "Four-eyes principle for actions with a large effect"
+    - "Samples of approved actions during operation"
+GS-15:
+  titel: "Agent uses or delegates more permissions than the triggering person has"
+  ursache: "The agent works with a service account or permanent access, or hands tasks together with permissions to sub-agents; the permissions of the person who triggers it are not the limit."
+  folge: "Through the agent, people reach data or actions they are not allowed to use themselves; stolen access works far beyond the task."
+  massnahmen:
+    - "The agent acts with the permissions of the triggering person or with its own, narrow identity"
+    - "Short-lived access that ends with the session"
+    - "Delegation to sub-agents only with equal or fewer permissions"
+    - "Review agent permissions regularly and withdraw them when no longer needed"
+GS-16:
+  titel: "A third party's tool description or connector is manipulated"
+  ursache: "An agent uses tools, tool servers or connectors from third parties. Their description contains hidden instructions, or a new version behaves differently from the one tested."
+  folge: "The agent follows the third party's instructions, passes on data or calls other tools than intended."
+  massnahmen:
+    - "Only approved tool servers and connectors from a known source, with a fixed version"
+    - "Check descriptions and permissions before approval and again after every update"
+    - "New tools and connectors trigger a reassessment (D-12)"
+    - "Supplier question on tool servers and connectors (D-16)"
+GS-17:
+  titel: "Derived data do not inherit the classification and deletion of the source"
+  ursache: "Summaries, meeting transcripts, search indexes, embeddings, caches, agent logs or training data is created from confidential sources but are shared more widely, kept longer or forgotten at deletion."
+  folge: "Confidential content and personal data remain available after the source is deleted or reach people without authorization; deletion requests are fulfilled incompletely."
+  massnahmen:
+    - "Rule: derived data receive the data class, access, retention and deletion of the source (D-13)"
+    - "Deletion requests cover all derived data; deletion test in the review"
+    - "Define where transcripts and summaries are stored"
+GS-18:
+  titel: "Logs and debug recordings contain conversation content"
+  ursache: "Own logs, troubleshooting or the provider's telemetry record inputs and answers in full; these records are less protected or kept longer than the data themselves."
+  folge: "Confidential content and personal data sit in logging systems, with service providers or in support cases, often without anyone knowing."
+  massnahmen:
+    - "Log content only where needed; debug recordings time-limited and approved"
+    - "Classify and protect logs with content like the source data"
+    - "Clarify with the provider which telemetry contains content and for how long it is kept (D-16)"
+GS-19:
+  titel: "Human reviewers or annotators see our content"
+  ursache: "The provider or a contracted service provider has people review, label or inspect conversations, files or results for troubleshooting."
+  folge: "Confidential content and personal data reach people outside our control, possibly abroad."
+  massnahmen:
+    - "Supplier question on the provider's access to content (D-16)"
+    - "Contract clause: access only for a defined purpose, logged and under confidentiality"
+    - "Deliberately switch feedback functions to the provider on or off"
+GS-20:
+  titel: "Synthetic or anonymized data allow conclusions about individuals"
+  ursache: "Synthetic data sets generated from real data or weakly anonymized data still contain rare features or combinations that lead back to individuals."
+  folge: "Personal data is used or passed on without a legal basis although they were considered harmless."
+  massnahmen:
+    - "Record the anonymization or generation method in the data sheet (D-13)"
+    - "Test for re-identification before passing data on"
+    - "Treat synthetic data like the source until the test is passed"
+GS-21:
+  titel: "Content of one person or customer appears in another session"
+  ursache: "Caches, memory, shared workspaces or the provider's tenant separation do not keep sessions, people or customers properly apart."
+  folge: "Other people's quotations, personal data or customer data appear in answers to unauthorized persons."
+  massnahmen:
+    - "Supplier question on the separation of caches and memory (D-16)"
+    - "Test case: person A receives no content of person B"
+    - "Shared workspaces and shared assistants only with a defined group of users"
+GS-22:
+  titel: "An outdated search index delivers plausible but wrong answers"
+  ursache: "The search index of a knowledge base is not updated at the same pace as the sources; deleted or replaced documents remain retrievable."
+  folge: "The system answers convincingly with outdated prices, part numbers or rules; deleted content resurfaces."
+  massnahmen:
+    - "Update and delete the index in the same process as the sources"
+    - "Show or log the state of the index"
+    - "Sample answers against the current source"

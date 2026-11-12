@@ -1,0 +1,61 @@
+<mxfile host="Electron" modified="2026-10-20T08:00:00.000Z" agent="Mozilla/5.0 draw.io/24.7.17" version="24.7.17" pages="2">
+  <diagram id="PR-07" name="Freigabe Werkzeuge">
+    <mxGraphModel dx="1426" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ebene2" value="Notizen" parent="0" />
+        <!-- von Hand ergänzt -->
+        <mxCell id="lane-a" value="Fachbereich" style="swimlane;startSize=30;html=1;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="200" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-b" value="AIMS-Verantwortliche/r" style="swimlane;startSize=30;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="0" width="200" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" value="Antrag &lt;i&gt;eingegangen&lt;/i&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="lane-a">
+          <mxGeometry x="40" y="50" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="Antrag&lt;br&gt;erfassen" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="lane-a">
+          <mxGeometry x="40" y="120" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="Freigeben?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="lane-b">
+          <mxGeometry x="40" y="200" width="120" height="70" as="geometry" />
+        </mxCell>
+        <UserObject label="Freigegeben" tooltip="Ende gut" id="s4">
+          <mxCell style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;" vertex="1" parent="lane-b">
+            <mxGeometry x="40" y="330" width="120" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="s5" value="Abgelehnt" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;" vertex="1" parent="lane-a">
+          <mxGeometry x="40" y="330" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="s1" target="s2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="s2" target="s3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="235" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="ja" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="s3" target="s4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="nein" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="1" source="s3" target="s5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g1" value="" style="group" vertex="1" connectable="0" parent="ebene2">
+          <mxGeometry x="500" y="0" width="220" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" value="Notiz: Schwelle prüfen" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="g1">
+          <mxGeometry x="10" y="10" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="img" value="" style="shape=image;verticalLabelPosition=bottom;aspect=fixed;image=data:image/png,iVBORw0KGgo;" vertex="1" parent="g1">
+          <mxGeometry x="120" y="10" width="40" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="seite-zwei" name="Zugänge">hZExj8IwDIV/TfbSnNDNxwETExubIVYSKU2qkNKWX4/bOJQBxFLZn/1erRchN82wj9CaQ1DoRF2pQch/Ude/VUXfCYwZrAvQ0aqMVgs42jsynNfklqxjCClXzbBBN9kXafbafZiycQsRPTl8F0AW3MB1fMap0+A1sTOCTxE0+rxzTaPjnRg6r3CyqIT8641NeGzhMk17yoSYSY2jbkUl/wFjQo7ozZUz4hP3GBpMcaQVFvxwgpxoaXurkmH9mplBqw2bFgbX3Oun8ZIIFRxKaZfw59nLI8vtAw==</diagram>
+</mxfile>

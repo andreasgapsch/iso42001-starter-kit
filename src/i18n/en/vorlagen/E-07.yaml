@@ -1,0 +1,51 @@
+# E-07 Transparency obligations
+hinweis_umfang: "This template helps you check and implement the transparency obligations under Art. 50 for each AI system. Add the matching wording to your interfaces and documents and record the rules in D-14 and D-15."
+juristisch: "Whether a notice can be omitted because something is ‘obvious’, or whether a work is artistic, remains a question of interpretation. Have borderline cases reviewed by a lawyer. The template wording are suggestions, not legal advice. For Art. 50 there are Commission guidelines (adopted on 20/07/2026) and a voluntary code of practice on transparency of AI-generated content under Art. 50(7), final since 10/06/2026; the Commission (opinion of 08/07/2026) and the AI Board (09/07/2026) consider it adequate for Art. 50(2), (4) and (5) (digital-strategy.ec.europa.eu, retrieved on 07/11/2026); check the status on the Commission page, also for questions to suppliers."
+juristisch_firma: "Whether a notice can be omitted because something is ‘obvious’, or whether a work is artistic, remains a question of interpretation. We have borderline cases reviewed by a lawyer. This document is not legal advice. For Art. 50 there are Commission guidelines (adopted on 20/07/2026) and a voluntary code of practice on transparency of AI-generated content under Art. 50(7), final since 10/06/2026; the Commission (opinion of 08/07/2026) and the AI Board (09/07/2026) consider it adequate for Art. 50(2), (4) and (5) (digital-strategy.ec.europa.eu, retrieved on 07/11/2026); check the status on the Commission page, also for questions to suppliers."
+abschnitte:
+  wozu: Purpose
+  checkliste: Checklist Art. 50
+  uebergang: Transition for existing systems
+  systeme: Our systems with transparency obligations
+  bausteine: Template wording
+wozu_text: "People should be able to tell when they are dealing with AI and when content has been artificially generated. The obligations under {fs:50} have applied since {frist:FRIST-07} to all risk classes, in addition to all other obligations. Infringements can be fined under Art. 99(4)."
+hinweis_checkliste: "Check each row for every AI system in the inventory (D-10). Record the cases in E-02 (columns P to S)."
+checkliste_kopf: [Paragraph, Who, When it applies, What to do, Done]
+checkliste:
+  - ["{fs:50(1)}", "Provider", "The system interacts directly with people, for example a chatbot, voice assistant or automated replies.", "Design it so that people learn they are dealing with AI, unless this is obvious from the circumstances. Template wording ‘Chatbot’."]
+  - ["{fs:50(2)}", "Provider", "The system generates synthetic images, video, audio or text.", "Mark outputs in a machine-readable format as artificially generated, for example with metadata or watermarks, as far as technically feasible. Not required where the system only assists standard editing. Template wording ‘Generated content’."]
+  - ["{fs:50(3)}", "Deployer", "We use emotion recognition or biometric categorization (prohibited in the workplace, Art. 5(1)(f)).", "Inform the persons concerned about the operation of the system and process personal data in line with data protection law. Template wording ‘Emotion recognition’."]
+  - ["{fs:50(4)}", "Deployer", "We generate or manipulate image, audio or video content that appears authentic (deep fake), for example in marketing or training.", "Disclose that the content has been artificially generated or manipulated; for evidently artistic or satirical works, in an appropriate manner that does not hamper the work. Template wording ‘Deep fake’."]
+  - ["{fs:50(4), second subparagraph}", "Deployer", "We publish AI-generated text to inform the public on matters of public interest.", "Disclose this, unless the text has undergone editorial review and a person holds editorial responsibility. Template wording ‘AI text’."]
+  - ["{fs:50(5)}", "Provider and deployer", "Whenever one of the obligations above applies.", "Give the information in a clear and distinguishable manner at the latest at the time of the first interaction or exposure, in an accessible form (for example as text, not only as a symbol)."]
+ausnahmen: "Exceptions for law enforcement purposes authorized by law are hardly relevant for companies. Other transparency obligations, for example under data protection or unfair competition law, remain unaffected (Art. 50(6))."
+uebergang_text: "Providers of systems that generate synthetic content and were placed on the market before 02/08/2026 must implement the marking under Art. 50(2) by {frist:FRIST-09} ({fs:111(4)}). It is open whether this also applies to self-operated systems that have only been put into service (E-09); we have this legally reviewed. The Commission adopted guidelines on Art. 50 on 20/07/2026 (E-09). For purchased models, we clarify with the supplier whether it provides the marking (D-16)."
+systeme_kopf: [ID, AI system, Role, Transparency cases]
+faelle: ["Art. 50(1) interaction", "Art. 50(2) synthetic content", "Art. 50(3) emotion recognition or biometric categorization", "Art. 50(4) deep fake or text"]
+bausteine_text: "Replace the passages highlighted in yellow. Use short, clear sentences in the users' language and the same template wording in all channels."
+nicht_zutreffend: "not applicable"
+bausteine_nicht_noetig: "Not needed because none of our AI systems is affected: {bausteine}. The template wording is added when a new case arises."
+platzhalter_verfahren: "Method of machine-readable marking"
+baustein_titel: Template wording
+bausteine:
+  chatbot:
+    titel: "Notice for a chatbot (Art. 50(1))"
+    wann: "Clearly visible when the conversation starts, not only in the terms of use."
+    text: "‘You are chatting with [[Assistant name]], an AI assistant from [[Company name]]. The answers are generated automatically and may contain errors. For binding information, contact us at [[Contact]].’"
+  inhalte:
+    titel: "Marking of generated content (Art. 50(2))"
+    wann: "In addition to the machine-readable marking (metadata, watermarks), a visible notice on images, videos and texts generated by our AI systems."
+    text: "‘This content was generated by artificial intelligence using [[Product name]].’ Technical marking: [[Method, for example metadata or watermarks]]."
+    text_firma: "The outputs of the system ‘{system}’ are marked as artificially generated. Technical marking: {verfahren}. The visible notice for users is set out in the information for each system (D-14)."
+  deepfake:
+    titel: "Disclosure of a deep fake (Art. 50(4))"
+    wann: "Directly with the content, at the start of a video or audio recording and in the description."
+    text: "‘This [[video/image/audio recording]] was generated or manipulated with artificial intelligence. The people or events shown are [[not real/re-enacted]].’"
+  text:
+    titel: "AI text on matters of public interest (Art. 50(4), second subparagraph)"
+    wann: "Only required if the text has not undergone editorial review. With a review, an approval note in our own workflow is enough."
+    text: "‘This text was created with the help of artificial intelligence.’ Or internally: ‘Editorially reviewed by [[Name, role]] on [[Date]].’"
+  emotion:
+    titel: "Information on emotion recognition or biometric categorization (Art. 50(3))"
+    wann: "Before use, clearly visible where the data is captured and in the privacy notice. Emotion recognition is prohibited in the workplace and in education, except for medical or safety reasons."
+    text: "‘In this area, [[Company name]] uses an AI system that [[recognizes emotions/categorizes people by characteristics]] in order to [[purpose]]. You can find further information and your rights at [[Link to the privacy notice]].’"

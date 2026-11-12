@@ -1,0 +1,147 @@
+# D-21 Management review
+hinweis_umfang: "Top management reviews the AIMS at least once a year, with the first review before the stage 1 audit and after the first internal audit. More often is not necessary; hold an extraordinary review after major changes, such as a new high-risk AI system. Prepare a short overview for each agenda item so that the meeting takes no more than two hours."
+hinweis_isms: "With an ISMS: hold one joint meeting with one set of minutes for both standards. Cover the items marked ‘ISMS’ for the ISMS only and all other items for both systems."
+hinweis_protokoll: "Record the outcome in the last column: briefly, what was presented, how top management assesses it and whether a decision is needed. An auditor looks for an entry for each required input."
+hinweis_entscheide: "A management review is not complete without decisions. Also record when no change is needed, with a short reason."
+einleitung: "With this document, the top management of [[Company name]] reviews whether the AI management system (AIMS) is suitable, adequate and effective, and decides on improvements and changes."
+einleitung_firma: "With this document, the top management of {firma} reviews whether the AI management system (AIMS) is suitable, adequate and effective, and decides on improvements and changes."
+einleitung_isms: "The review takes place together with the ISMS management review."
+abschnitte:
+  rahmen: Meeting details
+  agenda: Agenda and minutes
+  pflicht: Required inputs
+  empfohlen: Recommended items
+  isms: Additional items for the ISMS
+  beurteilung: Overall assessment
+  entscheide: Decisions on improvements and changes
+  massnahmen: Actions
+  rhythmus: Frequency and next review
+  freigabe: Approval of the minutes
+felder:
+  datum: Date
+  ort: Place or format
+  leitung: Chair
+  teilnehmende: Participants
+  protokoll: Minutes taken by
+  zeitraum: Review period
+  isms: Joint with ISMS
+  vorher: Last review
+  kennung: Reference
+platzhalter:
+  ort: "Meeting room or online"
+  teilnehmende: "Top management, AIMS lead, others"
+  zeitraum: "DD/MM/YYYY to DD/MM/YYYY"
+  vorher: "DD/MM/YYYY or first review"
+agenda_kopf: [No., Agenda item, Documents, Outcome and assessment]
+markierung:
+  isms: "(only with ISMS)"
+  modul: "(only with AI Act module)"
+pflicht:
+  - { punkt: "Status of actions from previous management reviews", unterlagen: "Actions from the last review, {{fakt:register.massnahmen}}" }
+  - { punkt: "Changes in internal and external topics relevant to the AIMS", unterlagen: "D-01 (topics, role, climate change)" }
+  - { punkt: "Changes in the needs and expectations of interested parties", unterlagen: "D-01 (register of interested parties)" }
+  - { punkt: "Performance: nonconformities and corrective actions, with trends over time", unterlagen: "D-22" }
+  - { punkt: "Performance: monitoring and measurement results, achievement of AI objectives", unterlagen: "D-05" }
+  - { punkt: "Performance: results of internal and external audits", unterlagen: "D-20, audit reports" }
+  - { punkt: "Opportunities for continual improvement", unterlagen: "{{fakt:register.massnahmen|gross}}" }
+empfohlen:
+  - { id: inventar, punkt: "AI inventory: new, changed and replaced systems, shadow AI; systems that missed their expected benefit: continue, change or replace?", unterlagen: "D-10, D-09" }
+  - { id: risiken, punkt: "AI risks, residual risks and impact assessments", unterlagen: "D-07, D-09" }
+  - { id: meldungen, punkt: "Reports, concerns and AI incidents", unterlagen: "D-04, D-14" }
+  - { id: lieferanten, punkt: "AI suppliers: results of reviews", unterlagen: "D-16" }
+  - { id: ziele, punkt: "AI objectives for the next period; are metrics and tests fit for purpose, which errors did they miss?", unterlagen: "D-05" }
+  - { id: ressourcen, punkt: "Resources for the AIMS: staff, time, budget", unterlagen: "D-00, D-05" }
+  - { id: aiact, punkt: "EU AI Act status: roles, classifications, deadlines", unterlagen: "E-01 to E-03, E-09", modul: true }
+  - { id: leitlinie, punkt: "Review of the AI policy (A.2.4)", unterlagen: "D-03" }
+isms:
+  - { punkt: "ISMS: feedback from interested parties on information security", unterlagen: "ISMS documents" }
+  - { punkt: "ISMS: results of the risk assessment and status of the treatment plan", unterlagen: "ISMS risk register" }
+  - { punkt: "ISMS: achievement of information security objectives", unterlagen: "ISMS objectives" }
+beurteilung_felder:
+  geeignet: "Does the AIMS fit the organization and its AI systems?"
+  angemessen: "Are scope and resources sufficient?"
+  wirksam: "Does the AIMS achieve its objectives?"
+beurteilung_platzhalter: "yes/no, short reason"
+# Answer per question of the overall assessment (gesamtbeurteilung.<frage>.urteil)
+beurteilung_urteil:
+  ja: "yes"
+  nein: "no"
+  offen: "not yet fully assessed"
+zeitraum_text: "{von} to {bis}"
+erste_bewertung: "first review"
+entscheid_bis: "by {datum}"
+entscheide_art:
+  verbesserung: Improvement
+  aenderung: Change to the AIMS
+  ressourcen: Resources
+  ziele: Objectives
+  restrisiko: Residual risk
+entscheide_kopf: [No., Decision, Type, "Owner, deadline, action"]
+entscheide_arten: "Improvement, change to the AIMS, resources, objectives, acceptance of residual risks"
+entscheide_leer: "[[Improvement / change to the AIMS / resources / objectives / residual risk]]"
+massnahmen_kopf: [ID, Action, Owner, Due date, Status]
+massnahmen_hinweis: "Transfer each action with its ID to the {{fakt:register.massnahmen}}; the planned changes are kept there too (D-26). Every action needs an owner and a due date."
+massnahme_status:
+  offen: open
+  in-arbeit: in progress
+  erledigt: completed
+  verworfen: rejected
+rhythmus_text: "The management review takes place once a year; in the certification cycle, after the internal audit and before the external audit. After major changes, top management calls an extraordinary review. Next regular review: {naechste}."
+freigabe_text: "Top management approved the minutes on {datum}."
+ausbau: "With many AI systems: attach an overview for each system (status, risks, impact assessment, incidents, metrics). This keeps the meeting short, and the documents provide evidence for the review."
+eb_einleitung: "This supplementary sheet lists the items to add to the existing ISMS management review. The required inputs are structured the same way in both standards; cover them in one meeting for both systems and add the AI perspective."
+eb_einleitung_firma: "The management review at {firma} covers the ISMS and the AIMS in one joint meeting. This sheet lists the additional items for the AIMS."
+eb_traktanden: Additional agenda items for the AIMS
+eb_pflicht_titel: AI perspective on the shared required inputs
+eb_pflicht_kopf: [No., Required input, What the AIMS adds, Outcome and assessment]
+eb_pflicht:
+  - ["Status of previous actions", "Actions from AI risks, impact assessments and AIMS audits"]
+  - ["Changes in topics", "Role for each AI system, new technology, AI law, climate change"]
+  - ["Changes in interested parties", "People affected by AI decisions, customers with AI requirements, supervisory authorities"]
+  - ["Performance: nonconformities", "Nonconformities and corrective actions related to AI"]
+  - ["Performance: monitoring, measurement, objectives", "Metrics of the AI systems, achievement of AI objectives (D-05)"]
+  - ["Performance: audits", "Audit results on ISO/IEC 42001, including Annex A"]
+  - ["Improvements", "Suggestions from reports, monitoring and supplier reviews; actions and planned changes in the {{fakt:register.massnahmen}}"]
+eb_traktanden_kopf: [No., Agenda item, Documents, Outcome and assessment]
+# First review: instead of ‘Status of actions from previous management reviews’ (there are none) the status of actions from the implementation
+erste_massnahmen: { punkt: "Status of actions from implementation and risk treatment (first review)", unterlagen: "D-07 (treatment plan), D-22" }
+eb_erste_massnahmen: ["Status of actions (first review)", "Actions from implementation, AI risks and impact assessments"]
+# Summary from the project data where items 5 and 6 have no text of their own
+abgeleitet:
+  messung: "{id} {kennzahl}: {wert} on {datum}"
+  soll: "target met: {soll}"
+  soll_wert:
+    ja: "yes"
+    teilweise: partly
+    nein: "no"
+  keine_messung: "{id} {kennzahl}: not yet measured"
+  audit: "{id} {art} on {datum}: {ergebnis}"
+  audit_ohne_ergebnis: "{id} {art} on {datum}"
+  feststellungen: "findings {liste}"
+  audit_art:
+    intern: internal audit
+    extern-stage1: stage 1 audit
+    extern-stage2: stage 2 audit
+    ueberwachung: surveillance audit
+  einstufung:
+    nk-schwer: major nonconformity
+    nk-leicht: minor nonconformity
+    beobachtung: observation
+    verbesserung: improvement
+weitere_punkt: Other topics
+prozesse:
+  punkt: "Process status: maturity, owners, runs due and open actions"
+  unterlagen: "D-02, D-27"
+  zusammenfassung: "{anzahl} applicable processes: {verteilung}. Without owner: {ohne}; run overdue: {ueberfaellig}; open actions: {massnahmen}."
+  zusammenfassung_eins: "1 applicable process: {verteilung}. Without owner: {ohne}; run overdue: {ueberfaellig}; open actions: {massnahmen}."
+  titel: Process status
+  einleitung: "Status on {datum}: applicable processes with owner, maturity, change since the last review and findings."
+  kopf: [Process, Owner, Maturity, Change, Findings]
+  gleich: unchanged
+  befund_ueberfaellig: run overdue
+  befund_massnahmen: "Actions overdue: {liste}"
+  befund_feststellungen: "open findings: {liste}"
+  befund_massnahmen_offen: "open actions: {liste}"
+  befund_eigner: no owner
+  landkarte_titel: Process map by maturity
+  landkarte_alt: "Process map by group, each process with its maturity as a word: {verteilung}."

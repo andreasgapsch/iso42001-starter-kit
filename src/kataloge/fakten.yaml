@@ -1,0 +1,212 @@
+# Faktenquelle (AF-072, QK-43, Entscheid W4): Schwellen, Fristen, Register und Freigabestellen, die Vorlagen und
+# Prozesskatalog teilen. Ein Sachverhalt steht nur hier; eine Änderung berührt nur diese Datei.
+#
+# Texte lesen einen Fakt über den Platzhalter {{fakt:<id>}}, am Satzanfang {{fakt:<id>|gross}}. Die Platzhalter stehen in
+# src/i18n/<sprache>/vorlagen/*.yaml und src/i18n/<sprache>/prozesse.yaml (Texte zum Katalog src/prozesse/katalog.yaml);
+# src/i18n/laden-node.ts setzt sie beim Laden der Texte ein (Kit-Build, Werkzeug über scripts/kataloge.mts, Tests).
+# Die Prosa um den Platzhalter bleibt je Sprache eigen; der Wert kommt aus diesem gemeinsamen Eintrag.
+#
+# Felder je Fakt:
+#   art: frist | schwelle | register | freigabe
+#   wert, einheit: Zahl mit Einheit aus «einheiten» (Einzahl bei 1, sonst Mehrzahl; Deutsch im Dativ nach «innert»)
+#   text: { de, en } für Werte ohne Zahl; {hoch} setzt die Vorlage aus der Auswirkungsskala des Projekts ein (D-06)
+#   rolle, entscheid: nur Freigabestellen. Schritte im Prozesskatalog mit diesem «entscheid» liegen in der Bahn dieser
+#                     Rolle und haben sie als A (Tor G40)
+#   schritte: nur Freigabestellen, statt «entscheid»: genau diese Katalogschritte liegen in der Bahn der Rolle und haben sie
+#             als A (Freigaben ohne Entscheidungsrecht nach D-04 wie Behandlungsplan und SoA, oder eine Stufe eines Entscheids)
+#   stellen: Textschlüssel ohne Sprache, die den Fakt nennen; dort verlangt Tor G40 den Platzhalter in DE und EN
+#   bereich: Textschlüssel (Präfix), in denen der Wert nur als Platzhalter stehen darf (Tor G40, Werte von Hand 0)
+#   ausnahmen: Textschlüssel im Bereich, in denen derselbe Wortlaut etwas anderes meint, mit Grund
+#   querbezug: Paar des Querbezugstests (tests/unit/querbezuege.test.ts)
+einheiten:
+  stunden: { de: [Stunde, Stunden], en: [hour, hours] }
+  arbeitstage: { de: [Arbeitstag, Arbeitstagen], en: [working day, working days] }
+
+fakten:
+  # ---------------------------------------------------------------- Fristen bei KI-Vorfällen (D-14, PR-19; A3-12)
+  vorfall.meldung:
+    art: frist
+    text: { de: sofort, en: immediately }
+    stellen: [vorlagen.D-14.kommunikation_tabelle]
+    bereich: [vorlagen.D-14, prozesse.prozesse.PR-19]
+    ausnahmen: {}
+    querbezug: D-14/PR-19
+  vorfall.erfassung:
+    art: frist
+    text: { de: am Tag der Meldung, en: on the day of the report }
+    stellen:
+      - vorlagen.D-14.schwere_tabelle
+      - vorlagen.D-14.kommunikation_tabelle
+      - vorlagen.D-14.kommunikation_tabelle_eb
+      - prozesse.prozesse.PR-19.schritte.PR-19.01
+    bereich: [vorlagen.D-14, prozesse.prozesse.PR-19]
+    ausnahmen: {}
+    querbezug: D-14/PR-19
+  vorfall.stufe2:
+    art: frist
+    wert: 1
+    einheit: arbeitstage
+    stellen:
+      - vorlagen.D-14.schwere_tabelle
+      - vorlagen.D-14.kommunikation_tabelle
+      - vorlagen.D-14.kommunikation_tabelle_eb
+      - prozesse.prozesse.PR-19.hilfe
+    bereich: [vorlagen.D-14, prozesse.prozesse.PR-19]
+    ausnahmen: {}
+    querbezug: D-14/PR-19
+  vorfall.stufe3:
+    art: frist
+    wert: 24
+    einheit: stunden
+    stellen:
+      - vorlagen.D-14.schwere_tabelle
+      - vorlagen.D-14.kommunikation_tabelle
+      - prozesse.prozesse.PR-19.hilfe
+    bereich: [vorlagen.D-14, prozesse.prozesse.PR-19]
+    ausnahmen:
+      vorlagen.D-14.pflichten_tabelle: "gesetzliche Meldefrist für Cyberangriffe (ISG), keine eigene Festlegung"
+    querbezug: D-14/PR-19
+  vorfall.stufe4:
+    art: frist
+    text: { de: sofort, en: immediately }
+    stellen:
+      - vorlagen.D-14.schwere_tabelle
+      - vorlagen.D-14.kommunikation_tabelle
+      - prozesse.prozesse.PR-19.hilfe
+    bereich: [vorlagen.D-14, prozesse.prozesse.PR-19]
+    ausnahmen: {}
+    querbezug: D-14/PR-19
+  vorfall.lieferant:
+    art: frist
+    text: { de: sofort, en: immediately }
+    stellen: [vorlagen.D-14.kommunikation_tabelle, vorlagen.D-14.kommunikation_tabelle_eb]
+    bereich: [vorlagen.D-14]
+    ausnahmen: {}
+    querbezug: D-14/PR-19
+  vorfall.nutzende:
+    art: frist
+    wert: 1
+    einheit: arbeitstage
+    stellen: [vorlagen.D-14.kommunikation_tabelle, vorlagen.D-14.kommunikation_tabelle_eb]
+    bereich: [vorlagen.D-14]
+    ausnahmen: {}
+    querbezug: D-14/PR-19
+  vorfall.abgleich:
+    art: frist
+    text: { de: monatlich, en: monthly }
+    stellen:
+      - vorlagen.D-14.schwere_text
+      - vorlagen.D-14.schwere_text_eb
+      - prozesse.prozesse.PR-19.ausloeser
+    bereich: [vorlagen.D-14, prozesse.prozesse.PR-19]
+    ausnahmen: {}
+    querbezug: D-14/PR-19
+
+  # ---------------------------------------------------------------- Schwelle der vollständigen Folgenabschätzung (A3-06)
+  folgen.schwelle:
+    art: schwelle
+    text:
+      de: "Risiko mit Auswirkung {hoch} für Menschen oder Gesellschaft"
+      en: "risk with impact {hoch} for people or society"
+    stellen:
+      - vorlagen.D-06.folgen_punkte
+      - vorlagen.D-06.eb.folgen_text
+      - vorlagen.D-08.ausloeser_punkte
+    bereich: [vorlagen.D-06, vorlagen.D-08]
+    ausnahmen: {}
+    querbezug: D-08/D-06-EB
+
+  # ---------------------------------------------------------------- Register für geplante Änderungen und Massnahmen (A3-16)
+  register.massnahmen:
+    art: register
+    text:
+      de: "Register D-22 (Blatt Verbesserungen)"
+      en: "register D-22 (Improvements sheet)"
+    stellen:
+      - vorlagen.D-26.aenderungen_ablage
+      - vorlagen.D-21.massnahmen_hinweis
+      - vorlagen.D-21.pflicht
+      - vorlagen.D-21.eb_pflicht
+      - ergaenzungsblaetter.blaetter.D-26-EB.abschnitte.aenderungen-aims.inhalt
+      - prozesse.prozesse.PR-05.ausgaben
+      - prozesse.prozesse.PR-05.kennzahl_methode
+      - prozesse.prozesse.PR-26.ausgaben
+      - prozesse.prozesse.PR-26.kennzahl_methode
+    bereich: [vorlagen.D-26, vorlagen.D-21, ergaenzungsblaetter.blaetter.D-26-EB, prozesse.prozesse.PR-05, prozesse.prozesse.PR-26]
+    ausnahmen: {}
+    querbezug: D-26/D-05/D-21
+
+  # ---------------------------------------------------------------- Freigabestellen der Folgenabschätzung (D-08, PR-09)
+  freigabe.kurzpruefung:
+    art: freigabe
+    rolle: aims
+    entscheid: kurzpruefung
+    text: { de: AIMS-Verantwortung, en: AIMS lead }
+    stellen: [vorlagen.D-08.freigabe_text]
+    bereich: []
+    ausnahmen: {}
+    querbezug: D-08/D-06-EB
+  freigabe.abschaetzung:
+    art: freigabe
+    rolle: gl
+    entscheid: abschaetzung
+    text: { de: Geschäftsleitung, en: top management }
+    stellen: [vorlagen.D-08.freigabe_text, vorlagen.D-08.zustaendigkeiten, prozesse.prozesse.PR-09.schritte.PR-09.09]
+    bereich: []
+    ausnahmen: {}
+    querbezug: D-08/D-06-EB
+
+  # ---------------------------------------------------------------- Freigabestellen nach Entscheidungsrechten
+  # Einführen eines KI-Systems (N7, «allein» heisst «ohne Eigner/in»): bei tiefem Risiko die
+  # AIMS-Verantwortung allein, bei mittlerem zusammen mit der Eignerin oder dem Eigner des Systems, ohne Geschäftsleitung
+  # (D-03 Risikobereitschaft, Feldhilfe E3, D-04 Anlage A, D-12 Abschnitt 5, D-15 Abschnitt 7, PR-07, PR-11, PR-13); bei
+  # hohem Risiko die Geschäftsleitung (freigabe.einfuehren-hoch). Querbezug: tests/unit/entscheide-test8.test.ts «N7»
+  freigabe.einfuehren:
+    art: freigabe
+    rolle: aims
+    schritte: [PR-07.05, PR-11.06, PR-13.05]
+    text: { de: AIMS-Verantwortung, en: AIMS lead }
+    stellen: [vorlagen.D-04.entscheidungsrechte_vorschlag.einfuehren, vorlagen.D-12.freigabe_regel, vorlagen.D-15.neu_text, vorlagen.D-15.neu_text_firma]
+    bereich: []
+    ausnahmen: {}
+    querbezug: D-03/D-04/D-12/D-15/PR-07
+  freigabe.einfuehren-hoch:
+    art: freigabe
+    rolle: gl
+    schritte: [PR-07.10, PR-11.09, PR-13.08]
+    text: { de: Geschäftsleitung, en: top management }
+    stellen: [vorlagen.D-04.entscheidungsrechte_vorschlag.einfuehren, vorlagen.D-12.freigabe_regel, vorlagen.D-15.neu_text]
+    bereich: []
+    ausnahmen: {}
+    querbezug: D-03/D-04/D-12/D-15/PR-07
+  # Restrisiko über der Akzeptanzgrenze (mittleres Risiko): Annahme durch die Geschäftsleitung (D-03 Abschnitt 4,
+  # D-04 Anlage A, D-06 und D-06-EB Abschnitt 4, PR-08.07)
+  freigabe.restrisiko:
+    art: freigabe
+    rolle: gl
+    entscheid: restrisiko
+    text: { de: Geschäftsleitung, en: top management }
+    stellen: [vorlagen.D-04.entscheidungsrechte_vorschlag.restrisiko, vorlagen.D-06.ablauf.freigabe.text, vorlagen.D-06.skalen.kriterien.mittel, vorlagen.D-26.freigabe_zeilen, prozesse.prozesse.PR-07.hilfe]
+    bereich: []
+    ausnahmen: {}
+    querbezug: D-03/D-04/D-06
+  # Behandlungsplan: Freigabe durch die Geschäftsleitung (D-06 Abschnitt 3.5, D-26 Abschnitt 3, PR-08.07)
+  freigabe.behandlungsplan:
+    art: freigabe
+    rolle: gl
+    schritte: [PR-08.07]
+    text: { de: Geschäftsleitung, en: top management }
+    stellen: [vorlagen.D-06.ablauf.freigabe.text, vorlagen.D-06.eb.behandlung_text, vorlagen.D-26.freigabe_zeilen, prozesse.prozesse.PR-08.schritte.PR-08.07]
+    bereich: []
+    ausnahmen: {}
+    querbezug: D-06/D-26/PR-08
+  # Erklärung zur Anwendbarkeit: Freigabe durch die Geschäftsleitung (D-11, D-26 Abschnitt 3, PR-10.06)
+  freigabe.soa:
+    art: freigabe
+    rolle: gl
+    schritte: [PR-10.06]
+    text: { de: Geschäftsleitung, en: top management }
+    stellen: [vorlagen.D-11.freigabe.text, vorlagen.D-26.freigabe_zeilen, prozesse.prozesse.PR-10.schritte.PR-10.06]
+    bereich: []
+    ausnahmen: {}
+    querbezug: D-11/D-26/PR-10

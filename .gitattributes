@@ -1,0 +1,13 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary
+*.zip binary
+*.docx binary
+*.xlsx binary
+# Textdateien für Windows-Nutzende im Kit: bleiben mit CRLF und BOM, wie sie sind
+src/lizenz/*.txt -text
+src/rechtstexte/*.tpl -text
+src/start/*.txt.tpl -text
+src/lizenz/DIAGRAMMANSICHT_DIAGRAM-VIEWER/LIESMICH_README.txt -text
+src/lizenz/DIAGRAMMANSICHT_DIAGRAM-VIEWER/NOTICE.txt -text

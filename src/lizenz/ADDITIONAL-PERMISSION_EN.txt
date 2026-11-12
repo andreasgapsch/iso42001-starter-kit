@@ -1,0 +1,117 @@
+﻿ADDITIONAL PERMISSION FOR YOUR OWN DOCUMENTS
+for the ISO/IEC 42001 Starter Kit by Andreas Gapsch, KMU-CIO, kmu-cio.ch
+
+German version: ZUSATZERLAUBNIS_DE.txt
+
+
+SUMMARY
+-------
+You may use, modify, print and share documents that you create with this kit
+for your organization or for your clients (completed templates and output of
+the AIMS Manager and of the AI assistant) without attribution. The
+attribution requirement of CC BY 4.0 applies to the kit itself, that is, when
+you share or publish the templates, the guide, the tool or the skill as such,
+including in modified form.
+
+The following terms are authoritative.
+
+
+1. RIGHTS HOLDER AND RELATIONSHIP TO THE LICENCES
+-------------------------------------------------
+Andreas Gapsch, KMU-CIO (the ‘Licensor’), licenses the content of the kit
+under Creative Commons Attribution 4.0 International (CC BY 4.0) and the
+software code under the MIT License. In addition, the Licensor grants the
+following permission. It is a separate and independent permission within the
+meaning of Section 7(b) of CC BY 4.0. It extends your rights and does not
+limit any rights under CC BY 4.0 or the MIT License.
+
+
+2. DEFINITIONS
+--------------
+a) ‘Kit’ means the ISO/IEC 42001 Starter Kit with all its components, in
+   particular the guide, poster, templates, supplementary sheets, examples,
+   AIMS Manager and AI assistant (skill), whether unmodified or modified.
+
+b) ‘Your Documents’ means documents, spreadsheets and other files that you
+   create for a specific organization, namely your own or that of a client,
+   by
+   - completing, supplementing, shortening or adapting templates of the Kit,
+     or
+   - generating content with the AIMS Manager or the AI assistant (output).
+   This includes later versions, extracts, printouts and translations of
+   such documents.
+
+c) ‘Your Documents’ does not include templates, model documents, collections
+   of templates, training materials or tools intended to be used by others
+   as a basis for their own documents, even if you created them with the
+   Kit. Nor does it include the examples contained in the Kit.
+
+
+3. PERMISSION
+-------------
+The Licensor permits you to use, reproduce, modify, print, share and make
+publicly available Your Documents (for example your AI policy on your
+website), including for commercial purposes and as part of a paid consulting
+engagement. The permission is free of charge, worldwide, non-exclusive,
+unlimited in time and irrevocable.
+
+In doing so, you need not comply with the conditions of Section 3 of
+CC BY 4.0. You therefore need neither name the Licensor or the Kit, nor refer
+to the licence, nor indicate your modifications.
+
+You may remove references to the Kit, its origin and its licence from Your
+Documents. You may share Your Documents on terms of your choice, for example
+as confidential or under a contract with your client.
+
+This permission also extends to everyone who receives Your Documents from you
+or from your client.
+
+
+4. IDENTIFICATION AS AUTHOR
+---------------------------
+To the extent permitted by law, the Licensor waives, and agrees not to
+assert, any right to be identified as author of Your Documents.
+
+
+5. WHAT THE ADDITIONAL PERMISSION DOES NOT COVER
+------------------------------------------------
+a) The Kit itself: the additional permission does not apply to sharing or
+   publishing the Kit or parts of it as such, for example the templates as
+   templates, the guide, the examples, the AIMS Manager or the AI assistant,
+   including in modified form or as part of your own offering. For this,
+   CC BY 4.0 (content) and the MIT License (code) apply with their
+   conditions, in particular attribution.
+
+b) Name and brand: the additional permission does not entitle you to use
+   ‘KMU-CIO’, the domain kmu-cio.ch or the name Andreas Gapsch as your own
+   brand, company name or product name, or to create the impression that the
+   Licensor has reviewed, endorsed or supported Your Documents, your
+   management system or your organization.
+
+
+6. THIRD-PARTY RIGHTS
+---------------------
+The additional permission covers only rights held by the Licensor.
+Third-party rights remain unaffected, for example in standards of ISO and IEC
+that you obtain separately, in legal texts of the European Union or in
+libraries contained in the AIMS Manager. The terms of use of the AI services
+through which you use the AI assistant also apply.
+
+
+7. WARRANTY AND LIABILITY
+-------------------------
+The disclaimers of warranties and limitations of liability in Section 5 of
+CC BY 4.0 and in the MIT License apply accordingly to this additional
+permission, to the extent permitted by law.
+
+
+8. VALIDITY AND INTERPRETATION
+------------------------------
+The additional permission applies to the version of the Kit with which it is
+supplied. For documents you have created, it remains in force even if later
+versions of the Kit contain different terms. In case of doubt, it shall be
+interpreted in favour of the users. It is available in German and in
+English; in case of discrepancies, the German version prevails.
+
+
+Andreas Gapsch, KMU-CIO, kmu-cio.ch

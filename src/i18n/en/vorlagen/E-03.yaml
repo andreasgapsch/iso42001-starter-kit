@@ -1,0 +1,64 @@
+# E-03 EU AI Act obligations matrix
+blaetter:
+  pflichten: Obligations
+  abdeckung: Coverage
+titel_pflichten: "Obligations under the EU AI Act per role and risk class"
+titel_abdeckung: "Coverage by the AIMS: what ISO/IEC 42001 provides and what it does not"
+hinweise_pflichten:
+  - "The list contains all obligations from the kit's catalogue. Do not delete rows; if an obligation applies to none of your systems, set the status to ‘not applicable’ with a short reason."
+  - "Prerequisite: role (E-01) and risk class (E-02) for each AI system. Enter the systems concerned in column M."
+  - "Columns H and I show which controls and clauses of ISO/IEC 42001 support the obligation and to what extent (fully, partly, not). For ‘partly’ or ‘not’, include the additional control from column J in the statement of applicability (D-11) or give the reason for leaving it out."
+  - "Column L gives typical evidence. Record in column O where your evidence is kept."
+hinweis_gefiltert: "Obligations according to the roles and risk classes of our AI systems (D-10, E-02); column M shows the systems concerned. Where a classification is still open, all obligations of the role apply until the decision. Status, evidence and responsibility as in the statement of applicability (D-11)."
+hinweis_alle: "No AI systems have been recorded in the project yet; the list therefore contains all obligations in the catalogue."
+hinweis_formell: "Column F gives the date of application under Art. 113 and 111, column G the practical start. Some obligations formally apply from 02/08/2026 but only take effect together with the high-risk obligations. This is a marked interpretation, not legal text (E-09)."
+alle_klassen: all classes
+fria_nicht_erforderlich: "E-06 and {ia}: fundamental rights impact assessment not required (checked on {datum})"
+nicht_anwendbar: not applicable
+spalten:
+  - Obligation ID
+  - Article
+  - Short description
+  - Roles
+  - Risk classes
+  - Applies from (formally)
+  - Applies from (in practice)
+  - "42001 coverage: controls and clauses"
+  - "42001 coverage: extent"
+  - Additional control
+  - SME relief
+  - Typical evidence
+  - AI systems concerned
+  - Status
+  - Evidence in the company
+  - Responsible
+listen:
+  grad: [fully, partly, not]
+  status: [open, planned, partly, implemented, effective]
+hinweis_abdeckung: "Summary of the obligations in the ‘Obligations’ sheet. Roles in the catalogue: {rollen}. The mapping to ISO/IEC 42001 is a professional assessment."
+spalten_abdeckung: [Topic, Number, Explanation]
+abdeckung:
+  anzahl: Obligations in this matrix
+  gefiltert: "filtered by the roles and risk classes of the AI systems in the AI inventory (D-10)"
+  alle: "all obligations in the catalogue"
+  grad_ganz: "The AIMS fully covers the obligation once the controls listed are implemented."
+  grad_teilweise: "The AIMS provides structure and evidence, but the obligation requires more. Implement the additional control."
+  grad_nicht: "The AIMS does not cover the obligation. An additional control and a separate procedure are needed."
+  zusatz: EUAIA additional controls
+  ohne: "Obligations not covered by 42001"
+  leistet: "What the AIMS provides"
+  leistet_liste:
+    - "A management system with policy, roles, objectives, audits and management review into which the AI Act obligations can be integrated (clauses 4 to 10)."
+    - "An AI inventory with the role and risk class of each system as the basis for every check of obligations (A.4, D-10, E-01, E-02)."
+    - "Risk assessment, risk treatment and impact assessment on which Art. 9 and Art. 27 can build (6.1, 8.2 to 8.4, A.5)."
+    - "Rules on data, logging, life cycle and human oversight that partly meet the requirements of Art. 10 to 15 and Art. 26 (A.6, A.7, A.9)."
+    - "Information for users and affected persons, reporting channels and cooperation with suppliers (A.8, A.10)."
+    - "Actions on competence and awareness that support Art. 4 (7.2, 7.3, E-04)."
+  leistet_nicht: "What the AIMS does not provide"
+  leistet_nicht_liste:
+    - "No conformity assessment, no EU declaration of conformity, no CE marking and no registration in the EU database (Art. 43, 47 to 49)."
+    - "No presumption of conformity: ISO/IEC 42001 is not a harmonised standard within the meaning of Art. 40(1). This is an interpretation, not legal text."
+    - "No legal classification of a system and no determination of roles with legal effect; both remain a legal assessment."
+    - "No machine-readable marking of synthetic content (Art. 50(2)) and no information of workers under Art. 26(7)."
+    - "No appointment of an authorised representative in the EU for providers from Switzerland (Art. 22) and no accessibility under Art. 16(l)."
+    - "No obligations for general-purpose AI models (Art. 53 to 55)."

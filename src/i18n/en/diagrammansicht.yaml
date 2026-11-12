@@ -1,0 +1,56 @@
+# Diagram viewer (AIMS-Manager/Diagrammansicht.html): optional page that displays .drawio files offline.
+# Built by scripts/diagrammansicht.mts; the texts go into the page as a data block.
+seitentitel: "Diagram viewer, ISO/IEC 42001 Starter Kit"
+sprung: Skip to the diagram viewer
+marke_name: Diagram viewer
+marke_von: ISO/IEC 42001 Starter Kit
+sprache_titel: Language
+sprache_de: Deutsch
+sprache_en: English
+theme_titel: Appearance
+theme_hell: Light
+theme_dunkel: Dark
+theme_system: System
+titel: View diagrams
+lead: "Open a diagram file in .drawio format, for example a process you have exported from the AIMS Manager. The viewer works without internet and only displays the file; you cannot change the diagram here."
+ablage_titel: Open a diagram file
+waehlen: Choose file
+ablegen: or drag the file here
+ablage_aktiv: Release the file to open it
+status_vorbereiten: Preparing the viewer.
+status_eine_seite: "‘{datei}’ opened, one page."
+status_seiten: "‘{datei}’ opened, {anzahl} pages."
+status_seiten_eins: "‘{datei}’ opened, 1 page."
+status_entfernt: "Not displayed because the viewer stays offline: {anzahl} references to the internet (images, fonts or formulas)."
+status_entfernt_eins: "Not displayed because the viewer stays offline: 1 reference to the internet (image, font or formula)."
+fehler_format: "‘{datei}’ is not a readable diagram file. A file in .drawio format is expected."
+fehler_gross: "‘{datei}’ is larger than {mb} MB and will not be opened."
+fehler_dtd: "‘{datei}’ contains a document type declaration or custom entities. For security reasons the viewer does not open such files."
+fehler_umfang: "‘{datei}’ is too large (over {mb} MB when unpacked, over {seiten} pages or over {formen} shapes per page) and will not be opened."
+fehler_zellen: "‘{datei}’ contains duplicate identifiers or shapes that contain each other in a loop. The viewer would hang on it and does not open the file. Open it in draw.io and save it again there."
+fehler_browser: "This browser cannot start the viewer. Use a current version of Chrome, Edge, Firefox or Safari."
+fehler_start: "The viewer could not be started: {meldung}"
+link_blockiert: "The viewer does not open links to targets outside the file: {ziel}"
+leiste_label: Viewer controls
+seite_label: Page
+seite_zurueck: Previous page
+seite_weiter: Next page
+seite_nummer: "Page {nummer}"
+zoom_label: Zoom
+zoom_aus: Zoom out
+zoom_ein: Zoom in
+zoom_einpassen: Fit
+zoom_original: Actual size
+ansicht_label: "Diagram ‘{datei}’, view only"
+hinweis_titel: Good to know
+hinweise:
+  - "The file stays on your computer. The viewer sends nothing and loads nothing from the internet."
+  - "The viewer does not display images, fonts and shape libraries from the internet, nor formulas. Diagrams from the kit need none of these."
+  - "Links to other pages of the diagram work; the viewer does not open links to the internet."
+  - "Compressed and uncompressed .drawio files are displayed. You can edit diagrams in the AIMS Manager or in a diagram application that opens .drawio files."
+ohne_skript: The diagram viewer needs JavaScript. Allow scripts for this file or open it in another browser.
+fuss_namensnennung: "ISO/IEC 42001 Starter Kit by Andreas Gapsch, KMU-CIO, kmu-cio.ch"
+fuss_viewer: "This viewer uses the unmodified draw.io viewer (viewer-static {viewer_version}, Apache License 2.0) with the libraries it contains: DOMPurify, pako, Rough.js, spin.js and regenerator-runtime."
+fuss_marke: "draw.io is a registered trademark of draw.io Ltd. This viewer is not made, reviewed or endorsed by draw.io Ltd or JGraph."
+fuss_lizenzen: Licence texts of the diagram viewer
+fuss_start: Go to the kit start page

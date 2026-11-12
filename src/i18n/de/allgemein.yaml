@@ -1,0 +1,140 @@
+# Allgemeine Bausteine für alle Vorlagen und Dokumente
+namensnennung_vorlage: "Vorlage aus dem ISO/IEC 42001 Starter-Kit von Andreas Gapsch, KMU-CIO, kmu-cio.ch, Version {version}. Diesen Block vor der Freigabe löschen."
+beispiel_kennzeichnung: "Beispiel aus dem ISO/IEC 42001 Starter-Kit von Andreas Gapsch, KMU-CIO, kmu-cio.ch. Fiktives Unternehmen; Inhalte dienen der Veranschaulichung."
+normverweis: "Anforderungstext siehe ISO/IEC 42001, {abschnitte}. Die Norm ist bei SNV, DIN oder ISO zu beziehen."
+# Firmendokumente: Bezug ohne Bezugsquelle der Norm (Kit-Hinweis)
+normverweis_firma: "Bezug: ISO/IEC 42001, {abschnitte}."
+ergaenzungsblatt: Ergänzungsblatt
+# Rechtsstand des EU AI Act (kontext.ts rechtsstand, Daten aus src/ai-act/stand.yaml)
+rechtsstand:
+  fassung: "konsolidierte Fassung vom {fassung}"
+  mit_berichtigung: "konsolidierte Fassung vom {fassung}, inklusive Berichtigung vom {berichtigung}"
+ai_act_kurz: EU AI Act
+# Anlage am Dokumentende für Systemtabellen ab 8 KI-Systemen (kontext.ts systemAnlage)
+anlage:
+  titel: "Anlage {nr}: {titel}"
+  verweis: "Die Angaben zu den {anzahl} KI-Systemen stehen in Anlage {nr} am Ende des Dokuments."
+  verweis_eins: "Die Angaben zum KI-System stehen in Anlage {nr} am Ende des Dokuments."
+  ki_systeme: KI-Systeme
+ausbau:
+  titel: Ausbaustufe (optional)
+# Messwert KZ-01 ohne erfassten Wert: Stand aus der Erklärung zur Anwendbarkeit
+kz01_wert: "{umgesetzt} von {anwendbar} anwendbaren Controls umgesetzt, davon {wirksam} wirksam; {teilweise} teilweise umgesetzt (Stand der Erklärung zur Anwendbarkeit, D-11)"
+# Stelle mit Namen in Sätzen zu den Entscheidungsrechten (D-12, D-15; N7)
+entscheidungsstelle:
+  aims: "AIMS-Verantwortung ({name})"
+  gl: "Geschäftsleitung ({name})"
+lenkung:
+  dokument_id: Dokument-ID
+  titel: Titel
+  version: Version
+  eigner: Eigner/in
+  freigabe: Freigabe durch
+  datum: Datum
+  klassifikation: Klassifikation
+  normbezug: Normbezug
+  isms_bezug: Bezug zum ISMS
+  pfad: Gilt im Pfad
+  nicht_freigegeben: "noch nicht freigegeben (Status: {status})"
+  # Lenkungskopf: Prüfung vor der Freigabe und letzter Eintrag der Änderungshistorie (DokumentEintrag.geprueft, aenderungen)
+  geprueft: "{person}, {datum}"
+  aenderung: "{version} vom {datum}: {was}"
+  bestaetigt: "{person}, {datum}"
+  gilt_fuer_isms: "Gilt für ISMS und AIMS: [[ja/nein]]"
+  seite: Seite
+  von: von
+  blatt_dokument: Dokument
+isms:
+  neu: "neu (kein Gegenstück im ISMS)"
+  erweitert: "erweitert ein bestehendes ISMS-Dokument"
+  wiederverwendet: "wiederverwendet ein bestehendes ISMS-Dokument"
+  leitfaden: "Leitfaden"
+isms_dokument:
+  erweitert: "erweitert {dokument}"
+  wiederverwendet: "nutzt {dokument}"
+pfad:
+  beide: "mit und ohne ISMS"
+  ohne_isms_dokument: "ohne ISMS als eigenes Dokument; mit ISMS als Ergänzungsblatt"
+  ergaenzungsblatt: "mit ISMS: Abschnitte in das bestehende ISMS-Dokument aufnehmen"
+platzhalter:
+  firmenname: Firmenname
+  version: "1.0"
+  eigner: Name, Funktion
+  freigabe: Name, Funktion
+  datum: TT.MM.JJJJ
+  klassifikation: intern
+  person: Name, Funktion
+  text: Text ergänzen
+  liste: Liste ergänzen
+  zahl: Zahl
+  ort: Ablageort
+  ki_system: KI-System
+  meldestelle: Meldestelle
+  ja_nein: ja/nein
+  pruefvermerk: Name, Funktion, TT.MM.JJJJ (zweite Person vor der Freigabe)
+  aenderung: Version, TT.MM.JJJJ, was sich geändert hat
+  reife: nicht begonnen / definiert / eingeführt / wirksam / überprüft
+# Typ und Status der KI-Systeme (KiSystem.typ, KiSystem.status); Vorlagen können einzelne Werte übersteuern
+ki_typ:
+  eingekauft: eingekauft
+  saas: Cloud-Dienst (SaaS)
+  eigenbau: Eigenentwicklung
+  schatten: Schatten-KI
+ki_status:
+  erfasst: erfasst
+  in-pruefung: in Prüfung
+  freigegeben: freigegeben
+  eingeschraenkt: eingeschränkt
+  ausgesetzt: ausgesetzt
+  abgeloest: abgelöst
+  untersagt: untersagt
+ja: ja
+nein: nein
+offen: offen
+# Kennzeichnung untersagter und ausgesetzter KI-Systeme in Listen je System (D-01, D-13, D-14, D-16)
+ki_status_vermerk: "Status: {status}"
+# Verweis auf ein Dokument, das zum Datum des verweisenden Dokuments noch nicht freigegeben war
+verweis_geplant: in Erarbeitung
+unterschrift:
+  ort_datum: Ort, Datum
+  name_funktion: Name, Funktion
+  unterschrift: Unterschrift
+fusszeile: "Klassifikation: {klassifikation}"
+disclaimer: "Diese Vorlage ersetzt weder die Norm noch eine Rechtsberatung und garantiert keine Zertifizierung."
+# Bewertungsskalen aus organisation.risikokriterien (D-06 bis D-09): Bereich und hohe Stufen
+skala:
+  bereich: "{von} {von_name} bis {bis} {bis_name}"
+  von_bis: "{von} bis {bis}"
+  oder: oder
+# Normtexte aus der eigenen Normausgabe der Firma (Normpaket, nur nach Bestätigung der Lizenz; src/normtexte)
+normtext:
+  auszug_titel: Anforderungen der Norm (Auszug)
+  auszug_einleitung: "Wortlaut der in diesem Dokument genannten Abschnitte aus unserer lizenzierten Normausgabe."
+  vermerk: "Auszug aus {bezeichnung}{ausgabe}, wiedergegeben unter Lizenz von {lizenzgeber}{nummer}."
+  vermerk_ohne_geber: "Auszug aus {bezeichnung}{ausgabe}, wiedergegeben mit Genehmigung des Lizenzgebers{nummer}."
+  ausgabe: " (ISO/IEC {norm}:{jahr})"
+  nummer: ", Lizenz-Nr. {nummer}"
+  spalte_control_text: Control-Text (Norm)
+  spalte_anforderung: Anforderungstext (Norm)
+
+# Inhaltsverzeichnis des Dokumentensets (erste Datei im ZIP des Werkzeugs)
+inhaltsverzeichnis:
+  datei: 00_Inhalt
+  titel: Inhaltsverzeichnis des Dokumentensets
+  blatt: Inhalt
+  blatt_titel: "Dokumentenset {firma}, Stand {datum}"
+  hinweis: "Spalte «Für Stage 1»: Unterlagen, die wir der Zertifizierungsstelle vor dem Stage-1-Audit vorlegen. Version, Status und Freigabe stammen aus dem Dokumentenregister."
+  hinweis_ohne_auswahl: "Die Unterlagen für Stage 1 sind noch nicht festgelegt. Version, Status und Freigabe stammen aus dem Dokumentenregister."
+  ja: ja
+  nein: nein
+  nicht_im_register: nicht im Register
+  spalten:
+    id: ID
+    titel: Titel
+    normbezug: Normbezug
+    datei: Datei
+    version: Version
+    status: Status
+    freigabe: Freigabe (Datum, Person)
+    stage1: Für Stage 1
+    isms: Ergänztes ISMS-Dokument

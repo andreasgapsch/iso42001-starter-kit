@@ -1,0 +1,318 @@
+# Seitentexte Etappe E11 Ziele, Messung und Dokumentenlenkung. Format: src/gefuehrt/FORMAT.md
+E11-einfuehrung:
+  titel: Ziele, Messung und Dokumentenlenkung
+  frage: Woran erkennen Sie, dass Ihr Managementsystem wirkt, und welche Fassung eines Dokuments gilt?
+  warum: Die Norm verlangt messbare [[g:ki-ziel|KI-Ziele]], einen Plan für Messung und Auswertung und gelenkte [[g:dokumentierte-information]]. Mit [[g:isms]] übernehmen Sie meist die bestehenden Regeln zur Dokumentenlenkung.
+  fehler: Ziele ohne Kennzahl, Termin oder Verantwortung sind ein häufiger Befund. Auditoren fragen nach der letzten Messung und was daraus folgte.
+E11-ziele:
+  titel: KI-Ziele
+  frage: Welche messbaren Ziele setzen Sie sich für KI?
+  warum: Ziele folgen aus Leitlinie, Risiken und Anforderungen. Drei bis sechs Ziele genügen im KMU, etwa zur Vollständigkeit des Inventars, zur Schulung oder zur Qualität eines Systems.
+  fehler: «KI verantwortungsvoll nutzen» ist kein messbares Ziel. Auditoren wollen Kennzahl, Sollwert, Verantwortliche und Termin sehen.
+  felder:
+    ziel:
+      label: Ziel
+      hilfe: z. B. «Alle Mitarbeitenden mit KI-Werkzeugen sind geschult».
+    kennzahl:
+      label: Kennzahl
+      hilfe: z. B. «Anteil geschulter Nutzender».
+    sollwert:
+      label: Sollwert
+      hilfe: z. B. «100 % bis 31.03.2027».
+    verantwortlich:
+      label: Verantwortlich
+      hilfe: Die Person, die für das Ziel sorgt.
+    termin:
+      label: Termin
+      hilfe: Bis wann das Ziel erreicht sein soll.
+    ressourcen:
+      label: Ressourcen
+      hilfe: Zeit, Budget oder Werkzeuge.
+    bezugLeitlinie:
+      label: "Bezug zur Leitlinie"
+      hilfe: "Welcher Grundsatz der KI-Leitlinie mit dem Ziel verfolgt wird."
+    massnahmen:
+      label: "Was getan wird"
+      hilfe: "Massnahmen, mit denen Sie das Ziel erreichen."
+    status:
+      label: "Status"
+      hilfe: "Stand des Ziels."
+    kiSysteme:
+      label: "KI-Systeme"
+      hilfe: "Für welche Systeme das Ziel oder die Kennzahl gilt; leer heisst für alle. Systeme mit sensibler Nutzung brauchen eine eigene Kennzahl (H34)."
+E11-messplan:
+  titel: Messplan
+  frage: Wie, wie oft und von wem wird jedes Ziel gemessen und ausgewertet?
+  warum: Die Norm verlangt festzulegen, was wie und wann gemessen wird und wer die Ergebnisse bewertet. So entstehen Eingaben für die Managementbewertung.
+  fehler: Messungen ohne Auswertung bleiben folgenlos. Auditoren fragen, wo die Ergebnisse besprochen werden.
+  felder:
+    messmethode:
+      label: Messmethode
+      hilfe: z. B. «Auswertung der E-Learning-Plattform».
+    haeufigkeit:
+      label: Häufigkeit
+      hilfe: Wie oft gemessen wird.
+    bewertung:
+      label: Bewertung durch
+      hilfe: z. B. «Managementbewertung» oder «[[g:aims|AIMS]]-Team quartalsweise».
+    werMisst:
+      label: "Wer misst"
+      hilfe: "Leer heisst: die verantwortliche Person des Ziels."
+    auswertungWann:
+      label: "Auswertung wann"
+      hilfe: "z. B. «nach jeder Messung» oder «vor der Managementbewertung»."
+    werWertetAus:
+      label: "Wer wertet aus"
+      hilfe: "Person, die die Ergebnisse beurteilt."
+    empfaenger:
+      label: "Empfänger"
+      hilfe: "Wer das Ergebnis erhält, z. B. Geschäftsleitung."
+E11-messungen:
+  titel: Messwerte
+  frage: Welche Werte haben Sie bisher gemessen?
+  warum: Erst die Messwerte zeigen, ob Sie auf Kurs sind. Vor dem Zertifizierungsaudit sollte zu jedem Ziel mindestens eine Messung vorliegen.
+  fehler: Messwerte ohne Datum sind nicht vergleichbar. Auditoren vergleichen die Werte mit dem Sollwert und fragen nach Massnahmen bei Abweichungen.
+  felder:
+    messungen:
+      label: Messungen
+      hilfe: Eine Zeile je Messung.
+    messungen.datum:
+      label: Datum
+      hilfe: Stichtag der Messung.
+    messungen.wert:
+      label: Wert
+      hilfe: z. B. «82 %».
+    messungen.bemerkung:
+      label: Bemerkung
+      hilfe: z. B. «Produktion noch offen, Nachschulung im Mai».
+    messungen.sollErreicht:
+      label: "Sollwert erreicht"
+      hilfe: "Ja, teilweise oder nein."
+E11-kennzahlen:
+  titel: Weitere Kennzahlen
+  frage: Wie messen Sie die weiteren Kennzahlen, und welche Werte liegen vor?
+  warum: "Der Messplan D-05 enthält neben den Zielen sechs weitere Messungen: Wirksamkeit der [[g:control|Controls]] (KZ-01), interne Audits (KZ-02), Anzahl Meldungen (KZ-03), Reaktionszeit (KZ-04), Korrekturquote (KZ-05) und Eignung der Kennzahlen (KZ-06). Ihre Angaben ersetzen die Vorgaben der Vorlage; eigene Kennzahlen ergänzen Sie ab KZ-07."
+  fehler: Festgelegte Messungen ohne Messwerte sind ein häufiger Befund. Auditoren fragen nach dem letzten Wert und was daraus folgte.
+  felder:
+    kennzahlen:
+      label: Kennzahlen
+      hilfe: Eine Zeile je Kennzahl, die Sie anders messen als vorgeschlagen oder zusätzlich messen.
+    kennzahlen.id:
+      label: ID
+      hilfe: KZ-01 bis KZ-06 für die Zeilen der Vorlage, KZ-07 und folgende für eigene Kennzahlen.
+    kennzahlen.kennzahl:
+      label: Was wird gemessen
+      hilfe: Leer lassen, um die Bezeichnung der Vorlage zu übernehmen.
+    kennzahlen.messmethode:
+      label: Methode und Quelle
+      hilfe: z. B. «Stichprobe von 20 Ergebnissen je System und Quartal».
+    kennzahlen.haeufigkeit:
+      label: Häufigkeit
+      hilfe: Wie oft gemessen wird.
+    kennzahlen.werMisst:
+      label: Wer misst
+      hilfe: Person, die misst.
+    kennzahlen.auswertungWann:
+      label: Auswertung wann
+      hilfe: z. B. «vor der Managementbewertung».
+    kennzahlen.werWertetAus:
+      label: Wer wertet aus
+      hilfe: Person, die auswertet.
+    kennzahlen.empfaenger:
+      label: Empfänger
+      hilfe: z. B. «Geschäftsleitung».
+    kennzahlMessungen:
+      label: Messwerte der Kennzahlen
+      hilfe: Eine Zeile je Messung.
+    kennzahlMessungen.kennzahl:
+      label: Kennzahl
+      hilfe: ID der Kennzahl, z. B. «KZ-05».
+    kennzahlMessungen.datum:
+      label: Datum
+      hilfe: Stichtag der Messung.
+    kennzahlMessungen.wert:
+      label: Wert
+      hilfe: z. B. «6 % (3 von 50)».
+    kennzahlMessungen.zaehler:
+      label: Zähler
+      hilfe: Bei einer Quote die ausgezählten Fälle, z. B. 3.
+    kennzahlMessungen.nenner:
+      label: Nenner
+      hilfe: Bei einer Quote die Grundgesamtheit, z. B. 50.
+    kennzahlMessungen.sollErreicht:
+      label: Soll erreicht
+      hilfe: Vergleich des Werts mit dem Sollwert. Leer lassen, wenn keine Messung möglich war.
+    kennzahlMessungen.keineMessung:
+      label: Keine Messung
+      hilfe: Wählen, wenn im Zeitraum kein Fall vorlag oder die erste Messung noch offen ist; in der Bemerkung den Grund nennen. Keine Zahl schätzen.
+    kennzahlMessungen.bemerkung:
+      label: Bemerkung
+      hilfe: Bewertung und Folgerung.
+E11-lenkung-isms:
+  titel: Dokumentenlenkung aus dem ISMS
+  frage: Gelten die Regeln Ihres [[g:isms]] zur Dokumentenlenkung auch für das KI-Managementsystem?
+  warum: Mit ISMS gibt es bereits Regeln für Versionen, Freigaben und Ablage. Sie ergänzen nur die neuen KI-Dokumente im Register.
+  fehler: Eine zweite Ablage nur für KI-Dokumente führt zu doppelten Fassungen. Auditoren prüfen, ob die KI-Dokumente denselben Regeln folgen.
+  felder:
+    organisation.dokumentenlenkung.ismsRegelnGelten:
+      label: ISMS-Regeln gelten auch für das AIMS
+      hilfe: Das [[g:aims|AIMS]] übernimmt dann die Regeln des ISMS, mit dem Ergänzungsblatt D-26-EB statt eigener Regeln.
+    organisation.dokumentenlenkung.ablage:
+      label: Ablage
+      hilfe: z. B. «SharePoint, Bibliothek Managementsysteme».
+    organisation.dokumentenlenkung.klassifikation:
+      label: "Standard-Klassifikation"
+      hilfe: "Steht in der Fusszeile aller Dokumente ohne eigene Angabe, z. B. «intern»."
+    organisation.dokumentenlenkung.externeDokumente:
+      label: Register der externen Dokumente
+      hilfe: Normen, Rechtstexte, Unterlagen von [[g:anbieter|Anbietern]] und Kunden mit Stand, Ablage und Zuständigkeit (D-26, Blatt «Externe Dokumente»). Leer bleibt der Vorschlag der Vorlage.
+    organisation.dokumentenlenkung.externeDokumente.dokument:
+      label: Dokument
+      hilfe: z. B. «ISO/IEC 42001» oder «EU AI Act».
+    organisation.dokumentenlenkung.externeDokumente.herausgeber:
+      label: Herausgeber
+      hilfe: z. B. ISO und IEC, EU, Anbieter.
+    organisation.dokumentenlenkung.externeDokumente.stand:
+      label: Ausgabe oder Stand
+      hilfe: z. B. «2023» oder «konsolidierte Fassung vom 27.07.2026».
+    organisation.dokumentenlenkung.externeDokumente.ablage:
+      label: Ablageort
+      hilfe: Wo die gültige Fassung liegt.
+    organisation.dokumentenlenkung.externeDokumente.zustaendig:
+      label: Zuständig
+      hilfe: Wer prüft, ob eine neuere Fassung vorliegt.
+    organisation.dokumentenlenkung.externeDokumente.naechstePruefung:
+      label: Nächste Prüfung
+      hilfe: Mindestens jährlich, beim EU AI Act häufiger.
+E11-lenkung:
+  titel: Regeln für Dokumente
+  frage: Wo legen Sie Dokumente ab, wer gibt sie frei und wie lange bewahren Sie Aufzeichnungen auf?
+  warum: Ohne [[g:isms]] legen Sie hier die Grundregeln fest. Zwei Seiten in D-26 genügen; wichtig ist, dass jede Person die gültige Fassung findet.
+  fehler: Dokumente per E-Mail verteilt führen zu alten Fassungen im Umlauf. Auditoren fragen Mitarbeitende, wo sie die gültige Leitlinie finden.
+  felder:
+    organisation.dokumentenlenkung.ablage:
+      label: Ablage
+      hilfe: Ein zentraler Ort mit Zugriffsrechten.
+    organisation.dokumentenlenkung.namensregel:
+      label: Benennung
+      hilfe: z. B. «ID_Titel_Version», etwa «D-03_KI-Leitlinie_1.0».
+    organisation.dokumentenlenkung.freigabe:
+      label: Freigabe durch
+      hilfe: Leitlinie und Geltungsbereich gibt immer die Geschäftsleitung frei.
+    organisation.dokumentenlenkung.aufbewahrungJahre:
+      label: Aufbewahrung von Aufzeichnungen in Jahren
+      hilfe: z. B. 10 Jahre für Freigaben und Auditberichte.
+    organisation.dokumentenlenkung.extern:
+      label: Externe Dokumente
+      hilfe: Wie Sie Normen, Gesetze und Lieferantenunterlagen verwalten.
+    organisation.dokumentenlenkung.klassifikation:
+      label: "Standard-Klassifikation"
+      hilfe: "Steht in der Fusszeile aller Dokumente ohne eigene Angabe, z. B. «intern»."
+    organisation.dokumentenlenkung.externeDokumente:
+      label: Register der externen Dokumente
+      hilfe: Normen, Rechtstexte, Unterlagen von [[g:anbieter|Anbietern]] und Kunden mit Stand, Ablage und Zuständigkeit (D-26, Blatt «Externe Dokumente»). Leer bleibt der Vorschlag der Vorlage.
+    organisation.dokumentenlenkung.externeDokumente.dokument:
+      label: Dokument
+      hilfe: z. B. «ISO/IEC 42001» oder «EU AI Act».
+    organisation.dokumentenlenkung.externeDokumente.herausgeber:
+      label: Herausgeber
+      hilfe: z. B. ISO und IEC, EU, Anbieter.
+    organisation.dokumentenlenkung.externeDokumente.stand:
+      label: Ausgabe oder Stand
+      hilfe: z. B. «2023» oder «konsolidierte Fassung vom 27.07.2026».
+    organisation.dokumentenlenkung.externeDokumente.ablage:
+      label: Ablageort
+      hilfe: Wo die gültige Fassung liegt.
+    organisation.dokumentenlenkung.externeDokumente.zustaendig:
+      label: Zuständig
+      hilfe: Wer prüft, ob eine neuere Fassung vorliegt.
+    organisation.dokumentenlenkung.externeDokumente.naechstePruefung:
+      label: Nächste Prüfung
+      hilfe: Mindestens jährlich, beim EU AI Act häufiger.
+E11-dokumente:
+  titel: Dokumentenregister
+  frage: Welche Dokumente gehören zum Managementsystem und in welchem Stand sind sie?
+  warum: Das Register zeigt auf einen Blick Version, Status, Eigner/in und Ablageort jedes Dokuments. Das Werkzeug trägt erzeugte Kit-Dokumente automatisch ein.
+  fehler: Dokumente mit abgelaufenem Überprüfungsdatum meldet die Prüfung als Hinweis. Auditoren ziehen ein Dokument aus dem Register und vergleichen es mit der Ablage.
+  felder:
+    id:
+      label: Dokument
+      hilfe: Auswahl aus den Kit-Vorlagen.
+    version:
+      label: Version
+      hilfe: z. B. «1.0».
+    status:
+      label: Status
+      hilfe: Stand des Dokuments.
+    eigner:
+      label: Eigner/in
+      hilfe: Die Person, die das Dokument aktuell hält.
+    freigabe:
+      label: Freigabe
+      hilfe: Person und Datum.
+    ablageort:
+      label: Ablageort
+      hilfe: Pfad oder Link.
+    naechsteUeberpruefung:
+      label: Nächste Überprüfung
+      hilfe: In der Regel jährlich.
+    giltFuerIsms:
+      label: Gilt für ISMS und AIMS
+      hilfe: Gemeinsame Dokumente für das [[g:isms]] und das [[g:aims|AIMS]].
+    klassifikation:
+      label: "Klassifikation"
+      hilfe: "Für die Fusszeile; leer heisst: Standard aus der Dokumentenlenkung."
+    aufbewahrung:
+      label: "Aufbewahrung"
+      hilfe: "z. B. «10 Jahre nach Ersatz»."
+    aufgenommenIn:
+      label: "Aufgenommen in oder erweitert ISMS-Dokument"
+      hilfe: "Kennung, Titel und Version des bestehenden [[g:isms]]-Dokuments, in das ein Ergänzungsblatt aufgenommen ist oder das ein Dokument erweitert, z. B. «Schulungskonzept ISMS SK-ISMS-01, Version 1.4». Erscheint im Dokumentkopf (ISMS-Bezug), im Register und in D-23."
+    geprueft:
+      label: "Geprüft durch, am"
+      hilfe: "Zweite Person, die den Inhalt vor der Freigabe geprüft hat (D-26). Erscheint im Dokumentkopf und im Register."
+    bestaetigt:
+      label: "Bestätigt ohne Änderung, durch, am"
+      hilfe: "Letzte Überprüfung ohne neue Version, z. B. in der Managementbewertung: Der Inhalt gilt zu diesem Datum als geprüft. Verweise auf Dokumente, die bis dahin freigegeben waren, erscheinen ohne Zusatz «in Erarbeitung». Nicht vor der Freigabe der aktuellen Version."
+    aenderungen:
+      label: "Änderungshistorie"
+      hilfe: "Je Version: Version, Datum der Freigabe, was geändert wurde, wer freigegeben hat. Älteste zuerst; die letzte Zeile ist die aktuelle Version. Erscheint im Register (Blatt «Änderungen») und im Dokumentkopf."
+    aenderungen.version:
+      label: "Version"
+      hilfe: "z. B. 1.1."
+    aenderungen.datum:
+      label: "Freigegeben am"
+      hilfe: "Datum der Freigabe dieser Version."
+    aenderungen.was:
+      label: "Änderung"
+      hilfe: "Was sich gegenüber der vorherigen Version geändert hat, z. B. «Lieferanten nach Prüfung ergänzt»."
+    aenderungen.von:
+      label: "Freigabe durch"
+      hilfe: "Person, die diese Version freigegeben hat."
+E11-aenderungen:
+  titel: Änderungen am Managementsystem
+  frage: Wie planen und steuern Sie Änderungen am KI-Managementsystem?
+  warum: Neue Systeme, Gesetze oder Organisationsänderungen verlangen Anpassungen. Die Norm will, dass solche Änderungen geplant und kontrolliert umgesetzt werden.
+  fehler: Änderungen, die nirgends festgehalten sind, lassen sich im Audit nicht nachvollziehen. Auditoren fragen nach der letzten grösseren Änderung und wie sie umgesetzt wurde.
+  felder:
+    meta.gefuehrt.antworten.aenderungen.weg:
+      label: Weg für Änderungen
+      hilfe: Im KMU meist über die Massnahmenliste mit Freigabe durch die Geschäftsleitung.
+    meta.gefuehrt.antworten.aenderungen.notiz:
+      label: Bemerkung
+      hilfe: z. B. «Grössere Änderungen werden in der Managementbewertung beschlossen».
+E11-nicht-gemessen:
+  titel: "Bewusst nicht gemessen"
+  frage: "Welche Themen messen Sie bewusst nicht, und warum?"
+  warum: "Nicht alles lässt sich mit vertretbarem Aufwand messen. Wer das offen sagt und begründet, zeigt, dass die Auswahl der Kennzahlen eine Entscheidung war und kein Zufall. Die Liste steht im Messplan D-05 auf einem eigenen Blatt."
+  fehler: "«Zu aufwendig» allein ist keine Begründung; nennen Sie, wie Sie das Thema stattdessen beobachten, z. B. über Meldungen oder Stichproben. Auditoren fragen nach Themen aus der Leitlinie, zu denen es keine Kennzahl gibt."
+  felder:
+    organisation.nichtGemessen:
+      label: "Bewusst nicht gemessen"
+      hilfe: "Eine Zeile je Thema."
+    organisation.nichtGemessen.was:
+      label: "Thema"
+      hilfe: "Zum Beispiel «Fairness der Übersetzungen»."
+    organisation.nichtGemessen.begruendung:
+      label: "Begründung"
+      hilfe: "Warum nicht gemessen wird und wie Sie das Thema stattdessen beobachten."
